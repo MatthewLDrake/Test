@@ -1,0 +1,4128 @@
+{{Infobox basketball club
+| color1 = #ac6814
+| color2 = #d9d9d9
+| color3 = #ffffff
+| name = Aahrus Moosi
+| current = UBA Season 6
+| logo = Aahrus Moosi .png
+| imagesize = 200px
+| conference = [[Southern Conference|Southern]]
+| division = [[Division A|A]]
+| founded = 2016
+| arena = [[Aahrus Stadium]]
+| location = [[Aahrus|Aahrus, Aahrus]]
+| colors = Brown, Gray, White {{color box|#ac6814}} {{color box|#d9d9d9}} {{color box|#ffffff}}
+| owner =
+| manager = 
+| president = 
+| coach = Coach #5
+| affiliation = [[Aahrus Goosi]]
+| franchise_wins = '''219'''
+| franchise_losses = '''185'''
+| playoff_appearances = '''4'''
+| playoff_wins = '''9'''
+| playoff_losses = '''16'''
+| league_champs = '''0'''
+| conf_champs = '''0'''
+| div_champs = '''0''' 
+| ret_nums = '''0'''
+| website = aahrusmoosi.com
+| h_body =
+| h_pattern_b =
+| h_shorts =
+| h_pattern_s =
+| a_body =
+| a_pattern_b =
+| a_shorts = 
+| a_pattern_s = 
+| 3_body = 
+| 3_pattern_b = 
+| 3_shorts = 
+| 3_pattern_s = 
+}}
+
+The '''Aahrus Moosi''' are a basketball team based in Aahrus, Aahrus. They compete in the [[Universalis Basketball Association|Universalis Basketball Association]] (UBA) and is in [[Division A]] of the Southern Conference.
+
+===Roster===
+{|class="wikitable"
+|+ Aahrus Moosi 
+|-
+!Pos
+!Name
+!Age
+!Overall
+|-
+|C
+|Ikaika Savang
+|25
+|63.09
+|-
+|PF
+|Yombeen
+|27
+|71.76
+|-
+|SF
+|Lae Thammavong
+|25
+|70.64
+|-
+|SG
+|Kardo Gasbërr
+|24
+|79.50
+|-
+|PG
+|Venniti Flautika
+|28
+|75.80
+|-
+|C
+|Center #134
+|28
+|53.91
+|-
+|PF
+|Aahrus Player #1
+|28
+|65.07
+|-
+|SF
+|Kawata Hirokazu
+|22
+|67.83
+|-
+|SG
+|Aahrus Player #4
+|28
+|57.49
+|-
+|PG
+|Gerard Mortlock
+|24
+|71.63
+|-
+|C
+|Steve Lolant
+|24
+|53.29
+|-
+|PF
+|Itausŋaŋufi Utipŋiqe
+|27
+|63.38
+|-
+|SF
+|Olandi Amodetsei 
+|19
+|65.85
+|-
+|SG
+|Handa Seiki 
+|22
+|54.04
+|-
+|PG
+|Aahrus Player #10
+|28
+|66.65
+|}
+{{Infobox basketball club
+| color1 = #df0000
+| color2 = #ff9900
+| color3 = #a46200
+| name = Auspikitan Golden Falcons
+| current = UBA Season 6
+| logo = Auspikitan Golden Falcons .png
+| imagesize = 200px
+| conference = [[Southern Conference|Southern]]
+| division = [[Division A|A]]
+| founded = 2016
+| arena = [[Auspikitan Stadium]]
+| location = [[Auspikitan|Auspikitan, Auspikitan]]
+| colors = Red, Orange, Brown {{color box|#df0000}} {{color box|#ff9900}} {{color box|#a46200}}
+| owner =
+| manager = 
+| president = 
+| coach = Western University Coach
+| affiliation = [[Errakyva Eruption]]
+| franchise_wins = '''231'''
+| franchise_losses = '''173'''
+| playoff_appearances = '''3'''
+| playoff_wins = '''37'''
+| playoff_losses = '''31'''
+| league_champs = '''0'''
+| conf_champs = '''2'''
+| div_champs = '''1''' 
+| ret_nums = '''0'''
+| website = auspikitangoldenfalcons.com
+| h_body =
+| h_pattern_b =
+| h_shorts =
+| h_pattern_s =
+| a_body =
+| a_pattern_b =
+| a_shorts = 
+| a_pattern_s = 
+| 3_body = 
+| 3_pattern_b = 
+| 3_shorts = 
+| 3_pattern_s = 
+}}
+
+The '''Auspikitan Golden Falcons''' are a basketball team based in Auspikitan, Auspikitan. They compete in the [[Universalis Basketball Association|Universalis Basketball Association]] (UBA) and is in [[Division A]] of the Southern Conference.
+
+===Roster===
+{|class="wikitable"
+|+ Auspikitan Golden Falcons 
+|-
+!Pos
+!Name
+!Age
+!Overall
+|-
+|C
+|Yadingallie
+|24
+|67.88
+|-
+|PF
+|Ajanis Vealerko
+|22
+|80.36
+|-
+|SF
+|Jesse McSteve
+|27
+|83.91
+|-
+|SG
+|Lato Ikro
+|23
+|77.29
+|-
+|PG
+|Billingulbut
+|25
+|78.53
+|-
+|C
+|Alfred Habicht
+|25
+|62.76
+|-
+|PF
+|Phetdum Somphonpadee
+|23
+|63.47
+|-
+|SF
+|Guooka
+|20
+|68.95
+|-
+|SG
+|Palani Phomsouvanh
+|25
+|69.55
+|-
+|PG
+|Point Guard #131
+|28
+|71.51
+|-
+|C
+|Naqánkló Qjodlonhámh
+|26
+|60.60
+|-
+|PF
+|pot
+|23
+|59.13
+|-
+|SF
+|Nupa Ixau
+|24
+|62.53
+|-
+|SG
+|Taneba Nole
+|28
+|69.01
+|-
+|PG
+|Calvin Hayhurst
+|21
+|63.65
+|}
+{{Infobox basketball club
+| color1 = #000000
+| color2 = #ffffff
+| color3 = #d9d9d9
+| name = Calto Cows
+| current = UBA Season 6
+| logo = Calto Cows .png
+| imagesize = 200px
+| conference = [[Southern Conference|Southern]]
+| division = [[Division A|A]]
+| founded = 2016
+| arena = [[Cow Center]]
+| location = [[Calto|Calto, Wyverncliff]]
+| colors = Black, White, Gray {{color box|#000000}} {{color box|#ffffff}} {{color box|#d9d9d9}}
+| owner =
+| manager = 
+| president = 
+| coach = Coach #24
+| affiliation = [[Alteus Astronauts]]
+| franchise_wins = '''284'''
+| franchise_losses = '''120'''
+| playoff_appearances = '''5'''
+| playoff_wins = '''40'''
+| playoff_losses = '''32'''
+| league_champs = '''0'''
+| conf_champs = '''1'''
+| div_champs = '''3''' 
+| ret_nums = '''0'''
+| website = caltocows.com
+| h_body =
+| h_pattern_b =
+| h_shorts =
+| h_pattern_s =
+| a_body =
+| a_pattern_b =
+| a_shorts = 
+| a_pattern_s = 
+| 3_body = 
+| 3_pattern_b = 
+| 3_shorts = 
+| 3_pattern_s = 
+}}
+
+The '''Calto Cows''' are a basketball team based in Calto, Wyverncliff. They compete in the [[Universalis Basketball Association|Universalis Basketball Association]] (UBA) and is in [[Division A]] of the Southern Conference.
+
+===Roster===
+{|class="wikitable"
+|+ Calto Cows 
+|-
+!Pos
+!Name
+!Age
+!Overall
+|-
+|C
+|vo
+|28
+|75.38
+|-
+|PF
+|Trevor Oosterhout
+|28
+|99.99
+|-
+|SF
+|Asher Turner
+|27
+|80.49
+|-
+|SG
+|Selby Schneiders
+|28
+|80.24
+|-
+|PG
+|Its'a Lełqutyi
+|28
+|86.45
+|-
+|C
+|Alukeili Asoertotrisei
+|25
+|63.45
+|-
+|PF
+|Analu Vatthana
+|25
+|68.45
+|-
+|SF
+|Dalton Ariesen
+|26
+|72.32
+|-
+|SG
+|Keahi Savang
+|26
+|78.11
+|-
+|PG
+|Michael Barnett
+|26
+|73.26
+|-
+|C
+|Yoade Perch
+|22
+|56.15
+|-
+|PF
+|Bane Phothisarath 
+|19
+|52.64
+|-
+|SF
+|guz
+|28
+|65.53
+|-
+|SG
+|Seong-Hyeon Moon
+|27
+|67.25
+|-
+|PG
+|Xaisomboun Saengsavang
+|22
+|67.80
+|}
+{{Infobox basketball club
+| color1 = #00ffac
+| color2 = #0200b7
+| color3 = #ffffff
+| name = Height Sagua Cats
+| current = UBA Season 6
+| logo = Height Sagua Cats .png
+| imagesize = 200px
+| conference = [[Southern Conference|Southern]]
+| division = [[Division A|A]]
+| founded = 2016
+| arena = [[Height Sagua Stadium]]
+| location = [[Shigua|Shigua, Height Sagua]]
+| colors = Teal, Blue, White {{color box|#00ffac}} {{color box|#0200b7}} {{color box|#ffffff}}
+| owner =
+| manager = 
+| president = 
+| coach = Coach #18
+| affiliation = [[Shigua Boots]]
+| franchise_wins = '''154'''
+| franchise_losses = '''250'''
+| playoff_appearances = '''1'''
+| playoff_wins = '''3'''
+| playoff_losses = '''4'''
+| league_champs = '''0'''
+| conf_champs = '''0'''
+| div_champs = '''0''' 
+| ret_nums = '''0'''
+| website = heightsaguacats.com
+| h_body =
+| h_pattern_b =
+| h_shorts =
+| h_pattern_s =
+| a_body =
+| a_pattern_b =
+| a_shorts = 
+| a_pattern_s = 
+| 3_body = 
+| 3_pattern_b = 
+| 3_shorts = 
+| 3_pattern_s = 
+}}
+
+The '''Height Sagua Cats''' are a basketball team based in Shigua, Height Sagua. They compete in the [[Universalis Basketball Association|Universalis Basketball Association]] (UBA) and is in [[Division A]] of the Southern Conference.
+
+===Roster===
+{|class="wikitable"
+|+ Height Sagua Cats 
+|-
+!Pos
+!Name
+!Age
+!Overall
+|-
+|C
+|Red Rainbow Player #3
+|28
+|62.31
+|-
+|PF
+|Hvanne Takakazu
+|28
+|68.85
+|-
+|SF
+|Atumundikeili Halapodetsei
+|26
+|75.83
+|-
+|SG
+|Sova Kłó
+|26
+|75.24
+|-
+|PG
+|Laurence Chandler
+|27
+|80.25
+|-
+|C
+|Naxnoxsoya Liksov
+|24
+|58.40
+|-
+|PF
+|Jumpe
+|26
+|62.25
+|-
+|SF
+|Height Sagua Player #3
+|28
+|70.17
+|-
+|SG
+|Tri_National_Dominion Player #2
+|28
+|72.41
+|-
+|PG
+|No Kwang-Jo
+|23
+|75.78
+|-
+|C
+|kalassak vekel álutep
+|28
+|57.90
+|-
+|PF
+|Rezinal Naizen 
+|19
+|49.06
+|-
+|SF
+|Small Forward #152
+|28
+|53.64
+|-
+|SG
+|Height Sagua Player #4
+|28
+|65.69
+|-
+|PG
+|Xavier Wilcox
+|23
+|68.40
+|}
+{{Infobox basketball club
+| color1 = #00ff00
+| color2 = #000000
+| color3 = #00ffff
+| name = Key to Don Yees
+| current = UBA Season 6
+| logo = Key to Don Yees .png
+| imagesize = 200px
+| conference = [[Southern Conference|Southern]]
+| division = [[Division A|A]]
+| founded = 2016
+| arena = [[Key to Don Stadium]]
+| location = [[Dongua|Dongua, Key To Don]]
+| colors = Light Green, Black, Light Blue {{color box|#00ff00}} {{color box|#000000}} {{color box|#00ffff}}
+| owner =
+| manager = 
+| president = 
+| coach = Coach #25
+| affiliation = [[Ma-Popá Yiffs]]
+| franchise_wins = '''165'''
+| franchise_losses = '''239'''
+| playoff_appearances = '''1'''
+| playoff_wins = '''3'''
+| playoff_losses = '''4'''
+| league_champs = '''0'''
+| conf_champs = '''0'''
+| div_champs = '''0''' 
+| ret_nums = '''0'''
+| website = keytodonyees.com
+| h_body =
+| h_pattern_b =
+| h_shorts =
+| h_pattern_s =
+| a_body =
+| a_pattern_b =
+| a_shorts = 
+| a_pattern_s = 
+| 3_body = 
+| 3_pattern_b = 
+| 3_shorts = 
+| 3_pattern_s = 
+}}
+
+The '''Key to Don Yees''' are a basketball team based in Dongua, Key To Don. They compete in the [[Universalis Basketball Association|Universalis Basketball Association]] (UBA) and is in [[Division A]] of the Southern Conference.
+
+===Roster===
+{|class="wikitable"
+|+ Key to Don Yees 
+|-
+!Pos
+!Name
+!Age
+!Overall
+|-
+|C
+|Gerard Holzer
+|27
+|63.93
+|-
+|PF
+|Kapel Hilo
+|24
+|58.67
+|-
+|SF
+|Aahrus Player #5
+|28
+|74.30
+|-
+|SG
+|la
+|28
+|74.19
+|-
+|PG
+|Cabodu Sokàtà
+|27
+|70.43
+|-
+|C
+|Center #132
+|28
+|58.36
+|-
+|PF
+|Key To Don Player #5
+|28
+|58.07
+|-
+|SF
+|Lvieknim Yuji
+|23
+|69.39
+|-
+|SG
+|Stephan Hutto
+|22
+|70.69
+|-
+|PG
+|Kaliso Hatemosei
+|23
+|64.43
+|-
+|C
+|Ixux Zaxau 
+|21
+|52.15
+|-
+|PF
+|Aseqa Tituqu
+|26
+|55.61
+|-
+|SF
+|Height Sagua Player #9
+|28
+|60.07
+|-
+|SG
+|Alomibamobei Olalomundi
+|21
+|63.10
+|-
+|PG
+|Guvggillmào Nùx́iś
+|21
+|56.04
+|}
+{{Infobox basketball club
+| color1 = #00cf00
+| color2 = #ffffff
+| color3 = #0011dd
+| name = Manwx Saguans
+| current = UBA Season 6
+| logo = Manwx Saguans .png
+| imagesize = 200px
+| conference = [[Southern Conference|Southern]]
+| division = [[Division A|A]]
+| founded = 2016
+| arena = [[Manwx Stadium]]
+| location = [[Manwx|Manwx, Darvincia]]
+| colors = Green, White, Blue {{color box|#00cf00}} {{color box|#ffffff}} {{color box|#0011dd}}
+| owner =
+| manager = 
+| president = 
+| coach = Coach #6
+| affiliation = [[Suggionic Infantry]]
+| franchise_wins = '''194'''
+| franchise_losses = '''210'''
+| playoff_appearances = '''2'''
+| playoff_wins = '''4'''
+| playoff_losses = '''9'''
+| league_champs = '''0'''
+| conf_champs = '''0'''
+| div_champs = '''1''' 
+| ret_nums = '''0'''
+| website = manwxsaguans.com
+| h_body =
+| h_pattern_b =
+| h_shorts =
+| h_pattern_s =
+| a_body =
+| a_pattern_b =
+| a_shorts = 
+| a_pattern_s = 
+| 3_body = 
+| 3_pattern_b = 
+| 3_shorts = 
+| 3_pattern_s = 
+}}
+
+The '''Manwx Saguans''' are a basketball team based in Manwx, Darvincia. They compete in the [[Universalis Basketball Association|Universalis Basketball Association]] (UBA) and is in [[Division A]] of the Southern Conference.
+
+===Roster===
+{|class="wikitable"
+|+ Manwx Saguans 
+|-
+!Pos
+!Name
+!Age
+!Overall
+|-
+|C
+|Himi Azumamaro
+|27
+|66.93
+|-
+|PF
+|Sol Jae-Wook
+|26
+|74.79
+|-
+|SF
+|Rusty Harries
+|26
+|76.31
+|-
+|SG
+|Kiyoto Mansumo
+|22
+|79.39
+|-
+|PG
+|Blalikki Kiixrit
+|24
+|74.39
+|-
+|C
+|Kiromi Kersidomobek
+|24
+|63.93
+|-
+|PF
+|Eipe Hawo
+|25
+|73.28
+|-
+|SF
+|Ḿavwápŕi Pimh 
+|22
+|72.23
+|-
+|SG
+|Ok Yeong-Jin
+|24
+|71.66
+|-
+|PG
+|Xolin Hialerko
+|24
+|74.01
+|-
+|C
+|Pyxanovia Player #8
+|28
+|52.39
+|-
+|PF
+|Kanoa Thammavong 
+|21
+|62.41
+|-
+|SF
+|Pezi Vuki
+|26
+|60.46
+|-
+|SG
+|Sitwa Luvepiri
+|23
+|67.27
+|-
+|PG
+|Item
+|28
+|64.06
+|}
+{{Infobox basketball club
+| color1 = #e53232
+| color2 = #cccccc
+| color3 = #ffffff
+| name = Sagua Ocelots
+| current = UBA Season 6
+| logo = Sagua Ocelots .png
+| imagesize = 200px
+| conference = [[Southern Conference|Southern]]
+| division = [[Division A|A]]
+| founded = 2016
+| arena = [[Sagua Stadium]]
+| location = [[Sagua|Sagua, Sagua]]
+| colors = Red, Gray, White {{color box|#e53232}} {{color box|#cccccc}} {{color box|#ffffff}}
+| owner =
+| manager = 
+| president = 
+| coach = Coach #30
+| affiliation = [[Klákjábo Servals]]
+| franchise_wins = '''216'''
+| franchise_losses = '''188'''
+| playoff_appearances = '''3'''
+| playoff_wins = '''16'''
+| playoff_losses = '''12'''
+| league_champs = '''0'''
+| conf_champs = '''0'''
+| div_champs = '''0''' 
+| ret_nums = '''0'''
+| website = saguaocelots.com
+| h_body =
+| h_pattern_b =
+| h_shorts =
+| h_pattern_s =
+| a_body =
+| a_pattern_b =
+| a_shorts = 
+| a_pattern_s = 
+| 3_body = 
+| 3_pattern_b = 
+| 3_shorts = 
+| 3_pattern_s = 
+}}
+
+The '''Sagua Ocelots''' are a basketball team based in Sagua, Sagua. They compete in the [[Universalis Basketball Association|Universalis Basketball Association]] (UBA) and is in [[Division A]] of the Southern Conference.
+
+===Roster===
+{|class="wikitable"
+|+ Sagua Ocelots 
+|-
+!Pos
+!Name
+!Age
+!Overall
+|-
+|C
+|Thomas Skinner
+|19
+|72.00
+|-
+|PF
+|Msenne Prai
+|28
+|78.75
+|-
+|SF
+|Mavótáfika Vilikó
+|28
+|74.09
+|-
+|SG
+|Pwa Lefinu
+|25
+|75.76
+|-
+|PG
+|hex
+|28
+|71.96
+|-
+|C
+|Ogino Tokaji
+|26
+|65.86
+|-
+|PF
+|Hevek Himadolsei
+|26
+|61.79
+|-
+|SF
+|Alomibamobei Osadolsei
+|22
+|66.90
+|-
+|SG
+|Shooting Guard #169
+|28
+|64.93
+|-
+|PG
+|Danomobei Subeina
+|28
+|63.26
+|-
+|C
+|Ingo Samter 
+|23
+|61.02
+|-
+|PF
+|Mawatari Kane
+|25
+|54.04
+|-
+|SF
+|Neville Spicer
+|26
+|64.60
+|-
+|SG
+|Hvanne Aeridaniok
+|28
+|64.51
+|-
+|PG
+|Zac Lolant
+|25
+|60.89
+|}
+{{Infobox basketball club
+| color1 = #ff9900
+| color2 = #ff0000
+| color3 = #38761d
+| name = Solea Geysers
+| current = UBA Season 6
+| logo = Solea Geysers .png
+| imagesize = 200px
+| conference = [[Southern Conference|Southern]]
+| division = [[Division A|A]]
+| founded = 2016
+| arena = [[Autarky Otximodrome]]
+| location = [[Saelunavvk|Saelunavvk, Solea]]
+| colors = Orange, Red, Dark Green {{color box|#ff9900}} {{color box|#ff0000}} {{color box|#38761d}}
+| owner =
+| manager = 
+| president = 
+| coach = Mawxwmkakki Coach
+| affiliation = [[Kutapi Redwoods]]
+| franchise_wins = '''259'''
+| franchise_losses = '''145'''
+| playoff_appearances = '''5'''
+| playoff_wins = '''37'''
+| playoff_losses = '''31'''
+| league_champs = '''0'''
+| conf_champs = '''1'''
+| div_champs = '''2''' 
+| ret_nums = '''0'''
+| website = soleageysers.com
+| h_body =
+| h_pattern_b =
+| h_shorts =
+| h_pattern_s =
+| a_body =
+| a_pattern_b =
+| a_shorts = 
+| a_pattern_s = 
+| 3_body = 
+| 3_pattern_b = 
+| 3_shorts = 
+| 3_pattern_s = 
+}}
+
+The '''Solea Geysers''' are a basketball team based in Saelunavvk, Solea. They compete in the [[Universalis Basketball Association|Universalis Basketball Association]] (UBA) and is in [[Division A]] of the Southern Conference.
+
+===Roster===
+{|class="wikitable"
+|+ Solea Geysers 
+|-
+!Pos
+!Name
+!Age
+!Overall
+|-
+|C
+|Alomundi Bituna
+|21
+|82.45
+|-
+|PF
+|Hënila Ūnā
+|28
+|80.74
+|-
+|SF
+|Kersok Milan
+|28
+|99.04
+|-
+|SG
+|voput epoikez tapnatiš
+|28
+|86.50
+|-
+|PG
+|Makiaipisi Fana
+|26
+|82.86
+|-
+|C
+|Colin Hutchison
+|27
+|75.02
+|-
+|PF
+|The Moo Saχi
+|24
+|63.68
+|-
+|SF
+|Rvai Florkotae
+|28
+|78.68
+|-
+|SG
+|Paxathipatai Sengtavisouk
+|24
+|72.88
+|-
+|PG
+|zeppak itehíl tikítákh
+|28
+|71.93
+|-
+|C
+|Blanaxon Player #1
+|28
+|56.64
+|-
+|PF
+|Pau Nipta
+|24
+|62.97
+|-
+|SF
+|Xaisomboun Tayvihane
+|21
+|59.05
+|-
+|SG
+|Mike
+|26
+|55.21
+|-
+|PG
+|Ḿavwápŕi Sŕóniqńoqi
+|20
+|61.31
+|}
+{{Infobox basketball club
+| color1 = #ff00ff
+| color2 = #0000ff
+| color3 = #00ffff
+| name = Autolik Autonomy
+| current = UBA Season 6
+| logo = Autolik Autonomy .png
+| imagesize = 200px
+| conference = [[Southern Conference|Southern]]
+| division = [[Division B|B]]
+| founded = 2016
+| arena = [[Autolik Arena]]
+| location = [[Autolik|Autolik, Blaist Blaland]]
+| colors = Pink, Blue, Light Blue {{color box|#ff00ff}} {{color box|#0000ff}} {{color box|#00ffff}}
+| owner =
+| manager = 
+| president = 
+| coach = Coach #14
+| affiliation = [[Autolik Rebels]]
+| franchise_wins = '''174'''
+| franchise_losses = '''230'''
+| playoff_appearances = '''1'''
+| playoff_wins = '''1'''
+| playoff_losses = '''4'''
+| league_champs = '''0'''
+| conf_champs = '''0'''
+| div_champs = '''0''' 
+| ret_nums = '''0'''
+| website = autolikautonomy.com
+| h_body =
+| h_pattern_b =
+| h_shorts =
+| h_pattern_s =
+| a_body =
+| a_pattern_b =
+| a_shorts = 
+| a_pattern_s = 
+| 3_body = 
+| 3_pattern_b = 
+| 3_shorts = 
+| 3_pattern_s = 
+}}
+
+The '''Autolik Autonomy''' are a basketball team based in Autolik, Blaist Blaland. They compete in the [[Universalis Basketball Association|Universalis Basketball Association]] (UBA) and is in [[Division B]] of the Southern Conference.
+
+===Roster===
+{|class="wikitable"
+|+ Autolik Autonomy 
+|-
+!Pos
+!Name
+!Age
+!Overall
+|-
+|C
+|Keahi Genevong
+|25
+|63.92
+|-
+|PF
+|Nopá Kánpovragá
+|28
+|65.55
+|-
+|SF
+|Pakomha Pjagwazwi
+|23
+|79.81
+|-
+|SG
+|Keoki Vongsay
+|24
+|67.48
+|-
+|PG
+|enoikh apéka zeilun
+|28
+|78.27
+|-
+|C
+|Boolway
+|27
+|63.39
+|-
+|PF
+|Dennis Tsoi
+|21
+|62.99
+|-
+|SF
+|Nopá Nonhkwaqan
+|23
+|72.05
+|-
+|SG
+|Ikaika Kethavongsa
+|21
+|65.06
+|-
+|PG
+|Ḿavwápŕi Makŕavamhan
+|24
+|59.80
+|-
+|C
+|Dwab Itsok
+|28
+|62.01
+|-
+|PF
+|Atotra Bexek
+|24
+|51.98
+|-
+|SF
+|Paxathipatai Phoutthasinh
+|22
+|54.79
+|-
+|SG
+|Mornay
+|27
+|61.74
+|-
+|PG
+|Stephen Chapman
+|22
+|50.20
+|}
+{{Infobox basketball club
+| color1 = #666666
+| color2 = #00ffff
+| color3 = #ffffff
+| name = Barsein Bats
+| current = UBA Season 6
+| logo = Barsein Bats .png
+| imagesize = 200px
+| conference = [[Southern Conference|Southern]]
+| division = [[Division B|B]]
+| founded = 2016
+| arena = [[Barsein Stadium]]
+| location = [[Barsein City|Barsein City, Barsein]]
+| colors = Gray, Light Blue, White {{color box|#666666}} {{color box|#00ffff}} {{color box|#ffffff}}
+| owner =
+| manager = 
+| president = 
+| coach = Coach #23
+| affiliation = [[Barsein Beggars]]
+| franchise_wins = '''185'''
+| franchise_losses = '''219'''
+| playoff_appearances = '''3'''
+| playoff_wins = '''11'''
+| playoff_losses = '''14'''
+| league_champs = '''0'''
+| conf_champs = '''0'''
+| div_champs = '''0''' 
+| ret_nums = '''0'''
+| website = barseinbats.com
+| h_body =
+| h_pattern_b =
+| h_shorts =
+| h_pattern_s =
+| a_body =
+| a_pattern_b =
+| a_shorts = 
+| a_pattern_s = 
+| 3_body = 
+| 3_pattern_b = 
+| 3_shorts = 
+| 3_pattern_s = 
+}}
+
+The '''Barsein Bats''' are a basketball team based in Barsein City, Barsein. They compete in the [[Universalis Basketball Association|Universalis Basketball Association]] (UBA) and is in [[Division B]] of the Southern Conference.
+
+===Roster===
+{|class="wikitable"
+|+ Barsein Bats 
+|-
+!Pos
+!Name
+!Age
+!Overall
+|-
+|C
+|Keon Saengsavang
+|25
+|69.48
+|-
+|PF
+|Keahi Saengsavang
+|24
+|69.74
+|-
+|SF
+|Matthew Grabochov
+|26
+|78.96
+|-
+|SG
+|pot
+|24
+|87.26
+|-
+|PG
+|Danomobei Subeina
+|28
+|73.70
+|-
+|C
+|Yembeane
+|23
+|60.54
+|-
+|PF
+|Sagomundisei Hisei
+|24
+|66.82
+|-
+|SF
+|Om Kwang-Seok
+|25
+|63.74
+|-
+|SG
+|Aulii Thonemany
+|23
+|65.29
+|-
+|PG
+|Keahi Siyavong
+|25
+|67.23
+|-
+|C
+|Abosa Aludetsei 
+|22
+|56.56
+|-
+|PF
+|Phetdum Phanivong
+|27
+|65.70
+|-
+|SF
+|Sol Young-Chul 
+|22
+|61.77
+|-
+|SG
+|Yuguchi Tomiji
+|24
+|63.48
+|-
+|PG
+|Dimitri Lolant
+|27
+|63.13
+|}
+{{Infobox basketball club
+| color1 = #ff0000
+| color2 = #ffff00
+| color3 = #000000
+| name = Blanaxon Hammers
+| current = UBA Season 6
+| logo = Blanaxon Hammers .png
+| imagesize = 200px
+| conference = [[Southern Conference|Southern]]
+| division = [[Division B|B]]
+| founded = 2016
+| arena = [[Blanaxon Stadium]]
+| location = [[Blanaxon|Blanaxon, Blaist Blaland]]
+| colors = Red, Yellow, Black {{color box|#ff0000}} {{color box|#ffff00}} {{color box|#000000}}
+| owner =
+| manager = 
+| president = 
+| coach = Coach #35
+| affiliation = [[Zaxon Zephyrs]]
+| franchise_wins = '''185'''
+| franchise_losses = '''219'''
+| playoff_appearances = '''2'''
+| playoff_wins = '''4'''
+| playoff_losses = '''8'''
+| league_champs = '''0'''
+| conf_champs = '''0'''
+| div_champs = '''0''' 
+| ret_nums = '''0'''
+| website = blanaxonhammers.com
+| h_body =
+| h_pattern_b =
+| h_shorts =
+| h_pattern_s =
+| a_body =
+| a_pattern_b =
+| a_shorts = 
+| a_pattern_s = 
+| 3_body = 
+| 3_pattern_b = 
+| 3_shorts = 
+| 3_pattern_s = 
+}}
+
+The '''Blanaxon Hammers''' are a basketball team based in Blanaxon, Blaist Blaland. They compete in the [[Universalis Basketball Association|Universalis Basketball Association]] (UBA) and is in [[Division B]] of the Southern Conference.
+
+===Roster===
+{|class="wikitable"
+|+ Blanaxon Hammers 
+|-
+!Pos
+!Name
+!Age
+!Overall
+|-
+|C
+|Bob Gagodo
+|23
+|64.31
+|-
+|PF
+|Eiqe Vokigei
+|26
+|79.09
+|-
+|SF
+|Nobira Nariaki
+|25
+|76.13
+|-
+|SG
+|Brian Lolant
+|24
+|77.90
+|-
+|PG
+|Baker
+|28
+|69.49
+|-
+|C
+|P'uyo Unup'a
+|25
+|62.61
+|-
+|PF
+|Iggy Bolter
+|24
+|59.51
+|-
+|SF
+|Sovtanzax Uxyakro
+|27
+|61.86
+|-
+|SG
+|Edgar Fichtner
+|26
+|68.61
+|-
+|PG
+|Versi Alovek
+|21
+|68.14
+|-
+|C
+|Ha Chihu
+|24
+|56.37
+|-
+|PF
+|Harri Umlauf 
+|21
+|52.23
+|-
+|SF
+|Autolik Player #4
+|28
+|52.96
+|-
+|SG
+|Blanaxon Player #6
+|28
+|60.79
+|-
+|PG
+|Ikaika Phomsouvanh
+|24
+|57.94
+|}
+{{Infobox basketball club
+| color1 = #cc0000
+| color2 = #38761d
+| color3 = #ffe599
+| name = Kaeshar Kaisers
+| current = UBA Season 6
+| logo = Kaeshar Kaisers .png
+| imagesize = 200px
+| conference = [[Southern Conference|Southern]]
+| division = [[Division B|B]]
+| founded = 2016
+| arena = [[Kaeshar Stadium]]
+| location = [[Oasis City|Oasis City, Kaeshar]]
+| colors = Red, Green, Tan {{color box|#cc0000}} {{color box|#38761d}} {{color box|#ffe599}}
+| owner =
+| manager = 
+| president = 
+| coach = Coach #28
+| affiliation = [[Aovensiiv Atoms]]
+| franchise_wins = '''194'''
+| franchise_losses = '''210'''
+| playoff_appearances = '''3'''
+| playoff_wins = '''24'''
+| playoff_losses = '''24'''
+| league_champs = '''0'''
+| conf_champs = '''1'''
+| div_champs = '''0''' 
+| ret_nums = '''0'''
+| website = kaesharkaisers.com
+| h_body =
+| h_pattern_b =
+| h_shorts =
+| h_pattern_s =
+| a_body =
+| a_pattern_b =
+| a_shorts = 
+| a_pattern_s = 
+| 3_body = 
+| 3_pattern_b = 
+| 3_shorts = 
+| 3_pattern_s = 
+}}
+
+The '''Kaeshar Kaisers''' are a basketball team based in Oasis City, Kaeshar. They compete in the [[Universalis Basketball Association|Universalis Basketball Association]] (UBA) and is in [[Division B]] of the Southern Conference.
+
+===Roster===
+{|class="wikitable"
+|+ Kaeshar Kaisers 
+|-
+!Pos
+!Name
+!Age
+!Overall
+|-
+|C
+|Lilo Vatthana
+|23
+|62.16
+|-
+|PF
+|Uxnax Prokexov
+|25
+|66.81
+|-
+|SF
+|Key To Don Player #4
+|28
+|76.58
+|-
+|SG
+|Akamine Naizen
+|25
+|81.14
+|-
+|PG
+|Carlos Harris
+|22
+|72.60
+|-
+|C
+|Boltway Player #1
+|28
+|55.68
+|-
+|PF
+|Pxalit'k'a Player #6
+|28
+|65.40
+|-
+|SF
+|Sol Song-Jin
+|24
+|73.88
+|-
+|SG
+|Xavier McSteve
+|24
+|71.69
+|-
+|PG
+|Lato Naixi
+|25
+|70.76
+|-
+|C
+|Aahrus Player #2
+|28
+|55.32
+|-
+|PF
+|Osiei Bituna
+|28
+|60.63
+|-
+|SF
+|Atomobei Kerxer
+|25
+|55.47
+|-
+|SG
+|Tanifuji Shirosama
+|25
+|59.71
+|-
+|PG
+|Làto Naksik
+|27
+|62.38
+|}
+{{Infobox basketball club
+| color1 = #7f6000
+| color2 = #ffff00
+| color3 = #999999
+| name = Naxda Nomads
+| current = UBA Season 6
+| logo = Naxda Nomads .png
+| imagesize = 200px
+| conference = [[Southern Conference|Southern]]
+| division = [[Division B|B]]
+| founded = 2016
+| arena = [[Naxda Stadium]]
+| location = [[Naxda|Naxda, Blaist Blaland]]
+| colors = Brown, Yellow, Gray {{color box|#7f6000}} {{color box|#ffff00}} {{color box|#999999}}
+| owner =
+| manager = 
+| president = 
+| coach = Coach #26
+| affiliation = [[Daxanad Soldiers]]
+| franchise_wins = '''191'''
+| franchise_losses = '''213'''
+| playoff_appearances = '''3'''
+| playoff_wins = '''6'''
+| playoff_losses = '''12'''
+| league_champs = '''0'''
+| conf_champs = '''0'''
+| div_champs = '''0''' 
+| ret_nums = '''0'''
+| website = naxdanomads.com
+| h_body =
+| h_pattern_b =
+| h_shorts =
+| h_pattern_s =
+| a_body =
+| a_pattern_b =
+| a_shorts = 
+| a_pattern_s = 
+| 3_body = 
+| 3_pattern_b = 
+| 3_shorts = 
+| 3_pattern_s = 
+}}
+
+The '''Naxda Nomads''' are a basketball team based in Naxda, Blaist Blaland. They compete in the [[Universalis Basketball Association|Universalis Basketball Association]] (UBA) and is in [[Division B]] of the Southern Conference.
+
+===Roster===
+{|class="wikitable"
+|+ Naxda Nomads 
+|-
+!Pos
+!Name
+!Age
+!Overall
+|-
+|C
+|Height Sagua Player #5
+|28
+|68.70
+|-
+|PF
+|Eto Shunmyo
+|23
+|69.65
+|-
+|SF
+|Small Forward #143
+|28
+|69.99
+|-
+|SG
+|Tixen Prokol
+|27
+|74.00
+|-
+|PG
+|b 9u
+|28
+|75.94
+|-
+|C
+|Kersuvi Himei
+|25
+|52.63
+|-
+|PF
+|Moke Savang
+|24
+|56.42
+|-
+|SF
+|Maik Phothisarath
+|21
+|67.32
+|-
+|SG
+|Zhali Mpetaec
+|28
+|72.50
+|-
+|PG
+|Alomundi Gagolomundi
+|25
+|75.63
+|-
+|C
+|Malo Sengtavisouk
+|25
+|49.64
+|-
+|PF
+|Maik Menorath 
+|22
+|46.56
+|-
+|SF
+|Mhokba Djamhámhoñha
+|21
+|62.05
+|-
+|SG
+|Darkon Piklo
+|25
+|55.67
+|-
+|PG
+|Lizaxon Rova
+|26
+|67.74
+|}
+{{Infobox basketball club
+| color1 = #ff0000
+| color2 = #000000
+| color3 = #cccccc
+| name = Red Rainbow Sickles
+| current = UBA Season 6
+| logo = Red Rainbow Sickles .png
+| imagesize = 200px
+| conference = [[Southern Conference|Southern]]
+| division = [[Division B|B]]
+| founded = 2016
+| arena = [[Red Rainbow Stadium]]
+| location = [[Sovkagrad|Sovkagrad, Red Rainbow]]
+| colors = Red, Black, Light Gray {{color box|#ff0000}} {{color box|#000000}} {{color box|#cccccc}}
+| owner =
+| manager = 
+| president = 
+| coach = Coach #7
+| affiliation = [[Red-Rainbow Reds]]
+| franchise_wins = '''161'''
+| franchise_losses = '''243'''
+| playoff_appearances = '''1'''
+| playoff_wins = '''3'''
+| playoff_losses = '''4'''
+| league_champs = '''0'''
+| conf_champs = '''0'''
+| div_champs = '''0''' 
+| ret_nums = '''0'''
+| website = redrainbowsickles.com
+| h_body =
+| h_pattern_b =
+| h_shorts =
+| h_pattern_s =
+| a_body =
+| a_pattern_b =
+| a_shorts = 
+| a_pattern_s = 
+| 3_body = 
+| 3_pattern_b = 
+| 3_shorts = 
+| 3_pattern_s = 
+}}
+
+The '''Red Rainbow Sickles''' are a basketball team based in Sovkagrad, Red Rainbow. They compete in the [[Universalis Basketball Association|Universalis Basketball Association]] (UBA) and is in [[Division B]] of the Southern Conference.
+
+===Roster===
+{|class="wikitable"
+|+ Red Rainbow Sickles 
+|-
+!Pos
+!Name
+!Age
+!Overall
+|-
+|C
+|Caleb Jervis
+|24
+|73.80
+|-
+|PF
+|Cabodu Kanix
+|21
+|65.71
+|-
+|SF
+|Red Rainbow Player #1
+|28
+|77.46
+|-
+|SG
+|Vanhik Slivókŕámhomhók
+|25
+|80.82
+|-
+|PG
+|Dano Mesiaertoxek
+|23
+|71.28
+|-
+|C
+|Masaki Kazuko
+|25
+|59.06
+|-
+|PF
+|Ydar Iode
+|25
+|57.34
+|-
+|SF
+|Phetdum Bouvanaat 
+|19
+|75.78
+|-
+|SG
+|Sagua Player #3
+|28
+|67.35
+|-
+|PG
+|William Spicer
+|24
+|64.83
+|-
+|C
+|Dylan Cass
+|24
+|58.66
+|-
+|PF
+|Red Rainbow Player #4
+|28
+|56.73
+|-
+|SF
+|Murata Sofu
+|22
+|69.26
+|-
+|SG
+|Red Rainbow Player #6
+|28
+|55.93
+|-
+|PG
+|Atotra Danomane
+|26
+|58.86
+|}
+{{Infobox basketball club
+| color1 = #00ffdb
+| color2 = #10d1b6
+| color3 = #0c343d
+| name = Serkr Atolls
+| current = UBA Season 6
+| logo = Serkr Atolls .png
+| imagesize = 200px
+| conference = [[Southern Conference|Southern]]
+| division = [[Division B|B]]
+| founded = 2016
+| arena = [[Kap'atŋpiri Stadium]]
+| location = [[Kap'atŋpiri|Kap'atŋpiri, Oesa]]
+| colors = Teal, Turquoise, Elephant {{color box|#00ffdb}} {{color box|#10d1b6}} {{color box|#0c343d}}
+| owner =
+| manager = 
+| president = 
+| coach = Coach #27
+| affiliation = [[Hinaika Hurricanes]]
+| franchise_wins = '''183'''
+| franchise_losses = '''221'''
+| playoff_appearances = '''2'''
+| playoff_wins = '''12'''
+| playoff_losses = '''14'''
+| league_champs = '''0'''
+| conf_champs = '''0'''
+| div_champs = '''2''' 
+| ret_nums = '''0'''
+| website = serkratolls.com
+| h_body =
+| h_pattern_b =
+| h_shorts =
+| h_pattern_s =
+| a_body =
+| a_pattern_b =
+| a_shorts = 
+| a_pattern_s = 
+| 3_body = 
+| 3_pattern_b = 
+| 3_shorts = 
+| 3_pattern_s = 
+}}
+
+The '''Serkr Atolls''' are a basketball team based in Kap'atŋpiri, Oesa. They compete in the [[Universalis Basketball Association|Universalis Basketball Association]] (UBA) and is in [[Division B]] of the Southern Conference.
+
+===Roster===
+{|class="wikitable"
+|+ Serkr Atolls 
+|-
+!Pos
+!Name
+!Age
+!Overall
+|-
+|C
+|Vrá Nonhkwaqan
+|28
+|73.48
+|-
+|PF
+|Iveo Vokigei
+|21
+|63.89
+|-
+|SF
+|Klaxon Nixoka
+|25
+|88.52
+|-
+|SG
+|Danomobei Motxev
+|26
+|78.21
+|-
+|PG
+|Transhilmalia Player #2
+|28
+|98.57
+|-
+|C
+|Teva Gekxakŋi
+|23
+|60.13
+|-
+|PF
+|Pranga  
+|23
+|63.69
+|-
+|SF
+|K'ita Senako
+|22
+|69.95
+|-
+|SG
+|Niko Stengel
+|27
+|71.31
+|-
+|PG
+|Nathaniel Bate
+|22
+|70.71
+|-
+|C
+|Saiki Shunmyo
+|25
+|56.93
+|-
+|PF
+|Bongatar Player #5
+|28
+|63.43
+|-
+|SF
+|Alomiba Xahelvi
+|27
+|61.17
+|-
+|SG
+|Nupa Auprat
+|23
+|65.65
+|-
+|PG
+|Nasi Pindaiabu
+|28
+|70.09
+|}
+{{Infobox basketball club
+| color1 = #1c4587
+| color2 = #e69138
+| color3 = #ffffff
+| name = Shmupland Dictators
+| current = UBA Season 6
+| logo = Shmupland Dictators .png
+| imagesize = 200px
+| conference = [[Southern Conference|Southern]]
+| division = [[Division B|B]]
+| founded = 2016
+| arena = [[Shmupland Stadium]]
+| location = [[Pyongyang|Pyongyang, Shmupland]]
+| colors = Navy Blue, Orange, White {{color box|#1c4587}} {{color box|#e69138}} {{color box|#ffffff}}
+| owner =
+| manager = 
+| president = 
+| coach = Naskitrusk Coach
+| affiliation = [[Shmupland Tyrants]]
+| franchise_wins = '''241'''
+| franchise_losses = '''173'''
+| playoff_appearances = '''3'''
+| playoff_wins = '''8'''
+| playoff_losses = '''13'''
+| league_champs = '''0'''
+| conf_champs = '''0'''
+| div_champs = '''1''' 
+| ret_nums = '''0'''
+| website = shmuplanddictators.com
+| h_body =
+| h_pattern_b =
+| h_shorts =
+| h_pattern_s =
+| a_body =
+| a_pattern_b =
+| a_shorts = 
+| a_pattern_s = 
+| 3_body = 
+| 3_pattern_b = 
+| 3_shorts = 
+| 3_pattern_s = 
+}}
+
+The '''Shmupland Dictators''' are a basketball team based in Pyongyang, Shmupland. They compete in the [[Universalis Basketball Association|Universalis Basketball Association]] (UBA) and is in [[Division B]] of the Southern Conference.
+
+===Roster===
+{|class="wikitable"
+|+ Shmupland Dictators 
+|-
+!Pos
+!Name
+!Age
+!Overall
+|-
+|C
+|Power Forward #166
+|28
+|66.69
+|-
+|PF
+|Kibibei Hatemosei
+|24
+|71.30
+|-
+|SF
+|Eun Cho
+|23
+|78.65
+|-
+|SG
+|Waltoko
+|21
+|77.82
+|-
+|PG
+|Billingulbut
+|26
+|77.17
+|-
+|C
+|Eric Newton
+|24
+|66.16
+|-
+|PF
+|Power Forward #151
+|28
+|55.71
+|-
+|SF
+|Small Forward #114
+|28
+|61.03
+|-
+|SG
+|Aiyota Player #3
+|28
+|62.08
+|-
+|PG
+|Tapan Sikasbë
+|23
+|68.98
+|-
+|C
+|Vŕá Płońiblá
+|24
+|57.00
+|-
+|PF
+|Transhilmalia Player #8
+|28
+|52.47
+|-
+|SF
+|Small Forward #115
+|28
+|59.11
+|-
+|SG
+|Danomobei Hiemeta 
+|22
+|50.96
+|-
+|PG
+|Ji-Min Choi
+|28
+|67.27
+|}
+{{Infobox basketball club
+| color1 = #1155cc
+| color2 = #cc0000
+| color3 = #ffffff
+| name = Aiyota Pumps
+| current = UBA Season 6
+| logo = Aiyota Pumps .png
+| imagesize = 200px
+| conference = [[Nortern Conference|Northern]]
+| division = [[Division C|C]]
+| founded = 2016
+| arena = [[Aiyota Stadium]]
+| location = [[Vikasa|Vikasa, Aiyota]]
+| colors = Blue, Red, White {{color box|#1155cc}} {{color box|#cc0000}} {{color box|#ffffff}}
+| owner =
+| manager = 
+| president = 
+| coach = Coach #8
+| affiliation = [[Detroit Pumps]]
+| franchise_wins = '''187'''
+| franchise_losses = '''217'''
+| playoff_appearances = '''2'''
+| playoff_wins = '''12'''
+| playoff_losses = '''11'''
+| league_champs = '''0'''
+| conf_champs = '''0'''
+| div_champs = '''0''' 
+| ret_nums = '''0'''
+| website = aiyotapumps.com
+| h_body =
+| h_pattern_b =
+| h_shorts =
+| h_pattern_s =
+| a_body =
+| a_pattern_b =
+| a_shorts = 
+| a_pattern_s = 
+| 3_body = 
+| 3_pattern_b = 
+| 3_shorts = 
+| 3_pattern_s = 
+}}
+
+The '''Aiyota Pumps''' are a basketball team based in Vikasa, Aiyota. They compete in the [[Universalis Basketball Association|Universalis Basketball Association]] (UBA) and is in [[Division C]] of the Nortern Conference.
+
+===Roster===
+{|class="wikitable"
+|+ Aiyota Pumps 
+|-
+!Pos
+!Name
+!Age
+!Overall
+|-
+|C
+|Danotra Beselapo
+|24
+|66.53
+|-
+|PF
+|Paparto Bexosek
+|26
+|74.39
+|-
+|SF
+|Aiyota Player #5
+|28
+|78.79
+|-
+|SG
+|San Holo
+|24
+|96.57
+|-
+|PG
+|Aiyota Player #2
+|28
+|74.62
+|-
+|C
+|Pixtij Lekaxo
+|25
+|55.96
+|-
+|PF
+|Pitro Tenopro
+|25
+|60.04
+|-
+|SF
+|Lee Stidham
+|19
+|71.97
+|-
+|SG
+|Key To Don Player #3
+|28
+|68.97
+|-
+|PG
+|Olandi Olamos
+|21
+|67.95
+|-
+|C
+|Akamine Yakumo
+|25
+|54.03
+|-
+|PF
+|Günther Umlauf
+|22
+|55.90
+|-
+|SF
+|xek
+|28
+|62.01
+|-
+|SG
+|Hiroshima Yakumo
+|24
+|63.42
+|-
+|PG
+|Niclas Unterberger
+|23
+|63.58
+|}
+{{Infobox basketball club
+| color1 = #6aa84f
+| color2 = #cccccc
+| color3 = #ffffff
+| name = Avura Aviators
+| current = UBA Season 6
+| logo = Avura Aviators .png
+| imagesize = 200px
+| conference = [[Nortern Conference|Northern]]
+| division = [[Division C|C]]
+| founded = 2016
+| arena = [[Ávura Stadium]]
+| location = [[Ávura|Ávura, Aeridani]]
+| colors = Green, Gray, White {{color box|#6aa84f}} {{color box|#cccccc}} {{color box|#ffffff}}
+| owner =
+| manager = 
+| president = 
+| coach = Coach #15
+| affiliation = [[Boston Beavers]]
+| franchise_wins = '''239'''
+| franchise_losses = '''165'''
+| playoff_appearances = '''3'''
+| playoff_wins = '''16'''
+| playoff_losses = '''14'''
+| league_champs = '''0'''
+| conf_champs = '''0'''
+| div_champs = '''8''' 
+| ret_nums = '''0'''
+| website = avuraaviators.com
+| h_body =
+| h_pattern_b =
+| h_shorts =
+| h_pattern_s =
+| a_body =
+| a_pattern_b =
+| a_shorts = 
+| a_pattern_s = 
+| 3_body = 
+| 3_pattern_b = 
+| 3_shorts = 
+| 3_pattern_s = 
+}}
+
+The '''Avura Aviators''' are a basketball team based in Ávura, Aeridani. They compete in the [[Universalis Basketball Association|Universalis Basketball Association]] (UBA) and is in [[Division C]] of the Nortern Conference.
+
+===Roster===
+{|class="wikitable"
+|+ Avura Aviators 
+|-
+!Pos
+!Name
+!Age
+!Overall
+|-
+|C
+|Omumiba Keget
+|24
+|70.21
+|-
+|PF
+|Sichaizei Sha
+|26
+|74.97
+|-
+|SF
+|Kilik Farhje
+|24
+|72.64
+|-
+|SG
+|Floenne Zan
+|28
+|75.86
+|-
+|PG
+|Yasutake Yasuoka
+|25
+|75.37
+|-
+|C
+|Sundaa Wen
+|24
+|60.14
+|-
+|PF
+|Tibiziŋag Ifet
+|28
+|74.27
+|-
+|SF
+|Ijba Bexotrugo
+|25
+|62.16
+|-
+|SG
+|Siolle Lago
+|28
+|62.48
+|-
+|PG
+|Hannes Ehrenstein
+|22
+|69.87
+|-
+|C
+|Yamazaki Senichi
+|24
+|59.74
+|-
+|PF
+|Autolik Player #1
+|28
+|62.92
+|-
+|SF
+|Váqáp Qlámipanońqo 
+|20
+|53.93
+|-
+|SG
+|Alotru Keget
+|25
+|58.67
+|-
+|PG
+|Kiromibakeili Tute 
+|22
+|56.12
+|}
+{{Infobox basketball club
+| color1 = #bf9000
+| color2 = #0b5394
+| color3 = #ffffff
+| name = Boltway Bad Dragons
+| current = UBA Season 6
+| logo = Boltway Bad Dragons .png
+| imagesize = 200px
+| conference = [[Nortern Conference|Northern]]
+| division = [[Division C|C]]
+| founded = 2016
+| arena = [[Boltway Stadium]]
+| location = [[Boltway|Boltway, Ethanthova]]
+| colors = Gold, Blue, White {{color box|#bf9000}} {{color box|#0b5394}} {{color box|#ffffff}}
+| owner =
+| manager = 
+| president = 
+| coach = Coach #40
+| affiliation = [[Rockshaw Rave]]
+| franchise_wins = '''142'''
+| franchise_losses = '''262'''
+| playoff_appearances = '''0'''
+| playoff_wins = '''0'''
+| playoff_losses = '''0'''
+| league_champs = '''0'''
+| conf_champs = '''0'''
+| div_champs = '''0''' 
+| ret_nums = '''0'''
+| website = boltwaybaddragons.com
+| h_body =
+| h_pattern_b =
+| h_shorts =
+| h_pattern_s =
+| a_body =
+| a_pattern_b =
+| a_shorts = 
+| a_pattern_s = 
+| 3_body = 
+| 3_pattern_b = 
+| 3_shorts = 
+| 3_pattern_s = 
+}}
+
+The '''Boltway Bad Dragons''' are a basketball team based in Boltway, Ethanthova. They compete in the [[Universalis Basketball Association|Universalis Basketball Association]] (UBA) and is in [[Division C]] of the Nortern Conference.
+
+===Roster===
+{|class="wikitable"
+|+ Boltway Bad Dragons 
+|-
+!Pos
+!Name
+!Age
+!Overall
+|-
+|C
+|Boḿa Blamhákpwano
+|22
+|71.72
+|-
+|PF
+|Kosiro Omundi
+|26
+|75.15
+|-
+|SF
+|Litsaw Wap't'ebw
+|25
+|99.99
+|-
+|SG
+|Boltway Player #3
+|28
+|77.35
+|-
+|PG
+|Làto Cows 
+|22
+|79.00
+|-
+|C
+|Pxalit'k'a Player #3
+|28
+|53.03
+|-
+|PF
+|Jonathan Wagenseil
+|22
+|61.55
+|-
+|SF
+|Boltway Player #2
+|28
+|69.30
+|-
+|SG
+|Robert Kershaw
+|22
+|71.44
+|-
+|PG
+|Paparto Subeina
+|28
+|77.18
+|-
+|C
+|Andries Martinez
+|25
+|52.04
+|-
+|PF
+|Chip Hancock
+|28
+|54.25
+|-
+|SF
+|Alubembi Hadosa
+|26
+|63.85
+|-
+|SG
+|Wongduan Saengsavang
+|25
+|68.20
+|-
+|PG
+|vun
+|28
+|73.44
+|}
+{{Infobox basketball club
+| color1 = #002bff
+| color2 = #cccccc
+| color3 = #ffffff
+| name = Dotruga Falno
+| current = UBA Season 6
+| logo = Dotruga Falno .png
+| imagesize = 200px
+| conference = [[Nortern Conference|Northern]]
+| division = [[Division C|C]]
+| founded = 2016
+| arena = [[Naskitrusk Bowl]]
+| location = [[Naskitrusk|Naskitrusk, Dotruga]]
+| colors = Blue, Gray, White {{color box|#002bff}} {{color box|#cccccc}} {{color box|#ffffff}}
+| owner =
+| manager = 
+| president = 
+| coach = Chromasheep Farm Coach
+| affiliation = [[Naskitrusk Brutes]]
+| franchise_wins = '''280'''
+| franchise_losses = '''124'''
+| playoff_appearances = '''5'''
+| playoff_wins = '''36'''
+| playoff_losses = '''30'''
+| league_champs = '''1'''
+| conf_champs = '''1'''
+| div_champs = '''2''' 
+| ret_nums = '''0'''
+| website = dotrugafalno.com
+| h_body =
+| h_pattern_b =
+| h_shorts =
+| h_pattern_s =
+| a_body =
+| a_pattern_b =
+| a_shorts = 
+| a_pattern_s = 
+| 3_body = 
+| 3_pattern_b = 
+| 3_shorts = 
+| 3_pattern_s = 
+}}
+
+The '''Dotruga Falno''' are a basketball team based in Naskitrusk, Dotruga. They compete in the [[Universalis Basketball Association|Universalis Basketball Association]] (UBA) and is in [[Division C]] of the Nortern Conference.
+
+===Roster===
+{|class="wikitable"
+|+ Dotruga Falno 
+|-
+!Pos
+!Name
+!Age
+!Overall
+|-
+|C
+|Atumobei Tute
+|26
+|89.14
+|-
+|PF
+|Okaget Mabipet
+|24
+|90.54
+|-
+|SF
+|Atakri Kalauni
+|28
+|95.53
+|-
+|SG
+|Iklo Eloalerko 
+|19
+|76.29
+|-
+|PG
+|Persa Mersa
+|21
+|83.55
+|-
+|C
+|Kudapa Kaxpa
+|28
+|60.24
+|-
+|PF
+|Blanaxon Player #3
+|28
+|67.01
+|-
+|SF
+|Volker Kluck
+|25
+|66.94
+|-
+|SG
+|Yuguchi Sofu
+|26
+|70.20
+|-
+|PG
+|Pakomha Dakómh
+|22
+|72.70
+|-
+|C
+|Danotra Alodosumosodo
+|21
+|52.83
+|-
+|PF
+|Keahi Bokeo
+|22
+|52.41
+|-
+|SF
+|Minamoto Takeji
+|23
+|64.61
+|-
+|SG
+|Aiyota Player #9
+|28
+|56.36
+|-
+|PG
+|Bá Qŕámanh
+|28
+|60.80
+|}
+{{Infobox basketball club
+| color1 = #6d9eeb
+| color2 = #e06666
+| color3 = #ffffff
+| name = Ethanthova Ponies
+| current = UBA Season 6
+| logo = Ethanthova Ponies .png
+| imagesize = 200px
+| conference = [[Nortern Conference|Northern]]
+| division = [[Division C|C]]
+| founded = 2016
+| arena = [[Ethanthova Stadium]]
+| location = [[Vincent|Vincent, Ethanthova]]
+| colors = Light Blue, Light Red, White {{color box|#6d9eeb}} {{color box|#e06666}} {{color box|#ffffff}}
+| owner =
+| manager = 
+| president = 
+| coach = Sande Sitei Coach
+| affiliation = [[Vincent Vikings]]
+| franchise_wins = '''259'''
+| franchise_losses = '''145'''
+| playoff_appearances = '''3'''
+| playoff_wins = '''8'''
+| playoff_losses = '''12'''
+| league_champs = '''0'''
+| conf_champs = '''0'''
+| div_champs = '''1''' 
+| ret_nums = '''0'''
+| website = ethanthovaponies.com
+| h_body =
+| h_pattern_b =
+| h_shorts =
+| h_pattern_s =
+| a_body =
+| a_pattern_b =
+| a_shorts = 
+| a_pattern_s = 
+| 3_body = 
+| 3_pattern_b = 
+| 3_shorts = 
+| 3_pattern_s = 
+}}
+
+The '''Ethanthova Ponies''' are a basketball team based in Vincent, Ethanthova. They compete in the [[Universalis Basketball Association|Universalis Basketball Association]] (UBA) and is in [[Division C]] of the Nortern Conference.
+
+===Roster===
+{|class="wikitable"
+|+ Ethanthova Ponies 
+|-
+!Pos
+!Name
+!Age
+!Overall
+|-
+|C
+|Ethanthova Player #4
+|28
+|60.06
+|-
+|PF
+|Asser Steinbauer
+|22
+|70.93
+|-
+|SF
+|Ethanthova Player #5
+|28
+|84.87
+|-
+|SG
+|Fihana Jo
+|28
+|80.65
+|-
+|PG
+|Errol James
+|26
+|77.64
+|-
+|C
+|Analu Rattanavongsa
+|24
+|54.51
+|-
+|PF
+|Kompasu Yasuoka
+|27
+|65.88
+|-
+|SF
+|lu
+|28
+|70.01
+|-
+|SG
+|Ethanthova Player #1
+|28
+|69.63
+|-
+|PG
+|Ixbla Kibla
+|28
+|65.91
+|-
+|C
+|Mungymia
+|24
+|51.65
+|-
+|PF
+|Ethanthova Player #3
+|28
+|63.43
+|-
+|SF
+|Ethanthova Player #8
+|28
+|59.49
+|-
+|SG
+|Holy Yektonesia Player #3
+|28
+|68.23
+|-
+|PG
+|Ethanthova Player #2
+|28
+|65.38
+|}
+{{Infobox basketball club
+| color1 = #6aa84f
+| color2 = #ea4000
+| color3 = #ffffff
+| name = Faehrenfall Feathercats
+| current = UBA Season 6
+| logo = Faehrenfall Feathercats .png
+| imagesize = 200px
+| conference = [[Nortern Conference|Northern]]
+| division = [[Division C|C]]
+| founded = 2016
+| arena = [[Faehrenfall Stadium]]
+| location = [[Faehrenfall|Faehrenfall, Aeridani]]
+| colors = Green, Red, White {{color box|#6aa84f}} {{color box|#ea4000}} {{color box|#ffffff}}
+| owner =
+| manager = 
+| president = 
+| coach = Coach #10
+| affiliation = [[Aeridani Troopers]]
+| franchise_wins = '''220'''
+| franchise_losses = '''184'''
+| playoff_appearances = '''2'''
+| playoff_wins = '''6'''
+| playoff_losses = '''9'''
+| league_champs = '''0'''
+| conf_champs = '''0'''
+| div_champs = '''0''' 
+| ret_nums = '''0'''
+| website = faehrenfallfeathercats.com
+| h_body =
+| h_pattern_b =
+| h_shorts =
+| h_pattern_s =
+| a_body =
+| a_pattern_b =
+| a_shorts = 
+| a_pattern_s = 
+| 3_body = 
+| 3_pattern_b = 
+| 3_shorts = 
+| 3_pattern_s = 
+}}
+
+The '''Faehrenfall Feathercats''' are a basketball team based in Faehrenfall, Aeridani. They compete in the [[Universalis Basketball Association|Universalis Basketball Association]] (UBA) and is in [[Division C]] of the Nortern Conference.
+
+===Roster===
+{|class="wikitable"
+|+ Faehrenfall Feathercats 
+|-
+!Pos
+!Name
+!Age
+!Overall
+|-
+|C
+|Mónhin Mipjódló
+|21
+|64.99
+|-
+|PF
+|Tha Tricka
+|28
+|67.65
+|-
+|SF
+|Blanaxon Player #5
+|28
+|78.79
+|-
+|SG
+|Vince Fowler
+|21
+|77.51
+|-
+|PG
+|Three Point Masta
+|28
+|89.57
+|-
+|C
+|Savage Soleani
+|28
+|59.66
+|-
+|PF
+|Munglegarra
+|25
+|62.89
+|-
+|SF
+|Aseqa Poi
+|23
+|74.83
+|-
+|SG
+|Alundi Elodosatrisei
+|24
+|67.56
+|-
+|PG
+|Melebin Himei
+|25
+|65.25
+|-
+|C
+|Nàsà Sikasbë 
+|23
+|56.43
+|-
+|PF
+|Tagawa Kazuko
+|22
+|57.27
+|-
+|SF
+|Papa Ogre
+|28
+|57.46
+|-
+|SG
+|Naxto Zaxnax
+|24
+|66.68
+|-
+|PG
+|Adam Lettmann
+|26
+|55.40
+|}
+{{Infobox basketball club
+| color1 = #12a4b3
+| color2 = #666666
+| color3 = #ffffff
+| name = Stedro Boulders
+| current = UBA Season 6
+| logo = Stedro Boulders .png
+| imagesize = 200px
+| conference = [[Nortern Conference|Northern]]
+| division = [[Division C|C]]
+| founded = 2016
+| arena = [[Stedro Stadium]]
+| location = [[Stedro|Stedro, Dotruga]]
+| colors = Teal, Gray, White {{color box|#12a4b3}} {{color box|#666666}} {{color box|#ffffff}}
+| owner =
+| manager = 
+| president = 
+| coach = Coach #37
+| affiliation = [[Ebetxi Detro]]
+| franchise_wins = '''189'''
+| franchise_losses = '''215'''
+| playoff_appearances = '''2'''
+| playoff_wins = '''5'''
+| playoff_losses = '''8'''
+| league_champs = '''0'''
+| conf_champs = '''0'''
+| div_champs = '''0''' 
+| ret_nums = '''0'''
+| website = stedroboulders.com
+| h_body =
+| h_pattern_b =
+| h_shorts =
+| h_pattern_s =
+| a_body =
+| a_pattern_b =
+| a_shorts = 
+| a_pattern_s = 
+| 3_body = 
+| 3_pattern_b = 
+| 3_shorts = 
+| 3_pattern_s = 
+}}
+
+The '''Stedro Boulders''' are a basketball team based in Stedro, Dotruga. They compete in the [[Universalis Basketball Association|Universalis Basketball Association]] (UBA) and is in [[Division C]] of the Nortern Conference.
+
+===Roster===
+{|class="wikitable"
+|+ Stedro Boulders 
+|-
+!Pos
+!Name
+!Age
+!Overall
+|-
+|C
+|Mabebosei Alotro
+|28
+|67.56
+|-
+|PF
+|Kaili Saenthavisouk
+|24
+|70.14
+|-
+|SF
+|Bingarra
+|21
+|98.54
+|-
+|SG
+|Gorga Ektxr
+|24
+|69.59
+|-
+|PG
+|Okada Sumiteru
+|22
+|75.88
+|-
+|C
+|Nagata Taki
+|24
+|60.67
+|-
+|PF
+|eneŋ zekek zeilunaven
+|28
+|64.97
+|-
+|SF
+|Sebastien Robertson
+|23
+|61.11
+|-
+|SG
+|Lavrenti Ogden
+|24
+|65.59
+|-
+|PG
+|Blanaxon Player #2
+|28
+|65.29
+|-
+|C
+|Làto Sokàtà
+|24
+|53.91
+|-
+|PF
+|Keahi Saenthavisouk
+|24
+|61.18
+|-
+|SF
+|Ulatrusiei Hisei 
+|23
+|55.69
+|-
+|SG
+|Kiro Hidolundi 
+|21
+|55.07
+|-
+|PG
+|pekleɰ tiwan
+|26
+|63.76
+|}
+{{Infobox basketball club
+| color1 = #ffffff
+| color2 = #434343
+| color3 = #8bd751
+| name = TND Tanks
+| current = UBA Season 6
+| logo = TND Tanks .png
+| imagesize = 200px
+| conference = [[Nortern Conference|Northern]]
+| division = [[Division C|C]]
+| founded = 2016
+| arena = [[TND Stadium]]
+| location = [[City|City, Tri-National Dominion]]
+| colors = White, Orange, Lime Green {{color box|#ffffff}} {{color box|#434343}} {{color box|#8bd751}}
+| owner =
+| manager = 
+| president = 
+| coach = Coach #2
+| affiliation = [[TND Force]]
+| franchise_wins = '''158'''
+| franchise_losses = '''246'''
+| playoff_appearances = '''1'''
+| playoff_wins = '''0'''
+| playoff_losses = '''4'''
+| league_champs = '''0'''
+| conf_champs = '''0'''
+| div_champs = '''0''' 
+| ret_nums = '''0'''
+| website = tndtanks.com
+| h_body =
+| h_pattern_b =
+| h_shorts =
+| h_pattern_s =
+| a_body =
+| a_pattern_b =
+| a_shorts = 
+| a_pattern_s = 
+| 3_body = 
+| 3_pattern_b = 
+| 3_shorts = 
+| 3_pattern_s = 
+}}
+
+The '''TND Tanks''' are a basketball team based in City, Tri-National Dominion. They compete in the [[Universalis Basketball Association|Universalis Basketball Association]] (UBA) and is in [[Division C]] of the Nortern Conference.
+
+===Roster===
+{|class="wikitable"
+|+ TND Tanks 
+|-
+!Pos
+!Name
+!Age
+!Overall
+|-
+|C
+|Tri_National_Dominion Player #1
+|28
+|70.09
+|-
+|PF
+|Kwak Chihu
+|25
+|68.91
+|-
+|SF
+|Phetdum Vatthana
+|25
+|78.95
+|-
+|SG
+|Pakomha Nhoñsła
+|26
+|71.50
+|-
+|PG
+|Phetdum Vongsay
+|26
+|73.35
+|-
+|C
+|Maere Eirikursson
+|25
+|65.26
+|-
+|PF
+|Detrio Marzovius
+|28
+|68.45
+|-
+|SF
+|Carsten Meyer
+|21
+|70.08
+|-
+|SG
+|Quartermarra
+|24
+|70.58
+|-
+|PG
+|Tri_National_Dominion Player #3
+|28
+|68.96
+|-
+|C
+|Kiromi Hialerko
+|23
+|52.30
+|-
+|PF
+|Wilbert Harries
+|23
+|63.93
+|-
+|SF
+|pazek lutep kaghišek
+|26
+|67.04
+|-
+|SG
+|Diji Makmero
+|28
+|65.16
+|-
+|PG
+|LeBryon James
+|28
+|64.89
+|}
+{{Infobox basketball club
+| color1 = #f1c232
+| color2 = #ff9900
+| color3 = #990000
+| name = Bongatar Banging Bongos
+| current = UBA Season 6
+| logo = Bongatar Banging Bongos .png
+| imagesize = 200px
+| conference = [[Nortern Conference|Northern]]
+| division = [[Division D|D]]
+| founded = 2016
+| arena = [[Bongatar Banging Stadium]]
+| location = [[Bongatar City|Bongatar City, Bongatar]]
+| colors = Tan, Orange, Maroon {{color box|#f1c232}} {{color box|#ff9900}} {{color box|#990000}}
+| owner =
+| manager = 
+| president = 
+| coach = Coach #12
+| affiliation = [[Bongatar Boppers]]
+| franchise_wins = '''166'''
+| franchise_losses = '''238'''
+| playoff_appearances = '''2'''
+| playoff_wins = '''4'''
+| playoff_losses = '''9'''
+| league_champs = '''0'''
+| conf_champs = '''0'''
+| div_champs = '''0''' 
+| ret_nums = '''0'''
+| website = bongatarbangingbongos.com
+| h_body =
+| h_pattern_b =
+| h_shorts =
+| h_pattern_s =
+| a_body =
+| a_pattern_b =
+| a_shorts = 
+| a_pattern_s = 
+| 3_body = 
+| 3_pattern_b = 
+| 3_shorts = 
+| 3_pattern_s = 
+}}
+
+The '''Bongatar Banging Bongos''' are a basketball team based in Bongatar City, Bongatar. They compete in the [[Universalis Basketball Association|Universalis Basketball Association]] (UBA) and is in [[Division D]] of the Nortern Conference.
+
+===Roster===
+{|class="wikitable"
+|+ Bongatar Banging Bongos 
+|-
+!Pos
+!Name
+!Age
+!Overall
+|-
+|C
+|Kalani Saysamongdy
+|23
+|76.69
+|-
+|PF
+|Dvinme Player #11
+|28
+|70.48
+|-
+|SF
+|Kasai Isei
+|24
+|78.16
+|-
+|SG
+|Miyoshi Masami
+|23
+|78.68
+|-
+|PG
+|Wongduan Sengtavisouk
+|21
+|78.00
+|-
+|C
+|Om Kwang-Jo
+|28
+|54.84
+|-
+|PF
+|Phetdum Somphonpadee
+|26
+|65.24
+|-
+|SF
+|Eric Gilroy
+|24
+|61.82
+|-
+|SG
+|Blanox Farhje
+|26
+|65.72
+|-
+|PG
+|Fujikawa Masuhiro
+|25
+|78.00
+|-
+|C
+|Goormurra
+|22
+|48.06
+|-
+|PF
+|Zax Kaxpa
+|27
+|57.42
+|-
+|SF
+|No Seung-Won
+|25
+|59.57
+|-
+|SG
+|Dugaro Gagodosa
+|23
+|64.53
+|-
+|PG
+|Bongatar Player #1
+|28
+|65.24
+|}
+{{Infobox basketball club
+| color1 = #ffff00
+| color2 = #000000
+| color3 = #efefef
+| name = Czalliso Pythons
+| current = UBA Season 6
+| logo = Czalliso Pythons .png
+| imagesize = 200px
+| conference = [[Nortern Conference|Northern]]
+| division = [[Division D|D]]
+| founded = 2016
+| arena = [[Czalliso Stadium]]
+| location = [[Protopolis|Protopolis, Czalliso]]
+| colors = Yellow, Black, Light Gray {{color box|#ffff00}} {{color box|#000000}} {{color box|#efefef}}
+| owner =
+| manager = 
+| president = 
+| coach = Coach #17
+| affiliation = [[Protopolis Progs]]
+| franchise_wins = '''159'''
+| franchise_losses = '''245'''
+| playoff_appearances = '''1'''
+| playoff_wins = '''0'''
+| playoff_losses = '''4'''
+| league_champs = '''0'''
+| conf_champs = '''0'''
+| div_champs = '''0''' 
+| ret_nums = '''0'''
+| website = czallisopythons.com
+| h_body =
+| h_pattern_b =
+| h_shorts =
+| h_pattern_s =
+| a_body =
+| a_pattern_b =
+| a_shorts = 
+| a_pattern_s = 
+| 3_body = 
+| 3_pattern_b = 
+| 3_shorts = 
+| 3_pattern_s = 
+}}
+
+The '''Czalliso Pythons''' are a basketball team based in Protopolis, Czalliso. They compete in the [[Universalis Basketball Association|Universalis Basketball Association]] (UBA) and is in [[Division D]] of the Nortern Conference.
+
+===Roster===
+{|class="wikitable"
+|+ Czalliso Pythons 
+|-
+!Pos
+!Name
+!Age
+!Overall
+|-
+|C
+|Sagolnasei Korsobo
+|26
+|63.99
+|-
+|PF
+|Iggy Greenfield
+|25
+|70.23
+|-
+|SF
+|war
+|28
+|75.98
+|-
+|SG
+|mu
+|28
+|70.88
+|-
+|PG
+|Naxto Lizaxium
+|24
+|81.76
+|-
+|C
+|kekh okepekít
+|22
+|60.18
+|-
+|PF
+|Hevek Gagomos
+|28
+|68.17
+|-
+|SF
+|Juri Perch
+|24
+|70.86
+|-
+|SG
+|hig
+|28
+|62.20
+|-
+|PG
+|Nukunaix Hjetohje 
+|20
+|57.85
+|-
+|C
+|Keahi Cheruene
+|21
+|50.73
+|-
+|PF
+|Dylan Fowler
+|26
+|65.83
+|-
+|SF
+|Mónhin Nasa
+|25
+|58.67
+|-
+|SG
+|Pau Finapeke
+|23
+|59.45
+|-
+|PG
+|Nuux Naxix 
+|23
+|51.28
+|}
+{{Infobox basketball club
+| color1 = #17f613
+| color2 = #b7b7b7
+| color3 = #000000
+| name = Dvimne Spirits
+| current = UBA Season 6
+| logo = Dvimne Spirits .png
+| imagesize = 200px
+| conference = [[Nortern Conference|Northern]]
+| division = [[Division D|D]]
+| founded = 2016
+| arena = [[Dvimne Stadium]]
+| location = [[Dvimne|Dvimne, Bielosia]]
+| colors = Light Green, Gray, Black {{color box|#17f613}} {{color box|#b7b7b7}} {{color box|#000000}}
+| owner =
+| manager = 
+| president = 
+| coach = Coach #13
+| affiliation = [[Bielosia Ghosts]]
+| franchise_wins = '''317'''
+| franchise_losses = '''87'''
+| playoff_appearances = '''5'''
+| playoff_wins = '''69'''
+| playoff_losses = '''24'''
+| league_champs = '''3'''
+| conf_champs = '''3'''
+| div_champs = '''5''' 
+| ret_nums = '''0'''
+| website = dvimnespirits.com
+| h_body =
+| h_pattern_b =
+| h_shorts =
+| h_pattern_s =
+| a_body =
+| a_pattern_b =
+| a_shorts = 
+| a_pattern_s = 
+| 3_body = 
+| 3_pattern_b = 
+| 3_shorts = 
+| 3_pattern_s = 
+}}
+
+The '''Dvimne Spirits''' are a basketball team based in Dvimne, Bielosia. They compete in the [[Universalis Basketball Association|Universalis Basketball Association]] (UBA) and is in [[Division D]] of the Nortern Conference.
+
+===Roster===
+{|class="wikitable"
+|+ Dvimne Spirits 
+|-
+!Pos
+!Name
+!Age
+!Overall
+|-
+|C
+|Seong-Su Gang
+|26
+|68.31
+|-
+|PF
+|Mazló Plókli
+|28
+|77.58
+|-
+|SF
+|Sago Alodetsei
+|28
+|99.99
+|-
+|SG
+|kuŋevok eɰnak gevunáh
+|28
+|74.59
+|-
+|PG
+|Wiley Ambrose
+|27
+|81.14
+|-
+|C
+|Shishido Goro
+|22
+|61.83
+|-
+|PF
+|Alukeili Asolomundi
+|27
+|73.85
+|-
+|SF
+|Till Klostermann
+|24
+|64.73
+|-
+|SG
+|Markoli Strawlo
+|28
+|68.24
+|-
+|PG
+|Benben
+|26
+|71.16
+|-
+|C
+|Argos Pebek
+|28
+|57.85
+|-
+|PF
+|Wakayama Higashikuni
+|24
+|60.52
+|-
+|SF
+|Mom Slivókŕámhomhók
+|21
+|57.13
+|-
+|SG
+|Ienaga Tomoyuki
+|24
+|56.78
+|-
+|PG
+|Ixbla Sovix
+|25
+|68.95
+|}
+{{Infobox basketball club
+| color1 = #674ea7
+| color2 = #cccccc
+| color3 = #ff9900
+| name = Holy Yektonisa Bishops
+| current = UBA Season 6
+| logo = Holy Yektonisa Bishops .png
+| imagesize = 200px
+| conference = [[Nortern Conference|Northern]]
+| division = [[Division D|D]]
+| founded = 2016
+| arena = [[Holy Yektonesia Stadium]]
+| location = [[City|City, Holy Yektonesia]]
+| colors = Purple, Gray, Orange {{color box|#674ea7}} {{color box|#cccccc}} {{color box|#ff9900}}
+| owner =
+| manager = 
+| president = 
+| coach = Coach #21
+| affiliation = [[Holy Yektonisa Hmongs]]
+| franchise_wins = '''123'''
+| franchise_losses = '''281'''
+| playoff_appearances = '''2'''
+| playoff_wins = '''2'''
+| playoff_losses = '''8'''
+| league_champs = '''0'''
+| conf_champs = '''0'''
+| div_champs = '''0''' 
+| ret_nums = '''0'''
+| website = holyyektonisabishops.com
+| h_body =
+| h_pattern_b =
+| h_shorts =
+| h_pattern_s =
+| a_body =
+| a_pattern_b =
+| a_shorts = 
+| a_pattern_s = 
+| 3_body = 
+| 3_pattern_b = 
+| 3_shorts = 
+| 3_pattern_s = 
+}}
+
+The '''Holy Yektonisa Bishops''' are a basketball team based in City, Holy Yektonesia. They compete in the [[Universalis Basketball Association|Universalis Basketball Association]] (UBA) and is in [[Division D]] of the Nortern Conference.
+
+===Roster===
+{|class="wikitable"
+|+ Holy Yektonisa Bishops 
+|-
+!Pos
+!Name
+!Age
+!Overall
+|-
+|C
+|Shitt Hessar
+|26
+|67.22
+|-
+|PF
+|Kolpa Uxyakro
+|22
+|64.24
+|-
+|SF
+|apseŋ kép tónaqig
+|28
+|80.04
+|-
+|SG
+|Kamil Jones
+|25
+|81.72
+|-
+|PG
+|Hivek Ekxtr
+|25
+|86.41
+|-
+|C
+|Atumiba Bexomos
+|23
+|59.84
+|-
+|PF
+|Alotru Amodetsei 
+|21
+|63.11
+|-
+|SF
+|Ji Gim
+|23
+|62.05
+|-
+|SG
+|Omumiba Ektxr
+|26
+|71.59
+|-
+|PG
+|Dano Subeina
+|28
+|69.93
+|-
+|C
+|Holy Yektonesia Player #1
+|28
+|56.10
+|-
+|PF
+|Eban Korsobo
+|25
+|61.32
+|-
+|SF
+|Ailiqaeu Okohae
+|26
+|53.77
+|-
+|SG
+|Holy Yektonesia Player #6
+|28
+|69.04
+|-
+|PG
+|Pxalit'k'a Player #7
+|28
+|67.35
+|}
+{{Infobox basketball club
+| color1 = #cc4125
+| color2 = #f1c232
+| color3 = #000000
+| name = Holykol Bears
+| current = UBA Season 6
+| logo = Holykol Bears .png
+| imagesize = 200px
+| conference = [[Nortern Conference|Northern]]
+| division = [[Division D|D]]
+| founded = 2016
+| arena = [[Holykol Stadium]]
+| location = [[Shiberia|Shiberia, Holykol]]
+| colors = Red, Gold, Black {{color box|#cc4125}} {{color box|#f1c232}} {{color box|#000000}}
+| owner =
+| manager = 
+| president = 
+| coach = Pyzus Coach
+| affiliation = [[Holylmao Bison]]
+| franchise_wins = '''205'''
+| franchise_losses = '''199'''
+| playoff_appearances = '''3'''
+| playoff_wins = '''12'''
+| playoff_losses = '''16'''
+| league_champs = '''0'''
+| conf_champs = '''0'''
+| div_champs = '''0''' 
+| ret_nums = '''0'''
+| website = holykolbears.com
+| h_body =
+| h_pattern_b =
+| h_shorts =
+| h_pattern_s =
+| a_body =
+| a_pattern_b =
+| a_shorts = 
+| a_pattern_s = 
+| 3_body = 
+| 3_pattern_b = 
+| 3_shorts = 
+| 3_pattern_s = 
+}}
+
+The '''Holykol Bears''' are a basketball team based in Shiberia, Holykol. They compete in the [[Universalis Basketball Association|Universalis Basketball Association]] (UBA) and is in [[Division D]] of the Nortern Conference.
+
+===Roster===
+{|class="wikitable"
+|+ Holykol Bears 
+|-
+!Pos
+!Name
+!Age
+!Overall
+|-
+|C
+|Nobira Taki
+|25
+|71.42
+|-
+|PF
+|Akamu Phomsouvanh
+|27
+|70.21
+|-
+|SF
+|Jesse Svensson
+|24
+|68.23
+|-
+|SG
+|Steve Sho
+|24
+|80.71
+|-
+|PG
+|Red Rainbow Player #2
+|26
+|95.44
+|-
+|C
+|Koa Savang
+|21
+|63.33
+|-
+|PF
+|Konala Somphousiharath
+|26
+|68.85
+|-
+|SF
+|hax
+|28
+|64.93
+|-
+|SG
+|Rusty Berry
+|23
+|71.80
+|-
+|PG
+|Akamu Cheruene
+|27
+|69.16
+|-
+|C
+|Center #137
+|28
+|55.80
+|-
+|PF
+|Bruce Mack
+|24
+|57.97
+|-
+|SF
+|Tsekon Wap't'ebw
+|23
+|60.35
+|-
+|SG
+|Alwin Gradl
+|25
+|70.88
+|-
+|PG
+|quj
+|28
+|61.21
+|}
+{{Infobox basketball club
+| color1 = #a64d79
+| color2 = #ffff00
+| color3 = #666666
+| name = Lyintaria Lynx
+| current = UBA Season 6
+| logo = Lyintaria Lynx .png
+| imagesize = 200px
+| conference = [[Nortern Conference|Northern]]
+| division = [[Division D|D]]
+| founded = 2016
+| arena = [[Lyintaria Stadium]]
+| location = [[City|City, Lyintaria]]
+| colors = Purple, Yellow, Dark Gray {{color box|#a64d79}} {{color box|#ffff00}} {{color box|#666666}}
+| owner =
+| manager = 
+| president = 
+| coach = Coach #22
+| affiliation = [[Lyintaria Kool Kats]]
+| franchise_wins = '''191'''
+| franchise_losses = '''213'''
+| playoff_appearances = '''2'''
+| playoff_wins = '''3'''
+| playoff_losses = '''8'''
+| league_champs = '''0'''
+| conf_champs = '''0'''
+| div_champs = '''0''' 
+| ret_nums = '''0'''
+| website = lyintarialynx.com
+| h_body =
+| h_pattern_b =
+| h_shorts =
+| h_pattern_s =
+| a_body =
+| a_pattern_b =
+| a_shorts = 
+| a_pattern_s = 
+| 3_body = 
+| 3_pattern_b = 
+| 3_shorts = 
+| 3_pattern_s = 
+}}
+
+The '''Lyintaria Lynx''' are a basketball team based in City, Lyintaria. They compete in the [[Universalis Basketball Association|Universalis Basketball Association]] (UBA) and is in [[Division D]] of the Nortern Conference.
+
+===Roster===
+{|class="wikitable"
+|+ Lyintaria Lynx 
+|-
+!Pos
+!Name
+!Age
+!Overall
+|-
+|C
+|Lyintaria Player #4
+|28
+|65.74
+|-
+|PF
+|Éxànnecig Hàŕselàn
+|22
+|71.14
+|-
+|SF
+|Uelv Lganne
+|28
+|77.77
+|-
+|SG
+|Lyintaria Player #6
+|28
+|71.08
+|-
+|PG
+|Phetdum Vongsay
+|24
+|76.81
+|-
+|C
+|Uemura Tadashi
+|25
+|64.97
+|-
+|PF
+|Bernard Wade
+|24
+|58.64
+|-
+|SF
+|Swanano Nonhkwaqan
+|24
+|67.00
+|-
+|SG
+|Tekle Doko
+|28
+|67.51
+|-
+|PG
+|Lyintaria Player #3
+|28
+|66.14
+|-
+|C
+|Alubembi Xahelvi
+|27
+|62.46
+|-
+|PF
+|Lilo Thepsenavong
+|22
+|55.60
+|-
+|SF
+|Váqáp Vjamhá
+|25
+|62.45
+|-
+|SG
+|Xai Alodetsei 
+|22
+|50.05
+|-
+|PG
+|Lyintaria Player #11
+|28
+|57.35
+|}
+{{Infobox basketball club
+| color1 = #f230ff
+| color2 = #ffff00
+| color3 = #ffffff
+| name = Pyxanovia Pixies
+| current = UBA Season 6
+| logo = Pyxanovia Pixies .png
+| imagesize = 200px
+| conference = [[Nortern Conference|Northern]]
+| division = [[Division D|D]]
+| founded = 2016
+| arena = [[Pyxanovia Stadium]]
+| location = [[City|City, Pyxanovia]]
+| colors = Pink, Yellow, White {{color box|#f230ff}} {{color box|#ffff00}} {{color box|#ffffff}}
+| owner =
+| manager = 
+| president = 
+| coach = Coach #32
+| affiliation = [[Pyxanovia Elites]]
+| franchise_wins = '''236'''
+| franchise_losses = '''168'''
+| playoff_appearances = '''4'''
+| playoff_wins = '''30'''
+| playoff_losses = '''28'''
+| league_champs = '''1'''
+| conf_champs = '''1'''
+| div_champs = '''0''' 
+| ret_nums = '''0'''
+| website = pyxanoviapixies.com
+| h_body =
+| h_pattern_b =
+| h_shorts =
+| h_pattern_s =
+| a_body =
+| a_pattern_b =
+| a_shorts = 
+| a_pattern_s = 
+| 3_body = 
+| 3_pattern_b = 
+| 3_shorts = 
+| 3_pattern_s = 
+}}
+
+The '''Pyxanovia Pixies''' are a basketball team based in City, Pyxanovia. They compete in the [[Universalis Basketball Association|Universalis Basketball Association]] (UBA) and is in [[Division D]] of the Nortern Conference.
+
+===Roster===
+{|class="wikitable"
+|+ Pyxanovia Pixies 
+|-
+!Pos
+!Name
+!Age
+!Overall
+|-
+|C
+|Analu Cheruene
+|24
+|69.40
+|-
+|PF
+|Moke Douangvily
+|26
+|81.30
+|-
+|SF
+|Pyxanovia Player #4
+|28
+|94.50
+|-
+|SG
+|Handa Senichi
+|23
+|85.20
+|-
+|PG
+|Pyxanovia Player #2
+|28
+|76.45
+|-
+|C
+|Marcel Weidenmann
+|26
+|60.92
+|-
+|PF
+|Reinhard Waldstein
+|24
+|66.94
+|-
+|SF
+|Nathaniel Starks
+|25
+|60.43
+|-
+|SG
+|Autolik Player #2
+|28
+|66.46
+|-
+|PG
+|Ixux Naixi
+|26
+|66.22
+|-
+|C
+|Pyxanovia Player #1
+|28
+|55.23
+|-
+|PF
+|tag
+|28
+|62.11
+|-
+|SF
+|Alve Higashikuni 
+|21
+|56.77
+|-
+|SG
+|Yamataka Hiroaki 
+|22
+|55.17
+|-
+|PG
+|William James
+|23
+|59.21
+|}
+{{Infobox basketball club
+| color1 = #073763
+| color2 = #ff0000
+| color3 = #ffffff
+| name = Transhimalia Disasters
+| current = UBA Season 6
+| logo = Transhimalia Disasters .png
+| imagesize = 200px
+| conference = [[Nortern Conference|Northern]]
+| division = [[Division D|D]]
+| founded = 2016
+| arena = [[Transhimalia Stadium]]
+| location = [[Degëq'so|Degëq'so, Transhimalia]]
+| colors = Blue, Red, White {{color box|#073763}} {{color box|#ff0000}} {{color box|#ffffff}}
+| owner =
+| manager = 
+| president = 
+| coach = Coach #34
+| affiliation = [[Yuofuan Jaguars]]
+| franchise_wins = '''157'''
+| franchise_losses = '''247'''
+| playoff_appearances = '''1'''
+| playoff_wins = '''0'''
+| playoff_losses = '''4'''
+| league_champs = '''0'''
+| conf_champs = '''0'''
+| div_champs = '''0''' 
+| ret_nums = '''0'''
+| website = transhimaliadisasters.com
+| h_body =
+| h_pattern_b =
+| h_shorts =
+| h_pattern_s =
+| a_body =
+| a_pattern_b =
+| a_shorts = 
+| a_pattern_s = 
+| 3_body = 
+| 3_pattern_b = 
+| 3_shorts = 
+| 3_pattern_s = 
+}}
+
+The '''Transhimalia Disasters''' are a basketball team based in Degëq'so, Transhimalia. They compete in the [[Universalis Basketball Association|Universalis Basketball Association]] (UBA) and is in [[Division D]] of the Nortern Conference.
+
+===Roster===
+{|class="wikitable"
+|+ Transhimalia Disasters 
+|-
+!Pos
+!Name
+!Age
+!Overall
+|-
+|C
+|Asser Hutto 
+|23
+|62.08
+|-
+|PF
+|Qrux'uhz the Enraged
+|28
+|59.21
+|-
+|SF
+|Kalani Phanivong
+|21
+|74.97
+|-
+|SG
+|Sachie Snijder
+|28
+|83.60
+|-
+|PG
+|Steve Masuhiro
+|24
+|82.20
+|-
+|C
+|Timblejoornay
+|25
+|54.94
+|-
+|PF
+|Center #113
+|28
+|55.97
+|-
+|SF
+|King Kalassak
+|28
+|74.15
+|-
+|SG
+|The Dimension Slaughterer
+|28
+|80.89
+|-
+|PG
+|Błá Kánpovŕagá
+|24
+|61.75
+|-
+|C
+|Ingo Gradl
+|25
+|45.82
+|-
+|PF
+|Akamu Tayvyihane
+|26
+|52.19
+|-
+|SF
+|Eiqe Gekxakŋi
+|25
+|71.52
+|-
+|SG
+|Sagua Player #2
+|28
+|74.53
+|-
+|PG
+|Sreotruyphoe the Expunger
+|28
+|61.20
+|}

@@ -1,0 +1,96 @@
+﻿using FormulaBasketball;
+using System;
+using System.Collections.Generic;
+
+public class Offseason
+{
+    private List<team> teams;
+    private List<player> freeAgency;
+    private FormulaBasketball.Random r;
+    public Offseason(List<team> teams, List<player> freeAgency, FormulaBasketball.Random r)
+    {
+        this.teams = teams;
+        this.freeAgency = freeAgency;
+        this.r = r;
+        runOffseason();
+
+    }
+    private void runOffseason()
+    {
+        increaseAge();
+        checkRetirements();
+        resignPlayers();
+        signFreeAgents();
+        
+    }
+    private void increaseAge()
+    {
+        foreach(team team in teams)
+        {
+            team.setModifier(new None());
+            for(int i = 0; i < team.getNumberPlayers(); i++)
+            {
+                team.getPlayer(i).age++;
+                team.getPlayer(i).Regress(r);
+            }
+        }
+        foreach(player player in freeAgency)
+        {
+            player.age++;
+            player.Regress(r);
+        }
+    }
+    private void checkRetirements()
+    {
+        List<player> retiredPlayers = new List<player>();
+        foreach (team team in teams)
+        {
+            for (int i = 0; i < team.getNumberPlayers(); i++)
+            {
+                if (team.getPlayer(i).retire(r) != retirements.None)
+                {
+                    retiredPlayers.Add(team.getPlayer(i));
+                    team.addRetiredPlayer(team.getPlayer(i));
+                }
+                
+            }
+            team.removeRetiredPlayers();
+        }
+        List<player> tempFreeAgency = new List<player>();
+        foreach (player player in freeAgency)
+        {
+            bool retireStatus = player.retire(r, true) != retirements.None;
+            if(!retireStatus)
+            {
+                tempFreeAgency.Add(player);
+            }
+            else
+            {
+                retiredPlayers.Add(player);
+            }
+        }
+        freeAgency = tempFreeAgency;
+
+        displayPlayers display = new displayPlayers();
+        display.setPlayers(retiredPlayers);
+        display.ShowDialog();
+    }
+    private void resignPlayers()
+    {
+        foreach(team team in teams)
+        {
+            List<player> releasedPlayers = team.resignPlayers(r);
+            foreach(player player in releasedPlayers)
+            {
+                freeAgency.Add(player);
+            }
+        }
+    }
+    private void signFreeAgents()
+    {
+        foreach(team team in teams)
+        {
+            team.offerToFreeAgents(freeAgency, r);
+        }
+    }
+}
