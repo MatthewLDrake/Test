@@ -1,0 +1,14 @@
+B:\Documents\Test\ResigningPlayers\bin\Release\ResigningPlayers.exe.config
+B:\Documents\Test\ResigningPlayers\bin\Release\ResigningPlayers.exe
+B:\Documents\Test\ResigningPlayers\bin\Release\ResigningPlayers.pdb
+B:\Documents\Test\ResigningPlayers\bin\Release\FormulaBasketball.exe
+B:\Documents\Test\ResigningPlayers\bin\Release\FormulaBasketball.pdb
+B:\Documents\Test\ResigningPlayers\bin\Release\FormulaBasketball.exe.config
+B:\Documents\Test\ResigningPlayers\obj\Release\ResigningPlayers.csprojResolveAssemblyReference.cache
+B:\Documents\Test\ResigningPlayers\obj\Release\ResigningPlayers.Form1.resources
+B:\Documents\Test\ResigningPlayers\obj\Release\ResigningPlayers.Negotiation.resources
+B:\Documents\Test\ResigningPlayers\obj\Release\ResigningPlayers.Properties.Resources.resources
+B:\Documents\Test\ResigningPlayers\obj\Release\ResigningPlayers.csproj.GenerateResource.Cache
+B:\Documents\Test\ResigningPlayers\obj\Release\ResigningPlayers.csproj.CoreCompileInputs.cache
+B:\Documents\Test\ResigningPlayers\obj\Release\ResigningPlayers.exe
+B:\Documents\Test\ResigningPlayers\obj\Release\ResigningPlayers.pdb

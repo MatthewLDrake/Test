@@ -17,7 +17,18 @@ namespace FormulaBasketball
             InitializeComponent();
         }
         
-
+        public void SetNumber(int i)
+        {
+            if(i == 0)
+            {
+                label1.Visible = false;
+            }
+            else
+            {
+                label1.Text = "Season #" + i;
+                label1.Visible = true;
+            }
+        }
         public void setBrackets(List<team> conferenceA, List<team> conferenceB)
         {
             conferenceATopSeed.setTeamNames(conferenceA[0].ToString(), conferenceA[7].ToString());
@@ -63,13 +74,13 @@ namespace FormulaBasketball
         public void updateSecondRoundScores(int[] conferenceAScores, int[] conferenceBScores)
         {
             bracket1.updateScores(conferenceAScores[0], conferenceAScores[7]);
-            bracket2.updateScores(conferenceAScores[1], conferenceAScores[6]);
+            bracket2.updateScores(conferenceAScores[6], conferenceAScores[1]);
             String top = bracket1.getWinner();
             String fourth = bracket2.getWinner();
             bracket3.setTeamNames(top, fourth);
 
             bracket6.updateScores(conferenceBScores[0], conferenceBScores[7]);
-            bracket7.updateScores(conferenceBScores[1], conferenceBScores[6]);
+            bracket7.updateScores(conferenceBScores[6], conferenceBScores[1]);
             top = bracket6.getWinner();
             fourth = bracket7.getWinner();
             bracket5.setTeamNames(top, fourth);

@@ -92,7 +92,6 @@ namespace FormulaBasketball
         private int sixteenthSeedConferenceB;
         private team champion, runnerUp;
         public Queue<Action> queue;
-        private static Playoffs instance = null;
         private PlayoffBracket bracket;
         
         
@@ -103,7 +102,7 @@ namespace FormulaBasketball
         public String GetChampion()
         {
             champion.AddChampionship();
-            champion.AddConferenceChampionship();
+            runnerUp.AddConferenceChampionship();
             return champion.ToString();
         }
         private void setUpPlayoffs()
@@ -116,9 +115,10 @@ namespace FormulaBasketball
 
             
         }       
-        public void setBracket(PlayoffBracket bracket)
+        public void setBracket(PlayoffBracket bracket, int num)
         {
             this.bracket = bracket;
+            bracket.SetNumber(num);
         }
         private void firstRound()
         {
@@ -810,12 +810,12 @@ namespace FormulaBasketball
                     if (gamesPlayed != 2 && gamesPlayed != 3 && gamesPlayed != 5)
                     {
                         flag = formulaBasketball.executeGame(false, higherSeed, lowerSeed);
-                        if (higherSeed != winnerOfMatchTwo) flag = !flag;
+                        if (higherSeed != winnerOfMatchTwo) flag = true;
                     }
                     else
                     {
                         flag = formulaBasketball.executeGame(false, lowerSeed, higherSeed);
-                        if (higherSeed == winnerOfMatchTwo) flag = !flag;
+                        if (higherSeed == winnerOfMatchTwo) flag = true;
                     }
                     //bool flag = formulaBasketball.executeGame(false, winnerOfMatchTwo,winnerOfMatchThree);
                     if (flag) conferenceAWinCounter[1]++;

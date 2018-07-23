@@ -120,6 +120,30 @@ public class team : IComparable<team>,  IEnumerable<player>
         pointsAgainst = 0;
         lastGames = new Queue<Int32>();
     }
+    public void Reset()
+    {
+        streak = 0;
+        lastTen = new List<int>();
+
+        for (int i = 0; i < currentSeasonVsTeam.Length; i++)
+        {
+            currentSeasonVsTeam[i] = new Record();
+
+        }
+
+        foreach(player player in players)
+        {
+            player.Reset();
+        }
+
+        divisionRecord = new Record();
+        conferenceRecord = new Record();
+        currentSeason = new Record();
+        currentPlayoffs = new Record();
+        pointsScored = 0;
+        pointsAgainst = 0;
+        lastGames = new Queue<Int32>();
+    }
     public int getNumPlayersByPos(int pos)
     {
         int retVal = 0;
@@ -604,6 +628,15 @@ public class team : IComparable<team>,  IEnumerable<player>
 
         return retVal;
     }
+    public player GetPlayerByID(int id)
+    {
+        foreach(player player in players)
+        {
+            if (player.GetPlayerID() == id) return player;
+        }
+        return null;
+    }
+    
     public void setModifier(Modifier modifier)
     {
         for (int i = 0; i < players.Count; i++)
@@ -907,7 +940,6 @@ public class team : IComparable<team>,  IEnumerable<player>
         retVal += "| 3_shorts = \n";
         retVal += "| 3_pattern_s = \n";
         retVal += "}}\n\n";
-
         retVal += "The '''" + teamName + "''' are a basketball team based in " + location + ". They compete in the [[Universalis Basketball Association|Universalis Basketball Association]] (UBA) and is in [[Division "+ getDivisionLetter() + "]] of the " + conference.Split('|')[0] + ".\n";
 
         retVal += "\n===Roster===\n{|class=\"wikitable\"\n";
@@ -926,11 +958,15 @@ public class team : IComparable<team>,  IEnumerable<player>
     }
     public string PrintChampionships()
     {
-        return ToString() + "\t" + divisionChampionships + "\t" + conferenceChampionships + "\t" + leagueChampionships;
+        return ToString() + "\t" + divisionChampionships + "\t" + conferenceChampionships + "\t" + leagueChampionships +"\n";
     }
     public void AddDivisionChampionship()
     {
         divisionChampionships++;
+    }
+    public void SetCoach(Coach coach)
+    {
+        this.coach = coach;
     }
     public void AddConferenceChampionship()
     {

@@ -61,6 +61,7 @@
     <Compile Include="College.cs" />
     <Compile Include="CollegeTeam.cs" />
     <Compile Include="Contract.cs" />
+    <Compile Include="ContractResult.cs" />
     <Compile Include="FreeAgents.cs" />
     <Compile Include="Record.cs" />
     <Compile Include="retirements.cs" />

@@ -1,0 +1,33 @@
+Team Name	Division Championships	Conference Championships	League Championships
+Aahrus Moosi	1	6	1
+Auspikitan Golden Falcons	1	2	0
+Calto Cows	32	27	4
+Height Sagua Cats	0	0	0
+Key to Don Yees	0	1	0
+Manwx Saguans	1	0	0
+Sagua Ocelots	29	27	13
+Solea Geysers	43	23	11
+Autolik Autonomy	0	0	0
+Barsein Bats	2	1	0
+Blanaxon Hammers	0	0	0
+Kaeshar Kaisers	41	11	2
+Naxda Nomads	18	5	2
+Red Rainbow Sickles	0	0	0
+Serkr Atolls	38	1	0
+Shmupland Dictators	4	1	1
+Aiyota Pumps	1	3	2
+Avura Aviators	2	0	0
+Boltway Bad Dragons	7	3	1
+Dotruga Falno	94	40	30
+Ethanthova Ponies	1	1	0
+Faehrenfall Feathercats	0	0	0
+Stedro Boulders	0	0	0
+TND Tanks	0	0	0
+Bongatar Banging Bongos	6	6	0
+Czalliso Pythons	0	0	0
+Dvimne Spirits	63	27	20
+Holy Yektonisa Bishops	0	0	0
+Holykol Bears	1	1	1
+Lyintaria Lynx	0	0	0
+Pyxanovia Pixies	35	23	17
+Transhimalia Disasters	0	1	0

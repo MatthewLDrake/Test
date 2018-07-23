@@ -301,6 +301,10 @@ public class player : IComparable<player>
         }
 
     }
+    public bool ContractExpired()
+    {
+        return contract.IsExpired();
+    }
     /*
      * Ratings: 
      * 
@@ -427,7 +431,20 @@ public class player : IComparable<player>
 
         age++;
     }
-
+    public void Reset()
+    {
+        
+        for (int i = 0; i < stats.Length; i++)
+        {
+            stats[i] = 0;
+        }
+        gamesPlayed = 0;
+        pointDiff = 0;
+        starts = 0;
+        injuryLength = 0;
+        isInjuredBool = false;
+        stamina = 100;
+    }
     private int playerID = 0;
     public void addPlayerID(int playerIDs)
     {
@@ -462,8 +479,123 @@ public class player : IComparable<player>
         retVal += getDevelopment() + "\t" + playerAge + "\t" + String.Format("{0:0.00}", getOverall(this)) + "\t" + playerID + "\t" + contract.ToString() + "\t" + positionRank + "\t" + overallRank + "\n";
         return retVal;
     }
+    public void SetNewContract(Contract newContract)
+    {
+        contract = newContract;
+    }
+    public double GetMoneyPerYear()
+    {
+        return contract.GetMoney();
+    }
+    public int GetYearsLeft()
+    {
+        return contract.GetYearsLeft();
+    }
+    public Contract GetCounterOffer(Contract previousOffer, FormulaBasketball.Random r, Contract previousPlayer = null)
+    {
+        int years = 0;
+        double money = 0;
 
-    private string getDevelopment()
+        if (age < 26)
+        {
+            if (previousOffer.GetYearsLeft() > 3)
+            {
+                years = 1;
+                if (previousPlayer == null)
+                {
+                    money = previousOffer.GetMoney() + (r.Next(0, 40) / 10);
+                }
+                else
+                {
+                    if (previousOffer.GetMoney() > previousPlayer.GetMoney()) money = previousOffer.GetMoney();
+                    else money = r.Next(Convert.ToInt32(previousOffer.GetMoney() * 10), Convert.ToInt32(previousPlayer.GetMoney() * 10));
+                }
+            }
+            else
+            {
+                years = previousOffer.GetYearsLeft();
+                if (previousPlayer == null)
+                    money = previousOffer.GetMoney() + (r.Next(5, 40) / 10);
+                else
+                {
+                    if (previousOffer.GetMoney() > previousPlayer.GetMoney()) money = previousOffer.GetMoney();
+                    else money = r.Next(Convert.ToInt32(previousOffer.GetMoney() * 10), Convert.ToInt32(previousPlayer.GetMoney() * 10))/10;
+                }
+            }
+        }
+        else if(age > 33)
+        {
+            //TODO: Worry about this later
+        }
+        else
+        {
+            if (previousPlayer == null)
+                money = previousOffer.GetMoney() + (r.Next(5, 40) / 10);
+            else
+            {
+                if (previousOffer.GetMoney() > previousPlayer.GetMoney()) money = previousOffer.GetMoney();
+                else money = r.Next(Convert.ToInt32(previousOffer.GetMoney() * 10), Convert.ToInt32(previousPlayer.GetMoney() * 10));
+            }
+
+            years = previousOffer.GetYearsLeft();
+            
+                
+            if (money == previousOffer.GetMoney())
+            {
+                while (years == previousOffer.GetYearsLeft()) years = r.Next(1, 5);
+            }
+
+        }
+
+        if (money > 25) money = 25;
+
+        return new Contract(years,money);
+    }
+    private int playerHappiness = 0;
+    public ContractResult ContractNegotiate(Contract newContract, FormulaBasketball.Random r)
+    {
+
+        double score = 0;
+
+        double minResult = .8 * getOverall() - 43;
+
+        minResult = Math.Max(1,Math.Min(25, minResult));
+
+        if (playerHappiness == 0)
+            playerHappiness = r.Next(20, 80);
+
+        score += -80 + 3.2 * playerHappiness - 0.048 * playerHappiness * playerHappiness + 0.00032 * playerHappiness * playerHappiness * playerHappiness;
+
+        double moneyDiff = newContract.GetMoney() - minResult;
+
+        if(moneyDiff > 0)
+        {
+            score += 0.04762 * moneyDiff * moneyDiff + 6.524 * moneyDiff + 30.00;
+        }
+        else if(moneyDiff < -17)
+        {
+            return ContractResult.Reject;
+        }
+        else
+        {
+            score += 0.5238 * moneyDiff * moneyDiff + 18.24 * moneyDiff + 30.00;
+        }
+
+        if (minResult < newContract.GetMoney() && playerHappiness > 35) return ContractResult.Accept;
+
+       
+
+        if (newContract.GetMoney() < contract.GetMoney()) return ContractResult.Reject;
+
+        if (playerHappiness < 40) return ContractResult.Reject;
+
+        if (newContract.GetMoney() - minResult < 2.5 && playerHappiness > 70) return ContractResult.Accept;
+
+
+
+        return ContractResult.Continue;
+    }
+    public string getDevelopment()
     {
         string potential = "";
         int normalizedPS = (peakStart - 27) * 2;

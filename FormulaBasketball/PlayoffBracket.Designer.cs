@@ -28,6 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.conferenceBSecondSeed = new FormulaBasketball.bracket();
+            this.conferenceBThirdSeed = new FormulaBasketball.bracket();
+            this.conferenceBFourthSeed = new FormulaBasketball.bracket();
+            this.conferenceBTopSeed = new FormulaBasketball.bracket();
+            this.bracket7 = new FormulaBasketball.bracket();
+            this.bracket6 = new FormulaBasketball.bracket();
+            this.bracket5 = new FormulaBasketball.bracket();
+            this.bracket4 = new FormulaBasketball.bracket();
             this.bracket3 = new FormulaBasketball.bracket();
             this.bracket2 = new FormulaBasketball.bracket();
             this.bracket1 = new FormulaBasketball.bracket();
@@ -35,15 +43,64 @@
             this.conferenceAThirdSeed = new FormulaBasketball.bracket();
             this.conferenceAFourthSeed = new FormulaBasketball.bracket();
             this.conferenceATopSeed = new FormulaBasketball.bracket();
-            this.bracket4 = new FormulaBasketball.bracket();
-            this.bracket5 = new FormulaBasketball.bracket();
-            this.bracket6 = new FormulaBasketball.bracket();
-            this.bracket7 = new FormulaBasketball.bracket();
-            this.conferenceBTopSeed = new FormulaBasketball.bracket();
-            this.conferenceBFourthSeed = new FormulaBasketball.bracket();
-            this.conferenceBThirdSeed = new FormulaBasketball.bracket();
-            this.conferenceBSecondSeed = new FormulaBasketball.bracket();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // conferenceBSecondSeed
+            // 
+            this.conferenceBSecondSeed.Location = new System.Drawing.Point(961, 340);
+            this.conferenceBSecondSeed.Name = "conferenceBSecondSeed";
+            this.conferenceBSecondSeed.Size = new System.Drawing.Size(227, 99);
+            this.conferenceBSecondSeed.TabIndex = 14;
+            // 
+            // conferenceBThirdSeed
+            // 
+            this.conferenceBThirdSeed.Location = new System.Drawing.Point(961, 222);
+            this.conferenceBThirdSeed.Name = "conferenceBThirdSeed";
+            this.conferenceBThirdSeed.Size = new System.Drawing.Size(227, 99);
+            this.conferenceBThirdSeed.TabIndex = 13;
+            // 
+            // conferenceBFourthSeed
+            // 
+            this.conferenceBFourthSeed.Location = new System.Drawing.Point(961, 117);
+            this.conferenceBFourthSeed.Name = "conferenceBFourthSeed";
+            this.conferenceBFourthSeed.Size = new System.Drawing.Size(227, 99);
+            this.conferenceBFourthSeed.TabIndex = 12;
+            // 
+            // conferenceBTopSeed
+            // 
+            this.conferenceBTopSeed.Location = new System.Drawing.Point(961, 12);
+            this.conferenceBTopSeed.Name = "conferenceBTopSeed";
+            this.conferenceBTopSeed.Size = new System.Drawing.Size(227, 99);
+            this.conferenceBTopSeed.TabIndex = 11;
+            // 
+            // bracket7
+            // 
+            this.bracket7.Location = new System.Drawing.Point(745, 291);
+            this.bracket7.Name = "bracket7";
+            this.bracket7.Size = new System.Drawing.Size(227, 99);
+            this.bracket7.TabIndex = 10;
+            // 
+            // bracket6
+            // 
+            this.bracket6.Location = new System.Drawing.Point(745, 63);
+            this.bracket6.Name = "bracket6";
+            this.bracket6.Size = new System.Drawing.Size(227, 99);
+            this.bracket6.TabIndex = 9;
+            // 
+            // bracket5
+            // 
+            this.bracket5.Location = new System.Drawing.Point(646, 168);
+            this.bracket5.Name = "bracket5";
+            this.bracket5.Size = new System.Drawing.Size(227, 99);
+            this.bracket5.TabIndex = 8;
+            // 
+            // bracket4
+            // 
+            this.bracket4.Location = new System.Drawing.Point(455, 168);
+            this.bracket4.Name = "bracket4";
+            this.bracket4.Size = new System.Drawing.Size(227, 99);
+            this.bracket4.TabIndex = 7;
             // 
             // bracket3
             // 
@@ -94,67 +151,22 @@
             this.conferenceATopSeed.Size = new System.Drawing.Size(227, 99);
             this.conferenceATopSeed.TabIndex = 0;
             // 
-            // bracket4
+            // label1
             // 
-            this.bracket4.Location = new System.Drawing.Point(455, 168);
-            this.bracket4.Name = "bracket4";
-            this.bracket4.Size = new System.Drawing.Size(227, 99);
-            this.bracket4.TabIndex = 7;
-            // 
-            // bracket5
-            // 
-            this.bracket5.Location = new System.Drawing.Point(646, 168);
-            this.bracket5.Name = "bracket5";
-            this.bracket5.Size = new System.Drawing.Size(227, 99);
-            this.bracket5.TabIndex = 8;
-            // 
-            // bracket6
-            // 
-            this.bracket6.Location = new System.Drawing.Point(745, 63);
-            this.bracket6.Name = "bracket6";
-            this.bracket6.Size = new System.Drawing.Size(227, 99);
-            this.bracket6.TabIndex = 9;
-            // 
-            // bracket7
-            // 
-            this.bracket7.Location = new System.Drawing.Point(745, 291);
-            this.bracket7.Name = "bracket7";
-            this.bracket7.Size = new System.Drawing.Size(227, 99);
-            this.bracket7.TabIndex = 10;
-            // 
-            // conferenceBTopSeed
-            // 
-            this.conferenceBTopSeed.Location = new System.Drawing.Point(961, 12);
-            this.conferenceBTopSeed.Name = "conferenceBTopSeed";
-            this.conferenceBTopSeed.Size = new System.Drawing.Size(227, 99);
-            this.conferenceBTopSeed.TabIndex = 11;
-            // 
-            // conferenceBFourthSeed
-            // 
-            this.conferenceBFourthSeed.Location = new System.Drawing.Point(961, 117);
-            this.conferenceBFourthSeed.Name = "conferenceBFourthSeed";
-            this.conferenceBFourthSeed.Size = new System.Drawing.Size(227, 99);
-            this.conferenceBFourthSeed.TabIndex = 12;
-            // 
-            // conferenceBThirdSeed
-            // 
-            this.conferenceBThirdSeed.Location = new System.Drawing.Point(961, 222);
-            this.conferenceBThirdSeed.Name = "conferenceBThirdSeed";
-            this.conferenceBThirdSeed.Size = new System.Drawing.Size(227, 99);
-            this.conferenceBThirdSeed.TabIndex = 13;
-            // 
-            // conferenceBSecondSeed
-            // 
-            this.conferenceBSecondSeed.Location = new System.Drawing.Point(961, 340);
-            this.conferenceBSecondSeed.Name = "conferenceBSecondSeed";
-            this.conferenceBSecondSeed.Size = new System.Drawing.Size(227, 99);
-            this.conferenceBSecondSeed.TabIndex = 14;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(436, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 23);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Season #0";
             // 
             // PlayoffBracket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 536);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.conferenceBSecondSeed);
             this.Controls.Add(this.conferenceBThirdSeed);
             this.Controls.Add(this.conferenceBFourthSeed);
@@ -173,6 +185,7 @@
             this.Name = "PlayoffBracket";
             this.Text = "Form4";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -193,5 +206,6 @@
         private bracket conferenceBFourthSeed;
         private bracket conferenceBThirdSeed;
         private bracket conferenceBSecondSeed;
+        private System.Windows.Forms.Label label1;
     }
 }

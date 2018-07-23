@@ -32,6 +32,9 @@ public class Contract
     {
         return money;
     }
-
+    public int GetYearsLeft()
+    {
+        return years - yearsIn;
+    }
 
 }

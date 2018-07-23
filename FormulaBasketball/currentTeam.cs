@@ -372,7 +372,7 @@ public class currentTeam
         {
             if (get(i).isInjured())
             {
-                Console.WriteLine(get(i).getName() + " is playing hurt tf");
+                //Console.WriteLine(get(i).getName() + " is playing hurt tf");
                 //System.exit(0);
             }
         }

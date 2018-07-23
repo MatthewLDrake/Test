@@ -39,30 +39,28 @@ public class formulaBasketball
         gameResultsFile = "GameResults.csv";
         statsFile = "stats.csv";
         standingsFile = "standings.csv";
-
-        Dictionary<String, int> championshipWinners = new Dictionary<string, int>();
+        
         new SetupNewSeason(create);
         for (int i = 0; i < 100; i++ )
         {
             
             Schedule schedule = new Schedule();
             schedule.playGames(1, 84);
-            string winner = mockPlayoffs(true);
-            if(championshipWinners.ContainsKey(winner))
+            string winner = mockPlayoffs(true, i+1);
+            foreach (team team in create.getTeams())
             {
-                championshipWinners[winner] = championshipWinners[winner] + 1;
+                team.Reset();
+                
             }
-            else
-            {
-                championshipWinners[winner] = 1;
-            }
+
         }
-        String toWrite = "Team Name\tDivision Championships\tConference Championships\tLeague Championships";
+        String toWrite = "Team Name\tDivision Championships\tConference Championships\tLeague Championships\n";
         foreach(team team in create.getTeams())
         {
             toWrite += team.PrintChampionships();
         }
         File.WriteAllText("sim.txt", toWrite);
+        //return;
             writerContents = "";
         gameResultsContents = "";
         statsContents = "";
@@ -248,10 +246,10 @@ public class formulaBasketball
         {
             create = DeSerializeObject(fileName);
             startingGame = create.getTeam(0).getWins() + create.getTeam(0).getLosses() + 1;
-            standingsForm = new Standings();
-            standingsForm.updateStandings(create);
-            standingsForm.Show();
-            standingsForm.Visible = true;
+            //standingsForm = new Standings();
+            //standingsForm.updateStandings(create);
+            //standingsForm.Show();
+            //standingsForm.Visible = true;
         }
         else
         {
@@ -334,10 +332,10 @@ public class formulaBasketball
         }
     }
 
-    public static string mockPlayoffs(bool full)
+    public static string mockPlayoffs(bool full, int num = 0)
     {
         Playoffs playoffs = new Playoffs();
-        playoffs.setBracket(bracket);
+        playoffs.setBracket(bracket, num);
         bracket.Visible = true;
         if (full)
         {
@@ -805,12 +803,12 @@ public class formulaBasketball
                 create.getTeam(j).setModifier(new None());
             }
         }
-        if (i == 26)
+        if (i == 26 || i == 18)
         {
             create.getTeam(i).addModifier(new gettingHot());
         }
 
-        else if (j == 26)
+        else if (j == 26 || j == 18)
         {
             create.getTeam(j).addModifier(new gettingHot());
         }
