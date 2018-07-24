@@ -6,11 +6,13 @@ public class createTeams
     private FormulaBasketball.Random r;
     private List<team> teams, dLeagueTeams;
     private List<player> freeAgency;
+    private College college;
     public createTeams(List<team> teams, List<player> freeAgency, FormulaBasketball.Random r)
     {
         this.teams = teams;
         this.freeAgency = freeAgency;
         this.r = r;
+        college = new College(r);
         setFianancials();
     }
 
@@ -20,8 +22,17 @@ public class createTeams
         teams = new List<team>();
         dLeagueTeams = new List<team>();
         freeAgency = new List<player>();
+        college = new College(r);
         createTheTeams();
         //createTeamTwo();
+    }
+    public void SetUpCollege()
+    {
+        college = new College(r);
+    }
+    public void PlayCollegeSeason()
+    {
+        college.PlaySeason();
     }
     public int size()
     {

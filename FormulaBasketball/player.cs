@@ -3,24 +3,23 @@
 public class player : IComparable<player>
 {
 
-    private bool isPlayingBool, isStarterBool;
-    //private double ratings[0], ratings[1], ratings[2], ratings[3], ratings[4], ratings[5], ratings[6], ratings[7], ratings[8], ratings[9], ratings[10];
-    private int gameFouls, injuryTotal, position;
-    private double stamina, shootingModifier, otherModifier, defensiveModifier;
-    private int[] stats, gameStats;
-    private String name;
-    private team team;
-    private bool isInjuredBool;
-    private int injuryLength;
-    private int gamesPlayed;
-    private bool firstTimeInGame;
-    private int pointDiff;
-    private int playerAge;
-    private Country country;
-    private int starts;
-    private bool careerEnded;
-    private double[] ratings;
-    private Contract contract;
+    protected bool isPlayingBool, isStarterBool;
+    protected int gameFouls, injuryTotal, position;
+    protected double stamina, shootingModifier, otherModifier, defensiveModifier;
+    protected int[] stats, gameStats;
+    protected String name;
+    protected team team;
+    protected bool isInjuredBool;
+    protected int injuryLength;
+    protected int gamesPlayed;
+    protected bool firstTimeInGame;
+    protected int pointDiff;
+    protected int playerAge;
+    protected Country country;
+    protected int starts;
+    protected bool careerEnded;
+    protected double[] ratings;
+    protected Contract contract;
     public player(int pos, int layupStat, int dunkStat, int jumpStat, int threePoint, int passing, int shotContest, int defenseIQ, int jumping, int separation, int durability, int stamina, int age, String name, Country country, bool starting)
     {
         careerEnded = false;
@@ -457,12 +456,12 @@ public class player : IComparable<player>
     {
         for(int i = 0; i < ratings.Length;i++)
         {
-            Console.Write(ratings[i]);
             int oldRatings = (int)ratings[i] * 10;
             ratings[i] = r.Next(oldRatings - 5, oldRatings + 5);
-            Console.WriteLine(" -> " + ratings[i]);
         }
     }
+
+    
 
     public string getRatingsAsString()
     {
@@ -1286,6 +1285,82 @@ public class player : IComparable<player>
      * ratings[10] = durability
      */
     private double previousOverall = 0;
+    public double GetOldOverall()
+    {
+        player player = this;
+        double inside = Math.Max(player.ratings[0], player.ratings[1]) / 10;
+        double retVal = 0;
+        // 8.7
+        if (position == 1)
+        {
+            retVal += inside * 1.4;
+            retVal += player.ratings[2] * 1;
+            retVal += player.ratings[9] * .7;
+            retVal += player.ratings[7] * .6;
+            retVal += player.ratings[3] * 1.4;
+            retVal += player.ratings[4] * 1.4;
+            retVal += player.ratings[5] * 1.4;
+            retVal += player.ratings[6] * 1.6;
+            retVal += player.ratings[8] * .5;
+
+        }
+        // 8
+        else if (position == 2)
+        {
+            retVal += inside * 1.4;
+            retVal += player.ratings[2] * 1.1;
+            retVal += player.ratings[9] * .6;
+            retVal += player.ratings[7] * .6;
+            retVal += player.ratings[3] * 1.4;
+            retVal += player.ratings[4] * 1.4;
+            retVal += player.ratings[5] * 1.5;
+            retVal += player.ratings[6] * 1.6;
+            retVal += player.ratings[8] * .5;
+
+        }
+        // 9
+        else if (position == 3)
+        {
+            retVal += inside * 1.3;
+            retVal += player.ratings[2] * 1.2;
+            retVal += player.ratings[9] * 1;
+            retVal += player.ratings[7] * 1;
+            retVal += player.ratings[3] * 1.2;
+            retVal += player.ratings[4] * 1.2;
+            retVal += player.ratings[5] * 1;
+            retVal += player.ratings[6] * 1.6;
+            retVal += player.ratings[8] * .5;
+        }
+        else if (position == 4)
+        {
+            retVal += inside * 1.2;
+            retVal += player.ratings[2] * 1.4;
+            retVal += player.ratings[9] * 1.4;
+            retVal += player.ratings[7] * 1.1;
+            retVal += player.ratings[3] * 1.05;
+            retVal += player.ratings[4] * 1.05;
+            retVal += player.ratings[5] * .7;
+            retVal += player.ratings[6] * 1.5;
+            retVal += player.ratings[8] * .5;
+        }
+        else
+        {
+            retVal += inside * 1.2;
+            retVal += player.ratings[2] * 1.2;
+            retVal += player.ratings[9] * 1.2;
+            retVal += player.ratings[7] * 1.5;
+            retVal += player.ratings[3] * 1.3;
+            retVal += player.ratings[4] * 1.3;
+            retVal += player.ratings[5] * .6;
+            retVal += player.ratings[6] * 1;
+            retVal += player.ratings[8] * .5;
+        }
+        
+        retVal = Math.Min(99.99, ((retVal) / 90) * 100);
+        if (player.Equals(this)) previousOverall = retVal;
+
+        return retVal;
+    }
     public double getOverall(player player = null, bool developmentIncluded = false)
     {
         if (player == null) player = this;

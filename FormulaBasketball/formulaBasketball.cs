@@ -39,9 +39,11 @@ public class formulaBasketball
         gameResultsFile = "GameResults.csv";
         statsFile = "stats.csv";
         standingsFile = "standings.csv";
-        
+
+        create.SetUpCollege();
+        create.PlayCollegeSeason();
         new SetupNewSeason(create);
-        for (int i = 0; i < 100; i++ )
+        /*for (int i = 0; i < 100; i++ )
         {
             
             Schedule schedule = new Schedule();
@@ -60,8 +62,8 @@ public class formulaBasketball
             toWrite += team.PrintChampionships();
         }
         File.WriteAllText("sim.txt", toWrite);
-        //return;
-            writerContents = "";
+        return;*/
+        writerContents = "";
         gameResultsContents = "";
         statsContents = "";
         standingsContents = "";
@@ -113,27 +115,6 @@ public class formulaBasketball
                 
                 SerializeObject(create, fileName);
             }
-            /*
-            else if (result.ToLower().Equals("change starter"))
-                changeStarter();
-            else if (result.ToLower().Equals("trade"))
-                trade();
-            
-            else if (result.ToLower().Equals("print"))
-                printTeam();
-            else if (result.ToLower().Equals("change name"))
-                changeName();
-            else if (result.ToLower().Equals("add player"))
-                addPlayer();
-            else if (result.ToLower().Equals("remove player"))
-                removePlayer();
-            else if (result.ToLower().Equals("mock playoffs"))
-                mockPlayoffs();
-            else if (result.ToLower().Equals("reload"))
-                Load(fileName);
-            else if (result.ToLower().Equals("wipe stats"))
-                ResetStats();
-                */
         }
 
         calculateStandings(!flag);

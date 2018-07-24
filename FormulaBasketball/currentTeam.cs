@@ -263,8 +263,8 @@ public class currentTeam
                     //Console.WriteLine("Substitutions Test for infinite loop");
                     if (num > 100)
                     {
-                        Console.WriteLine("Test");
-                        Environment.Exit(-1);
+                        Console.WriteLine("Problem occurred");
+                        //Environment.Exit(-1);
                     }
                     if (bob)
                     {

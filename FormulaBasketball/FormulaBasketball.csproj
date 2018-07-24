@@ -59,7 +59,9 @@
     </Compile>
     <Compile Include="changeAbleModifier.cs" />
     <Compile Include="College.cs" />
+    <Compile Include="CollegePlayer.cs" />
     <Compile Include="CollegeTeam.cs" />
+    <Compile Include="CollegeTeamType.cs" />
     <Compile Include="Contract.cs" />
     <Compile Include="ContractResult.cs" />
     <Compile Include="FreeAgents.cs" />

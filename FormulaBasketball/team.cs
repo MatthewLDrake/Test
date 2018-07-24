@@ -483,7 +483,7 @@ public class team : IComparable<team>,  IEnumerable<player>
     {
         return playersPerPos[4];
     }
-    private void AddPoints(int i)
+    protected void AddPoints(int i)
     {
         pointsScored = pointsScored + i;
 
@@ -492,7 +492,7 @@ public class team : IComparable<team>,  IEnumerable<player>
     {
         return pointsScored;
     }
-    private void AddPointsAgainst(int i)
+    protected void AddPointsAgainst(int i)
     {
         pointsAgainst = pointsAgainst + i;
 
@@ -501,7 +501,7 @@ public class team : IComparable<team>,  IEnumerable<player>
     {
         return pointsAgainst;
     }
-    public void AddResult(int opponent, int teamScore, int opposingScore, bool isPlayoffs = false)
+    public virtual void AddResult(int opponent, int teamScore, int opposingScore, bool isPlayoffs = false)
     {
         bool conferenceOpponent = false, divisionalOpponent = false;
         if (getDivisionLetter().Equals(getDivisionLetter(opponent)))
@@ -552,7 +552,7 @@ public class team : IComparable<team>,  IEnumerable<player>
         lastThreeGames(0);
     }
 
-    public int getWins()
+    public virtual int getWins()
     {
         if (currentSeason == null) currentSeason = new Record();
         return currentSeason.GetWins();
@@ -569,8 +569,8 @@ public class team : IComparable<team>,  IEnumerable<player>
         if (conferenceRecord == null) conferenceRecord = new Record();
         return conferenceRecord.GetWins();
     }
-    
-    public int getLosses()
+
+    public virtual int getLosses()
     {
         if (currentSeason == null) currentSeason = new Record();
         return currentSeason.GetLosses();
