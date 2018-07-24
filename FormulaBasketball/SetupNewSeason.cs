@@ -4,15 +4,19 @@ using System.Collections.Generic;
 using System.Text;
 using System.Collections;
 using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.Serialization;
 
 public class SetupNewSeason
 {
     private createTeams create;
     private FreeAgents freeAgents;
+    private FormulaBasketball.Random r;
     private List<player>[] playersByPos;
-    public SetupNewSeason(createTeams create)
+    public SetupNewSeason(createTeams create, FormulaBasketball.Random r)
     {
         this.create = create;
+        this.r = r;
         freeAgents = new FreeAgents();
         playersByPos = new List<player>[5];
         freeAgents.Add(create.getFreeAgents());
@@ -32,10 +36,436 @@ public class SetupNewSeason
         CalculateHighestPayroll("topDLeaguePayrolls.txt", create.getDLeagueTeams());
         CalculateHighestPayroll("topPayrolls.txt", create.getTeams());
 
-        FindStarterAverages("starterAverages.txt", create.getTeams());
-        FindStarterAverages("DLeagueStarterAverages.txt", create.getDLeagueTeams());
+        CalculateBestOveralls("topOveralls.txt", create.getTeams());
+        CalculateBestOveralls("topDLeaugeOveralls.txt", create.getDLeagueTeams());
+
+        FindStarterAverages("averageStarters.txt", create.getTeams());
+        FindStarterAverages("dLeagueAverageStarters.txt", create.getDLeagueTeams());
 
         PrintWikiInfo();
+
+        GenerateFIBUTeams();
+    }
+    private void CalculateBestOveralls(string fileName, List<team> teams)
+    {
+        List<StartersOveralls> starters = new List<StartersOveralls>();
+        foreach (team team in teams)
+        {
+            starters.Add(new StartersOveralls(team.GetStarterOveralls(), team.ToString()));
+        }
+        starters.Sort();
+        string toWrite = "";
+
+        foreach (StartersOveralls overalls in starters)
+        {
+            toWrite += overalls.ToString();
+        }
+        File.WriteAllText(fileName, toWrite);
+    }
+    private void GenerateFIBUTeams()
+    {
+        List<team> FIBUteams = new List<team>();
+
+        foreach (Country country in Enum.GetValues(typeof(Country)))
+        {
+            FIBUTeam nextTeam = new FIBUTeam("" + country, r);
+            List<player> players = FindBestPlayersByCountry(country);
+            foreach (player p in players)
+            {
+                nextTeam.ConditionalAddPlayer(p);
+            }
+            nextTeam.Reorder(country);
+            nextTeam.Reorder(country);
+            FIBUteams.Add(nextTeam);
+        }
+
+
+        List<team> loviniosa = new List<team>();
+        loviniosa.Add(FIBUteams[9]);
+        loviniosa.Add(FIBUteams[24]);
+        loviniosa.Add(FIBUteams[33]);
+        loviniosa.Add(FIBUteams[34]);
+        loviniosa.Add(FIBUteams[41]);
+
+        List<team> amaltheans = new List<team>();
+        amaltheans.Add(FIBUteams[13]);
+        amaltheans.Add(FIBUteams[16]);
+        amaltheans.Add(FIBUteams[28]);
+        amaltheans.Add(FIBUteams[31]);
+        amaltheans.Add(FIBUteams[35]);
+        amaltheans.Add(FIBUteams[45]);
+        amaltheans.Add(FIBUteams[51]);
+
+        List<team> lysteriok = new List<team>();
+        lysteriok.Add(FIBUteams[19]);
+        lysteriok.Add(FIBUteams[22]);
+        lysteriok.Add(FIBUteams[27]);
+        lysteriok.Add(FIBUteams[44]);
+        lysteriok.Add(FIBUteams[50]);
+
+        List<team> Amaio = new List<team>();
+        Amaio.Add(FIBUteams[14]);
+        Amaio.Add(FIBUteams[17]);
+        Amaio.Add(FIBUteams[26]);
+        Amaio.Add(FIBUteams[29]);
+        Amaio.Add(FIBUteams[32]);
+        Amaio.Add(FIBUteams[46]);
+        Amaio.Add(FIBUteams[47]);
+        Amaio.Add(FIBUteams[48]);
+
+        List<team> ariokoczallimalia = new List<team>();
+        ariokoczallimalia.Add(FIBUteams[0]);
+        ariokoczallimalia.Add(FIBUteams[1]);
+        ariokoczallimalia.Add(FIBUteams[3]);
+        ariokoczallimalia.Add(FIBUteams[11]);
+        ariokoczallimalia.Add(FIBUteams[12]);
+        ariokoczallimalia.Add(FIBUteams[25]);
+        ariokoczallimalia.Add(FIBUteams[37]);
+        ariokoczallimalia.Add(FIBUteams[49]);
+
+        List<team> blagua = new List<team>();
+        blagua.Add(FIBUteams[4]);
+        blagua.Add(FIBUteams[8]);
+        blagua.Add(FIBUteams[10]);
+        blagua.Add(FIBUteams[21]);
+        blagua.Add(FIBUteams[30]);
+        blagua.Add(FIBUteams[36]);
+        blagua.Add(FIBUteams[39]);
+        blagua.Add(FIBUteams[42]);
+        blagua.Add(FIBUteams[43]);
+
+        List<team> serkrs = new List<team>();
+        serkrs.Add(FIBUteams[2]);
+        serkrs.Add(FIBUteams[5]);
+        serkrs.Add(FIBUteams[6]);
+        serkrs.Add(FIBUteams[7]);
+        serkrs.Add(FIBUteams[15]);
+        serkrs.Add(FIBUteams[18]);
+        serkrs.Add(FIBUteams[20]);
+        serkrs.Add(FIBUteams[23]);
+        serkrs.Add(FIBUteams[38]);
+        serkrs.Add(FIBUteams[40]);
+
+        ListMatches(loviniosa);
+        loviniosa.Reverse();
+        ListMatches(loviniosa);
+
+        ListMatches(amaltheans);
+        amaltheans.Reverse();
+        ListMatches(amaltheans);
+
+        ListMatches(lysteriok);
+        lysteriok.Reverse();
+        ListMatches(lysteriok);
+
+        ListMatches(Amaio);
+        Amaio.Reverse();
+        ListMatches(Amaio);
+
+        ListMatches(ariokoczallimalia);
+        ariokoczallimalia.Reverse();
+        ListMatches(ariokoczallimalia);
+
+        ListMatches(blagua);
+        blagua.Reverse();
+        ListMatches(blagua);
+
+        ListMatches(serkrs);
+        serkrs.Reverse();
+        ListMatches(serkrs);
+
+        loviniosa.Sort();
+        foreach(team team in loviniosa)
+        {
+            Console.WriteLine(team.ToString() + ": " + team.getWins() + " - " + team.getLosses());
+        }
+
+        amaltheans.Sort();
+        foreach (team team in amaltheans)
+        {
+            Console.WriteLine(team.ToString() + ": " + team.getWins() + " - " + team.getLosses());
+        }
+
+        lysteriok.Sort();
+        foreach (team team in lysteriok)
+        {
+            Console.WriteLine(team.ToString() + ": " + team.getWins() + " - " + team.getLosses());
+        }
+
+        Amaio.Sort();
+        foreach (team team in Amaio)
+        {
+            Console.WriteLine(team.ToString() + ": " + team.getWins() + " - " + team.getLosses());
+        }
+
+        ariokoczallimalia.Sort();
+        foreach (team team in ariokoczallimalia)
+        {
+            Console.WriteLine(team.ToString() + ": " + team.getWins() + " - " + team.getLosses());
+        }
+
+        blagua.Sort();
+        foreach (team team in blagua)
+        {
+            Console.WriteLine(team.ToString() + ": " + team.getWins() + " - " + team.getLosses());
+        }
+
+        serkrs.Sort();
+        foreach (team team in serkrs)
+        {
+            Console.WriteLine(team.ToString() + ": " + team.getWins() + " - " + team.getLosses());
+        }
+
+
+        PrintRosters(FIBUteams, "FibuTeams.csv");
+
+        SerializeObject(FIBUteams, "FIBUteams.fibudata");
+    }
+    private void ListMatches(List<team> ListTeam)
+    {
+        if (ListTeam.Count % 2 != 0)
+        {
+            ListTeam.Add(null); // If odd number of teams add a dummy
+        }
+
+        int numDays = (ListTeam.Count); // Days needed to complete tournament
+        int halfSize = ListTeam.Count / 2;
+
+        List<team> teams = new List<team>();
+
+        teams.AddRange(ListTeam); // Add teams to List and remove the first team
+        teams.RemoveAt(0);
+
+        int teamsSize = teams.Count;
+
+        for (int day = 0; day < numDays; day++)
+        {
+            Console.WriteLine("Day {0}", (day + 1));
+
+            int teamIdx = day % teamsSize;
+
+            Console.WriteLine("{0} vs {1}", teams[teamIdx], ListTeam[0]);
+
+            for (int idx = 1; idx < halfSize; idx++)
+            {
+                int firstTeam = (day + idx) % teamsSize;
+                int secondTeam = (day + teamsSize - idx) % teamsSize;
+                if(teams[firstTeam] != null && teams[secondTeam] != null)
+                {
+                    executeGame(teams[firstTeam], teams[secondTeam]);
+                    Console.WriteLine("{0} vs {1}", teams[firstTeam], teams[secondTeam]);
+                }
+                
+            }
+        }
+        ListTeam.Remove(null);
+    }
+
+    private void executeGame(team team1, team team2)
+    {
+            int away = team1.lastThreeGames(-1);
+            int home = team2.lastThreeGames(-1);
+
+
+
+            int randomValue = r.Next(0, 100);
+            if (away == 0 && home == 0)
+            {
+                if (randomValue < 10)
+                {
+                    team1.setModifier(new BounceBackGame());
+                    team2.setModifier(new None());
+                }
+                else if (randomValue < 30)
+                {
+                    team1.setModifier(new DefensiveNightmare());
+                    team2.setModifier(new DefensiveNightmare());
+                }
+                else if (randomValue < 40)
+                {
+                    team1.setModifier(new None());
+                    team2.setModifier(new BounceBackGame());
+                }
+                else
+                {
+                    team1.setModifier(new None());
+                    team2.setModifier(new None());
+                }
+            }
+            else if ((away == 0 || away == 1) && home == 3)
+            {
+                if (randomValue < 15)
+                {
+                    team1.setModifier(new BounceBackGame());
+                    team2.setModifier(new LetDownGame());
+                }
+                else if (randomValue < 25)
+                {
+                    team1.setModifier(new StrugglesContinue());
+                    team2.setModifier(new ContinueRolling());
+                }
+                else
+                {
+                    team1.setModifier(new None());
+                    team2.setModifier(new None());
+                }
+
+            }
+            else if ((home == 0 || home == 1) && away == 3)
+            {
+                if (randomValue < 15)
+                {
+                    team2.setModifier(new BounceBackGame());
+                    team1.setModifier(new LetDownGame());
+                }
+                else if (randomValue < 25)
+                {
+                    team2.setModifier(new StrugglesContinue());
+                    team1.setModifier(new ContinueRolling());
+                }
+                else
+                {
+                    team2.setModifier(new None());
+                    team1.setModifier(new None());
+                }
+            }
+            else if (away == 3 && home == 3)
+            {
+                if (randomValue < 5)
+                {
+                    team1.setModifier(new ContinueRolling());
+                    team2.setModifier(new LetDownGame());
+                }
+                else if (randomValue < 10)
+                {
+                    team1.setModifier(new LetDownGame());
+                    team2.setModifier(new ContinueRolling());
+                }
+                else
+                {
+                    team1.setModifier(new None());
+                    team2.setModifier(new None());
+                }
+
+            }
+            else
+            {
+                if (randomValue < 12)
+                {
+                    team1.setModifier(new DefensiveNightmare());
+                    team2.setModifier(new None());
+                }
+                else if (randomValue < 25)
+                {
+                    team1.setModifier(new OffenisveNightmare());
+                    team2.setModifier(new OffenisveNightmare());
+                }
+                else
+                {
+                    team1.setModifier(new None());
+                    team2.setModifier(new None());
+                }
+            }
+            team1.addModifier(new HomeTeam());
+            team1.addModifier(team1.getCoachModifier());
+            team2.addModifier(team2.getCoachModifier());
+            game newGame = new game(null, team1, team2, r);
+
+        
+
+            team1.AddResult(0, newGame.getAwayTeamScore(), newGame.getHomeTeamScore());
+            team2.AddResult(0, newGame.getHomeTeamScore(), newGame.getAwayTeamScore());
+            
+
+            for (int k = 0; k < team1.getSize(); k++)
+            {
+                team1.getPlayer(k).resetGameStats();
+            }
+            for (int k = 0; k < team2.getSize(); k++)
+            {
+                team2.getPlayer(k).resetGameStats();
+            }
+        
+    }
+
+    /// <summary>
+    /// Serializes an object.
+    /// </summary>
+    /// <param name="serializableObject"></param>
+    /// <param name="fileName"></param>
+    private void SerializeObject(List<team> serializableObject, string fileName)
+    {
+        FileStream fs = new FileStream(fileName, FileMode.Create);
+
+        // Construct a BinaryFormatter and use it to serialize the data to the stream.
+        BinaryFormatter formatter = new BinaryFormatter();
+        try
+        {
+            formatter.Serialize(fs, serializableObject);
+        }
+        catch (SerializationException e)
+        {
+            Console.WriteLine("Failed to serialize. Reason: " + e.Message);
+            throw;
+        }
+        finally
+        {
+            fs.Close();
+        }
+    }
+    /// <summary>
+    /// Deserializes a binary file into an object list
+    /// </summary>
+    /// <param name="fileName">The filename</param>
+    /// <returns></returns>
+    public List<team> DeSerializeObject(string fileName)
+    {
+        List<team> temp = null;
+
+        // Open the file containing the data that you want to deserialize.
+        FileStream fs = new FileStream(fileName, FileMode.Open);
+        try
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+
+            // Deserialize the hashtable from the file and 
+            // assign the reference to the local variable.
+            temp = (List<team>)formatter.Deserialize(fs);
+        }
+        catch (SerializationException e)
+        {
+            Console.WriteLine("Failed to deserialize. Reason: " + e.Message);
+            throw;
+        }
+        finally
+        {
+            fs.Close();
+        }
+        return temp;
+    }
+    private List<player> FindBestPlayersByCountry(Country country)
+    {
+        List<player> retVal = new List<player>();
+
+        foreach (team team in create.getTeams())
+        {
+            foreach (player p in team)
+            {
+                if (p.GetCountry().Equals(country)) retVal.Add(p);
+            }
+        }
+        foreach (team team in create.getDLeagueTeams())
+        {
+            foreach (player p in team)
+            {
+                if (p.GetCountry().Equals(country)) retVal.Add(p);
+            }
+        }
+        foreach (player p in freeAgents.GetAllPlayers())
+        {
+            if (p.GetCountry().Equals(country)) retVal.Add(p);
+        }
+        return retVal;
     }
     private void AdvanceYear()
     {
@@ -43,6 +473,28 @@ public class SetupNewSeason
         {
             if (player.GetPlayerID() < 1191)
                 player.endSeason();
+        }
+    }
+    class StartersOveralls : IComparable<StartersOveralls>
+    {
+        private double overall;
+        private string team;
+        public StartersOveralls(double overall, string team)
+        {
+            this.overall = overall;
+            this.team = team;
+        }
+
+        public int CompareTo(StartersOveralls other)
+        {
+            if (overall - other.overall > 0) return -1;
+            else if (other.overall - overall > 0) return 1;
+            else return 0;
+        }
+
+        public override string ToString()
+        {
+            return team + ": " + overall + "\n";
         }
     }
     private void PrintWikiInfo()

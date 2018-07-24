@@ -8,28 +8,28 @@ using System.Drawing;
 [Serializable]
 public class team : IComparable<team>,  IEnumerable<player>
 {
-    private Coach coach;
-    private List<player> players;
-    private String teamName, threeLetterAbbreviation;
-    private int[] playersPerPos;
-    private int pointsScored, pointsAgainst;
-    private int divisionRank, conferenceRank, leagueRank, teamNum;
-    private Queue<Int32> lastGames;
-    private Stadium stadium;
-    private teamResults teamResults;
-    private int fianance;
-    private Expenses expenses;
-    private Trainer trainer;
-    private double sponserMoney;
-    private double currentSponsers;
-    private double[] totalIncome;
-    private int travelCosts, weeklyTravel;
-    private Merchandise merchandise;
-    private int seasonMerchandiseRevenue;
-    private FormulaBasketball.Random r;
-    private int streak;
-    private List<int> lastTen;
-    private List<player> retiredList;
+    protected Coach coach;
+    protected List<player> players;
+    protected String teamName, threeLetterAbbreviation;
+    protected int[] playersPerPos;
+    protected int pointsScored, pointsAgainst;
+    protected int divisionRank, conferenceRank, leagueRank, teamNum;
+    protected Queue<Int32> lastGames;
+    protected Stadium stadium;
+    protected teamResults teamResults;
+    protected int fianance;
+    protected Expenses expenses;
+    protected Trainer trainer;
+    protected double sponserMoney;
+    protected double currentSponsers;
+    protected double[] totalIncome;
+    protected int travelCosts, weeklyTravel;
+    protected Merchandise merchandise;
+    protected int seasonMerchandiseRevenue;
+    protected FormulaBasketball.Random r;
+    protected int streak;
+    protected List<int> lastTen;
+    protected List<player> retiredList;
     private Record currentSeason, currentPlayoffs, allTime, allTimePlayoffs, divisionRecord, conferenceRecord;
     private Record[] currentSeasonVsTeam, allTimeVsTeam;
     public team(String teamName, FormulaBasketball.Random r)
@@ -459,7 +459,7 @@ public class team : IComparable<team>,  IEnumerable<player>
     {
         return players.Count;
     }
-    private void addPos(int pos)
+    protected void addPos(int pos)
     {
         playersPerPos[pos]++;
     }
@@ -636,7 +636,15 @@ public class team : IComparable<team>,  IEnumerable<player>
         }
         return null;
     }
-    
+    public double GetStarterOveralls()
+    {
+        double overall = 0.0;
+        for (int i = 0; i < 5; i++)
+        {
+            overall += players[i].getOverall();
+        }
+        return overall / 5;
+    }
     public void setModifier(Modifier modifier)
     {
         for (int i = 0; i < players.Count; i++)

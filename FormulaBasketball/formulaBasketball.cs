@@ -40,9 +40,9 @@ public class formulaBasketball
         statsFile = "stats.csv";
         standingsFile = "standings.csv";
 
-        create.SetUpCollege();
-        create.PlayCollegeSeason();
-        new SetupNewSeason(create);
+        //create.SetUpCollege();
+        //create.PlayCollegeSeason();
+        new SetupNewSeason(create,r);
         /*for (int i = 0; i < 100; i++ )
         {
             

@@ -61,7 +61,7 @@ public class player : IComparable<player>
     {
         ratings = new double[11];
 
-        this.country = Country.USA;
+        this.country = Country.Other;
         careerEnded = false;
         starts = 0;
         pointDiff = 0;
@@ -99,7 +99,7 @@ public class player : IComparable<player>
     {
         ratings = new double[11];
         this.playerAge = age;
-        this.country = Country.USA;
+        this.country = Country.Other;
         careerEnded = false;
         starts = 0;
         pointDiff = 0;

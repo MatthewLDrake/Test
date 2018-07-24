@@ -21,14 +21,15 @@ namespace ResigningPlayers
         public Form1()
         {
             InitializeComponent();
-            LoadInfo();
             r = new FormulaBasketball.Random();
+            LoadInfo();
+            
         }
         private void LoadInfo()
         {
             create = DeSerializeObject("real.fbdata");
 
-            new SetupNewSeason(create);
+            new SetupNewSeason(create, r);
 
             team = create.getTeam(12);
             foreach (player player in team)

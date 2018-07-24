@@ -64,6 +64,7 @@
     <Compile Include="CollegeTeamType.cs" />
     <Compile Include="Contract.cs" />
     <Compile Include="ContractResult.cs" />
+    <Compile Include="FIBUTeam.cs" />
     <Compile Include="FreeAgents.cs" />
     <Compile Include="Record.cs" />
     <Compile Include="retirements.cs" />
