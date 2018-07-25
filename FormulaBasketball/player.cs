@@ -1055,7 +1055,7 @@ public class player : IComparable<player>
     {
         stats[10] += i;
         gameFouls += i;
-        if (gameFouls == 6) Console.WriteLine("tf");
+        //if (gameFouls == 6) Console.WriteLine("tf");
     }
     public int getFouls()
     {

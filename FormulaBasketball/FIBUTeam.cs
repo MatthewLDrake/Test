@@ -49,7 +49,6 @@ public class FIBUTeam : team
             {
                 int pos = ((i % 5) + 1);
                 orderedRoster[i] = NewPlayer(pos, country);
-                orderedRoster[i].updateRatings(r);
             }
         }
         players = new List<player>();

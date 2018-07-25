@@ -264,7 +264,7 @@ public class currentTeam
                     if (num > 100)
                     {
                         Console.WriteLine("Problem occurred");
-                        //Environment.Exit(-1);
+                        Environment.Exit(-1);
                     }
                     if (bob)
                     {

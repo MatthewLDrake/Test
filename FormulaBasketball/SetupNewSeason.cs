@@ -64,7 +64,7 @@ public class SetupNewSeason
     }
     private void GenerateFIBUTeams()
     {
-        List<team> FIBUteams = new List<team>();
+        List<team> FIBUteams = DeSerializeObject("FIBUteams.fibudata");/*new List<team>();
 
         foreach (Country country in Enum.GetValues(typeof(Country)))
         {
@@ -78,8 +78,9 @@ public class SetupNewSeason
             nextTeam.Reorder(country);
             FIBUteams.Add(nextTeam);
         }
-
-
+        FIBUteams.Sort();
+        FIBUteams.RemoveAt(39);
+        SerializeObject(FIBUteams, "FIBUteams.fibudata");*/
         List<team> loviniosa = new List<team>();
         loviniosa.Add(FIBUteams[9]);
         loviniosa.Add(FIBUteams[24]);
@@ -146,246 +147,428 @@ public class SetupNewSeason
         serkrs.Add(FIBUteams[38]);
         serkrs.Add(FIBUteams[40]);
 
-        ListMatches(loviniosa);
+        PlayMatches(loviniosa);
         loviniosa.Reverse();
-        ListMatches(loviniosa);
+        PlayMatches(loviniosa);
 
-        ListMatches(amaltheans);
+        PlayMatches(amaltheans);
         amaltheans.Reverse();
-        ListMatches(amaltheans);
+        PlayMatches(amaltheans);
 
-        ListMatches(lysteriok);
+        PlayMatches(lysteriok);
         lysteriok.Reverse();
-        ListMatches(lysteriok);
+        PlayMatches(lysteriok);
 
-        ListMatches(Amaio);
+        PlayMatches(Amaio);
         Amaio.Reverse();
-        ListMatches(Amaio);
+        PlayMatches(Amaio);
 
-        ListMatches(ariokoczallimalia);
+        PlayMatches(ariokoczallimalia);
         ariokoczallimalia.Reverse();
-        ListMatches(ariokoczallimalia);
+        PlayMatches(ariokoczallimalia);
 
-        ListMatches(blagua);
+        PlayMatches(blagua);
         blagua.Reverse();
-        ListMatches(blagua);
+        PlayMatches(blagua);
 
-        ListMatches(serkrs);
+        PlayMatches(serkrs);
         serkrs.Reverse();
-        ListMatches(serkrs);
-
+        PlayMatches(serkrs);
+        Console.WriteLine("Loviniosa: ");
         loviniosa.Sort();
+        int seed = 1;
         foreach(team team in loviniosa)
         {
             Console.WriteLine(team.ToString() + ": " + team.getWins() + " - " + team.getLosses());
+            team.setConferenceRank(seed);
+            seed++;
         }
-
+        Console.WriteLine("Amaltheans: ");
         amaltheans.Sort();
+        seed = 1;
         foreach (team team in amaltheans)
         {
             Console.WriteLine(team.ToString() + ": " + team.getWins() + " - " + team.getLosses());
+            team.setConferenceRank(seed);
+            seed++;
         }
 
         lysteriok.Sort();
+        seed = 1;
+        Console.WriteLine("Lysteriok: ");
         foreach (team team in lysteriok)
         {
             Console.WriteLine(team.ToString() + ": " + team.getWins() + " - " + team.getLosses());
+            team.setConferenceRank(seed);
+            seed++;
         }
-
+        Console.WriteLine("Amaio: ");
         Amaio.Sort();
+        seed = 1;
         foreach (team team in Amaio)
         {
             Console.WriteLine(team.ToString() + ": " + team.getWins() + " - " + team.getLosses());
+            team.setConferenceRank(seed);
+            seed++;
         }
-
+        Console.WriteLine("Ariokoczallimalia: ");
         ariokoczallimalia.Sort();
+        seed = 1;
         foreach (team team in ariokoczallimalia)
         {
             Console.WriteLine(team.ToString() + ": " + team.getWins() + " - " + team.getLosses());
+            team.setConferenceRank(seed);
+            seed++;
         }
-
+        Console.WriteLine("Blagua: ");
         blagua.Sort();
+        seed = 1;
         foreach (team team in blagua)
         {
             Console.WriteLine(team.ToString() + ": " + team.getWins() + " - " + team.getLosses());
+            team.setConferenceRank(seed);
+            seed++;
         }
-
+        Console.WriteLine("Serkrs: ");
         serkrs.Sort();
+        seed = 1;
         foreach (team team in serkrs)
         {
             Console.WriteLine(team.ToString() + ": " + team.getWins() + " - " + team.getLosses());
+            team.setConferenceRank(seed);
+            seed++;
         }
 
 
         PrintRosters(FIBUteams, "FibuTeams.csv");
 
-        SerializeObject(FIBUteams, "FIBUteams.fibudata");
+        List<team> finalFIBUTeams = new List<team>();
+        Console.WriteLine("Loviniosa Playoffs: ");
+        finalFIBUTeams.AddRange(PlayFIBUTournament(loviniosa, 3));
+        Console.WriteLine("Amaltheans Playoffs: ");
+        finalFIBUTeams.AddRange(PlayFIBUTournament(amaltheans, 4));
+        Console.WriteLine("Lysteriok Playoffs: ");
+        finalFIBUTeams.AddRange(PlayFIBUTournament(lysteriok, 3));
+        Console.WriteLine("Amaio Playoffs: ");
+        finalFIBUTeams.AddRange(PlayFIBUTournament(Amaio, 5));
+        Console.WriteLine("Ariokoczallimalia Playoffs: ");
+        finalFIBUTeams.AddRange(PlayFIBUTournament(ariokoczallimalia, 5));
+        Console.WriteLine("Blagua Playoffs: ");
+        finalFIBUTeams.AddRange(PlayFIBUTournament(blagua, 6));
+        Console.WriteLine("Serkrs Playoffs: ");
+        finalFIBUTeams.AddRange(PlayFIBUTournament(serkrs, 6));
+
+        foreach(team team in finalFIBUTeams)
+        {
+            Console.WriteLine(team);
+        }
+        
     }
-    private void ListMatches(List<team> ListTeam)
+    private void PlayMatches(List<team> ListTeam)
     {
         if (ListTeam.Count % 2 != 0)
         {
             ListTeam.Add(null); // If odd number of teams add a dummy
         }
+        int amountOfGames = ListTeam.Count - 1;
+        List<int> nums = new List<int>();
+        nums.AddRange(Count(ListTeam.Count));
 
-        int numDays = (ListTeam.Count); // Days needed to complete tournament
-        int halfSize = ListTeam.Count / 2;
-
-        List<team> teams = new List<team>();
-
-        teams.AddRange(ListTeam); // Add teams to List and remove the first team
-        teams.RemoveAt(0);
-
-        int teamsSize = teams.Count;
-
-        for (int day = 0; day < numDays; day++)
+        while(amountOfGames != 0)
         {
-            Console.WriteLine("Day {0}", (day + 1));
-
-            int teamIdx = day % teamsSize;
-
-            Console.WriteLine("{0} vs {1}", teams[teamIdx], ListTeam[0]);
-
-            for (int idx = 1; idx < halfSize; idx++)
+            for (int i = 0; i < nums.Count / 2; i++)
             {
-                int firstTeam = (day + idx) % teamsSize;
-                int secondTeam = (day + teamsSize - idx) % teamsSize;
-                if(teams[firstTeam] != null && teams[secondTeam] != null)
-                {
-                    executeGame(teams[firstTeam], teams[secondTeam]);
-                    Console.WriteLine("{0} vs {1}", teams[firstTeam], teams[secondTeam]);
-                }
-                
+                if(ListTeam[nums[i]] != null &&  ListTeam[nums[nums.Count - (i + 1)]] != null)
+                    executeGame(ListTeam[nums[i]], ListTeam[nums[nums.Count - (i + 1)]]);
             }
+
+            int number = nums[nums.Count - 1];
+
+            nums.Remove(number);
+            nums.Insert(1, number);
+
+            amountOfGames--;
         }
+        
+
         ListTeam.Remove(null);
     }
-
-    private void executeGame(team team1, team team2)
+    private List<team> PlayFIBUTournament(List<team> division, int teamsPassing)
     {
-            int away = team1.lastThreeGames(-1);
-            int home = team2.lastThreeGames(-1);
+        List<team> advancing = new List<team>();
 
+        while(division.Count != 10)
+        {
+            division.Add(null);
+        }
 
+        team[] results;
+        List<team> roundLosers = new List<team>();
+        results = PlaySeries(division[7], division[8]);        
+        team gameOneWinner = results[0];
+        roundLosers.Add(results[1]);
+        results = PlaySeries(division[6], division[9]);
+        team gameTwoWinner = results[0];
+        roundLosers.Add(results[1]);
 
-            int randomValue = r.Next(0, 100);
-            if (away == 0 && home == 0)
+        if(roundLosers[0] != null && roundLosers[1] != null)
+        {
+            if(roundLosers[0].getConferenceRank() > roundLosers[1].getConferenceRank())
             {
-                if (randomValue < 10)
-                {
-                    team1.setModifier(new BounceBackGame());
-                    team2.setModifier(new None());
-                }
-                else if (randomValue < 30)
-                {
-                    team1.setModifier(new DefensiveNightmare());
-                    team2.setModifier(new DefensiveNightmare());
-                }
-                else if (randomValue < 40)
-                {
-                    team1.setModifier(new None());
-                    team2.setModifier(new BounceBackGame());
-                }
-                else
-                {
-                    team1.setModifier(new None());
-                    team2.setModifier(new None());
-                }
-            }
-            else if ((away == 0 || away == 1) && home == 3)
-            {
-                if (randomValue < 15)
-                {
-                    team1.setModifier(new BounceBackGame());
-                    team2.setModifier(new LetDownGame());
-                }
-                else if (randomValue < 25)
-                {
-                    team1.setModifier(new StrugglesContinue());
-                    team2.setModifier(new ContinueRolling());
-                }
-                else
-                {
-                    team1.setModifier(new None());
-                    team2.setModifier(new None());
-                }
-
-            }
-            else if ((home == 0 || home == 1) && away == 3)
-            {
-                if (randomValue < 15)
-                {
-                    team2.setModifier(new BounceBackGame());
-                    team1.setModifier(new LetDownGame());
-                }
-                else if (randomValue < 25)
-                {
-                    team2.setModifier(new StrugglesContinue());
-                    team1.setModifier(new ContinueRolling());
-                }
-                else
-                {
-                    team2.setModifier(new None());
-                    team1.setModifier(new None());
-                }
-            }
-            else if (away == 3 && home == 3)
-            {
-                if (randomValue < 5)
-                {
-                    team1.setModifier(new ContinueRolling());
-                    team2.setModifier(new LetDownGame());
-                }
-                else if (randomValue < 10)
-                {
-                    team1.setModifier(new LetDownGame());
-                    team2.setModifier(new ContinueRolling());
-                }
-                else
-                {
-                    team1.setModifier(new None());
-                    team2.setModifier(new None());
-                }
-
+                advancing.Add(roundLosers[0]);
+                advancing.Add(roundLosers[1]);
             }
             else
             {
-                if (randomValue < 12)
+                advancing.Add(roundLosers[1]);
+                advancing.Add(roundLosers[0]);
+            }
+        }
+        else if (roundLosers[0] != null) advancing.Add(roundLosers[0]);
+        else if (roundLosers[1] != null) advancing.Add(roundLosers[1]);
+        
+
+
+        roundLosers = new List<team>();
+        results = PlaySeries(gameOneWinner, division[0]);
+        gameOneWinner = results[0];
+        roundLosers.Add(results[1]);
+        results = PlaySeries(gameTwoWinner, division[1]);
+        gameTwoWinner = results[0];
+        roundLosers.Add(results[1]);
+        results = PlaySeries(division[2], division[5]);
+        team gameThreeWinner = results[0];
+        roundLosers.Add(results[1]);
+        results = PlaySeries(division[3], division[4]);
+        team gameFourWinner = results[0];
+        roundLosers.Add(results[1]);
+
+        while (roundLosers.Remove(null)) ;
+
+        while(roundLosers.Count != 0)
+        {
+            team team = null;
+            int rank = 0;
+            foreach(team t in roundLosers)
+            {
+                if(rank < t.getConferenceRank())
                 {
-                    team1.setModifier(new DefensiveNightmare());
-                    team2.setModifier(new None());
-                }
-                else if (randomValue < 25)
-                {
-                    team1.setModifier(new OffenisveNightmare());
-                    team2.setModifier(new OffenisveNightmare());
-                }
-                else
-                {
-                    team1.setModifier(new None());
-                    team2.setModifier(new None());
+                    rank = t.getConferenceRank();
+                    team = t;
                 }
             }
-            team1.addModifier(new HomeTeam());
-            team1.addModifier(team1.getCoachModifier());
-            team2.addModifier(team2.getCoachModifier());
-            game newGame = new game(null, team1, team2, r);
+            roundLosers.Remove(team);
+            advancing.Add(team);
+        }
+
+        results = PlaySeries(gameOneWinner, gameFourWinner);
+        gameOneWinner = results[0];
+        gameFourWinner = results[1];
+        results = PlaySeries(gameTwoWinner, gameThreeWinner);
+        gameTwoWinner = results[0];
+        gameThreeWinner = results[1];
+
+        results = PlaySeries(gameFourWinner, gameThreeWinner);
+        advancing.Add(results[1]);
+        advancing.Add(results[0]);
+
+        results = PlaySeries(gameOneWinner, gameTwoWinner);
+        advancing.Add(results[1]);
+        advancing.Add(results[0]);
+
+        advancing.Reverse();
+
+        advancing.RemoveRange(teamsPassing, advancing.Count - teamsPassing);
 
         
 
-            team1.AddResult(0, newGame.getAwayTeamScore(), newGame.getHomeTeamScore());
-            team2.AddResult(0, newGame.getHomeTeamScore(), newGame.getAwayTeamScore());
-            
+        return advancing;
+    }
+    private team[] PlaySeries(team teamOne, team teamTwo, int gamesToWin = 2)
+    {
+        if (teamOne == null && teamTwo == null)
+        {
+            return new team[]{null, null};;
+        }
+        else if (teamOne == null) return new team[]{teamTwo, null};
+        else if (teamTwo == null) return new team[]{teamOne, null};
 
-            for (int k = 0; k < team1.getSize(); k++)
+        team higherSeed, lowerSeed;
+        int higherSeedWins = 0, lowerSeedWins = 0;
+        if(teamOne.getConferenceRank() > teamTwo.getConferenceRank())
+        {
+            higherSeed = teamTwo;
+            lowerSeed = teamOne;
+        }
+        else
+        {
+            higherSeed = teamOne;
+            lowerSeed = teamTwo;
+        }
+
+        if (executeGame(higherSeed, lowerSeed)) lowerSeedWins++;
+        else higherSeedWins++;
+
+        if (executeGame(lowerSeed, higherSeed)) higherSeedWins++;
+        else lowerSeedWins++;
+
+        if(higherSeedWins == 1)
+        {
+            if (executeGame(lowerSeed, higherSeed)) higherSeedWins++;
+            else lowerSeedWins++;
+        }
+
+
+        if (higherSeedWins == gamesToWin)
+        {
+            string result = String.Format("{0} seed {1} beats {2} seed {3} {4}-{5}",
+                                   higherSeed.getConferenceRank(), higherSeed.ToString(), lowerSeed.getConferenceRank(), lowerSeed.ToString(), higherSeedWins, lowerSeedWins);
+            Console.WriteLine(result);
+            return new team[]{higherSeed, lowerSeed};
+        }
+        else
+        {
+            string result = String.Format("{0} seed {1} beats {2} seed {3} {4}-{5}",
+                                   lowerSeed.getConferenceRank(), lowerSeed.ToString(), higherSeed.getConferenceRank(), higherSeed.ToString(), lowerSeedWins, higherSeedWins);
+            Console.WriteLine(result);
+            return new team[]{lowerSeed,higherSeed};
+        }
+    }
+    private List<int> Count(int num)
+    {
+        List<int> retVal = new List<int>();
+        for(int i = 0; i < num; i++)
+        {
+            retVal.Add(i);
+        }
+        return retVal;
+    }
+    // second team is home
+    private bool executeGame(team team1, team team2)
+    {
+        int away = team1.lastThreeGames(-1);
+        int home = team2.lastThreeGames(-1);
+
+
+
+        int randomValue = r.Next(0, 100);
+        if (away == 0 && home == 0)
+        {
+            if (randomValue < 10)
             {
-                team1.getPlayer(k).resetGameStats();
+                team1.setModifier(new BounceBackGame());
+                team2.setModifier(new None());
             }
-            for (int k = 0; k < team2.getSize(); k++)
+            else if (randomValue < 30)
             {
-                team2.getPlayer(k).resetGameStats();
+                team1.setModifier(new DefensiveNightmare());
+                team2.setModifier(new DefensiveNightmare());
             }
-        
+            else if (randomValue < 40)
+            {
+                team1.setModifier(new None());
+                team2.setModifier(new BounceBackGame());
+            }
+            else
+            {
+                team1.setModifier(new None());
+                team2.setModifier(new None());
+            }
+        }
+        else if ((away == 0 || away == 1) && home == 3)
+        {
+            if (randomValue < 15)
+            {
+                team1.setModifier(new BounceBackGame());
+                team2.setModifier(new LetDownGame());
+            }
+            else if (randomValue < 25)
+            {
+                team1.setModifier(new StrugglesContinue());
+                team2.setModifier(new ContinueRolling());
+            }
+            else
+            {
+                team1.setModifier(new None());
+                team2.setModifier(new None());
+            }
+
+        }
+        else if ((home == 0 || home == 1) && away == 3)
+        {
+            if (randomValue < 15)
+            {
+                team2.setModifier(new BounceBackGame());
+                team1.setModifier(new LetDownGame());
+            }
+            else if (randomValue < 25)
+            {
+                team2.setModifier(new StrugglesContinue());
+                team1.setModifier(new ContinueRolling());
+            }
+            else
+            {
+                team2.setModifier(new None());
+                team1.setModifier(new None());
+            }
+        }
+        else if (away == 3 && home == 3)
+        {
+            if (randomValue < 5)
+            {
+                team1.setModifier(new ContinueRolling());
+                team2.setModifier(new LetDownGame());
+            }
+            else if (randomValue < 10)
+            {
+                team1.setModifier(new LetDownGame());
+                team2.setModifier(new ContinueRolling());
+            }
+            else
+            {
+                team1.setModifier(new None());
+                team2.setModifier(new None());
+            }
+
+        }
+        else
+        {
+            if (randomValue < 12)
+            {
+                team1.setModifier(new DefensiveNightmare());
+                team2.setModifier(new None());
+            }
+            else if (randomValue < 25)
+            {
+                team1.setModifier(new OffenisveNightmare());
+                team2.setModifier(new OffenisveNightmare());
+            }
+            else
+            {
+                team1.setModifier(new None());
+                team2.setModifier(new None());
+            }
+        }
+        team2.addModifier(new HomeTeam());
+        team1.addModifier(team1.getCoachModifier());
+        team2.addModifier(team2.getCoachModifier());
+        game newGame = new game(null, team1, team2, r);
+
+
+
+        team1.AddResult(0, newGame.getAwayTeamScore(), newGame.getHomeTeamScore());
+        team2.AddResult(0, newGame.getHomeTeamScore(), newGame.getAwayTeamScore());
+
+
+        for (int k = 0; k < team1.getSize(); k++)
+        {
+            team1.getPlayer(k).resetGameStats();
+        }
+        for (int k = 0; k < team2.getSize(); k++)
+        {
+            team2.getPlayer(k).resetGameStats();
+        }
+        return newGame.getHomeTeamScore() > newGame.getAwayTeamScore();
     }
 
     /// <summary>

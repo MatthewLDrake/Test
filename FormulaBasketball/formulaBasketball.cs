@@ -793,7 +793,7 @@ public class formulaBasketball
         {
             create.getTeam(j).addModifier(new gettingHot());
         }
-        create.getTeam(i).addModifier(new HomeTeam());
+        create.getTeam(j).addModifier(new HomeTeam());
         create.getTeam(i).addModifier(create.getTeam(i).getCoachModifier());
         create.getTeam(j).addModifier(create.getTeam(j).getCoachModifier());
         game newGame = new game(gameWriter, create.getTeam(i), create.getTeam(j), r);
