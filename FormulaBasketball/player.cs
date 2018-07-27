@@ -191,6 +191,10 @@ public class player : IComparable<player>
 
         }
     }
+    public void Stamina()
+    {
+        stamina = 100;
+    }
     private int peakStart, peakEnd, development;
     public void generateDevelopment(FormulaBasketball.Random rand)
     {

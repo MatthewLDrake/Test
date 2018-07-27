@@ -10,21 +10,18 @@ public class College
     private string standingsContents;
     private FormulaBasketball.Random r;
     private List<Pair[]> games;
+    private int season;
     public College(FormulaBasketball.Random r)
     {
+        season = 1;
         standingsContents = "";
         this.r = r;
         players = new List<player>();
         teams = new List<CollegeTeam>();
         LoadTeams();
 
-        FillTeams();
 
-        games = GetConferenceGames();
-
-        games.AddRange(GetGames());
-
-        games.Shuffle(r);
+        
 
         
         
@@ -32,6 +29,12 @@ public class College
     
     public void PlaySeason()
     {
+        games = GetConferenceGames();
+
+        games.AddRange(GetGames());
+
+        games.Shuffle(r);
+        Console.WriteLine(season);
         for (int i = 0; i < games.Count; i++)
         {
             if (i % 5 == 4) DevelopPlayers();
@@ -40,31 +43,35 @@ public class College
                 executeGame(false, games[i][j].x, games[i][j].y);
             }
         }
-
+        Console.WriteLine(season + " finished");
+        season++;
         Stats();
 
         Standings();
 
         Rosters();
 
-        DetermineRookies();
+        DetermineRookies(season);
 
     }
-    private void DetermineRookies()
+    private void DetermineRookies(int season)
     {
         List<player> rookies = new List<player>();
-        foreach (team team in teams)
+        foreach (CollegeTeam team in teams)
         {
+            team.EndCollegeSeason();
             foreach (player p in team)
             {
                 CollegePlayer player = p as CollegePlayer;
-                if (player.GoPro()) rookies.Add(player);
+                if (player.GoPro(r)) rookies.Add(player);
             }
+            team.RemoveLeavingPlayers(season);
         }
         string content = "";
         content += "New Rookies\tPlayer\tPosition\tLayup\tDunk\tJumpshot\t3PT\tPass\tShotContest\tDefenseIQ\tJumping\tSeperation\tDurability\tStamina\tDevelopment\tAge\tOverall\tPlayer ID\tYears Remaining\tMoney\tPosition Rank\tLeague Rank\n";
-        foreach (player player in rookies)
+        foreach (CollegePlayer player in rookies)
         {
+            player.FixRatings(r);
             content += player.getRatingsAsString();
         }
         
@@ -182,127 +189,120 @@ public class College
         return retVal;
     }
 
-    private void FillTeams()
-    {
-        for(int i = 0; i < teams.Count; i++)
-        {
-            teams[i].FillTeam();
-            teams[i].setBestStarters();
-        }
-    }
+    
     private void LoadTeams()
     {
         CollegeTeam newTeam = null;
         int i = 0;
-        newTeam = new CollegeTeam("University of Pxalit'k'a", "UPX", r, Country.Dtersauuw_Sagua, new AverageCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Sande Sitei", "USA", r, Country.Darvincia, new AverageCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Kap'atŋpiri", "UKA", r, Country.Oesa, new PoorCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Futi'akep", "UFU", r, Country.Futiakep, new BadCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Atapwa", "UAT", r, Country.Atapwa, new BadCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Hinaika Oceanography Institute", "UHI", r, Country.Hinaika, new BadCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Auspikitan", "UAU", r, Country.Auspikitan, new GoodCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Alteus", "UAL", r, Country.Wyverncliff, new EliteCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Saelunavvk", "USA", r, Country.Solea, new GoodCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Nausicaa", "UNA", r, Country.Nausicaa, new PoorCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Pxalit'k'a", "UPX", r, Country.Dtersauuw_Sagua, new AverageCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Sande Sitei", "USA", r, Country.Darvincia, new AverageCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Kap'atŋpiri", "UKA", r, Country.Oesa, new PoorCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Futi'akep", "UFU", r, Country.Futiakep, new BadCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Atapwa", "UAT", r, Country.Atapwa, new BadCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Hinaika Oceanography Institute", "UHI", r, Country.Hinaika, new BadCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Auspikitan", "UAU", r, Country.Auspikitan, new GoodCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Alteus", "UAL", r, Country.Wyverncliff, new EliteCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Saelunavvk", "USA", r, Country.Solea, new GoodCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Nausicaa", "UNA", r, Country.Nausicaa, new PoorCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
 
-        newTeam = new CollegeTeam("University of Noxium", "UNO", r, Country.Blaist_Blaland , new PoorCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Prokax", "UPR", r, Country.Blaist_Blaland, new PoorCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Klanaxon", "UKL", r, Country.Blaist_Blaland, new AverageCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Naxda", "UNA", r, Country.Blaist_Blaland, new AverageCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Sozaxon", "USO", r, Country.Blaist_Blaland, new PoorCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Blanaxon", "UBL", r, Country.Blaist_Blaland, new GoodCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Autolik", "UAU", r, Country.Blaist_Blaland, new AverageCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Uxnua", "UUX", r, Country.Blaist_Blaland, new PoorCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Sovkagrad", "USO", r, Country.Red_Rainbow, new BadCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Radugrad", "URA", r, Country.Red_Rainbow, new BadCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Noxium", "UNO", r, Country.Blaist_Blaland , new PoorCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Prokax", "UPR", r, Country.Blaist_Blaland, new PoorCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Klanaxon", "UKL", r, Country.Blaist_Blaland, new AverageCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Naxda", "UNA", r, Country.Blaist_Blaland, new AverageCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Sozaxon", "USO", r, Country.Blaist_Blaland, new PoorCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Blanaxon", "UBL", r, Country.Blaist_Blaland, new GoodCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Autolik", "UAU", r, Country.Blaist_Blaland, new AverageCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Uxnua", "UUX", r, Country.Blaist_Blaland, new PoorCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Sovkagrad", "USO", r, Country.Red_Rainbow, new BadCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Radugrad", "URA", r, Country.Red_Rainbow, new BadCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
 
-        newTeam = new CollegeTeam("University of Sagua", "USA", r, Country.Sagua, new GoodCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Shigua", "USH", r, Country.Height_Sagua, new AverageCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Dongua", "UDO", r, Country.Key_to_Don, new PoorCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Barsein", "UBA", r, Country.Barsein, new AverageCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Issamore", "UIS", r, Country.Antarion, new GoodCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Antarion 2", "UAN", r, Country.Antarion, new PoorCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Antarion 3", "UAN", r, Country.Antarion, new AverageCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Nja", "UNJ", r, Country.Nja, new BadCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Pentadominion 1", "UPE", r, Country.Pentadominion, new PoorCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Pentadominion 2", "UPE", r, Country.Pentadominion, new BadCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Sagua", "USA", r, Country.Sagua, new GoodCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Shigua", "USH", r, Country.Height_Sagua, new AverageCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Dongua", "UDO", r, Country.Key_to_Don, new PoorCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Barsein", "UBA", r, Country.Barsein, new AverageCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Issamore", "UIS", r, Country.Antarion, new GoodCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Antarion 2", "UAN", r, Country.Antarion, new PoorCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Antarion 3", "UAN", r, Country.Antarion, new AverageCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Nja", "UNJ", r, Country.Nja, new BadCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Pentadominion 1", "UPE", r, Country.Pentadominion, new PoorCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Pentadominion 2", "UPE", r, Country.Pentadominion, new BadCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
 
-        newTeam = new CollegeTeam("University of Shmupland 1", "USH", r, Country.Shmupland, new AverageCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Shmupland 2", "USH", r, Country.Shmupland, new PoorCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Shmupland 3", "USH", r, Country.Shmupland, new AverageCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Shmupland 4", "USH", r, Country.Shmupland, new GoodCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Shmupland 5", "USH", r, Country.Shmupland, new PoorCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Oasis City", "UOA", r, Country.Kaeshar, new GoodCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Sapphire Bay", "USA", r, Country.Kaeshar, new AverageCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Chromasheep Farm", "UCH", r, Country.Kaeshar, new EliteCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Kaeshar 4", "UKA", r, Country.Kaeshar, new BadCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Kaeshar 5", "UKA", r, Country.Kaeshar, new PoorCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Shmupland 1", "USH", r, Country.Shmupland, new AverageCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Shmupland 2", "USH", r, Country.Shmupland, new PoorCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Shmupland 3", "USH", r, Country.Shmupland, new AverageCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Shmupland 4", "USH", r, Country.Shmupland, new GoodCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Shmupland 5", "USH", r, Country.Shmupland, new PoorCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Oasis City", "UOA", r, Country.Kaeshar, new GoodCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Sapphire Bay", "USA", r, Country.Kaeshar, new AverageCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Chromasheep Farm", "UCH", r, Country.Kaeshar, new EliteCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Kaeshar 4", "UKA", r, Country.Kaeshar, new BadCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Kaeshar 5", "UKA", r, Country.Kaeshar, new PoorCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
 
-        newTeam = new CollegeTeam("University of Lizabechai", "ULI", r, Country.Bielosia, new GoodCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Levikeana Solvae", "ULE", r, Country.Bielosia, new AverageCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Alieosia", "UAL", r, Country.Bielosia, new EliteCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Byisotia", "UBY", r, Country.Bielosia, new GoodCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Hkamnsi", "UHK", r, Country.Lyintaria, new PoorCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Vrelinku", "UVR", r, Country.Lyintaria, new AverageCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Lveinta", "ULV", r, Country.Lyintaria, new AverageCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Nomvas", "UNO", r, Country.Pyxanovia, new PoorCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Pyzus", "UPY", r, Country.Pyxanovia, new AverageCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Eastern Alveske", "UEA", r, Country.Pyxanovia, new BadCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Lizabechai", "ULI", r, Country.Bielosia, new GoodCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Levikeana Solvae", "ULE", r, Country.Bielosia, new AverageCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Alieosia", "UAL", r, Country.Bielosia, new EliteCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Byisotia", "UBY", r, Country.Bielosia, new GoodCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Hkamnsi", "UHK", r, Country.Lyintaria, new PoorCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Vrelinku", "UVR", r, Country.Lyintaria, new AverageCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Lveinta", "ULV", r, Country.Lyintaria, new AverageCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Nomvas", "UNO", r, Country.Pyxanovia, new PoorCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Pyzus", "UPY", r, Country.Pyxanovia, new AverageCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Eastern Alveske", "UEA", r, Country.Pyxanovia, new BadCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
 
-        newTeam = new CollegeTeam("University of Quiita-Kyudosia", "UQU", r, Country.Holy_Yektonisa, new AverageCollegeTeam() ); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Svitharia", "USV", r, Country.Other, new BadCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Soniara", "USO", r, Country.Other, new PoorCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Kholka", "UKH", r, Country.Other, new PoorCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Aavana", "UAA", r, Country.Other, new BadCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Floria", "UFL", r, Country.Other, new BadCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Eirnvse", "UEI", r, Country.Other, new PoorCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Venasul", "UVE", r, Country.Other, new BadCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Ncov Ntiajeb", "UNC", r, Country.Other, new PoorCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Zhiwasen", "UZH", r, Country.Other, new BadCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Quiita-Kyudosia", "UQU", r, Country.Holy_Yektonisa, new AverageCollegeTeam(), season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Svitharia", "USV", r, Country.Other, new BadCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Soniara", "USO", r, Country.Other, new PoorCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Kholka", "UKH", r, Country.Other, new PoorCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Aavana", "UAA", r, Country.Other, new BadCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Floria", "UFL", r, Country.Other, new BadCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Eirnvse", "UEI", r, Country.Other, new PoorCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Venasul", "UVE", r, Country.Other, new BadCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Ncov Ntiajeb", "UNC", r, Country.Other, new PoorCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Zhiwasen", "UZH", r, Country.Other, new BadCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
 
-        newTeam = new CollegeTeam("University of Vincent", "UVI", r, Country.Ethanthova, new GoodCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Boltway", "UBO", r, Country.Ethanthova, new AverageCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Vigim", "UVI", r, Country.Ethanthova, new GoodCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Arinis", "UAR", r, Country.Ethanthova, new AverageCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("Naskitrusk University", "NAU", r, Country.Dotruga, new EliteCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("Stedro Institute of Technology", "STU", r, Country.Dotruga, new GoodCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("Esmal District University", "EDU", r, Country.Dotruga, new GoodCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("Atresmi University", "ATU", r, Country.Dotruga, new EliteCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Herelle", "UHE", r, Country.Tri_National_Dominion, new AverageCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Tri_National_Dominion 2", "UTN", r, Country.Tri_National_Dominion, new PoorCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Vincent", "UVI", r, Country.Ethanthova, new GoodCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Boltway", "UBO", r, Country.Ethanthova, new AverageCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Vigim", "UVI", r, Country.Ethanthova, new GoodCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Arinis", "UAR", r, Country.Ethanthova, new AverageCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("Naskitrusk University", "NAU", r, Country.Dotruga, new EliteCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("Stedro Institute of Technology", "STU", r, Country.Dotruga, new GoodCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("Esmal District University", "EDU", r, Country.Dotruga, new GoodCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("Atresmi University", "ATU", r, Country.Dotruga, new EliteCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Herelle", "UHE", r, Country.Tri_National_Dominion, new AverageCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Tri_National_Dominion 2", "UTN", r, Country.Tri_National_Dominion, new PoorCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
 
-        newTeam = new CollegeTeam("University of Imperial Institute at Faehrenfall", "UIM", r, Country.Aeridani, new GoodCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Avura Aviation & Economics (A&E)", "UAV", r, Country.Aeridani, new EliteCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of University of Central Paradaniton", "UUN", r, Country.Aeridani, new GoodCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Chizait University", "UCH", r, Country.Aeridani, new AverageCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Imperial Institute at Levzent", "UIM", r, Country.Aeridani, new GoodCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Western University", "UWE", r, Country.Aeridani, new AverageCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Vikasa", "UVI", r, Country.Aiyota, new BadCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Akarine", "UAK", r, Country.Aiyota, new PoorCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Ciulo", "UCI", r, Country.Aiyota, new PoorCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Yoka Tse", "UYO", r, Country.Aiyota, new GoodCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Imperial Institute at Faehrenfall", "UIM", r, Country.Aeridani, new GoodCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Avura Aviation & Economics (A&E)", "UAV", r, Country.Aeridani, new EliteCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of University of Central Paradaniton", "UUN", r, Country.Aeridani, new GoodCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Chizait University", "UCH", r, Country.Aeridani, new AverageCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Imperial Institute at Levzent", "UIM", r, Country.Aeridani, new GoodCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Western University", "UWE", r, Country.Aeridani, new AverageCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Vikasa", "UVI", r, Country.Aiyota, new BadCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Akarine", "UAK", r, Country.Aiyota, new PoorCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Ciulo", "UCI", r, Country.Aiyota, new PoorCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Yoka Tse", "UYO", r, Country.Aiyota, new GoodCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
 
-        newTeam = new CollegeTeam("University of Protopolis", "UPR", r, Country.Czalliso, new PoorCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Biodry", "UBI", r, Country.Czalliso, new AverageCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Forssa", "UFO", r, Country.Czalliso, new PoorCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Starrie", "UST", r, Country.Czalliso, new AverageCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Vatallus", "UVA", r, Country.Czalliso, new BadCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Pokoj", "UPO", r, Country.Czalliso, new GoodCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Lumein", "ULU", r, Country.Czalliso, new PoorCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Seraphia", "USE", r, Country.Czalliso, new BadCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Holykol", "UHO", r, Country.Holykol, new AverageCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Norkute", "UNO", r, Country.Norkute, new BadCollegeTeam() ); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Protopolis", "UPR", r, Country.Czalliso, new PoorCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Biodry", "UBI", r, Country.Czalliso, new AverageCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Forssa", "UFO", r, Country.Czalliso, new PoorCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Starrie", "UST", r, Country.Czalliso, new AverageCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Vatallus", "UVA", r, Country.Czalliso, new BadCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Pokoj", "UPO", r, Country.Czalliso, new GoodCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Lumein", "ULU", r, Country.Czalliso, new PoorCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Seraphia", "USE", r, Country.Czalliso, new BadCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Holykol", "UHO", r, Country.Holykol, new AverageCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Norkute", "UNO", r, Country.Norkute, new BadCollegeTeam(), season); teams.Add(newTeam); newTeam.setTeamNum(i++);
 
-        newTeam = new CollegeTeam("University of Ikkuvvuki", "UIK", r, Country.Transhimalia, new GoodCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Fiik Lanki Akol", "UFI", r, Country.Transhimalia, new PoorCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Yuofuan", "UYU", r, Country.Transhimalia, new BadCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Maxwmkakki", "UMA", r, Country.Transhimalia, new PoorCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Lnwm", "ULN", r, Country.Transhimalia, new BadCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Vikkada", "UVI", r, Country.Transhimalia, new BadCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Aahrus 1", "UAA", r, Country.Aahrus, new AverageCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Aahrus 2", "UAA", r, Country.Aahrus, new GoodCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Bongatar 1", "UBO", r, Country.Bongatar, new AverageCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Bongatar 2", "UBO", r, Country.Bongatar, new AverageCollegeTeam()); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Ikkuvvuki", "UIK", r, Country.Transhimalia, new GoodCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Fiik Lanki Akol", "UFI", r, Country.Transhimalia, new PoorCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Yuofuan", "UYU", r, Country.Transhimalia, new BadCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Maxwmkakki", "UMA", r, Country.Transhimalia, new PoorCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Lnwm", "ULN", r, Country.Transhimalia, new BadCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Vikkada", "UVI", r, Country.Transhimalia, new BadCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Aahrus 1", "UAA", r, Country.Aahrus, new AverageCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Aahrus 2", "UAA", r, Country.Aahrus, new GoodCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Bongatar 1", "UBO", r, Country.Bongatar, new AverageCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Bongatar 2", "UBO", r, Country.Bongatar, new AverageCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
     }
     private List<Pair[]> GetConferenceGames()
     {

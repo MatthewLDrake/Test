@@ -59,5 +59,61 @@ namespace FormulaBasketball.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dtersauuw Sagua 0.68
+        ///Blaist Blaland  8.34    use Blaland
+        ///Red Rainbow     0.50    use Blaland
+        ///Bielosia        4.82    use Loviniosa
+        ///Lyintaria       3.83    use Loviniosa
+        ///Pyxanovia       2.78    use Loviniosa
+        ///Holy Yektonisa  1.00    use Loviniosa
+        ///Czalliso        1.35
+        ///Holykol 0.12    use Czalliso
+        ///Norkute 0.05    use Czalliso
+        ///Darvincia       1.89
+        ///Sagua   3.38
+        ///Height Sagua    1.90    use Sagua
+        ///Key to Don      1.90    use Sagua
+        ///Nausicaa        1.20    use Sagua
+        ///Nausicaa        0.70    use Darvincia [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string config {
+            get {
+                return ResourceManager.GetString("config", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Serkr	Piri	Atona
+        ///Serkr	Nouka	Lereŋ
+        ///Serkr	Olue	Pitwa
+        ///Serkr	Tise	Epi
+        ///Serkr	Lekena	Porewo
+        ///Serkr	Paekua	Tuni
+        ///Serkr	Oevu	Lome
+        ///Serkr	Apu	Aq&apos;aie
+        ///Dtersauuw Sagua	P&apos;uyo	Lek&apos;at
+        ///Dtersauuw Sagua	Tsekon	Unup&apos;a
+        ///Dtersauuw Sagua	Litsaw	T&apos;es&apos;vak
+        ///Dtersauuw Sagua	Ivek&apos;il	Wap&apos;t&apos;ebw
+        ///Solea	pihten	lekeŋ
+        ///Solea	vaŋun	peval
+        ///Solea	uqeth	nešik
+        ///Solea	ikánag	pátélokain
+        ///Solea	pekleɰ	tiwan
+        ///Solea	tikit&apos;	kutap
+        ///Solea	napuk	zeinélak&apos;
+        ///Solea	šunokiɰev	pavútekaš
+        ///Solea	kéhi	guqavpel
+        ///Solea	kal	aiqík
+        ///Solea	lagak	qivektuketuk
+        /// [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string names {
+            get {
+                return ResourceManager.GetString("names", resourceCulture);
+            }
+        }
     }
 }

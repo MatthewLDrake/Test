@@ -60,12 +60,14 @@
     <Compile Include="changeAbleModifier.cs" />
     <Compile Include="College.cs" />
     <Compile Include="CollegePlayer.cs" />
+    <Compile Include="CollegePlayerGen.cs" />
     <Compile Include="CollegeTeam.cs" />
     <Compile Include="CollegeTeamType.cs" />
     <Compile Include="Contract.cs" />
     <Compile Include="ContractResult.cs" />
     <Compile Include="FIBUTeam.cs" />
     <Compile Include="FreeAgents.cs" />
+    <Compile Include="NameGenerator.cs" />
     <Compile Include="Record.cs" />
     <Compile Include="retirements.cs" />
     <Compile Include="Coach.cs" />
@@ -292,6 +294,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\config.txt" />
+    <Content Include="names.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

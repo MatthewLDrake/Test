@@ -93,7 +93,7 @@ public class statWriter
 
         }
     }
-    public String ToString()
+    public override String ToString()
     {
         return temp;
     }

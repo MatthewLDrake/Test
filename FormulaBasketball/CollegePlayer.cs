@@ -6,14 +6,18 @@ using System.Text;
 [Serializable]
 public class CollegePlayer : player, ICloneable
 {
-    private bool isRedshirt, hasRedshirt;
+    private bool isRedshirt, hasRedshirt, wentPro;
     private int year;
-    public CollegePlayer(int pos, int insideScoring, int jumpStat, int threePoint, int passing, int shotContest, int defenseIQ, int jumping, int separation, int durability, int stamina, int age, String name, int peakStart, int peakEnd, int development, Country country, bool hasRedshirt, int year)
+    private int personality;
+    private const int ONE_AND_DONE = 1, FOUR_YEAR_PLAYER = 2, SUCCESS_BASED = 3, OVERALL_BASED = 4, MIXED = 5; 
+    public CollegePlayer(int pos, int insideScoring, int jumpStat, int threePoint, int passing, int shotContest, int defenseIQ, int jumping, int separation, int durability, int stamina, int age, String name, int peakStart, int peakEnd, int development, Country country, bool hasRedshirt, int year, int personality = 0)
         : base(pos, insideScoring, insideScoring, jumpStat, threePoint, passing, shotContest, defenseIQ, jumping, separation, durability, stamina, age, name, false, peakStart, peakEnd, development, country, -1)
     {
         this.hasRedshirt = hasRedshirt;
         this.year = year;
         isRedshirt = false;
+        wentPro = false;
+        this.personality = personality;
     }
     public object Clone()
     {
@@ -75,11 +79,84 @@ public class CollegePlayer : player, ICloneable
         if (ratings[9] == 10) return;
         ratings[9]++;
     }
-    public bool GoPro()
+    public bool WentPro()
     {
-        if (starts > 20 && getOverall() > 50 && team.getWins() >= team.getLosses()) return true;
-        if (starts > 20 && getOverall() > 60) return true;
+        return wentPro;
+    }
+    public bool Graduated()
+    {
+        return year > 4;
+    }
+    public bool CanRedshirt()
+    {
+        return !hasRedshirt;
+    }
+    public void Redshirt()
+    {
+        isRedshirt = true;
+    }
+    public void FixRatings(FormulaBasketball.Random r)
+    {
+        for(int i = 0; i < ratings.Length; i++)
+        {
+            if (ratings[i] > 100) ratings[i] = r.Next(90, 101);
+        }
+    }
+    public bool GoPro(FormulaBasketball.Random r)
+    {
+        //int score = 0;
+        if(getOverall() > 70)
+        {
+            wentPro = true;
+            return true;
+        }
+
+        switch(personality)
+        {
+            case ONE_AND_DONE:
+                wentPro = true;
+                return true;
+            case FOUR_YEAR_PLAYER:
+                if (year > 4 && starts > 0)
+                {
+                    wentPro = true;
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            case OVERALL_BASED:
+                return getOverall() > 55;
+            case SUCCESS_BASED:
+                break;
+            case MIXED:
+                break;
+        }
+        if (starts > 20 && getOverall() > 50 && team.getWins() >= team.getLosses())
+        {
+            wentPro = true;
+            return true; 
+        }
+        if (starts > 20 && getOverall() > 60)
+        {
+            wentPro = true;
+            return true;
+        }
         return false;
+    }
+    public void EndCollegeSeason()
+    {
+        if(isRedshirt)
+        {
+            hasRedshirt = true;
+            isRedshirt = false;
+        }
+        else
+        {
+            year++;
+        }
+        age++;
     }
 }
 

@@ -13,7 +13,7 @@ public abstract class CollegeTeamType
 
     public int GetPlayerType(FormulaBasketball.Random r)
     {
-        int value = r.Next(100);
+        int value = r.Next(1000);
         int runningTotal = GetSuperstarPotential();
         if (value < runningTotal) return 1;
         runningTotal += GetGoodPotential();
@@ -32,7 +32,7 @@ public class EliteCollegeTeam : CollegeTeamType
     int[] potentials;
     public EliteCollegeTeam()
     {
-        potentials = new int[]{5, 40, 34, 18, 3};
+        potentials = new int[]{10, 425, 375, 185, 5};
         
     }
     public override int GetSuperstarPotential()
@@ -65,7 +65,7 @@ public class GoodCollegeTeam : CollegeTeamType
     int[] potentials;
     public GoodCollegeTeam()
     {
-        potentials = new int[] { 3, 30, 35, 25, 7 };
+        potentials = new int[] { 3, 300, 435, 250, 12 };
 
     }
     public override int GetSuperstarPotential()
@@ -99,7 +99,7 @@ public class AverageCollegeTeam : CollegeTeamType
     int[] potentials;
     public AverageCollegeTeam()
     {
-        potentials = new int[] { 2, 18, 50, 20, 10 };
+        potentials = new int[] { 1, 180, 450, 270, 99 };
 
     }
     public override int GetSuperstarPotential()
@@ -133,7 +133,7 @@ public class PoorCollegeTeam : CollegeTeamType
     int[] potentials;
     public PoorCollegeTeam()
     {
-        potentials = new int[] { 1, 18, 25, 40, 16 };
+        potentials = new int[] { 0, 150, 250, 400, 200 };
 
     }
     public override int GetSuperstarPotential()
@@ -166,7 +166,7 @@ public class BadCollegeTeam : CollegeTeamType
     int[] potentials;
     public BadCollegeTeam()
     {
-        potentials = new int[] { 0, 5, 20, 50, 25};
+        potentials = new int[] { 0, 50, 200, 500, 250};
 
     }
     public override int GetSuperstarPotential()

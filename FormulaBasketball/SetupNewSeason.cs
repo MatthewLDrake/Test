@@ -44,7 +44,7 @@ public class SetupNewSeason
 
         PrintWikiInfo();
 
-        GenerateFIBUTeams();
+        //GenerateFIBUTeams();
     }
     private void CalculateBestOveralls(string fileName, List<team> teams)
     {

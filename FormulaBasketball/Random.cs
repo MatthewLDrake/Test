@@ -30,6 +30,10 @@ namespace FormulaBasketball
         {
             return r.Next(2) == 0;
         }
+        public T Select<T>(List<T> list)
+        {
+            return list[r.Next(list.Count)];
+        }
         private bool _hasDeviate;
         private double _storedDeviate;
         public int NextGaussian(int mu = 0, int sigma = 1)

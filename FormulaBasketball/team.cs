@@ -45,6 +45,8 @@ public class team : IComparable<team>,  IEnumerable<player>
         currentSeason = new Record();
         currentPlayoffs = new Record();
         divisionRecord = new Record();
+        allTime = new Record();
+        allTimePlayoffs = new Record();
         conferenceRecord = new Record();
         currentSeasonVsTeam = new Record[32];
         allTimeVsTeam = new Record[32];
@@ -78,6 +80,8 @@ public class team : IComparable<team>,  IEnumerable<player>
         currentPlayoffs = new Record();
         divisionRecord = new Record();
         conferenceRecord = new Record();
+        allTime = new Record();
+        allTimePlayoffs = new Record();
         currentSeasonVsTeam = new Record[32];
         allTimeVsTeam = new Record[32];
         for (int i = 0; i < currentSeasonVsTeam.Length; i++)

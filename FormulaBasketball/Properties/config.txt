@@ -1,0 +1,6 @@
+﻿Transhimalia    3.70    use Aeridani
+Transhimalia    0.25    use Himalia
+Transhimalia    0.25    use Degeq'so
+Antarion        0.50
+Nja     0.15    use Issamore
+Pentadominion   0.50    use Issamore

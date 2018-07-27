@@ -707,7 +707,7 @@ public class game
         }
         else
         {
-            int temp3 = r.Next(0,100);
+            int temp3 = r.Next(0,101);
 
 
             if (temp3 > 70)
