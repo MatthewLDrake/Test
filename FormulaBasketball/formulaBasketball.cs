@@ -40,12 +40,13 @@ public class formulaBasketball
         statsFile = "stats.csv";
         standingsFile = "standings.csv";
 
-        create.SetUpCollege();
-        create.PlayCollegeSeason();
-        create.PlayCollegeSeason();
-        create.PlayCollegeSeason();
-        create.PlayCollegeSeason();
-        create.PlayCollegeSeason();
+        /* create.SetUpCollege();
+         create.PlayCollegeSeason();
+         create.PlayCollegeSeason();
+         create.PlayCollegeSeason();
+         create.PlayCollegeSeason(); 
+         SerializeObject(create, fileName);*/
+
         new SetupNewSeason(create,r);
         /*for (int i = 0; i < 100; i++ )
         {
@@ -102,7 +103,8 @@ public class formulaBasketball
             else if (result.Equals("doPlayoffs"))
             {
                 mockPlayoffs(true);
-                Offseason off = new Offseason(create.getTeams(), create.getFreeAgents(), r);
+                create.PlayCollegeSeason();
+                Offseason off = new Offseason(create.getTeams(), create.getFreeAgents(), create.GetCollege().GetRookies() ,r);
             }
             else if (result.Equals("restartSeason"))
             {

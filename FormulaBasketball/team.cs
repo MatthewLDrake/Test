@@ -32,8 +32,11 @@ public class team : IComparable<team>,  IEnumerable<player>
     protected List<player> retiredList;
     private Record currentSeason, currentPlayoffs, allTime, allTimePlayoffs, divisionRecord, conferenceRecord;
     private Record[] currentSeasonVsTeam, allTimeVsTeam;
+    private List<DraftPick> picks, nextSeasonPicks;
     public team(String teamName, FormulaBasketball.Random r)
     {
+        picks = new List<DraftPick>();
+        nextSeasonPicks = new List<DraftPick>();
         this.r = r;
         merchandise = new Merchandise(r);
         // ticket sales, concession sales, shared revenue, sponsor money
@@ -68,6 +71,8 @@ public class team : IComparable<team>,  IEnumerable<player>
 
     public team(String teamName, String threeLetter, FormulaBasketball.Random r)
     {
+        nextSeasonPicks = new List<DraftPick>();
+        picks = new List<DraftPick>();
         this.r = r;
         merchandise = new Merchandise(r);
         // ticket sales, concession sales, shared revenue, sponsor money
@@ -97,6 +102,11 @@ public class team : IComparable<team>,  IEnumerable<player>
         lastTen = new List<int>();
         streak = 0;
     }
+    public void AddDraftPick(DraftPick pick)
+    {
+        if (picks == null) picks = new List<DraftPick>();
+        picks.Add(pick);
+    }
     public void endSeason()
     {
         streak = 0;
@@ -123,6 +133,22 @@ public class team : IComparable<team>,  IEnumerable<player>
         pointsScored = 0;
         pointsAgainst = 0;
         lastGames = new Queue<Int32>();
+    }
+    public void AddFutureDraftPick(DraftPick pick)
+    {
+        if (nextSeasonPicks == null) nextSeasonPicks = new List<DraftPick>();
+        nextSeasonPicks.Add(pick);
+    }
+    public void FinishDraft()
+    {
+        foreach(DraftPick pick in picks)
+        {
+            addPlayer(pick.GetPlayerSelected());
+        }
+        picks = nextSeasonPicks;
+        nextSeasonPicks = new List<DraftPick>();
+        nextSeasonPicks.Add(new DraftPick(1, this, this));
+        nextSeasonPicks.Add(new DraftPick(2, this, this));
     }
     public void Reset()
     {
@@ -253,9 +279,20 @@ public class team : IComparable<team>,  IEnumerable<player>
     }
     public List<player> resignPlayers(FormulaBasketball.Random r)
     {
-        throw new NotImplementedException();
+        List<player> players = new List<player>();
+        foreach(player p in players)
+        {
+            if(p.ContractExpired())
+            {
+                players.Add(p);
+            }
+        }
+        return players;
     }
-
+    public List<DraftPick> GetPicks()
+    {
+        return picks;
+    }
     public void addRetiredPlayer(player player)
     {
         if(retiredList == null)
@@ -441,6 +478,15 @@ public class team : IComparable<team>,  IEnumerable<player>
         players.Add(newPlayer);
         newPlayer.setTeam(this);
         addPos(newPlayer.getPosition() - 1);
+    }
+    private int draftPlace;
+    public void SetDraftPlace(int place)
+    {
+        draftPlace = place;
+    }
+    public int GetDraftPlace()
+    {
+        return draftPlace;
     }
     public player getPlayer(int playerNum)
     {
@@ -991,6 +1037,7 @@ public class team : IComparable<team>,  IEnumerable<player>
         AddConferenceChampionship();
     }
 }
+[Serializable]
 class PlayerEnum : IEnumerator<player>
 {
     private List<player> players;
@@ -1044,6 +1091,7 @@ class PlayerEnum : IEnumerator<player>
         return subs[position].GetSubstitution(timeLeft);
     }
 }
+[Serializable]
 class Subs
 {
     private int[] subTimesPerPosition;
@@ -1066,5 +1114,42 @@ class Subs
             }
         }
         return playersPerPosition[i];
+    }
+}
+[Serializable]
+public class DraftPick
+{
+    private int round;
+    private team from, owner;
+    private player selectedPlayer;
+    public DraftPick(int round, team pickFrom, team owner)
+    {
+        this.round = round;
+        this.from = pickFrom;
+        this.owner = owner;
+    }
+    public int GetPickNumber()
+    {
+        return from.GetDraftPlace() * round;
+    }
+    public team GetOwner()
+    {
+        return owner;
+    }
+    public bool DifferentOwner()
+    {
+        return !from.Equals(owner);
+    }
+    public team GetTeamOfOrigin()
+    {
+        return from;
+    }
+    public player GetPlayerSelected()
+    {
+        return selectedPlayer;
+    }
+    public void SelectPlayer(player selectedPlayer)
+    {
+        this.selectedPlayer = selectedPlayer;
     }
 }

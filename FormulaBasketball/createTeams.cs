@@ -1511,7 +1511,140 @@ public class createTeams
     {
         return freeAgency;
     }
+    public void SetDraftPicks()
+    {
+        getTeam(19).AddDraftPick(new DraftPick(1, getTeam(23), getTeam(19)));
+        getTeam(27).AddDraftPick(new DraftPick(1, getTeam(27), getTeam(27)));
+        getTeam(18).AddDraftPick(new DraftPick(1, getTeam(18), getTeam(18)));
+        getTeam(14).AddDraftPick(new DraftPick(1, getTeam(14), getTeam(14)));
+        getTeam(3).AddDraftPick(new DraftPick(1, getTeam(3), getTeam(3)));
+        getTeam(24).AddDraftPick(new DraftPick(1, getTeam(24), getTeam(24)));
+        getTeam(4).AddDraftPick(new DraftPick(1, getTeam(4), getTeam(4)));
+        getTeam(31).AddDraftPick(new DraftPick(1, getTeam(31), getTeam(31)));
+        getTeam(10).AddDraftPick(new DraftPick(1, getTeam(10), getTeam(10)));
+        getTeam(13).AddDraftPick(new DraftPick(1, getTeam(13), getTeam(13)));
+        getTeam(7).AddDraftPick(new DraftPick(1, getTeam(21), getTeam(7)));
+        getTeam(29).AddDraftPick(new DraftPick(1, getTeam(29), getTeam(29)));
+        getTeam(12).AddDraftPick(new DraftPick(1, getTeam(17), getTeam(12)));
+        getTeam(25).AddDraftPick(new DraftPick(1, getTeam(25), getTeam(25)));
+        getTeam(0).AddDraftPick(new DraftPick(1, getTeam(0), getTeam(0)));
+        getTeam(22).AddDraftPick(new DraftPick(1, getTeam(22), getTeam(22)));
+        getTeam(11).AddDraftPick(new DraftPick(1, getTeam(11), getTeam(11)));
+        getTeam(12).AddDraftPick(new DraftPick(1, getTeam(12), getTeam(12)));
+        getTeam(6).AddDraftPick(new DraftPick(1, getTeam(6), getTeam(6)));
+        getTeam(8).AddDraftPick(new DraftPick(1, getTeam(8), getTeam(8)));
+        getTeam(9).AddDraftPick(new DraftPick(1, getTeam(9), getTeam(9)));
+        getTeam(16).AddDraftPick(new DraftPick(1, getTeam(16), getTeam(16)));
+        getTeam(30).AddDraftPick(new DraftPick(1, getTeam(30), getTeam(30)));
+        getTeam(7).AddDraftPick(new DraftPick(1, getTeam(7), getTeam(7)));
+        getTeam(0).AddDraftPick(new DraftPick(1, getTeam(1), getTeam(0)));
+        getTeam(28).AddDraftPick(new DraftPick(1, getTeam(28), getTeam(28)));
+        getTeam(20).AddDraftPick(new DraftPick(1, getTeam(20), getTeam(20)));
+        getTeam(15).AddDraftPick(new DraftPick(1, getTeam(15), getTeam(15)));
+        getTeam(5).AddDraftPick(new DraftPick(1, getTeam(5), getTeam(5)));
+        getTeam(2).AddDraftPick(new DraftPick(1, getTeam(2), getTeam(2)));
+        getTeam(26).AddDraftPick(new DraftPick(1, getTeam(26), getTeam(26)));
+        getTeam(23).AddDraftPick(new DraftPick(1, getTeam(19), getTeam(23)));
 
+        getTeam(23).AddDraftPick(new DraftPick(2, getTeam(23), getTeam(23)));
+        getTeam(27).AddDraftPick(new DraftPick(2, getTeam(27), getTeam(27)));
+        getTeam(18).AddDraftPick(new DraftPick(2, getTeam(18), getTeam(18)));
+        getTeam(14).AddDraftPick(new DraftPick(2, getTeam(14), getTeam(14)));
+        getTeam(3).AddDraftPick(new DraftPick(2, getTeam(3), getTeam(3)));
+        getTeam(24).AddDraftPick(new DraftPick(2, getTeam(24), getTeam(24)));
+        getTeam(4).AddDraftPick(new DraftPick(2, getTeam(4), getTeam(4)));
+        getTeam(31).AddDraftPick(new DraftPick(2, getTeam(31), getTeam(31)));
+        getTeam(10).AddDraftPick(new DraftPick(2, getTeam(10), getTeam(10)));
+        getTeam(13).AddDraftPick(new DraftPick(2, getTeam(13), getTeam(13)));
+        getTeam(21).AddDraftPick(new DraftPick(2, getTeam(21), getTeam(21)));
+        getTeam(29).AddDraftPick(new DraftPick(2, getTeam(29), getTeam(29)));
+        getTeam(17).AddDraftPick(new DraftPick(2, getTeam(17), getTeam(17)));
+        getTeam(25).AddDraftPick(new DraftPick(2, getTeam(25), getTeam(25)));
+        getTeam(0).AddDraftPick(new DraftPick(2, getTeam(0), getTeam(0)));
+        getTeam(22).AddDraftPick(new DraftPick(2, getTeam(22), getTeam(22)));
+        getTeam(19).AddDraftPick(new DraftPick(2, getTeam(11), getTeam(19)));
+        getTeam(12).AddDraftPick(new DraftPick(2, getTeam(12), getTeam(12)));
+        getTeam(25).AddDraftPick(new DraftPick(2, getTeam(6), getTeam(25)));
+        getTeam(8).AddDraftPick(new DraftPick(2, getTeam(8), getTeam(8)));
+        getTeam(9).AddDraftPick(new DraftPick(2, getTeam(9), getTeam(9)));
+        getTeam(16).AddDraftPick(new DraftPick(2, getTeam(16), getTeam(16)));
+        getTeam(30).AddDraftPick(new DraftPick(2, getTeam(30), getTeam(30)));
+        getTeam(7).AddDraftPick(new DraftPick(2, getTeam(7), getTeam(7)));
+        getTeam(1).AddDraftPick(new DraftPick(2, getTeam(1), getTeam(1)));
+        getTeam(28).AddDraftPick(new DraftPick(2, getTeam(28), getTeam(28)));
+        getTeam(20).AddDraftPick(new DraftPick(2, getTeam(20), getTeam(20)));
+        getTeam(15).AddDraftPick(new DraftPick(2, getTeam(15), getTeam(15)));
+        getTeam(5).AddDraftPick(new DraftPick(2, getTeam(5), getTeam(5)));
+        getTeam(2).AddDraftPick(new DraftPick(2, getTeam(2), getTeam(2)));
+        getTeam(26).AddDraftPick(new DraftPick(2, getTeam(26), getTeam(26)));
+        getTeam(23).AddDraftPick(new DraftPick(2, getTeam(19), getTeam(23)));
+
+        getTeam(23).AddFutureDraftPick(new DraftPick(1, getTeam(23), getTeam(23)));
+        getTeam(27).AddFutureDraftPick(new DraftPick(1, getTeam(27), getTeam(27)));
+        getTeam(18).AddFutureDraftPick(new DraftPick(1, getTeam(18), getTeam(18)));
+        getTeam(14).AddFutureDraftPick(new DraftPick(1, getTeam(14), getTeam(14)));
+        getTeam(3).AddFutureDraftPick(new DraftPick(1, getTeam(3), getTeam(3)));
+        getTeam(24).AddFutureDraftPick(new DraftPick(1, getTeam(24), getTeam(24)));
+        getTeam(4).AddFutureDraftPick(new DraftPick(1, getTeam(4), getTeam(4)));
+        getTeam(31).AddFutureDraftPick(new DraftPick(1, getTeam(31), getTeam(31)));
+        getTeam(10).AddFutureDraftPick(new DraftPick(1, getTeam(10), getTeam(10)));
+        getTeam(13).AddFutureDraftPick(new DraftPick(1, getTeam(13), getTeam(13)));
+        getTeam(21).AddFutureDraftPick(new DraftPick(1, getTeam(21), getTeam(21)));
+        getTeam(29).AddFutureDraftPick(new DraftPick(1, getTeam(29), getTeam(29)));
+        getTeam(17).AddFutureDraftPick(new DraftPick(1, getTeam(17), getTeam(17)));
+        getTeam(25).AddFutureDraftPick(new DraftPick(1, getTeam(25), getTeam(25)));
+        getTeam(0).AddFutureDraftPick(new DraftPick(1, getTeam(0), getTeam(0)));
+        getTeam(22).AddFutureDraftPick(new DraftPick(1, getTeam(22), getTeam(22)));
+        getTeam(11).AddFutureDraftPick(new DraftPick(1, getTeam(11), getTeam(11)));
+        getTeam(12).AddFutureDraftPick(new DraftPick(1, getTeam(12), getTeam(12)));
+        getTeam(6).AddFutureDraftPick(new DraftPick(1, getTeam(6), getTeam(6)));
+        getTeam(8).AddFutureDraftPick(new DraftPick(1, getTeam(8), getTeam(8)));
+        getTeam(9).AddFutureDraftPick(new DraftPick(1, getTeam(9), getTeam(9)));
+        getTeam(16).AddFutureDraftPick(new DraftPick(1, getTeam(16), getTeam(16)));
+        getTeam(30).AddFutureDraftPick(new DraftPick(1, getTeam(30), getTeam(30)));
+        getTeam(21).AddFutureDraftPick(new DraftPick(1, getTeam(7), getTeam(21)));
+        getTeam(1).AddFutureDraftPick(new DraftPick(1, getTeam(1), getTeam(1)));
+        getTeam(28).AddFutureDraftPick(new DraftPick(1, getTeam(28), getTeam(28)));
+        getTeam(20).AddFutureDraftPick(new DraftPick(1, getTeam(20), getTeam(20)));
+        getTeam(15).AddFutureDraftPick(new DraftPick(1, getTeam(15), getTeam(15)));
+        getTeam(5).AddFutureDraftPick(new DraftPick(1, getTeam(5), getTeam(5)));
+        getTeam(2).AddFutureDraftPick(new DraftPick(1, getTeam(2), getTeam(2)));
+        getTeam(26).AddFutureDraftPick(new DraftPick(1, getTeam(26), getTeam(26)));
+        getTeam(19).AddFutureDraftPick(new DraftPick(1, getTeam(19), getTeam(19)));
+
+        getTeam(23).AddFutureDraftPick(new DraftPick(2, getTeam(23), getTeam(23)));
+        getTeam(27).AddFutureDraftPick(new DraftPick(2, getTeam(27), getTeam(27)));
+        getTeam(18).AddFutureDraftPick(new DraftPick(2, getTeam(18), getTeam(18)));
+        getTeam(14).AddFutureDraftPick(new DraftPick(2, getTeam(14), getTeam(14)));
+        getTeam(3).AddFutureDraftPick(new DraftPick(2, getTeam(3), getTeam(3)));
+        getTeam(24).AddFutureDraftPick(new DraftPick(2, getTeam(24), getTeam(24)));
+        getTeam(4).AddFutureDraftPick(new DraftPick(2, getTeam(4), getTeam(4)));
+        getTeam(31).AddFutureDraftPick(new DraftPick(2, getTeam(31), getTeam(31)));
+        getTeam(10).AddFutureDraftPick(new DraftPick(2, getTeam(10), getTeam(10)));
+        getTeam(13).AddFutureDraftPick(new DraftPick(2, getTeam(13), getTeam(13)));
+        getTeam(21).AddFutureDraftPick(new DraftPick(2, getTeam(21), getTeam(21)));
+        getTeam(29).AddFutureDraftPick(new DraftPick(2, getTeam(29), getTeam(29)));
+        getTeam(17).AddFutureDraftPick(new DraftPick(2, getTeam(17), getTeam(17)));
+        getTeam(25).AddFutureDraftPick(new DraftPick(2, getTeam(25), getTeam(25)));
+        getTeam(0).AddFutureDraftPick(new DraftPick(2, getTeam(0), getTeam(0)));
+        getTeam(22).AddFutureDraftPick(new DraftPick(2, getTeam(22), getTeam(22)));
+        getTeam(11).AddFutureDraftPick(new DraftPick(2, getTeam(11), getTeam(11)));
+        getTeam(12).AddFutureDraftPick(new DraftPick(2, getTeam(12), getTeam(12)));
+        getTeam(6).AddFutureDraftPick(new DraftPick(2, getTeam(6), getTeam(6)));
+        getTeam(8).AddFutureDraftPick(new DraftPick(2, getTeam(8), getTeam(8)));
+        getTeam(9).AddFutureDraftPick(new DraftPick(2, getTeam(9), getTeam(9)));
+        getTeam(16).AddFutureDraftPick(new DraftPick(2, getTeam(16), getTeam(16)));
+        getTeam(30).AddFutureDraftPick(new DraftPick(2, getTeam(30), getTeam(30)));
+        getTeam(7).AddFutureDraftPick(new DraftPick(2, getTeam(7), getTeam(7)));
+        getTeam(1).AddFutureDraftPick(new DraftPick(2, getTeam(1), getTeam(1)));
+        getTeam(28).AddFutureDraftPick(new DraftPick(2, getTeam(28), getTeam(28)));
+        getTeam(20).AddFutureDraftPick(new DraftPick(2, getTeam(20), getTeam(20)));
+        getTeam(15).AddFutureDraftPick(new DraftPick(2, getTeam(15), getTeam(15)));
+        getTeam(5).AddFutureDraftPick(new DraftPick(2, getTeam(5), getTeam(5)));
+        getTeam(2).AddFutureDraftPick(new DraftPick(2, getTeam(2), getTeam(2)));
+        getTeam(26).AddFutureDraftPick(new DraftPick(2, getTeam(26), getTeam(26)));
+        getTeam(19).AddFutureDraftPick(new DraftPick(2, getTeam(19), getTeam(19)));
+    }
     private void setFianancials()
     {
         teams[0].setExpenses(new double[] { 88.7, 17.7, 11 });
@@ -1788,6 +1921,11 @@ public class createTeams
         this.free = free;
     }
 
+    
+    public College GetCollege()
+    {
+        return college;
+    }
 
     private List<player> rookies;
     public List<player> GetRookies()

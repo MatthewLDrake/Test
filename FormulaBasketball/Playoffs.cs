@@ -2503,172 +2503,183 @@ namespace FormulaBasketball
 
 
             }
-
+            List<team> playoffOrder = new List<team>();
             if (conferenceAWinCounter[0] == 4)
             {
-                Console.Write("01. " + formulaBasketball.create.getTeam(topSeedConferenceA).ToString());
-                Console.Write("02. " + formulaBasketball.create.getTeam(topSeedConferenceB).ToString());
+                playoffOrder.Add(formulaBasketball.create.getTeam(topSeedConferenceA));
+                playoffOrder.Add(formulaBasketball.create.getTeam(topSeedConferenceB));
+
                 champion = formulaBasketball.create.getTeam(topSeedConferenceA);
                 runnerUp = formulaBasketball.create.getTeam(topSeedConferenceB);
             }
             else
             {
-                Console.Write("01. " + formulaBasketball.create.getTeam(topSeedConferenceB).ToString());
-                Console.Write("02. " + formulaBasketball.create.getTeam(topSeedConferenceA).ToString());
+
+                playoffOrder.Add(formulaBasketball.create.getTeam(topSeedConferenceB));
+                playoffOrder.Add(formulaBasketball.create.getTeam(topSeedConferenceA));
+
                 champion = formulaBasketball.create.getTeam(topSeedConferenceB);
                 runnerUp = formulaBasketball.create.getTeam(topSeedConferenceA);
             }
             if (conferenceAWinCounter[1] == 4)
             {
-                Console.Write("03. " + formulaBasketball.create.getTeam(secondSeedConferenceA).ToString());
-                Console.Write("04. " + formulaBasketball.create.getTeam(secondSeedConferenceB).ToString());
+                playoffOrder.Add(formulaBasketball.create.getTeam(secondSeedConferenceA));
+                playoffOrder.Add(formulaBasketball.create.getTeam(secondSeedConferenceB));
             }
             else
             {
-                Console.Write("03. " + formulaBasketball.create.getTeam(secondSeedConferenceB).ToString());
-                Console.Write("04. " + formulaBasketball.create.getTeam(secondSeedConferenceA).ToString());
+                playoffOrder.Add(formulaBasketball.create.getTeam(secondSeedConferenceB));
+                playoffOrder.Add(formulaBasketball.create.getTeam(secondSeedConferenceA));
             }
 
             if (conferenceBWinCounter[0] == 4)
             {
-                Console.Write("05. " + formulaBasketball.create.getTeam(fifthSeedConferenceA).ToString());
-                Console.Write("06. " + formulaBasketball.create.getTeam(fifthSeedConferenceB).ToString());
+                playoffOrder.Add(formulaBasketball.create.getTeam(fifthSeedConferenceA));
+                playoffOrder.Add(formulaBasketball.create.getTeam(fifthSeedConferenceB));
             }
             else
             {
-                Console.Write("05. " + formulaBasketball.create.getTeam(fifthSeedConferenceB).ToString());
-                Console.Write("06. " + formulaBasketball.create.getTeam(fifthSeedConferenceA).ToString());
+                playoffOrder.Add(formulaBasketball.create.getTeam(fifthSeedConferenceB));
+                playoffOrder.Add(formulaBasketball.create.getTeam(fifthSeedConferenceA));
             }
             if (conferenceBWinCounter[1] == 4)
             {
-                Console.Write("07. " + formulaBasketball.create.getTeam(sixthSeedConferenceA).ToString());
-                Console.Write("08. " + formulaBasketball.create.getTeam(sixthSeedConferenceB).ToString());
+                playoffOrder.Add(formulaBasketball.create.getTeam(sixthSeedConferenceA));
+                playoffOrder.Add(formulaBasketball.create.getTeam(sixthSeedConferenceB));
             }
             else
             {
-                Console.Write("07. " + formulaBasketball.create.getTeam(sixthSeedConferenceB).ToString());
-                Console.Write("08. " + formulaBasketball.create.getTeam(sixthSeedConferenceA).ToString());
+                playoffOrder.Add(formulaBasketball.create.getTeam(sixthSeedConferenceB));
+                playoffOrder.Add(formulaBasketball.create.getTeam(sixthSeedConferenceA));
             }
             if (conferenceAWinCounter[2] == 4)
             {
-                Console.Write("09. " + formulaBasketball.create.getTeam(thirdSeedConferenceA).ToString());
-                Console.Write("10. " + formulaBasketball.create.getTeam(thirdSeedConferenceB).ToString());
+                playoffOrder.Add(formulaBasketball.create.getTeam(thirdSeedConferenceA));
+                playoffOrder.Add(formulaBasketball.create.getTeam(thirdSeedConferenceB));
             }
             else
             {
-                Console.Write("09. " + formulaBasketball.create.getTeam(thirdSeedConferenceB).ToString());
-                Console.Write("10. " + formulaBasketball.create.getTeam(thirdSeedConferenceA).ToString());
+                playoffOrder.Add(formulaBasketball.create.getTeam(thirdSeedConferenceB));
+                playoffOrder.Add(formulaBasketball.create.getTeam(thirdSeedConferenceA));
             }
             if (conferenceAWinCounter[3] == 4)
             {
-                Console.Write("11. " + formulaBasketball.create.getTeam(fourthSeedConferenceA).ToString());
-                Console.Write("12. " + formulaBasketball.create.getTeam(fourthSeedConferenceB).ToString());
+                playoffOrder.Add(formulaBasketball.create.getTeam(fourthSeedConferenceA));
+                playoffOrder.Add(formulaBasketball.create.getTeam(fourthSeedConferenceB));
             }
             else
             {
-                Console.Write("11. " + formulaBasketball.create.getTeam(fourthSeedConferenceB).ToString());
-                Console.Write("12. " + formulaBasketball.create.getTeam(fourthSeedConferenceA).ToString());
+                playoffOrder.Add(formulaBasketball.create.getTeam(fourthSeedConferenceB));
+                playoffOrder.Add(formulaBasketball.create.getTeam(fourthSeedConferenceA));
             }
             if (conferenceBWinCounter[2] == 4)
             {
-                Console.Write("13. " + formulaBasketball.create.getTeam(seventhSeedConferenceA).ToString());
-                Console.Write("14. " + formulaBasketball.create.getTeam(seventhSeedConferenceB).ToString());
+                playoffOrder.Add(formulaBasketball.create.getTeam(seventhSeedConferenceA));
+                playoffOrder.Add(formulaBasketball.create.getTeam(seventhSeedConferenceB));
             }
             else
             {
-                Console.Write("13. " + formulaBasketball.create.getTeam(seventhSeedConferenceB).ToString());
-                Console.Write("14. " + formulaBasketball.create.getTeam(seventhSeedConferenceA).ToString());
+                playoffOrder.Add(formulaBasketball.create.getTeam(seventhSeedConferenceB));
+                playoffOrder.Add(formulaBasketball.create.getTeam(seventhSeedConferenceA));
             }
             if (conferenceBWinCounter[3] == 4)
             {
-                Console.Write("15. " + formulaBasketball.create.getTeam(eighthSeedConferenceA).ToString());
-                Console.Write("16. " + formulaBasketball.create.getTeam(eighthSeedConferenceB).ToString());
+                playoffOrder.Add(formulaBasketball.create.getTeam(eighthSeedConferenceA));
+                playoffOrder.Add(formulaBasketball.create.getTeam(eighthSeedConferenceB));
             }
             else
             {
-                Console.Write("15. " + formulaBasketball.create.getTeam(eighthSeedConferenceB).ToString());
-                Console.Write("16. " + formulaBasketball.create.getTeam(eighthSeedConferenceA).ToString());
+                playoffOrder.Add(formulaBasketball.create.getTeam(eighthSeedConferenceB));
+                playoffOrder.Add(formulaBasketball.create.getTeam(eighthSeedConferenceA));
             }
             if (conferenceAWinCounter[8] == 4)
             {
-                Console.Write("17. " + formulaBasketball.create.getTeam(ninthSeedConferenceA).ToString());
-                Console.Write("18. " + formulaBasketball.create.getTeam(ninthSeedConferenceB).ToString());
+                playoffOrder.Add(formulaBasketball.create.getTeam(ninthSeedConferenceA));
+                playoffOrder.Add(formulaBasketball.create.getTeam(ninthSeedConferenceB));
             }
             else
             {
-                Console.Write("17. " + formulaBasketball.create.getTeam(ninthSeedConferenceB).ToString());
-                Console.Write("18. " + formulaBasketball.create.getTeam(ninthSeedConferenceA).ToString());
+                playoffOrder.Add(formulaBasketball.create.getTeam(ninthSeedConferenceB));
+                playoffOrder.Add(formulaBasketball.create.getTeam(ninthSeedConferenceA));
             }
             if (conferenceAWinCounter[9] == 4)
             {
-                Console.Write("19. " + formulaBasketball.create.getTeam(tenthSeedConferenceA).ToString());
-                Console.Write("20. " + formulaBasketball.create.getTeam(tenthSeedConferenceB).ToString());
+                playoffOrder.Add(formulaBasketball.create.getTeam(tenthSeedConferenceA));
+                playoffOrder.Add(formulaBasketball.create.getTeam(tenthSeedConferenceB));
             }
             else
             {
-                Console.Write("19. " + formulaBasketball.create.getTeam(tenthSeedConferenceB).ToString());
-                Console.Write("20. " + formulaBasketball.create.getTeam(tenthSeedConferenceA).ToString());
+                playoffOrder.Add(formulaBasketball.create.getTeam(tenthSeedConferenceB));
+                playoffOrder.Add(formulaBasketball.create.getTeam(tenthSeedConferenceA));
             }
 
             if (conferenceBWinCounter[8] == 4)
             {
-                Console.Write("21. " + formulaBasketball.create.getTeam(thirteenthSeedConferenceA).ToString());
-                Console.Write("22. " + formulaBasketball.create.getTeam(thirteenthSeedConferenceB).ToString());
+                playoffOrder.Add(formulaBasketball.create.getTeam(thirteenthSeedConferenceA));
+                playoffOrder.Add(formulaBasketball.create.getTeam(thirteenthSeedConferenceB));
             }
             else
             {
-                Console.Write("21. " + formulaBasketball.create.getTeam(thirteenthSeedConferenceB).ToString());
-                Console.Write("22. " + formulaBasketball.create.getTeam(thirteenthSeedConferenceA).ToString());
+                playoffOrder.Add(formulaBasketball.create.getTeam(thirteenthSeedConferenceB));
+                playoffOrder.Add(formulaBasketball.create.getTeam(thirteenthSeedConferenceA));
             }
             if (conferenceBWinCounter[9] == 4)
             {
-                Console.Write("23. " + formulaBasketball.create.getTeam(forteenthSeedConferenceA).ToString());
-                Console.Write("24. " + formulaBasketball.create.getTeam(forteenthSeedConferenceB).ToString());
+                playoffOrder.Add(formulaBasketball.create.getTeam(forteenthSeedConferenceA));
+                playoffOrder.Add(formulaBasketball.create.getTeam(forteenthSeedConferenceB));
             }
             else
             {
-                Console.Write("23. " + formulaBasketball.create.getTeam(forteenthSeedConferenceB).ToString());
-                Console.Write("24. " + formulaBasketball.create.getTeam(forteenthSeedConferenceA).ToString());
+                playoffOrder.Add(formulaBasketball.create.getTeam(forteenthSeedConferenceB));
+                playoffOrder.Add(formulaBasketball.create.getTeam(forteenthSeedConferenceA));
             }
             if (conferenceAWinCounter[10] == 4)
             {
-                Console.Write("25. " + formulaBasketball.create.getTeam(eleventhSeedConferenceA).ToString());
-                Console.Write("26. " + formulaBasketball.create.getTeam(eleventhSeedConferenceB).ToString());
+                playoffOrder.Add(formulaBasketball.create.getTeam(eleventhSeedConferenceA));
+                playoffOrder.Add(formulaBasketball.create.getTeam(eleventhSeedConferenceB));
             }
             else
             {
-                Console.Write("25. " + formulaBasketball.create.getTeam(eleventhSeedConferenceB).ToString());
-                Console.Write("26. " + formulaBasketball.create.getTeam(eleventhSeedConferenceA).ToString());
+                playoffOrder.Add(formulaBasketball.create.getTeam(eleventhSeedConferenceB));
+                playoffOrder.Add(formulaBasketball.create.getTeam(eleventhSeedConferenceA));
             }
             if (conferenceAWinCounter[11] == 4)
             {
-                Console.Write("27. " + formulaBasketball.create.getTeam(twelfthSeedConferenceA).ToString());
-                Console.Write("28. " + formulaBasketball.create.getTeam(twelfthSeedConferenceB).ToString());
+                playoffOrder.Add(formulaBasketball.create.getTeam(twelfthSeedConferenceA));
+                playoffOrder.Add(formulaBasketball.create.getTeam(twelfthSeedConferenceB));
             }
             else
             {
-                Console.Write("27. " + formulaBasketball.create.getTeam(twelfthSeedConferenceB).ToString());
-                Console.Write("28. " + formulaBasketball.create.getTeam(twelfthSeedConferenceA).ToString());
+                playoffOrder.Add(formulaBasketball.create.getTeam(twelfthSeedConferenceB));
+                playoffOrder.Add(formulaBasketball.create.getTeam(twelfthSeedConferenceA));
             }
             if (conferenceBWinCounter[10] == 4)
             {
-                Console.Write("29. " + formulaBasketball.create.getTeam(fifteenthSeedConferenceA).ToString());
-                Console.Write("30. " + formulaBasketball.create.getTeam(fifteenthSeedConferenceB).ToString());
+                playoffOrder.Add(formulaBasketball.create.getTeam(fifteenthSeedConferenceA));
+                playoffOrder.Add(formulaBasketball.create.getTeam(fifteenthSeedConferenceB));
             }
             else
             {
-                Console.Write("29. " + formulaBasketball.create.getTeam(fifteenthSeedConferenceB).ToString());
-                Console.Write("30. " + formulaBasketball.create.getTeam(fifteenthSeedConferenceA).ToString());
+                playoffOrder.Add(formulaBasketball.create.getTeam(fifteenthSeedConferenceB));
+                playoffOrder.Add(formulaBasketball.create.getTeam(fifteenthSeedConferenceA));
             }
             if (conferenceBWinCounter[11] == 4)
             {
-                Console.Write("31. " + formulaBasketball.create.getTeam(sixteenthSeedConferenceA).ToString());
-                Console.Write("32. " + formulaBasketball.create.getTeam(sixteenthSeedConferenceB).ToString());
+                playoffOrder.Add(formulaBasketball.create.getTeam(sixteenthSeedConferenceA));
+                playoffOrder.Add(formulaBasketball.create.getTeam(sixteenthSeedConferenceB));
             }
             else
+            {                
+                playoffOrder.Add(formulaBasketball.create.getTeam(sixteenthSeedConferenceB));
+                playoffOrder.Add(formulaBasketball.create.getTeam(sixteenthSeedConferenceA));
+            }
+            for (int i = 0; i < playoffOrder.Count; i++ )
             {
-                Console.Write("31. " + formulaBasketball.create.getTeam(sixteenthSeedConferenceB).ToString());
-                Console.Write("32. " + formulaBasketball.create.getTeam(sixteenthSeedConferenceA).ToString());
+                string number = "" + (i+1) + ". ";
+                if (i + 1 < 10) number = "0" + (i + 1) + ". ";
+                Console.Write(number + formulaBasketball.create.getTeam(i).ToString());
+                formulaBasketball.create.getTeam(i).SetDraftPlace(32-i);
+
             }
             formulaBasketball.printFianances();
             

@@ -689,7 +689,7 @@ public class player : IComparable<player>
         if (playerAge == 34) return retirements.Age;
         if (careerEnd) return retirements.Injury;
 
-        if (getOverall(null) < 40 && (playerAge > 30 || gamesPlayed == 0)) return retirements.Skill;
+        if (getOverall() < 40 && (playerAge > 30 || gamesPlayed == 0)) return retirements.Skill;
 
         double totalFactors = 0.0;
 
@@ -700,10 +700,12 @@ public class player : IComparable<player>
 
         //85 - gamesStarted
 
-        a = 0.95774384;
+       /* a = 0.95774384;
         b = 1.044120524;
 
-        double gamesStartedFactors = a * Math.Pow(85 - starts, b) - 26;
+        double gamesStartedFactors = (a * Math.Pow(85 - gamesPlayed, b) - 26) / 10;*/
+
+        stamina = 100;
 
         a = 0.909748899;
         b = 1.099204408;
@@ -711,11 +713,14 @@ public class player : IComparable<player>
 
         
 
-        totalFactors = ageRelatedFactors + gamesStartedFactors + overallRatedFactors;
+        totalFactors = ageRelatedFactors + overallRatedFactors;
 
-        int num = r.Next(0, 100);
+        int num = r.Next(30, 100);
 
-        if (num < totalFactors) return retirements.Personal;
+        if (num < totalFactors)
+        { 
+            return retirements.Personal; 
+        }
         return retirements.None;
 
         //return false;

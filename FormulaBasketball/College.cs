@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-
+[Serializable]
 public class College
 {
     private List<player> players;
@@ -11,6 +11,7 @@ public class College
     private FormulaBasketball.Random r;
     private List<Pair[]> games;
     private int season;
+    private List<player> rookies;
     public College(FormulaBasketball.Random r)
     {
         season = 1;
@@ -18,6 +19,7 @@ public class College
         this.r = r;
         players = new List<player>();
         teams = new List<CollegeTeam>();
+        rookies = new List<player>();
         LoadTeams();
 
 
@@ -54,9 +56,13 @@ public class College
         DetermineRookies(season);
 
     }
+    public List<player> GetRookies()
+    {
+        return rookies;
+    }
     private void DetermineRookies(int season)
     {
-        List<player> rookies = new List<player>();
+        rookies = new List<player>();
         foreach (CollegeTeam team in teams)
         {
             team.EndCollegeSeason();
@@ -1429,7 +1435,7 @@ public class College
         return retVal;
     }
 }
-
+[Serializable]
 internal class Pair
 {
     public int x, y;
@@ -1460,6 +1466,7 @@ internal class Pair
     }
 
 }
+[Serializable]
 public static class IEnumerableExtensions
 {
 

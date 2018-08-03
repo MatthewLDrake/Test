@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+[Serializable]
 public abstract class CollegeTeamType
 {
     public abstract int GetSuperstarPotential();
@@ -26,7 +26,7 @@ public abstract class CollegeTeamType
     }
 
 }
-
+[Serializable]
 public class EliteCollegeTeam : CollegeTeamType
 {
     int[] potentials;
@@ -60,6 +60,7 @@ public class EliteCollegeTeam : CollegeTeamType
         return potentials[4];
     }
 }
+[Serializable]
 public class GoodCollegeTeam : CollegeTeamType
 {
     int[] potentials;
@@ -93,7 +94,7 @@ public class GoodCollegeTeam : CollegeTeamType
         return potentials[4];
     }
 }
-
+[Serializable]
 public class AverageCollegeTeam : CollegeTeamType
 {
     int[] potentials;
@@ -127,7 +128,7 @@ public class AverageCollegeTeam : CollegeTeamType
         return potentials[4];
     }
 }
-
+[Serializable]
 public class PoorCollegeTeam : CollegeTeamType
 {
     int[] potentials;
@@ -161,6 +162,7 @@ public class PoorCollegeTeam : CollegeTeamType
         return potentials[4];
     }
 }
+[Serializable]
 public class BadCollegeTeam : CollegeTeamType
 {
     int[] potentials;

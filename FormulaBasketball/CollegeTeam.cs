@@ -1,6 +1,7 @@
 ﻿using System;
 using FormulaBasketball;
 using System.Collections.Generic;
+[Serializable]
 public class CollegeTeam : team
 {
     private Country country;
@@ -144,7 +145,6 @@ public class CollegeTeam : team
                 player = playerGen.GeneratePointGuard(overallGoal, playerCountry, development, peakStart, peakEnd, isRedshirt, year, personality);
             }
             else break;
-            player.setName(player.getName() + " " + season);
             AddCollegePlayer(player);
             
         }

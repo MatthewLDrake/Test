@@ -24,37 +24,60 @@ namespace FormulaBasketball
         public draft(bool firstDraft, List<player> players, List<team> teams,List<int> humanPlayers, FormulaBasketball.Random r)
         {
             timer = new Timer();
-
-            var temp = teams.OrderBy(a => r.Next(0, 1000));
-
             this.r = r;
             InitializeComponent();
-            officialClass = new List<draftPlayer>();
             grids = new DataGridView[5];
             grids[0] = centerLists;
             grids[1] = powerForwardList;
             grids[2] = smallForwardList;
             grids[3] = shootingGuardList;
             grids[4] = pointGuardList;
+            if(firstDraft)
+            {
+                FirstDraftSetup(players, teams, humanPlayers);
+            }
+            else
+            {
+                DraftSetup(players, teams, humanPlayers);
+            }
+
+            
+
+        }
+        private void DraftSetup(List<player> players, List<team> teams, List<int> humanPlayers)
+        {
+            int[] locations = new int[5];
+            foreach(player p in players)
+            {
+
+            }
+        }
+        private void FirstDraftSetup(List<player> players, List<team> teams,List<int> humanPlayers)
+        {
+            List<team> temp = (List<team>)teams.OrderBy(a => r.Next(0, 1000));
+
+
+            officialClass = new List<draftPlayer>();
+           
             int[] posCounter = new int[5];
             listOfPlayers = new List<player>[5];
-            for(int i = 0; i < listOfPlayers.Length; i++)
+            for (int i = 0; i < listOfPlayers.Length; i++)
             {
                 listOfPlayers[i] = new List<player>();
             }
             foreach (player player in players)
             {
-                officialClass.Add(new draftPlayer(player, posCounter[player.getPosition()-1]++));
-                grids[player.getPosition()-1].Rows.Add(new object[] { player.getName(), player.getLayupRating(),  player.getDunkRating(),    player.getJumpShotRating(),    player.getThreeShotRating(), player.getPassing(),    player.getShotContestRating(), player.getDefenseIQRating(),  player.getJumpingRating(), player.getSeperation(),  player.getDurabilityRating() , player.getStaminaRating(), null });
+                officialClass.Add(new draftPlayer(player, posCounter[player.getPosition() - 1]++));
+                grids[player.getPosition() - 1].Rows.Add(new object[] { player.getName(), player.getLayupRating(), player.getDunkRating(), player.getJumpShotRating(), player.getThreeShotRating(), player.getPassing(), player.getShotContestRating(), player.getDefenseIQRating(), player.getJumpingRating(), player.getSeperation(), player.getDurabilityRating(), player.getStaminaRating(), null });
                 listOfPlayers[player.getPosition() - 1].Add(player);
             }
-            
+
             officialList = new List<listInfo>();
             foreach (team team in temp)
             {
                 officialList.Add(new listInfo(team, false, r));
             }
-            for(int i = 0; i < humanPlayers.Count; i++)
+            for (int i = 0; i < humanPlayers.Count; i++)
             {
                 officialList[humanPlayers[i]].human = true;
             }
@@ -63,7 +86,6 @@ namespace FormulaBasketball
             currentTeamChoosing = 0;
 
             draftButton.Enabled = false;
-
         }
         private void TimerEventProcessor(Object myObject,
                                              EventArgs myEventArgs)

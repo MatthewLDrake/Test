@@ -6,11 +6,11 @@ namespace FormulaBasketball
     {
         public player player;
         private bool isTaken;
-        private int poisitonNumber;
+        private int positionNum;
         public draftPlayer(player player, int posNumb)
         {
             this.player = player;
-            poisitonNumber = posNumb;
+            positionNum = posNumb;
             isTaken = false;
         }
 
@@ -22,8 +22,8 @@ namespace FormulaBasketball
 
         internal int posNum
         {
-            get { return poisitonNumber; }
-            set { poisitonNumber = value; }
+            get { return positionNum; }
+            set { positionNum = value; }
 
         }
     }

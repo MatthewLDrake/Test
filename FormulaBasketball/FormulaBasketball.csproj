@@ -85,6 +85,7 @@
       <DependentUpon>displayPlayers.cs</DependentUpon>
     </Compile>
     <Compile Include="Offseason.cs" />
+    <Compile Include="RookieDraft.cs" />
     <Compile Include="SetupNewSeason.cs" />
     <Compile Include="Standings_Division.cs">
       <SubType>UserControl</SubType>

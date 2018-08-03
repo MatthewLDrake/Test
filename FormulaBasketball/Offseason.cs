@@ -7,8 +7,10 @@ public class Offseason
     private List<team> teams;
     private List<player> freeAgency;
     private FormulaBasketball.Random r;
-    public Offseason(List<team> teams, List<player> freeAgency, FormulaBasketball.Random r)
+    private List<player> rookies;
+    public Offseason(List<team> teams, List<player> freeAgency, List<player> rookies, FormulaBasketball.Random r)
     {
+        this.rookies = rookies;
         this.teams = teams;
         this.freeAgency = freeAgency;
         this.r = r;
@@ -17,27 +19,24 @@ public class Offseason
     }
     private void runOffseason()
     {
-        increaseAge();
+        
         checkRetirements();
+        EndSeasons();
         resignPlayers();
+        ExecuteDrafts();
         signFreeAgents();
         
     }
-    private void increaseAge()
+    private void EndSeasons()
     {
         foreach(team team in teams)
         {
-            team.setModifier(new None());
-            for(int i = 0; i < team.getNumberPlayers(); i++)
+            team.endSeason();
+            //team.GetAffiliate().endSeason();
+            foreach(player p in team)
             {
-                team.getPlayer(i).age++;
-                team.getPlayer(i).Regress(r);
+                p.endSeason();
             }
-        }
-        foreach(player player in freeAgency)
-        {
-            player.age++;
-            player.Regress(r);
         }
     }
     private void checkRetirements()
@@ -85,6 +84,10 @@ public class Offseason
                 freeAgency.Add(player);
             }
         }
+    }
+    private void ExecuteDrafts()
+    {
+        RookieDraft draft = new RookieDraft(rookies, teams, new List<int>(), r);
     }
     private void signFreeAgents()
     {
