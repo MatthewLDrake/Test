@@ -2677,8 +2677,8 @@ namespace FormulaBasketball
             {
                 string number = "" + (i+1) + ". ";
                 if (i + 1 < 10) number = "0" + (i + 1) + ". ";
-                Console.Write(number + formulaBasketball.create.getTeam(i).ToString());
-                formulaBasketball.create.getTeam(i).SetDraftPlace(32-i);
+                Console.WriteLine(number + playoffOrder[i].ToString());
+                playoffOrder[i].SetDraftPlace(32-i);
 
             }
             formulaBasketball.printFianances();

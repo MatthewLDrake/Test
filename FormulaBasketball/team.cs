@@ -289,6 +289,99 @@ public class team : IComparable<team>,  IEnumerable<player>
         }
         return players;
     }
+
+    public player FindBestPlayerByPos(int pos)
+    {
+        player retVal = null;
+        double bestOverall = 0;
+        foreach(player p in players)
+        {
+            if (p == null || p.getPosition() != pos) continue;
+            if(bestOverall < p.getOverall())
+            {
+                bestOverall = p.getOverall();
+                retVal = p;
+            }
+
+        }
+        return retVal;
+    }
+    public player FindBackupByPos(int pos)
+    {
+        player[] retVal = new player[2];
+        double[] bestOverall = new double[]{0,0};
+        foreach (player p in players)
+        {
+            if (p == null || p.getPosition() != pos) continue;
+            if (bestOverall[0] < p.getOverall())
+            {
+                bestOverall[1] = bestOverall[0];
+                bestOverall[0] = p.getOverall();
+                retVal[1] = retVal[0];
+                retVal[0] = p;
+            }
+            else if(bestOverall[1] < p.getOverall())
+            {
+                bestOverall[1] = p.getOverall();
+                retVal[1] = p;
+            }
+
+        }
+        return retVal[1];
+    }
+
+    public int GetPositionToDraft(player[] players)
+    {
+        int positionToDraft = -1;
+        double greatestDifferenceInOverall = 0;
+        for (int i = 0; i < players.Length; i++ )
+        {
+            player bestPlayer = FindBestPlayerByPos(i+1);
+            if(bestPlayer == null || players[i].getOverall() - bestPlayer.getOverall() > greatestDifferenceInOverall)
+            {
+                greatestDifferenceInOverall = players[i].getOverall() - bestPlayer.getOverall();
+                positionToDraft = i;
+            }
+        }
+
+        if(positionToDraft == -1)
+        {
+            List<int> positions = new List<int>();
+            for (int i = 0; i < players.Length; i++)
+            {
+                player bestPlayer = FindBackupByPos(i + 1);
+                
+                if (bestPlayer == null) 
+                {
+                    positions.Add(i);
+                }
+                else if (players[i].getOverall() - bestPlayer.getOverall() > greatestDifferenceInOverall) 
+                {
+                    greatestDifferenceInOverall = players[i].getOverall() - bestPlayer.getOverall();
+                    positionToDraft = i;
+                }
+            }
+            if(positions.Count > 0)
+            {
+                positionToDraft = r.Select<int>(positions);
+            }
+            if (positionToDraft == -1)
+            {
+                int highestAge = 0;
+                for (int i = 0; i < players.Length; i++)
+                {
+                    player bestPlayer = FindBestPlayerByPos(i + 1);
+                    if (bestPlayer == null || bestPlayer.age > highestAge)
+                    {
+                        highestAge = bestPlayer.age;
+                        positionToDraft = i;
+                    }
+                }
+            }
+        }
+
+        return positionToDraft;
+    }
     public List<DraftPick> GetPicks()
     {
         return picks;
@@ -1130,7 +1223,7 @@ public class DraftPick
     }
     public int GetPickNumber()
     {
-        return from.GetDraftPlace() * round;
+        return from.GetDraftPlace() + ((round-1) * 32);
     }
     public team GetOwner()
     {

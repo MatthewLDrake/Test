@@ -46,9 +46,9 @@ namespace FormulaBasketball
 
             if(humans.Count == 0)
             {
-                foreach(DraftPick pick in draftPicks)
+                for (int i = 0; i < draftPicks.Length; i++ )
                 {
-                    ExecutePick(pick);
+                    ExecutePick(draftPicks[i]);
                 }
                 PrintPicks();
             }
@@ -56,11 +56,14 @@ namespace FormulaBasketball
 
 
         }
+        public player[] BestPlayers()
+        {
+            return new player[] { rookiesByPos[0][0], rookiesByPos[1][0], rookiesByPos[2][0], rookiesByPos[3][0], rookiesByPos[4][0] };
+        }
         public void ExecutePick(DraftPick pick)
         {
-            int position =0;
-            // position = pick.GetOwner().GetPositionToDraft();
-            position = r.Next(0, 5);
+            int position = 0;
+            position = pick.GetOwner().GetPositionToDraft(BestPlayers());
             pick.SelectPlayer(rookiesByPos[position][0]);
             rookiesByPos[position].RemoveAt(0);
         }
@@ -74,9 +77,9 @@ namespace FormulaBasketball
                 data += pick.GetPickNumber() + ". " + pick.GetOwner() + " ";
                 if(pick.DifferentOwner())
                 {
-                    data += "(from " + pick.GetTeamOfOrigin() + " ";
+                    data += "(from " + pick.GetTeamOfOrigin() + ") ";
                 }
-                data += pick.GetPlayerSelected().GetPositionAsString() + " " + pick.GetPlayerSelected().getName();
+                data += pick.GetPlayerSelected().GetPositionAsString() + " " + pick.GetPlayerSelected().getName() + "\n";
             }
             File.WriteAllText("picks.txt", data);
         }
