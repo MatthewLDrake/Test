@@ -277,19 +277,141 @@ public class team : IComparable<team>,  IEnumerable<player>
     {
         return affiliate;
     }
+    public int GetRankOnTeam(player p)
+    {
+        int rank = 1;
+        foreach(player player in players)
+        {
+            if(!p.Equals(player) && p.getPosition() == player.getPosition() && p.getOverall() < player.getOverall())rank++;
+        }
+        return rank;
+    }
     public List<player> resignPlayers(FormulaBasketball.Random r)
     {
         List<player> players = new List<player>();
         foreach(player p in players)
         {
+            bool onRoster = true;
             if(p.ContractExpired())
             {
-                players.Add(p);
+                if (p.getGamesPlayed() < 10) onRoster = false;
+                else
+                {
+                    double shootingPercentage = 0.0, opponentPercentage = 0.0;
+                    if (p.getShotsTaken() > 10 && p.getShotsAttemptedAgainst() > 10)
+                    {
+                        opponentPercentage = ((double)p.getShotsMadeAgainst() / (double)p.getShotsAttemptedAgainst()) * 100;
+                        shootingPercentage = ((double)p.getShotsMade() / (double)p.getShotsTaken()) * 100;
+                    }
+                    double plus_minus = 0.0;
+                    if (p.getGamesPlayed() != 0)
+                    {
+                        plus_minus = ((double)p.teamPoints / (double)p.getGamesPlayed());
+                    }
+
+                    plus_minus += shootingPercentage - opponentPercentage;
+
+                    if (r.Next(-5, 5) + plus_minus < 0) onRoster = false;
+                    else
+                    {
+                        onRoster = NegogiateWithPlayer(p, GetRankOnTeam(p));
+                    }
+                }
             }
+            if (!onRoster) players.Add(p);
         }
         return players;
     }
 
+    private bool NegogiateWithPlayer(player p, int rank)
+    {
+        double average = formulaBasketball.create.GetAverageSalary(rank, p.getPosition());
+        double min = formulaBasketball.create.GetMinSalary(rank, p.getPosition());
+        double max = formulaBasketball.create.GetMaxSalary(rank, p.getPosition());
+
+        int playerRank = formulaBasketball.create.GetPositionalRank(rank, p.getPosition(), p.getOverall());
+
+        double salary = 0;
+
+        if(playerRank > 16)
+        {
+            salary = GetY(16, average, 32, min, playerRank) + (r.Next(-25, 25));
+            salary = Math.Min(25, Math.Max(1, salary));
+        }
+        else
+        {
+            salary = GetY(16, average, 1, max, playerRank) + (r.Next(-25, 25)/10);
+            salary = Math.Min(25, Math.Max(1, salary));
+        }
+        int years = r.Next(1, 5);
+        Contract teamOffer = new Contract(years, salary);
+
+        ContractResult result = p.ContractNegotiate(teamOffer, r);
+        Contract playerOffer = null;
+        while(result.Equals(ContractResult.Continue))
+        {
+            playerOffer = p.GetCounterOffer(teamOffer, r, playerOffer);
+            if (playerOffer.GetMoney() <= teamOffer.GetMoney())
+            {
+                result = ContractResult.Accept;
+                p.SetNewContract(playerOffer);
+                break;
+            }
+            result = ContractNegotiate(playerOffer, teamOffer, playerRank, rank, p);
+            if (result.Equals(ContractResult.Continue))
+            {
+                years = (playerOffer.GetYearsLeft() + teamOffer.GetYearsLeft()) / 2;
+                salary = r.Next(((int)Math.Round(teamOffer.GetMoney() * 10)) + 1, ((int)Math.Round(playerOffer.GetMoney() * 10)));
+                teamOffer = new Contract(years, salary);
+                result = p.ContractNegotiate(teamOffer, r);
+            }
+            else if (result.Equals(ContractResult.Accept))
+            {
+                p.SetNewContract(teamOffer);
+            }            
+        }
+
+        return result.Equals(ContractResult.Accept);
+    }
+
+    private ContractResult ContractNegotiate(Contract playerOffer, Contract teamOffer, int positionalRank, int teamRank, player p)
+    {
+        if ((teamRank == 3 && playerOffer.GetMoney() > 6) || (teamRank == 2 && playerOffer.GetMoney() > 13)) return ContractResult.Reject;
+
+        double shootingPercentage = 0.0, opponentPercentage = 0.0;
+        if (p.getShotsTaken() > 10 && p.getShotsAttemptedAgainst() > 10)
+        {
+            opponentPercentage = ((double)p.getShotsMadeAgainst() / (double)p.getShotsAttemptedAgainst()) * 100;
+            shootingPercentage = ((double)p.getShotsMade() / (double)p.getShotsTaken()) * 100;
+        }
+        double plus_minus = 0.0;
+        if (p.getGamesPlayed() != 0)
+        {
+            plus_minus = ((double)p.teamPoints / (double)p.getGamesPlayed());
+        }
+
+        plus_minus += shootingPercentage - opponentPercentage;
+
+        double difference = playerOffer.GetMoney() - teamOffer.GetMoney();
+
+        if (difference < 0) return ContractResult.Accept;
+
+        if (p.getOverall() > 90) return ContractResult.Accept;
+
+        double score = plus_minus * .8 + p.getOverall() * .1 + difference * -1 + r.Next(-3,2);
+
+        if (score > 1) return ContractResult.Accept;
+        else if (score > -3) return ContractResult.Continue;
+        else return ContractResult.Reject;
+
+    }
+    public double GetY(double point1X, double point1Y, double point2X, double point2Y, int x)
+    {
+        double m = (point2Y - point1Y) / (point2X - point1Y);
+        double b = point1Y - (m * point1X);
+
+        return m * x + b;
+    }
     public player FindBestPlayerByPos(int pos)
     {
         player retVal = null;
@@ -395,9 +517,11 @@ public class team : IComparable<team>,  IEnumerable<player>
         retiredList.Add(player);
     }
 
-    public void offerToFreeAgents(List<player> freeAgency, FormulaBasketball.Random r)
+    public void offerToFreeAgents(FreeAgents freeAgency, FormulaBasketball.Random r)
     {
-        throw new NotImplementedException();
+        List<player> organizationPlayers = new List<player>();
+        foreach (player p in players) organizationPlayers.Add(p);
+        foreach (player p in affiliate.getAllPlayer()) organizationPlayers.Add(p);
     }
 
     public void removeRetiredPlayers()

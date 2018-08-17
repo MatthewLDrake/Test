@@ -5,15 +5,27 @@ public class createTeams
 {
     private FormulaBasketball.Random r;
     private List<team> teams, dLeagueTeams;
-    private List<player> freeAgency;
+    private FreeAgents freeAgency;
     private College college;
-    public createTeams(List<team> teams, List<player> freeAgency, FormulaBasketball.Random r)
+    private double[,] averagePositionSalaries, minPositionSalaries, maxPositionsSalaries;
+    private double[,] averageOverall, minOverall, maxOverall, allOveralls;
+    public createTeams(List<team> teams, FreeAgents freeAgency, FormulaBasketball.Random r)
     {
         this.teams = teams;
         this.freeAgency = freeAgency;
         this.r = r;
         college = new College(r);
         setFianancials();
+
+        averagePositionSalaries = new double[3, 5];
+        minPositionSalaries = new double[3,5];
+        maxPositionsSalaries = new double[3,5];
+
+        averageOverall = new double[3,5];
+        minOverall = new double[3,5];
+        maxOverall = new double[3,5];
+        allOveralls = new double[15, 32];
+
     }
 
     public createTeams(FormulaBasketball.Random r)
@@ -21,11 +33,85 @@ public class createTeams
         this.r = r;
         teams = new List<team>();
         dLeagueTeams = new List<team>();
-        freeAgency = new List<player>();
+        freeAgency = new FreeAgents();
         college = new College(r);
         createTheTeams();
         //createTeamTwo();
+        averagePositionSalaries = new double[3, 5];
+        minPositionSalaries = new double[3, 5];
+        for (int x = 0; x < minPositionSalaries.GetLength(0); x += 1)
+        {
+            for (int y = 0; y < minPositionSalaries.GetLength(1); y += 1)
+            {
+                minPositionSalaries[x, y] = 26;
+            }
+        }
+        maxPositionsSalaries = new double[3, 5];
+
+        averageOverall = new double[3, 5];
+        minOverall = new double[3, 5];
+        for (int x = 0; x < minOverall.GetLength(0); x += 1)
+        {
+            for (int y = 0; y < minOverall.GetLength(1); y += 1)
+            {
+                minOverall[x, y] = 100;
+            }
+        }
+        maxOverall = new double[3, 5];
     }
+
+    public void SetupSalaryInfo()
+    {
+        int teamNum = 0;
+        foreach(team team in teams)
+        {
+            List<player> players = team.getAllPlayer();
+            for(int i = 0; i < players.Count;i++)
+            {
+                averageOverall[i/5, i%5] += players[i].getOverall();
+                averagePositionSalaries[i / 5, i % 5] += players[i].GetMoneyPerYear();
+                allOveralls[i, teamNum] = players[i].getOverall();
+
+                if (players[i].getOverall() > maxOverall[i / 5, i % 5]) maxOverall[i / 5, i % 5] = players[i].getOverall();
+                if (players[i].getOverall() < minOverall[i / 5, i % 5]) minOverall[i / 5, i % 5] = players[i].getOverall();
+
+                if (players[i].GetMoneyPerYear() > maxPositionsSalaries[i / 5, i % 5]) maxPositionsSalaries[i / 5, i % 5] = players[i].GetMoneyPerYear();
+                if (players[i].GetMoneyPerYear() < minPositionSalaries[i / 5, i % 5]) minPositionSalaries[i / 5, i % 5] = players[i].GetMoneyPerYear();
+            }
+            teamNum++;
+        }
+        for(int i = 0; i < 15; i++)
+        {
+            averagePositionSalaries[i / 5, i % 5] = averagePositionSalaries[i / 5, i % 5] / 32;
+            averageOverall[i / 5, i % 5] = averageOverall[i / 5, i % 5] / 32;
+        }
+    }
+
+    public double GetAverageSalary(int rank, int pos)
+    {
+        return averagePositionSalaries[rank, pos];
+    }
+    public double GetMinSalary(int rank, int pos)
+    {
+        return maxPositionsSalaries[rank, pos];
+    }
+    public double GetMaxSalary(int rank, int pos)
+    {
+        return maxPositionsSalaries[rank, pos];
+    }
+    public int GetPositionalRank(int rosterSpot, int pos, double overall)
+    {
+        int rank = 1;
+        int loc = (rosterSpot - 1) * 5 + (pos - 1);
+
+        for (int i = 0; i < allOveralls.GetLength(1); i++ )
+        {
+            if (allOveralls[loc, i] > overall) rank++;
+        }
+
+        return rank;
+    }
+
     public void SetUpCollege()
     {
         college = new College(r);
@@ -1169,7 +1255,6 @@ public class createTeams
 
 
         freeAgency.Add(new player(1, 9, 9, 3, 3, 5, 1, 6, 7, 1, 5, 5, 24, "Brian Moore", Country.Wyverncliff, false));
-        Console.WriteLine(freeAgency[0].getName() + " " + freeAgency[0].getOverall(null));
         freeAgency.Add(new player(1, 7, 5, 1, 1, 3, 3, 9, 6, 3, 5, 8, 27, "Key To Don Player #10", Country.Key_to_Don, false));
         freeAgency.Add(new player(1, 9, 8, 5, 5, 2, 2, 5, 5, 3, 5, 7, 21, "Hamish Rooney", Country.Aahrus, false));
         freeAgency.Add(new player(1, 6, 5, 1, 1, 5, 3, 9, 8, 2, 5, 6, 27, "luz", Country.Czalliso, false));
@@ -1507,7 +1592,7 @@ public class createTeams
     {
         return dLeagueTeams;
     }
-    public List<player> getFreeAgents()
+    public FreeAgents getFreeAgents()
     {
         return freeAgency;
     }
@@ -1909,12 +1994,13 @@ public class createTeams
 
         teams[31].setTeamResults(new teamResults(new int[] { 30, 14, 20 }));
     }
-    public player removePlayerFromFreeAgents(int position)
+    /*public player removePlayerFromFreeAgents(int position)
     {
+        
         player retVal = freeAgency[position];
         freeAgency.RemoveAt(position);
         return retVal;
-    }
+    }*/
     private FreeAgents free;
     public void SetFreeAgents(FreeAgents free)
     {

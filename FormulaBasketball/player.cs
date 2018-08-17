@@ -1274,8 +1274,8 @@ public class player : IComparable<player>
     public int CompareTo(player other)
     {
 
-        if (getOverall(this) - getOverall(other) > 0) return 1;
-        else if (getOverall(other) - getOverall(this) > 0) return -1;
+        if (this.getOverall() - other.getOverall() > 0) return 1;
+        else if (other.getOverall() - this.getOverall() > 0) return -1;
         else return 0;
     }
     /*

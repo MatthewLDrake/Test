@@ -240,8 +240,10 @@ public class formulaBasketball
         }
         else
         {
+            FreeAgents free = new FreeAgents();
+            foreach (player p in freeAgency) free.Add(p);
             if (teams == null) create = new createTeams(r);
-            else create = new createTeams(teams, freeAgency, r);
+            else create = new createTeams(teams, free, r);
             doSetup(flag);
             startingGame = 1;
         }

@@ -31,7 +31,12 @@ namespace FormulaBasketball
             }
             for (int i = 0; i < rookiesByPos.Length; i++)
             {
-                rookiesByPos[i].Sort();
+                rookiesByPos[i] = Sort(rookiesByPos[i]);
+                Console.WriteLine("Position " + (i + 1));
+                foreach(player p in rookiesByPos[i])
+                {
+                    Console.WriteLine(p.getOverall());
+                }
             }
             draftPicks = new DraftPick[64];
 
@@ -55,6 +60,33 @@ namespace FormulaBasketball
             
 
 
+        }
+        public List<player> GetUndraftedPlayers()
+        {
+            List<player> undraftedPlayers = new List<player>();
+            for (int i = 0; i < rookiesByPos.Length; i++ )
+                foreach (player p in rookiesByPos[i])
+                {
+                    undraftedPlayers.Add(p);
+                }
+            return undraftedPlayers;
+        }
+        private List<player> Sort(List<player> list)
+        {
+            player temp = null;
+            for (int write = 0; write < list.Count; write++)
+            {
+                for (int sort = 0; sort < list.Count - 1; sort++)
+                {
+                    if (list[sort].getOverall() < list[sort + 1].getOverall())
+                    {
+                        temp = list[sort + 1];
+                        list[sort + 1] = list[sort];
+                        list[sort] = temp;
+                    }
+                }
+            }
+            return list;
         }
         public player[] BestPlayers()
         {

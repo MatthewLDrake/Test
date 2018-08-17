@@ -5,10 +5,10 @@ using System.Collections.Generic;
 public class Offseason
 {
     private List<team> teams;
-    private List<player> freeAgency;
+    private FreeAgents freeAgency;
     private FormulaBasketball.Random r;
     private List<player> rookies;
-    public Offseason(List<team> teams, List<player> freeAgency, List<player> rookies, FormulaBasketball.Random r)
+    public Offseason(List<team> teams, FreeAgents freeAgency, List<player> rookies, FormulaBasketball.Random r)
     {
         this.rookies = rookies;
         this.teams = teams;
@@ -20,11 +20,11 @@ public class Offseason
     private void runOffseason()
     {
         
-        checkRetirements();
-        EndSeasons();
+        checkRetirements();        
         resignPlayers();
         ExecuteDrafts();
         signFreeAgents();
+        EndSeasons();
         
     }
     private void EndSeasons()
@@ -55,8 +55,8 @@ public class Offseason
             }
             team.removeRetiredPlayers();
         }
-        List<player> tempFreeAgency = new List<player>();
-        foreach (player player in freeAgency)
+        FreeAgents tempFreeAgency = new FreeAgents();
+        foreach (player player in freeAgency.GetAllPlayers())
         {
             bool retireStatus = player.retire(r, true) != retirements.None;
             if(!retireStatus)
@@ -88,6 +88,11 @@ public class Offseason
     private void ExecuteDrafts()
     {
         RookieDraft draft = new RookieDraft(rookies, teams, new List<int>(), r);
+        freeAgency.Add(draft.GetUndraftedPlayers());
+        foreach(team team in teams)
+        {
+            freeAgency.Add(team.GetAffiliate().getAllPlayer());
+        }
     }
     private void signFreeAgents()
     {
