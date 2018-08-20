@@ -19,7 +19,7 @@ public class SetupNewSeason
         this.r = r;
         freeAgents = new FreeAgents();
         playersByPos = new List<player>[5];
-        freeAgents.Add(create.getFreeAgents());
+        freeAgents.Add(create.getFreeAgents().GetAllPlayers());
         freeAgents.Add(create.GetRookies());
         SetAffiliated();
         ClearTeams();
@@ -45,6 +45,31 @@ public class SetupNewSeason
         PrintWikiInfo();
 
         //GenerateFIBUTeams();
+    }
+    public SetupNewSeason(createTeams create, FormulaBasketball.Random r, FreeAgents free)
+    {
+        this.create = create;
+        this.r = r;
+        this.freeAgents = free;
+        playersByPos = new List<player>[5];
+        ResizeRoster();
+
+        CalculatePositionRank();
+
+        PrintInformation();
+
+        FindBestPlayers();
+
+        CalculateHighestPayroll("topDLeaguePayrolls.txt", create.getDLeagueTeams());
+        CalculateHighestPayroll("topPayrolls.txt", create.getTeams());
+
+        CalculateBestOveralls("topOveralls.txt", create.getTeams());
+        CalculateBestOveralls("topDLeaugeOveralls.txt", create.getDLeagueTeams());
+
+        FindStarterAverages("averageStarters.txt", create.getTeams());
+        FindStarterAverages("dLeagueAverageStarters.txt", create.getDLeagueTeams());
+
+        PrintWikiInfo();
     }
     private void CalculateBestOveralls(string fileName, List<team> teams)
     {

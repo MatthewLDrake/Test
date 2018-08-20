@@ -5,14 +5,15 @@ public class createTeams
 {
     private FormulaBasketball.Random r;
     private List<team> teams, dLeagueTeams;
-    private FreeAgents freeAgency;
+    private List<player> freeAgency;
+    private FreeAgents freeAgents;
     private College college;
     private double[,] averagePositionSalaries, minPositionSalaries, maxPositionsSalaries;
     private double[,] averageOverall, minOverall, maxOverall, allOveralls;
     public createTeams(List<team> teams, FreeAgents freeAgency, FormulaBasketball.Random r)
     {
         this.teams = teams;
-        this.freeAgency = freeAgency;
+        this.freeAgents = freeAgency;
         this.r = r;
         college = new College(r);
         setFianancials();
@@ -33,7 +34,7 @@ public class createTeams
         this.r = r;
         teams = new List<team>();
         dLeagueTeams = new List<team>();
-        freeAgency = new FreeAgents();
+        freeAgents = new FreeAgents();
         college = new College(r);
         createTheTeams();
         //createTeamTwo();
@@ -1594,7 +1595,12 @@ public class createTeams
     }
     public FreeAgents getFreeAgents()
     {
-        return freeAgency;
+        if(freeAgents == null)
+        {
+            freeAgents = new FreeAgents();
+            freeAgents.Add(freeAgency);
+        }
+        return freeAgents;
     }
     public void SetDraftPicks()
     {
@@ -2016,6 +2022,7 @@ public class createTeams
     private List<player> rookies;
     public List<player> GetRookies()
     {
+        foreach(player p in rookies) p.IsRookie();
         return rookies;
     }
     public void AddRookies()

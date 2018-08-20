@@ -92,10 +92,21 @@ public class Schedule
         list.Add(() => Game83());
         list.Add(() => Game84());
     }
-    public void playGames(int firstGame, int lastGame)
+    public void playGames(int firstGame, int lastGame, FormulaBasketball.Random r)
     {
         for(int i = firstGame - 1; i < lastGame; i++)
         {
+            if(i % 8 == 0)
+            {
+                foreach(team team in formulaBasketball.create.getTeams())
+                {
+                    foreach(player p in team)
+                    {
+                        p.Develop(r);
+                    }
+                }
+            }
+            
             list[i].Invoke();
             formulaBasketball.updateStandings();
         }

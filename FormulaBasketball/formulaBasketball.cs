@@ -12,7 +12,7 @@ using System.Xml.Serialization;
 public class formulaBasketball
 {
     public static string writerFile, gameResultsFile, statsFile, standingsFile;
-    public static string writerContents, gameResultsContents, statsContents, standingsContents;
+    public static string writerContents, gameResultsContents, statsContents, standingsContents, championshipsContents;
     public static createTeams create;
     public static int startingGame;
     public static List<team> DivisionA, DivisionB, DivisionC, DivisionD, ConferenceA, ConferenceB, League;
@@ -39,7 +39,7 @@ public class formulaBasketball
         gameResultsFile = "GameResults.csv";
         statsFile = "stats.csv";
         standingsFile = "standings.csv";
-
+        championshipsContents = championshipsContents += "Southern Conference Winner\tSouthern Conference Games Won\t\tNorthern Conference Games Won\tNorthern Conference winner\tMVP Winner\tMVP Team\tROTY winner\tROTY Team\n";
         /* create.SetUpCollege();
          create.PlayCollegeSeason();
          create.PlayCollegeSeason();
@@ -80,9 +80,10 @@ public class formulaBasketball
 
         while (!flag)
         {
-            Form2 resultFinder = new Form2();
+            //Form2 resultFinder = new Form2();
+            YearSim resultFinder = new YearSim();
             resultFinder.ShowDialog();
-            String result = resultFinder.getResult();
+            String result = resultFinder.GetResult();
             standingsForm.Show();
             standingsForm.Visible = false;
             //String result = Console.ReadLine();
@@ -100,11 +101,42 @@ public class formulaBasketball
                 playGames(startingGame, 84);
 
             }
+            else if (result.Equals("playseasons"))
+            {
+                Coach c = null;
+                foreach (team team in create.getTeams())
+                {
+                    if (c == null)
+                    {
+                        c = team.getCoach();
+                    }
+                    else
+                    {
+                        team.SetCoach(c);
+                    }
+                }
+                for (int i = 0; i < resultFinder.GetSeasons(); i++)
+                {
+                    
+                    standingsForm.Visible = true;
+                    playGames(1, 84);
+                    mockPlayoffs(true);
+                    create.PlayCollegeSeason();
+                    VoteMVP();
+                    VoteROTY();
+                    bracket.Visible = false;
+                    Offseason off = new Offseason(create.getTeams(), create.getFreeAgents(), create.GetCollege().GetRookies(), r);
+                    new SetupNewSeason(create, r, create.getFreeAgents());
+                }
+                break;
+
+            }
             else if (result.Equals("doPlayoffs"))
             {
                 mockPlayoffs(true);
                 create.PlayCollegeSeason();
                 Offseason off = new Offseason(create.getTeams(), create.getFreeAgents(), create.GetCollege().GetRookies() ,r);
+                new SetupNewSeason(create, r, create.getFreeAgents());
             }
             else if (result.Equals("restartSeason"))
             {
@@ -117,19 +149,169 @@ public class formulaBasketball
             else if (result.Equals("exitButton"))
                 break;
             else if (result.Equals("Save"))
-            {
-                
+            {                
                 SerializeObject(create, fileName);
             }
         }
 
         calculateStandings(!flag);
         stats();
+        File.WriteAllText("championships.csv" ,championshipsContents);
         File.WriteAllText(writerFile, writerContents);
         if(!gameResultsContents.Equals(""))File.WriteAllText(gameResultsFile, gameResultsContents);
         File.WriteAllText(statsFile, statsContents);
         File.WriteAllText(standingsFile, standingsContents);
 
+    }
+
+    private void VoteMVP()
+    {
+        List<player> playerList = new List<player>();
+        foreach(team team in create.getTeams())
+        {
+            foreach(player p in team)
+            {
+                if(p.getMinutes() > 2000)
+                {
+                    playerList.Add(p);
+                }
+            }
+        }
+        player winner = FindBest(playerList);
+        championshipsContents += winner.getName() + "\t" + winner.getTeam().ToString() + "\t";
+    }
+    private void VoteROTY()
+    {
+        List<player> playerList = new List<player>();
+        foreach (team team in create.getTeams())
+        {
+            foreach (player p in team)
+            {
+                if (p.Rookie())
+                {
+                    playerList.Add(p);
+                }
+            }
+        }
+        player winner = FindBest(playerList);
+        championshipsContents += winner.getName() + "\t" + winner.getTeam().ToString() + "\n";
+    }
+    private player FindBest(List<player> list)
+    {
+        int[] totalPoints = new int[list.Count];
+        
+        foreach(team team in create.getTeams())
+        {
+            int[] points = GetPoints(team, list);
+            for(int i = 0; i < totalPoints.Length; i++)
+            {
+                totalPoints[i] += points[i];
+            }
+        }
+        int index = 0;
+        int highest = 0;
+        for(int p = 0; p < totalPoints.Length; p++)
+        {
+            if(highest < totalPoints[p])
+            {
+                highest = totalPoints[p];
+                index = p;
+            }
+        }
+        return list[index];
+        
+    }
+    private int[] GetPoints(team team, List<player> list)
+    {
+        int[] retVal = new int[list.Count];
+        double[] scores = new double[list.Count];
+        double[] tempList = new double[list.Count];
+        int value = r.Next(1, 100);
+        int focus = 6;
+        if (value <= 10)
+            focus = 1;
+        else if (value <= 20)
+            focus = 2;
+        else if (value <= 50)
+            focus = 3;
+        else if (value <= 75)
+            focus = 4;
+        else if (value <= 90)
+            focus = 5;
+
+        for(int i = 0; i <list.Count; i++)
+        {
+            scores[i] = GetScore(list[i], focus, team);
+            tempList[i] = scores[i];
+        }
+
+        Sort(scores);
+
+        int endRange = Math.Min(10, list.Count);
+        for(int i = 0; i < endRange; i++)
+        {
+            for(int j = 0; j < tempList.Length; j++)
+            {
+                if(scores[i] == tempList[j])
+                {
+                    retVal[j] = 10 - i;
+                    break;
+                }
+            }
+        }
+
+        return retVal;
+    }
+    private double GetScore(player p, int focus, team team)
+    {
+        int bonus = 0;
+
+        if (p.getTeam().Equals(team))
+            bonus = 20;
+        // read in minutes first, then find out the per minute situations
+        int Minutes = p.getMinutes();
+        double APM = ((double)p.getAssists() / (double)Minutes) * 100;
+        double PPM = ((double)p.getPoints() / (double)Minutes) * 100;
+        double Percent = 0;
+        if (p.getShotsTaken() > 0)
+            Percent = p.getShotsMade() / p.getShotsTaken() * 100;
+        double Turnovers = ((double)p.getTurnovers() / (double)Minutes) * 100;
+        double Steals = ((double)p.getSteals() / (double)Minutes) * 100;
+        // add the random value
+        double retVal = bonus + r.Next(-40, 60);
+
+        // this is probably bad style, but eh it was the best way I thought of doing it
+        if (focus == 1)
+            retVal += APM * 4 + PPM + Percent - Turnovers + Steals;
+        else if (focus == 2)
+            retVal += APM + PPM + Percent - Turnovers + Steals * 100;
+        else if (focus == 3)
+            retVal += APM * 2 + PPM + Percent * 3 - Turnovers + Steals * 2;
+        else if (focus == 4)
+            retVal += APM + PPM * 4 + Percent * 3 - Turnovers + Steals;
+        else if (focus == 5)
+            retVal += APM * 4 + PPM + Percent * 5 - Turnovers + Steals * 2;
+        else
+            retVal += APM + PPM + Percent - Turnovers + Steals;
+
+    return retVal;
+    }
+    private double[] Sort(double[] list)
+    {
+        double temp = 0;
+        for (int write = 0; write < list.Length; write++)
+        {
+            for (int sort = 0; sort < list.Length - 1; sort++)
+            {
+                if (list[sort] < list[sort + 1])
+                {
+                    temp = list[sort + 1];
+                    list[sort + 1] = list[sort];
+                    list[sort] = temp;
+                }
+            }
+        }
+        return list;
     }
     private void playCollegeSeason()
     {
@@ -342,6 +524,7 @@ public class formulaBasketball
                 System.Threading.Thread.Sleep(5);
             }
         }
+        
         return playoffs.GetChampion();
     }
     public static void removePlayer()
@@ -560,7 +743,7 @@ public class formulaBasketball
     public static void playGames(int firstGame, int secondGame)
     {
         Schedule schedule = new Schedule();
-        schedule.playGames(firstGame, secondGame);
+        schedule.playGames(firstGame, secondGame, r);
 
         if (gameWriter != null) gameWriter.writeLines();
 

@@ -51,3 +51,4 @@ B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.csproj.Generat
 B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.csproj.CoreCompileInputs.cache
 B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.exe
 B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.pdb
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.YearSim.resources

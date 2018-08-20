@@ -439,112 +439,442 @@ University of Ikkuvvuki,59,69,3056,2939,8,8,60
 University of Aahrus 1,58,70,3449,3108,9,9,63
 University of Bongatar 2,53,75,3099,3207,10,10,77
 Division 0,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
-University of Sande Sitei,105,55,3062,2845,1,1,14
-University of Pxalit'k'a,97,63,3098,2784,2,2,20
-University of Auspikitan,97,63,2821,2842,3,3,21
-University of Alteus,96,64,3086,2857,4,4,22
-University of Saelunavvk,86,74,3242,3063,5,5,32
-University of Hinaika Oceanography Institute,73,87,3107,3244,6,6,60
-University of Futi'akep,73,87,2976,3135,7,7,61
-University of Nausicaa,61,99,2984,2870,8,8,80
-University of Kap'atŋpiri,58,102,2749,3213,9,9,90
-University of Atapwa,52,108,2680,2930,10,10,97
+University of Sande Sitei,102,58,2880,2875,1,1,16
+University of Auspikitan,101,59,2932,2962,2,2,18
+University of Pxalit'k'a,95,65,3057,2730,3,3,24
+University of Alteus,94,66,3114,2874,4,4,25
+University of Saelunavvk,86,74,3247,2859,5,5,34
+University of Hinaika Oceanography Institute,80,80,3129,3066,6,6,44
+University of Futi'akep,72,88,2968,3121,7,7,69
+University of Kap'atŋpiri,56,104,2736,3343,8,8,91
+University of Atapwa,54,106,2682,2985,9,9,93
+University of Nausicaa,51,109,2831,2901,10,10,97
 Division 1,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
-University of Naxda,116,44,3309,3068,1,1,4
-University of Blanaxon,106,54,3321,3017,2,2,13
-University of Noxium,88,72,2937,3311,3,3,31
-University of Sozaxon,82,78,2864,2941,4,4,44
-University of Uxnua,80,80,3177,3248,5,5,50
-University of Klanaxon,70,90,2834,2934,6,6,66
-University of Sovkagrad,69,91,3228,3277,7,7,67
-University of Radugrad,67,93,3158,3250,8,8,72
-University of Prokax,64,96,2965,2929,9,9,73
-University of Autolik,44,116,2798,2897,10,10,100
+University of Blanaxon,109,51,3467,3056,1,1,10
+University of Naxda,109,51,3092,3074,2,2,11
+University of Noxium,93,67,3091,3211,3,3,27
+University of Sozaxon,82,78,2779,2955,4,4,41
+University of Uxnua,80,80,3132,3282,5,5,47
+University of Klanaxon,76,84,2963,2905,6,6,55
+University of Sovkagrad,71,89,3162,3298,7,7,70
+University of Radugrad,65,95,3078,3300,8,8,73
+University of Prokax,63,97,3045,2989,9,9,77
+University of Autolik,44,116,2692,2876,10,10,100
 Division 2,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
-University of Antarion 3,121,39,3085,2808,1,1,2
-University of Shigua,108,52,3125,3241,2,2,12
-University of Issamore,98,62,3305,2860,3,3,19
-University of Sagua,83,77,3027,3030,4,4,40
-University of Antarion 2,79,81,2953,3081,5,5,52
-University of Pentadominion 1,77,83,2621,2899,6,6,55
-University of Barsein,69,91,2623,2965,7,7,69
-University of Nja,60,100,2759,2819,8,8,83
-University of Dongua,57,103,2994,2995,9,9,91
-University of Pentadominion 2,56,104,3399,3260,10,10,93
+University of Antarion 3,124,36,3273,2639,1,1,1
+University of Shigua,105,55,3054,3197,2,2,12
+University of Issamore,97,63,3218,2863,3,3,20
+University of Sagua,82,78,2986,3058,4,4,40
+University of Barsein,77,83,2623,2744,5,5,52
+University of Pentadominion 1,74,86,2720,3079,6,6,61
+University of Antarion 2,74,86,2921,3285,7,7,62
+University of Nja,62,98,2783,2812,8,8,80
+University of Pentadominion 2,56,104,3329,3213,9,9,88
+University of Dongua,55,105,2830,2947,10,10,92
 Division 3,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
-University of Shmupland 4,120,40,3568,2809,1,1,3
-University of Chromasheep Farm,112,48,3223,3190,2,2,8
-University of Oasis City,105,55,3345,3227,3,3,15
-University of Sapphire Bay,76,84,3230,3190,4,4,56
-University of Shmupland 3,74,86,2872,2810,5,5,58
-University of Shmupland 2,69,91,2833,3202,6,6,70
-University of Shmupland 1,68,92,2665,2933,7,7,71
-University of Kaeshar 4,62,98,2896,3019,8,8,79
-University of Shmupland 5,60,100,2822,3011,9,9,84
-University of Kaeshar 5,58,102,3126,3168,10,10,88
+University of Chromasheep Farm,117,43,3214,2969,1,1,3
+University of Shmupland 4,116,44,3470,3045,2,2,4
+University of Oasis City,104,56,3422,3179,3,3,13
+University of Sapphire Bay,76,84,3153,3102,4,4,56
+University of Shmupland 1,74,86,2748,2879,5,5,60
+University of Shmupland 3,73,87,3033,2954,6,6,63
+University of Shmupland 2,68,92,2626,3166,7,7,72
+University of Shmupland 5,61,99,2819,2982,8,8,84
+University of Kaeshar 4,60,100,2984,3139,9,9,86
+University of Kaeshar 5,58,102,3127,3052,10,10,87
 Division 4,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
-University of Byisotia,128,32,3263,3246,1,1,1
-University of Lizabechai,96,64,3023,2924,2,2,23
-University of Lveinta,95,65,3384,3089,3,3,25
-University of Alieosia,93,67,2957,2813,4,4,27
-University of Levikeana Solvae,82,78,2973,2834,5,5,42
-University of Hkamnsi,70,90,3208,3263,6,6,65
-University of Pyzus,64,96,2995,3130,7,7,74
-University of Vrelinku,63,97,3259,3056,8,8,75
-University of Nomvas,62,98,2959,2962,9,9,77
-University of Eastern Alveske,58,102,2823,2979,10,10,89
+University of Byisotia,124,36,3246,3313,1,1,2
+University of Lizabechai,101,59,3163,2961,2,2,17
+University of Lveinta,96,64,3329,3045,3,3,22
+University of Alieosia,89,71,3029,2904,4,4,33
+University of Levikeana Solvae,83,77,2961,2919,5,5,36
+University of Hkamnsi,72,88,3162,3254,6,6,68
+University of Pyzus,69,91,2990,3039,7,7,71
+University of Eastern Alveske,62,98,2894,2897,8,8,79
+University of Nomvas,61,99,2823,2914,9,9,82
+University of Vrelinku,56,104,3289,3175,10,10,89
 Division 5,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
-University of Quiita-Kyudosia,112,48,2950,2849,1,1,7
-University of Venasul,96,64,2882,2796,2,2,24
-University of Kholka,84,76,3018,2836,3,3,37
-University of Eirnvse,79,81,2988,3167,4,4,53
-University of Svitharia,74,86,3118,3027,5,5,57
-University of Floria,71,89,3113,3183,6,6,63
-University of Soniara,69,91,3145,3215,7,7,68
-University of Ncov Ntiajeb,62,98,2952,2807,8,8,76
-University of Zhiwasen,55,105,2660,2880,9,9,94
-University of Aavana,49,111,2428,3169,10,10,98
+University of Quiita-Kyudosia,114,46,2901,2731,1,1,5
+University of Venasul,97,63,3029,2893,2,2,21
+University of Kholka,90,70,3005,2442,3,3,30
+University of Eirnvse,79,81,2934,3158,4,4,49
+University of Floria,73,87,3086,3133,5,5,64
+University of Svitharia,72,88,3090,3017,6,6,66
+University of Soniara,64,96,3014,3129,7,7,74
+University of Ncov Ntiajeb,56,104,2759,2837,8,8,90
+University of Zhiwasen,52,108,2577,2976,9,9,96
+University of Aavana,50,110,2437,3098,10,10,99
 Division 6,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
-University of Vigim,111,49,3151,2908,1,1,9
-University of Vincent,99,61,3191,3233,2,2,18
-Stedro Institute of Technology,91,69,3365,2978,3,3,28
-Naskitrusk University,91,69,3516,3190,4,4,29
-Esmal District University,85,75,3247,3185,5,5,34
-University of Boltway,84,76,3245,3134,6,6,39
-Atresmi University,82,78,3373,3376,7,7,43
-University of Arinis,80,80,3068,2936,8,8,49
-University of Tri_National_Dominion 2,61,99,3023,3422,9,9,82
-University of Herelle,60,100,2615,2932,10,10,86
+University of Vigim,112,48,3257,2984,1,1,7
+University of Vincent,96,64,3120,3299,2,2,23
+Stedro Institute of Technology,92,68,3380,2806,3,3,28
+University of Boltway,90,70,3195,3072,4,4,31
+Naskitrusk University,82,78,3201,3043,5,5,38
+Esmal District University,82,78,3212,3197,6,6,39
+Atresmi University,80,80,3194,3230,7,7,45
+University of Arinis,77,83,3009,2966,8,8,51
+University of Herelle,64,96,2665,2899,9,9,76
+University of Tri_National_Dominion 2,61,99,2911,3364,10,10,85
 Division 7,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
-University of Yoka Tse,114,46,3070,2844,1,1,5
-University of Avura Aviation & Economics (A&E),100,60,3372,3125,2,2,17
-University of Imperial Institute at Levzent,94,66,3256,3243,3,3,26
-University of University of Central Paradaniton,88,72,2839,2737,4,4,30
-University of Imperial Institute at Faehrenfall,84,76,3376,3049,5,5,35
-University of Akarine,81,79,2857,2885,6,6,47
-University of Chizait University,72,88,2890,3213,7,7,62
-University of Vikasa,62,98,2873,2958,8,8,78
-University of Western University,60,100,2864,3177,9,9,85
-University of Ciulo,57,103,2663,2944,10,10,92
+University of Yoka Tse,113,47,3159,2875,1,1,6
+University of Avura Aviation & Economics (A&E),100,60,3233,2988,2,2,19
+University of Imperial Institute at Levzent,94,66,3336,3266,3,3,26
+University of University of Central Paradaniton,91,69,2965,2765,4,4,29
+University of Imperial Institute at Faehrenfall,79,81,3326,3176,5,5,48
+University of Akarine,78,82,3000,3056,6,6,50
+University of Chizait University,75,85,2961,3203,7,7,59
+University of Western University,72,88,2991,3037,8,8,67
+University of Ciulo,62,98,2853,3014,9,9,81
+University of Vikasa,61,99,2815,2961,10,10,83
 Division 8,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
-University of Holykol,114,46,2845,2858,1,1,6
-University of Pokoj,108,52,3013,2806,2,2,11
-University of Biodry,101,59,3111,2803,3,3,16
-University of Starrie,81,79,3285,3165,4,4,46
-University of Protopolis,80,80,3311,3075,5,5,48
-University of Lumein,79,81,3425,3075,6,6,51
-University of Forssa,59,101,3054,2922,7,7,87
-University of Seraphia,54,106,2236,3289,8,8,95
-University of Vatallus,52,108,3071,3173,9,9,96
-University of Norkute,48,112,3007,3383,10,10,99
+University of Holykol,112,48,2801,2909,1,1,8
+University of Pokoj,110,50,3034,2734,2,2,9
+University of Biodry,102,58,3057,2699,3,3,14
+University of Starrie,81,79,3456,3164,4,4,43
+University of Lumein,76,84,3323,3125,5,5,53
+University of Protopolis,76,84,3244,3135,6,6,54
+University of Vatallus,62,98,3203,2995,7,7,78
+University of Forssa,53,107,2965,2943,8,8,94
+University of Norkute,52,108,2983,3291,9,9,95
+University of Seraphia,51,109,2221,3299,10,10,98
 Division 9,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
-University of Aahrus 2,109,51,3079,2809,1,1,10
-University of Fiik Lanki Akol,85,75,3105,3017,2,2,33
-University of Aahrus 1,84,76,3442,3171,3,3,36
-University of Bongatar 1,84,76,3238,3120,4,4,38
-University of Vikkada,83,77,3167,3236,5,5,41
-University of Ikkuvvuki,81,79,3106,2793,6,6,45
-University of Maxwmkakki,78,82,2977,3002,7,7,54
-University of Lnwm,74,86,2728,2953,8,8,59
-University of Yuofuan,71,89,3068,3314,9,9,64
-University of Bongatar 2,61,99,3041,3298,10,10,81
+University of Aahrus 2,102,58,3020,2996,1,1,15
+University of Fiik Lanki Akol,89,71,3124,2999,2,2,32
+University of Ikkuvvuki,84,76,3115,2788,3,3,35
+University of Bongatar 1,83,77,3202,3189,4,4,37
+University of Aahrus 1,81,79,3451,3084,5,5,42
+University of Vikkada,80,80,3043,3169,6,6,46
+University of Maxwmkakki,76,84,2867,2992,7,7,57
+University of Lnwm,76,84,2808,2943,8,8,58
+University of Yuofuan,73,87,3153,3309,9,9,65
+University of Bongatar 2,64,96,3023,3239,10,10,75
+Division 0,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
+University of Auspikitan,120,72,3238,3202,1,1,18
+University of Sande Sitei,119,73,2902,2783,2,2,19
+University of Pxalit'k'a,114,78,3146,3011,3,3,23
+University of Alteus,111,81,3408,3317,4,4,26
+University of Saelunavvk,105,87,3111,2929,5,5,34
+University of Hinaika Oceanography Institute,97,95,2932,2954,6,6,49
+University of Futi'akep,90,102,2876,2872,7,7,54
+University of Kap'atŋpiri,66,126,2721,2966,8,8,94
+University of Nausicaa,65,127,2819,2875,9,9,95
+University of Atapwa,63,129,3132,3359,10,10,97
+Division 1,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
+University of Naxda,133,59,2997,2740,1,1,6
+University of Blanaxon,126,66,2982,2909,2,2,11
+University of Noxium,110,82,3070,3009,3,3,28
+University of Klanaxon,96,96,3028,2884,4,4,50
+University of Sozaxon,95,97,2930,3099,5,5,51
+University of Prokax,88,104,3029,2715,6,6,57
+University of Uxnua,81,111,2400,3327,7,7,71
+University of Radugrad,79,113,2836,2854,8,8,74
+University of Sovkagrad,78,114,3101,3362,9,9,75
+University of Autolik,67,125,2935,2717,10,10,93
+Division 2,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
+University of Antarion 3,144,48,3160,2937,1,1,1
+University of Shigua,121,71,3076,3066,2,2,16
+University of Issamore,116,76,3034,2830,3,3,22
+University of Sagua,103,89,2893,2731,4,4,37
+University of Barsein,87,105,2999,3184,5,5,61
+University of Antarion 2,85,107,2800,3096,6,6,63
+University of Pentadominion 1,76,116,2621,3335,7,7,78
+University of Pentadominion 2,73,119,3312,3248,8,8,83
+University of Nja,73,119,2809,2915,9,9,85
+University of Dongua,72,120,2869,2871,10,10,88
+Division 3,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
+University of Chromasheep Farm,138,54,3415,3130,1,1,4
+University of Shmupland 4,136,56,3329,3194,2,2,5
+University of Oasis City,129,63,3065,2829,3,3,9
+University of Sapphire Bay,100,92,3108,2780,4,4,45
+University of Shmupland 3,94,98,2949,2834,5,5,52
+University of Shmupland 1,84,108,2965,3194,6,6,65
+University of Shmupland 2,75,117,2492,2867,7,7,80
+University of Kaeshar 5,73,119,2947,2930,8,8,84
+University of Shmupland 5,68,124,2965,3295,9,9,91
+University of Kaeshar 4,68,124,2523,2931,10,10,92
+Division 4,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
+University of Byisotia,143,49,3174,3131,1,1,2
+University of Lveinta,121,71,3470,3130,2,2,15
+University of Lizabechai,120,72,3357,3207,3,3,17
+University of Alieosia,106,86,3061,2893,4,4,33
+University of Levikeana Solvae,101,91,3165,3161,5,5,44
+University of Pyzus,81,111,3104,3215,6,6,68
+University of Hkamnsi,81,111,2864,3071,7,7,70
+University of Eastern Alveske,80,112,3053,2943,8,8,72
+University of Vrelinku,79,113,3026,2802,9,9,73
+University of Nomvas,73,119,2744,2908,10,10,86
+Division 5,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
+University of Quiita-Kyudosia,138,54,3058,2752,1,1,3
+University of Venasul,114,78,2902,2879,2,2,24
+University of Kholka,103,89,3266,3283,3,3,38
+University of Eirnvse,97,95,2844,2788,4,4,48
+University of Floria,87,105,3097,3226,5,5,59
+University of Soniara,82,110,2906,2881,6,6,67
+University of Svitharia,81,111,2666,2823,7,7,69
+University of Ncov Ntiajeb,74,118,3100,3112,8,8,81
+University of Zhiwasen,63,129,2899,3047,9,9,96
+University of Aavana,58,134,2987,3294,10,10,98
+Division 6,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
+University of Vigim,130,62,3285,3055,1,1,8
+Stedro Institute of Technology,113,79,3258,2995,2,2,25
+Naskitrusk University,107,85,3115,2717,3,3,31
+Atresmi University,106,86,3157,2574,4,4,32
+University of Boltway,103,89,2783,2831,5,5,39
+University of Vincent,103,89,2584,2876,6,6,40
+University of Arinis,102,90,3530,3138,7,7,41
+Esmal District University,93,99,2952,3256,8,8,53
+University of Tri_National_Dominion 2,72,120,2674,3007,9,9,89
+University of Herelle,70,122,2528,3089,10,10,90
+Division 7,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
+University of Yoka Tse,133,59,3513,3344,1,1,7
+University of Imperial Institute at Levzent,124,68,3526,2684,2,2,13
+University of Avura Aviation & Economics (A&E),119,73,3276,3170,3,3,20
+University of University of Central Paradaniton,110,82,3285,3153,4,4,27
+University of Imperial Institute at Faehrenfall,100,92,3162,2914,5,5,46
+University of Western University,87,105,2873,2844,6,6,58
+University of Chizait University,87,105,3354,3490,7,7,60
+University of Akarine,84,108,2819,3328,8,8,66
+University of Ciulo,75,117,2777,2974,9,9,79
+University of Vikasa,74,118,2799,2920,10,10,82
+Division 8,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
+University of Holykol,128,64,3087,3107,1,1,10
+University of Biodry,125,67,3039,2692,2,2,12
+University of Pokoj,124,68,2798,2743,3,3,14
+University of Starrie,103,89,2920,2720,4,4,36
+University of Protopolis,99,93,2981,2797,5,5,47
+University of Lumein,89,103,3072,3075,6,6,56
+University of Vatallus,76,116,2828,2900,7,7,77
+University of Norkute,72,120,2949,2829,8,8,87
+University of Forssa,58,134,2404,2851,9,9,99
+University of Seraphia,56,136,2338,3204,10,10,100
+Division 9,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
+University of Aahrus 2,118,74,3372,3334,1,1,21
+University of Ikkuvvuki,109,83,3471,3159,2,2,29
+University of Fiik Lanki Akol,108,84,2987,2880,3,3,30
+University of Bongatar 1,103,89,3281,3055,4,4,35
+University of Vikkada,102,90,3239,2980,5,5,42
+University of Aahrus 1,101,91,2946,2798,6,6,43
+University of Maxwmkakki,90,102,3276,3365,7,7,55
+University of Lnwm,86,106,2869,3137,8,8,62
+University of Yuofuan,84,108,3189,3320,9,9,64
+University of Bongatar 2,77,115,2964,2995,10,10,76
+Division 0,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
+University of Auspikitan,138,86,3194,3157,1,1,19
+University of Alteus,135,89,3446,3041,2,2,21
+University of Pxalit'k'a,135,89,3079,3013,3,3,22
+University of Sande Sitei,133,91,3064,3076,4,4,25
+University of Saelunavvk,127,97,3016,2798,5,5,31
+University of Futi'akep,115,109,3347,3090,6,6,48
+University of Hinaika Oceanography Institute,105,119,2723,3128,7,7,55
+University of Atapwa,79,145,2887,2866,8,8,91
+University of Kap'atŋpiri,77,147,2968,3129,9,9,94
+University of Nausicaa,75,149,2704,2898,10,10,96
+Division 1,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
+University of Naxda,158,66,3245,2810,1,1,4
+University of Blanaxon,141,83,2930,2927,2,2,16
+University of Noxium,126,98,3098,3075,3,3,33
+University of Sozaxon,111,113,2939,2949,4,4,50
+University of Prokax,106,118,3153,3186,5,5,53
+University of Klanaxon,100,124,2877,3331,6,6,62
+University of Radugrad,98,126,3043,2956,7,7,64
+University of Autolik,94,130,3420,3064,8,8,69
+University of Sovkagrad,93,131,3089,3080,9,9,72
+University of Uxnua,89,135,2760,3161,10,10,79
+Division 2,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
+University of Antarion 3,159,65,3257,3087,1,1,3
+University of Issamore,147,77,3562,2455,2,2,10
+University of Shigua,141,83,2935,2832,3,3,15
+University of Sagua,125,99,3362,2973,4,4,35
+University of Antarion 2,106,118,3358,3104,5,5,52
+University of Barsein,100,124,3123,3190,6,6,61
+University of Dongua,86,138,3117,3252,7,7,82
+University of Pentadominion 2,83,141,3181,3349,8,8,87
+University of Nja,79,145,2900,3273,9,9,92
+University of Pentadominion 1,76,148,2072,3307,10,10,95
+Division 3,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
+University of Shmupland 4,157,67,3059,2886,1,1,5
+University of Oasis City,153,71,3085,2691,2,2,6
+University of Chromasheep Farm,148,76,2881,3171,3,3,9
+University of Shmupland 3,121,103,3340,3011,4,4,41
+University of Sapphire Bay,118,106,2959,2901,5,5,44
+University of Kaeshar 5,93,131,3319,3065,6,6,71
+University of Shmupland 2,91,133,2947,2987,7,7,75
+University of Shmupland 1,89,135,2486,2967,8,8,80
+University of Shmupland 5,85,139,3019,3053,9,9,83
+University of Kaeshar 4,81,143,2738,2868,10,10,89
+Division 4,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
+University of Byisotia,161,63,2786,2728,1,1,2
+University of Lizabechai,139,85,3275,3109,2,2,18
+University of Lveinta,133,91,3104,3130,3,3,26
+University of Alieosia,132,92,3136,2865,4,4,27
+University of Levikeana Solvae,113,111,2724,2885,5,5,49
+University of Vrelinku,101,123,3410,3216,6,6,59
+University of Eastern Alveske,99,125,2885,2771,7,7,63
+University of Pyzus,95,129,2747,2754,8,8,67
+University of Hkamnsi,90,134,2651,2859,9,9,77
+University of Nomvas,81,143,2722,2913,10,10,90
+Division 5,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
+University of Quiita-Kyudosia,161,63,2963,2560,1,1,1
+University of Venasul,131,93,2996,3101,2,2,29
+University of Kholka,120,104,2873,2830,3,3,43
+University of Eirnvse,117,107,3207,3067,4,4,46
+University of Floria,102,122,2784,2798,5,5,57
+University of Soniara,95,129,2891,2987,6,6,68
+University of Ncov Ntiajeb,93,131,2902,2896,7,7,73
+University of Svitharia,85,139,2689,3063,8,8,86
+University of Zhiwasen,73,151,2837,3000,9,9,98
+University of Aavana,64,160,2671,3100,10,10,100
+Division 6,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
+University of Vigim,150,74,2935,2842,1,1,8
+Stedro Institute of Technology,133,91,3456,3289,2,2,24
+Naskitrusk University,129,95,3309,3012,3,3,30
+Atresmi University,125,99,3376,2904,4,4,34
+University of Boltway,125,99,3153,2888,5,5,36
+University of Arinis,124,100,3026,2782,6,6,38
+University of Vincent,117,107,3023,3190,7,7,47
+Esmal District University,102,122,2703,2931,8,8,58
+University of Tri_National_Dominion 2,85,139,3146,3205,9,9,84
+University of Herelle,74,150,2333,3090,10,10,97
+Division 7,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
+University of Yoka Tse,153,71,3416,3213,1,1,7
+University of Avura Aviation & Economics (A&E),142,82,3411,3090,2,2,14
+University of Imperial Institute at Levzent,134,90,2565,2791,3,3,23
+University of University of Central Paradaniton,131,93,3154,2952,4,4,28
+University of Imperial Institute at Faehrenfall,122,102,3203,3071,5,5,39
+University of Western University,102,122,2916,2895,6,6,56
+University of Akarine,93,131,2914,3101,7,7,74
+University of Chizait University,89,135,2776,3330,8,8,81
+University of Ciulo,85,139,2855,3015,9,9,85
+University of Vikasa,83,141,2470,3006,10,10,88
+Division 8,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
+University of Holykol,145,79,3292,3157,1,1,11
+University of Pokoj,143,81,3248,3102,2,2,12
+University of Biodry,143,81,2946,2919,3,3,13
+University of Starrie,125,99,3157,2910,4,4,37
+University of Protopolis,108,116,2809,3031,5,5,51
+University of Lumein,101,123,2809,2924,6,6,60
+University of Norkute,94,130,2948,2791,7,7,70
+University of Vatallus,91,133,2976,3080,8,8,76
+University of Forssa,78,146,2836,2687,9,9,93
+University of Seraphia,64,160,2608,2945,10,10,99
+Division 9,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
+University of Aahrus 2,139,85,3158,2978,1,1,17
+University of Ikkuvvuki,137,87,3551,3169,2,2,20
+University of Fiik Lanki Akol,127,97,3007,2931,3,3,32
+University of Vikkada,122,102,3191,3104,4,4,40
+University of Aahrus 1,120,104,3248,3177,5,5,42
+University of Bongatar 1,118,106,3033,3039,6,6,45
+University of Maxwmkakki,106,118,2920,3079,7,7,54
+University of Lnwm,98,126,3123,3290,8,8,65
+University of Bongatar 2,96,128,3044,2953,9,9,66
+University of Yuofuan,89,135,3009,3336,10,10,78
+Division 0,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
+University of Auspikitan,162,94,3297,2839,1,1,16
+University of Alteus,157,99,3006,2897,2,2,20
+University of Saelunavvk,151,105,3455,2934,3,3,27
+University of Pxalit'k'a,147,109,2822,2906,4,4,33
+University of Sande Sitei,144,112,3004,3234,5,5,36
+University of Futi'akep,139,117,3316,3021,6,6,41
+University of Hinaika Oceanography Institute,125,131,3116,3028,7,7,51
+University of Atapwa,90,166,2812,2970,8,8,90
+University of Nausicaa,86,170,3035,3309,9,9,93
+University of Kap'atŋpiri,85,171,2646,2896,10,10,94
+Division 1,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
+University of Naxda,172,84,2700,2768,1,1,7
+University of Blanaxon,152,104,2614,2778,2,2,26
+University of Noxium,148,108,3060,2768,3,3,28
+University of Prokax,127,129,2846,2687,4,4,50
+University of Sozaxon,125,131,2722,2810,5,5,52
+University of Klanaxon,118,138,3090,3048,6,6,56
+University of Radugrad,115,141,2847,2805,7,7,64
+University of Autolik,109,147,2753,2812,8,8,72
+University of Sovkagrad,103,153,2677,2803,9,9,78
+University of Uxnua,91,165,2587,3116,10,10,89
+Division 2,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
+University of Antarion 3,179,77,2841,2668,1,1,2
+University of Issamore,169,87,3220,2924,2,2,10
+University of Shigua,163,93,2987,2657,3,3,14
+University of Sagua,147,109,3379,3161,4,4,32
+University of Antarion 2,122,134,3038,3154,5,5,54
+University of Barsein,110,146,2825,3065,6,6,71
+University of Dongua,97,159,2821,3027,7,7,81
+University of Pentadominion 2,95,161,2767,2914,8,8,85
+University of Nja,88,168,2304,2879,9,9,91
+University of Pentadominion 1,85,171,2682,3154,10,10,95
+Division 3,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
+University of Oasis City,180,76,3448,3079,1,1,1
+University of Shmupland 4,173,83,3012,2947,2,2,6
+University of Chromasheep Farm,167,89,3128,3031,3,3,11
+University of Shmupland 3,142,114,3342,3082,4,4,38
+University of Sapphire Bay,128,128,2796,3041,5,5,48
+University of Kaeshar 5,117,139,3106,2566,6,6,59
+University of Shmupland 1,107,149,3286,3042,7,7,75
+University of Shmupland 2,97,159,2841,3212,8,8,82
+University of Shmupland 5,96,160,2619,2960,9,9,83
+University of Kaeshar 4,95,161,2805,3003,10,10,86
+Division 4,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
+University of Byisotia,178,78,2775,2743,1,1,3
+University of Lizabechai,158,98,2935,2802,2,2,19
+University of Alieosia,154,102,3255,2996,3,3,21
+University of Lveinta,153,103,2850,2637,4,4,24
+University of Levikeana Solvae,124,132,2545,2772,5,5,53
+University of Pyzus,114,142,2865,2712,6,6,65
+University of Vrelinku,113,143,2685,2733,7,7,66
+University of Eastern Alveske,113,143,3136,3225,8,8,67
+University of Hkamnsi,108,148,2965,3088,9,9,74
+University of Nomvas,87,169,2658,3016,10,10,92
+Division 5,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
+University of Quiita-Kyudosia,172,84,3207,3339,1,1,8
+University of Venasul,148,108,3122,3145,2,2,31
+University of Eirnvse,133,123,3239,3180,3,3,46
+University of Kholka,131,125,2787,2905,4,4,47
+University of Floria,119,137,3277,3193,5,5,55
+University of Ncov Ntiajeb,116,140,3091,2838,6,6,61
+University of Soniara,116,140,3334,3219,7,7,62
+University of Svitharia,95,161,3107,3242,8,8,84
+University of Zhiwasen,79,177,2664,3281,9,9,99
+University of Aavana,71,185,2807,3028,10,10,100
+Division 6,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
+University of Vigim,173,83,3084,2879,1,1,5
+Stedro Institute of Technology,154,102,3035,2836,2,2,22
+Naskitrusk University,153,103,3167,2796,3,3,23
+University of Arinis,148,108,3434,3157,4,4,29
+University of Boltway,140,116,2933,2934,5,5,40
+Atresmi University,139,117,3204,3250,6,6,42
+University of Vincent,137,119,3294,3193,7,7,44
+Esmal District University,118,138,3176,3200,8,8,57
+University of Tri_National_Dominion 2,110,146,3551,3089,9,9,69
+University of Herelle,80,176,2621,3209,10,10,98
+Division 7,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
+University of Yoka Tse,177,79,3020,2739,1,1,4
+University of Avura Aviation & Economics (A&E),163,93,3379,3107,2,2,15
+University of University of Central Paradaniton,152,104,2908,2736,3,3,25
+University of Imperial Institute at Levzent,146,110,2743,2893,4,4,34
+University of Imperial Institute at Faehrenfall,144,112,3447,3091,5,5,35
+University of Western University,116,140,2820,2845,6,6,63
+University of Akarine,112,144,3008,2856,7,7,68
+University of Chizait University,106,150,2879,2935,8,8,76
+University of Ciulo,97,159,3077,3196,9,9,80
+University of Vikasa,91,165,2450,2971,10,10,88
+Division 8,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
+University of Pokoj,169,87,3043,2691,1,1,9
+University of Biodry,164,92,3176,2981,2,2,12
+University of Holykol,164,92,3294,3205,3,3,13
+University of Starrie,142,114,3235,3147,4,4,39
+University of Protopolis,127,129,3378,3170,5,5,49
+University of Lumein,117,139,2761,2985,6,6,60
+University of Norkute,103,153,2808,2900,7,7,77
+University of Vatallus,98,158,2797,3084,8,8,79
+University of Seraphia,82,174,3322,3309,9,9,96
+University of Forssa,82,174,2511,2955,10,10,97
+Division 9,Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank
+University of Ikkuvvuki,160,96,3077,2831,1,1,17
+University of Aahrus 2,159,97,3250,3006,2,2,18
+University of Fiik Lanki Akol,148,108,2968,2903,3,3,30
+University of Aahrus 1,143,113,3273,2776,4,4,37
+University of Bongatar 1,137,119,3262,3143,5,5,43
+University of Vikkada,134,122,2671,2958,6,6,45
+University of Maxwmkakki,118,138,2717,2894,7,7,58
+University of Lnwm,110,146,3062,3229,8,8,70
+University of Bongatar 2,109,147,2805,2936,9,9,73
+University of Yuofuan,93,163,2728,3220,10,10,87

@@ -19,12 +19,12 @@ public class Offseason
     }
     private void runOffseason()
     {
-        
+        EndSeasons();
         checkRetirements();        
         resignPlayers();
         ExecuteDrafts();
         signFreeAgents();
-        EndSeasons();
+        ResetStats();
         
     }
     private void EndSeasons()
@@ -36,6 +36,18 @@ public class Offseason
             foreach(player p in team)
             {
                 p.endSeason();
+            }
+        }
+    }
+    private void ResetStats()
+    {
+        foreach (team team in teams)
+        {
+            team.ResetStats();
+            //team.GetAffiliate().endSeason();
+            foreach (player p in team)
+            {
+                p.ResetStats();
             }
         }
     }
@@ -70,9 +82,9 @@ public class Offseason
         }
         freeAgency = tempFreeAgency;
 
-        displayPlayers display = new displayPlayers();
-        display.setPlayers(retiredPlayers);
-        display.ShowDialog();
+        //displayPlayers display = new displayPlayers();
+        //display.setPlayers(retiredPlayers);
+        //display.ShowDialog();
     }
     private void resignPlayers()
     {
@@ -96,9 +108,46 @@ public class Offseason
     }
     private void signFreeAgents()
     {
+        
         foreach(team team in teams)
+        {
+            team.SetFree();
+            team.offerToFreeAgents(freeAgency, r);
+        }
+        FreeAgents newFreeAgents = new FreeAgents();
+        foreach(player p in freeAgency.GetAllPlayers())
+        {
+            if(!p.Signed(r, false))
+            {
+                newFreeAgents.Add(p);
+            }
+        }
+        freeAgency = newFreeAgents;
+        foreach (team team in teams)
         {
             team.offerToFreeAgents(freeAgency, r);
         }
+        newFreeAgents = new FreeAgents();
+        foreach (player p in freeAgency.GetAllPlayers())
+        {
+            if (!p.Signed(r, false))
+            {
+                newFreeAgents.Add(p);
+            }
+        }
+        freeAgency = newFreeAgents;
+        foreach (team team in teams)
+        {
+            team.offerToFreeAgents(freeAgency, r);
+        }
+        newFreeAgents = new FreeAgents();
+        foreach (player p in freeAgency.GetAllPlayers())
+        {
+            if (!p.Signed(r, true))
+            {
+                newFreeAgents.Add(p);
+            }
+        }
+        freeAgency = newFreeAgents;
     }
 }

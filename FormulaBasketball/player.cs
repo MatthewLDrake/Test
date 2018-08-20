@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 [Serializable]
 public class player : IComparable<player>
 {
@@ -172,6 +173,15 @@ public class player : IComparable<player>
         this.development = development;
 
     }
+    private bool isRookie;
+    public void IsRookie()
+    {
+        isRookie = true;
+    }
+    public bool Rookie()
+    {
+        return isRookie;
+    }
     public string GetPositionAsString()
     {
         switch(position)
@@ -190,6 +200,144 @@ public class player : IComparable<player>
                 return "";
 
         }
+    }
+    public bool FreeAgentSigned()
+    {
+        return sign;
+    }
+    private bool sign = false;
+    int personality = 0;
+    public bool Signed(FormulaBasketball.Random r, bool last)
+    {        
+        if (contractOffers != null && contractOffers.Count > 0)
+        {
+            double highestScore = -1240100;
+            FreeAgentContracts highestTeam = null;
+
+            foreach (FreeAgentContracts contract in contractOffers)
+            {
+                if (personality == 0) personality = r.Next(1, 3);
+
+                if (personality == 1)
+                {
+                    double score = 26.036253880057 - 1.0221013187906 * (32 - contract.GetTeam().GetDraftPlace()) - 0.014819245082403 * (32 - contract.GetTeam().GetDraftPlace()) * (32 - contract.GetTeam().GetDraftPlace()) + 0.00066668381608959 * (32 - contract.GetTeam().GetDraftPlace()) * (32 - contract.GetTeam().GetDraftPlace()) * (32 - contract.GetTeam().GetDraftPlace());
+                    double minResult = .8 * getOverall() - 43;
+
+                    minResult = Math.Max(1, Math.Min(25, minResult));
+
+
+                    double moneyDiff = contract.GetContract().GetMoney() - minResult;
+
+                    if (moneyDiff > 0)
+                    {
+                        score += 0.04762 * moneyDiff * moneyDiff + 6.524 * moneyDiff + 30.00;
+                    }
+                    else
+                    {
+                        score += 0.5238 * moneyDiff * moneyDiff + 18.24 * moneyDiff + 30.00;
+                    }
+                    if(score > highestScore)
+                    {
+                        highestScore = score;
+                        highestTeam = contract;
+                    }
+                }
+                // playingTime
+                else if(personality == 2)
+                {
+                    double score = 0;
+                    player bestPlayer = null;
+                    foreach (player p in contract.GetTeam().getAllPlayer())
+                    {
+                        if(p.getPosition() == getPosition())
+                        {
+                            if (bestPlayer == null || bestPlayer.getOverall() < p.getOverall()) bestPlayer = p;
+                        }
+                    }
+                    if (getOverall() > bestPlayer.getOverall()) score = 1000;
+                    else
+                    {
+                        foreach (player p in contract.GetTeam().getAllPlayer())
+                        {
+                            int rank = 1;
+                            if (p.getPosition() == getPosition())
+                            {
+                                if (p.getOverall() > getOverall()) rank++;
+                                
+                            }
+                            score = 145 - 48.75 * rank + 8.125 * rank * rank - 0.625 * rank * rank * rank;
+                        }
+                    }
+
+                    if(score == 1000 && highestScore == 1000)
+                    {
+                        if(contract.GetTeam().GetDraftPlace() < highestTeam.GetTeam().GetDraftPlace())
+                        {
+                            highestTeam = contract;
+                        }
+                    }
+
+                    if (score > highestScore)
+                    {
+                        highestScore = score;
+                        highestTeam = contract;
+                    }
+                    else if(score == highestScore)
+                    {
+                        if (contract.GetTeam().GetDraftPlace() < highestTeam.GetTeam().GetDraftPlace())
+                        {
+                            highestTeam = contract;
+                        }
+                    }
+                }
+                // money only
+                else
+                {
+                    double score = 0;
+                    double minResult = .8 * getOverall() - 43;
+
+                    minResult = Math.Max(1, Math.Min(25, minResult));
+
+
+                    double moneyDiff = contract.GetContract().GetMoney() - minResult;
+
+                    if (moneyDiff > 0)
+                    {
+                        score += 0.04762 * moneyDiff * moneyDiff + 6.524 * moneyDiff + 30.00;
+                    }
+                    else
+                    {
+                        score += 0.5238 * moneyDiff * moneyDiff + 18.24 * moneyDiff + 30.00;
+                    }
+                    if (score > highestScore)
+                    {
+                        highestScore = score;
+                        highestTeam = contract;
+                    }
+                }
+
+            }
+            double num = 1.6666666666667 * highestScore - 0.012 * highestScore * highestScore + 5.3333333333333E-5 * highestScore * highestScore * highestScore;
+            if (last || r.Next(100) < num)
+            {
+                highestTeam.GetTeam().addPlayer(this);
+                contract = highestTeam.GetContract();
+                sign = true;
+            }
+
+        }
+        
+        return sign;
+    }
+
+    private List<FreeAgentContracts> contractOffers;
+    public void OfferFreeAgentContract(Contract contract, team team)
+    {
+        if(contractOffers == null)
+        {
+            contractOffers = new List<FreeAgentContracts>();
+        }
+        contractOffers.Add(new FreeAgentContracts(contract,team));
     }
     public void Stamina()
     {
@@ -414,16 +562,21 @@ public class player : IComparable<player>
     }
     private int[] careerStats;
     public void endSeason()
-    {
-        if(careerStats == null)
-        {
-            careerStats = new int[stats.Length];
-        }
+    {        
         if(contract != null)
         {
             contract.AdvanceYear();
         }
-        for(int i = 0; i < careerStats.Length; i++)
+        isRookie = false;
+        age++;
+    }
+    public void ResetStats()
+    {
+        if (careerStats == null)
+        {
+            careerStats = new int[stats.Length];
+        }
+        for (int i = 0; i < careerStats.Length; i++)
         {
             careerStats[i] += stats[i];
             stats[i] = 0;
@@ -431,8 +584,7 @@ public class player : IComparable<player>
         gamesPlayed = 0;
         pointDiff = 0;
         starts = 0;
-
-        age++;
+        
     }
     public void Reset()
     {
@@ -1502,5 +1654,23 @@ public class player : IComparable<player>
     public void Pulled()
     {
         seconds = 0;
+    }
+}
+class FreeAgentContracts
+{
+    private Contract contract;
+    private team team;
+    public FreeAgentContracts(Contract contract, team team)
+    {
+        this.contract = contract;
+        this.team = team;            
+    }
+    public Contract GetContract()
+    {
+        return contract;
+    }
+    public team GetTeam()
+    {
+        return team;
     }
 }

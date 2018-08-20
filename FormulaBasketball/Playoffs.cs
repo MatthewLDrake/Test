@@ -2504,6 +2504,7 @@ namespace FormulaBasketball
 
             }
             List<team> playoffOrder = new List<team>();
+            formulaBasketball.championshipsContents += formulaBasketball.create.getTeam(topSeedConferenceA).ToString() + "\t" + conferenceAWinCounter[0] + "\t\t" + conferenceAWinCounter[7] + "\t" + formulaBasketball.create.getTeam(topSeedConferenceB) + "\t";
             if (conferenceAWinCounter[0] == 4)
             {
                 playoffOrder.Add(formulaBasketball.create.getTeam(topSeedConferenceA));

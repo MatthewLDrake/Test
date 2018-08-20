@@ -1,32 +1,32 @@
-Dotruga Falno: 87.0097777777778
+Dotruga Falno: 87.0975555555555
 Solea Geysers: 86.3193333333333
 Calto Cows: 84.5104444444444
+Serkr Atolls: 82.8311111111111
 Pyxanovia Pixies: 81.37
 Boltway Bad Dragons: 80.6437777777778
-Serkr Atolls: 80.5342222222222
 Dvimne Spirits: 80.3215555555556
-Aiyota Pumps: 78.1811111111111
+Holy Yektonisa Bishops: 79.7533333333333
+Holykol Bears: 79.0991111111111
+Aiyota Pumps: 78.5886666666667
+Stedro Boulders: 78.274
 Auspikitan Golden Falcons: 77.5917777777778
-Holykol Bears: 77.2011111111111
-Bongatar Banging Bongos: 76.4017777777778
-Stedro Boulders: 76.3406666666667
-Holy Yektonisa Bishops: 75.9257777777778
-Barsein Bats: 75.828
-Faehrenfall Feathercats: 75.7046666666667
-Ethanthova Ponies: 74.828
-Sagua Ocelots: 74.5115555555556
-Manwx Saguans: 74.3608888888889
-Shmupland Dictators: 74.3251111111111
-Red Rainbow Sickles: 73.8108888888889
+Ethanthova Ponies: 77.1822222222222
+Faehrenfall Feathercats: 76.8286666666667
+Manwx Saguans: 76.8022222222222
+Czalliso Pythons: 76.6666666666667
+Barsein Bats: 76.4431111111111
+Autolik Autonomy: 76.43
+Transhimalia Disasters: 76.2437777777778
+Bongatar Banging Bongos: 76.2066666666667
+Blanaxon Hammers: 76.1406666666667
+Red Rainbow Sickles: 75.8891111111111
+Aahrus Moosi: 75.7517777777778
+Height Sagua Cats: 75.2082222222222
+Shmupland Dictators: 75.1091111111111
+Lyintaria Lynx: 74.6724444444444
+Sagua Ocelots: 74.5911111111111
+Naxda Nomads: 74.3802222222222
+TND Tanks: 74.0022222222222
+Kaeshar Kaisers: 73.9524444444445
 Avura Aviators: 73.8082222222222
-Blanaxon Hammers: 73.3842222222222
-Czalliso Pythons: 72.5684444444444
-TND Tanks: 72.5608888888889
-Lyintaria Lynx: 72.5066666666667
-Height Sagua Cats: 72.4962222222222
-Transhimalia Disasters: 72.4108888888889
-Aahrus Moosi: 72.156
-Kaeshar Kaisers: 71.8577777777778
-Naxda Nomads: 71.6586666666667
-Autolik Autonomy: 71.0042222222222
-Key to Don Yees: 68.3033333333333
+Key to Don Yees: 72.326

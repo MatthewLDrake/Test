@@ -134,6 +134,10 @@ public class team : IComparable<team>,  IEnumerable<player>
         pointsAgainst = 0;
         lastGames = new Queue<Int32>();
     }
+    public void ResetStats()
+    {
+        draftPlace = 0;
+    }
     public void AddFutureDraftPick(DraftPick pick)
     {
         if (nextSeasonPicks == null) nextSeasonPicks = new List<DraftPick>();
@@ -461,7 +465,8 @@ public class team : IComparable<team>,  IEnumerable<player>
             player bestPlayer = FindBestPlayerByPos(i+1);
             if(bestPlayer == null || players[i].getOverall() - bestPlayer.getOverall() > greatestDifferenceInOverall)
             {
-                greatestDifferenceInOverall = players[i].getOverall() - bestPlayer.getOverall();
+                if (bestPlayer == null) greatestDifferenceInOverall = 100;
+                else greatestDifferenceInOverall = players[i].getOverall() - bestPlayer.getOverall();
                 positionToDraft = i;
             }
         }
@@ -516,14 +521,110 @@ public class team : IComparable<team>,  IEnumerable<player>
         }
         retiredList.Add(player);
     }
-
+    private bool firstFree= true;
+    public void SetFree()
+    {
+        firstFree = true;
+    }
+    private List<player>[] playersOffered;
     public void offerToFreeAgents(FreeAgents freeAgency, FormulaBasketball.Random r)
     {
-        List<player> organizationPlayers = new List<player>();
-        foreach (player p in players) organizationPlayers.Add(p);
-        foreach (player p in affiliate.getAllPlayer()) organizationPlayers.Add(p);
-    }
+        if(firstFree)
+        {
+            playersOffered = new List<player>[5];
+            for (int i = 0; i < playersOffered.Length; i++)
+                playersOffered[i] = new List<player>();
+        }
+        else
+        {
+            for (int i = 0; i < playersOffered.Length; i++)
+                foreach (player p in playersOffered[i])
+                    if (p.FreeAgentSigned())
+                        playersOffered[i].Remove(p);
+        }
+        List<player>[] organizationPlayers = new List<player>[5];
+        for (int i = 0; i < organizationPlayers.Length; i++)
+            organizationPlayers[i] = new List<player>();
+        foreach (player p in players) organizationPlayers[p.getPosition() - 1].Add(p);
+        foreach (player p in affiliate.getAllPlayer()) organizationPlayers[p.getPosition() - 1].Add(p);
 
+        for (int i = 0; i < organizationPlayers.Length; i++)
+            organizationPlayers[i] = Sort(organizationPlayers[i]);
+
+        int[] counts = new int[5];
+        for(int i = 0; i < counts.Length; i++)
+        {
+            counts[i] = 7 - organizationPlayers[i].Count;
+        }
+
+        for(int i = 0; i < counts.Length; i++)
+        {
+            List<player> players = freeAgency.GetPlayersByPos(i + 1);
+            int index = 0;
+            while(true)
+            {
+                if (players[index].getOverall() < organizationPlayers[i][organizationPlayers[i].Count - 1].getOverall())break;
+
+                player current = players[index];
+
+                int playersLeft = counts[i] - playersOffered[i].Count;
+
+                double percent = 41.5625 + 17.604166666667 * playersLeft + 0.9375 * playersLeft * playersLeft - 0.10416666666667 * playersLeft * playersLeft * playersLeft;
+
+                if (percent < 0) break;
+                if (r.Next(100) < percent)
+                {
+                    OfferFreeAgent(current);
+                    playersOffered[i].Add(current);
+                }
+
+                index++;
+            }
+        }
+
+
+    }
+    private void OfferFreeAgent(player p)
+    {
+        Contract contract = null;
+
+        if (p.getOverall() < 60)
+        {
+            contract = new Contract(1, 1);
+        }
+        else
+        {
+            double money = -9270 + 402.41666666667 * p.getOverall() - 5.825 * p.getOverall() * p.getOverall() + 0.028333333333333 * p.getOverall() * p.getOverall() * p.getOverall();
+
+            money = Math.Round(money);
+            money = r.Next(-10, 10);
+            money = money / 10;            
+
+            money = Math.Min(Math.Max(money, 1), 25);
+
+            contract = new Contract(r.Next(1, 4), money);
+        }       
+
+        p.OfferFreeAgentContract(contract, this);
+
+    }
+    private List<player> Sort(List<player> list)
+    {
+        player temp = null;
+        for (int write = 0; write < list.Count; write++)
+        {
+            for (int sort = 0; sort < list.Count - 1; sort++)
+            {
+                if (list[sort].getOverall() < list[sort + 1].getOverall())
+                {
+                    temp = list[sort + 1];
+                    list[sort + 1] = list[sort];
+                    list[sort] = temp;
+                }
+            }
+        }
+        return list;
+    }
     public void removeRetiredPlayers()
     {
         if (retiredList == null) return;
@@ -1368,5 +1469,6 @@ public class DraftPick
     public void SelectPlayer(player selectedPlayer)
     {
         this.selectedPlayer = selectedPlayer;
+        owner.addPlayer(selectedPlayer);
     }
 }

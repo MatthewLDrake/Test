@@ -1,36 +1,180 @@
 Division A, Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank, Division Wins, Division Losses, Conference Wins, Conference Losses
-Solea Geysers,56,28,20980,19812,1,1,3,4,0,34,18,L1,5 - 5
-Sagua Ocelots,56,28,19954,19318,2,2,4,2,2,34,18,L1,7 - 3
-Calto Cows,51,33,19021,18428,3,3,6,0,4,30,22,W2,6 - 4
-Aahrus Moosi,51,33,20455,20179,4,4,7,2,2,32,20,L1,4 - 6
-Auspikitan Golden Falcons,39,45,18196,18265,5,9,17,0,0,23,29,W3,5 - 5
-Key to Don Yees,37,47,20609,21335,6,12,22,2,2,23,29,W1,4 - 6
-Manwx Saguans,36,48,19953,20662,7,13,24,3,1,24,28,L4,5 - 5
-Height Sagua Cats,27,57,19378,20075,8,16,32,1,3,17,35,L3,5 - 5
+Calto Cows,56,28,18941,18335,1,2,5,2,2,38,14,L1,5 - 5
+Solea Geysers,52,32,20930,19750,2,4,7,2,2,36,16,L2,6 - 4
+Sagua Ocelots,45,39,19684,19468,3,5,11,1,3,29,23,W3,5 - 5
+Aahrus Moosi,42,42,20444,20245,4,8,15,2,2,29,23,L1,6 - 4
+Auspikitan Golden Falcons,42,42,18139,18276,5,9,16,0,0,31,21,W5,6 - 4
+Key to Don Yees,31,53,20440,21104,6,14,28,1,3,16,36,W1,5 - 5
+Height Sagua Cats,25,59,19576,20324,7,15,31,0,4,10,42,L6,1 - 9
+Manwx Saguans,24,60,19660,20439,8,16,32,1,3,16,36,L1,2 - 8
 Division B
-Kaeshar Kaisers,48,36,19231,19059,1,5,9,2,1,31,21,W5,7 - 3
-Serkr Atolls,47,37,18983,18408,2,6,10,2,1,28,24,W1,7 - 3
-Shmupland Dictators,44,40,19679,19752,3,7,14,1,2,32,20,W1,5 - 5
-Naxda Nomads,39,45,18524,18505,4,8,16,2,1,25,27,W1,2 - 8
-Barsein Bats,38,46,19814,19948,5,10,19,1,2,25,27,L2,5 - 5
-Blanaxon Hammers,38,46,20671,20926,6,11,20,0,3,26,26,L7,2 - 8
-Autolik Autonomy,28,56,18161,18628,7,14,30,0,3,15,37,W2,6 - 4
-Red Rainbow Sickles,28,56,20194,20765,8,15,31,1,2,17,35,L2,3 - 7
+Kaeshar Kaisers,60,24,19378,19019,1,1,3,1,2,38,14,W3,8 - 2
+Serkr Atolls,53,31,18873,18239,2,3,6,1,2,33,19,W1,4 - 6
+Barsein Bats,44,40,19940,19881,3,6,12,1,2,26,26,W3,5 - 5
+Naxda Nomads,43,41,18698,18532,4,7,13,0,3,30,22,L2,7 - 3
+Shmupland Dictators,38,46,19732,19794,5,10,18,2,1,25,27,L3,4 - 6
+Red Rainbow Sickles,35,49,20104,20549,6,11,23,0,3,21,31,L1,5 - 5
+Blanaxon Hammers,33,51,20385,20914,7,12,26,0,3,20,32,L3,5 - 5
+Autolik Autonomy,32,52,18075,18495,8,13,27,0,3,18,34,W1,3 - 7
 Division C
-Dotruga Falno,63,21,21055,19645,1,1,1,1,1,43,11,L1,6 - 4
-Aiyota Pumps,45,39,22591,22437,2,6,12,2,0,29,25,W2,4 - 6
-Boltway Bad Dragons,45,39,20406,20374,3,7,13,1,1,31,23,W1,2 - 8
-TND Tanks,42,42,19925,20620,4,8,15,1,1,25,29,W4,6 - 4
-Avura Aviators,36,48,21060,21431,5,11,23,1,1,23,31,L3,5 - 5
-Stedro Boulders,35,49,19047,18970,6,12,25,1,1,22,32,L1,4 - 6
-Ethanthova Ponies,34,50,21902,22139,7,13,26,0,2,22,32,L2,4 - 6
-Faehrenfall Feathercats,34,50,18703,19058,8,15,28,1,1,21,33,W4,9 - 1
+Dotruga Falno,61,23,21033,19718,1,2,2,2,0,38,16,W4,8 - 2
+Aiyota Pumps,51,33,22495,22244,2,4,8,1,1,31,23,W1,5 - 5
+Boltway Bad Dragons,51,33,20399,20287,3,5,9,2,0,29,25,W1,5 - 5
+Stedro Boulders,40,44,19092,18978,4,8,17,1,1,25,29,W2,3 - 7
+Faehrenfall Feathercats,36,48,18784,19154,5,10,20,0,2,23,31,L1,8 - 2
+Avura Aviators,36,48,21123,21607,6,11,21,1,1,26,28,L3,5 - 5
+TND Tanks,34,50,19816,20778,7,14,25,1,1,23,31,W1,4 - 6
+Ethanthova Ponies,30,54,22047,22276,8,15,29,0,2,17,37,L1,3 - 7
 Division D
-Dvimne Spirits,60,24,19240,18083,1,2,2,2,0,35,19,W5,8 - 2
-Bongatar Banging Bongos,51,33,19126,18515,2,3,5,1,1,32,22,L1,5 - 5
-Pyxanovia Pixies,48,36,20770,20277,3,4,8,2,0,29,25,W1,5 - 5
-Holykol Bears,46,38,21862,21763,4,5,11,2,0,30,24,W1,6 - 4
-Holy Yektonisa Bishops,39,45,18700,18983,5,9,18,2,0,26,28,W3,5 - 5
-Transhimalia Disasters,37,47,20515,20946,6,10,21,0,2,26,28,L1,7 - 3
-Lyintaria Lynx,34,50,19942,20271,7,14,27,1,1,22,32,L2,3 - 7
-Czalliso Pythons,32,52,21056,22126,8,16,29,1,1,19,35,L3,3 - 7
+Dvimne Spirits,65,19,19283,17879,1,1,1,1,1,40,14,W6,9 - 1
+Pyxanovia Pixies,57,27,20662,19938,2,3,4,2,0,41,13,L3,7 - 3
+Bongatar Banging Bongos,49,35,19291,18513,3,6,10,0,2,27,27,W2,6 - 4
+Holykol Bears,43,41,21892,22018,4,7,14,0,2,25,29,L1,5 - 5
+Lyintaria Lynx,37,47,19865,20206,5,9,19,2,0,26,28,L1,4 - 6
+Transhimalia Disasters,35,49,20093,20436,6,12,22,2,0,23,31,W1,5 - 5
+Holy Yektonisa Bishops,35,49,18697,19142,7,13,24,1,1,19,35,L2,2 - 8
+Czalliso Pythons,29,55,21188,22221,8,16,30,1,1,20,34,W1,4 - 6
+Division A, Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank, Division Wins, Division Losses, Conference Wins, Conference Losses
+Solea Geysers,53,31,9703,9441,1,1,4,3,1,31,21,W4,6 - 4
+Sagua Ocelots,47,37,9315,9212,2,5,10,2,2,26,26,W2,5 - 5
+Calto Cows,46,38,8725,8484,3,6,11,3,1,24,28,W1,8 - 2
+Auspikitan Golden Falcons,41,43,8276,8345,4,9,18,0,0,27,25,L3,5 - 5
+Aahrus Moosi,41,43,9428,9555,5,10,19,2,2,23,29,W1,3 - 7
+Key to Don Yees,35,49,9566,9616,6,12,24,3,1,28,24,L1,5 - 5
+Manwx Saguans,31,53,8900,9395,7,14,28,1,3,19,33,L2,2 - 8
+Height Sagua Cats,29,55,8829,9142,8,16,30,0,4,19,33,L1,3 - 7
+Division B
+Naxda Nomads,52,32,8782,8499,1,2,5,2,1,33,19,L1,4 - 6
+Serkr Atolls,49,35,8823,8616,2,3,8,3,0,30,22,L1,7 - 3
+Kaeshar Kaisers,48,36,8751,8531,3,4,9,2,1,34,18,L1,7 - 3
+Barsein Bats,45,39,9439,9381,4,7,12,2,1,30,22,W2,6 - 4
+Shmupland Dictators,44,40,9345,9237,5,8,15,1,2,24,28,L1,4 - 6
+Autolik Autonomy,39,45,8315,8404,6,11,21,3,0,26,26,W1,6 - 4
+Blanaxon Hammers,35,49,9293,9528,7,13,26,3,0,24,28,W3,5 - 5
+Red Rainbow Sickles,30,54,9258,9564,8,15,29,0,3,18,34,L1,5 - 5
+Division C
+Dotruga Falno,58,26,9926,9450,1,1,1,1,1,38,16,L1,6 - 4
+Aiyota Pumps,55,29,10414,9957,2,2,2,1,1,37,17,W7,7 - 3
+Boltway Bad Dragons,51,33,8912,8670,3,5,7,2,0,33,21,W5,8 - 2
+Stedro Boulders,45,39,8630,8619,4,7,14,1,1,28,26,L7,2 - 8
+Faehrenfall Feathercats,38,46,8614,8780,5,11,22,2,0,24,30,L2,4 - 6
+TND Tanks,37,47,9036,9367,6,12,23,1,1,26,28,L3,3 - 7
+Ethanthova Ponies,35,49,10041,10211,7,13,25,2,0,19,35,W1,2 - 8
+Avura Aviators,26,58,9947,10378,8,16,32,1,1,17,37,W1,5 - 5
+Division D
+Dvimne Spirits,53,31,8734,8440,1,3,3,1,1,33,21,L2,5 - 5
+Pyxanovia Pixies,51,33,9726,9404,2,4,6,2,0,35,19,W1,5 - 5
+Transhimalia Disasters,45,39,9370,9356,3,6,13,1,1,29,25,W2,7 - 3
+Bongatar Banging Bongos,43,41,8565,8549,4,8,16,2,0,25,29,L5,4 - 6
+Holykol Bears,42,42,10106,9908,5,9,17,2,0,32,22,W6,7 - 3
+Holy Yektonisa Bishops,40,44,8513,8500,6,10,20,2,0,25,29,W1,6 - 4
+Czalliso Pythons,32,52,9718,10107,7,14,27,2,0,22,32,L2,4 - 6
+Lyintaria Lynx,28,56,9209,9563,8,15,31,2,0,18,36,W1,4 - 6
+Division A, Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank, Division Wins, Division Losses, Conference Wins, Conference Losses
+Solea Geysers,57,27,9904,9413,1,1,2,2,2,33,19,W3,5 - 5
+Sagua Ocelots,55,29,9597,9127,2,3,4,2,2,35,17,W4,6 - 4
+Key to Don Yees,48,36,9365,9234,3,4,8,3,1,30,22,L1,4 - 6
+Calto Cows,48,36,8700,8628,4,5,9,3,1,29,23,W3,7 - 3
+Aahrus Moosi,41,43,9570,9520,5,9,18,3,1,26,26,L2,6 - 4
+Auspikitan Golden Falcons,37,47,8190,8289,6,10,22,0,0,19,33,W1,6 - 4
+Manwx Saguans,30,54,9156,9482,7,15,30,2,2,21,31,L5,1 - 9
+Height Sagua Cats,23,61,8907,9425,8,16,31,1,3,13,39,W1,3 - 7
+Division B
+Shmupland Dictators,57,27,9453,9065,1,2,3,1,2,37,15,L2,6 - 4
+Naxda Nomads,46,38,8671,8542,2,6,11,2,1,25,27,L1,6 - 4
+Kaeshar Kaisers,46,38,8613,8525,3,7,12,2,1,29,23,L1,5 - 5
+Blanaxon Hammers,46,38,9439,9438,4,8,13,2,1,29,23,W1,4 - 6
+Barsein Bats,37,47,9261,9489,5,11,23,1,2,25,27,W1,3 - 7
+Serkr Atolls,36,48,8721,8779,6,12,24,2,1,24,28,L3,5 - 5
+Red Rainbow Sickles,30,54,9274,9554,7,13,28,0,3,21,31,L1,5 - 5
+Autolik Autonomy,30,54,8288,8576,8,14,29,0,3,20,32,W5,7 - 3
+Division C
+Dotruga Falno,60,24,9937,9481,1,1,1,2,0,40,14,L2,8 - 2
+Faehrenfall Feathercats,43,41,8696,8638,2,7,15,1,1,27,27,W2,4 - 6
+Boltway Bad Dragons,43,41,9031,8996,3,8,16,1,1,25,29,L1,7 - 3
+Avura Aviators,40,44,9992,10093,4,10,19,1,1,25,29,W2,5 - 5
+Ethanthova Ponies,38,46,10055,10236,5,11,20,1,1,26,28,L1,3 - 7
+Stedro Boulders,37,47,8785,8809,6,12,21,0,2,24,30,L1,3 - 7
+TND Tanks,36,48,9306,9493,7,13,25,2,0,27,27,L6,3 - 7
+Aiyota Pumps,35,49,10318,10589,8,14,26,2,0,22,32,W1,4 - 6
+Division D
+Pyxanovia Pixies,54,30,9808,9351,1,2,5,1,1,35,19,W1,6 - 4
+Bongatar Banging Bongos,54,30,8631,8294,2,3,6,1,1,33,21,W1,9 - 1
+Dvimne Spirits,53,31,8796,8468,3,4,7,1,1,34,20,W3,7 - 3
+Holy Yektonisa Bishops,47,37,8874,8806,4,5,10,2,0,29,25,W3,5 - 5
+Holykol Bears,43,41,10165,10064,5,6,14,1,1,28,26,L7,3 - 7
+Transhimalia Disasters,42,42,9553,9652,6,9,17,0,2,27,27,L1,6 - 4
+Lyintaria Lynx,35,49,9323,9605,7,15,27,0,2,22,32,W1,5 - 5
+Czalliso Pythons,17,67,9305,10023,8,16,32,1,1,9,45,L3,3 - 7
+Division A, Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank, Division Wins, Division Losses, Conference Wins, Conference Losses
+Solea Geysers,59,25,10109,9751,1,1,2,3,1,34,18,L1,7 - 3
+Calto Cows,57,27,8856,8548,2,2,3,4,0,36,16,W5,9 - 1
+Aahrus Moosi,49,35,9780,9604,3,4,6,3,1,32,20,W2,7 - 3
+Sagua Ocelots,45,39,9442,9370,4,5,10,2,2,24,28,L4,5 - 5
+Key to Don Yees,39,45,9284,9498,5,10,20,4,0,24,28,L1,6 - 4
+Auspikitan Golden Falcons,35,49,8376,8605,6,11,26,0,0,20,32,L5,2 - 8
+Height Sagua Cats,31,53,9168,9479,7,14,30,2,2,20,32,W1,3 - 7
+Manwx Saguans,30,54,9427,9714,8,15,31,1,3,22,30,L2,4 - 6
+Division B
+Naxda Nomads,51,33,8772,8620,1,3,5,1,2,30,22,W2,6 - 4
+Shmupland Dictators,44,40,9584,9377,2,6,11,1,2,30,22,W2,6 - 4
+Serkr Atolls,44,40,8936,8851,3,7,12,3,0,29,23,W1,7 - 3
+Kaeshar Kaisers,44,40,8933,8880,4,8,14,0,3,28,24,L2,3 - 7
+Red Rainbow Sickles,40,44,9482,9582,5,9,18,2,1,27,25,L1,5 - 5
+Blanaxon Hammers,34,50,9442,9570,6,12,27,1,2,22,30,W1,4 - 6
+Barsein Bats,31,53,9117,9427,7,13,29,0,3,16,36,L1,3 - 7
+Autolik Autonomy,28,56,8314,8667,8,16,32,1,2,22,30,W1,3 - 7
+Division C
+Dotruga Falno,45,39,9738,9626,1,4,8,2,0,28,26,L1,5 - 5
+TND Tanks,44,40,9421,9421,2,7,15,1,1,28,26,W1,5 - 5
+Boltway Bad Dragons,42,42,9041,8970,3,8,16,1,1,31,23,L3,3 - 7
+Faehrenfall Feathercats,39,45,8534,8581,4,10,19,1,1,24,30,L9,1 - 9
+Avura Aviators,38,46,9957,10166,5,11,21,1,1,23,31,W1,6 - 4
+Aiyota Pumps,37,47,10232,10245,6,12,22,2,0,24,30,W3,6 - 4
+Stedro Boulders,36,48,8814,8930,7,13,23,1,1,26,28,L1,7 - 3
+Ethanthova Ponies,34,50,9976,10152,8,16,28,1,1,18,36,W1,6 - 4
+Division D
+Pyxanovia Pixies,66,18,10015,9447,1,1,1,2,0,44,10,W3,8 - 2
+Dvimne Spirits,52,32,8892,8633,2,2,4,1,1,33,21,L1,4 - 6
+Holykol Bears,48,36,10398,10230,3,3,7,2,0,30,24,W2,5 - 5
+Bongatar Banging Bongos,45,39,8569,8488,4,5,9,1,1,29,25,L2,6 - 4
+Holy Yektonisa Bishops,44,40,8922,8866,5,6,13,1,1,26,28,W1,7 - 3
+Czalliso Pythons,41,43,10171,10135,6,9,17,1,1,25,29,L1,3 - 7
+Lyintaria Lynx,36,48,9592,9712,7,14,24,1,1,22,32,L5,2 - 8
+Transhimalia Disasters,36,48,9133,9282,8,15,25,0,2,24,30,W2,6 - 4
+Division A, Wins,Losses,Points Scored,Points Against,Division Rank,Conference Rank,League Rank, Division Wins, Division Losses, Conference Wins, Conference Losses
+Aahrus Moosi,0,0,0,0,1,1,1,0,0,0,0,L0,0 - 0
+Auspikitan Golden Falcons,0,0,0,0,2,2,3,0,0,0,0,L0,0 - 0
+Calto Cows,0,0,0,0,3,6,10,0,0,0,0,L0,0 - 0
+Height Sagua Cats,0,0,0,0,4,7,16,0,0,0,0,L0,0 - 0
+Key to Don Yees,0,0,0,0,5,9,20,0,0,0,0,L0,0 - 0
+Manwx Saguans,0,0,0,0,6,10,22,0,0,0,0,L0,0 - 0
+Sagua Ocelots,0,0,0,0,7,13,26,0,0,0,0,L0,0 - 0
+Solea Geysers,0,0,0,0,8,16,29,0,0,0,0,L0,0 - 0
+Division B
+Autolik Autonomy,0,0,0,0,1,3,4,0,0,0,0,L0,0 - 0
+Barsein Bats,0,0,0,0,2,4,6,0,0,0,0,L0,0 - 0
+Blanaxon Hammers,0,0,0,0,3,5,7,0,0,0,0,L0,0 - 0
+Kaeshar Kaisers,0,0,0,0,4,8,19,0,0,0,0,L0,0 - 0
+Naxda Nomads,0,0,0,0,5,11,23,0,0,0,0,L0,0 - 0
+Red Rainbow Sickles,0,0,0,0,6,12,25,0,0,0,0,L0,0 - 0
+Serkr Atolls,0,0,0,0,7,14,27,0,0,0,0,L0,0 - 0
+Shmupland Dictators,0,0,0,0,8,15,28,0,0,0,0,L0,0 - 0
+Division C
+Aiyota Pumps,0,0,0,0,1,1,2,0,0,0,0,L0,0 - 0
+Avura Aviators,0,0,0,0,2,2,5,0,0,0,0,L0,0 - 0
+Boltway Bad Dragons,0,0,0,0,3,3,8,0,0,0,0,L0,0 - 0
+Dotruga Falno,0,0,0,0,4,6,12,0,0,0,0,L0,0 - 0
+Ethanthova Ponies,0,0,0,0,5,8,14,0,0,0,0,L0,0 - 0
+Faehrenfall Feathercats,0,0,0,0,6,9,15,0,0,0,0,L0,0 - 0
+Stedro Boulders,0,0,0,0,7,14,30,0,0,0,0,L0,0 - 0
+TND Tanks,0,0,0,0,8,15,31,0,0,0,0,L0,0 - 0
+Division D
+Bongatar Banging Bongos,0,0,0,0,1,4,9,0,0,0,0,L0,0 - 0
+Czalliso Pythons,0,0,0,0,2,5,11,0,0,0,0,L0,0 - 0
+Dvimne Spirits,0,0,0,0,3,7,13,0,0,0,0,L0,0 - 0
+Holy Yektonisa Bishops,0,0,0,0,4,10,17,0,0,0,0,L0,0 - 0
+Holykol Bears,0,0,0,0,5,11,18,0,0,0,0,L0,0 - 0
+Lyintaria Lynx,0,0,0,0,6,12,21,0,0,0,0,L0,0 - 0
+Pyxanovia Pixies,0,0,0,0,7,13,24,0,0,0,0,L0,0 - 0
+Transhimalia Disasters,0,0,0,0,8,16,32,0,0,0,0,L0,0 - 0

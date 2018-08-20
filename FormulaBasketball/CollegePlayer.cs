@@ -108,6 +108,7 @@ public class CollegePlayer : player, ICloneable
         if(getOverall() > 70)
         {
             wentPro = true;
+            IsRookie();
             return true;
         }
 
@@ -120,6 +121,7 @@ public class CollegePlayer : player, ICloneable
                 if (year > 4 && starts > 0)
                 {
                     wentPro = true;
+                    IsRookie();
                     return true;
                 }
                 else
@@ -127,7 +129,14 @@ public class CollegePlayer : player, ICloneable
                     return false;
                 }
             case OVERALL_BASED:
-                return getOverall() > 55;
+                if (getOverall() > 55)
+                {
+                    wentPro = true;
+                    IsRookie();
+                    return true;
+                }
+                break;
+
             case SUCCESS_BASED:
                 break;
             case MIXED:
@@ -136,11 +145,13 @@ public class CollegePlayer : player, ICloneable
         if (starts > 20 && getOverall() > 50 && team.getWins() >= team.getLosses())
         {
             wentPro = true;
+            IsRookie();
             return true; 
         }
         if (starts > 20 && getOverall() > 60)
         {
             wentPro = true;
+            IsRookie();
             return true;
         }
         return false;

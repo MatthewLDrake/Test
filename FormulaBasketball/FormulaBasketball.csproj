@@ -219,6 +219,12 @@
     <Compile Include="TestLeague.cs" />
     <Compile Include="TestSchedule.cs" />
     <Compile Include="Trainer.cs" />
+    <Compile Include="YearSim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YearSim.Designer.cs">
+      <DependentUpon>YearSim.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="bracket.resx">
       <DependentUpon>bracket.cs</DependentUpon>
     </EmbeddedResource>
@@ -282,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="teamPicker.resx">
       <DependentUpon>teamPicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YearSim.resx">
+      <DependentUpon>YearSim.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

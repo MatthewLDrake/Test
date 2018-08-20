@@ -1,32 +1,32 @@
-Dotruga Falno: 87.0097777777778
-Solea Geysers: 86.3193333333333
-Calto Cows: 84.5104444444444
-Pyxanovia Pixies: 81.37
-Boltway Bad Dragons: 80.6437777777778
-Serkr Atolls: 80.5342222222222
-Dvimne Spirits: 80.3215555555556
-Aiyota Pumps: 78.1811111111111
-Auspikitan Golden Falcons: 77.5917777777778
-Holykol Bears: 77.2011111111111
-Bongatar Banging Bongos: 76.4017777777778
-Stedro Boulders: 76.3406666666667
-Holy Yektonisa Bishops: 75.9257777777778
-Barsein Bats: 75.828
-Faehrenfall Feathercats: 75.7046666666667
-Ethanthova Ponies: 74.828
-Sagua Ocelots: 74.5115555555556
-Manwx Saguans: 74.3608888888889
-Shmupland Dictators: 74.3251111111111
-Red Rainbow Sickles: 73.8108888888889
-Avura Aviators: 73.8082222222222
-Blanaxon Hammers: 73.3842222222222
-Czalliso Pythons: 72.5684444444444
-TND Tanks: 72.5608888888889
-Lyintaria Lynx: 72.5066666666667
-Height Sagua Cats: 72.4962222222222
-Transhimalia Disasters: 72.4108888888889
-Aahrus Moosi: 72.156
-Kaeshar Kaisers: 71.8577777777778
-Naxda Nomads: 71.6586666666667
-Autolik Autonomy: 71.0042222222222
-Key to Don Yees: 68.3033333333333
+Aahrus Moosi: 99.99
+Holy Yektonisa Bishops: 99.99
+Dvimne Spirits: 99.99
+Czalliso Pythons: 99.99
+Bongatar Banging Bongos: 99.99
+TND Tanks: 99.99
+Stedro Boulders: 99.99
+Ethanthova Ponies: 99.99
+Dotruga Falno: 99.99
+Boltway Bad Dragons: 99.99
+Pyxanovia Pixies: 99.99
+Serkr Atolls: 99.99
+Red Rainbow Sickles: 99.99
+Shmupland Dictators: 99.99
+Kaeshar Kaisers: 99.99
+Auspikitan Golden Falcons: 99.99
+Height Sagua Cats: 99.99
+Key to Don Yees: 99.99
+Manwx Saguans: 99.99
+Solea Geysers: 99.99
+Sagua Ocelots: 99.99
+Blanaxon Hammers: 99.99
+Transhimalia Disasters: 99.99
+Barsein Bats: 99.7382222222222
+Aiyota Pumps: 99.5
+Calto Cows: 99.4577777777778
+Lyintaria Lynx: 99.2526666666667
+Faehrenfall Feathercats: 99.0511111111111
+Holykol Bears: 98.7902222222222
+Avura Aviators: 98.0457777777778
+Naxda Nomads: 97.9768888888889
+Autolik Autonomy: 97.9766666666667

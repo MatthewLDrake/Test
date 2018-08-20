@@ -104,3 +104,4 @@ C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\F
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\FormulaBasketball.csproj.GenerateResource.Cache
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\bin\Debug\FormulaBasketball.exe
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\bin\Debug\FormulaBasketball.pdb
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.YearSim.resources

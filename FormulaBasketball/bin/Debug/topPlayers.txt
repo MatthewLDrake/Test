@@ -1,7 +1,7 @@
 Best Overall Players:
 1. Trevor Oosterhout: 99.99
-2. Litsaw Wap't'ebw: 99.99
-3. Sago Alodetsei: 99.99
+2. Sago Alodetsei: 99.99
+3. Litsaw Wap't'ebw: 99.99
 4. Kersok Milan: 99.0388888888889
 5. Transhilmalia Player #2: 98.5733333333334
 6. Bingarra: 98.5355555555556
@@ -15,14 +15,14 @@ Best Overall Players:
 Best 1's
 1. Atumobei Tute: 89.1377777777778
 2. Alomundi Bituna: 82.4533333333333
-3. Kalani Saysamongdy: 76.6933333333333
-4. vo: 75.3777777777778
-5. Colin Hutchison: 75.0155555555556
-6. Caleb Jervis: 73.7955555555556
-7. Vrá Nonhkwaqan: 73.4844444444444
-8. Thomas Skinner: 72
-9. Boḿa Blamhákpwano: 71.7244444444444
-10. Nobira Taki: 71.4155555555556
+3. Alubembi Keget: 76.8644444444444
+4. Kalani Saysamongdy: 76.6933333333333
+5. vo: 75.3777777777778
+6. Colin Hutchison: 75.0155555555556
+7. Caleb Jervis: 73.7955555555556
+8. Vrá Nonhkwaqan: 73.4844444444444
+9. Max Svensson: 73.06
+10. Max Svensson: 73.06
 
 
 
@@ -34,15 +34,15 @@ Best 2's
 5. Ajanis Vealerko: 80.3555555555556
 6. Eiqe Vokigei: 79.0911111111111
 7. Msenne Prai: 78.7511111111111
-8. Mazló Plókli: 77.58
-9. Kosiro Omundi: 75.1466666666667
-10. Sichaizei Sha: 74.9688888888889
+8. Sovnax Kikol: 78.2755555555555
+9. Mazló Plókli: 77.58
+10. Johan Lolant: 75.3733333333333
 
 
 
 Best 3's
-1. Litsaw Wap't'ebw: 99.99
-2. Sago Alodetsei: 99.99
+1. Sago Alodetsei: 99.99
+2. Litsaw Wap't'ebw: 99.99
 3. Kersok Milan: 99.0388888888889
 4. Bingarra: 98.5355555555556
 5. Atakri Kalauni: 95.5277777777778
@@ -50,7 +50,7 @@ Best 3's
 7. Klaxon Nixoka: 88.5177777777778
 8. Ethanthova Player #5: 84.8688888888889
 9. Jesse McSteve: 83.9088888888889
-10. Asher Turner: 80.4877777777778
+10. Koa Soulignavong: 82.6633333333333
 
 
 
