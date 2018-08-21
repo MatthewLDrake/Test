@@ -26,6 +26,11 @@ public class Trainer
     {
         int injuryNumber = (int)player.getDurabilityRating() + injuryPrevention;
 
+        if(injuryNumber < 0)
+        {
+            Console.WriteLine(player.getDurabilityRating() + " " + injuryPrevention);
+        }
+
         return injuryNumber * 1250;
     }
     public void setInjuryPrevention(int injuryPrevention)

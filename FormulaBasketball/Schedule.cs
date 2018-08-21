@@ -96,7 +96,7 @@ public class Schedule
     {
         for(int i = firstGame - 1; i < lastGame; i++)
         {
-            if(i % 8 == 0)
+            if(i % 14 == 0)
             {
                 foreach(team team in formulaBasketball.create.getTeams())
                 {

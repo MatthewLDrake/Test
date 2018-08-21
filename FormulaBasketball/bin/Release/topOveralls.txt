@@ -1,32 +1,32 @@
-Aahrus Moosi: 99.99
-Holy Yektonisa Bishops: 99.99
+Shmupland Dictators: 99.99
+Holykol Bears: 99.99
 Dvimne Spirits: 99.99
-Czalliso Pythons: 99.99
 Bongatar Banging Bongos: 99.99
 TND Tanks: 99.99
-Stedro Boulders: 99.99
 Ethanthova Ponies: 99.99
 Dotruga Falno: 99.99
 Boltway Bad Dragons: 99.99
-Pyxanovia Pixies: 99.99
+Avura Aviators: 99.99
 Serkr Atolls: 99.99
 Red Rainbow Sickles: 99.99
-Shmupland Dictators: 99.99
-Kaeshar Kaisers: 99.99
+Transhimalia Disasters: 99.99
+Blanaxon Hammers: 99.99
 Auspikitan Golden Falcons: 99.99
-Height Sagua Cats: 99.99
-Key to Don Yees: 99.99
-Manwx Saguans: 99.99
 Solea Geysers: 99.99
 Sagua Ocelots: 99.99
-Blanaxon Hammers: 99.99
-Transhimalia Disasters: 99.99
-Barsein Bats: 99.7382222222222
-Aiyota Pumps: 99.5
-Calto Cows: 99.4577777777778
-Lyintaria Lynx: 99.2526666666667
-Faehrenfall Feathercats: 99.0511111111111
-Holykol Bears: 98.7902222222222
-Avura Aviators: 98.0457777777778
-Naxda Nomads: 97.9768888888889
-Autolik Autonomy: 97.9766666666667
+Manwx Saguans: 99.99
+Kaeshar Kaisers: 99.99
+Key to Don Yees: 99.99
+Height Sagua Cats: 99.99
+Pyxanovia Pixies: 99.9808888888889
+Stedro Boulders: 99.952
+Calto Cows: 99.7688888888889
+Barsein Bats: 99.6275555555556
+Aahrus Moosi: 99.6082222222222
+Aiyota Pumps: 99.4111111111111
+Faehrenfall Feathercats: 99.4066666666667
+Lyintaria Lynx: 99.3544444444444
+Holy Yektonisa Bishops: 99.2177777777778
+Naxda Nomads: 98.6128888888889
+Czalliso Pythons: 97.0417777777778
+Autolik Autonomy: 96.4682222222222

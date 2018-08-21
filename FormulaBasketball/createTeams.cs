@@ -63,6 +63,14 @@ public class createTeams
 
     public void SetupSalaryInfo()
     {
+        averagePositionSalaries = new double[3, 5];
+        minPositionSalaries = new double[3, 5];
+        maxPositionsSalaries = new double[3, 5];
+
+        averageOverall = new double[3, 5];
+        minOverall = new double[3, 5];
+        maxOverall = new double[3, 5];
+        allOveralls = new double[15, 32];
         int teamNum = 0;
         foreach(team team in teams)
         {
@@ -90,15 +98,15 @@ public class createTeams
 
     public double GetAverageSalary(int rank, int pos)
     {
-        return averagePositionSalaries[rank, pos];
+        return averagePositionSalaries[rank-1, pos-1];
     }
     public double GetMinSalary(int rank, int pos)
     {
-        return maxPositionsSalaries[rank, pos];
+        return maxPositionsSalaries[rank-1, pos-1];
     }
     public double GetMaxSalary(int rank, int pos)
     {
-        return maxPositionsSalaries[rank, pos];
+        return maxPositionsSalaries[rank-1, pos - 1];
     }
     public int GetPositionalRank(int rosterSpot, int pos, double overall)
     {

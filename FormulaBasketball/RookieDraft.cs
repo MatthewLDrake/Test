@@ -28,6 +28,7 @@ namespace FormulaBasketball
             foreach(player p in rookies)
             {
                 rookiesByPos[p.getPosition() - 1].Add(p);
+                p.IsRookie();
             }
             for (int i = 0; i < rookiesByPos.Length; i++)
             {
@@ -90,7 +91,13 @@ namespace FormulaBasketball
         }
         public player[] BestPlayers()
         {
-            return new player[] { rookiesByPos[0][0], rookiesByPos[1][0], rookiesByPos[2][0], rookiesByPos[3][0], rookiesByPos[4][0] };
+            player[] bestPlayers = new player[5];
+            for(int i = 0; i < 5; i ++)
+            {
+                if (rookiesByPos[i].Count > 0) bestPlayers[i] = rookiesByPos[i][0];
+                else bestPlayers[i] = new player(i, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "Test", false);
+            }
+            return bestPlayers;
         }
         public void ExecutePick(DraftPick pick)
         {

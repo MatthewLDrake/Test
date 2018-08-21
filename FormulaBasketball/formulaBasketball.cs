@@ -125,6 +125,7 @@ public class formulaBasketball
                     VoteMVP();
                     VoteROTY();
                     bracket.Visible = false;
+                    create.SetupSalaryInfo();
                     Offseason off = new Offseason(create.getTeams(), create.getFreeAgents(), create.GetCollege().GetRookies(), r);
                     new SetupNewSeason(create, r, create.getFreeAgents());
                 }
@@ -194,10 +195,14 @@ public class formulaBasketball
             }
         }
         player winner = FindBest(playerList);
-        championshipsContents += winner.getName() + "\t" + winner.getTeam().ToString() + "\n";
+        if (winner != null)
+            championshipsContents += winner.getName() + "\t" + winner.getTeam().ToString() + "\n";
+        else
+            championshipsContents += "no rookies\t\n";
     }
     private player FindBest(List<player> list)
     {
+        if (list.Count == 0) return null;
         int[] totalPoints = new int[list.Count];
         
         foreach(team team in create.getTeams())
@@ -218,6 +223,7 @@ public class formulaBasketball
                 index = p;
             }
         }
+        
         return list[index];
         
     }

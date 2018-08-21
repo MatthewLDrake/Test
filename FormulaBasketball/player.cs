@@ -355,6 +355,10 @@ public class player : IComparable<player>
     private double[] modifiers = null;
     public void Develop(FormulaBasketball.Random rand)
     {
+        if (highestRating == null)
+        {
+            highestRating = new double[ratings.Length];
+        }
         if (playerAge >= peakStart && playerAge <= peakEnd) return;
         if(modifiers == null)
         {
@@ -371,6 +375,9 @@ public class player : IComparable<player>
         {
             Regress(rand);
         }
+        
+        for(int i = 0; i < ratings.Length; i++)
+            if (ratings[i] > highestRating[i]) highestRating[i] = ratings[i];
 
     }
     private void SetModifiers()
@@ -471,11 +478,13 @@ public class player : IComparable<player>
      * ratings[9] = threepoint
      * ratings[10] = durability
      */
-
+    private double[] highestRating;
     private void Upgrade(FormulaBasketball.Random rand)
     {
-        for(int i = 0; i < ratings.Length; i++)
+        
+        for (int i = 0; i < ratings.Length; i++)
         {
+            
             if(rand.Next(100) <= modifiers[i])
             {
                 switch(development)
@@ -556,6 +565,10 @@ public class player : IComparable<player>
                         break;
                 }
             }
+            if(ratings[i] != 8)ratings[i] = Math.Max(0, ratings[i]);
+            else ratings[i] = Math.Max(50, ratings[i]);
+            ratings[i] = Math.Max(highestRating[i] / 2, ratings[i]);
+            
         }
 
 

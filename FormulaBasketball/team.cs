@@ -293,7 +293,7 @@ public class team : IComparable<team>,  IEnumerable<player>
     public List<player> resignPlayers(FormulaBasketball.Random r)
     {
         List<player> players = new List<player>();
-        foreach(player p in players)
+        foreach(player p in this.players)
         {
             bool onRoster = true;
             if(p.ContractExpired())

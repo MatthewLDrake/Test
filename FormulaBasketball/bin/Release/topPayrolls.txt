@@ -1,32 +1,32 @@
 Serkr Atolls: 130.5
 Calto Cows: 127
 Dotruga Falno: 116.9
-Solea Geysers: 110.1
-Dvimne Spirits: 106.3
+Solea Geysers: 108.1
 TND Tanks: 102.4
-Boltway Bad Dragons: 97.6
+Boltway Bad Dragons: 101.6
 Auspikitan Golden Falcons: 96.4
-Barsein Bats: 94.9
-Manwx Saguans: 93.7
+Manwx Saguans: 95.7
+Holy Yektonisa Bishops: 94.1
+Barsein Bats: 93.6
 Ethanthova Ponies: 92.9
-Transhimalia Disasters: 92.2
-Avura Aviators: 91.3
-Holy Yektonisa Bishops: 91.1
 Height Sagua Cats: 91
+Transhimalia Disasters: 90.4
+Bongatar Banging Bongos: 90.2
+Aiyota Pumps: 88.8
 Czalliso Pythons: 88.5
-Stedro Boulders: 88.5
-Holykol Bears: 87.5
-Bongatar Banging Bongos: 86.2
+Holykol Bears: 88.1
+Aahrus Moosi: 86.1
 Key to Don Yees: 85.9
-Blanaxon Hammers: 80.5
-Aahrus Moosi: 77.2
-Lyintaria Lynx: 76.6
-Naxda Nomads: 75.2
+Blanaxon Hammers: 85.6
+Dvimne Spirits: 85.4
+Faehrenfall Feathercats: 85.3
+Stedro Boulders: 84.5
+Autolik Autonomy: 83.3
+Avura Aviators: 77.9
+Lyintaria Lynx: 77.4
 Red Rainbow Sickles: 75
 Sagua Ocelots: 74.4
-Kaeshar Kaisers: 73.4
-Shmupland Dictators: 71.3
-Aiyota Pumps: 70.8
-Autolik Autonomy: 69.9
-Faehrenfall Feathercats: 69.8
+Naxda Nomads: 71.1
+Kaeshar Kaisers: 70.8
+Shmupland Dictators: 70.8
 Pyxanovia Pixies: 69.3

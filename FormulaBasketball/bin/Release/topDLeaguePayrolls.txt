@@ -1,25 +1,22 @@
-Aeridani Troopers: 30.5
-Autolik Rebels: 24
-Aahrus Goosi: 23.3
-Holy Yektonisa Hmongs: 22.7
-Shmupland Tyrants: 22.1
-Bongatar Boppers: 19
-Rockshaw Rave: 19
-Kutapi Redwoods: 17.5
+Kutapi Redwoods: 22.5
+Aahrus Goosi: 17.4
+Shmupland Tyrants: 17.2
 Protopolis Progs: 17.1
-Lyintaria Kool Kats: 15.8
-Shigua Boots: 15.5
-Yuofuan Jaguars: 15
-Errakyva Eruption: 15
-Suggionic Infantry: 15
-Detroit Pumps: 15
-Aovensiiv Atoms: 15
+Aeridani Troopers: 15
 Red-Rainbow Reds: 15
+Detroit Pumps: 15
+Errakyva Eruption: 15
 Ebetxi Detro: 15
+Yuofuan Jaguars: 15
+Suggionic Infantry: 15
+Aovensiiv Atoms: 15
+Lyintaria Kool Kats: 15
 Daxanad Soldiers: 15
-TND Force: 15
+Hinaika Hurricanes: 15
 Bielosia Ghosts: 15
-Zaxon Zephyrs: 15
+Autolik Rebels: 15
+Shigua Boots: 15
+Rockshaw Rave: 15
 Boston Beavers: 15
 Holylmao Bison: 15
 Ma-Popá Yiffs: 15
@@ -28,5 +25,8 @@ Klákjábo Servals: 15
 Naskitrusk Brutes: 15
 Alteus Astronauts: 15
 Pyxanovia Elites: 15
-Hinaika Hurricanes: 15
+Bongatar Boppers: 15
 Vincent Vikings: 15
+Zaxon Zephyrs: 15
+TND Force: 15
+Holy Yektonisa Hmongs: 15
