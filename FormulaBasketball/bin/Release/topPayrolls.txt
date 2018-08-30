@@ -1,32 +1,32 @@
-Serkr Atolls: 130.5
-Calto Cows: 127
-Dotruga Falno: 116.9
-Solea Geysers: 108.1
-TND Tanks: 102.4
-Boltway Bad Dragons: 101.6
-Auspikitan Golden Falcons: 96.4
-Manwx Saguans: 95.7
-Holy Yektonisa Bishops: 94.1
-Barsein Bats: 93.6
-Ethanthova Ponies: 92.9
-Height Sagua Cats: 91
-Transhimalia Disasters: 90.4
-Bongatar Banging Bongos: 90.2
-Aiyota Pumps: 88.8
-Czalliso Pythons: 88.5
-Holykol Bears: 88.1
-Aahrus Moosi: 86.1
-Key to Don Yees: 85.9
-Blanaxon Hammers: 85.6
-Dvimne Spirits: 85.4
-Faehrenfall Feathercats: 85.3
-Stedro Boulders: 84.5
-Autolik Autonomy: 83.3
-Avura Aviators: 77.9
-Lyintaria Lynx: 77.4
-Red Rainbow Sickles: 75
-Sagua Ocelots: 74.4
-Naxda Nomads: 71.1
-Kaeshar Kaisers: 70.8
-Shmupland Dictators: 70.8
-Pyxanovia Pixies: 69.3
+Calto Cows: 121
+Serkr Atolls: 116.658347819216
+Dotruga Falno: 111.5
+Dvimne Spirits: 108.7
+Boltway Bad Dragons: 97.6
+Solea Geysers: 92.1
+Barsein Bats: 91.4
+Faehrenfall Feathercats: 91.1
+TND Tanks: 79.2
+Holy Yektonisa Bishops: 78.8608653846154
+Naxda Nomads: 77.2535820848146
+Autolik Autonomy: 76.7
+Transhimalia Disasters: 75.8
+Avura Aviators: 71.2544962544439
+Blanaxon Hammers: 70.9
+Czalliso Pythons: 70.2
+Bongatar Banging Bongos: 69.9454807692308
+Aiyota Pumps: 60.2
+Pyxanovia Pixies: 59.6
+Kaeshar Kaisers: 58.4
+Height Sagua Cats: 56
+Red Rainbow Sickles: 54.0794776119403
+Holykol Bears: 53.1
+Lyintaria Lynx: 51.1
+Key to Don Yees: 50.6
+Manwx Saguans: 50.2
+Aahrus Moosi: 49.5
+Stedro Boulders: 47.3
+Shmupland Dictators: 42.9191195600757
+Auspikitan Golden Falcons: 42.6
+Sagua Ocelots: 42.1
+Ethanthova Ponies: 26.2

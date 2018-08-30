@@ -274,19 +274,19 @@ public class CollegeTeam : team
     }
     public void RemoveLeavingPlayers(int season)
     {
-        List<int> leavingPlayers = new List<int>();
+        List<CollegePlayer> leavingPlayers = new List<CollegePlayer>();
         for (int i = collegePlayers.Count - 1; i >= 0; i--)
         {
             CollegePlayer collegePlayer = collegePlayers[i];
             if (collegePlayer.WentPro() || collegePlayer.Graduated())
             {
-                leavingPlayers.Add(i);
+                leavingPlayers.Add(collegePlayer);
 
             }
         }
-        foreach(int player in leavingPlayers)
+        foreach(CollegePlayer player in leavingPlayers)
         {
-            collegePlayers.RemoveAt(player);
+            collegePlayers.Remove(player);
         }
         FillTeam(season);
         foreach(CollegePlayer collegePlayer in redshirtPlayers)

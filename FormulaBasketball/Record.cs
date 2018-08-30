@@ -27,5 +27,9 @@ public class Record
     {
         return losses;
     }
+    public int GetTotalGames()
+    {
+        return wins + losses;
+    }
 }
 

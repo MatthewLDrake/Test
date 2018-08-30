@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
+using System.Threading;
 using System.Xml;
 using System.Xml.Serialization;
 
@@ -47,6 +48,7 @@ public class formulaBasketball
          create.PlayCollegeSeason(); 
          SerializeObject(create, fileName);*/
         create.SetDraftPicks();
+        create.GetCollege().CollegeSetup();
         new SetupNewSeason(create,r);
         /*for (int i = 0; i < 100; i++ )
         {
@@ -119,9 +121,16 @@ public class formulaBasketball
                 {
                     
                     standingsForm.Visible = true;
+                    Thread thread = new Thread(create.PlayCollegeSeason);
+                    thread.Start();
                     playGames(1, 84);
+                    standingsForm.Visible = false;
+                    foreach(team team in create.getTeams())
+                    {
+                        team.EndOfSeason(create.getFreeAgents());
+                    }
                     mockPlayoffs(true);
-                    create.PlayCollegeSeason();
+                    
                     VoteMVP();
                     VoteROTY();
                     bracket.Visible = false;

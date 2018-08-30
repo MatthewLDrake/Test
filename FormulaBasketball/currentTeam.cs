@@ -264,7 +264,7 @@ public class currentTeam
                     if (num > 100)
                     {
                         Console.WriteLine("Problem occurred");
-                        Environment.Exit(-1);
+                        //Environment.Exit(-1);
                     }
                     if (bob)
                     {
@@ -324,7 +324,12 @@ public class currentTeam
                         {
                             if (temp.Count == 0)
                             {
-                                if (!team.getPlayer(j).isPlaying() && acceptableAmountOfFouls(team.getPlayer(j), 4) && !team.getPlayer(j).isInjured() && team.getPlayer(j).getStamina() > 70)
+                                player p = team.getPlayer(j);
+                                double stamina = p.getStamina();
+                                bool notInjured = !p.isInjured();
+                                bool acceptable = acceptableAmountOfFouls(p, 4);
+                                bool notPlaying = !p.isPlaying();
+                                if (!p.isPlaying() && acceptableAmountOfFouls(p, 4) && !p.isInjured() && p.getStamina() > 70)
                                 {
                                     temp.Add(team.getPlayer(j));
                                 }

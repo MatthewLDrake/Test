@@ -1,32 +1,32 @@
-Shmupland Dictators: 99.99
-Holykol Bears: 99.99
-Dvimne Spirits: 99.99
-Bongatar Banging Bongos: 99.99
-TND Tanks: 99.99
-Ethanthova Ponies: 99.99
-Dotruga Falno: 99.99
-Boltway Bad Dragons: 99.99
-Avura Aviators: 99.99
-Serkr Atolls: 99.99
-Red Rainbow Sickles: 99.99
-Transhimalia Disasters: 99.99
-Blanaxon Hammers: 99.99
-Auspikitan Golden Falcons: 99.99
-Solea Geysers: 99.99
-Sagua Ocelots: 99.99
-Manwx Saguans: 99.99
-Kaeshar Kaisers: 99.99
-Key to Don Yees: 99.99
-Height Sagua Cats: 99.99
-Pyxanovia Pixies: 99.9808888888889
-Stedro Boulders: 99.952
-Calto Cows: 99.7688888888889
-Barsein Bats: 99.6275555555556
-Aahrus Moosi: 99.6082222222222
-Aiyota Pumps: 99.4111111111111
-Faehrenfall Feathercats: 99.4066666666667
-Lyintaria Lynx: 99.3544444444444
-Holy Yektonisa Bishops: 99.2177777777778
-Naxda Nomads: 98.6128888888889
-Czalliso Pythons: 97.0417777777778
-Autolik Autonomy: 96.4682222222222
+Dotruga Falno: 93.7282222222222
+Solea Geysers: 87.5235555555555
+Calto Cows: 86.9482222222222
+Pyxanovia Pixies: 85.8486666666667
+Serkr Atolls: 85.6413333333333
+Boltway Bad Dragons: 85.0326666666667
+Dvimne Spirits: 83.5502222222222
+Holy Yektonisa Bishops: 81.2166666666667
+Faehrenfall Feathercats: 80.8266666666667
+Barsein Bats: 80.0373333333333
+Sagua Ocelots: 79.8433333333333
+Bongatar Banging Bongos: 79.7502222222222
+Red Rainbow Sickles: 79.7282222222222
+Transhimalia Disasters: 79.5611111111111
+Aiyota Pumps: 79.5173333333333
+Czalliso Pythons: 79.4168888888889
+Blanaxon Hammers: 78.9224444444444
+Naxda Nomads: 78.7166666666667
+Kaeshar Kaisers: 78.5053333333333
+Avura Aviators: 78.2297777777778
+TND Tanks: 78.1968888888889
+Shmupland Dictators: 78.0751111111111
+Lyintaria Lynx: 77.7671111111111
+Manwx Saguans: 77.6357777777778
+Stedro Boulders: 77.5391111111111
+Auspikitan Golden Falcons: 77.3311111111111
+Key to Don Yees: 77.1648888888889
+Height Sagua Cats: 77.0942222222222
+Aahrus Moosi: 76.812
+Autolik Autonomy: 76.6606666666667
+Holykol Bears: 75.6904444444445
+Ethanthova Ponies: 74.6793333333333

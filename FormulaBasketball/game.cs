@@ -25,10 +25,12 @@ public class game
         for (int i = 0; i < away.getSize(); i++)
         {
             away.getPlayer(i).decrementDay();
+            away.ProgressInjuries();
         }
         for (int i = 0; i < home.getSize(); i++)
         {
             home.getPlayer(i).decrementDay();
+            home.ProgressInjuries();
         }
         awayTeam = away;
         homeTeam = home;

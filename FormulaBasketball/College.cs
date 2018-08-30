@@ -20,17 +20,22 @@ public class College
         players = new List<player>();
         teams = new List<CollegeTeam>();
         rookies = new List<player>();
-        LoadTeams();
-
-
-        
-
-        
-        
+        LoadTeams();                
     }
-    
+    public void CollegeSetup()
+    {
+        foreach(team team in teams)
+        {
+            List<player> players = team.ClearPlayers();
+            foreach(player p in players)
+            {
+                team.addPlayer(p);
+            }
+        }
+    }
     public void PlaySeason()
     {
+        
         games = GetConferenceGames();
 
         games.AddRange(GetGames());

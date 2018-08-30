@@ -597,6 +597,9 @@ public class player : IComparable<player>
         gamesPlayed = 0;
         pointDiff = 0;
         starts = 0;
+        injuryLength = 0;
+        isInjuredBool = false;
+        stamina = 100;
         
     }
     public void Reset()

@@ -33,6 +33,8 @@ public class team : IComparable<team>,  IEnumerable<player>
     private Record currentSeason, currentPlayoffs, allTime, allTimePlayoffs, divisionRecord, conferenceRecord;
     private Record[] currentSeasonVsTeam, allTimeVsTeam;
     private List<DraftPick> picks, nextSeasonPicks;
+    private DisabledLists sevenGame, fifteenGame, season;
+    private player[] activePlayers;
     public team(String teamName, FormulaBasketball.Random r)
     {
         picks = new List<DraftPick>();
@@ -53,6 +55,7 @@ public class team : IComparable<team>,  IEnumerable<player>
         conferenceRecord = new Record();
         currentSeasonVsTeam = new Record[32];
         allTimeVsTeam = new Record[32];
+        activePlayers = new player[15];
         for (int i = 0; i < currentSeasonVsTeam.Length; i++ )
         {
             currentSeasonVsTeam[i] = new Record();
@@ -89,6 +92,7 @@ public class team : IComparable<team>,  IEnumerable<player>
         allTimePlayoffs = new Record();
         currentSeasonVsTeam = new Record[32];
         allTimeVsTeam = new Record[32];
+        activePlayers = new player[15];
         for (int i = 0; i < currentSeasonVsTeam.Length; i++)
         {
             currentSeasonVsTeam[i] = new Record();
@@ -165,8 +169,9 @@ public class team : IComparable<team>,  IEnumerable<player>
 
         }
 
-        foreach(player player in players)
+        foreach(player player in activePlayers)
         {
+            if (player == null) continue;
             player.Reset();
         }
 
@@ -181,20 +186,37 @@ public class team : IComparable<team>,  IEnumerable<player>
     public int getNumPlayersByPos(int pos)
     {
         int retVal = 0;
-        for(int i = 0; i < players.Count; i++)
+        for (int i = 0; i < activePlayers.Length; i++)
         {
-            if (pos == players[i].getPosition()) retVal++;
+            if (pos == activePlayers[i].getPosition()) retVal++;
         }
         return retVal;
     }
     public List<player> ClearPlayers()
     {
         List<player> retVal = new List<player>();
-        foreach(player p in players)
+        if(activePlayers == null)
         {
+            foreach (player p in players)
+            {
+                if (p == null) continue;
+                retVal.Add(p);
+            }
+            players = new List<player>();
+            activePlayers = new player[15];
+            for (int i = 0; i < 5; i++)
+            {
+                playersPerPos[i] = 0;
+            }
+            return retVal;
+        }
+        foreach (player p in activePlayers)
+        {
+            if (p == null) continue;
             retVal.Add(p);
         }
         players = new List<player>();
+        activePlayers = new player[15];
         for (int i = 0; i < 5; i++ )
         {
             playersPerPos[i] = 0;
@@ -205,9 +227,10 @@ public class team : IComparable<team>,  IEnumerable<player>
     private void ResetPlayersPerPosition()
     {
         playersPerPos = new int[5];
-        foreach(player p in players)
+        foreach (player p in activePlayers)
         {
-            playersPerPos[p.getPosition() - 1]++;
+            if(p != null)
+                playersPerPos[p.getPosition() - 1]++;
         }
     }
     // TODO: fix when I actually make the AI algorithms to include actual resizing, not just downsizing
@@ -229,9 +252,10 @@ public class team : IComparable<team>,  IEnumerable<player>
     {
         List<player> retVal = new List<player>();
         player[] orderedRoster = new player[15];
-        for(int i = 0; i < players.Count; i++)
+        for (int i = 0; i < activePlayers.Length; i++)
         {
-            player currPlayer = players[i];
+            player currPlayer = activePlayers[i];
+            if (currPlayer == null) continue;
             int position = currPlayer.getPosition() - 1;
             while(true)
             {
@@ -263,17 +287,19 @@ public class team : IComparable<team>,  IEnumerable<player>
                return ReorderRoster(freeAgents);
            }
         }
-        players = new List<player>();
+        activePlayers = new player[15];
         for(int i = 0; i < orderedRoster.Length; i++)
         {
-            players.Add(orderedRoster[i]);
+            activePlayers[i] = orderedRoster[i];
         }
         return retVal;
 
     }
     private team affiliate;
+    private bool moreImportantTeam;
     public void SetAffiliate(team team, bool setOther = true)
     {
+        moreImportantTeam = setOther;
         affiliate = team;
         if(setOther)team.SetAffiliate(this, false);
     }
@@ -284,17 +310,99 @@ public class team : IComparable<team>,  IEnumerable<player>
     public int GetRankOnTeam(player p)
     {
         int rank = 1;
-        foreach(player player in players)
+        foreach (player player in activePlayers)
         {
+            if (player == null) continue;
             if(!p.Equals(player) && p.getPosition() == player.getPosition() && p.getOverall() < player.getOverall())rank++;
         }
         return rank;
     }
+    public void CheckInjuries(FreeAgents freeAgents)
+    {
+        if(sevenGame == null)
+        {
+            sevenGame = new DisabledLists(7);
+            fifteenGame = new DisabledLists(15);
+            season = new DisabledLists(84);
+        }
+        List<player> playersReturning = sevenGame.GetReturningPlayers();
+        playersReturning.AddRange(fifteenGame.GetReturningPlayers());
+        playersReturning.AddRange(season.GetReturningPlayers());
+
+        foreach(player p in playersReturning)
+        {
+            addPlayer(p);
+        }
+        int healthyPlayers = 15;
+        foreach (player p in activePlayers)
+        {
+            if (p == null) continue;
+            if (!p.isInjured()) continue;
+            else if (p.getInjuryLength() > 84 - currentSeason.GetTotalGames())
+            {
+                season.AddPlayer(p);
+                removePlayer(p);
+            }
+            else if (p.getInjuryLength() < 7) healthyPlayers--;
+            else if (p.getInjuryLength() < 15)
+            {
+                sevenGame.AddPlayer(p);
+                removePlayer(p);
+            }
+            else
+            {
+                fifteenGame.AddPlayer(p);
+                removePlayer(p);
+            }
+            
+        }
+
+        while (healthyPlayers < 10)
+        {
+            player toRemove = null;
+            int highestLength = 0;
+            foreach (player p in activePlayers)
+            {
+                if (p == null) continue;
+                if (p.getInjuryLength() < 7)
+                {
+                    if(highestLength < p.getInjuryLength())
+                    {
+                        highestLength = p.getInjuryLength();
+                        toRemove = p;
+                    }
+                }
+            }
+            sevenGame.AddPlayer(toRemove);
+            healthyPlayers++;
+        }
+        
+        for(int i = 0; i < activePlayers.Length; i++)
+        {
+            if(activePlayers[i] == null)
+            {
+                int position = i % 5 + 1;
+                player newPlayer = freeAgents.GetTopPlayerByPos(position);
+                addPlayer(newPlayer);
+            }
+        }
+        bool flag = false;
+        while(players.Count > 0)
+        {
+            flag = true;
+            if (moreImportantTeam) affiliate.addPlayer(players[0]);
+            players.Remove(players[0]);
+        }
+
+        if (flag && moreImportantTeam) affiliate.ReorderRoster(freeAgents, true);
+
+    }
     public List<player> resignPlayers(FormulaBasketball.Random r)
     {
         List<player> players = new List<player>();
-        foreach(player p in this.players)
+        foreach (player p in activePlayers)
         {
+            if (p == null) continue;
             bool onRoster = true;
             if(p.ContractExpired())
             {
@@ -420,7 +528,7 @@ public class team : IComparable<team>,  IEnumerable<player>
     {
         player retVal = null;
         double bestOverall = 0;
-        foreach(player p in players)
+        foreach (player p in activePlayers)
         {
             if (p == null || p.getPosition() != pos) continue;
             if(bestOverall < p.getOverall())
@@ -436,7 +544,7 @@ public class team : IComparable<team>,  IEnumerable<player>
     {
         player[] retVal = new player[2];
         double[] bestOverall = new double[]{0,0};
-        foreach (player p in players)
+        foreach (player p in activePlayers)
         {
             if (p == null || p.getPosition() != pos) continue;
             if (bestOverall[0] < p.getOverall())
@@ -545,7 +653,7 @@ public class team : IComparable<team>,  IEnumerable<player>
         List<player>[] organizationPlayers = new List<player>[5];
         for (int i = 0; i < organizationPlayers.Length; i++)
             organizationPlayers[i] = new List<player>();
-        foreach (player p in players) organizationPlayers[p.getPosition() - 1].Add(p);
+        foreach (player p in activePlayers)if(p != null) organizationPlayers[p.getPosition() - 1].Add(p);
         foreach (player p in affiliate.getAllPlayer()) organizationPlayers[p.getPosition() - 1].Add(p);
 
         for (int i = 0; i < organizationPlayers.Length; i++)
@@ -559,13 +667,13 @@ public class team : IComparable<team>,  IEnumerable<player>
 
         for(int i = 0; i < counts.Length; i++)
         {
-            List<player> players = freeAgency.GetPlayersByPos(i + 1);
+            List<player> freeAgentPlayers = freeAgency.GetPlayersByPos(i + 1);
             int index = 0;
             while(true)
             {
-                if (players[index].getOverall() < organizationPlayers[i][organizationPlayers[i].Count - 1].getOverall())break;
+                if (freeAgentPlayers[index].getOverall() < organizationPlayers[i][organizationPlayers[i].Count - 1].getOverall()) break;
 
-                player current = players[index];
+                player current = freeAgentPlayers[index];
 
                 int playersLeft = counts[i] - playersOffered[i].Count;
 
@@ -630,13 +738,21 @@ public class team : IComparable<team>,  IEnumerable<player>
         if (retiredList == null) return;
         foreach(player player in retiredList)
         {
-            players.Remove(player);
+            for(int i= 0; i < activePlayers.Length; i++)
+            {
+                if (activePlayers[i] == null) continue;
+                if(activePlayers[i].Equals(player))
+                {
+                    activePlayers[i] = null;
+                    break;
+                }
+            }
         }
         retiredList = null;
     }
     public int getNumberPlayers()
     {
-        return players.Count;
+        return getSize();
     }
 
     public String getStreak()
@@ -653,13 +769,14 @@ public class team : IComparable<team>,  IEnumerable<player>
 
     public void swapStarters(int previousStarter, int newStarter)
     {
-        players[previousStarter].setStarter(false);
-        players[newStarter].setStarter(true);
+        activePlayers[previousStarter].setStarter(false);
+        activePlayers[newStarter].setStarter(true);
     }
     public player findPlayerByName(String name)
     {
-        foreach(player p in players)
+        foreach (player p in activePlayers)
         {
+            if (p == null) continue;
             if (p.getName().Equals(name)) return p;
         }
         Console.WriteLine(name + " not found");
@@ -706,23 +823,16 @@ public class team : IComparable<team>,  IEnumerable<player>
 
     public void setBestStarters()
     {
-        for (int i = 0; i < 5; i++)
+        int i = 0;
+        for (; i < 5; i++)
         {
-            List<player> tempList = new List<player>();
-            for (int j = 0; j < players.Count; j++)
-            {
-                if (players[j].getPosition() == i + 1)
-                {
-                    tempList.Add(players[j]);
-                }
-            }
-            tempList.Sort();
-            tempList[tempList.Count - 1].setStarter(true);
-            for (int j = 0; j < tempList.Count-1; j++)
-            {
-                tempList[j].setStarter(false);
-            }
+            activePlayers[i].setStarter(true);
         }
+        for(;i<activePlayers.Length;i++)
+        {
+            activePlayers[i].setStarter(false);
+        }
+        
     }
     public String getThreeLetters()
     {
@@ -793,9 +903,27 @@ public class team : IComparable<team>,  IEnumerable<player>
     }
     public void addPlayer(player newPlayer)
     {
-        players.Add(newPlayer);
+        int pos = newPlayer.getPosition()-1;
+        if(activePlayers == null)activePlayers = new player[15];
+        player currentPlayer = newPlayer;
+        for (int i = 0; i < 4; i++ )
+        {
+            if(i == 3)players.Add(currentPlayer);
+            else if(activePlayers[pos + (i *5)] == null)
+            {
+                activePlayers[pos + (i *5)] = currentPlayer;
+                break;
+            }
+            else if(activePlayers[pos + (i *5)].getOverall() < currentPlayer.getOverall())
+            {
+                player temp = activePlayers[pos + (i * 5)];
+                activePlayers[pos + (i * 5)] = currentPlayer;
+                currentPlayer = temp;
+            }
+        }
+
         newPlayer.setTeam(this);
-        addPos(newPlayer.getPosition() - 1);
+        addPos(pos);
     }
     private int draftPlace;
     public void SetDraftPlace(int place)
@@ -808,16 +936,27 @@ public class team : IComparable<team>,  IEnumerable<player>
     }
     public player getPlayer(int playerNum)
     {
-        return players[playerNum];
+        return activePlayers[playerNum];
     }
     public void removePlayer(int playerNum)
     {
-
-        players.Remove(players[playerNum]);
+        activePlayers[playerNum] = null;
+        //players.Remove(players[playerNum]);
     }
     public List<player> getAllPlayer()
     {
-        return players;
+        List<player> retVal = new List<player>();
+        if (activePlayers == null)
+        {
+            activePlayers = new player[15];
+            return players;
+        }
+        foreach(player p in activePlayers)
+        {
+            if (p == null) continue;
+            retVal.Add(p);
+        }
+        return retVal;
     }
     public override String ToString()
     {
@@ -825,7 +964,12 @@ public class team : IComparable<team>,  IEnumerable<player>
     }
     public int getSize()
     {
-        return players.Count;
+        int size = 0;
+        for (int i = 0; i < activePlayers.Length; i++ )
+        {
+            if (activePlayers[i] != null) size++;
+        }
+        return size;
     }
     protected void addPos(int pos)
     {
@@ -998,8 +1142,9 @@ public class team : IComparable<team>,  IEnumerable<player>
     }
     public player GetPlayerByID(int id)
     {
-        foreach(player player in players)
+        foreach(player player in activePlayers)
         {
+            if (player == null) continue;
             if (player.GetPlayerID() == id) return player;
         }
         return null;
@@ -1009,26 +1154,77 @@ public class team : IComparable<team>,  IEnumerable<player>
         double overall = 0.0;
         for (int i = 0; i < 5; i++)
         {
-            overall += players[i].getOverall();
+            overall += activePlayers[i].getOverall();
         }
         return overall / 5;
     }
     public void setModifier(Modifier modifier)
     {
-        for (int i = 0; i < players.Count; i++)
+        for (int i = 0; i < activePlayers.Length; i++)
         {
-            players[i].setShootingModifier(modifier.getShootingModifier());
-            players[i].setDefensiveModifier(modifier.getDefenseModifier());
-            players[i].setOtherModifier(modifier.getOtherModifier());
+            if (activePlayers[i] != null)
+            {
+                activePlayers[i].setShootingModifier(modifier.getShootingModifier());
+                activePlayers[i].setDefensiveModifier(modifier.getDefenseModifier());
+                activePlayers[i].setOtherModifier(modifier.getOtherModifier());
+            }
+            
         }
 
     }
 
     public void removePlayer(player player)
     {
-        players.Remove(player);
+        for (int i = 0; i < activePlayers.Length; i++ )
+        {
+            if (player.Equals(activePlayers[i]))
+            {
+                activePlayers[i] = null;
+                break;
+            }
+                
+        }
     }
+    public void ProgressInjuries()
+    {
+        if(sevenGame == null)
+        {
+            return;
+        }
+        sevenGame.ProgressInjury();
+        fifteenGame.ProgressInjury();
+        season.ProgressInjury();
+    }
+    public void EndOfSeason(FreeAgents freeAgents)
+    {
+        List<player> recoveredPlayers = season.GetAllPlayers();
+        foreach(player p in players)
+        {
+            if (p.getInjuryLength() < 15)
+            {
+                sevenGame.AddPlayer(p);
+                removePlayer(p);
+            }
+            else if(p.getInjuryLength() > 15)
+            {
+                fifteenGame.AddPlayer(p);
+                removePlayer(p);
+            }
+            else
+            {
+                addPlayer(p);
+            }
+        }
+        bool flag = false;
+        while (players.Count > 0)
+        {
+            flag = true;
+            if (moreImportantTeam) affiliate.addPlayer(players[0]);
+            players.Remove(players[0]);
+        }
 
+        if (flag && moreImportantTeam) affiliate.ReorderRoster(freeAgents, true);
+    }
     public int getSeasonMerchandise()
     {
         return seasonMerchandiseRevenue;
@@ -1085,11 +1281,15 @@ public class team : IComparable<team>,  IEnumerable<player>
     }
     public void addModifier(Modifier modifier)
     {
-        for (int i = 0; i < players.Count; i++)
+        for (int i = 0; i < activePlayers.Length; i++)
         {
-            players[i].addShootingModifier(modifier.getShootingModifier());
-            players[i].addDefensiveModifier(modifier.getDefenseModifier());
-            players[i].addOtherModifier(modifier.getOtherModifier());
+            if(activePlayers[i] != null)
+            {
+                activePlayers[i].addShootingModifier(modifier.getShootingModifier());
+                activePlayers[i].addDefensiveModifier(modifier.getDefenseModifier());
+                activePlayers[i].addOtherModifier(modifier.getOtherModifier());
+            }
+            
         }
 
     }
@@ -1214,7 +1414,7 @@ public class team : IComparable<team>,  IEnumerable<player>
 
     public IEnumerator<player> GetEnumerator()
     {
-        return new PlayerEnum(players); 
+        return new PlayerEnum(activePlayers); 
     }
 
     IEnumerator IEnumerable.GetEnumerator()
@@ -1225,8 +1425,9 @@ public class team : IComparable<team>,  IEnumerable<player>
     public double GetPayroll()
     {
         double payroll = 0.0;
-        foreach(player player in players)
+        foreach(player player in activePlayers)
         {
+            if (player == null) continue;
             payroll += player.GetMoney();
         }
         return payroll;
@@ -1322,8 +1523,9 @@ public class team : IComparable<team>,  IEnumerable<player>
         retVal += "|+ "+ teamName +" \n|-\n";
         retVal += "!Pos\n!Name\n!Age\n!Overall\n";
 
-        foreach (player p in players)
+        foreach (player p in activePlayers)
         {
+            if (p == null) continue;
             retVal += "|-\n";
             retVal += "|" + p.GetPositionAsString() + "\n|" + p.getName() + "\n|" + p.age + "\n|" + String.Format("{0:0.00}", p.getOverall()) + "\n";
         }
@@ -1354,13 +1556,24 @@ public class team : IComparable<team>,  IEnumerable<player>
         leagueChampionships++;
         AddConferenceChampionship();
     }
+    private Subs[] subs;
+    public void SetSubstitutionTimes(Subs[] subs)
+    {
+        this.subs = subs;
+    }
+    public player GetSub(int position, int timeLeft)
+    {
+        // old fashioned coach
+        if (subs == null) return null;
+        return subs[position].GetSubstitution(timeLeft);
+    }
 }
 [Serializable]
 class PlayerEnum : IEnumerator<player>
 {
-    private List<player> players;
+    private player[] players;
     private int location = -1;
-    public PlayerEnum(List<player> players)
+    public PlayerEnum(player[] players)
     {
         this.players = players;
     }
@@ -1371,6 +1584,7 @@ class PlayerEnum : IEnumerator<player>
         {
             try
             {
+                
                 return players[location];
             }
             catch (IndexOutOfRangeException)
@@ -1390,27 +1604,18 @@ class PlayerEnum : IEnumerator<player>
     public bool MoveNext()
     {
         location++;
-        return location < players.Count;
+        while (location < players.Length && players[location] == null) location++;
+        return location < players.Length;
     }
 
     public void Reset()
     {
         location = -1;
     }
-    private Subs[] subs; 
-    public void SetSubstitutionTimes(Subs[] subs)
-    {
-        this.subs = subs;
-    }
-    public player GetSub(int position, int timeLeft)
-    {
-        // old fashioned coach
-        if (subs == null) return null;
-        return subs[position].GetSubstitution(timeLeft);
-    }
+   
 }
 [Serializable]
-class Subs
+public class Subs
 {
     private int[] subTimesPerPosition;
     private player[] playersPerPosition;
@@ -1470,5 +1675,50 @@ public class DraftPick
     {
         this.selectedPlayer = selectedPlayer;
         owner.addPlayer(selectedPlayer);
+    }
+}
+[Serializable]
+public class DisabledLists
+{
+    private int baseGames;
+    private List<int> gamesLeft;
+    private List<player> players;
+    public DisabledLists(int games)
+    {
+        baseGames = games;
+        gamesLeft = new List<int>();
+        players = new List<player>();
+    }
+    public void AddPlayer(player p)
+    {
+        players.Add(p);
+        gamesLeft.Add(baseGames);
+    }
+    public List<player> GetReturningPlayers()
+    {
+        List<player> retVal = new List<player>();
+        
+        for (int i = 0; i < gamesLeft.Count; i++ )
+        {
+            gamesLeft[i]--;
+            if(gamesLeft[i] <= 0)
+            {
+                retVal.Add(this.players[i]);                
+            }
+        }
+        gamesLeft.RemoveAll(i => i <= 0);
+
+        return retVal;
+    }
+    public void ProgressInjury()
+    {
+        foreach(player p in players)
+        {
+            p.decrementDay();
+        }
+    }
+    public List<player> GetAllPlayers()
+    {
+        return players;
     }
 }
