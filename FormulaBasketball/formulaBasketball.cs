@@ -23,10 +23,11 @@ public class formulaBasketball
     public static FormulaBasketball.Random r;
     public static Standings standingsForm;
     private static PlayoffBracket bracket;
+    public static int nextPlayerID;
     public formulaBasketball(bool loadSave, String fileName, List<team> teams, List<player> freeAgency, Boolean flag = false)
     {
 
-
+        nextPlayerID = 1294;
         r = new FormulaBasketball.Random();
         writeGames = false;
         StringUtils = new StringUtils();

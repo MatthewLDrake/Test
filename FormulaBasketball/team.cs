@@ -34,7 +34,7 @@ public class team : IComparable<team>,  IEnumerable<player>
     private Record[] currentSeasonVsTeam, allTimeVsTeam;
     private List<DraftPick> picks, nextSeasonPicks;
     private DisabledLists sevenGame, fifteenGame, season;
-    private player[] activePlayers;
+    protected player[] activePlayers;
     public team(String teamName, FormulaBasketball.Random r)
     {
         picks = new List<DraftPick>();
@@ -905,22 +905,42 @@ public class team : IComparable<team>,  IEnumerable<player>
     {
         int pos = newPlayer.getPosition()-1;
         if(activePlayers == null)activePlayers = new player[15];
-        player currentPlayer = newPlayer;
-        for (int i = 0; i < 4; i++ )
+
+
+        List<player> playersAtPos = new List<player>();
+
+        playersAtPos.Add(newPlayer);
+        playersAtPos.Add(activePlayers[pos]);
+        playersAtPos.Add(activePlayers[pos + 5]);
+        playersAtPos.Add(activePlayers[pos + 10]);
+
+        player[] newLocations = new player[4];
+
+        for (int i = 0; i < newLocations.Length; i++)
         {
-            if(i == 3)players.Add(currentPlayer);
-            else if(activePlayers[pos + (i *5)] == null)
+            player currentPlayer = null;
+            double highestOverall = 0;
+            foreach (player p in playersAtPos)
             {
-                activePlayers[pos + (i *5)] = currentPlayer;
-                break;
+                if (p == null) continue;
+                if(p.getOverall() > highestOverall)
+                {
+                    highestOverall = p.getOverall();
+                    currentPlayer = p;
+                }
             }
-            else if(activePlayers[pos + (i *5)].getOverall() < currentPlayer.getOverall())
+            if (currentPlayer != null)
             {
-                player temp = activePlayers[pos + (i * 5)];
+                playersAtPos.Remove(currentPlayer);
+                if (i == 3) players.Add(currentPlayer);
+            }
+            
+            if(i != 3)
+            {
                 activePlayers[pos + (i * 5)] = currentPlayer;
-                currentPlayer = temp;
             }
         }
+        
 
         newPlayer.setTeam(this);
         addPos(pos);
@@ -1674,7 +1694,8 @@ public class DraftPick
     public void SelectPlayer(player selectedPlayer)
     {
         this.selectedPlayer = selectedPlayer;
-        owner.addPlayer(selectedPlayer);
+        player newPlayer = new player(selectedPlayer.getPosition(), selectedPlayer.ratings, selectedPlayer.age, selectedPlayer.getName(), selectedPlayer.peakStart, selectedPlayer.peakEnd, selectedPlayer.development, selectedPlayer.GetCountry(), formulaBasketball.nextPlayerID++);
+        owner.addPlayer(newPlayer);
     }
 }
 [Serializable]

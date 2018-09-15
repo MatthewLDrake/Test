@@ -1,64 +1,64 @@
-1. Shmupland Dictators SG Eŋipxuk Nipta
-2. Naxda Nomads (from Avura Aviators) SF Ienaga Ethanthovok
-3. Blanaxon Hammers C Yamazaki Meiji
-4. Czalliso Pythons SG Moonoriguna
-5. Manwx Saguans SF Wakuni Senelile
-6. Stedro Boulders SF William Stephen
-7. Solea Geysers (from Faehrenfall Feathercats) C telel lekeŋ
-8. Key to Don Yees PF kaf
-9. Holy Yektonisa Bishops PF Om Sung-Soo
-10. Aahrus Moosi (from Auspikitan Golden Falcons) SG ilo
-11. Ethanthova Ponies C Ixbla Ixau
-12. Red Rainbow Sickles PF Hjenax Auproda
-13. Dotruga Falno (from TND Tanks) SF Blaki Faraulik
-14. Height Sagua Cats PF Kwak Seung-Won
-15. Lyintaria Lynx SF Taneba Vokigei
-16. Autolik Autonomy PF noe
-17. Holykol Bears C Sopratyabla Kaxfar
-18. Serkr Atolls PF Tugano Klabotrisei
-19. Barsein Bats SF Ka Chihu
-20. Bongatar Banging Bongos PF Asher Wilcox
-21. Boltway Bad Dragons PF Kai Sayasone
-22. Aahrus Moosi SG Sagobesei Hidolundi
-23. Kaeshar Kaisers C Hato Yasuoka
-24. Dvimne Spirits SF fu
-25. Transhimalia Disasters PF Nomura Harumi
-26. Naxda Nomads C P'uyo Lek'at
-27. Calto Cows C Meka Kethavongsa
-28. Aiyota Pumps C Fihana Tomoyuki
-29. Pyxanovia Pixies SG Noxku Dazaxka
-30. Sagua Ocelots PG Cagi
-31. Solea Geysers PF Konala Somphousiharath
-32. TND Tanks (from Dotruga Falno) C Hòŕcò Nùx́iś
-33. Shmupland Dictators SF Zaxkla Kolpauxso
-34. Avura Aviators SG Omeli Elomeso
-35. Blanaxon Hammers SF Kaliso Olamosei
-36. Czalliso Pythons PG lu
-37. Manwx Saguans SG Ikaika Sayasone
-38. Stedro Boulders SG ilo
-39. Faehrenfall Feathercats PF Timo Waldstein
-40. Key to Don Yees PF Onishi Koshiro
-41. Holy Yektonisa Bishops SF Ixbla Naxki
-42. Auspikitan Golden Falcons PF Yamazaki Nariaki
-43. Ethanthova Ponies SF Jesse Svensson
-44. Red Rainbow Sickles PG Yukiyama Yujiro
-45. TND Tanks C Asdëk Cows
-46. Height Sagua Cats C Keon Savang
-47. Lyintaria Lynx PF Suzuki Tamuramaro
-48. Autolik Autonomy PG Lakolku Bla
-49. Holykol Bears PG Himi Danjuro
-50. Serkr Atolls C noe
-51. Barsein Bats SG Rezinal Lesteriok
-52. Bongatar Banging Bongos C Teva Ainigdine
-53. Boltway Bad Dragons SG Marco Nesselrode
-54. Aahrus Moosi C Jesse Boyle
-55. Dotruga Falno (from Kaeshar Kaisers) SF Olue Aq'aie
-56. Dvimne Spirits SF Xaisomboun Siharath
-57. Transhimalia Disasters PF Yembeane
-58. Naxda Nomads PF Cabodu Gasbërr
-59. Calto Cows C Miyoshi Tamuramaro
-60. Aiyota Pumps PF Pau Nibrit
-61. Pyxanovia Pixies SF Mya Sonexarth
-62. Czalliso Pythons (from Sagua Ocelots) SF Jesse Fine
-63. Solea Geysers PF Malo Viravongs
-64. TND Tanks (from Dotruga Falno) C Nàgiiś Nnoncàśénreskèc
+1. Aahrus Moosi C Alubembi Keget
+2. Ethanthova Ponies C Alubembi Keget
+3. Boltway Bad Dragons PF Daniel Keaton
+4. Key to Don Yees SF Ienaga Ethanthovok
+5. Shmupland Dictators C Himiba Alumosvek
+6. Naxda Nomads (from Avura Aviators) C Takamitsu Takeji
+7. Czalliso Pythons C Takamitsu Takeji
+8. Autolik Autonomy PG Zac Perch
+9. Sagua Ocelots PG Atrêsga Cows
+10. Lyintaria Lynx SF Wakuni Senelile
+11. Height Sagua Cats C Kaili Menorath
+12. Solea Geysers (from Faehrenfall Feathercats) SF Makiaipisi Finapeke
+13. Aiyota Pumps PF Om Sung-Soo
+14. Red Rainbow Sickles C P'uyo Lek'at
+15. Holykol Bears SF Gmii Hlema
+16. Solea Geysers SF Denni O'àpàasà
+17. Manwx Saguans C Konala Ketthavong
+18. Stedro Boulders SG Günther Staffel
+19. Aahrus Moosi (from Auspikitan Golden Falcons) PF Nomura Harumi
+20. Holy Yektonisa Bishops SF Makiaipisi Nipta
+21. Calto Cows C Konala Ketthavong
+22. Dotruga Falno (from TND Tanks) SF William Stephen
+23. Bongatar Banging Bongos PF Jesse Fine
+24. Naxda Nomads C Malo Phanivong
+25. Transhimalia Disasters SG Eŋipxuk Nipta
+26. Blanaxon Hammers PF Aulii Savang
+27. Kaeshar Kaisers SF Kaliso Olamosei
+28. Dvimne Spirits SF Ixbla Naxki
+29. TND Tanks (from Dotruga Falno) C Kudapa Kurit
+30. Serkr Atolls C noe
+31. Barsein Bats PG Bane Souksanh
+32. Pyxanovia Pixies SG Matsuyama Izo
+33. Aahrus Moosi PF noe
+34. Ethanthova Ponies SF Jesse Svensson
+35. Boltway Bad Dragons PG Himi Danjuro
+36. Key to Don Yees SF Hivek Gagodo
+37. Shmupland Dictators C Djügkeq'go Di
+38. Avura Aviators SG roe
+39. Czalliso Pythons SG ilo
+40. Autolik Autonomy PG Zaxkla Kukroda
+41. Czalliso Pythons (from Sagua Ocelots) SG Sopratyabla Kipafar
+42. Lyintaria Lynx SF Jesse Fine
+43. Height Sagua Cats C Pat Ebron
+44. Faehrenfall Feathercats PF noe
+45. Aiyota Pumps SF Kammuri Taki
+46. Red Rainbow Sickles C Nathaniel Fine
+47. Holykol Bears SF Brian Perch
+48. Solea Geysers SF Lani Siphandon
+49. Manwx Saguans SG Sopratyabla Kipafar
+50. Stedro Boulders SG Koa Sengtavisouk
+51. Auspikitan Golden Falcons PG Lilo Phomsouvanh
+52. Holy Yektonisa Bishops SF Kwak Jae-Wook
+53. Calto Cows C Mochizuki Takeji
+54. TND Tanks C Kwak Minsu
+55. Bongatar Banging Bongos PF Cabodu Gasbërr
+56. Naxda Nomads C Nagasawa Seiho
+57. Transhimalia Disasters SG kekh pátélokain
+58. Blanaxon Hammers PF Duuśuś Neśom
+59. Dotruga Falno (from Kaeshar Kaisers) SF Kwak Jae-Wook
+60. Dvimne Spirits SF Danax Kolau
+61. TND Tanks (from Dotruga Falno) C Keoki Phommasane
+62. Serkr Atolls C Ivor Doyle
+63. Barsein Bats PG Eiqe Poi
+64. Pyxanovia Pixies SG Travis McSteve

@@ -1,32 +1,32 @@
-Dotruga Falno: 93.7282222222222
-Solea Geysers: 87.5235555555555
-Calto Cows: 86.9482222222222
-Pyxanovia Pixies: 85.8486666666667
-Serkr Atolls: 85.6413333333333
-Boltway Bad Dragons: 85.0326666666667
-Dvimne Spirits: 83.5502222222222
-Holy Yektonisa Bishops: 81.2166666666667
-Faehrenfall Feathercats: 80.8266666666667
-Barsein Bats: 80.0373333333333
-Sagua Ocelots: 79.8433333333333
-Bongatar Banging Bongos: 79.7502222222222
-Red Rainbow Sickles: 79.7282222222222
-Transhimalia Disasters: 79.5611111111111
-Aiyota Pumps: 79.5173333333333
-Czalliso Pythons: 79.4168888888889
-Blanaxon Hammers: 78.9224444444444
-Naxda Nomads: 78.7166666666667
-Kaeshar Kaisers: 78.5053333333333
-Avura Aviators: 78.2297777777778
-TND Tanks: 78.1968888888889
-Shmupland Dictators: 78.0751111111111
-Lyintaria Lynx: 77.7671111111111
-Manwx Saguans: 77.6357777777778
-Stedro Boulders: 77.5391111111111
-Auspikitan Golden Falcons: 77.3311111111111
-Key to Don Yees: 77.1648888888889
-Height Sagua Cats: 77.0942222222222
-Aahrus Moosi: 76.812
-Autolik Autonomy: 76.6606666666667
-Holykol Bears: 75.6904444444445
-Ethanthova Ponies: 74.6793333333333
+Dotruga Falno: 95.9446666666667
+Calto Cows: 93.37
+Pyxanovia Pixies: 93.2742222222222
+Serkr Atolls: 89.9128888888889
+Solea Geysers: 89.616
+Dvimne Spirits: 89.5924444444444
+Boltway Bad Dragons: 89.2253333333333
+Barsein Bats: 88.7057777777778
+Manwx Saguans: 88.3348888888889
+Ethanthova Ponies: 88.0122222222222
+Height Sagua Cats: 87.5702222222222
+Bongatar Banging Bongos: 87.4504444444445
+Holy Yektonisa Bishops: 86.3568888888889
+Blanaxon Hammers: 85.6437777777778
+Lyintaria Lynx: 84.3053333333333
+Avura Aviators: 84.2795555555556
+Transhimalia Disasters: 84.1328888888889
+Kaeshar Kaisers: 84.0831111111111
+Naxda Nomads: 83.5191111111111
+Czalliso Pythons: 83.502
+Faehrenfall Feathercats: 83.3788888888889
+Auspikitan Golden Falcons: 83.1926666666667
+Shmupland Dictators: 82.8506666666667
+Aahrus Moosi: 82.4848888888889
+Holykol Bears: 82.4466666666667
+Key to Don Yees: 82.1933333333333
+TND Tanks: 81.3666666666667
+Red Rainbow Sickles: 81.0962222222222
+Sagua Ocelots: 81.0697777777778
+Aiyota Pumps: 81.008
+Autolik Autonomy: 80.588
+Stedro Boulders: 80.5715555555555
