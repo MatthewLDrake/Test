@@ -67,6 +67,7 @@
     <Compile Include="ContractResult.cs" />
     <Compile Include="FIBUTeam.cs" />
     <Compile Include="FreeAgents.cs" />
+    <Compile Include="ImagePrinter.cs" />
     <Compile Include="NameGenerator.cs" />
     <Compile Include="Record.cs" />
     <Compile Include="retirements.cs" />

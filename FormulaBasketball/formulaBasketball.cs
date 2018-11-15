@@ -24,6 +24,9 @@ public class formulaBasketball
     public static Standings standingsForm;
     private static PlayoffBracket bracket;
     public static int nextPlayerID;
+    public static bool injuries = false;
+    private static ImagePrinter printer;
+    public static bool createImages = true;
     public formulaBasketball(bool loadSave, String fileName, List<team> teams, List<player> freeAgency, Boolean flag = false)
     {
 
@@ -31,7 +34,7 @@ public class formulaBasketball
         r = new FormulaBasketball.Random();
         writeGames = false;
         StringUtils = new StringUtils();
-
+        
         Startup(loadSave, fileName, teams, freeAgency, !flag);
         standingsForm = new Standings();
         bracket = new PlayoffBracket();
@@ -80,15 +83,16 @@ public class formulaBasketball
         {
             create.getTeam(i).setTeamNum(i);
         }
-
+        printer = new ImagePrinter(startingGame);
         while (!flag)
         {
-            //Form2 resultFinder = new Form2();
-            YearSim resultFinder = new YearSim();
+            Form2 resultFinder = new Form2();
+            //YearSim resultFinder = new YearSim();
             resultFinder.ShowDialog();
             String result = resultFinder.GetResult();
             standingsForm.Show();
             standingsForm.Visible = false;
+
             //String result = Console.ReadLine();
             if (result.Equals("selectGames"))
             {
@@ -1011,6 +1015,7 @@ public class formulaBasketball
         create.getTeam(i).AddResult(j, newGame.getAwayTeamScore(), newGame.getHomeTeamScore());
         create.getTeam(j).AddResult(i, newGame.getHomeTeamScore(), newGame.getAwayTeamScore());
 
+        printer.AddResult(create.getTeam(i).ToString(), create.getTeam(j).ToString(), newGame.getAwayTeamScore(), newGame.getHomeTeamScore());
        
         gameResultsContents += ("," + create.getTeam(i).ToString() + "," + newGame.getAwayTeamScore() + "," + create.getTeam(j).ToString() + "," + newGame.getHomeTeamScore() + "\n");
 

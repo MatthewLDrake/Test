@@ -53,79 +53,79 @@ The '''Aahrus Moosi''' are a basketball team based in Aahrus, Aahrus. They compe
 !Overall
 |-
 |C
-|Làto Sokàtà
-|27
-|70.77
-|-
-|PF
-|Moke Douangvily
-|28
-|86.47
-|-
-|SF
-|Pakomha Pjagwazwi
-|25
-|90.30
-|-
-|SG
-|Quartermarra
-|26
-|85.89
-|-
-|PG
-|Pakomha Dakómh
-|24
-|79.01
-|-
-|C
-|Làto Sokàtà
-|27
-|70.77
+|Alubembi Keget
+|22
+|68.04
 |-
 |PF
 |Yombeen
-|29
-|86.21
+|30
+|77.93
 |-
 |SF
 |Olandi Amodetsei 
-|21
-|76.58
+|22
+|73.42
 |-
 |SG
-|Key To Don Player #3
-|31
-|77.45
+|Kardo Gasbërr
+|25
+|81.49
 |-
 |PG
-|Gerard Mortlock
-|26
-|77.48
+|Namia Akaleta
+|29
+|69.73
 |-
 |C
-|Alubembi Keget
-|22
-|67.46
+|Center #162
+|27
+|66.13
 |-
 |PF
 |Aahrus Player #1
-|30
-|78.01
+|33
+|72.64
 |-
 |SF
-|Kawata Hirokazu
-|24
-|74.31
+|Wakuni Senelile
+|22
+|67.29
 |-
 |SG
-|Key To Don Player #3
-|31
-|77.45
+|Heine Umlauf
+|26
+|66.39
 |-
 |PG
-|Ixbla Sovix
+|Kimo Rattanvongsa
+|31
+|68.39
+|-
+|C
+|Center #162
 |27
-|75.25
+|66.13
+|-
+|PF
+|Power Forward #160
+|28
+|47.56
+|-
+|SF
+|Phetdum Bouvanaat 
+|21
+|63.95
+|-
+|SG
+|Heine Umlauf
+|26
+|66.39
+|-
+|PG
+|Kimo Rattanvongsa
+|31
+|68.39
 |}
 {{Infobox basketball club
 | color1 = #df0000
@@ -183,78 +183,78 @@ The '''Auspikitan Golden Falcons''' are a basketball team based in Auspikitan, A
 |-
 |C
 |Naqánkló Qjodlonhámh
-|28
-|70.95
+|29
+|65.82
 |-
 |PF
 |Phetdum Somphonpadee
-|25
-|77.29
+|26
+|71.06
 |-
 |SF
-|Jesse McSteve
+|Ijba Bexotrugo
 |30
-|86.55
-|-
-|SG
-|Lato Ikro
-|25
-|91.51
-|-
-|PG
-|Point Guard #131
-|31
-|89.66
-|-
-|C
-|Kersuvi Himei
-|27
-|57.29
-|-
-|PF
-|pot
-|25
-|69.40
-|-
-|SF
-|Guooka
-|23
-|80.23
+|74.79
 |-
 |SG
 |Palani Phomsouvanh
-|28
-|91.01
+|30
+|81.27
 |-
 |PG
-|Calvin Hayhurst
-|23
-|82.61
+|Billingulbut
+|26
+|79.83
 |-
 |C
-|Hamish Rooney
-|22
-|40.18
+|Làto Sokàtà
+|29
+|62.97
 |-
 |PF
-|Imuk Nipta
-|21
-|64.52
+|pot
+|26
+|68.48
 |-
 |SF
-|Nupa Ixau
-|26
-|71.47
+|Makiaipisi Nipta
+|21
+|63.24
 |-
 |SG
 |Taneba Nole
-|30
+|31
 |69.01
 |-
 |PG
-|Błá Kánpovŕagá
-|26
-|66.98
+|Calvin Hayhurst
+|24
+|73.08
+|-
+|C
+|Alve Sanraku
+|22
+|62.49
+|-
+|PF
+|Power Forward #92
+|30
+|48.75
+|-
+|SF
+|Mom Slivókŕámhomhók
+|24
+|57.47
+|-
+|SG
+|Shooting Guard #111
+|28
+|51.78
+|-
+|PG
+|Nagasawa Okitsugu
+|24
+|65.00
 |}
 {{Infobox basketball club
 | color1 = #000000
@@ -311,79 +311,79 @@ The '''Calto Cows''' are a basketball team based in Calto, Wyverncliff. They com
 !Overall
 |-
 |C
-|vo
-|30
-|82.35
-|-
-|PF
-|Trevor Oosterhout
-|30
-|99.99
-|-
-|SF
-|Kasai Isei
+|Asser Hutto 
 |27
-|94.81
-|-
-|SG
-|Selby Schneiders
-|30
-|93.00
-|-
-|PG
-|Errol James
-|29
-|96.71
-|-
-|C
-|Red Rainbow Player #3
-|31
-|79.12
+|71.03
 |-
 |PF
 |Analu Vatthana
-|27
-|81.80
+|28
+|77.03
 |-
 |SF
-|Dalton Ariesen
-|28
-|84.02
+|Asher Turner
+|30
+|83.14
 |-
 |SG
-|Keahi Savang
-|28
-|85.41
+|Eŋipxuk Nipta
+|24
+|66.30
 |-
 |PG
 |Its'a Lełqutyi
-|30
+|31
 |86.45
 |-
 |C
-|Alukeili Asoertotrisei
-|27
-|72.64
+|Himiba Alumosvek
+|25
+|64.52
 |-
 |PF
-|E'àǵay Nnoncàśénreskèc
-|26
-|69.61
+|Pranga  
+|27
+|73.60
 |-
 |SF
-|Guooka
-|23
-|80.23
+|Jesse Svensson
+|28
+|72.55
 |-
 |SG
-|Seong-Hyeon Moon
-|30
-|85.23
+|roe
+|24
+|65.57
 |-
 |PG
-|Michael Barnett
+|Xaisomboun Saengsavang
+|25
+|75.64
+|-
+|C
+|Center #143
 |28
-|81.21
+|43.57
+|-
+|PF
+|David Lavender
+|25
+|65.22
+|-
+|SF
+|Kiro Elomos
+|22
+|52.89
+|-
+|SG
+|Koa Sengtavisouk
+|22
+|62.98
+|-
+|PG
+|Imuk Poi
+|25
+|64.49
 |}
 {{Infobox basketball club
 | color1 = #00ffac
@@ -440,79 +440,79 @@ The '''Height Sagua Cats''' are a basketball team based in Shigua, Height Sagua.
 !Overall
 |-
 |C
-|Red Rainbow Player #3
-|31
-|79.12
+|noe  
+|22
+|65.21
 |-
 |PF
-|Eipe Hawo
-|28
-|95.96
+|Daniel Keaton
+|23
+|67.64
 |-
 |SF
-|Jesse McSteve
-|30
-|86.55
+|Takishima Natsuo
+|28
+|70.59
 |-
 |SG
-|Alundi Elodosatrisei
-|27
-|83.85
+|Rusty Berry
+|30
+|87.43
 |-
 |PG
 |No Kwang-Jo
-|25
-|92.36
+|26
+|82.36
 |-
 |C
-|Masaki Kazuko
-|28
-|71.51
+|Naxnoxsoya Liksov
+|27
+|63.87
 |-
 |PF
-|Hvanne Takakazu
-|30
-|79.66
+|Om Sung-Soo
+|21
+|66.02
 |-
 |SF
-|Atumundikeili Halapodetsei
-|28
-|84.87
+|Denni O'àpàasà
+|24
+|65.68
 |-
 |SG
-|Tri_National_Dominion Player #2
-|30
-|82.65
+|Carlos Garber
+|26
+|66.33
 |-
 |PG
-|Laurence Chandler
-|29
-|89.86
+|Xavier Wilcox
+|28
+|80.58
 |-
 |C
-|Yamazaki Meiji
-|22
-|71.38
+|Kaili Menorath
+|23
+|57.94
 |-
 |PF
-|Jumpe
-|28
-|72.64
+|Nomura Harumi
+|23
+|64.48
 |-
 |SF
-|Key To Don Player #4
-|31
-|84.53
+|Ixbla Naxki
+|24
+|61.67
 |-
 |SG
-|Sova Kłó
-|28
-|79.42
+|Height Sagua Player #4
+|31
+|65.69
 |-
 |PG
-|Point Guard #131
-|31
-|89.66
+|Brodie Cropper
+|24
+|54.96
 |}
 {{Infobox basketball club
 | color1 = #00ff00
@@ -570,78 +570,78 @@ The '''Key to Don Yees''' are a basketball team based in Dongua, Key To Don. The
 |-
 |C
 |Gerard Holzer
-|29
-|74.46
+|30
+|68.50
 |-
 |PF
-|kaf
-|23
-|77.27
+|Iggy Bolter
+|28
+|75.46
 |-
 |SF
-|Aahrus Player #5
-|30
-|85.24
+|Malo Sayasone
+|31
+|75.59
 |-
 |SG
-|Stephan Hutto
-|25
-|86.55
-|-
-|PG
-|Phetdum Vongsay
-|26
-|87.45
-|-
-|C
-|Center #132
+|Mornay
 |30
-|64.13
-|-
-|PF
-|Tugano Klabotrisei
-|22
-|72.01
-|-
-|SF
-|Mhokba Djamhámhoñha
-|23
-|75.09
-|-
-|SG
-|la
-|30
-|82.85
+|70.05
 |-
 |PG
 |Cabodu Sokàtà
-|29
-|86.28
+|30
+|78.36
 |-
 |C
-|Nàgiiś Nnoncàśénreskèc
-|22
-|56.72
+|Kaili Menorath
+|23
+|57.94
 |-
 |PF
 |Kapel Hilo
-|26
-|71.78
+|27
+|67.40
 |-
 |SF
-|Mhokba Djamhámhoñha
-|23
-|75.09
+|Wakuni Senelile
+|24
+|67.29
 |-
 |SG
-|Alomibamobei Olalomundi
-|23
-|77.13
+|Matsuyama Izo
+|22
+|65.78
 |-
 |PG
-|Kaliso Hatemosei
-|25
-|75.75
+|Guvggillmào Nùx́iś
+|24
+|60.61
+|-
+|C
+|P'uyo Lek'at
+|22
+|55.12
+|-
+|PF
+|Tibiziŋag Qeki
+|23
+|59.04
+|-
+|SF
+|William Stephen
+|22
+|63.12
+|-
+|SG
+|kekh pátélokain
+|21
+|63.59
+|-
+|PG
+|Guvggillmào Nùx́iś
+|24
+|60.61
 |}
 {{Infobox basketball club
 | color1 = #00cf00
@@ -698,79 +698,79 @@ The '''Manwx Saguans''' are a basketball team based in Manwx, Darvincia. They co
 !Overall
 |-
 |C
-|Kiromi Kersidomobek
-|26
-|80.69
+|Uemura Tadashi
+|30
+|74.72
 |-
 |PF
-|Eipe Hawo
-|28
-|95.96
+|Éxànnecig Hàŕselàn
+|27
+|83.53
 |-
 |SF
-|Ḿavwápŕi Pimh 
-|24
-|80.83
+|Rusty Harries
+|29
+|83.32
 |-
 |SG
-|Kiyoto Mansumo
-|24
-|92.26
+|Palani Phomsouvanh
+|30
+|81.27
 |-
 |PG
 |Blalikki Kiixrit
-|26
-|91.94
+|27
+|79.27
 |-
 |C
-|Center #134
+|Himi Azumamaro
 |30
-|57.08
+|73.63
+|-
+|PF
+|Eipe Hawo
+|30
+|81.42
+|-
+|SF
+|Keon Keothavong
+|22
+|64.52
+|-
+|SG
+|Ok Yeong-Jin
+|27
+|79.48
+|-
+|PG
+|Himi Danjuro
+|25
+|60.81
+|-
+|C
+|Pixtij Lekaxo
+|28
+|62.41
 |-
 |PF
 |Sol Jae-Wook
-|28
-|84.80
+|29
+|79.33
 |-
 |SF
-|Váqáp Vjamhá
-|28
-|74.59
+|Ḿavwápŕi Pimh 
+|25
+|57.42
 |-
 |SG
-|Eŋipxuk Nipta
-|21
-|66.30
+|Alundi Elodosatrisei
+|29
+|79.38
 |-
 |PG
-|Melebin Himei
-|28
-|87.94
-|-
-|C
-|Konala Ketthavong
+|Himi Danjuro
 |23
-|54.62
-|-
-|PF
-|Kanoa Thammavong 
-|23
-|70.06
-|-
-|SF
-|fu
-|23
-|69.18
-|-
-|SG
-|Sopratyabla Kipafar
-|22
-|64.26
-|-
-|PG
-|Xolin Hialerko
-|26
-|79.21
+|60.81
 |}
 {{Infobox basketball club
 | color1 = #e53232
@@ -827,79 +827,79 @@ The '''Sagua Ocelots''' are a basketball team based in Sagua, Sagua. They compet
 !Overall
 |-
 |C
-|Ogino Tokaji
-|29
-|83.06
+|noe  
+|22
+|65.21
 |-
 |PF
-|Mawatari Kane
-|27
-|68.52
-|-
-|SF
-|Key To Don Player #4
-|31
-|84.53
-|-
-|SG
-|Zhali Mpetaec
+|Eipe Hawo
 |30
-|83.32
-|-
-|PG
-|hex
-|30
-|85.92
-|-
-|C
-|Ingo Samter 
-|26
-|61.28
-|-
-|PF
-|Hevek Himadolsei
-|28
-|66.66
+|81.42
 |-
 |SF
 |Alomibamobei Osadolsei
-|24
-|76.87
+|27
+|79.04
 |-
 |SG
-|Pwa Lefinu
-|27
-|80.25
+|Amoda Kixidodotsei
+|26
+|71.34
 |-
 |PG
-|Lyintaria Player #3
-|30
-|74.86
+|Nio Oipa
+|27
+|70.34
 |-
 |C
-|kalassak vekel álutep
-|29
-|60.21
+|Takamitsu Takeji
+|23
+|62.56
 |-
 |PF
-|Malo Phoutthasinh
-|25
-|57.76
+|Hevek Himadolsei
+|29
+|67.88
 |-
 |SF
-|Neville Spicer
-|28
-|76.17
+|Malo Sayasone
+|31
+|75.59
 |-
 |SG
-|Hvanne Aeridaniok
-|30
-|78.51
+|Sopratyabla Kipafar
+|22
+|63.90
 |-
 |PG
-|Danomobei Subeina
+|Zac Lolant
+|28
+|69.08
+|-
+|C
+|Ingo Samter 
+|28
+|62.08
+|-
+|PF
+|Daniel Keaton
+|24
+|67.64
+|-
+|SF
+|Malo Sayasone
 |31
-|73.45
+|75.59
+|-
+|SG
+|Darkon Piklo
+|28
+|59.09
+|-
+|PG
+|Tuto Bexek
+|24
+|52.44
 |}
 {{Infobox basketball club
 | color1 = #ff9900
@@ -956,79 +956,79 @@ The '''Solea Geysers''' are a basketball team based in Saelunavvk, Solea. They c
 !Overall
 |-
 |C
-|Colin Hutchison
-|29
-|82.69
+|Alomundi Bituna
+|22
+|67.45
 |-
 |PF
-|Pau Nipta
-|27
-|77.79
+|Daniel Keaton
+|22
+|67.64
 |-
 |SF
 |Kersok Milan
-|30
-|99.99
-|-
-|SG
-|voput epoikez tapnatiš
-|30
-|91.26
-|-
-|PG
-|Makiaipisi Fana
-|28
-|96.35
-|-
-|C
-|Làto Sokàtà
-|27
-|70.77
-|-
-|PF
-|Asher Wilcox
-|21
-|70.14
-|-
-|SF
-|Rvai Florkotae
 |31
-|87.82
-|-
-|SG
-|Paxathipatai Sengtavisouk
-|26
-|77.46
-|-
-|PG
-|zeppak itehíl tikítákh
-|30
-|78.85
-|-
-|C
-|Sopratyabla Kaxfar
-|23
-|65.53
-|-
-|PF
-|Xavier Grabochov
-|19
-|59.55
-|-
-|SF
-|Makiaipisi Finapeke
-|21
-|67.02
+|74.52
 |-
 |SG
 |Amoda Kixidodotsei
+|26
+|71.34
+|-
+|PG
+|Makiaipisi Fana
+|29
+|90.09
+|-
+|C
+|Center #162
+|27
+|66.13
+|-
+|PF
+|The Moo Saχi
+|25
+|64.40
+|-
+|SF
+|Wakuni Senelile
 |23
-|66.49
+|67.29
+|-
+|SG
+|Eŋipxuk Nipta
+|24
+|66.30
+|-
+|PG
+|Kiromibakeili Tute 
+|26
+|62.86
+|-
+|C
+|Takamitsu Takeji
+|23
+|62.56
+|-
+|PF
+|noe
+|23
+|63.34
+|-
+|SF
+|Phetdum Bouvanaat 
+|21
+|63.95
+|-
+|SG
+|Sopratyabla Kipafar
+|22
+|63.90
 |-
 |PG
 |Ḿavwápŕi Sŕóniqńoqi
-|22
-|71.66
+|24
+|59.53
 |}
 {{Infobox basketball club
 | color1 = #ff00ff
@@ -1085,79 +1085,79 @@ The '''Autolik Autonomy''' are a basketball team based in Autolik, Blaist Blalan
 !Overall
 |-
 |C
-|Timblejoornay
-|28
-|73.14
+|noe  
+|22
+|65.21
 |-
 |PF
 |Dennis Tsoi
-|23
-|74.20
+|24
+|70.87
 |-
 |SF
-|Pakomha Pjagwazwi
-|25
-|90.30
-|-
-|SG
-|Moonoriguna
+|Makiaipisi Finapeke
 |22
-|77.59
-|-
-|PG
-|enoikh apéka zeilun
-|30
-|87.72
-|-
-|C
-|Keahi Genevong
-|27
-|69.54
-|-
-|PF
-|Nopá Kánpovragá
-|30
-|70.68
-|-
-|SF
-|Nopá Nonhkwaqan
-|25
-|75.47
+|67.02
 |-
 |SG
 |Keoki Vongsay
-|26
-|75.66
+|27
+|75.29
 |-
 |PG
-|pekleɰ tiwan
-|28
-|73.48
+|Nio Oipa
+|27
+|70.34
 |-
 |C
-|Boolway
-|29
-|69.30
+|Himiba Alumosvek
+|22
+|64.52
 |-
 |PF
-|dot
-|26
-|63.70
+|Malo Phoutthasinh
+|27
+|62.58
 |-
 |SF
-|Bongatar Player #9
-|29
-|67.27
+|William Stephen
+|23
+|63.12
 |-
 |SG
 |Ikaika Kethavongsa
-|23
-|75.56
+|24
+|72.97
 |-
 |PG
-|Lakolku Bla
-|22
-|70.38
+|Imuk Poi
+|25
+|64.49
+|-
+|C
+|Kipana Nibrit
+|23
+|61.12
+|-
+|PF
+|Malo Phoutthasinh
+|27
+|62.58
+|-
+|SF
+|Paxathipatai Phoutthasinh
+|25
+|61.62
+|-
+|SG
+|Mornay
+|30
+|70.05
+|-
+|PG
+|William James
+|28
+|60.45
 |}
 {{Infobox basketball club
 | color1 = #666666
@@ -1214,79 +1214,79 @@ The '''Barsein Bats''' are a basketball team based in Barsein City, Barsein. The
 !Overall
 |-
 |C
-|Keon Saengsavang
-|27
-|72.64
+|noe  
+|22
+|65.21
 |-
 |PF
-|Yombeen
-|29
-|86.21
+|Iggy Bolter
+|28
+|75.46
 |-
 |SF
 |Matthew Grabochov
-|28
-|89.54
-|-
-|SG
-|pot
-|26
-|98.78
-|-
-|PG
-|Makiaipisi Fana
-|28
-|96.35
-|-
-|C
-|Argos Pebek
-|30
-|69.07
-|-
-|PF
-|Keahi Saengsavang
-|26
-|74.26
-|-
-|SF
-|Dalton Ariesen
-|28
-|84.02
+|29
+|83.75
 |-
 |SG
 |Aulii Thonemany
-|25
-|77.94
-|-
-|PG
-|Danomobei Subeina
-|31
-|89.94
-|-
-|C
-|Yembeane
-|25
-|64.06
-|-
-|PF
-|Sagomundisei Hisei
 |26
-|73.46
-|-
-|SF
-|Olandi Amodetsei 
-|21
-|76.58
-|-
-|SG
-|Naxto Zaxnax
-|26
-|73.43
+|76.50
 |-
 |PG
 |Keahi Siyavong
-|27
-|81.12
+|28
+|74.54
+|-
+|C
+|Abosa Aludetsei 
+|25
+|64.22
+|-
+|PF
+|Om Sung-Soo
+|22
+|66.02
+|-
+|SF
+|Gmii Hlema
+|22
+|66.75
+|-
+|SG
+|Heine Umlauf
+|26
+|66.39
+|-
+|PG
+|Maik Thepsenavong
+|20
+|58.34
+|-
+|C
+|Aiyota Player #1
+|31
+|56.26
+|-
+|PF
+|Nomura Harumi
+|23
+|64.48
+|-
+|SF
+|Nouka Aq'aie
+|21
+|55.20
+|-
+|SG
+|Matsuyama Izo
+|24
+|65.78
+|-
+|PG
+|Yamataka Danjuro
+|23
+|55.32
 |}
 {{Infobox basketball club
 | color1 = #ff0000
@@ -1344,78 +1344,78 @@ The '''Blanaxon Hammers''' are a basketball team based in Blanaxon, Blaist Blala
 |-
 |C
 |P'uyo Unup'a
-|27
-|72.34
+|28
+|70.77
 |-
 |PF
 |Eiqe Vokigei
-|28
-|89.62
+|29
+|84.16
 |-
 |SF
 |Nobira Nariaki
-|27
-|90.46
+|28
+|83.14
 |-
 |SG
 |Edgar Fichtner
-|28
-|85.84
+|29
+|80.34
 |-
 |PG
 |Versi Alovek
-|24
-|89.94
+|26
+|84.50
 |-
 |C
 |Ha Chihu
-|26
-|71.35
+|27
+|66.75
 |-
 |PF
 |Iggy Bolter
-|26
-|74.57
+|28
+|75.46
 |-
 |SF
-|Alubembi Hadosa
-|28
-|72.17
+|Keon Keothavong
+|24
+|64.52
 |-
 |SG
-|Brian Lolant
-|26
-|82.55
+|Sopratyabla Kipafar
+|23
+|63.90
 |-
 |PG
-|Cagi
-|23
-|73.34
+|Błá Váva
+|28
+|74.89
 |-
 |C
-|Shishido Goro
-|23
-|63.04
+|Bob Gagodo
+|24
+|66.39
 |-
 |PF
-|Yamazaki Nariaki
+|Nomura Harumi
 |22
-|68.22
+|64.48
 |-
 |SF
-|Pezi Vuki
-|28
-|65.01
+|Eun Cho
+|26
+|59.91
 |-
 |SG
-|Blanaxon Player #6
-|30
-|74.41
+|Dylan Rooney
+|24
+|61.60
 |-
 |PG
-|Koki Meiji
-|22
-|68.16
+|Sagotru Vealerko
+|25
+|61.60
 |}
 {{Infobox basketball club
 | color1 = #cc0000
@@ -1473,78 +1473,78 @@ The '''Kaeshar Kaisers''' are a basketball team based in Oasis City, Kaeshar. Th
 |-
 |C
 |Lilo Vatthana
-|25
-|77.78
-|-
-|PF
-|Sagomundisei Hisei
 |26
-|73.46
-|-
-|SF
-|Key To Don Player #4
-|31
-|84.53
-|-
-|SG
-|Akamine Naizen
-|27
-|94.70
-|-
-|PG
-|Versi Alovek
-|24
-|89.94
-|-
-|C
-|Aahrus Player #2
-|30
-|69.70
+|70.66
 |-
 |PF
 |Uxnax Prokexov
-|27
-|72.48
+|28
+|74.38
 |-
 |SF
-|Sol Young-Chul 
-|24
-|69.72
+|Sol Song-Jin
+|29
+|85.51
 |-
 |SG
-|Xavier McSteve
-|26
-|74.46
+|Akamine Naizen
+|29
+|91.51
 |-
 |PG
-|Lato Naixi
-|28
-|86.46
+|Travis Traenfeglia
+|24
+|68.78
 |-
 |C
-|Boolway
-|29
-|69.30
+|Kaili Menorath
+|22
+|57.94
 |-
 |PF
-|Bernard Wade
-|27
-|71.77
+|Quinten Grabochov
+|25
+|68.23
 |-
 |SF
-|Nadaklo Praxo
-|26
-|65.60
+|Key To Don Player #4
+|33
+|65.30
 |-
 |SG
-|Rezinal Lesteriok
+|Koa Sengtavisouk
+|23
+|62.98
+|-
+|PG
+|Làto Naksik
+|30
+|68.43
+|-
+|C
+|P'uyo Lek'at
 |21
-|72.71
+|55.12
+|-
+|PF
+|Olue Pitwa
+|22
+|54.08
+|-
+|SF
+|Lani Siphandon
+|19
+|57.67
+|-
+|SG
+|Tanifuji Shirosama
+|28
+|61.52
 |-
 |PG
 |Carlos Harris
-|24
-|78.24
+|25
+|62.14
 |}
 {{Infobox basketball club
 | color1 = #7f6000
@@ -1601,54 +1601,29 @@ The '''Naxda Nomads''' are a basketball team based in Naxda, Blaist Blaland. The
 !Overall
 |-
 |C
-|Height Sagua Player #5
-|30
-|79.60
+|Vŕá Płońiblá
+|31
+|73.00
 |-
 |PF
-|Eto Shunmyo
-|25
-|84.95
+|Aahrus Player #1
+|33
+|72.64
 |-
 |SF
-|Murata Sofu
-|25
-|86.05
-|-
-|SG
-|Zhali Mpetaec
-|30
-|83.32
-|-
-|PG
-|b 9u
-|30
-|83.67
-|-
-|C
-|Meka Kethavongsa
-|22
-|63.26
-|-
-|PF
-|Moke Savang
+|Mhokba Djamhámhoñha
 |26
-|68.79
-|-
-|SF
-|Small Forward #143
-|30
-|80.93
+|71.10
 |-
 |SG
-|Moonoriguna
-|22
-|77.59
+|Tixen Prokol
+|30
+|80.49
 |-
 |PG
-|Lizaxon Rova
-|28
-|75.68
+|Zac Perch
+|23
+|62.23
 |-
 |C
 |Takamitsu Takeji
@@ -1657,23 +1632,48 @@ The '''Naxda Nomads''' are a basketball team based in Naxda, Blaist Blaland. The
 |-
 |PF
 |Om Sung-Soo
-|22
+|24
 |66.02
 |-
 |SF
-|Maik Phothisarath
+|Ienaga Ethanthovok
 |23
-|71.43
+|67.48
 |-
 |SG
-|Carlos Garber
-|25
-|64.90
+|Sopratyabla Kipafar
+|23
+|63.90
 |-
 |PG
-|Nukunaix Hjetohje 
-|22
-|63.68
+|Atrêsga Cows
+|25
+|60.54
+|-
+|C
+|Hexar Mann
+|28
+|60.35
+|-
+|PF
+|Moke Savang
+|27
+|63.88
+|-
+|SF
+|Blanox Liksov
+|23
+|56.31
+|-
+|SG
+|Darkon Piklo
+|28
+|59.09
+|-
+|PG
+|Rusty Caplin
+|23
+|58.14
 |}
 {{Infobox basketball club
 | color1 = #ff0000
@@ -1730,79 +1730,79 @@ The '''Red Rainbow Sickles''' are a basketball team based in Sovkagrad, Red Rain
 !Overall
 |-
 |C
-|Koa Savang
-|23
-|72.15
+|Vŕá Płońiblá
+|31
+|73.00
 |-
 |PF
-|Pranga  
-|25
-|80.25
-|-
-|SF
-|Phetdum Bouvanaat 
-|21
-|90.29
-|-
-|SG
-|Sagua Player #3
-|30
-|78.22
-|-
-|PG
-|Làto Cows 
-|24
-|84.57
-|-
-|C
-|Center #137
-|31
-|72.09
-|-
-|PF
-|Hjenax Auproda
-|22
-|76.68
-|-
-|SF
-|Red Rainbow Player #1
-|30
-|87.33
-|-
-|SG
-|Key To Don Player #3
-|31
-|77.45
-|-
-|PG
-|Dano Mesiaertoxek
-|25
-|75.91
-|-
-|C
-|Masaki Kazuko
+|Analu Vatthana
 |28
-|71.51
-|-
-|PF
-|Cabodu Kanix
-|23
-|74.95
+|77.03
 |-
 |SF
-|Murata Sofu
-|25
-|86.05
+|xek
+|35
+|71.20
 |-
 |SG
-|Sovnax Pasovya
-|21
-|71.73
+|Rusty Berry
+|30
+|87.43
 |-
 |PG
-|Ǵŕópjó Kámh
+|Błá Váva
+|28
+|74.89
+|-
+|C
+|Gerard Holzer
+|30
+|68.50
+|-
+|PF
+|Asser Steinbauer
+|25
+|76.72
+|-
+|SF
+|Ienaga Ethanthovok
+|24
+|67.48
+|-
+|SG
+|Tixen Prokol
+|30
+|80.49
+|-
+|PG
+|Imuk Poi
 |23
-|68.80
+|64.49
+|-
+|C
+|Dylan Cass
+|27
+|66.60
+|-
+|PF
+|Ydar Iode
+|30
+|72.62
+|-
+|SF
+|Makiaipisi Finapeke
+|22
+|67.02
+|-
+|SG
+|Lyintaria Player #6
+|31
+|73.89
+|-
+|PG
+|Bane Souksanh
+|23
+|61.15
 |}
 {{Infobox basketball club
 | color1 = #00ffdb
@@ -1859,79 +1859,79 @@ The '''Serkr Atolls''' are a basketball team based in Kap'atŋpiri, Oesa. They c
 !Overall
 |-
 |C
-|Vrá Nonhkwaqan
-|30
-|86.76
-|-
-|PF
-|Pranga  
-|25
-|80.25
-|-
-|SF
-|Klaxon Nixoka
-|27
-|96.02
-|-
-|SG
-|Stephan Hutto
-|25
-|86.55
-|-
-|PG
-|Transhilmalia Player #2
-|30
-|99.99
-|-
-|C
-|Yamazaki Meiji
-|22
-|71.38
+|Saiki Shunmyo
+|28
+|67.74
 |-
 |PF
 |Iveo Vokigei
-|23
-|72.34
+|26
+|76.88
 |-
 |SF
-|K'ita Senako
-|24
-|79.08
+|Makiaipisi Finapeke
+|21
+|67.02
 |-
 |SG
 |Niko Stengel
-|29
-|85.40
+|30
+|75.62
 |-
 |PG
-|Blanaxon Player #2
-|30
-|82.41
+|Barsein Player #2
+|32
+|73.16
 |-
 |C
-|Teva Gekxakŋi
-|25
-|67.71
+|Aiyota Player #1
+|31
+|56.26
 |-
 |PF
-|Bongatar Player #5
-|30
-|70.64
+|Pranga  
+|27
+|73.60
 |-
 |SF
-|Lee Stidham
-|21
-|75.46
+|Denni O'àpàasà
+|23
+|65.68
 |-
 |SG
-|Pakomha Nhoñsła
-|28
-|81.27
+|Nupa Auprat
+|26
+|73.56
 |-
 |PG
-|Nathaniel Bate
-|25
-|81.12
+|Chu Minsu
+|24
+|59.51
+|-
+|C
+|Fox
+|29
+|41.61
+|-
+|PF
+|Ikaika Saysamongdy
+|21
+|53.15
+|-
+|SF
+|Alukeili Kersidomobek
+|19
+|56.31
+|-
+|SG
+|Pxalit'k'a Player #8
+|29
+|62.99
+|-
+|PG
+|Ivek'il Wap't'ebw
+|23
+|58.52
 |}
 {{Infobox basketball club
 | color1 = #1c4587
@@ -1988,79 +1988,79 @@ The '''Shmupland Dictators''' are a basketball team based in Pyongyang, Shmuplan
 !Overall
 |-
 |C
-|Power Forward #166
-|30
-|74.52
+|Vŕá Płońiblá
+|31
+|73.00
 |-
 |PF
-|Kibibei Hatemosei
-|26
-|83.19
+|Ydar Iode
+|30
+|72.62
 |-
 |SF
-|Red Rainbow Player #1
-|30
-|87.33
+|Swanano Nonhkwaqan
+|27
+|72.28
 |-
 |SG
-|Gorga Ektxr
-|27
-|89.70
+|Kibi Fevioka
+|21
+|67.28
 |-
 |PG
-|Akamu Cheruene
-|29
-|79.51
+|Versi Alovek
+|26
+|84.50
 |-
 |C
-|Vŕá Płońiblá
-|25
-|67.09
+|Center #162
+|27
+|66.13
 |-
 |PF
-|Keahi Saengsavang
-|26
-|74.26
+|Duuśuś Neśom
+|22
+|59.86
+|-
+|SF
+|Ienaga Ethanthovok
+|25
+|67.48
+|-
+|SG
+|Eŋipxuk Nipta
+|22
+|66.30
+|-
+|PG
+|Imuk Poi
+|22
+|64.49
+|-
+|C
+|Center #162
+|27
+|66.13
+|-
+|PF
+|Atolep Subeina
+|24
+|59.64
 |-
 |SF
 |Eun Cho
-|25
-|85.27
+|26
+|59.91
 |-
 |SG
-|Hvanne Aeridaniok
-|30
-|78.51
+|Height Sagua Player #4
+|31
+|65.69
 |-
 |PG
-|Tapan Sikasbë
-|25
-|71.25
-|-
-|C
-|Himiba Alumosvek
-|22
-|64.52
-|-
-|PF
-|Hevek Himadolsei
-|28
-|66.66
-|-
-|SF
-|guz
+|Point Guard #92
 |29
-|72.59
-|-
-|SG
-|Sagobesei Hidolundi
-|22
-|74.74
-|-
-|PG
-|Ji-Min Choi
-|30
-|67.27
+|54.63
 |}
 {{Infobox basketball club
 | color1 = #1155cc
@@ -2117,79 +2117,79 @@ The '''Aiyota Pumps''' are a basketball team based in Vikasa, Aiyota. They compe
 !Overall
 |-
 |C
-|Ixbla Ixau
-|23
-|65.84
+|Bob Gagodo
+|24
+|66.39
 |-
 |PF
-|Paparto Bexosek
-|28
-|82.54
+|Quinten Grabochov
+|25
+|68.23
 |-
 |SF
-|xek
-|30
-|75.87
+|Lee Stidham
+|22
+|74.01
 |-
 |SG
 |San Holo
-|26
+|27
 |99.99
 |-
 |PG
 |Olandi Olamos
-|23
-|80.80
+|24
+|77.06
 |-
 |C
 |Pixtij Lekaxo
-|27
-|64.38
+|28
+|62.41
 |-
 |PF
-|Om Sung-Soo
-|21
-|66.02
+|noe
+|23
+|63.34
 |-
 |SF
-|Lee Stidham
-|21
-|75.46
+|xek
+|35
+|71.20
 |-
 |SG
-|Key To Don Player #3
-|31
-|77.45
+|Murata Yoshifumi
+|24
+|75.56
 |-
 |PG
-|Aiyota Player #2
-|30
-|78.49
+|Keowynn Douangvily
+|22
+|57.90
 |-
 |C
-|Abosa Aludetsei 
+|Màce Nùx́iś
 |24
-|63.68
+|57.32
 |-
 |PF
-|Malo Viravongs
-|23
-|65.93
+|noe
+|22
+|63.34
 |-
 |SF
-|Nathaniel Starks
-|27
-|72.06
+|Mhokba Djamhámhoñha
+|26
+|71.10
 |-
 |SG
-|Ienaga Tomoyuki
-|25
-|60.32
+|Height Sagua Player #6
+|29
+|65.78
 |-
 |PG
-|Carlos Harris
-|24
-|78.24
+|Aulii Sayasone
+|21
+|55.77
 |}
 {{Infobox basketball club
 | color1 = #6aa84f
@@ -2247,78 +2247,78 @@ The '''Avura Aviators''' are a basketball team based in Ávura, Aeridani. They c
 |-
 |C
 |Omumiba Keget
-|26
-|81.19
-|-
-|PF
-|Sichaizei Sha
-|28
-|81.87
-|-
-|SF
-|Phetdum Vatthana
-|28
-|87.77
-|-
-|SG
-|Tri_National_Dominion Player #2
-|30
-|82.65
-|-
-|PG
-|Yasutake Yasuoka
 |27
-|87.92
-|-
-|C
-|Sundaa Wen
-|26
-|72.61
+|77.04
 |-
 |PF
 |Tibiziŋag Ifet
-|30
+|31
 |74.27
 |-
 |SF
 |Ijba Bexotrugo
-|28
-|85.46
+|30
+|74.79
 |-
 |SG
-|Siolle Lago
-|30
-|76.76
+|Nupa Auprat
+|26
+|73.56
 |-
 |PG
-|Hannes Ehrenstein
-|24
-|77.74
+|Barsein Player #2
+|32
+|73.16
 |-
 |C
-|Asser Hutto 
-|25
-|71.20
+|Pyxanovia Player #9
+|31
+|56.68
 |-
 |PF
-|Ethanthova Player #3
-|30
-|70.38
+|Pyxanovia Player #5
+|26
+|66.20
 |-
 |SF
-|Tonox Naxki
-|19
-|54.46
+|Kilik Farhje
+|25
+|73.60
 |-
 |SG
-|Kmeav'hsoe the Wretched
-|29
-|73.62
+|Mya Saysamongdy
+|25
+|64.56
 |-
 |PG
-|Làto Naksik
-|29
-|76.06
+|Kimo Rattanvongsa
+|31
+|68.39
+|-
+|C
+|Pyxanovia Player #9
+|31
+|56.68
+|-
+|PF
+|Pyxanovia Player #5
+|26
+|66.20
+|-
+|SF
+|Váqáp Qlámipanońqo 
+|23
+|64.54
+|-
+|SG
+|Mya Saysamongdy
+|25
+|64.56
+|-
+|PG
+|Kiromibakeili Tute 
+|26
+|62.86
 |}
 {{Infobox basketball club
 | color1 = #bf9000
@@ -2375,79 +2375,79 @@ The '''Boltway Bad Dragons''' are a basketball team based in Boltway, Ethanthova
 !Overall
 |-
 |C
-|Boḿa Blamhákpwano
-|24
-|82.53
+|noe  
+|22
+|65.21
 |-
 |PF
-|Kosiro Omundi
-|28
-|83.22
-|-
-|SF
-|Litsaw Wap't'ebw
-|27
-|99.99
-|-
-|SG
-|Sagua Player #2
-|30
-|90.34
-|-
-|PG
-|Paparto Subeina
-|30
-|90.05
-|-
-|C
-|Savage Soleani
-|30
-|66.29
-|-
-|PF
-|Kai Sayasone
-|21
-|70.06
+|David Lavender
+|25
+|65.22
 |-
 |SF
 |Alubembi Hadosa
-|28
-|72.17
+|29
+|70.77
 |-
 |SG
-|Robert Kershaw
-|24
-|83.00
+|Amoda Kixidodotsei
+|26
+|71.34
 |-
 |PG
-|Làto Cows 
-|24
-|84.57
+|Nio Oipa
+|27
+|70.34
 |-
 |C
-|Hato Yasuoka
-|23
-|64.09
+|Boḿa Blamhákpwano
+|25
+|61.08
 |-
 |PF
-|Daniel Keaton
-|22
-|67.64
+|David Lavender
+|25
+|65.22
 |-
 |SF
-|Boltway Player #2
-|31
-|69.30
+|Sebastien Robertson
+|27
+|65.42
 |-
 |SG
-|Wongduan Saengsavang
-|27
-|76.35
+|roe
+|22
+|65.57
 |-
 |PG
-|vun
-|30
-|75.99
+|Atrêsga Cows
+|22
+|60.54
+|-
+|C
+|Andries Martinez
+|28
+|59.76
+|-
+|PF
+|Center #113
+|31
+|64.08
+|-
+|SF
+|Small Forward #124
+|28
+|43.93
+|-
+|SG
+|Kaili Vatthana
+|20
+|59.45
+|-
+|PG
+|Alokeili Hersa
+|20
+|56.98
 |}
 {{Infobox basketball club
 | color1 = #002bff
@@ -2504,79 +2504,79 @@ The '''Dotruga Falno''' are a basketball team based in Naskitrusk, Dotruga. They
 !Overall
 |-
 |C
-|Atumobei Tute
-|28
-|95.35
+|Alubembi Keget
+|23
+|68.04
 |-
 |PF
-|Okaget Mabipet
-|26
-|99.57
+|roe
+|19
+|68.60
 |-
 |SF
-|Atakri Kalauni
-|30
-|99.99
+|Sol Song-Jin
+|29
+|85.51
 |-
 |SG
-|Iklo Eloalerko 
-|21
-|89.74
+|Rusty Berry
+|30
+|87.43
 |-
 |PG
-|Persa Mersa
-|23
-|95.08
+|Barsein Player #2
+|32
+|73.16
 |-
 |C
-|Danotra Alodosumosodo
-|23
-|59.13
+|Teva Ainigdine
+|20
+|55.08
 |-
 |PF
-|Blanaxon Player #3
-|30
-|82.80
+|Atolep Subeina
+|23
+|59.64
 |-
 |SF
 |Minamoto Takeji
-|25
-|78.93
+|26
+|71.51
 |-
 |SG
-|Yuguchi Sofu
+|Halsten Jöran
 |28
-|81.44
+|67.29
 |-
 |PG
-|Michael Barnett
-|28
-|81.21
+|Chu Minsu
+|23
+|59.51
 |-
 |C
-|Goormurra
-|23
-|52.82
+|Qili Kedi
+|28
+|51.54
 |-
 |PF
-|Pxalit'k'a Player #6
-|30
-|71.03
+|No Chihu
+|20
+|52.24
 |-
 |SF
-|Blaki Faraulik
-|22
-|76.00
+|xek
+|35
+|71.20
 |-
 |SG
-|Alomibamobei Olalomundi
-|21
-|68.52
+|Alukeili Himadosadetsei
+|24
+|61.10
 |-
 |PG
-|Pakomha Dakómh
-|24
-|79.01
+|Point Guard #93
+|29
+|56.78
 |}
 {{Infobox basketball club
 | color1 = #6d9eeb
@@ -2633,79 +2633,79 @@ The '''Ethanthova Ponies''' are a basketball team based in Vincent, Ethanthova. 
 !Overall
 |-
 |C
-|Atumobei Tute
+|Alubembi Keget
+|22
+|68.04
+|-
+|PF
+|Asser Steinbauer
+|25
+|76.72
+|-
+|SF
+|Gmii Hlema
+|23
+|66.75
+|-
+|SG
+|Height Sagua Player #6
+|29
+|65.78
+|-
+|PG
+|Lae Thepsenavong
 |28
-|95.35
+|70.03
+|-
+|C
+|Kipana Nibrit
+|23
+|61.12
 |-
 |PF
 |Kompasu Yasuoka
-|29
-|77.32
+|30
+|71.77
 |-
 |SF
-|Ijba Bexotrugo
-|28
-|85.46
-|-
-|SG
-|Seong-Hyeon Moon
-|30
-|85.23
-|-
-|PG
-|Errol James
-|29
-|96.71
-|-
-|C
-|Alubembi Keget
-|22
-|67.46
-|-
-|PF
-|Phetdum Somphonpadee
-|29
-|73.06
-|-
-|SF
-|Key To Don Player #4
-|31
-|84.53
-|-
-|SG
-|Fihana Jo
-|30
-|84.58
-|-
-|PG
-|pekleɰ tiwan
-|28
-|73.48
-|-
-|C
-|Keon Savang
+|Taneba Vokigei
 |23
-|61.25
-|-
-|PF
-|Phetdum Somphonpadee
-|29
-|73.06
-|-
-|SF
-|No Seung-Won
-|27
-|72.94
+|61.74
 |-
 |SG
-|Ethanthova Player #1
-|30
-|75.07
+|Height Sagua Player #6
+|29
+|65.78
 |-
 |PG
-|pekleɰ tiwan
-|28
-|73.48
+|Jig
+|27
+|61.80
+|-
+|C
+|Kipana Nibrit
+|23
+|61.12
+|-
+|PF
+|Pau Nibrit
+|21
+|57.40
+|-
+|SF
+|Ixbla Naxki
+|23
+|61.67
+|-
+|SG
+|Height Sagua Player #6
+|29
+|65.78
+|-
+|PG
+|Zaxkla Kukroda
+|23
+|60.47
 |}
 {{Infobox basketball club
 | color1 = #6aa84f
@@ -2762,79 +2762,79 @@ The '''Faehrenfall Feathercats''' are a basketball team based in Faehrenfall, Ae
 !Overall
 |-
 |C
-|Mónhin Mipjódló
-|23
-|74.43
+|noe  
+|22
+|65.21
 |-
 |PF
 |Tha Tricka
-|30
-|76.80
+|31
+|72.98
 |-
 |SF
-|Atumundikeili Halapodetsei
-|28
-|84.87
+|Alomibamobei Osadolsei
+|27
+|79.04
 |-
 |SG
 |Alundi Elodosatrisei
-|27
-|83.85
+|29
+|79.38
 |-
 |PG
-|Three Point Masta
-|30
-|96.94
+|Xavier Wilcox
+|28
+|80.58
 |-
 |C
 |Nàsà Sikasbë 
-|25
-|69.41
+|26
+|62.52
 |-
 |PF
 |Munglegarra
-|27
-|69.04
+|28
+|66.76
 |-
 |SF
-|Aseqa Poi
-|25
-|79.69
+|Nathaniel Starks
+|28
+|65.93
 |-
 |SG
-|Naxto Zaxnax
-|26
-|73.43
+|William Garber
+|22
+|60.93
 |-
 |PG
-|Melebin Himei
-|28
-|87.94
+|Namia Akaleta
+|29
+|69.73
 |-
 |C
-|Savage Soleani
-|30
-|66.29
+|Biplatza Ifet
+|33
+|59.60
 |-
 |PF
-|Mawatari Kane
-|27
-|68.52
+|Ogino Kunimichi
+|26
+|59.55
 |-
 |SF
-|Kiro Sensoi
-|28
-|69.92
+|Small Forward #54
+|29
+|64.11
 |-
 |SG
-|Takishima Kazuko
-|27
-|68.17
+|Nukunaix Lizaxium
+|22
+|57.52
 |-
 |PG
-|Lakolku Bla
-|22
-|70.38
+|Travis Traenfeglia
+|24
+|68.78
 |}
 {{Infobox basketball club
 | color1 = #12a4b3
@@ -2891,79 +2891,79 @@ The '''Stedro Boulders''' are a basketball team based in Stedro, Dotruga. They c
 !Overall
 |-
 |C
-|Nagata Taki
+|Atumiba Bexomos
 |26
-|72.24
+|68.38
 |-
 |PF
 |Kaili Saenthavisouk
-|26
-|82.31
+|27
+|76.95
 |-
 |SF
-|Sebastien Robertson
-|25
-|74.57
+|Lee Stidham
+|22
+|74.01
 |-
 |SG
-|Gorga Ektxr
+|Sitwa Luvepiri
+|23
+|67.65
+|-
+|PG
+|Lae Thepsenavong
+|28
+|70.03
+|-
+|C
+|Nagata Taki
 |27
-|89.70
+|66.91
+|-
+|PF
+|Aulii Savang
+|22
+|62.88
+|-
+|SF
+|Gmii Hlema
+|24
+|66.75
+|-
+|SG
+|roe
+|21
+|65.57
 |-
 |PG
 |Okada Sumiteru
-|24
-|84.03
+|26
+|65.53
 |-
 |C
 |Làto Sokàtà
-|27
-|70.77
-|-
-|PF
-|Keahi Saenthavisouk
-|26
-|71.12
-|-
-|SF
-|Ka Chihu
-|22
-|70.94
-|-
-|SG
-|Günther Staffel
-|19
-|68.32
-|-
-|PG
-|Blanaxon Player #2
-|30
-|82.41
-|-
-|C
-|Mabebosei Alotro
-|31
-|70.62
-|-
-|PF
-|Pañha Dakómh
-|25
-|47.46
-|-
-|SF
-|Small Forward #173
 |29
-|39.97
+|62.97
+|-
+|PF
+|Fast Break
+|28
+|60.32
+|-
+|SF
+|Sebastien Robertson
+|27
+|65.42
 |-
 |SG
-|Koa Sengtavisouk
-|21
-|62.98
+|kekh pátélokain
+|22
+|63.59
 |-
 |PG
-|Cagi
+|Lilo Phomsouvanh
 |23
-|73.34
+|60.17
 |}
 {{Infobox basketball club
 | color1 = #ffffff
@@ -3020,79 +3020,79 @@ The '''TND Tanks''' are a basketball team based in City, Tri-National Dominion. 
 !Overall
 |-
 |C
-|Tri_National_Dominion Player #1
-|30
-|76.77
+|Vŕá Płońiblá
+|31
+|73.00
 |-
 |PF
-|Wilbert Harries
+|Kwak Chihu
+|28
+|77.64
+|-
+|SF
+|Carsten Meyer
+|24
+|78.53
+|-
+|SG
+|Quartermarra
+|27
+|79.70
+|-
+|PG
+|Biplatza Gekxakŋi
+|34
+|66.98
+|-
+|C
+|Himiba Alumosvek
 |25
-|76.70
+|64.52
+|-
+|PF
+|Quinten Grabochov
+|25
+|68.23
 |-
 |SF
 |Phetdum Vatthana
 |28
-|87.77
+|69.43
 |-
 |SG
-|Quartermarra
-|26
-|85.89
-|-
-|PG
-|Phetdum Vongsay
+|Hato Yoshifumi
 |28
-|79.71
-|-
-|C
-|Maere Eirikursson
-|27
-|76.16
-|-
-|PF
-|Detrio Marzovius
-|30
-|71.36
-|-
-|SF
-|Carsten Meyer
-|23
-|81.55
-|-
-|SG
-|Pakomha Nhoñsła
-|28
-|81.27
-|-
-|PG
-|Tri_National_Dominion Player #3
-|30
-|76.80
-|-
-|C
-|Asdëk Cows
-|22
-|61.89
-|-
-|PF
-|Kai Sayasone
-|21
 |70.06
 |-
+|PG
+|Zac Perch
+|22
+|62.23
+|-
+|C
+|Kipana Nibrit
+|23
+|61.12
+|-
+|PF
+|Cabodu Gasbërr
+|23
+|60.75
+|-
 |SF
-|pazek lutep kaghišek
-|28
-|72.68
+|Sagolegotosiei Sagotxile
+|26
+|63.05
 |-
 |SG
-|Shooting Guard #57
-|29
-|49.20
+|Alukeili Himadosadetsei
+|24
+|61.10
 |-
 |PG
-|Yadingallie
-|26
-|51.07
+|Alosembi Elotrisei
+|28
+|61.83
 |}
 {{Infobox basketball club
 | color1 = #f1c232
@@ -3150,78 +3150,78 @@ The '''Bongatar Banging Bongos''' are a basketball team based in Bongatar City, 
 |-
 |C
 |Kalani Saysamongdy
-|25
-|89.22
+|26
+|83.97
 |-
 |PF
-|Kwak Seung-Won
-|22
-|73.22
+|roe
+|20
+|68.60
 |-
 |SF
 |Kasai Isei
 |27
-|94.81
+|87.44
 |-
 |SG
-|Miyoshi Masami
-|25
-|90.61
+|Amoda Kixidodotsei
+|26
+|71.34
 |-
 |PG
 |Fujikawa Masuhiro
-|27
-|89.40
+|28
+|85.55
 |-
 |C
-|Bongatar Player #2
-|29
-|59.16
+|Konala Ketthavong
+|23
+|53.85
 |-
 |PF
-|Phetdum Somphonpadee
-|29
-|73.06
+|Aulii Savang
+|24
+|62.88
 |-
 |SF
 |No Seung-Won
-|27
-|72.94
+|28
+|68.45
 |-
 |SG
-|Dugaro Gagodosa
-|25
-|76.70
+|ilo
+|22
+|64.46
 |-
 |PG
-|Apu Tuni
-|21
-|69.90
+|Nagasawa Okitsugu
+|24
+|65.00
 |-
 |C
-|Bongatar Player #2
-|29
-|59.16
+|Sagolna Hartotasek 
+|22
+|49.92
 |-
 |PF
-|Onishi Koshiro
+|Melebin Kixidodotsei
 |21
-|68.36
+|58.68
 |-
 |SF
-|Hexar Jeem
-|22
-|52.39
+|Eric Gilroy
+|27
+|68.39
 |-
 |SG
-|Blanox Farhje
-|28
-|74.49
+|Bongatar Player #4
+|30
+|63.79
 |-
 |PG
-|Bongatar Player #1
-|30
-|67.24
+|Nagasawa Okitsugu
+|24
+|65.00
 |}
 {{Infobox basketball club
 | color1 = #ffff00
@@ -3278,79 +3278,79 @@ The '''Czalliso Pythons''' are a basketball team based in Protopolis, Czalliso. 
 !Overall
 |-
 |C
-|kekh okepekít
-|25
-|71.42
+|Center #162
+|27
+|66.13
 |-
 |PF
-|Iggy Greenfield
-|27
-|81.66
+|Quinten Grabochov
+|25
+|68.23
 |-
 |SF
 |Juri Perch
 |27
-|88.63
+|78.51
 |-
 |SG
 |mu
-|30
-|83.06
+|31
+|76.34
 |-
 |PG
-|Naxto Lizaxium
-|26
-|92.74
-|-
-|C
-|Takamitsu Takeji
-|22
-|62.56
-|-
-|PF
-|Dylan Fowler
-|28
-|76.42
-|-
-|SF
-|Mónhin Nasa
-|28
-|70.73
-|-
-|SG
-|Nupa Auprat
+|Travis Traenfeglia
 |24
-|71.18
-|-
-|PG
-|hex
-|30
-|85.92
+|68.78
 |-
 |C
-|Keahi Cheruene
+|Himiba Alumosvek
 |23
-|56.91
+|64.52
 |-
 |PF
-|Tugano Klabotrisei
-|22
-|72.01
+|Hevek Gagomos
+|29
+|68.17
 |-
 |SF
-|Small Forward #78
-|29
-|45.81
+|Makiaipisi Nipta
+|22
+|63.24
 |-
 |SG
-|Asser Stengel
-|20
-|69.39
+|Pau Finapeke
+|26
+|68.73
 |-
 |PG
-|Bongatar Player #1
-|30
-|67.24
+|Atrêsga Cows
+|25
+|60.54
+|-
+|C
+|Màce Nùx́iś
+|23
+|57.32
+|-
+|PF
+|Pyxanovia Player #5
+|26
+|66.20
+|-
+|SF
+|Kaliso Olamosei
+|25
+|62.68
+|-
+|SG
+|Kibi Fevioka
+|21
+|67.28
+|-
+|PG
+|Zaxkla Kukroda
+|25
+|60.47
 |}
 {{Infobox basketball club
 | color1 = #17f613
@@ -3407,79 +3407,79 @@ The '''Dvimne Spirits''' are a basketball team based in Dvimne, Bielosia. They c
 !Overall
 |-
 |C
-|kekh okepekít
-|25
-|71.42
+|Kiromi Kersidomobek
+|26
+|68.82
 |-
 |PF
 |Alukeili Asolomundi
-|29
-|89.92
+|30
+|82.83
 |-
 |SF
-|Sago Alodetsei
-|30
-|99.99
-|-
-|SG
-|Rusty Berry
-|26
-|91.67
-|-
-|PG
-|Wiley Ambrose
-|29
-|94.96
-|-
-|C
-|Argos Pebek
-|30
-|69.07
-|-
-|PF
-|Mazló Plókli
-|30
-|80.65
-|-
-|SF
-|Till Klostermann
-|26
-|73.82
-|-
-|SG
-|Palani Phomsouvanh
+|Nathaniel Starks
 |28
-|91.01
+|65.93
+|-
+|SG
+|roe
+|24
+|65.57
 |-
 |PG
-|Calvin Hayhurst
-|23
-|82.61
+|Lae Thepsenavong
+|28
+|70.03
 |-
 |C
-|Kudapa Kaxpa
-|31
-|65.48
+|Malo Sengtavisouk
+|27
+|54.82
 |-
 |PF
 |Wakayama Higashikuni
-|26
-|73.89
+|27
+|69.91
 |-
 |SF
-|Maik Phothisarath
-|23
-|71.43
+|Denni O'àpàasà
+|22
+|65.68
 |-
 |SG
-|kuŋevok eɰnak gevunáh
-|30
-|75.99
+|Om Sung-Soo
+|21
+|60.24
 |-
 |PG
-|Benben
-|28
-|77.47
+|Okada Sumiteru
+|26
+|65.53
+|-
+|C
+|Watsuji Isei
+|23
+|50.70
+|-
+|PF
+|Cabodu Kanix
+|24
+|62.14
+|-
+|SF
+|Till Seidel
+|27
+|65.10
+|-
+|SG
+|Kibibei Alodosulomundi
+|25
+|57.57
+|-
+|PG
+|Bá Noq
+|25
+|51.87
 |}
 {{Infobox basketball club
 | color1 = #674ea7
@@ -3537,78 +3537,78 @@ The '''Holy Yektonisa Bishops''' are a basketball team based in City, Holy Yekto
 |-
 |C
 |Atumiba Bexomos
-|25
-|75.39
+|26
+|68.38
 |-
 |PF
-|Kolpa Uxyakro
+|Iggy Bolter
+|28
+|75.46
+|-
+|SF
+|Malo Sayasone
+|31
+|75.59
+|-
+|SG
+|Alwin Gradl
+|28
+|76.02
+|-
+|PG
+|Błá Váva
+|28
+|74.89
+|-
+|C
+|Grant Pool
+|28
+|58.61
+|-
+|PF
+|Quinten Grabochov
+|25
+|68.23
+|-
+|SF
+|Takishima Natsuo
+|28
+|70.59
+|-
+|SG
+|Amoda Kixidodotsei
+|26
+|71.34
+|-
+|PG
+|Travis Traenfeglia
 |24
-|77.22
-|-
-|SF
-|apseŋ kép tónaqig
-|31
-|98.53
-|-
-|SG
-|Kamil Jones
-|27
-|87.37
-|-
-|PG
-|Hivek Ekxtr
-|28
-|93.28
+|68.78
 |-
 |C
-|Shitt Hessar
-|28
-|71.30
+|Center #131
+|29
+|53.94
 |-
 |PF
-|Kwak Seung-Won
-|22
-|73.22
-|-
-|SF
-|Mhokba Djamhámhoñha
-|23
-|75.09
-|-
-|SG
-|Holy Yektonesia Player #6
-|30
-|82.96
-|-
-|PG
-|Dano Subeina
-|30
-|91.93
-|-
-|C
-|Kiromi Hialerko
+|Quinten Grabochov
 |25
-|67.94
-|-
-|PF
-|Alotru Amodetsei 
-|23
-|70.30
+|68.23
 |-
 |SF
-|Olue Aq'aie
-|21
-|65.32
+|Takishima Natsuo
+|28
+|70.59
 |-
 |SG
-|Omumiba Ektxr
-|28
-|79.52
+|Eŋipxuk Nipta
+|21
+|66.30
 |-
 |PG
-|Danomobei Subeina
-|31
-|89.94
+|Travis Traenfeglia
+|24
+|68.78
 |}
 {{Infobox basketball club
 | color1 = #cc4125
@@ -3665,79 +3665,79 @@ The '''Holykol Bears''' are a basketball team based in Shiberia, Holykol. They c
 !Overall
 |-
 |C
-|Koa Savang
-|23
-|72.15
+|noe  
+|22
+|65.21
 |-
 |PF
-|Akamu Phomsouvanh
-|29
-|78.13
+|Quinten Grabochov
+|25
+|68.23
 |-
 |SF
-|hax
-|30
-|73.04
+|Tsekon Wap't'ebw
+|28
+|73.64
 |-
 |SG
 |Rusty Berry
-|26
-|91.67
+|30
+|87.43
 |-
 |PG
-|Red Rainbow Player #2
-|28
-|97.25
+|Namia Akaleta
+|29
+|69.73
 |-
 |C
-|Center #137
-|31
-|72.09
+|Takamitsu Takeji
+|22
+|62.56
 |-
 |PF
-|Konala Somphousiharath
+|Nomura Harumi
+|24
+|64.48
+|-
+|SF
+|Jesse Svensson
 |28
-|74.03
-|-
-|SF
-|Boltway Player #2
-|31
-|69.30
-|-
-|SG
-|Steve Sho
-|26
-|85.75
-|-
-|PG
-|Akamu Cheruene
-|29
-|79.51
-|-
-|C
-|Center #154
-|29
-|53.80
-|-
-|PF
-|Bruce Mack
-|26
-|63.31
-|-
-|SF
-|Zaxkla Kolpauxso
-|23
-|68.88
+|72.55
 |-
 |SG
 |Alwin Gradl
-|27
-|83.02
+|28
+|76.02
 |-
 |PG
-|quj
-|30
-|73.32
+|Travis Traenfeglia
+|24
+|68.78
+|-
+|C
+|Barsein Player #4
+|28
+|52.09
+|-
+|PF
+|Cabodu Gasbërr
+|22
+|60.75
+|-
+|SF
+|Ixbla Naxki
+|23
+|61.67
+|-
+|SG
+|Carlos Garber
+|26
+|66.33
+|-
+|PG
+|Imuk Poi
+|23
+|64.49
 |}
 {{Infobox basketball club
 | color1 = #a64d79
@@ -3795,78 +3795,78 @@ The '''Lyintaria Lynx''' are a basketball team based in City, Lyintaria. They co
 |-
 |C
 |Uemura Tadashi
-|27
-|79.61
+|30
+|74.72
 |-
 |PF
 |Éxànnecig Hàŕselàn
-|24
-|86.43
-|-
-|SF
-|Uelv Lganne
-|30
-|89.81
-|-
-|SG
-|Sagua Player #3
-|30
-|78.22
-|-
-|PG
-|Phetdum Vongsay
-|26
-|87.45
-|-
-|C
-|Lyintaria Player #4
-|30
-|79.41
-|-
-|PF
-|Bernard Wade
 |27
-|71.77
-|-
-|SF
-|Váqáp Vjamhá
-|28
-|74.59
-|-
-|SG
-|Lyintaria Player #6
-|30
-|76.45
-|-
-|PG
-|Lyintaria Player #3
-|30
-|74.86
-|-
-|C
-|Alubembi Xahelvi
-|29
-|68.92
-|-
-|PF
-|Phetdum Phanivong
-|28
-|71.30
+|83.53
 |-
 |SF
 |Swanano Nonhkwaqan
-|26
-|68.42
+|27
+|72.28
 |-
 |SG
-|Tekle Doko
-|30
-|76.42
+|Lyintaria Player #6
+|31
+|73.89
 |-
 |PG
-|Ixux Naixi
+|Biplatza Gekxakŋi
+|34
+|66.98
+|-
+|C
+|Teva Ainigdine
+|21
+|55.08
+|-
+|PF
+|David Lavender
+|22
+|65.22
+|-
+|SF
+|Sebastien Robertson
 |27
-|69.62
+|65.42
+|-
+|SG
+|William Garber
+|23
+|60.93
+|-
+|PG
+|Himi Danjuro
+|25
+|60.81
+|-
+|C
+|Konala Ketthavong
+|24
+|53.85
+|-
+|PF
+|Tibiziŋag Qeki
+|21
+|59.04
+|-
+|SF
+|Sebastien Robertson
+|27
+|65.42
+|-
+|SG
+|Uxku Noxkol
+|24
+|58.60
+|-
+|PG
+|Ivek'il Wap't'ebw
+|23
+|58.52
 |}
 {{Infobox basketball club
 | color1 = #f230ff
@@ -3923,79 +3923,79 @@ The '''Pyxanovia Pixies''' are a basketball team based in City, Pyxanovia. They 
 !Overall
 |-
 |C
-|Ogino Tokaji
+|Alubembi Keget
+|23
+|68.04
+|-
+|PF
+|Eiqe Vokigei
 |29
-|83.06
+|84.16
+|-
+|SF
+|Malo Sayasone
+|31
+|75.59
+|-
+|SG
+|Akamine Naizen
+|29
+|91.51
+|-
+|PG
+|Barsein Player #2
+|32
+|73.16
+|-
+|C
+|Marcel Weidenmann
+|29
+|67.16
 |-
 |PF
 |Reinhard Waldstein
 |27
-|90.06
+|75.85
 |-
 |SF
-|Pyxanovia Player #4
-|30
-|99.99
+|Malo Sayasone
+|31
+|75.59
 |-
 |SG
-|Sachie Snijder
-|31
-|99.99
-|-
-|PG
-|Hivek Ekxtr
-|28
-|93.28
-|-
-|C
-|Analu Cheruene
+|Amoda Kixidodotsei
 |26
-|79.89
-|-
-|PF
-|Reinhard Waldstein
-|27
-|90.06
-|-
-|SF
-|apseŋ kép tónaqig
-|31
-|98.53
-|-
-|SG
-|Handa Senichi
-|25
-|93.30
+|71.34
 |-
 |PG
-|Lato Naixi
-|28
-|86.46
+|Himi Danjuro
+|23
+|60.81
 |-
 |C
-|Lyintaria Player #4
-|30
-|79.41
+|Nagata Taki
+|27
+|66.91
 |-
 |PF
-|Moke Douangvily
-|28
-|86.47
+|tag
+|31
+|66.39
 |-
 |SF
-|Rvai Florkotae
-|31
-|87.82
+|Eric Gilroy
+|27
+|68.39
 |-
 |SG
-|voput epoikez tapnatiš
-|30
-|91.26
+|Amoda Kixidodotsei
+|26
+|71.34
 |-
 |PG
-|Cabodu Sokàtà
-|29
-|86.28
+|Red Rainbow Player #2
+|28
+|60.67
 |}
 {{Infobox basketball club
 | color1 = #073763
@@ -4052,77 +4052,77 @@ The '''Transhimalia Disasters''' are a basketball team based in Degëq'so, Trans
 !Overall
 |-
 |C
-|Timblejoornay
-|28
-|73.14
-|-
-|PF
-|Pau Nipta
-|27
-|77.79
-|-
-|SF
-|Juri Perch
-|27
-|88.63
-|-
-|SG
-|Sachie Snijder
-|31
-|99.99
-|-
-|PG
-|Nathaniel Bate
-|25
-|81.12
-|-
-|C
 |Asser Hutto 
-|25
-|71.20
+|27
+|71.03
 |-
 |PF
-|kaf
-|23
-|77.27
+|Iveo Vokigei
+|26
+|76.88
 |-
 |SF
 |Kalani Phanivong
-|23
-|83.07
+|24
+|82.22
 |-
 |SG
-|Sagua Player #2
-|30
-|90.34
+|Asser Stengel
+|22
+|73.19
 |-
 |PG
-|Lizaxon Rova
-|28
-|75.68
+|Steve Masuhiro
+|27
+|89.86
 |-
 |C
-|Ingo Samter 
-|26
-|61.28
+|Timblejoornay
+|28
+|63.40
 |-
 |PF
-|Nyning  
-|20
-|58.82
+|Easy
+|29
+|68.50
 |-
 |SF
-|Mya Sonexarth
-|20
-|65.05
+|Tsekon Wap't'ebw
+|28
+|73.64
 |-
 |SG
-|The Dimension Slaughterer
-|31
-|88.25
+|Kolnu Auprat
+|27
+|69.68
 |-
 |PG
-|Błá Kánpovŕagá
-|26
-|66.98
+|Bane Souksanh
+|22
+|61.15
+|-
+|C
+|Malo Phanivong
+|22
+|53.90
+|-
+|PF
+|David Lavender
+|23
+|65.22
+|-
+|SF
+|Key To Don Player #4
+|33
+|65.30
+|-
+|SG
+|Kolnu Auprat
+|27
+|69.68
+|-
+|PG
+|Chu Minsu
+|23
+|59.51
 |}

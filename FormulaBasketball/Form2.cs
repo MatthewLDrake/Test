@@ -19,7 +19,7 @@ namespace FormulaBasketball
             result = "";
         }
 
-        public string getResult()
+        public string GetResult()
         {
             return result;
         }
@@ -31,6 +31,11 @@ namespace FormulaBasketball
             Close();
 
         }
-        
+
+
+        internal int GetSeasons()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

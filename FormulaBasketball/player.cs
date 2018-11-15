@@ -513,7 +513,8 @@ public class player : IComparable<player>
             
             if(rand.Next(100) <= modifiers[i])
             {
-                switch(development)
+                ratings[i] = IncreaseRatings(peakStart - playerAge, ratings[i], development, rand);
+                /*switch(development)
                 {
                     case 1:
                         ratings[i] += Math.Max(1, rand.NextGaussian(1, 1));
@@ -545,9 +546,39 @@ public class player : IComparable<player>
                     case 10:
                         ratings[i] += Math.Max(5, rand.NextGaussian(8, 1));
                         break;
-                }
+                }*/
             }
         }
+    }
+
+    private double IncreaseRatings(int yearsLeft, double rating, int development, FormulaBasketball.Random r)
+    {
+        if (yearsLeft >= 10 && development > 8)
+        {
+            return rating + Math.Min(7, Math.Max(3, r.NextGaussian(5, 1)));
+        }
+        else if(yearsLeft >= 10 && development > 4)
+        {
+            return rating + Math.Min(6, Math.Max(2, r.NextGaussian(4, 1)));
+        }
+        else if(yearsLeft >= 10)
+        {
+            return rating + Math.Min(5, Math.Max(2, r.NextGaussian(3, 1)));
+        }
+        else if ((yearsLeft == 1 && development < 8) || (rating > 90 && development < 7)) return 1;
+        else if(rating < 60 && development > 5)
+        {
+            return rating + Math.Min(5, Math.Max(2, r.NextGaussian(4, 1)));
+        }
+        else if(rating < 60)
+        {
+            return rating + Math.Min(4, Math.Max(2, r.NextGaussian(3, 1)));
+        }
+        else
+        {
+            return rating + Math.Min(3, Math.Max(1, r.NextGaussian(2, 1)));
+        }
+
     }
     public void Regress(FormulaBasketball.Random rand)
     {

@@ -54,78 +54,78 @@ The '''Aahrus Moosi''' are a basketball team based in Aahrus, Aahrus. They compe
 |-
 |C
 |Ikaika Savang
-|30
-|89.83
+|25
+|63.09
 |-
 |PF
 |Yombeen
-|31
-|98.17
+|27
+|71.76
 |-
 |SF
-|Alubembi Hadosa
-|30
-|89.94
-|-
-|SG
-|Vanhik Slivókŕámhomhók
-|30
-|99.99
-|-
-|PG
-|Venniti Flautika
-|31
-|81.73
-|-
-|C
-|Yamazaki Meiji
-|21
-|71.38
-|-
-|PF
-|Phetdum Phanivong
-|31
-|73.79
-|-
-|SF
-|Kawata Hirokazu
-|26
-|79.18
+|Lae Thammavong
+|25
+|70.64
 |-
 |SG
 |Kardo Gasbërr
-|25
-|82.31
+|24
+|79.50
+|-
+|PG
+|Venniti Flautika
+|28
+|75.80
+|-
+|C
+|Center #134
+|28
+|53.91
+|-
+|PF
+|Aahrus Player #1
+|28
+|65.07
+|-
+|SF
+|Kawata Hirokazu
+|22
+|67.83
+|-
+|SG
+|Aahrus Player #4
+|28
+|57.49
 |-
 |PG
 |Gerard Mortlock
-|27
-|80.54
+|24
+|71.63
 |-
 |C
-|Yamazaki Senichi
-|26
-|66.41
+|Steve Lolant
+|24
+|53.29
 |-
 |PF
-|Tugano Klabotrisei
-|21
-|72.01
+|Itausŋaŋufi Utipŋiqe
+|27
+|63.38
 |-
 |SF
-|Blaki Faraulik
-|22
-|76.00
+|Olandi Amodetsei 
+|19
+|65.85
 |-
 |SG
-|Markoli Strawlo
-|30
-|81.57
+|Handa Seiki 
+|22
+|54.04
 |-
 |PG
 |Aahrus Player #10
-|31
-|72.75
+|28
+|66.65
 |}
 {{Infobox basketball club
 | color1 = #df0000
@@ -144,7 +144,7 @@ The '''Aahrus Moosi''' are a basketball team based in Aahrus, Aahrus. They compe
 | owner =
 | manager = 
 | president = 
-| coach = Coach #5
+| coach = Western University Coach
 | affiliation = [[Errakyva Eruption]]
 | franchise_wins = '''231'''
 | franchise_losses = '''173'''
@@ -183,78 +183,78 @@ The '''Auspikitan Golden Falcons''' are a basketball team based in Auspikitan, A
 |-
 |C
 |Yadingallie
-|28
-|78.56
+|24
+|67.88
 |-
 |PF
-|Okaget Mabipet
+|Ajanis Vealerko
+|22
+|80.36
+|-
+|SF
+|Jesse McSteve
 |27
-|99.99
-|-
-|SF
-|Sago Alodetsei
-|31
-|99.99
-|-
-|SG
-|Rusty Berry
-|28
-|99.99
-|-
-|PG
-|Xavier Wilcox
-|28
-|99.99
-|-
-|C
-|Naqánkló Qjodlonhámh
-|29
-|76.49
-|-
-|PF
-|Jumpe
-|31
-|87.05
-|-
-|SF
-|Phetdum Bouvanaat 
-|23
-|97.27
+|83.91
 |-
 |SG
 |Lato Ikro
-|26
-|93.70
+|23
+|77.29
 |-
 |PG
-|Point Guard #131
-|33
-|91.37
+|Billingulbut
+|25
+|78.53
 |-
 |C
 |Alfred Habicht
-|29
-|74.49
+|25
+|62.76
 |-
 |PF
-|Blanaxon Player #3
-|32
-|82.71
+|Phetdum Somphonpadee
+|23
+|63.47
 |-
 |SF
-|lu
-|32
-|73.95
+|Guooka
+|20
+|68.95
 |-
 |SG
-|Sagua Player #2
-|32
-|93.43
+|Palani Phomsouvanh
+|25
+|69.55
+|-
+|PG
+|Point Guard #131
+|28
+|71.51
+|-
+|C
+|Naqánkló Qjodlonhámh
+|26
+|60.60
+|-
+|PF
+|pot
+|23
+|59.13
+|-
+|SF
+|Nupa Ixau
+|24
+|62.53
+|-
+|SG
+|Taneba Nole
+|28
+|69.01
 |-
 |PG
 |Calvin Hayhurst
-|25
-|90.55
+|21
+|63.65
 |}
 {{Infobox basketball club
 | color1 = #000000
@@ -273,7 +273,7 @@ The '''Auspikitan Golden Falcons''' are a basketball team based in Auspikitan, A
 | owner =
 | manager = 
 | president = 
-| coach = Coach #5
+| coach = Coach #24
 | affiliation = [[Alteus Astronauts]]
 | franchise_wins = '''284'''
 | franchise_losses = '''120'''
@@ -312,78 +312,78 @@ The '''Calto Cows''' are a basketball team based in Calto, Wyverncliff. They com
 |-
 |C
 |vo
-|31
-|81.37
+|28
+|75.38
 |-
 |PF
-|Analu Vatthana
+|Trevor Oosterhout
 |28
-|93.62
-|-
-|SF
-|Juri Perch
-|29
-|99.94
-|-
-|SG
-|Keahi Savang
-|29
-|98.97
-|-
-|PG
-|Michael Barnett
-|30
 |99.99
 |-
-|C
-|Alukeili Asoertotrisei
-|28
-|78.73
-|-
-|PF
-|Kompasu Yasuoka
-|32
-|84.06
-|-
 |SF
-|Dalton Ariesen
-|30
-|91.06
-|-
-|SG
-|Holy Yektonesia Player #3
-|33
-|95.78
-|-
-|PG
-|Xaisomboun Saengsavang
+|Asher Turner
 |27
-|98.76
-|-
-|C
-|Sagolnasei Korsobo
-|31
-|74.51
-|-
-|PF
-|Nopá Kánpovragá
-|31
-|74.43
-|-
-|SF
-|Small Forward #178
-|28
-|38.98
+|80.49
 |-
 |SG
 |Selby Schneiders
-|31
-|95.04
+|28
+|80.24
 |-
 |PG
 |Its'a Lełqutyi
-|33
+|28
 |86.45
+|-
+|C
+|Alukeili Asoertotrisei
+|25
+|63.45
+|-
+|PF
+|Analu Vatthana
+|25
+|68.45
+|-
+|SF
+|Dalton Ariesen
+|26
+|72.32
+|-
+|SG
+|Keahi Savang
+|26
+|78.11
+|-
+|PG
+|Michael Barnett
+|26
+|73.26
+|-
+|C
+|Yoade Perch
+|22
+|56.15
+|-
+|PF
+|Bane Phothisarath 
+|19
+|52.64
+|-
+|SF
+|guz
+|28
+|65.53
+|-
+|SG
+|Seong-Hyeon Moon
+|27
+|67.25
+|-
+|PG
+|Xaisomboun Saengsavang
+|22
+|67.80
 |}
 {{Infobox basketball club
 | color1 = #00ffac
@@ -402,7 +402,7 @@ The '''Calto Cows''' are a basketball team based in Calto, Wyverncliff. They com
 | owner =
 | manager = 
 | president = 
-| coach = Coach #5
+| coach = Coach #18
 | affiliation = [[Shigua Boots]]
 | franchise_wins = '''154'''
 | franchise_losses = '''250'''
@@ -440,79 +440,79 @@ The '''Height Sagua Cats''' are a basketball team based in Shigua, Height Sagua.
 !Overall
 |-
 |C
-|Ikaika Savang
-|30
-|89.83
-|-
-|PF
-|Reinhard Waldstein
-|29
-|99.99
-|-
-|SF
-|Atumundikeili Halapodetsei
-|30
-|95.75
-|-
-|SG
-|Tixen Prokol
-|30
-|94.82
-|-
-|PG
-|Laurence Chandler
-|32
-|99.99
-|-
-|C
 |Red Rainbow Player #3
-|33
-|78.82
-|-
-|PF
-|Jumpe
-|31
-|87.05
-|-
-|SF
-|Tsekon Wap't'ebw
-|26
-|78.57
-|-
-|SG
-|Tri_National_Dominion Player #2
-|32
-|82.98
-|-
-|PG
-|No Kwang-Jo
 |28
-|99.99
-|-
-|C
-|Lilo Vatthana
-|26
-|76.50
+|62.31
 |-
 |PF
 |Hvanne Takakazu
-|31
-|78.22
+|28
+|68.85
+|-
+|SF
+|Atumundikeili Halapodetsei
+|26
+|75.83
+|-
+|SG
+|Sova Kłó
+|26
+|75.24
+|-
+|PG
+|Laurence Chandler
+|27
+|80.25
+|-
+|C
+|Naxnoxsoya Liksov
+|24
+|58.40
+|-
+|PF
+|Jumpe
+|26
+|62.25
 |-
 |SF
 |Height Sagua Player #3
-|32
-|77.11
+|28
+|70.17
 |-
 |SG
-|Omumiba Ektxr
-|29
-|82.90
+|Tri_National_Dominion Player #2
+|28
+|72.41
 |-
 |PG
-|Versi Alovek
-|26
-|99.99
+|No Kwang-Jo
+|23
+|75.78
+|-
+|C
+|kalassak vekel álutep
+|28
+|57.90
+|-
+|PF
+|Rezinal Naizen 
+|19
+|49.06
+|-
+|SF
+|Small Forward #152
+|28
+|53.64
+|-
+|SG
+|Height Sagua Player #4
+|28
+|65.69
+|-
+|PG
+|Xavier Wilcox
+|23
+|68.40
 |}
 {{Infobox basketball club
 | color1 = #00ff00
@@ -531,7 +531,7 @@ The '''Height Sagua Cats''' are a basketball team based in Shigua, Height Sagua.
 | owner =
 | manager = 
 | president = 
-| coach = Coach #5
+| coach = Coach #25
 | affiliation = [[Ma-Popá Yiffs]]
 | franchise_wins = '''165'''
 | franchise_losses = '''239'''
@@ -569,79 +569,79 @@ The '''Key to Don Yees''' are a basketball team based in Dongua, Key To Don. The
 !Overall
 |-
 |C
-|Analu Cheruene
-|26
-|80.83
+|Gerard Holzer
+|27
+|63.93
 |-
 |PF
 |Kapel Hilo
-|27
-|84.04
-|-
-|SF
-|Lvieknim Yuji
-|28
-|85.50
-|-
-|SG
-|Stephan Hutto
-|27
-|99.99
-|-
-|PG
-|Wongduan Sengtavisouk
-|26
-|99.99
-|-
-|C
-|Red Rainbow Player #3
-|33
-|78.82
-|-
-|PF
-|kaf
-|25
-|77.27
+|24
+|58.67
 |-
 |SF
 |Aahrus Player #5
-|31
-|83.13
+|28
+|74.30
 |-
 |SG
 |la
-|31
-|94.27
+|28
+|74.19
+|-
+|PG
+|Cabodu Sokàtà
+|27
+|70.43
+|-
+|C
+|Center #132
+|28
+|58.36
+|-
+|PF
+|Key To Don Player #5
+|28
+|58.07
+|-
+|SF
+|Lvieknim Yuji
+|23
+|69.39
+|-
+|SG
+|Stephan Hutto
+|22
+|70.69
 |-
 |PG
 |Kaliso Hatemosei
-|27
-|89.42
+|23
+|64.43
 |-
 |C
-|Yoade Perch
-|26
-|76.75
+|Ixux Zaxau 
+|21
+|52.15
 |-
 |PF
-|Cabodu Kanix
-|24
-|74.37
+|Aseqa Tituqu
+|26
+|55.61
 |-
 |SF
-|hax
-|33
-|76.67
+|Height Sagua Player #9
+|28
+|60.07
 |-
 |SG
-|Edgar Fichtner
-|29
-|88.97
+|Alomibamobei Olalomundi
+|21
+|63.10
 |-
 |PG
-|Yukiyama Yujiro
-|23
-|71.63
+|Guvggillmào Nùx́iś
+|21
+|56.04
 |}
 {{Infobox basketball club
 | color1 = #00cf00
@@ -660,7 +660,7 @@ The '''Key to Don Yees''' are a basketball team based in Dongua, Key To Don. The
 | owner =
 | manager = 
 | president = 
-| coach = Coach #5
+| coach = Coach #6
 | affiliation = [[Suggionic Infantry]]
 | franchise_wins = '''194'''
 | franchise_losses = '''210'''
@@ -698,79 +698,79 @@ The '''Manwx Saguans''' are a basketball team based in Manwx, Darvincia. They co
 !Overall
 |-
 |C
-|Kiromi Kersidomobek
+|Himi Azumamaro
 |27
-|77.36
+|66.93
 |-
 |PF
 |Sol Jae-Wook
-|30
-|92.68
+|26
+|74.79
 |-
 |SF
-|Small Forward #143
-|32
-|94.93
+|Rusty Harries
+|26
+|76.31
 |-
 |SG
-|pot
-|29
-|99.99
+|Kiyoto Mansumo
+|22
+|79.39
 |-
 |PG
-|Errol James
-|31
-|93.01
+|Blalikki Kiixrit
+|24
+|74.39
 |-
 |C
-|Yamazaki Meiji
+|Kiromi Kersidomobek
 |24
-|71.38
+|63.93
 |-
 |PF
-|Msenne Prai
-|33
-|83.73
+|Eipe Hawo
+|25
+|73.28
 |-
 |SF
 |Ḿavwápŕi Pimh 
-|26
-|89.76
+|22
+|72.23
 |-
 |SG
 |Ok Yeong-Jin
-|27
-|92.67
+|24
+|71.66
 |-
 |PG
-|Yasutake Yasuoka
-|28
-|87.24
+|Xolin Hialerko
+|24
+|74.01
 |-
 |C
-|Ixbla Ixau
-|25
-|65.84
+|Pyxanovia Player #8
+|28
+|52.39
 |-
 |PF
-|Power Forward #153
-|29
-|43.93
+|Kanoa Thammavong 
+|21
+|62.41
 |-
 |SF
-|Blanaxon Player #5
-|33
-|79.89
+|Pezi Vuki
+|26
+|60.46
 |-
 |SG
 |Sitwa Luvepiri
-|24
-|68.90
+|23
+|67.27
 |-
 |PG
-|Nathaniel Bate
-|27
-|84.55
+|Item
+|28
+|64.06
 |}
 {{Infobox basketball club
 | color1 = #e53232
@@ -789,7 +789,7 @@ The '''Manwx Saguans''' are a basketball team based in Manwx, Darvincia. They co
 | owner =
 | manager = 
 | president = 
-| coach = Coach #5
+| coach = Coach #30
 | affiliation = [[Klákjábo Servals]]
 | franchise_wins = '''216'''
 | franchise_losses = '''188'''
@@ -828,78 +828,78 @@ The '''Sagua Ocelots''' are a basketball team based in Sagua, Sagua. They compet
 |-
 |C
 |Thomas Skinner
-|23
-|91.60
+|19
+|72.00
 |-
 |PF
 |Msenne Prai
-|33
-|83.73
+|28
+|78.75
 |-
 |SF
-|Murata Sofu
-|27
-|92.82
+|Mavótáfika Vilikó
+|28
+|74.09
 |-
 |SG
-|Pakomha Nhoñsła
-|30
-|95.83
-|-
-|PG
-|Michael Barnett
-|30
-|99.99
-|-
-|C
-|Ogino Tokaji
-|29
-|77.71
-|-
-|PF
-|Hjenax Auproda
-|21
-|76.68
-|-
-|SF
-|Blaki Faraulik
-|24
-|76.00
-|-
-|SG
-|Moonoriguna
-|22
-|77.59
-|-
-|PG
-|Gerard Mortlock
-|27
-|80.54
-|-
-|C
-|Sopratyabla Kaxfar
+|Pwa Lefinu
 |25
-|65.53
-|-
-|PF
-|E'àǵay Nnoncàśénreskèc
-|27
-|75.95
-|-
-|SF
-|Alomibamobei Osadolsei
-|23
-|70.65
-|-
-|SG
-|Hvanne Aeridaniok
-|32
-|76.84
+|75.76
 |-
 |PG
 |hex
-|32
-|80.29
+|28
+|71.96
+|-
+|C
+|Ogino Tokaji
+|26
+|65.86
+|-
+|PF
+|Hevek Himadolsei
+|26
+|61.79
+|-
+|SF
+|Alomibamobei Osadolsei
+|22
+|66.90
+|-
+|SG
+|Shooting Guard #169
+|28
+|64.93
+|-
+|PG
+|Danomobei Subeina
+|28
+|63.26
+|-
+|C
+|Ingo Samter 
+|23
+|61.02
+|-
+|PF
+|Mawatari Kane
+|25
+|54.04
+|-
+|SF
+|Neville Spicer
+|26
+|64.60
+|-
+|SG
+|Hvanne Aeridaniok
+|28
+|64.51
+|-
+|PG
+|Zac Lolant
+|25
+|60.89
 |}
 {{Infobox basketball club
 | color1 = #ff9900
@@ -918,7 +918,7 @@ The '''Sagua Ocelots''' are a basketball team based in Sagua, Sagua. They compet
 | owner =
 | manager = 
 | president = 
-| coach = Coach #5
+| coach = Mawxwmkakki Coach
 | affiliation = [[Kutapi Redwoods]]
 | franchise_wins = '''259'''
 | franchise_losses = '''145'''
@@ -957,78 +957,78 @@ The '''Solea Geysers''' are a basketball team based in Saelunavvk, Solea. They c
 |-
 |C
 |Alomundi Bituna
-|22
-|85.13
+|21
+|82.45
 |-
 |PF
 |Hënila Ūnā
-|33
-|96.87
+|28
+|80.74
 |-
 |SF
 |Kersok Milan
-|31
-|99.99
+|28
+|99.04
 |-
 |SG
-|Paxathipatai Sengtavisouk
+|voput epoikez tapnatiš
 |28
-|86.87
+|86.50
 |-
 |PG
 |Makiaipisi Fana
-|30
-|99.99
+|26
+|82.86
 |-
 |C
 |Colin Hutchison
-|32
-|81.30
+|27
+|75.02
 |-
 |PF
-|Kwak Chihu
-|29
-|92.64
+|The Moo Saχi
+|24
+|63.68
 |-
 |SF
-|Zaxkla Kolpauxso
-|24
-|68.88
-|-
-|SG
-|Moonoriguna
-|24
-|77.59
-|-
-|PG
-|Ḿavwápŕi Sŕóniqńoqi
-|23
-|83.96
-|-
-|C
-|Yadingallie
+|Rvai Florkotae
 |28
-|78.56
-|-
-|PF
-|eneŋ zekek zeilunaven
-|32
-|92.61
-|-
-|SF
-|Ienaga Ethanthovok
-|22
-|67.48
+|78.68
 |-
 |SG
-|Noxku Dazaxka
-|21
-|73.82
+|Paxathipatai Sengtavisouk
+|24
+|72.88
 |-
 |PG
 |zeppak itehíl tikítákh
-|32
-|75.60
+|28
+|71.93
+|-
+|C
+|Blanaxon Player #1
+|28
+|56.64
+|-
+|PF
+|Pau Nipta
+|24
+|62.97
+|-
+|SF
+|Xaisomboun Tayvihane
+|21
+|59.05
+|-
+|SG
+|Mike
+|26
+|55.21
+|-
+|PG
+|Ḿavwápŕi Sŕóniqńoqi
+|20
+|61.31
 |}
 {{Infobox basketball club
 | color1 = #ff00ff
@@ -1047,7 +1047,7 @@ The '''Solea Geysers''' are a basketball team based in Saelunavvk, Solea. They c
 | owner =
 | manager = 
 | president = 
-| coach = Coach #5
+| coach = Coach #14
 | affiliation = [[Autolik Rebels]]
 | franchise_wins = '''174'''
 | franchise_losses = '''230'''
@@ -1086,78 +1086,78 @@ The '''Autolik Autonomy''' are a basketball team based in Autolik, Blaist Blalan
 |-
 |C
 |Keahi Genevong
-|28
-|75.50
+|25
+|63.92
 |-
 |PF
 |Nopá Kánpovragá
-|31
-|74.43
+|28
+|65.55
 |-
 |SF
 |Pakomha Pjagwazwi
-|28
-|99.99
+|23
+|79.81
 |-
 |SG
-|Ikaika Kethavongsa
-|25
-|94.31
-|-
-|PG
-|Paparto Subeina
-|31
-|90.35
-|-
-|C
-|Sopratyabla Kaxfar
-|22
-|65.53
-|-
-|PF
-|Pitro Tenopro
-|30
-|73.09
-|-
-|SF
-|Nopá Nonhkwaqan
-|26
-|82.25
-|-
-|SG
-|Palani Phomsouvanh
-|28
-|85.17
-|-
-|PG
-|Okada Sumiteru
-|26
-|88.03
-|-
-|C
-|Dwab Itsok
-|31
-|62.01
-|-
-|PF
-|noe
-|22
-|72.77
-|-
-|SF
-|Sovtanzax Uxyakro
-|31
-|66.57
-|-
-|SG
-|Noxku Dazaxka
-|22
-|73.82
+|Keoki Vongsay
+|24
+|67.48
 |-
 |PG
 |enoikh apéka zeilun
-|31
-|87.41
+|28
+|78.27
+|-
+|C
+|Boolway
+|27
+|63.39
+|-
+|PF
+|Dennis Tsoi
+|21
+|62.99
+|-
+|SF
+|Nopá Nonhkwaqan
+|23
+|72.05
+|-
+|SG
+|Ikaika Kethavongsa
+|21
+|65.06
+|-
+|PG
+|Ḿavwápŕi Makŕavamhan
+|24
+|59.80
+|-
+|C
+|Dwab Itsok
+|28
+|62.01
+|-
+|PF
+|Atotra Bexek
+|24
+|51.98
+|-
+|SF
+|Paxathipatai Phoutthasinh
+|22
+|54.79
+|-
+|SG
+|Mornay
+|27
+|61.74
+|-
+|PG
+|Stephen Chapman
+|22
+|50.20
 |}
 {{Infobox basketball club
 | color1 = #666666
@@ -1176,7 +1176,7 @@ The '''Autolik Autonomy''' are a basketball team based in Autolik, Blaist Blalan
 | owner =
 | manager = 
 | president = 
-| coach = Coach #5
+| coach = Coach #23
 | affiliation = [[Barsein Beggars]]
 | franchise_wins = '''185'''
 | franchise_losses = '''219'''
@@ -1214,79 +1214,79 @@ The '''Barsein Bats''' are a basketball team based in Barsein City, Barsein. The
 !Overall
 |-
 |C
-|Abosa Aludetsei 
-|26
-|85.53
-|-
-|PF
-|Kolpa Uxyakro
-|26
-|81.87
-|-
-|SF
-|Matthew Grabochov
-|29
-|94.71
-|-
-|SG
-|pot
-|29
-|99.99
-|-
-|PG
-|Danomobei Subeina
-|33
-|96.18
-|-
-|C
 |Keon Saengsavang
-|28
-|74.77
+|25
+|69.48
 |-
 |PF
 |Keahi Saengsavang
-|28
-|79.29
+|24
+|69.74
 |-
 |SF
-|Sol Young-Chul 
-|25
-|76.57
+|Matthew Grabochov
+|26
+|78.96
 |-
 |SG
-|Aulii Thonemany
-|26
-|84.65
+|pot
+|24
+|87.26
 |-
 |PG
-|Keahi Siyavong
+|Danomobei Subeina
 |28
-|89.24
+|73.70
 |-
 |C
 |Yembeane
-|28
-|73.50
+|23
+|60.54
 |-
 |PF
-|Phetdum Somphonpadee
-|26
-|77.19
+|Sagomundisei Hisei
+|24
+|66.82
 |-
 |SF
-|Blaki Faraulik
-|22
-|76.00
+|Om Kwang-Seok
+|25
+|63.74
 |-
 |SG
-|Hvanne Aeridaniok
-|32
-|76.84
+|Aulii Thonemany
+|23
+|65.29
 |-
 |PG
-|Cagi
-|23
-|73.34
+|Keahi Siyavong
+|25
+|67.23
+|-
+|C
+|Abosa Aludetsei 
+|22
+|56.56
+|-
+|PF
+|Phetdum Phanivong
+|27
+|65.70
+|-
+|SF
+|Sol Young-Chul 
+|22
+|61.77
+|-
+|SG
+|Yuguchi Tomiji
+|24
+|63.48
+|-
+|PG
+|Dimitri Lolant
+|27
+|63.13
 |}
 {{Infobox basketball club
 | color1 = #ff0000
@@ -1305,7 +1305,7 @@ The '''Barsein Bats''' are a basketball team based in Barsein City, Barsein. The
 | owner =
 | manager = 
 | president = 
-| coach = Coach #5
+| coach = Coach #35
 | affiliation = [[Zaxon Zephyrs]]
 | franchise_wins = '''185'''
 | franchise_losses = '''219'''
@@ -1343,79 +1343,79 @@ The '''Blanaxon Hammers''' are a basketball team based in Blanaxon, Blaist Blala
 !Overall
 |-
 |C
-|P'uyo Unup'a
-|28
-|77.36
-|-
-|PF
-|Kibibei Hatemosei
-|27
-|88.05
-|-
-|SF
-|Matthew Grabochov
-|29
-|94.71
-|-
-|SG
-|Iklo Eloalerko 
+|Bob Gagodo
 |23
-|97.90
-|-
-|PG
-|Versi Alovek
-|26
-|99.99
-|-
-|C
-|Ha Chihu
-|27
-|70.83
+|64.31
 |-
 |PF
-|Osiei Bituna
-|32
-|85.38
+|Eiqe Vokigei
+|26
+|79.09
 |-
 |SF
 |Nobira Nariaki
-|28
-|89.76
-|-
-|SG
-|Edgar Fichtner
-|29
-|88.97
-|-
-|PG
-|Baker
-|31
-|72.67
-|-
-|C
-|Ingo Gradl
-|30
-|69.89
-|-
-|PF
-|Iggy Bolter
-|27
-|79.93
-|-
-|SF
-|Tsekon Wap't'ebw
-|26
-|78.57
+|25
+|76.13
 |-
 |SG
 |Brian Lolant
-|27
-|86.76
+|24
+|77.90
 |-
 |PG
-|Item
-|31
-|72.00
+|Baker
+|28
+|69.49
+|-
+|C
+|P'uyo Unup'a
+|25
+|62.61
+|-
+|PF
+|Iggy Bolter
+|24
+|59.51
+|-
+|SF
+|Sovtanzax Uxyakro
+|27
+|61.86
+|-
+|SG
+|Edgar Fichtner
+|26
+|68.61
+|-
+|PG
+|Versi Alovek
+|21
+|68.14
+|-
+|C
+|Ha Chihu
+|24
+|56.37
+|-
+|PF
+|Harri Umlauf 
+|21
+|52.23
+|-
+|SF
+|Autolik Player #4
+|28
+|52.96
+|-
+|SG
+|Blanaxon Player #6
+|28
+|60.79
+|-
+|PG
+|Ikaika Phomsouvanh
+|24
+|57.94
 |}
 {{Infobox basketball club
 | color1 = #cc0000
@@ -1434,7 +1434,7 @@ The '''Blanaxon Hammers''' are a basketball team based in Blanaxon, Blaist Blala
 | owner =
 | manager = 
 | president = 
-| coach = Coach #5
+| coach = Coach #28
 | affiliation = [[Aovensiiv Atoms]]
 | franchise_wins = '''194'''
 | franchise_losses = '''210'''
@@ -1472,79 +1472,79 @@ The '''Kaeshar Kaisers''' are a basketball team based in Oasis City, Kaeshar. Th
 !Overall
 |-
 |C
-|Abosa Aludetsei 
-|26
-|85.53
+|Lilo Vatthana
+|23
+|62.16
 |-
 |PF
 |Uxnax Prokexov
-|28
-|89.33
-|-
-|SF
-|Sol Song-Jin
-|29
-|98.56
-|-
-|SG
-|Akamine Naizen
-|29
-|99.99
-|-
-|PG
-|No Kwang-Jo
-|28
-|99.99
-|-
-|C
-|Pixtij Lekaxo
-|28
-|76.65
-|-
-|PF
-|Osiei Bituna
-|32
-|85.38
-|-
-|SF
-|Uelv Lganne
-|33
-|96.92
-|-
-|SG
-|Xavier McSteve
-|27
-|82.19
-|-
-|PG
-|Xavier Wilcox
-|28
-|99.99
-|-
-|C
-|Lilo Vatthana
-|26
-|76.50
-|-
-|PF
-|kaf
-|23
-|77.27
+|25
+|66.81
 |-
 |SF
 |Key To Don Player #4
-|33
-|83.57
+|28
+|76.58
 |-
 |SG
-|Taneba Nole
-|31
-|69.01
+|Akamine Naizen
+|25
+|81.14
+|-
+|PG
+|Carlos Harris
+|22
+|72.60
+|-
+|C
+|Boltway Player #1
+|28
+|55.68
+|-
+|PF
+|Pxalit'k'a Player #6
+|28
+|65.40
+|-
+|SF
+|Sol Song-Jin
+|24
+|73.88
+|-
+|SG
+|Xavier McSteve
+|24
+|71.69
 |-
 |PG
 |Lato Naixi
-|30
-|96.57
+|25
+|70.76
+|-
+|C
+|Aahrus Player #2
+|28
+|55.32
+|-
+|PF
+|Osiei Bituna
+|28
+|60.63
+|-
+|SF
+|Atomobei Kerxer
+|25
+|55.47
+|-
+|SG
+|Tanifuji Shirosama
+|25
+|59.71
+|-
+|PG
+|Làto Naksik
+|27
+|62.38
 |}
 {{Infobox basketball club
 | color1 = #7f6000
@@ -1563,7 +1563,7 @@ The '''Kaeshar Kaisers''' are a basketball team based in Oasis City, Kaeshar. Th
 | owner =
 | manager = 
 | president = 
-| coach = Coach #5
+| coach = Coach #26
 | affiliation = [[Daxanad Soldiers]]
 | franchise_wins = '''191'''
 | franchise_losses = '''213'''
@@ -1601,79 +1601,79 @@ The '''Naxda Nomads''' are a basketball team based in Naxda, Blaist Blaland. The
 !Overall
 |-
 |C
-|Alomundi Bituna
-|22
-|85.13
+|Height Sagua Player #5
+|28
+|68.70
 |-
 |PF
 |Eto Shunmyo
-|26
-|86.74
+|23
+|69.65
 |-
 |SF
 |Small Forward #143
-|32
-|94.93
+|28
+|69.99
 |-
 |SG
 |Tixen Prokol
-|30
-|94.82
-|-
-|PG
-|Lizaxon Rova
-|29
-|88.13
-|-
-|C
-|Atumiba Bexomos
-|26
-|82.48
-|-
-|PF
-|Iveo Vokigei
-|26
-|85.90
-|-
-|SF
-|Mhokba Djamhámhoñha
-|24
-|84.03
-|-
-|SG
-|Ok Yeong-Jin
 |27
-|92.67
+|74.00
 |-
 |PG
-|Phetdum Vongsay
-|29
-|84.17
+|b 9u
+|28
+|75.94
 |-
 |C
-|Yembeane
-|28
-|73.50
+|Kersuvi Himei
+|25
+|52.63
 |-
 |PF
-|Kolpa Uxyakro
-|26
-|81.87
+|Moke Savang
+|24
+|56.42
 |-
 |SF
-|Om Kwang-Seok
-|29
-|74.38
+|Maik Phothisarath
+|21
+|67.32
 |-
 |SG
 |Zhali Mpetaec
-|31
-|88.01
+|28
+|72.50
 |-
 |PG
 |Alomundi Gagolomundi
-|28
-|83.96
+|25
+|75.63
+|-
+|C
+|Malo Sengtavisouk
+|25
+|49.64
+|-
+|PF
+|Maik Menorath 
+|22
+|46.56
+|-
+|SF
+|Mhokba Djamhámhoñha
+|21
+|62.05
+|-
+|SG
+|Darkon Piklo
+|25
+|55.67
+|-
+|PG
+|Lizaxon Rova
+|26
+|67.74
 |}
 {{Infobox basketball club
 | color1 = #ff0000
@@ -1692,7 +1692,7 @@ The '''Naxda Nomads''' are a basketball team based in Naxda, Blaist Blaland. The
 | owner =
 | manager = 
 | president = 
-| coach = Coach #5
+| coach = Coach #7
 | affiliation = [[Red-Rainbow Reds]]
 | franchise_wins = '''161'''
 | franchise_losses = '''243'''
@@ -1730,79 +1730,79 @@ The '''Red Rainbow Sickles''' are a basketball team based in Sovkagrad, Red Rain
 !Overall
 |-
 |C
-|Masaki Kazuko
-|30
-|83.73
-|-
-|PF
-|Hjenax Auproda
+|Caleb Jervis
 |24
-|76.68
-|-
-|SF
-|Phetdum Bouvanaat 
-|23
-|97.27
-|-
-|SG
-|Vanhik Slivókŕámhomhók
-|30
-|99.99
-|-
-|PG
-|Point Guard #131
-|33
-|91.37
-|-
-|C
-|P'uyo Unup'a
-|28
-|77.36
+|73.80
 |-
 |PF
 |Cabodu Kanix
-|24
-|74.37
-|-
-|SF
-|Murata Sofu
-|27
-|92.82
-|-
-|SG
-|Tri_National_Dominion Player #2
-|32
-|82.98
-|-
-|PG
-|Kaliso Hatemosei
-|27
-|89.42
-|-
-|C
-|Alfred Habicht
-|29
-|74.49
-|-
-|PF
-|Kai Sayasone
 |21
-|70.06
+|65.71
 |-
 |SF
 |Red Rainbow Player #1
-|32
-|84.04
+|28
+|77.46
 |-
 |SG
-|Sagua Player #3
-|32
-|77.71
+|Vanhik Slivókŕámhomhók
+|25
+|80.82
 |-
 |PG
 |Dano Mesiaertoxek
+|23
+|71.28
+|-
+|C
+|Masaki Kazuko
+|25
+|59.06
+|-
+|PF
+|Ydar Iode
+|25
+|57.34
+|-
+|SF
+|Phetdum Bouvanaat 
+|19
+|75.78
+|-
+|SG
+|Sagua Player #3
 |28
-|84.00
+|67.35
+|-
+|PG
+|William Spicer
+|24
+|64.83
+|-
+|C
+|Dylan Cass
+|24
+|58.66
+|-
+|PF
+|Red Rainbow Player #4
+|28
+|56.73
+|-
+|SF
+|Murata Sofu
+|22
+|69.26
+|-
+|SG
+|Red Rainbow Player #6
+|28
+|55.93
+|-
+|PG
+|Atotra Danomane
+|26
+|58.86
 |}
 {{Infobox basketball club
 | color1 = #00ffdb
@@ -1821,7 +1821,7 @@ The '''Red Rainbow Sickles''' are a basketball team based in Sovkagrad, Red Rain
 | owner =
 | manager = 
 | president = 
-| coach = Coach #5
+| coach = Coach #27
 | affiliation = [[Hinaika Hurricanes]]
 | franchise_wins = '''183'''
 | franchise_losses = '''221'''
@@ -1860,78 +1860,78 @@ The '''Serkr Atolls''' are a basketball team based in Kap'atŋpiri, Oesa. They c
 |-
 |C
 |Vrá Nonhkwaqan
-|33
-|99.99
-|-
-|PF
-|Pranga  
-|27
-|89.96
-|-
-|SF
-|Klaxon Nixoka
 |28
-|93.21
-|-
-|SG
-|Palani Phomsouvanh
-|28
-|85.17
-|-
-|PG
-|Transhilmalia Player #2
-|31
-|99.99
-|-
-|C
-|Teva Gekxakŋi
-|26
-|71.55
+|73.48
 |-
 |PF
 |Iveo Vokigei
+|21
+|63.89
+|-
+|SF
+|Klaxon Nixoka
+|25
+|88.52
+|-
+|SG
+|Danomobei Motxev
 |26
-|85.90
+|78.21
+|-
+|PG
+|Transhilmalia Player #2
+|28
+|98.57
+|-
+|C
+|Teva Gekxakŋi
+|23
+|60.13
+|-
+|PF
+|Pranga  
+|23
+|63.69
 |-
 |SF
 |K'ita Senako
-|25
-|83.36
+|22
+|69.95
 |-
 |SG
-|Noxku Dazaxka
-|20
-|73.82
+|Niko Stengel
+|27
+|71.31
 |-
 |PG
 |Nathaniel Bate
-|27
-|84.55
+|22
+|70.71
 |-
 |C
-|Yamazaki Meiji
-|24
-|71.38
+|Saiki Shunmyo
+|25
+|56.93
 |-
 |PF
-|kaf
-|25
-|77.27
+|Bongatar Player #5
+|28
+|63.43
 |-
 |SF
-|Om Kwang-Seok
-|29
-|74.38
+|Alomiba Xahelvi
+|27
+|61.17
 |-
 |SG
-|Sovnax Pasovya
-|20
-|71.73
+|Nupa Auprat
+|23
+|65.65
 |-
 |PG
-|áz lekeŋ
-|22
-|63.04
+|Nasi Pindaiabu
+|28
+|70.09
 |}
 {{Infobox basketball club
 | color1 = #1c4587
@@ -1950,7 +1950,7 @@ The '''Serkr Atolls''' are a basketball team based in Kap'atŋpiri, Oesa. They c
 | owner =
 | manager = 
 | president = 
-| coach = Coach #5
+| coach = Naskitrusk Coach
 | affiliation = [[Shmupland Tyrants]]
 | franchise_wins = '''241'''
 | franchise_losses = '''173'''
@@ -1988,79 +1988,79 @@ The '''Shmupland Dictators''' are a basketball team based in Pyongyang, Shmuplan
 !Overall
 |-
 |C
-|Vŕá Płońiblá
-|29
-|90.17
-|-
-|PF
-|Reinhard Waldstein
-|29
-|99.99
-|-
-|SF
-|Dalton Ariesen
-|30
-|91.06
-|-
-|SG
-|Waltoko
-|26
-|99.99
-|-
-|PG
-|Xavier Wilcox
-|28
-|99.99
-|-
-|C
 |Power Forward #166
-|31
-|79.63
+|28
+|66.69
 |-
 |PF
 |Kibibei Hatemosei
-|27
-|88.05
+|24
+|71.30
 |-
 |SF
 |Eun Cho
+|23
+|78.65
+|-
+|SG
+|Waltoko
+|21
+|77.82
+|-
+|PG
+|Billingulbut
 |26
-|85.20
+|77.17
+|-
+|C
+|Eric Newton
+|24
+|66.16
+|-
+|PF
+|Power Forward #151
+|28
+|55.71
+|-
+|SF
+|Small Forward #114
+|28
+|61.03
 |-
 |SG
 |Aiyota Player #3
-|32
-|77.48
+|28
+|62.08
 |-
 |PG
-|Xavier Wilcox
-|28
-|99.99
+|Tapan Sikasbë
+|23
+|68.98
 |-
 |C
-|Keon Savang
-|23
-|61.25
+|Vŕá Płońiblá
+|24
+|57.00
 |-
 |PF
-|noe
-|22
-|72.77
+|Transhilmalia Player #8
+|28
+|52.47
 |-
 |SF
-|Till Klostermann
-|27
-|72.84
+|Small Forward #115
+|28
+|59.11
 |-
 |SG
-|Kolnu Auprat
-|25
-|73.09
+|Danomobei Hiemeta 
+|22
+|50.96
 |-
 |PG
-|Lato Naixi
-|30
-|96.57
+|Ji-Min Choi
+|28
+|67.27
 |}
 {{Infobox basketball club
 | color1 = #1155cc
@@ -2079,7 +2079,7 @@ The '''Shmupland Dictators''' are a basketball team based in Pyongyang, Shmuplan
 | owner =
 | manager = 
 | president = 
-| coach = Coach #5
+| coach = Coach #8
 | affiliation = [[Detroit Pumps]]
 | franchise_wins = '''187'''
 | franchise_losses = '''217'''
@@ -2117,79 +2117,79 @@ The '''Aiyota Pumps''' are a basketball team based in Vikasa, Aiyota. They compe
 !Overall
 |-
 |C
-|Analu Cheruene
-|26
-|80.83
+|Danotra Beselapo
+|24
+|66.53
 |-
 |PF
-|kaf
-|23
-|77.27
+|Paparto Bexosek
+|26
+|74.39
 |-
 |SF
-|Tsekon Wap't'ebw
-|26
-|78.57
+|Aiyota Player #5
+|28
+|78.79
 |-
 |SG
 |San Holo
-|27
-|99.99
+|24
+|96.57
 |-
 |PG
-|Red Rainbow Player #2
-|29
-|97.90
+|Aiyota Player #2
+|28
+|74.62
 |-
 |C
 |Pixtij Lekaxo
-|28
-|76.65
+|25
+|55.96
 |-
 |PF
 |Pitro Tenopro
-|30
-|73.09
+|25
+|60.04
 |-
 |SF
-|xek
-|31
-|75.30
+|Lee Stidham
+|19
+|71.97
 |-
 |SG
-|Ikaika Kethavongsa
-|25
-|94.31
-|-
-|PG
-|Làto Cows 
-|26
-|95.83
-|-
-|C
-|kekh okepekít
-|25
-|68.34
-|-
-|PF
-|Onishi Koshiro
-|22
-|68.36
-|-
-|SF
-|guz
-|29
-|71.33
-|-
-|SG
-|Paxathipatai Sengtavisouk
+|Key To Don Player #3
 |28
-|86.87
+|68.97
 |-
 |PG
 |Olandi Olamos
+|21
+|67.95
+|-
+|C
+|Akamine Yakumo
+|25
+|54.03
+|-
+|PF
+|Günther Umlauf
+|22
+|55.90
+|-
+|SF
+|xek
+|28
+|62.01
+|-
+|SG
+|Hiroshima Yakumo
 |24
-|87.05
+|63.42
+|-
+|PG
+|Niclas Unterberger
+|23
+|63.58
 |}
 {{Infobox basketball club
 | color1 = #6aa84f
@@ -2208,7 +2208,7 @@ The '''Aiyota Pumps''' are a basketball team based in Vikasa, Aiyota. They compe
 | owner =
 | manager = 
 | president = 
-| coach = Coach #5
+| coach = Coach #15
 | affiliation = [[Boston Beavers]]
 | franchise_wins = '''239'''
 | franchise_losses = '''165'''
@@ -2246,79 +2246,79 @@ The '''Avura Aviators''' are a basketball team based in Ávura, Aeridani. They c
 !Overall
 |-
 |C
-|Masaki Kazuko
-|30
-|83.73
+|Omumiba Keget
+|24
+|70.21
 |-
 |PF
 |Sichaizei Sha
-|31
-|91.23
+|26
+|74.97
 |-
 |SF
-|Key To Don Player #4
-|33
-|83.57
+|Kilik Farhje
+|24
+|72.64
 |-
 |SG
-|Alundi Elodosatrisei
-|29
-|99.99
+|Floenne Zan
+|28
+|75.86
 |-
 |PG
 |Yasutake Yasuoka
-|28
-|87.24
+|25
+|75.37
 |-
 |C
 |Sundaa Wen
-|27
-|77.29
+|24
+|60.14
 |-
 |PF
 |Tibiziŋag Ifet
-|33
+|28
 |74.27
 |-
 |SF
 |Ijba Bexotrugo
-|28
-|77.90
+|25
+|62.16
 |-
 |SG
-|Dugaro Gagodosa
+|Siolle Lago
 |28
-|90.23
+|62.48
 |-
 |PG
 |Hannes Ehrenstein
-|25
-|79.35
+|22
+|69.87
 |-
 |C
-|Danotra Alodosumosodo
-|23
-|58.69
+|Yamazaki Senichi
+|24
+|59.74
 |-
 |PF
 |Autolik Player #1
-|31
-|66.28
+|28
+|62.92
 |-
 |SF
-|Kilik Farhje
-|25
-|75.55
+|Váqáp Qlámipanońqo 
+|20
+|53.93
 |-
 |SG
-|Diji Makmero
-|31
-|71.43
+|Alotru Keget
+|25
+|58.67
 |-
 |PG
 |Kiromibakeili Tute 
-|25
-|77.00
+|22
+|56.12
 |}
 {{Infobox basketball club
 | color1 = #bf9000
@@ -2337,7 +2337,7 @@ The '''Avura Aviators''' are a basketball team based in Ávura, Aeridani. They c
 | owner =
 | manager = 
 | president = 
-| coach = Coach #5
+| coach = Coach #12
 | affiliation = [[Rockshaw Rave]]
 | franchise_wins = '''142'''
 | franchise_losses = '''262'''
@@ -2375,79 +2375,79 @@ The '''Boltway Bad Dragons''' are a basketball team based in Boltway, Ethanthova
 !Overall
 |-
 |C
-|Vŕá Płońiblá
-|29
-|90.17
+|Boḿa Blamhákpwano
+|22
+|71.72
 |-
 |PF
 |Kosiro Omundi
-|29
-|89.06
+|26
+|75.15
 |-
 |SF
 |Litsaw Wap't'ebw
-|28
+|25
 |99.99
 |-
 |SG
 |Boltway Player #3
-|32
-|90.10
+|28
+|77.35
 |-
 |PG
 |Làto Cows 
-|26
-|95.83
+|22
+|79.00
 |-
 |C
-|Boḿa Blamhákpwano
-|25
-|86.81
+|Pxalit'k'a Player #3
+|28
+|53.03
 |-
 |PF
-|Wakayama Higashikuni
-|27
-|75.83
+|Jonathan Wagenseil
+|22
+|61.55
 |-
 |SF
-|Alubembi Hadosa
-|30
-|89.94
+|Boltway Player #2
+|28
+|69.30
 |-
 |SG
 |Robert Kershaw
-|25
-|86.65
+|22
+|71.44
 |-
 |PG
 |Paparto Subeina
-|31
-|90.35
+|28
+|77.18
 |-
 |C
-|Meka Kethavongsa
-|23
-|63.26
+|Andries Martinez
+|25
+|52.04
 |-
 |PF
-|Power Forward #119
+|Chip Hancock
 |28
-|43.72
+|54.25
 |-
 |SF
-|Height Sagua Player #3
-|32
-|77.11
+|Alubembi Hadosa
+|26
+|63.85
 |-
 |SG
 |Wongduan Saengsavang
-|28
-|77.85
+|25
+|68.20
 |-
 |PG
-|hex
-|32
-|80.29
+|vun
+|28
+|73.44
 |}
 {{Infobox basketball club
 | color1 = #002bff
@@ -2466,7 +2466,7 @@ The '''Boltway Bad Dragons''' are a basketball team based in Boltway, Ethanthova
 | owner =
 | manager = 
 | president = 
-| coach = Coach #5
+| coach = Chromasheep Farm Coach
 | affiliation = [[Naskitrusk Brutes]]
 | franchise_wins = '''280'''
 | franchise_losses = '''124'''
@@ -2505,78 +2505,78 @@ The '''Dotruga Falno''' are a basketball team based in Naskitrusk, Dotruga. They
 |-
 |C
 |Atumobei Tute
-|30
-|99.99
+|26
+|89.14
 |-
 |PF
 |Okaget Mabipet
-|27
-|99.99
+|24
+|90.54
 |-
 |SF
 |Atakri Kalauni
-|31
-|99.99
+|28
+|95.53
 |-
 |SG
 |Iklo Eloalerko 
-|23
-|97.90
+|19
+|76.29
 |-
 |PG
 |Persa Mersa
-|26
-|99.99
+|21
+|83.55
 |-
 |C
-|Naxnoxsoya Liksov
-|27
-|77.50
+|Kudapa Kaxpa
+|28
+|60.24
 |-
 |PF
 |Blanaxon Player #3
-|32
-|82.71
+|28
+|67.01
 |-
 |SF
-|Sol Song-Jin
-|29
-|98.56
+|Volker Kluck
+|25
+|66.94
 |-
 |SG
 |Yuguchi Sofu
-|31
-|83.27
-|-
-|PG
-|Calvin Hayhurst
-|25
-|90.55
-|-
-|C
-|Nàsà Sikasbë 
-|27
-|76.57
-|-
-|PF
-|Munglegarra
-|30
-|74.89
-|-
-|SF
-|Blaki Faraulik
-|21
-|76.00
-|-
-|SG
-|Moonoriguna
-|24
-|77.59
+|26
+|70.20
 |-
 |PG
 |Pakomha Dakómh
-|26
-|84.94
+|22
+|72.70
+|-
+|C
+|Danotra Alodosumosodo
+|21
+|52.83
+|-
+|PF
+|Keahi Bokeo
+|22
+|52.41
+|-
+|SF
+|Minamoto Takeji
+|23
+|64.61
+|-
+|SG
+|Aiyota Player #9
+|28
+|56.36
+|-
+|PG
+|Bá Qŕámanh
+|28
+|60.80
 |}
 {{Infobox basketball club
 | color1 = #6d9eeb
@@ -2595,7 +2595,7 @@ The '''Dotruga Falno''' are a basketball team based in Naskitrusk, Dotruga. They
 | owner =
 | manager = 
 | president = 
-| coach = Coach #5
+| coach = Sande Sitei Coach
 | affiliation = [[Vincent Vikings]]
 | franchise_wins = '''259'''
 | franchise_losses = '''145'''
@@ -2633,79 +2633,79 @@ The '''Ethanthova Ponies''' are a basketball team based in Vincent, Ethanthova. 
 !Overall
 |-
 |C
-|vo
-|31
-|81.37
+|Ethanthova Player #4
+|28
+|60.06
 |-
 |PF
-|Kompasu Yasuoka
-|32
-|84.06
+|Asser Steinbauer
+|22
+|70.93
 |-
 |SF
-|Sol Young-Chul 
-|25
-|76.57
+|Ethanthova Player #5
+|28
+|84.87
 |-
 |SG
 |Fihana Jo
-|33
-|99.99
-|-
-|PG
-|Transhilmalia Player #2
-|31
-|99.99
-|-
-|C
-|Analu Rattanavongsa
 |28
-|79.11
-|-
-|PF
-|Kolpa Uxyakro
-|26
-|81.87
-|-
-|SF
-|Sol Young-Chul 
-|25
-|76.57
-|-
-|SG
-|Holy Yektonesia Player #3
-|33
-|95.78
+|80.65
 |-
 |PG
 |Errol James
-|31
-|93.01
+|26
+|77.64
 |-
 |C
-|Ixbla Ixau
-|23
-|65.84
+|Analu Rattanavongsa
+|24
+|54.51
 |-
 |PF
-|Konala Somphousiharath
-|31
-|81.32
+|Kompasu Yasuoka
+|27
+|65.88
 |-
 |SF
 |lu
-|32
-|73.95
+|28
+|70.01
 |-
 |SG
-|Sagobesei Hidolundi
-|22
-|74.74
+|Ethanthova Player #1
+|28
+|69.63
+|-
+|PG
+|Ixbla Kibla
+|28
+|65.91
+|-
+|C
+|Mungymia
+|24
+|51.65
+|-
+|PF
+|Ethanthova Player #3
+|28
+|63.43
+|-
+|SF
+|Ethanthova Player #8
+|28
+|59.49
+|-
+|SG
+|Holy Yektonesia Player #3
+|28
+|68.23
 |-
 |PG
 |Ethanthova Player #2
-|31
-|83.68
+|28
+|65.38
 |}
 {{Infobox basketball club
 | color1 = #6aa84f
@@ -2724,7 +2724,7 @@ The '''Ethanthova Ponies''' are a basketball team based in Vincent, Ethanthova. 
 | owner =
 | manager = 
 | president = 
-| coach = Coach #5
+| coach = Coach #10
 | affiliation = [[Aeridani Troopers]]
 | franchise_wins = '''220'''
 | franchise_losses = '''184'''
@@ -2762,79 +2762,79 @@ The '''Faehrenfall Feathercats''' are a basketball team based in Faehrenfall, Ae
 !Overall
 |-
 |C
-|Boḿa Blamhákpwano
-|25
-|86.81
+|Mónhin Mipjódló
+|21
+|64.99
 |-
 |PF
 |Tha Tricka
-|31
-|82.99
-|-
-|SF
-|Atumundikeili Halapodetsei
-|30
-|95.75
-|-
-|SG
-|Alundi Elodosatrisei
-|29
-|99.99
-|-
-|PG
-|Three Point Masta
-|33
-|99.99
-|-
-|C
-|Mónhin Mipjódló
-|24
-|80.57
-|-
-|PF
-|Munglegarra
-|30
-|74.89
-|-
-|SF
-|Aseqa Poi
-|26
-|85.59
-|-
-|SG
-|Vince Fowler
-|24
-|86.80
-|-
-|PG
-|Melebin Himei
 |28
-|80.68
-|-
-|C
-|Nàsà Sikasbë 
-|27
-|76.57
-|-
-|PF
-|Kwak Seung-Won
-|24
-|73.22
+|67.65
 |-
 |SF
 |Blanaxon Player #5
-|33
-|79.89
+|28
+|78.79
 |-
 |SG
-|Aiyota Player #3
-|32
-|77.48
+|Vince Fowler
+|21
+|77.51
 |-
 |PG
-|William Spicer
+|Three Point Masta
+|28
+|89.57
+|-
+|C
+|Savage Soleani
+|28
+|59.66
+|-
+|PF
+|Munglegarra
+|25
+|62.89
+|-
+|SF
+|Aseqa Poi
+|23
+|74.83
+|-
+|SG
+|Alundi Elodosatrisei
+|24
+|67.56
+|-
+|PG
+|Melebin Himei
+|25
+|65.25
+|-
+|C
+|Nàsà Sikasbë 
+|23
+|56.43
+|-
+|PF
+|Tagawa Kazuko
+|22
+|57.27
+|-
+|SF
+|Papa Ogre
+|28
+|57.46
+|-
+|SG
+|Naxto Zaxnax
+|24
+|66.68
+|-
+|PG
+|Adam Lettmann
 |26
-|73.22
+|55.40
 |}
 {{Infobox basketball club
 | color1 = #12a4b3
@@ -2853,7 +2853,7 @@ The '''Faehrenfall Feathercats''' are a basketball team based in Faehrenfall, Ae
 | owner =
 | manager = 
 | president = 
-| coach = Coach #5
+| coach = Coach #37
 | affiliation = [[Ebetxi Detro]]
 | franchise_wins = '''189'''
 | franchise_losses = '''215'''
@@ -2891,79 +2891,79 @@ The '''Stedro Boulders''' are a basketball team based in Stedro, Dotruga. They c
 !Overall
 |-
 |C
-|Analu Cheruene
-|26
-|80.83
-|-
-|PF
-|eneŋ zekek zeilunaven
-|32
-|92.61
-|-
-|SF
-|apseŋ kép tónaqig
-|33
-|99.28
-|-
-|SG
-|Lato Ikro
-|26
-|93.70
-|-
-|PG
-|Hivek Ekxtr
-|30
-|98.05
-|-
-|C
-|Analu Rattanavongsa
+|Mabebosei Alotro
 |28
-|79.11
+|67.56
 |-
 |PF
-|Keahi Saenthavisouk
-|29
-|85.61
+|Kaili Saenthavisouk
+|24
+|70.14
 |-
 |SF
-|Sebastien Robertson
-|26
-|78.40
+|Bingarra
+|21
+|98.54
 |-
 |SG
-|The Dimension Slaughterer
-|33
-|88.13
+|Gorga Ektxr
+|24
+|69.59
 |-
 |PG
 |Okada Sumiteru
-|26
-|88.03
+|22
+|75.88
 |-
 |C
 |Nagata Taki
-|27
-|77.88
+|24
+|60.67
 |-
 |PF
-|Keahi Saengsavang
+|eneŋ zekek zeilunaven
 |28
-|79.29
+|64.97
 |-
 |SF
-|Blaki Faraulik
-|24
-|76.00
+|Sebastien Robertson
+|23
+|61.11
 |-
 |SG
-|Yuguchi Sofu
-|31
-|83.27
+|Lavrenti Ogden
+|24
+|65.59
 |-
 |PG
-|Pakomha Dakómh
+|Blanaxon Player #2
+|28
+|65.29
+|-
+|C
+|Làto Sokàtà
+|24
+|53.91
+|-
+|PF
+|Keahi Saenthavisouk
+|24
+|61.18
+|-
+|SF
+|Ulatrusiei Hisei 
+|23
+|55.69
+|-
+|SG
+|Kiro Hidolundi 
+|21
+|55.07
+|-
+|PG
+|pekleɰ tiwan
 |26
-|84.94
+|63.76
 |}
 {{Infobox basketball club
 | color1 = #ffffff
@@ -2982,7 +2982,7 @@ The '''Stedro Boulders''' are a basketball team based in Stedro, Dotruga. They c
 | owner =
 | manager = 
 | president = 
-| coach = Coach #5
+| coach = Coach #2
 | affiliation = [[TND Force]]
 | franchise_wins = '''158'''
 | franchise_losses = '''246'''
@@ -3020,79 +3020,79 @@ The '''TND Tanks''' are a basketball team based in City, Tri-National Dominion. 
 !Overall
 |-
 |C
-|Kalani Saysamongdy
-|26
-|96.31
-|-
-|PF
-|Reinhard Waldstein
-|29
-|99.99
-|-
-|SF
-|Kasai Isei
-|29
-|99.99
-|-
-|SG
-|Pakomha Nhoñsła
-|30
-|95.83
-|-
-|PG
-|Three Point Masta
-|33
-|99.99
-|-
-|C
-|Nagata Taki
-|27
-|77.88
+|Tri_National_Dominion Player #1
+|28
+|70.09
 |-
 |PF
 |Kwak Chihu
-|29
-|92.64
+|25
+|68.91
 |-
 |SF
-|Eric Gilroy
-|27
-|80.28
+|Phetdum Vatthana
+|25
+|78.95
 |-
 |SG
-|Brian Lolant
-|27
-|86.76
+|Pakomha Nhoñsła
+|26
+|71.50
 |-
 |PG
 |Phetdum Vongsay
-|29
-|84.17
+|26
+|73.35
 |-
 |C
-|Kudapa Kaxpa
-|32
-|65.53
+|Maere Eirikursson
+|25
+|65.26
 |-
 |PF
-|Tugano Klabotrisei
-|23
-|72.01
+|Detrio Marzovius
+|28
+|68.45
 |-
 |SF
-|pazek lutep kaghišek
-|29
-|76.13
+|Carsten Meyer
+|21
+|70.08
 |-
 |SG
-|Moonoriguna
-|22
-|77.59
+|Quartermarra
+|24
+|70.58
 |-
 |PG
 |Tri_National_Dominion Player #3
-|33
-|78.98
+|28
+|68.96
+|-
+|C
+|Kiromi Hialerko
+|23
+|52.30
+|-
+|PF
+|Wilbert Harries
+|23
+|63.93
+|-
+|SF
+|pazek lutep kaghišek
+|26
+|67.04
+|-
+|SG
+|Diji Makmero
+|28
+|65.16
+|-
+|PG
+|LeBryon James
+|28
+|64.89
 |}
 {{Infobox basketball club
 | color1 = #f1c232
@@ -3111,7 +3111,7 @@ The '''TND Tanks''' are a basketball team based in City, Tri-National Dominion. 
 | owner =
 | manager = 
 | president = 
-| coach = Coach #5
+| coach = Coach #12
 | affiliation = [[Bongatar Boppers]]
 | franchise_wins = '''166'''
 | franchise_losses = '''238'''
@@ -3150,78 +3150,78 @@ The '''Bongatar Banging Bongos''' are a basketball team based in Bongatar City, 
 |-
 |C
 |Kalani Saysamongdy
-|26
-|96.31
+|23
+|76.69
 |-
 |PF
-|Pranga  
-|27
-|89.96
+|Dvinme Player #11
+|28
+|70.48
 |-
 |SF
 |Kasai Isei
-|29
-|99.99
+|24
+|78.16
 |-
 |SG
 |Miyoshi Masami
-|26
-|96.05
+|23
+|78.68
 |-
 |PG
 |Wongduan Sengtavisouk
-|26
-|99.99
-|-
-|C
-|Ixbla Ixau
-|23
-|65.84
-|-
-|PF
-|Keahi Saenthavisouk
-|29
-|85.61
-|-
-|SF
-|Eric Gilroy
-|27
-|80.28
-|-
-|SG
-|Dugaro Gagodosa
-|28
-|90.23
-|-
-|PG
-|Fujikawa Masuhiro
-|28
-|99.96
+|21
+|78.00
 |-
 |C
 |Om Kwang-Jo
-|32
-|64.12
+|28
+|54.84
 |-
 |PF
 |Phetdum Somphonpadee
-|29
-|72.66
+|26
+|65.24
 |-
 |SF
-|No Seung-Won
-|26
-|65.47
+|Eric Gilroy
+|24
+|61.82
 |-
 |SG
 |Blanox Farhje
-|29
-|79.52
+|26
+|65.72
 |-
 |PG
-|Danomobei Subeina
-|33
-|96.18
+|Fujikawa Masuhiro
+|25
+|78.00
+|-
+|C
+|Goormurra
+|22
+|48.06
+|-
+|PF
+|Zax Kaxpa
+|27
+|57.42
+|-
+|SF
+|No Seung-Won
+|25
+|59.57
+|-
+|SG
+|Dugaro Gagodosa
+|23
+|64.53
+|-
+|PG
+|Bongatar Player #1
+|28
+|65.24
 |}
 {{Infobox basketball club
 | color1 = #ffff00
@@ -3240,7 +3240,7 @@ The '''Bongatar Banging Bongos''' are a basketball team based in Bongatar City, 
 | owner =
 | manager = 
 | president = 
-| coach = Coach #5
+| coach = Coach #17
 | affiliation = [[Protopolis Progs]]
 | franchise_wins = '''159'''
 | franchise_losses = '''245'''
@@ -3278,79 +3278,79 @@ The '''Czalliso Pythons''' are a basketball team based in Protopolis, Czalliso. 
 !Overall
 |-
 |C
-|Asser Hutto 
-|27
-|85.82
-|-
-|PF
-|Dylan Fowler
-|29
-|82.67
-|-
-|SF
-|Juri Perch
-|29
-|99.94
-|-
-|SG
-|la
-|31
-|94.27
-|-
-|PG
-|Fujikawa Masuhiro
-|28
-|99.96
-|-
-|C
 |Sagolnasei Korsobo
-|31
-|74.51
+|26
+|63.99
 |-
 |PF
-|Hjenax Auproda
-|24
-|76.68
+|Iggy Greenfield
+|25
+|70.23
 |-
 |SF
-|Mónhin Nasa
+|war
 |28
-|68.53
+|75.98
 |-
 |SG
 |mu
-|31
-|85.36
+|28
+|70.88
 |-
 |PG
 |Naxto Lizaxium
-|27
-|98.89
+|24
+|81.76
 |-
 |C
-|Yamazaki Meiji
+|kekh okepekít
 |22
-|71.38
+|60.18
 |-
 |PF
 |Hevek Gagomos
-|29
-|70.73
+|28
+|68.17
+|-
+|SF
+|Juri Perch
+|24
+|70.86
+|-
+|SG
+|hig
+|28
+|62.20
+|-
+|PG
+|Nukunaix Hjetohje 
+|20
+|57.85
+|-
+|C
+|Keahi Cheruene
+|21
+|50.73
+|-
+|PF
+|Dylan Fowler
+|26
+|65.83
 |-
 |SF
 |Mónhin Nasa
-|28
-|68.53
+|25
+|58.67
 |-
 |SG
-|Sagobesei Hidolundi
-|21
-|74.74
+|Pau Finapeke
+|23
+|59.45
 |-
 |PG
-|Xaisomboun Saengsavang
-|27
-|98.76
+|Nuux Naxix 
+|23
+|51.28
 |}
 {{Infobox basketball club
 | color1 = #17f613
@@ -3369,7 +3369,7 @@ The '''Czalliso Pythons''' are a basketball team based in Protopolis, Czalliso. 
 | owner =
 | manager = 
 | president = 
-| coach = Coach #5
+| coach = Coach #13
 | affiliation = [[Bielosia Ghosts]]
 | franchise_wins = '''317'''
 | franchise_losses = '''87'''
@@ -3407,79 +3407,79 @@ The '''Dvimne Spirits''' are a basketball team based in Dvimne, Bielosia. They c
 !Overall
 |-
 |C
-|Atumobei Tute
-|30
-|99.99
+|Seong-Su Gang
+|26
+|68.31
 |-
 |PF
-|Yombeen
-|31
-|98.17
+|Mazló Plókli
+|28
+|77.58
 |-
 |SF
 |Sago Alodetsei
-|31
-|99.99
-|-
-|SG
-|San Holo
-|27
-|99.99
-|-
-|PG
-|Makiaipisi Fana
-|30
-|99.99
-|-
-|C
-|Thomas Skinner
-|23
-|91.60
-|-
-|PF
-|Analu Vatthana
 |28
-|93.62
-|-
-|SF
-|Klaxon Nixoka
-|28
-|93.21
-|-
-|SG
-|Akamine Naizen
-|29
 |99.99
 |-
-|PG
-|Naxto Lizaxium
-|27
-|98.89
-|-
-|C
-|Seong-Su Gang
-|29
-|87.22
-|-
-|PF
-|Moke Douangvily
-|30
-|93.46
-|-
-|SF
-|Ḿavwápŕi Pimh 
-|26
-|89.76
-|-
 |SG
-|Keahi Savang
-|29
-|98.97
+|kuŋevok eɰnak gevunáh
+|28
+|74.59
 |-
 |PG
 |Wiley Ambrose
-|30
-|94.09
+|27
+|81.14
+|-
+|C
+|Shishido Goro
+|22
+|61.83
+|-
+|PF
+|Alukeili Asolomundi
+|27
+|73.85
+|-
+|SF
+|Till Klostermann
+|24
+|64.73
+|-
+|SG
+|Markoli Strawlo
+|28
+|68.24
+|-
+|PG
+|Benben
+|26
+|71.16
+|-
+|C
+|Argos Pebek
+|28
+|57.85
+|-
+|PF
+|Wakayama Higashikuni
+|24
+|60.52
+|-
+|SF
+|Mom Slivókŕámhomhók
+|21
+|57.13
+|-
+|SG
+|Ienaga Tomoyuki
+|24
+|56.78
+|-
+|PG
+|Ixbla Sovix
+|25
+|68.95
 |}
 {{Infobox basketball club
 | color1 = #674ea7
@@ -3498,7 +3498,7 @@ The '''Dvimne Spirits''' are a basketball team based in Dvimne, Bielosia. They c
 | owner =
 | manager = 
 | president = 
-| coach = Coach #5
+| coach = Coach #21
 | affiliation = [[Holy Yektonisa Hmongs]]
 | franchise_wins = '''123'''
 | franchise_losses = '''281'''
@@ -3536,79 +3536,79 @@ The '''Holy Yektonisa Bishops''' are a basketball team based in City, Holy Yekto
 !Overall
 |-
 |C
-|Atumiba Bexomos
+|Shitt Hessar
 |26
-|82.48
+|67.22
 |-
 |PF
 |Kolpa Uxyakro
-|26
-|81.87
+|22
+|64.24
 |-
 |SF
 |apseŋ kép tónaqig
-|33
-|99.28
-|-
-|SG
-|Alwin Gradl
 |28
-|91.24
-|-
-|PG
-|Hivek Ekxtr
-|30
-|98.05
-|-
-|C
-|Lyintaria Player #4
-|32
-|79.01
-|-
-|PF
-|Hjenax Auproda
-|22
-|76.68
-|-
-|SF
-|Ji Gim
-|26
-|70.08
+|80.04
 |-
 |SG
 |Kamil Jones
-|28
-|88.13
+|25
+|81.72
 |-
 |PG
-|Pxalit'k'a Player #7
-|33
-|89.13
+|Hivek Ekxtr
+|25
+|86.41
 |-
 |C
-|Shitt Hessar
-|29
-|74.04
+|Atumiba Bexomos
+|23
+|59.84
 |-
 |PF
-|Sagomundisei Hisei
-|28
-|75.15
+|Alotru Amodetsei 
+|21
+|63.11
 |-
 |SF
-|Wakuni Senelile
-|21
-|67.29
+|Ji Gim
+|23
+|62.05
 |-
 |SG
 |Omumiba Ektxr
-|29
-|82.90
+|26
+|71.59
 |-
 |PG
 |Dano Subeina
-|31
-|81.62
+|28
+|69.93
+|-
+|C
+|Holy Yektonesia Player #1
+|28
+|56.10
+|-
+|PF
+|Eban Korsobo
+|25
+|61.32
+|-
+|SF
+|Ailiqaeu Okohae
+|26
+|53.77
+|-
+|SG
+|Holy Yektonesia Player #6
+|28
+|69.04
+|-
+|PG
+|Pxalit'k'a Player #7
+|28
+|67.35
 |}
 {{Infobox basketball club
 | color1 = #cc4125
@@ -3627,7 +3627,7 @@ The '''Holy Yektonisa Bishops''' are a basketball team based in City, Holy Yekto
 | owner =
 | manager = 
 | president = 
-| coach = Coach #5
+| coach = Pyzus Coach
 | affiliation = [[Holylmao Bison]]
 | franchise_wins = '''205'''
 | franchise_losses = '''199'''
@@ -3666,78 +3666,78 @@ The '''Holykol Bears''' are a basketball team based in Shiberia, Holykol. They c
 |-
 |C
 |Nobira Taki
-|28
-|86.26
+|25
+|71.42
 |-
 |PF
-|Reinhard Waldstein
-|29
-|99.99
+|Akamu Phomsouvanh
+|27
+|70.21
 |-
 |SF
-|Eiqe Gekxakŋi
-|28
-|85.49
-|-
-|SG
-|Rusty Berry
-|28
-|99.99
-|-
-|PG
-|Red Rainbow Player #2
-|29
-|97.90
-|-
-|C
-|Yoade Perch
-|26
-|76.75
-|-
-|PF
-|Konala Somphousiharath
-|31
-|81.32
-|-
-|SF
-|Red Rainbow Player #1
-|32
-|84.04
+|Jesse Svensson
+|24
+|68.23
 |-
 |SG
 |Steve Sho
-|28
-|93.01
+|24
+|80.71
 |-
 |PG
-|Akamu Cheruene
-|31
-|87.97
+|Red Rainbow Player #2
+|26
+|95.44
 |-
 |C
-|Yoade Perch
-|26
-|76.75
+|Koa Savang
+|21
+|63.33
 |-
 |PF
-|Wakayama Higashikuni
-|27
-|75.83
+|Konala Somphousiharath
+|26
+|68.85
 |-
 |SF
 |hax
-|33
-|76.67
+|28
+|64.93
+|-
+|SG
+|Rusty Berry
+|23
+|71.80
+|-
+|PG
+|Akamu Cheruene
+|27
+|69.16
+|-
+|C
+|Center #137
+|28
+|55.80
+|-
+|PF
+|Bruce Mack
+|24
+|57.97
+|-
+|SF
+|Tsekon Wap't'ebw
+|23
+|60.35
 |-
 |SG
 |Alwin Gradl
-|28
-|91.24
+|25
+|70.88
 |-
 |PG
 |quj
-|31
-|76.30
+|28
+|61.21
 |}
 {{Infobox basketball club
 | color1 = #a64d79
@@ -3756,7 +3756,7 @@ The '''Holykol Bears''' are a basketball team based in Shiberia, Holykol. They c
 | owner =
 | manager = 
 | president = 
-| coach = Coach #5
+| coach = Coach #22
 | affiliation = [[Lyintaria Kool Kats]]
 | franchise_wins = '''191'''
 | franchise_losses = '''213'''
@@ -3794,79 +3794,79 @@ The '''Lyintaria Lynx''' are a basketball team based in City, Lyintaria. They co
 !Overall
 |-
 |C
-|Uemura Tadashi
+|Lyintaria Player #4
 |28
-|79.49
+|65.74
 |-
 |PF
 |Éxànnecig Hàŕselàn
-|25
-|88.74
+|22
+|71.14
 |-
 |SF
 |Uelv Lganne
-|33
-|96.92
-|-
-|SG
-|Stephan Hutto
-|27
-|99.99
-|-
-|PG
-|Pxalit'k'a Player #7
-|33
-|89.13
-|-
-|C
-|Lyintaria Player #4
-|32
-|79.01
-|-
-|PF
-|Bernard Wade
-|27
-|74.63
-|-
-|SF
-|Lvieknim Yuji
 |28
-|85.50
+|77.77
 |-
 |SG
 |Lyintaria Player #6
-|31
-|78.35
+|28
+|71.08
 |-
 |PG
 |Phetdum Vongsay
-|28
-|84.49
+|24
+|76.81
 |-
 |C
-|Alubembi Xahelvi
-|30
-|71.50
+|Uemura Tadashi
+|25
+|64.97
 |-
 |PF
-|Kwak Seung-Won
-|22
-|73.22
+|Bernard Wade
+|24
+|58.64
 |-
 |SF
-|Zaxkla Kolpauxso
-|23
-|68.88
+|Swanano Nonhkwaqan
+|24
+|67.00
 |-
 |SG
 |Tekle Doko
-|31
-|75.76
+|28
+|67.51
 |-
 |PG
-|Sagosiei Himamosei
+|Lyintaria Player #3
+|28
+|66.14
+|-
+|C
+|Alubembi Xahelvi
+|27
+|62.46
+|-
+|PF
+|Lilo Thepsenavong
 |22
-|68.69
+|55.60
+|-
+|SF
+|Váqáp Vjamhá
+|25
+|62.45
+|-
+|SG
+|Xai Alodetsei 
+|22
+|50.05
+|-
+|PG
+|Lyintaria Player #11
+|28
+|57.35
 |}
 {{Infobox basketball club
 | color1 = #f230ff
@@ -3885,7 +3885,7 @@ The '''Lyintaria Lynx''' are a basketball team based in City, Lyintaria. They co
 | owner =
 | manager = 
 | president = 
-| coach = Coach #5
+| coach = Coach #32
 | affiliation = [[Pyxanovia Elites]]
 | franchise_wins = '''236'''
 | franchise_losses = '''168'''
@@ -3923,79 +3923,79 @@ The '''Pyxanovia Pixies''' are a basketball team based in City, Pyxanovia. They 
 !Overall
 |-
 |C
-|Vrá Nonhkwaqan
-|33
-|99.99
-|-
-|PF
-|Hënila Ūnā
-|33
-|96.87
-|-
-|SF
-|Pyxanovia Player #4
-|31
-|99.99
-|-
-|SG
-|Fihana Jo
-|33
-|99.99
-|-
-|PG
-|Persa Mersa
-|26
-|99.99
-|-
-|C
-|Colin Hutchison
-|32
-|81.30
+|Analu Cheruene
+|24
+|69.40
 |-
 |PF
 |Moke Douangvily
-|30
-|93.46
+|26
+|81.30
 |-
 |SF
-|Pakomha Pjagwazwi
+|Pyxanovia Player #4
 |28
-|99.99
+|94.50
 |-
 |SG
-|Sachie Snijder
-|33
-|99.99
+|Handa Senichi
+|23
+|85.20
 |-
 |PG
-|Laurence Chandler
-|32
-|99.99
+|Pyxanovia Player #2
+|28
+|76.45
 |-
 |C
-|Hato Yasuoka
-|22
-|64.09
+|Marcel Weidenmann
+|26
+|60.92
 |-
 |PF
-|Sichaizei Sha
-|31
-|91.23
+|Reinhard Waldstein
+|24
+|66.94
 |-
 |SF
-|Small Forward #164
-|29
-|50.61
+|Nathaniel Starks
+|25
+|60.43
 |-
 |SG
-|Waltoko
-|26
-|99.99
+|Autolik Player #2
+|28
+|66.46
 |-
 |PG
-|Its'a Lełqutyi
-|33
-|86.45
+|Ixux Naixi
+|26
+|66.22
+|-
+|C
+|Pyxanovia Player #1
+|28
+|55.23
+|-
+|PF
+|tag
+|28
+|62.11
+|-
+|SF
+|Alve Higashikuni 
+|21
+|56.77
+|-
+|SG
+|Yamataka Hiroaki 
+|22
+|55.17
+|-
+|PG
+|William James
+|23
+|59.21
 |}
 {{Infobox basketball club
 | color1 = #073763
@@ -4014,7 +4014,7 @@ The '''Pyxanovia Pixies''' are a basketball team based in City, Pyxanovia. They 
 | owner =
 | manager = 
 | president = 
-| coach = Coach #5
+| coach = Coach #34
 | affiliation = [[Yuofuan Jaguars]]
 | franchise_wins = '''157'''
 | franchise_losses = '''247'''
@@ -4053,76 +4053,76 @@ The '''Transhimalia Disasters''' are a basketball team based in Degëq'so, Trans
 |-
 |C
 |Asser Hutto 
-|27
-|85.82
+|23
+|62.08
 |-
 |PF
-|Kwak Seung-Won
-|21
-|73.22
+|Qrux'uhz the Enraged
+|28
+|59.21
 |-
 |SF
 |Kalani Phanivong
-|24
-|91.64
+|21
+|74.97
 |-
 |SG
 |Sachie Snijder
-|33
-|99.99
+|28
+|83.60
 |-
 |PG
 |Steve Masuhiro
-|27
-|99.99
+|24
+|82.20
 |-
 |C
-|Keon Saengsavang
-|28
-|74.77
+|Timblejoornay
+|25
+|54.94
 |-
 |PF
-|pot
-|25
-|71.95
-|-
-|SF
-|Eiqe Gekxakŋi
+|Center #113
 |28
-|85.49
-|-
-|SG
-|Sagua Player #2
-|32
-|93.43
-|-
-|PG
-|vun
-|31
-|76.54
-|-
-|C
-|Ingo Gradl
-|30
-|69.89
-|-
-|PF
-|pot
-|25
-|71.95
+|55.97
 |-
 |SF
-|Kawata Hirokazu
-|26
-|79.18
+|King Kalassak
+|28
+|74.15
 |-
 |SG
 |The Dimension Slaughterer
-|33
-|88.13
+|28
+|80.89
 |-
 |PG
-|vun
-|31
-|76.54
+|Błá Kánpovŕagá
+|24
+|61.75
+|-
+|C
+|Ingo Gradl
+|25
+|45.82
+|-
+|PF
+|Akamu Tayvyihane
+|26
+|52.19
+|-
+|SF
+|Eiqe Gekxakŋi
+|25
+|71.52
+|-
+|SG
+|Sagua Player #2
+|28
+|74.53
+|-
+|PG
+|Sreotruyphoe the Expunger
+|28
+|61.20
 |}
