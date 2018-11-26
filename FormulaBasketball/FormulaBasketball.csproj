@@ -68,6 +68,7 @@
     <Compile Include="FIBUTeam.cs" />
     <Compile Include="FreeAgents.cs" />
     <Compile Include="NameGenerator.cs" />
+    <Compile Include="PlayerRecords.cs" />
     <Compile Include="Record.cs" />
     <Compile Include="retirements.cs" />
     <Compile Include="Coach.cs" />
@@ -86,6 +87,7 @@
     </Compile>
     <Compile Include="Offseason.cs" />
     <Compile Include="RookieDraft.cs" />
+    <Compile Include="SeasonRecords.cs" />
     <Compile Include="SetupNewSeason.cs" />
     <Compile Include="Standings_Division.cs">
       <SubType>UserControl</SubType>

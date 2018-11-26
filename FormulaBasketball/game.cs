@@ -88,6 +88,49 @@ public class game
         if (!quarterly)
             startGame();
     }
+    public player GetHighestScorer()
+    {
+        int mostPoints = 0;
+        player highestScorer = null;
+        foreach(player p in awayTeam)
+        {
+            if(p.getGamePoints() > mostPoints)
+            {
+                highestScorer = p;
+                mostPoints = p.getGamePoints();
+            }
+        }
+        return highestScorer;
+    }
+    public player GetGameRebound()
+    {
+        int mostRebounds = 0;
+        player highestRebounder = null;
+        foreach (player p in awayTeam)
+        {
+            if (p.getGameRebounds() > mostRebounds)
+            {
+                highestRebounder = p;
+                mostRebounds = p.getGameRebounds();
+            }
+        }
+        return highestRebounder;
+    }
+    public player GetHighestAssister()
+    {
+        int mostAssists = 0;
+        player highestAssister = null;
+        foreach (player p in awayTeam)
+        {
+            if (p.getGameAssists() > mostAssists)
+            {
+                highestAssister = p;
+                mostAssists = p.getGameAssists();
+            }
+        }
+        return highestAssister;
+    }
+
     public int getQuarterNum()
     {
         return quarterNum;

@@ -21,6 +21,7 @@ public class player : IComparable<player>
     protected bool careerEnded;
     protected double[] ratings;
     protected Contract contract;
+    protected PlayerRecords playerRecords;
     public player(int pos, int layupStat, int dunkStat, int jumpStat, int threePoint, int passing, int shotContest, int defenseIQ, int jumping, int separation, int durability, int stamina, int age, String name, Country country, bool starting)
     {
         careerEnded = false;
@@ -181,6 +182,18 @@ public class player : IComparable<player>
     public bool Rookie()
     {
         return isRookie;
+    }
+    public void updatePlayerRecords(int gameNum, string opposingTeam)
+    {
+        if(playerRecords == null)
+        {
+            playerRecords = new PlayerRecords(name);
+        }
+        playerRecords.CheckRecords(this, gameNum, opposingTeam);
+    }
+    public void Print()
+    {
+        playerRecords.Print();
     }
     public string GetPositionAsString()
     {

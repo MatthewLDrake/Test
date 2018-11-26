@@ -1,32 +1,32 @@
-Dotruga Falno: 91.7608888888889
-Dvimne Spirits: 86.434
-Calto Cows: 86.4008888888889
-Avura Aviators: 85.6355555555556
-Boltway Bad Dragons: 84.574
-Serkr Atolls: 83.8224444444444
-Solea Geysers: 83.7806666666667
-Pyxanovia Pixies: 83.008
-Barsein Bats: 82.9864444444445
-Height Sagua Cats: 82.22
-Bongatar Banging Bongos: 81.3491111111111
-Holy Yektonisa Bishops: 80.5528888888889
-Aiyota Pumps: 80.4968888888889
-Shmupland Dictators: 80.1924444444444
-Ethanthova Ponies: 78.9946666666667
-Key to Don Yees: 78.6873333333333
-Red Rainbow Sickles: 78.6115555555556
-Sagua Ocelots: 78.5493333333334
-Stedro Boulders: 78.1908888888889
-Manwx Saguans: 78.1488888888889
-Blanaxon Hammers: 78.1366666666667
-Lyintaria Lynx: 77.8884444444444
-Naxda Nomads: 77.7315555555556
-Holykol Bears: 77.6251111111111
-Auspikitan Golden Falcons: 77.1102222222222
-TND Tanks: 76.5235555555556
-Czalliso Pythons: 76.4171111111111
-Faehrenfall Feathercats: 76.2575555555555
-Kaeshar Kaisers: 75.3668888888889
-Aahrus Moosi: 75.048
-Autolik Autonomy: 74.8115555555556
-Transhimalia Disasters: 73.9597777777778
+Dotruga Falno: 87.0097777777778
+Solea Geysers: 86.3193333333333
+Calto Cows: 84.5104444444444
+Pyxanovia Pixies: 81.37
+Boltway Bad Dragons: 80.6437777777778
+Serkr Atolls: 80.5342222222222
+Dvimne Spirits: 80.3215555555556
+Aiyota Pumps: 78.1811111111111
+Auspikitan Golden Falcons: 77.5917777777778
+Holykol Bears: 77.2011111111111
+Bongatar Banging Bongos: 76.4017777777778
+Stedro Boulders: 76.3406666666667
+Holy Yektonisa Bishops: 75.9257777777778
+Barsein Bats: 75.828
+Faehrenfall Feathercats: 75.7046666666667
+Ethanthova Ponies: 74.828
+Sagua Ocelots: 74.5115555555556
+Manwx Saguans: 74.3608888888889
+Shmupland Dictators: 74.3251111111111
+Red Rainbow Sickles: 73.8108888888889
+Avura Aviators: 73.8082222222222
+Blanaxon Hammers: 73.3842222222222
+Czalliso Pythons: 72.5684444444444
+TND Tanks: 72.5608888888889
+Lyintaria Lynx: 72.5066666666667
+Height Sagua Cats: 72.4962222222222
+Transhimalia Disasters: 72.4108888888889
+Aahrus Moosi: 72.156
+Kaeshar Kaisers: 71.8577777777778
+Naxda Nomads: 71.6586666666667
+Autolik Autonomy: 71.0042222222222
+Key to Don Yees: 68.3033333333333

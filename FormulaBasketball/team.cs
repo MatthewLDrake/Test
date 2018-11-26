@@ -32,6 +32,7 @@ public class team : IComparable<team>,  IEnumerable<player>
     protected List<player> retiredList;
     private Record currentSeason, currentPlayoffs, allTime, allTimePlayoffs, divisionRecord, conferenceRecord;
     private Record[] currentSeasonVsTeam, allTimeVsTeam;
+    private SeasonRecords seasonRecords;
     private List<DraftPick> picks, nextSeasonPicks;
     private DisabledLists sevenGame, fifteenGame, season;
     private player[] activePlayers;
@@ -110,6 +111,22 @@ public class team : IComparable<team>,  IEnumerable<player>
     {
         if (picks == null) picks = new List<DraftPick>();
         picks.Add(pick);
+    }
+    private void CheckSeasonRecords(int pointsFor, int pointsAgainst, int gameNum, string teamAgainst)
+    {
+        if(seasonRecords == null)
+        {
+            seasonRecords = new SeasonRecords(this);
+        }
+        seasonRecords.Update(activePlayers, pointsFor, pointsAgainst, teamAgainst, gameNum);
+        foreach(player p in this)
+        {
+            p.updatePlayerRecords(gameNum, teamAgainst);
+        }
+    }
+    public void PrintSeasonRecords()
+    {
+        seasonRecords.Print();
     }
     public void endSeason()
     {
@@ -1030,7 +1047,8 @@ public class team : IComparable<team>,  IEnumerable<player>
 
         AddPoints(teamScore);
         AddPointsAgainst(opposingScore);
-
+        
+        CheckSeasonRecords(teamScore, opposingScore, getWins() + getLosses(), formulaBasketball.create.getTeam(opponent).ToString());
         
     }
 

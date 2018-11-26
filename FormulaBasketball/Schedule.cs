@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 public class Schedule
 {
-    formulaBasketball formulaBasketball;
     List<Action> list;
     public Schedule()
     {
@@ -91,6 +90,7 @@ public class Schedule
         list.Add(() => Game82());
         list.Add(() => Game83());
         list.Add(() => Game84());
+        
     }
     public void playGames(int firstGame, int lastGame, FormulaBasketball.Random r)
     {

@@ -2,143 +2,35 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Aahrus Moosi went 0 - 0. They scored 0 points and gave up 0 points. Here are their player stats!
-Auspikitan Golden Falcons went 0 - 0. They scored 0 points and gave up 0 points. Here are their player stats!
-Calto Cows went 0 - 0. They scored 0 points and gave up 0 points. Here are their player stats!
-Height Sagua Cats went 0 - 0. They scored 0 points and gave up 0 points. Here are their player stats!
-Key to Don Yees went 0 - 0. They scored 0 points and gave up 0 points. Here are their player stats!
-Manwx Saguans went 0 - 0. They scored 0 points and gave up 0 points. Here are their player stats!
-Sagua Ocelots went 0 - 0. They scored 0 points and gave up 0 points. Here are their player stats!
-Solea Geysers went 0 - 0. They scored 0 points and gave up 0 points. Here are their player stats!
-Autolik Autonomy went 0 - 0. They scored 0 points and gave up 0 points. Here are their player stats!
-Barsein Bats went 0 - 0. They scored 0 points and gave up 0 points. Here are their player stats!
-Blanaxon Hammers went 0 - 0. They scored 0 points and gave up 0 points. Here are their player stats!
-Kaeshar Kaisers went 0 - 0. They scored 0 points and gave up 0 points. Here are their player stats!
-Naxda Nomads went 0 - 0. They scored 0 points and gave up 0 points. Here are their player stats!
-Red Rainbow Sickles went 0 - 0. They scored 0 points and gave up 0 points. Here are their player stats!
-Serkr Atolls went 0 - 0. They scored 0 points and gave up 0 points. Here are their player stats!
-Shmupland Dictators went 0 - 0. They scored 0 points and gave up 0 points. Here are their player stats!
-Aiyota Pumps went 0 - 0. They scored 0 points and gave up 0 points. Here are their player stats!
-Avura Aviators went 0 - 0. They scored 0 points and gave up 0 points. Here are their player stats!
-Boltway Bad Dragons went 0 - 0. They scored 0 points and gave up 0 points. Here are their player stats!
-Dotruga Falno went 0 - 0. They scored 0 points and gave up 0 points. Here are their player stats!
-Ethanthova Ponies went 0 - 0. They scored 0 points and gave up 0 points. Here are their player stats!
-Faehrenfall Feathercats went 0 - 0. They scored 0 points and gave up 0 points. Here are their player stats!
-Stedro Boulders went 0 - 0. They scored 0 points and gave up 0 points. Here are their player stats!
-TND Tanks went 0 - 0. They scored 0 points and gave up 0 points. Here are their player stats!
-Bongatar Banging Bongos went 0 - 0. They scored 0 points and gave up 0 points. Here are their player stats!
-Czalliso Pythons went 0 - 0. They scored 0 points and gave up 0 points. Here are their player stats!
-Dvimne Spirits went 0 - 0. They scored 0 points and gave up 0 points. Here are their player stats!
-Holy Yektonisa Bishops went 0 - 0. They scored 0 points and gave up 0 points. Here are their player stats!
-Holykol Bears went 0 - 0. They scored 0 points and gave up 0 points. Here are their player stats!
-Lyintaria Lynx went 0 - 0. They scored 0 points and gave up 0 points. Here are their player stats!
-Pyxanovia Pixies went 0 - 0. They scored 0 points and gave up 0 points. Here are their player stats!
-Transhimalia Disasters went 0 - 0. They scored 0 points and gave up 0 points. Here are their player stats!
+Aahrus Moosi went 2 - 2. They scored 11520 points and gave up 11356 points. Here are their player stats!
+Auspikitan Golden Falcons went 1 - 3. They scored 10242 points and gave up 10323 points. Here are their player stats!
+Calto Cows went 4 - 0. They scored 10741 points and gave up 10394 points. Here are their player stats!
+Height Sagua Cats went 2 - 2. They scored 10949 points and gave up 11276 points. Here are their player stats!
+Key to Don Yees went 2 - 2. They scored 11860 points and gave up 12277 points. Here are their player stats!
+Manwx Saguans went 2 - 2. They scored 11330 points and gave up 11745 points. Here are their player stats!
+Sagua Ocelots went 3 - 1. They scored 10938 points and gave up 10774 points. Here are their player stats!
+Solea Geysers went 4 - 0. They scored 11668 points and gave up 10849 points. Here are their player stats!
+Autolik Autonomy went 2 - 2. They scored 10307 points and gave up 10473 points. Here are their player stats!
+Barsein Bats went 1 - 3. They scored 11046 points and gave up 11096 points. Here are their player stats!
+Blanaxon Hammers went 1 - 3. They scored 11735 points and gave up 11943 points. Here are their player stats!
+Kaeshar Kaisers went 0 - 4. They scored 10906 points and gave up 10878 points. Here are their player stats!
+Naxda Nomads went 3 - 1. They scored 10475 points and gave up 10478 points. Here are their player stats!
+Red Rainbow Sickles went 2 - 2. They scored 11406 points and gave up 11617 points. Here are their player stats!
+Serkr Atolls went 3 - 1. They scored 10624 points and gave up 10246 points. Here are their player stats!
+Shmupland Dictators went 2 - 2. They scored 11054 points and gave up 11059 points. Here are their player stats!
+Aiyota Pumps went 0 - 4. They scored 12638 points and gave up 12658 points. Here are their player stats!
+Avura Aviators went 1 - 3. They scored 11743 points and gave up 11987 points. Here are their player stats!
+Boltway Bad Dragons went 2 - 2. They scored 11965 points and gave up 12099 points. Here are their player stats!
+Dotruga Falno went 2 - 2. They scored 11790 points and gave up 11018 points. Here are their player stats!
+Ethanthova Ponies went 0 - 4. They scored 12461 points and gave up 12450 points. Here are their player stats!
+Faehrenfall Feathercats went 2 - 2. They scored 10721 points and gave up 10884 points. Here are their player stats!
+Stedro Boulders went 2 - 2. They scored 10934 points and gave up 10672 points. Here are their player stats!
+TND Tanks went 3 - 1. They scored 11056 points and gave up 11734 points. Here are their player stats!
+Bongatar Banging Bongos went 2 - 2. They scored 10890 points and gave up 10470 points. Here are their player stats!
+Czalliso Pythons went 2 - 2. They scored 11974 points and gave up 12640 points. Here are their player stats!
+Dvimne Spirits went 3 - 1. They scored 10697 points and gave up 10052 points. Here are their player stats!
+Holy Yektonisa Bishops went 1 - 3. They scored 10733 points and gave up 10935 points. Here are their player stats!
+Holykol Bears went 4 - 0. They scored 12282 points and gave up 12322 points. Here are their player stats!
+Lyintaria Lynx went 3 - 1. They scored 11187 points and gave up 11291 points. Here are their player stats!
+Pyxanovia Pixies went 3 - 1. They scored 11490 points and gave up 11219 points. Here are their player stats!
+Transhimalia Disasters went 0 - 4. They scored 11640 points and gave up 11787 points. Here are their player stats!

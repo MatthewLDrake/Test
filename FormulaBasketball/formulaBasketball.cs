@@ -82,8 +82,8 @@ public class formulaBasketball
 
         while (!flag)
         {
-            //Form2 resultFinder = new Form2();
-            YearSim resultFinder = new YearSim();
+            Form2 resultFinder = new Form2();
+           // YearSim resultFinder = new YearSim();
             resultFinder.ShowDialog();
             String result = resultFinder.GetResult();
             standingsForm.Show();
@@ -162,8 +162,12 @@ public class formulaBasketball
             {                
                 SerializeObject(create, fileName);
             }
+            for(int i = 0; i < create.size(); i++)
+            {
+                create.getTeam(i).PrintSeasonRecords();
+            }
         }
-
+        PrintBestPlayers();
         calculateStandings(!flag);
         stats();
         File.WriteAllText("championships.csv" ,championshipsContents);
@@ -172,6 +176,18 @@ public class formulaBasketball
         File.WriteAllText(statsFile, statsContents);
         File.WriteAllText(standingsFile, standingsContents);
 
+    }
+    private void PrintBestPlayers()
+    {
+        String fileName = "InterestingFacts.txt";
+        String contents = "";
+
+        contents += playersPoints.getName() + " of the " + playersPoints.getTeam().ToString() + " scored a four game high of " + mostPoints + ".\n";
+        contents += playerRebounds.getName() + " of the " + playerRebounds.getTeam().ToString() + " had a four game high of " + mostRebounds + " rebounds.\n";
+        contents += playersAssists.getName() + " of the " + playersAssists.getTeam().ToString() + " had a four game high of " + mostAssists + " assists.\n";
+
+
+        File.WriteAllText(fileName, contents);
     }
 
     private void VoteMVP()
@@ -1111,8 +1127,25 @@ public class formulaBasketball
             writer.close();*/
 
 
+        player rebounds = newGame.GetGameRebound();
+        player points = newGame.GetHighestScorer();
+        player assists = newGame.GetHighestAssister();
 
-
+        if(rebounds.getGameRebounds() > mostRebounds)
+        {
+            playerRebounds = rebounds;
+            mostRebounds = rebounds.getGameRebounds();
+        }
+        if (points.getGamePoints() > mostPoints)
+        {
+            playersPoints = points;
+            mostPoints = points.getGamePoints();
+        }
+        if (assists.getGameAssists() > mostAssists)
+        {
+            playersAssists = assists;
+            mostAssists = assists.getGameAssists();
+        }
 
         for (int k = 0; k < create.getTeam(i).getSize(); k++)
         {
@@ -1124,5 +1157,7 @@ public class formulaBasketball
         }
         return retVal;
     }
+    private static int mostRebounds, mostAssists, mostPoints;
+    private static player playerRebounds, playersAssists, playersPoints;
 
 }

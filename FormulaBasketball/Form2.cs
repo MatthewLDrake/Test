@@ -19,9 +19,13 @@ namespace FormulaBasketball
             result = "";
         }
 
-        public string getResult()
+        public string GetResult()
         {
             return result;
+        }
+        public int GetSeasons()
+        {
+            return 1;
         }
         private void button_Click(object sender, EventArgs e)
         {

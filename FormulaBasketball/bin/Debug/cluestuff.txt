@@ -1,0 +1,26 @@
+People
+Orange
+White
+Blue
+
+
+Weapons
+Flint and Steel
+Sword
+Arrow
+Fishing Rod
+Lead
+TNT
+Lava Bucket
+Axe
+
+Rooms
+Conservatory - Flower
+Ballroom - Slime Ball
+Kitchen - Raw Porkchop
+Dining Room - Cooked Porkchop
+Lounge - Stair
+Hall - Picture
+Study - Torch
+Library - Book
+Billiard Room - Stick
