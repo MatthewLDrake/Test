@@ -62,5 +62,14 @@ namespace FormulaBasketball
             soloScreen solo = new soloScreen(division.getTeams(), division.getLabel());
             solo.ShowDialog();
         }
+
+        public void SaveForm()
+        {
+            using (var bmp = new Bitmap(this.Width, this.Height))
+            {
+                this.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height));
+                bmp.Save("images/standings.png");
+            }
+        }
     }
 }

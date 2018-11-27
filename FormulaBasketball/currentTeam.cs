@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-public class currentTeam 
+public class currentTeam
 {
     public player pointGuard, shootingGuard, smallForward, powerForward, center;
     public int length = 5;
@@ -28,9 +28,9 @@ public class currentTeam
         SetStarters();
         //substitutions(1, true);
     }
-   private void SetStarters()
+    private void SetStarters()
     {
-        for (int i = 0; i < length; i++ )
+        for (int i = 0; i < length; i++)
             set(i, team.getAllPlayer()[i]);
     }
     public player get(int i)
@@ -188,10 +188,10 @@ public class currentTeam
         //System.out.println(get(pos).getName());
         return get(pos);
     }
-    
+
     public void substitutions(int quarterNum, int timeLeft, bool isWinning, int scoreDifference)
     {
-        if(blowout)
+        if (blowout)
         {
             if (scoreDifference > 10) return;
 
@@ -199,7 +199,7 @@ public class currentTeam
         else if ((quarterNum == 4 && timeLeft < 400 && scoreDifference > 20))
         {
             blowout = true;
-            for(int i = 0; i < length; i++)
+            for (int i = 0; i < length; i++)
             {
                 // set to third strings
                 set(i, team.getAllPlayer()[10 + i]);
@@ -207,18 +207,18 @@ public class currentTeam
         }
 
 
-        for(int i = 0; i < length; i++)
+        for (int i = 0; i < length; i++)
         {
-            if(get(i).isInjured())
-                //|| ) (check for whether he should be pulled by the team
+            if (get(i).isInjured())
+            //|| ) (check for whether he should be pulled by the team
             {
                 get(i).Pulled();
                 set(i, null);
             }
         }
-        for(int i = 0; i < length; i++)
+        for (int i = 0; i < length; i++)
         {
-            if(get(i) == null)
+            if (get(i) == null)
             {
                 // FIGURE OUT HOW TO GET NEW PLAYER
                 set(i, null);
@@ -226,7 +226,16 @@ public class currentTeam
         }
     }
     public void substitutions(int quarterNum, bool isWinning)
-    {        
+    {
+        foreach (player p in team.getAllPlayer())
+        {
+            p.setIsPlaying(false);
+        }
+        for (int i = 0; i < 5; i++)
+        {
+            get(i).setIsPlaying(true);
+        }
+
         for (int i = 0; i < length; i++)
         {
             List<player> temp = new List<player>();
@@ -344,7 +353,7 @@ public class currentTeam
                             }
                             else
                             {
-                                relevantStats[j] = Math.Max(temp[j].getDunkRating(),temp[j].getLayupRating()) + temp[j].getJumpShotRating() + temp[j].getSeperation();
+                                relevantStats[j] = Math.Max(temp[j].getDunkRating(), temp[j].getLayupRating()) + temp[j].getJumpShotRating() + temp[j].getSeperation();
                             }
 
                         }

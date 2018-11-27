@@ -23,14 +23,18 @@ public class formulaBasketball
     public static FormulaBasketball.Random r;
     public static Standings standingsForm;
     private static PlayoffBracket bracket;
+    public static int nextPlayerID;
+    public static bool injuries = true;
+    private static ImagePrinter printer;
+    public static bool createImages = true;
     public formulaBasketball(bool loadSave, String fileName, List<team> teams, List<player> freeAgency, Boolean flag = false)
     {
 
-
+        nextPlayerID = 1294;
         r = new FormulaBasketball.Random();
         writeGames = false;
         StringUtils = new StringUtils();
-
+        
         Startup(loadSave, fileName, teams, freeAgency, !flag);
         standingsForm = new Standings();
         bracket = new PlayoffBracket();
@@ -41,15 +45,16 @@ public class formulaBasketball
         statsFile = "stats.csv";
         standingsFile = "standings.csv";
         championshipsContents = championshipsContents += "Southern Conference Winner\tSouthern Conference Games Won\t\tNorthern Conference Games Won\tNorthern Conference winner\tMVP Winner\tMVP Team\tROTY winner\tROTY Team\n";
+        
         /* create.SetUpCollege();
          create.PlayCollegeSeason();
          create.PlayCollegeSeason();
          create.PlayCollegeSeason();
          create.PlayCollegeSeason(); 
          SerializeObject(create, fileName);*/
-        create.SetDraftPicks();
-        create.GetCollege().CollegeSetup();
-        new SetupNewSeason(create,r);
+        //create.SetDraftPicks();
+        //create.GetCollege().CollegeSetup();
+       // new SetupNewSeason(create,r);
         /*for (int i = 0; i < 100; i++ )
         {
             
@@ -79,7 +84,9 @@ public class formulaBasketball
         {
             create.getTeam(i).setTeamNum(i);
         }
-
+        printer = new ImagePrinter(startingGame);
+        standingsForm.updateStandings(create);
+        standingsForm.Visible = true;
         while (!flag)
         {
             Form2 resultFinder = new Form2();
@@ -88,6 +95,7 @@ public class formulaBasketball
             String result = resultFinder.GetResult();
             standingsForm.Show();
             standingsForm.Visible = false;
+
             //String result = Console.ReadLine();
             if (result.Equals("selectGames"))
             {
@@ -161,6 +169,7 @@ public class formulaBasketball
             else if (result.Equals("Save"))
             {                
                 SerializeObject(create, fileName);
+                standingsForm.SaveForm();
             }
             for(int i = 0; i < create.size(); i++)
             {
@@ -179,15 +188,20 @@ public class formulaBasketball
     }
     private void PrintBestPlayers()
     {
-        String fileName = "InterestingFacts.txt";
-        String contents = "";
+        
+        if(playersPoints != null)
+        {
+            String fileName = "InterestingFacts.txt";
+            String contents = "";
 
-        contents += playersPoints.getName() + " of the " + playersPoints.getTeam().ToString() + " scored a four game high of " + mostPoints + ".\n";
-        contents += playerRebounds.getName() + " of the " + playerRebounds.getTeam().ToString() + " had a four game high of " + mostRebounds + " rebounds.\n";
-        contents += playersAssists.getName() + " of the " + playersAssists.getTeam().ToString() + " had a four game high of " + mostAssists + " assists.\n";
+            contents += playersPoints.getName() + " of the " + playersPoints.getTeam().ToString() + " scored a four game high of " + mostPoints + " points.\n";
+            contents += playerRebounds.getName() + " of the " + playerRebounds.getTeam().ToString() + " had a four game high of " + mostRebounds + " rebounds.\n";
+            contents += playersAssists.getName() + " of the " + playersAssists.getTeam().ToString() + " had a four game high of " + mostAssists + " assists.\n";
 
 
-        File.WriteAllText(fileName, contents);
+            File.WriteAllText(fileName, contents);
+        }
+        
     }
 
     private void VoteMVP()
@@ -1026,6 +1040,7 @@ public class formulaBasketball
         create.getTeam(i).AddResult(j, newGame.getAwayTeamScore(), newGame.getHomeTeamScore());
         create.getTeam(j).AddResult(i, newGame.getHomeTeamScore(), newGame.getAwayTeamScore());
 
+        printer.AddResult(create.getTeam(i).ToString(), create.getTeam(j).ToString(), newGame.getAwayTeamScore(), newGame.getHomeTeamScore());
        
         gameResultsContents += ("," + create.getTeam(i).ToString() + "," + newGame.getAwayTeamScore() + "," + create.getTeam(j).ToString() + "," + newGame.getHomeTeamScore() + "\n");
 

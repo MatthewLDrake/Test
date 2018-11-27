@@ -42,6 +42,7 @@ public class College
 
         games.Shuffle(r);
         Console.WriteLine(season);
+        
         for (int i = 0; i < games.Count; i++)
         {
             if (i % 5 == 4) DevelopPlayers();
@@ -1307,7 +1308,8 @@ public class College
         int away = teams[i].lastThreeGames(-1);
         int home = teams[j].lastThreeGames(-1);
 
-
+        teams[i].CollegeInjuries();
+        teams[j].CollegeInjuries();
 
         int randomValue = r.Next(0, 100);
         if (away == 0 && home == 0)

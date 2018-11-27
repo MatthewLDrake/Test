@@ -10,9 +10,10 @@ public class game
     private currentTeam playingAwayTeam, playingHomeTeam;
     private gameWriter gameWriter;
     private FormulaBasketball.Random r;
-
+    private bool injuries;
     public game(gameWriter gameWriter, team away, team home, FormulaBasketball.Random r, bool quarterly = false)
     {
+        this.injuries = formulaBasketball.injuries;
         this.gameWriter = gameWriter;
         this.r = r;
         if (gameWriter != null) this.gameWriter.listOfStrings.Add("Game," + away.ToString() + "," + home.ToString());
@@ -385,7 +386,7 @@ public class game
     }
     private void checkForInjuries(int quarterNum, int timeRemaining)
     {
-        
+        if (!injuries) return;
         for (int i = 0; i < playingAwayTeam.length; i++)
         {
             double injuryRate = (awayTeam.getTrainer().getInjuryPrevention(playingAwayTeam.get(i)));

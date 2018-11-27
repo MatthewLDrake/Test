@@ -19,9 +19,35 @@ public class player : IComparable<player>
     protected Country country;
     protected int starts;
     protected bool careerEnded;
-    protected double[] ratings;
+    public double[] ratings;
     protected Contract contract;
     protected PlayerRecords playerRecords;
+    public player(int pos, double[] ratings, int age, String name, int peakStart, int peakEnd, int development, Country country, int playerID)
+    {
+        careerEnd = false;
+        starts = 0;
+        this.country = country;
+        pointDiff = 0;
+        gamesPlayed = 0;
+        firstTimeInGame = true;
+        setPosition(pos);
+        
+        this.ratings = ratings;
+
+        this.stamina = 100;
+        shootingModifier = 0.0;
+        otherModifier = 0.0;
+        defensiveModifier = 0.0;
+        stats = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        gameStats = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        gameFouls = 0;
+        this.name = name;
+        this.playerAge = age;
+        this.peakEnd = peakEnd;
+        this.peakStart = peakStart;
+        this.development = development;
+        this.playerID = playerID;
+    }
     public player(int pos, int layupStat, int dunkStat, int jumpStat, int threePoint, int passing, int shotContest, int defenseIQ, int jumping, int separation, int durability, int stamina, int age, String name, Country country, bool starting)
     {
         careerEnded = false;
@@ -356,7 +382,7 @@ public class player : IComparable<player>
     {
         stamina = 100;
     }
-    private int peakStart, peakEnd, development;
+    public int peakStart, peakEnd, development;
     public void generateDevelopment(FormulaBasketball.Random rand)
     {
         peakStart = rand.NextGaussian(30, 1);
@@ -500,7 +526,8 @@ public class player : IComparable<player>
             
             if(rand.Next(100) <= modifiers[i])
             {
-                switch(development)
+                ratings[i] = IncreaseRatings(peakStart - playerAge, ratings[i], development, rand);
+                /*switch(development)
                 {
                     case 1:
                         ratings[i] += Math.Max(1, rand.NextGaussian(1, 1));
@@ -532,9 +559,39 @@ public class player : IComparable<player>
                     case 10:
                         ratings[i] += Math.Max(5, rand.NextGaussian(8, 1));
                         break;
-                }
+                }*/
             }
         }
+    }
+
+    private double IncreaseRatings(int yearsLeft, double rating, int development, FormulaBasketball.Random r)
+    {
+        if (yearsLeft >= 10 && development > 8)
+        {
+            return rating + Math.Min(7, Math.Max(3, r.NextGaussian(5, 1)));
+        }
+        else if(yearsLeft >= 10 && development > 4)
+        {
+            return rating + Math.Min(6, Math.Max(2, r.NextGaussian(4, 1)));
+        }
+        else if(yearsLeft >= 10)
+        {
+            return rating + Math.Min(5, Math.Max(2, r.NextGaussian(3, 1)));
+        }
+        else if ((yearsLeft == 1 && development < 8) || (rating > 90 && development < 7)) return 1;
+        else if(rating < 60 && development > 5)
+        {
+            return rating + Math.Min(5, Math.Max(2, r.NextGaussian(4, 1)));
+        }
+        else if(rating < 60)
+        {
+            return rating + Math.Min(4, Math.Max(2, r.NextGaussian(3, 1)));
+        }
+        else
+        {
+            return rating + Math.Min(3, Math.Max(1, r.NextGaussian(2, 1)));
+        }
+
     }
     public void Regress(FormulaBasketball.Random rand)
     {
@@ -1445,7 +1502,21 @@ public class player : IComparable<player>
     }
     public override bool Equals(object obj)
     {
-        if(obj is player)
+        if (obj == null) return false;
+        if(this is CollegePlayer || obj is CollegePlayer)
+        {
+            CollegePlayer player = obj as CollegePlayer;
+            if (player == null) return false;
+            if (this.name.Equals(player.name))
+            {
+                for(int i = 0; i < ratings.Length; i++)
+                {
+                    if (ratings[i] != player.ratings[i]) return false;
+                }
+                return true;
+            }
+        }
+        else if(obj is player)
         {
             player other = obj as player;
             if (playerID == other.GetPlayerID()) return true;
