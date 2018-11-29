@@ -126,7 +126,7 @@ public class team : IComparable<team>,  IEnumerable<player>
     }
     public void PrintSeasonRecords()
     {
-        seasonRecords.Print();
+        seasonRecords.Print(currentSeasonVsTeam);
     }
     public void endSeason()
     {

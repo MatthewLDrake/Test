@@ -650,6 +650,7 @@ public class player : IComparable<player>
         {
             contract.AdvanceYear();
         }
+        ResetStats();
         isRookie = false;
         age++;
     }

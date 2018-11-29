@@ -45,7 +45,9 @@ public class formulaBasketball
         statsFile = "stats.csv";
         standingsFile = "standings.csv";
         championshipsContents = championshipsContents += "Southern Conference Winner\tSouthern Conference Games Won\t\tNorthern Conference Games Won\tNorthern Conference winner\tMVP Winner\tMVP Team\tROTY winner\tROTY Team\n";
-        
+
+        //new SetupNewSeason();
+
         /* create.SetUpCollege();
          create.PlayCollegeSeason();
          create.PlayCollegeSeason();
@@ -54,7 +56,7 @@ public class formulaBasketball
          SerializeObject(create, fileName);*/
         //create.SetDraftPicks();
         //create.GetCollege().CollegeSetup();
-       // new SetupNewSeason(create,r);
+        //new SetupNewSeason(create,r);
         /*for (int i = 0; i < 100; i++ )
         {
             
@@ -102,8 +104,12 @@ public class formulaBasketball
                 Form3 tempScreen = new Form3(startingGame);
                 tempScreen.ShowDialog();
                 int endGame = tempScreen.getFinishPoint();
+
                 standingsForm.Visible = true;
                 playGames(startingGame, endGame);
+
+
+
             }
             else if (result.Equals("playSeason"))
             {
@@ -480,7 +486,7 @@ public class formulaBasketball
     public static void updateStandings()
     {
         standingsForm.updateStandings(create);
-        System.Threading.Thread.Sleep(5);
+        //System.Threading.Thread.Sleep(5);
     }
     public static void doSetup(Boolean flag)
     {
@@ -787,7 +793,7 @@ public class formulaBasketball
     }
     public static void playGames(int firstGame, int secondGame)
     {
-        Schedule schedule = new Schedule();
+        Schedule schedule = create.GetSchedule();
         schedule.playGames(firstGame, secondGame, r);
 
         if (gameWriter != null) gameWriter.writeLines();
@@ -1020,12 +1026,12 @@ public class formulaBasketball
                 create.getTeam(j).setModifier(new None());
             }
         }
-        if (i == 26 || i == 18)
+        if (i == 26 || i == 18 || i == 19)
         {
             create.getTeam(i).addModifier(new gettingHot());
         }
 
-        else if (j == 26 || j == 18)
+        else if (j == 26 || j == 18 || j == 19)
         {
             create.getTeam(j).addModifier(new gettingHot());
         }

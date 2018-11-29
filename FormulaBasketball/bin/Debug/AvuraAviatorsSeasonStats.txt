@@ -1,8 +1,41 @@
 Avura Aviators Stats
-Player Record of Points: Alotru Keget: 30 points on game 7 against the Aiyota Pumps
-Player Record of Assists: Tibiziŋag Ifet: 14 assists on game 6 against the TND Tanks
-Player Record of Rebounds: Omumiba Keget: 25 rebounds on game 8 against the Aiyota Pumps
-Team Record in Most Points Scored: Avura Aviators: 130 points on game 8 against the Aiyota Pumps
-Team Record in Least Points Scored: Avura Aviators: 88 points on game 1 against the Naxda Nomads
-Team Record in Least Points Allowed: Avura Aviators: 85 points on game 2 against the Barsein Bats
-Team Record in Most Points Allowed: Avura Aviators: 130 points on game 6 against the TND Tanks
+Player Record of Points: Floenne Zan: 35 points on game 14 against the Height Sagua Cats
+Player Record of Assists: Kilik Farhje: 18 assists on game 1 against the Faehrenfall Feathercats
+Player Record of Rebounds: Omumiba Keget: 18 rebounds on game 13 against the Dotruga Falno
+Team Record in Most Points Scored: Avura Aviators: 135 points on game 2 against the Aiyota Pumps
+Team Record in Least Points Scored: Avura Aviators: 88 points on game 16 against the Autolik Autonomy
+Team Record in Least Points Allowed: Avura Aviators: 92 points on game 7 against the Autolik Autonomy
+Team Record in Most Points Allowed: Avura Aviators: 136 points on game 11 against the Bongatar Banging Bongos
+Records vs. Each Team this season:
+Aahrus Moosi: 0-0
+Auspikitan Golden Falcons: 0-0
+Calto Cows: 0-0
+Height Sagua Cats: 0-1
+Key to Don Yees: 0-0
+Manwx Saguans: 0-0
+Sagua Ocelots: 0-0
+Solea Geysers: 0-0
+Autolik Autonomy: 1-1
+Barsein Bats: 0-0
+Blanaxon Hammers: 1-0
+Kaeshar Kaisers: 0-0
+Naxda Nomads: 1-0
+Red Rainbow Sickles: 0-0
+Serkr Atolls: 1-0
+Shmupland Dictators: 0-1
+Aiyota Pumps: 1-0
+Avura Aviators: 0-0
+Boltway Bad Dragons: 0-0
+Dotruga Falno: 0-1
+Ethanthova Ponies: 1-1
+Faehrenfall Feathercats: 1-0
+Stedro Boulders: 0-0
+TND Tanks: 0-0
+Bongatar Banging Bongos: 0-1
+Czalliso Pythons: 0-1
+Dvimne Spirits: 0-0
+Holy Yektonisa Bishops: 1-0
+Holykol Bears: 0-0
+Lyintaria Lynx: 0-0
+Pyxanovia Pixies: 0-0
+Transhimalia Disasters: 0-1

@@ -6,6 +6,7 @@ public class createTeams
     private FormulaBasketball.Random r;
     private List<team> teams, dLeagueTeams;
     private List<player> freeAgency;
+    private Schedule schedule;
     private FreeAgents freeAgents;
     private College college;
     private double[,] averagePositionSalaries, minPositionSalaries, maxPositionsSalaries;
@@ -27,8 +28,19 @@ public class createTeams
         maxOverall = new double[3,5];
         allOveralls = new double[15, 32];
 
+        schedule = new Schedule(r);
+
     }
 
+    public void CreateNewSchedule()
+    {
+        schedule = new Schedule(r);
+    }
+    public Schedule GetSchedule()
+    {
+        if (schedule == null) CreateNewSchedule();
+        return schedule;
+    }
     public createTeams(FormulaBasketball.Random r)
     {
         this.r = r;

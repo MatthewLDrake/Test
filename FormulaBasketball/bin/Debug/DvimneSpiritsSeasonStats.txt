@@ -1,8 +1,41 @@
 Dvimne Spirits Stats
-Player Record of Points: Wiley Ambrose: 39 points on game 3 against the Holykol Bears
-Player Record of Assists: Sago Alodetsei: 21 assists on game 1 against the Height Sagua Cats
-Player Record of Rebounds: Sago Alodetsei: 15 rebounds on game 7 against the Solea Geysers
-Team Record in Most Points Scored: Dvimne Spirits: 114 points on game 4 against the Ethanthova Ponies
-Team Record in Least Points Scored: Dvimne Spirits: 86 points on game 2 against the Transhimalia Disasters
-Team Record in Least Points Allowed: Dvimne Spirits: 79 points on game 2 against the Transhimalia Disasters
-Team Record in Most Points Allowed: Dvimne Spirits: 109 points on game 5 against the Lyintaria Lynx
+Player Record of Points: Mazló Plókli: 36 points on game 7 against the Pyxanovia Pixies
+Player Record of Assists: Mazló Plókli: 12 assists on game 2 against the Solea Geysers
+Player Record of Rebounds: Mazló Plókli: 15 rebounds on game 12 against the Transhimalia Disasters
+Team Record in Most Points Scored: Dvimne Spirits: 125 points on game 14 against the Czalliso Pythons
+Team Record in Least Points Scored: Dvimne Spirits: 82 points on game 3 against the Kaeshar Kaisers
+Team Record in Least Points Allowed: Dvimne Spirits: 74 points on game 3 against the Kaeshar Kaisers
+Team Record in Most Points Allowed: Dvimne Spirits: 112 points on game 8 against the Height Sagua Cats
+Records vs. Each Team this season:
+Aahrus Moosi: 0-0
+Auspikitan Golden Falcons: 1-0
+Calto Cows: 0-0
+Height Sagua Cats: 0-1
+Key to Don Yees: 0-0
+Manwx Saguans: 1-0
+Sagua Ocelots: 1-0
+Solea Geysers: 1-0
+Autolik Autonomy: 0-0
+Barsein Bats: 0-0
+Blanaxon Hammers: 0-1
+Kaeshar Kaisers: 1-0
+Naxda Nomads: 0-0
+Red Rainbow Sickles: 0-0
+Serkr Atolls: 0-0
+Shmupland Dictators: 1-0
+Aiyota Pumps: 1-0
+Avura Aviators: 0-0
+Boltway Bad Dragons: 0-1
+Dotruga Falno: 0-0
+Ethanthova Ponies: 0-0
+Faehrenfall Feathercats: 0-0
+Stedro Boulders: 1-0
+TND Tanks: 0-0
+Bongatar Banging Bongos: 0-0
+Czalliso Pythons: 1-0
+Dvimne Spirits: 0-0
+Holy Yektonisa Bishops: 0-1
+Holykol Bears: 0-0
+Lyintaria Lynx: 0-0
+Pyxanovia Pixies: 2-0
+Transhimalia Disasters: 0-1

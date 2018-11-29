@@ -1,8 +1,41 @@
 Manwx Saguans Stats
-Player Record of Points: Sol Jae-Wook: 48 points on game 2 against the Faehrenfall Feathercats
-Player Record of Assists: Sol Jae-Wook: 16 assists on game 5 against the Dotruga Falno
-Player Record of Rebounds: Himi Azumamaro: 22 rebounds on game 7 against the Holykol Bears
-Team Record in Most Points Scored: Manwx Saguans: 118 points on game 8 against the Barsein Bats
-Team Record in Least Points Scored: Manwx Saguans: 93 points on game 1 against the Bongatar Banging Bongos
-Team Record in Least Points Allowed: Manwx Saguans: 81 points on game 2 against the Faehrenfall Feathercats
-Team Record in Most Points Allowed: Manwx Saguans: 123 points on game 6 against the Key to Don Yees
+Player Record of Points: Sol Jae-Wook: 36 points on game 4 against the Stedro Boulders
+Player Record of Assists: Sol Jae-Wook: 18 assists on game 3 against the Auspikitan Golden Falcons
+Player Record of Rebounds: Himi Azumamaro: 20 rebounds on game 9 against the Sagua Ocelots
+Team Record in Most Points Scored: Manwx Saguans: 134 points on game 9 against the Sagua Ocelots
+Team Record in Least Points Scored: Manwx Saguans: 78 points on game 8 against the Bongatar Banging Bongos
+Team Record in Least Points Allowed: Manwx Saguans: 73 points on game 10 against the Naxda Nomads
+Team Record in Most Points Allowed: Manwx Saguans: 125 points on game 9 against the Sagua Ocelots
+Records vs. Each Team this season:
+Aahrus Moosi: 1-1
+Auspikitan Golden Falcons: 0-1
+Calto Cows: 0-0
+Height Sagua Cats: 0-0
+Key to Don Yees: 1-0
+Manwx Saguans: 0-0
+Sagua Ocelots: 1-0
+Solea Geysers: 0-0
+Autolik Autonomy: 0-1
+Barsein Bats: 0-0
+Blanaxon Hammers: 0-0
+Kaeshar Kaisers: 0-0
+Naxda Nomads: 1-0
+Red Rainbow Sickles: 0-0
+Serkr Atolls: 0-0
+Shmupland Dictators: 1-0
+Aiyota Pumps: 0-0
+Avura Aviators: 0-0
+Boltway Bad Dragons: 0-0
+Dotruga Falno: 0-0
+Ethanthova Ponies: 1-1
+Faehrenfall Feathercats: 0-0
+Stedro Boulders: 0-1
+TND Tanks: 0-0
+Bongatar Banging Bongos: 0-1
+Czalliso Pythons: 0-0
+Dvimne Spirits: 0-1
+Holy Yektonisa Bishops: 1-0
+Holykol Bears: 0-1
+Lyintaria Lynx: 0-0
+Pyxanovia Pixies: 0-0
+Transhimalia Disasters: 1-0

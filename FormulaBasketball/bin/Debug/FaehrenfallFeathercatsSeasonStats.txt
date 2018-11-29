@@ -1,8 +1,41 @@
 Faehrenfall Feathercats Stats
-Player Record of Points: Blanaxon Player #5: 38 points on game 1 against the Autolik Autonomy
-Player Record of Assists: Blanaxon Player #5: 11 assists on game 6 against the Dotruga Falno
-Player Record of Rebounds: Tha Tricka: 16 rebounds on game 1 against the Autolik Autonomy
-Team Record in Most Points Scored: Faehrenfall Feathercats: 109 points on game 3 against the Calto Cows
-Team Record in Least Points Scored: Faehrenfall Feathercats: 73 points on game 7 against the Naxda Nomads
-Team Record in Least Points Allowed: Faehrenfall Feathercats: 73 points on game 1 against the Autolik Autonomy
-Team Record in Most Points Allowed: Faehrenfall Feathercats: 109 points on game 6 against the Dotruga Falno
+Player Record of Points: Three Point Masta: 40 points on game 6 against the Blanaxon Hammers
+Player Record of Assists: Blanaxon Player #5: 11 assists on game 4 against the Sagua Ocelots
+Player Record of Rebounds: Savage Soleani: 19 rebounds on game 7 against the Key to Don Yees
+Team Record in Most Points Scored: Faehrenfall Feathercats: 113 points on game 3 against the Aiyota Pumps
+Team Record in Least Points Scored: Faehrenfall Feathercats: 65 points on game 5 against the TND Tanks
+Team Record in Least Points Allowed: Faehrenfall Feathercats: 76 points on game 9 against the Aahrus Moosi
+Team Record in Most Points Allowed: Faehrenfall Feathercats: 120 points on game 3 against the Aiyota Pumps
+Records vs. Each Team this season:
+Aahrus Moosi: 1-0
+Auspikitan Golden Falcons: 0-0
+Calto Cows: 0-0
+Height Sagua Cats: 0-0
+Key to Don Yees: 2-0
+Manwx Saguans: 0-0
+Sagua Ocelots: 0-1
+Solea Geysers: 0-0
+Autolik Autonomy: 0-1
+Barsein Bats: 0-0
+Blanaxon Hammers: 0-1
+Kaeshar Kaisers: 0-1
+Naxda Nomads: 0-1
+Red Rainbow Sickles: 0-0
+Serkr Atolls: 0-0
+Shmupland Dictators: 0-1
+Aiyota Pumps: 0-2
+Avura Aviators: 0-1
+Boltway Bad Dragons: 0-0
+Dotruga Falno: 0-0
+Ethanthova Ponies: 1-0
+Faehrenfall Feathercats: 0-0
+Stedro Boulders: 0-0
+TND Tanks: 0-1
+Bongatar Banging Bongos: 0-0
+Czalliso Pythons: 0-0
+Dvimne Spirits: 0-0
+Holy Yektonisa Bishops: 0-1
+Holykol Bears: 0-0
+Lyintaria Lynx: 0-0
+Pyxanovia Pixies: 0-1
+Transhimalia Disasters: 0-0

@@ -1,8 +1,41 @@
 Serkr Atolls Stats
-Player Record of Points: Klaxon Nixoka: 30 points on game 1 against the Shmupland Dictators
-Player Record of Assists: Klaxon Nixoka: 13 assists on game 7 against the Dotruga Falno
-Player Record of Rebounds: Klaxon Nixoka: 19 rebounds on game 5 against the Blanaxon Hammers
-Team Record in Most Points Scored: Serkr Atolls: 105 points on game 1 against the Shmupland Dictators
-Team Record in Least Points Scored: Serkr Atolls: 85 points on game 2 against the Naxda Nomads
-Team Record in Least Points Allowed: Serkr Atolls: 79 points on game 7 against the Dotruga Falno
-Team Record in Most Points Allowed: Serkr Atolls: 98 points on game 2 against the Naxda Nomads
+Player Record of Points: Danomobei Motxev: 41 points on game 8 against the Shmupland Dictators
+Player Record of Assists: Transhilmalia Player #2: 17 assists on game 1 against the Blanaxon Hammers
+Player Record of Rebounds: Teva Gekxakŋi: 16 rebounds on game 12 against the Kaeshar Kaisers
+Team Record in Most Points Scored: Serkr Atolls: 131 points on game 4 against the Red Rainbow Sickles
+Team Record in Least Points Scored: Serkr Atolls: 79 points on game 3 against the TND Tanks
+Team Record in Least Points Allowed: Serkr Atolls: 85 points on game 13 against the Stedro Boulders
+Team Record in Most Points Allowed: Serkr Atolls: 125 points on game 9 against the Holykol Bears
+Records vs. Each Team this season:
+Aahrus Moosi: 0-0
+Auspikitan Golden Falcons: 0-0
+Calto Cows: 0-0
+Height Sagua Cats: 1-0
+Key to Don Yees: 0-0
+Manwx Saguans: 0-0
+Sagua Ocelots: 1-0
+Solea Geysers: 0-0
+Autolik Autonomy: 0-0
+Barsein Bats: 0-0
+Blanaxon Hammers: 0-1
+Kaeshar Kaisers: 3-0
+Naxda Nomads: 0-0
+Red Rainbow Sickles: 1-0
+Serkr Atolls: 0-0
+Shmupland Dictators: 0-1
+Aiyota Pumps: 0-0
+Avura Aviators: 0-1
+Boltway Bad Dragons: 0-1
+Dotruga Falno: 0-1
+Ethanthova Ponies: 0-0
+Faehrenfall Feathercats: 0-0
+Stedro Boulders: 1-0
+TND Tanks: 0-1
+Bongatar Banging Bongos: 0-0
+Czalliso Pythons: 0-0
+Dvimne Spirits: 0-0
+Holy Yektonisa Bishops: 0-1
+Holykol Bears: 1-0
+Lyintaria Lynx: 0-0
+Pyxanovia Pixies: 1-0
+Transhimalia Disasters: 0-0

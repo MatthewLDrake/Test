@@ -1,8 +1,41 @@
 Kaeshar Kaisers Stats
-Player Record of Points: Carlos Harris: 36 points on game 6 against the Lyintaria Lynx
-Player Record of Assists: Key To Don Player #4: 12 assists on game 7 against the Stedro Boulders
-Player Record of Rebounds: Lilo Vatthana: 19 rebounds on game 5 against the Red Rainbow Sickles
-Team Record in Most Points Scored: Kaeshar Kaisers: 119 points on game 5 against the Red Rainbow Sickles
-Team Record in Least Points Scored: Kaeshar Kaisers: 91 points on game 7 against the Stedro Boulders
-Team Record in Least Points Allowed: Kaeshar Kaisers: 80 points on game 2 against the Shmupland Dictators
-Team Record in Most Points Allowed: Kaeshar Kaisers: 117 points on game 8 against the Height Sagua Cats
+Player Record of Points: Carlos Harris: 33 points on game 15 against the Faehrenfall Feathercats
+Player Record of Assists: Key To Don Player #4: 25 assists on game 4 against the Aiyota Pumps
+Player Record of Rebounds: Lilo Vatthana: 20 rebounds on game 3 against the Dvimne Spirits
+Team Record in Most Points Scored: Kaeshar Kaisers: 117 points on game 6 against the Ethanthova Ponies
+Team Record in Least Points Scored: Kaeshar Kaisers: 74 points on game 3 against the Dvimne Spirits
+Team Record in Least Points Allowed: Kaeshar Kaisers: 82 points on game 3 against the Dvimne Spirits
+Team Record in Most Points Allowed: Kaeshar Kaisers: 116 points on game 4 against the Aiyota Pumps
+Records vs. Each Team this season:
+Aahrus Moosi: 0-0
+Auspikitan Golden Falcons: 0-0
+Calto Cows: 0-1
+Height Sagua Cats: 0-0
+Key to Don Yees: 0-0
+Manwx Saguans: 0-0
+Sagua Ocelots: 0-1
+Solea Geysers: 0-0
+Autolik Autonomy: 0-0
+Barsein Bats: 1-0
+Blanaxon Hammers: 0-0
+Kaeshar Kaisers: 0-0
+Naxda Nomads: 0-0
+Red Rainbow Sickles: 1-0
+Serkr Atolls: 0-3
+Shmupland Dictators: 0-0
+Aiyota Pumps: 0-1
+Avura Aviators: 0-0
+Boltway Bad Dragons: 0-1
+Dotruga Falno: 0-0
+Ethanthova Ponies: 1-0
+Faehrenfall Feathercats: 1-0
+Stedro Boulders: 0-1
+TND Tanks: 0-0
+Bongatar Banging Bongos: 0-0
+Czalliso Pythons: 0-1
+Dvimne Spirits: 0-1
+Holy Yektonisa Bishops: 0-0
+Holykol Bears: 0-0
+Lyintaria Lynx: 0-0
+Pyxanovia Pixies: 1-0
+Transhimalia Disasters: 0-1

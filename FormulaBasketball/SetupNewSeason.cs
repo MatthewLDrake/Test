@@ -71,6 +71,14 @@ public class SetupNewSeason
 
         PrintWikiInfo();
     }
+
+    public SetupNewSeason()
+    {
+        create = formulaBasketball.create;
+        freeAgents = create.getFreeAgents();
+        PrintInformation();
+    }
+
     private void CalculateBestOveralls(string fileName, List<team> teams)
     {
         List<StartersOveralls> starters = new List<StartersOveralls>();
@@ -745,6 +753,7 @@ public class SetupNewSeason
         foreach (team team in create.getTeams())
         {
             toWrite += team.CreateWikiPage();
+            team.endSeason();
         }
         File.WriteAllText("wiki.txt", toWrite);
     }
@@ -952,6 +961,7 @@ public class SetupNewSeason
         {
             freeAgents.Add(create.getTeam(i).ClearPlayers());
             freeAgents.Add(create.getTeam(i).GetAffiliate().getAllPlayer());
+            
         }
     }
     private void MovePlayersToTeams()
@@ -1007,6 +1017,8 @@ public class SetupNewSeason
         freeAgents.GetPlayerByID(27).ResetPlayerSkills(4, 44, 41, 75, 79, 56, 87, 63, 20, 92, 48, 68, 1, 4.2); create.getTeam(1).addPlayer(freeAgents.GetPlayerByID(27));
         freeAgents.GetPlayerByID(28).ResetPlayerSkills(5, 48, 41, 79, 48, 111, 77, 55, 53, 76, 52, 79, 1, 3); create.getTeam(1).addPlayer(freeAgents.GetPlayerByID(28));
         freeAgents.GetPlayerByID(29).ResetPlayerSkills(2, 65, 100, 43, 15, 47, 96, 87, 123, 100, 93, 48, 3, 13); create.getTeam(1).addPlayer(freeAgents.GetPlayerByID(29));
+
+        
 
         freeAgents.GetPlayerByID(122).ResetPlayerSkills(1, 103, 65, 7, 6, 31, 90, 78, 104, 70, 71, 67, 2, 9.5); create.getTeam(8).addPlayer(freeAgents.GetPlayerByID(122));
         freeAgents.GetPlayerByID(123).ResetPlayerSkills(2, 74, 71, 37, 44, 37, 97, 74, 81, 49, 50, 102, 3, 10); create.getTeam(8).addPlayer(freeAgents.GetPlayerByID(123));
@@ -1467,7 +1479,7 @@ public class SetupNewSeason
         freeAgents.GetPlayerByID(1102).ResetPlayerSkills(4, 11, 43, 91, 87, 47, 46, 78, 28, 11, 45, 49, 4, 3.5); create.getTeam(7).addPlayer(freeAgents.GetPlayerByID(1102));
         freeAgents.GetPlayerByID(433).ResetPlayerSkills(5, 49, 42, 59, 60, 75, 45, 60, 17, 81, 59, 83, 4, 4); create.getTeam(7).addPlayer(freeAgents.GetPlayerByID(433));
         freeAgents.GetPlayerByID(382).ResetPlayerSkills(5, 68, 52, 50, 45, 76, 60, 57, 19, 49, 46, 69, 4, 4); create.getTeam(7).addPlayer(freeAgents.GetPlayerByID(382));
-
+        
         freeAgents.GetPlayerByID(331).ResetPlayerSkills(1, 79, 86, 30, 29, 25, 104, 68, 115, 64, 45, 53, 1, 8.5); create.getTeam(22).addPlayer(freeAgents.GetPlayerByID(331));
         freeAgents.GetPlayerByID(332).ResetPlayerSkills(2, 60, 45, 48, 51, 33, 98, 55, 96, 44, 52, 89, 2, 1.4); create.getTeam(22).addPlayer(freeAgents.GetPlayerByID(332));
         freeAgents.GetPlayerByID(333).ResetPlayerSkills(3, 45, 60, 85, 87, 47, 53, 48, 79, 35, 18, 100, 1, 1.6); create.getTeam(22).addPlayer(freeAgents.GetPlayerByID(333));

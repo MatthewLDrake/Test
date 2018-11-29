@@ -89,7 +89,7 @@ public class SeasonRecords
             records["Assists"].UpdateValues(topForPlayers, gameNum, currentTop.getName(), teamAgainst);
         }
     }
-    public void Print()
+    public void Print(Record[] vsTeamRankings)
     {
         String fileName = teamName.Replace(" ", "") + "SeasonStats.txt";
         String content = teamName + " Stats\n";
@@ -107,6 +107,11 @@ public class SeasonRecords
             {
                 p.Print();
             }
+        }
+        content += "Records vs. Each Team this season:\n";
+        for(int i= 0; i < formulaBasketball.create.size(); i++)
+        {
+            content += formulaBasketball.create.getTeam(i).ToString() + ": " + vsTeamRankings[i].GetWins() + "-" + vsTeamRankings[i].GetLosses() + "\n";
         }
 
         File.WriteAllText(fileName, content);

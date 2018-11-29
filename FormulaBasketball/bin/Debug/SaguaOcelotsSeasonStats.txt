@@ -1,8 +1,41 @@
 Sagua Ocelots Stats
-Player Record of Points: Hevek Himadolsei: 30 points on game 5 against the Boltway Bad Dragons
-Player Record of Assists: Ogino Tokaji: 11 assists on game 1 against the TND Tanks
-Player Record of Rebounds: Ogino Tokaji: 15 rebounds on game 3 against the Avura Aviators
-Team Record in Most Points Scored: Sagua Ocelots: 125 points on game 5 against the Boltway Bad Dragons
-Team Record in Least Points Scored: Sagua Ocelots: 87 points on game 2 against the Ethanthova Ponies
-Team Record in Least Points Allowed: Sagua Ocelots: 79 points on game 4 against the Barsein Bats
-Team Record in Most Points Allowed: Sagua Ocelots: 124 points on game 5 against the Boltway Bad Dragons
+Player Record of Points: Hevek Himadolsei: 36 points on game 14 against the Serkr Atolls
+Player Record of Assists: hex: 20 assists on game 3 against the Transhimalia Disasters
+Player Record of Rebounds: Mavótáfika Vilikó: 12 rebounds on game 5 against the Solea Geysers
+Team Record in Most Points Scored: Sagua Ocelots: 125 points on game 3 against the Transhimalia Disasters
+Team Record in Least Points Scored: Sagua Ocelots: 76 points on game 7 against the Dotruga Falno
+Team Record in Least Points Allowed: Sagua Ocelots: 77 points on game 4 against the Faehrenfall Feathercats
+Team Record in Most Points Allowed: Sagua Ocelots: 134 points on game 9 against the Manwx Saguans
+Records vs. Each Team this season:
+Aahrus Moosi: 0-0
+Auspikitan Golden Falcons: 0-0
+Calto Cows: 0-0
+Height Sagua Cats: 0-1
+Key to Don Yees: 1-1
+Manwx Saguans: 0-1
+Sagua Ocelots: 0-0
+Solea Geysers: 0-1
+Autolik Autonomy: 0-0
+Barsein Bats: 0-0
+Blanaxon Hammers: 0-0
+Kaeshar Kaisers: 1-0
+Naxda Nomads: 0-0
+Red Rainbow Sickles: 0-0
+Serkr Atolls: 0-1
+Shmupland Dictators: 0-0
+Aiyota Pumps: 0-0
+Avura Aviators: 0-0
+Boltway Bad Dragons: 0-0
+Dotruga Falno: 0-2
+Ethanthova Ponies: 0-0
+Faehrenfall Feathercats: 1-0
+Stedro Boulders: 0-0
+TND Tanks: 0-1
+Bongatar Banging Bongos: 0-0
+Czalliso Pythons: 0-1
+Dvimne Spirits: 0-1
+Holy Yektonisa Bishops: 0-1
+Holykol Bears: 0-0
+Lyintaria Lynx: 0-0
+Pyxanovia Pixies: 0-1
+Transhimalia Disasters: 1-0

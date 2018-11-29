@@ -1,8 +1,41 @@
 TND Tanks Stats
-Player Record of Points: Phetdum Vatthana: 43 points on game 3 against the Transhimalia Disasters
-Player Record of Assists: Phetdum Vongsay: 23 assists on game 7 against the Blanaxon Hammers
-Player Record of Rebounds: Tri_National_Dominion Player #1: 13 rebounds on game 3 against the Transhimalia Disasters
-Team Record in Most Points Scored: TND Tanks: 130 points on game 6 against the Avura Aviators
-Team Record in Least Points Scored: TND Tanks: 81 points on game 2 against the Height Sagua Cats
-Team Record in Least Points Allowed: TND Tanks: 82 points on game 5 against the Auspikitan Golden Falcons
-Team Record in Most Points Allowed: TND Tanks: 121 points on game 3 against the Transhimalia Disasters
+Player Record of Points: Quartermarra: 32 points on game 12 against the Lyintaria Lynx
+Player Record of Assists: Phetdum Vongsay: 11 assists on game 11 against the Boltway Bad Dragons
+Player Record of Rebounds: Maere Eirikursson: 20 rebounds on game 9 against the Dotruga Falno
+Team Record in Most Points Scored: TND Tanks: 124 points on game 8 against the Sagua Ocelots
+Team Record in Least Points Scored: TND Tanks: 93 points on game 12 against the Lyintaria Lynx
+Team Record in Least Points Allowed: TND Tanks: 65 points on game 5 against the Faehrenfall Feathercats
+Team Record in Most Points Allowed: TND Tanks: 123 points on game 13 against the Red Rainbow Sickles
+Records vs. Each Team this season:
+Aahrus Moosi: 0-0
+Auspikitan Golden Falcons: 0-0
+Calto Cows: 1-1
+Height Sagua Cats: 0-0
+Key to Don Yees: 0-1
+Manwx Saguans: 0-0
+Sagua Ocelots: 1-0
+Solea Geysers: 0-0
+Autolik Autonomy: 1-0
+Barsein Bats: 1-0
+Blanaxon Hammers: 1-0
+Kaeshar Kaisers: 0-0
+Naxda Nomads: 0-0
+Red Rainbow Sickles: 0-1
+Serkr Atolls: 1-0
+Shmupland Dictators: 0-0
+Aiyota Pumps: 0-0
+Avura Aviators: 0-0
+Boltway Bad Dragons: 1-0
+Dotruga Falno: 0-1
+Ethanthova Ponies: 0-0
+Faehrenfall Feathercats: 1-0
+Stedro Boulders: 0-0
+TND Tanks: 0-0
+Bongatar Banging Bongos: 0-0
+Czalliso Pythons: 0-1
+Dvimne Spirits: 0-0
+Holy Yektonisa Bishops: 0-0
+Holykol Bears: 0-1
+Lyintaria Lynx: 0-1
+Pyxanovia Pixies: 0-1
+Transhimalia Disasters: 0-0
