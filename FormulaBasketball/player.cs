@@ -578,7 +578,7 @@ public class player : IComparable<player>
         {
             return rating + Math.Min(5, Math.Max(2, r.NextGaussian(3, 1)));
         }
-        else if ((yearsLeft == 1 && development < 8) || (rating > 90 && development < 7)) return 1;
+        else if ((yearsLeft == 1 && development < 8) || (rating > 90 && development < 7)) return rating + 1;
         else if(rating < 60 && development > 5)
         {
             return rating + Math.Min(5, Math.Max(2, r.NextGaussian(4, 1)));
@@ -1104,10 +1104,12 @@ public class player : IComparable<player>
     }
     private void setJumpShotRating(int rating)
     {
+        
         this.ratings[2] = rating;
     }
     public double getShotContestRating()
     {
+        
         return (ratings[3] / 10 + defensiveModifier) * getStamina() / 100;
     }
     private void setShotContestRating(int rating)
@@ -1709,6 +1711,7 @@ public class player : IComparable<player>
     }
     public void ResetPlayerSkills(int pos, int layupStat, int dunkStat, int jumpStat, int threePoint, int passing, int shotContest, int defenseIQ, int jumping, int separation, int durability, int stamina, int years, double money)
     {
+        
         setPosition(pos);
         setLayupRating(layupStat);
         setDunkRating(dunkStat);
