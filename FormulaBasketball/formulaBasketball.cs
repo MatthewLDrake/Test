@@ -54,9 +54,9 @@ public class formulaBasketball
          create.PlayCollegeSeason();
          create.PlayCollegeSeason(); 
          SerializeObject(create, fileName);*/
-        //create.SetDraftPicks();
-        //create.GetCollege().CollegeSetup();
-        //new SetupNewSeason(create,r);
+        create.SetDraftPicks();
+        create.GetCollege().CollegeSetup();
+        create.Verify();
         /*for (int i = 0; i < 100; i++ )
         {
             

@@ -12,3 +12,15 @@ B:\Documents\Test\ResigningPlayers\obj\Debug\ResigningPlayers.exe
 B:\Documents\Test\ResigningPlayers\obj\Debug\ResigningPlayers.pdb
 B:\Documents\Test\ResigningPlayers\obj\Debug\ResigningPlayers.Form1.resources
 B:\Documents\Test\ResigningPlayers\obj\Debug\ResigningPlayers.Negotiation.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\ResigningPlayers\obj\Debug\ResigningPlayers.csprojResolveAssemblyReference.cache
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\ResigningPlayers\obj\Debug\ResigningPlayers.ResignPlayers.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\ResigningPlayers\obj\Debug\ResigningPlayers.Negotiation.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\ResigningPlayers\obj\Debug\ResigningPlayers.Properties.Resources.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\ResigningPlayers\obj\Debug\ResigningPlayers.csproj.GenerateResource.Cache
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\ResigningPlayers\obj\Debug\ResigningPlayers.exe
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\ResigningPlayers\bin\Debug\ResigningPlayers.exe.config
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\ResigningPlayers\bin\Debug\ResigningPlayers.exe
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\ResigningPlayers\bin\Debug\ResigningPlayers.pdb
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\ResigningPlayers\bin\Debug\FormulaBasketball.exe
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\ResigningPlayers\bin\Debug\FormulaBasketball.pdb
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\ResigningPlayers\obj\Debug\ResigningPlayers.pdb

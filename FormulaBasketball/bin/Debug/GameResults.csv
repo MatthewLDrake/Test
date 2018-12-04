@@ -1,68 +1,1428 @@
+Game 1,Home,Score,Away,Score
+,Dotruga Falno,111,Transhimalia Disasters,112
+,Boltway Bad Dragons,114,Ethanthova Ponies,119
+,Avura Aviators,101,Faehrenfall Feathercats,90
+,Aiyota Pumps,132,Stedro Boulders,127
+,Pyxanovia Pixies,97,TND Tanks,115
+,Lyintaria Lynx,89,Bongatar Banging Bongos,113
+,Holykol Bears,135,Czalliso Pythons,146
+,Holy Yektonisa Bishops,79,Dvimne Spirits,109
+,Naxda Nomads,123,Aahrus Moosi,105
+,Red Rainbow Sickles,114,Kaeshar Kaisers,115
+,Serkr Atolls,115,Blanaxon Hammers,106
+,Shmupland Dictators,113,Barsein Bats,102
+,Auspikitan Golden Falcons,78,Autolik Autonomy,89
+,Calto Cows,104,Solea Geysers,111
+,Height Sagua Cats,108,Sagua Ocelots,125
+,Key to Don Yees,106,Manwx Saguans,93
+Game 2,Home,Score,Away,Score
+,Aahrus Moosi,108,Auspikitan Golden Falcons,113
+,Calto Cows,102,Transhimalia Disasters,105
+,Height Sagua Cats,116,Pyxanovia Pixies,122
+,Key to Don Yees,117,Lyintaria Lynx,104
+,Manwx Saguans,114,Holykol Bears,130
+,Sagua Ocelots,97,Holy Yektonisa Bishops,86
+,Solea Geysers,119,Dvimne Spirits,106
+,Autolik Autonomy,111,Czalliso Pythons,99
+,Barsein Bats,95,Bongatar Banging Bongos,91
+,Blanaxon Hammers,104,TND Tanks,128
+,Kaeshar Kaisers,88,Stedro Boulders,96
+,Naxda Nomads,98,Faehrenfall Feathercats,86
+,Red Rainbow Sickles,121,Ethanthova Ponies,114
+,Serkr Atolls,97,Dotruga Falno,108
+,Shmupland Dictators,92,Boltway Bad Dragons,93
+,Aiyota Pumps,132,Avura Aviators,114
+Game 3,Home,Score,Away,Score
+,Aahrus Moosi,113,Height Sagua Cats,121
+,Key to Don Yees,89,Calto Cows,103
+,Manwx Saguans,96,Auspikitan Golden Falcons,89
+,Sagua Ocelots,116,Transhimalia Disasters,110
+,Solea Geysers,105,Pyxanovia Pixies,124
+,Autolik Autonomy,100,Lyintaria Lynx,89
+,Barsein Bats,102,Holykol Bears,105
+,Blanaxon Hammers,105,Holy Yektonisa Bishops,112
+,Kaeshar Kaisers,109,Dvimne Spirits,112
+,Naxda Nomads,114,Czalliso Pythons,120
+,Red Rainbow Sickles,104,Bongatar Banging Bongos,110
+,Serkr Atolls,105,TND Tanks,111
+,Shmupland Dictators,98,Stedro Boulders,97
+,Aiyota Pumps,83,Faehrenfall Feathercats,98
+,Avura Aviators,141,Ethanthova Ponies,136
+,Boltway Bad Dragons,110,Dotruga Falno,106
+Game 4,Home,Score,Away,Score
+,Lyintaria Lynx,111,Aahrus Moosi,133
+,Holykol Bears,120,Pyxanovia Pixies,133
+,Holy Yektonisa Bishops,90,Transhimalia Disasters,103
+,Dvimne Spirits,82,Auspikitan Golden Falcons,98
+,Czalliso Pythons,99,Calto Cows,114
+,Bongatar Banging Bongos,115,Height Sagua Cats,98
+,TND Tanks,113,Key to Don Yees,100
+,Stedro Boulders,106,Manwx Saguans,94
+,Faehrenfall Feathercats,107,Sagua Ocelots,123
+,Ethanthova Ponies,119,Solea Geysers,132
+,Dotruga Falno,112,Autolik Autonomy,90
+,Boltway Bad Dragons,102,Barsein Bats,120
+,Avura Aviators,113,Blanaxon Hammers,104
+,Aiyota Pumps,116,Kaeshar Kaisers,113
+,Shmupland Dictators,97,Naxda Nomads,103
+,Serkr Atolls,102,Red Rainbow Sickles,107
+Game 5,Home,Score,Away,Score
+,Aahrus Moosi,105,Stedro Boulders,101
+,Faehrenfall Feathercats,117,TND Tanks,112
+,Ethanthova Ponies,128,Bongatar Banging Bongos,125
+,Dotruga Falno,123,Czalliso Pythons,104
+,Boltway Bad Dragons,102,Dvimne Spirits,100
+,Avura Aviators,106,Holy Yektonisa Bishops,97
+,Aiyota Pumps,157,Holykol Bears,131
+,Shmupland Dictators,108,Lyintaria Lynx,109
+,Serkr Atolls,98,Pyxanovia Pixies,108
+,Red Rainbow Sickles,112,Transhimalia Disasters,115
+,Naxda Nomads,96,Auspikitan Golden Falcons,75
+,Kaeshar Kaisers,84,Calto Cows,105
+,Blanaxon Hammers,93,Height Sagua Cats,111
+,Barsein Bats,122,Key to Don Yees,121
+,Autolik Autonomy,85,Manwx Saguans,105
+,Solea Geysers,149,Sagua Ocelots,140
+Game 6,Home,Score,Away,Score
+,Transhimalia Disasters,115,Aahrus Moosi,127
+,Pyxanovia Pixies,82,Auspikitan Golden Falcons,96
+,Lyintaria Lynx,99,Calto Cows,118
+,Holykol Bears,142,Height Sagua Cats,140
+,Holy Yektonisa Bishops,111,Key to Don Yees,115
+,Dvimne Spirits,100,Manwx Saguans,96
+,Czalliso Pythons,110,Sagua Ocelots,116
+,Bongatar Banging Bongos,100,Solea Geysers,117
+,TND Tanks,98,Autolik Autonomy,111
+,Stedro Boulders,99,Barsein Bats,108
+,Faehrenfall Feathercats,97,Blanaxon Hammers,107
+,Ethanthova Ponies,120,Kaeshar Kaisers,131
+,Dotruga Falno,109,Naxda Nomads,102
+,Boltway Bad Dragons,126,Red Rainbow Sickles,110
+,Avura Aviators,101,Serkr Atolls,110
+,Aiyota Pumps,118,Shmupland Dictators,119
+Game 7,Home,Score,Away,Score
+,Holykol Bears,132,Aahrus Moosi,127
+,Lyintaria Lynx,109,Holy Yektonisa Bishops,111
+,Pyxanovia Pixies,101,Dvimne Spirits,120
+,Transhimalia Disasters,138,Czalliso Pythons,126
+,Auspikitan Golden Falcons,83,Bongatar Banging Bongos,101
+,Calto Cows,99,TND Tanks,111
+,Height Sagua Cats,95,Stedro Boulders,98
+,Key to Don Yees,108,Faehrenfall Feathercats,111
+,Manwx Saguans,124,Ethanthova Ponies,116
+,Sagua Ocelots,125,Dotruga Falno,118
+,Solea Geysers,102,Boltway Bad Dragons,110
+,Autolik Autonomy,132,Avura Aviators,101
+,Barsein Bats,116,Aiyota Pumps,123
+,Blanaxon Hammers,101,Shmupland Dictators,104
+,Kaeshar Kaisers,102,Serkr Atolls,100
+,Naxda Nomads,114,Red Rainbow Sickles,110
+Game 8,Home,Score,Away,Score
+,Aahrus Moosi,108,Pyxanovia Pixies,113
+,Lyintaria Lynx,102,Transhimalia Disasters,107
+,Holykol Bears,100,Auspikitan Golden Falcons,104
+,Holy Yektonisa Bishops,76,Calto Cows,106
+,Dvimne Spirits,110,Height Sagua Cats,96
+,Czalliso Pythons,127,Key to Don Yees,121
+,Bongatar Banging Bongos,118,Manwx Saguans,106
+,TND Tanks,92,Sagua Ocelots,115
+,Stedro Boulders,99,Solea Geysers,98
+,Faehrenfall Feathercats,107,Autolik Autonomy,87
+,Ethanthova Ponies,112,Barsein Bats,129
+,Dotruga Falno,120,Blanaxon Hammers,116
+,Boltway Bad Dragons,95,Kaeshar Kaisers,115
+,Avura Aviators,101,Naxda Nomads,93
+,Aiyota Pumps,130,Red Rainbow Sickles,124
+,Shmupland Dictators,97,Serkr Atolls,100
+Game 9,Home,Score,Away,Score
+,Aahrus Moosi,108,Faehrenfall Feathercats,117
+,Stedro Boulders,117,Ethanthova Ponies,122
+,TND Tanks,110,Dotruga Falno,115
+,Bongatar Banging Bongos,83,Boltway Bad Dragons,89
+,Czalliso Pythons,129,Avura Aviators,111
+,Dvimne Spirits,107,Aiyota Pumps,121
+,Holy Yektonisa Bishops,121,Shmupland Dictators,115
+,Holykol Bears,113,Serkr Atolls,111
+,Lyintaria Lynx,126,Red Rainbow Sickles,114
+,Pyxanovia Pixies,117,Naxda Nomads,115
+,Transhimalia Disasters,96,Kaeshar Kaisers,119
+,Auspikitan Golden Falcons,97,Blanaxon Hammers,90
+,Calto Cows,91,Barsein Bats,87
+,Height Sagua Cats,93,Autolik Autonomy,95
+,Key to Don Yees,122,Solea Geysers,127
+,Manwx Saguans,96,Sagua Ocelots,117
+Game 10,Home,Score,Away,Score
+,Aahrus Moosi,112,Bongatar Banging Bongos,105
+,TND Tanks,106,Czalliso Pythons,100
+,Stedro Boulders,84,Dvimne Spirits,100
+,Faehrenfall Feathercats,90,Holy Yektonisa Bishops,102
+,Ethanthova Ponies,148,Holykol Bears,135
+,Dotruga Falno,122,Lyintaria Lynx,114
+,Boltway Bad Dragons,126,Pyxanovia Pixies,109
+,Avura Aviators,125,Transhimalia Disasters,108
+,Aiyota Pumps,105,Auspikitan Golden Falcons,124
+,Shmupland Dictators,89,Calto Cows,88
+,Serkr Atolls,105,Height Sagua Cats,116
+,Red Rainbow Sickles,104,Key to Don Yees,100
+,Naxda Nomads,105,Manwx Saguans,106
+,Kaeshar Kaisers,101,Sagua Ocelots,115
+,Blanaxon Hammers,107,Solea Geysers,131
+,Barsein Bats,121,Autolik Autonomy,109
+Game 11,Home,Score,Away,Score
+,Aahrus Moosi,103,Manwx Saguans,113
+,Sagua Ocelots,102,Key to Don Yees,119
+,Solea Geysers,128,Height Sagua Cats,102
+,Autolik Autonomy,96,Calto Cows,106
+,Barsein Bats,114,Auspikitan Golden Falcons,108
+,Blanaxon Hammers,88,Transhimalia Disasters,113
+,Kaeshar Kaisers,85,Pyxanovia Pixies,112
+,Naxda Nomads,109,Lyintaria Lynx,117
+,Red Rainbow Sickles,125,Holykol Bears,124
+,Serkr Atolls,100,Holy Yektonisa Bishops,113
+,Shmupland Dictators,108,Dvimne Spirits,113
+,Aiyota Pumps,143,Czalliso Pythons,129
+,Avura Aviators,106,Bongatar Banging Bongos,112
+,Boltway Bad Dragons,104,TND Tanks,101
+,Dotruga Falno,96,Stedro Boulders,107
+,Ethanthova Ponies,101,Faehrenfall Feathercats,102
+Game 12,Home,Score,Away,Score
+,Transhimalia Disasters,115,Dvimne Spirits,106
+,Czalliso Pythons,115,Holy Yektonisa Bishops,112
+,Bongatar Banging Bongos,82,Holykol Bears,107
+,TND Tanks,111,Lyintaria Lynx,131
+,Stedro Boulders,99,Pyxanovia Pixies,120
+,Faehrenfall Feathercats,90,Aiyota Pumps,107
+,Ethanthova Ponies,149,Avura Aviators,137
+,Dotruga Falno,125,Boltway Bad Dragons,113
+,Aahrus Moosi,121,Manwx Saguans,114
+,Sagua Ocelots,108,Key to Don Yees,107
+,Solea Geysers,118,Height Sagua Cats,115
+,Autolik Autonomy,98,Calto Cows,102
+,Barsein Bats,104,Auspikitan Golden Falcons,96
+,Blanaxon Hammers,104,Shmupland Dictators,108
+,Kaeshar Kaisers,103,Serkr Atolls,94
+,Naxda Nomads,112,Red Rainbow Sickles,104
 Game 13,Home,Score,Away,Score
-,Boltway Bad Dragons,102,Aahrus Moosi,75
-,Dotruga Falno,119,Avura Aviators,114
-,Ethanthova Ponies,122,Aiyota Pumps,134
-,Faehrenfall Feathercats,73,Shmupland Dictators,117
-,Stedro Boulders,85,Serkr Atolls,96
-,TND Tanks,112,Red Rainbow Sickles,123
-,Bongatar Banging Bongos,77,Naxda Nomads,70
-,Czalliso Pythons,103,Kaeshar Kaisers,97
-,Dvimne Spirits,97,Blanaxon Hammers,100
-,Holy Yektonisa Bishops,93,Barsein Bats,89
-,Holykol Bears,109,Autolik Autonomy,104
-,Lyintaria Lynx,104,Solea Geysers,84
-,Pyxanovia Pixies,122,Sagua Ocelots,92
-,Transhimalia Disasters,100,Manwx Saguans,113
-,Auspikitan Golden Falcons,90,Key to Don Yees,106
-,Calto Cows,96,Height Sagua Cats,94
+,Boltway Bad Dragons,90,Aahrus Moosi,103
+,Dotruga Falno,125,Avura Aviators,117
+,Ethanthova Ponies,147,Aiyota Pumps,141
+,Faehrenfall Feathercats,100,Shmupland Dictators,101
+,Stedro Boulders,96,Serkr Atolls,95
+,TND Tanks,127,Red Rainbow Sickles,112
+,Bongatar Banging Bongos,96,Naxda Nomads,82
+,Czalliso Pythons,106,Kaeshar Kaisers,108
+,Dvimne Spirits,120,Blanaxon Hammers,93
+,Holy Yektonisa Bishops,93,Barsein Bats,97
+,Holykol Bears,94,Autolik Autonomy,95
+,Lyintaria Lynx,114,Solea Geysers,112
+,Pyxanovia Pixies,105,Sagua Ocelots,113
+,Transhimalia Disasters,115,Manwx Saguans,116
+,Auspikitan Golden Falcons,101,Key to Don Yees,102
+,Calto Cows,87,Height Sagua Cats,81
 Game 14,Home,Score,Away,Score
-,Blanaxon Hammers,85,Aahrus Moosi,133
-,Kaeshar Kaisers,112,Barsein Bats,105
-,Naxda Nomads,93,Autolik Autonomy,98
-,Red Rainbow Sickles,99,Solea Geysers,116
-,Serkr Atolls,102,Sagua Ocelots,96
-,Shmupland Dictators,99,Manwx Saguans,108
-,Aiyota Pumps,124,Key to Don Yees,136
-,Avura Aviators,113,Height Sagua Cats,125
-,Boltway Bad Dragons,95,Calto Cows,90
-,Dotruga Falno,110,Auspikitan Golden Falcons,98
-,Ethanthova Ponies,119,Transhimalia Disasters,93
-,Faehrenfall Feathercats,76,Pyxanovia Pixies,83
-,Stedro Boulders,100,Lyintaria Lynx,97
-,TND Tanks,102,Holykol Bears,120
-,Bongatar Banging Bongos,90,Holy Yektonisa Bishops,80
-,Czalliso Pythons,105,Dvimne Spirits,125
+,Blanaxon Hammers,121,Aahrus Moosi,111
+,Kaeshar Kaisers,109,Barsein Bats,91
+,Naxda Nomads,85,Autolik Autonomy,95
+,Red Rainbow Sickles,109,Solea Geysers,127
+,Serkr Atolls,108,Sagua Ocelots,116
+,Shmupland Dictators,118,Manwx Saguans,117
+,Aiyota Pumps,127,Key to Don Yees,102
+,Avura Aviators,99,Height Sagua Cats,122
+,Boltway Bad Dragons,104,Calto Cows,103
+,Dotruga Falno,112,Auspikitan Golden Falcons,88
+,Ethanthova Ponies,138,Transhimalia Disasters,132
+,Faehrenfall Feathercats,121,Pyxanovia Pixies,99
+,Stedro Boulders,109,Lyintaria Lynx,100
+,TND Tanks,112,Holykol Bears,110
+,Bongatar Banging Bongos,100,Holy Yektonisa Bishops,95
+,Czalliso Pythons,102,Dvimne Spirits,105
 Game 15,Home,Score,Away,Score
-,Aiyota Pumps,138,Aahrus Moosi,117
-,Avura Aviators,114,Shmupland Dictators,132
-,Boltway Bad Dragons,87,Serkr Atolls,84
-,Dotruga Falno,103,Red Rainbow Sickles,98
-,Ethanthova Ponies,106,Naxda Nomads,103
-,Faehrenfall Feathercats,93,Kaeshar Kaisers,96
-,Stedro Boulders,100,Blanaxon Hammers,78
-,TND Tanks,107,Barsein Bats,96
-,Bongatar Banging Bongos,80,Autolik Autonomy,57
-,Czalliso Pythons,132,Solea Geysers,114
-,Dvimne Spirits,101,Sagua Ocelots,92
-,Holy Yektonisa Bishops,96,Manwx Saguans,100
-,Holykol Bears,125,Key to Don Yees,90
-,Lyintaria Lynx,113,Height Sagua Cats,100
-,Pyxanovia Pixies,81,Calto Cows,111
-,Transhimalia Disasters,98,Auspikitan Golden Falcons,112
+,Aiyota Pumps,111,Aahrus Moosi,106
+,Avura Aviators,102,Shmupland Dictators,109
+,Boltway Bad Dragons,93,Serkr Atolls,95
+,Dotruga Falno,118,Red Rainbow Sickles,93
+,Ethanthova Ponies,92,Naxda Nomads,90
+,Faehrenfall Feathercats,95,Kaeshar Kaisers,84
+,Stedro Boulders,113,Blanaxon Hammers,107
+,TND Tanks,113,Barsein Bats,114
+,Bongatar Banging Bongos,101,Autolik Autonomy,82
+,Czalliso Pythons,121,Solea Geysers,130
+,Dvimne Spirits,108,Sagua Ocelots,110
+,Holy Yektonisa Bishops,94,Manwx Saguans,100
+,Holykol Bears,119,Key to Don Yees,133
+,Lyintaria Lynx,98,Height Sagua Cats,110
+,Pyxanovia Pixies,105,Calto Cows,106
+,Transhimalia Disasters,99,Auspikitan Golden Falcons,103
 Game 16,Home,Score,Away,Score
-,Aahrus Moosi,96,Holykol Bears,129
-,Holy Yektonisa Bishops,93,Lyintaria Lynx,112
-,Dvimne Spirits,104,Pyxanovia Pixies,97
-,Czalliso Pythons,123,Transhimalia Disasters,120
-,Bongatar Banging Bongos,94,Auspikitan Golden Falcons,91
-,TND Tanks,109,Calto Cows,98
-,Stedro Boulders,78,Height Sagua Cats,105
-,Faehrenfall Feathercats,101,Key to Don Yees,98
-,Ethanthova Ponies,85,Manwx Saguans,112
-,Dotruga Falno,115,Sagua Ocelots,91
-,Boltway Bad Dragons,110,Solea Geysers,79
-,Avura Aviators,88,Autolik Autonomy,108
-,Aiyota Pumps,124,Barsein Bats,133
-,Shmupland Dictators,93,Blanaxon Hammers,94
-,Serkr Atolls,96,Kaeshar Kaisers,93
-,Red Rainbow Sickles,84,Naxda Nomads,98
+,Aahrus Moosi,120,Holykol Bears,129
+,Holy Yektonisa Bishops,104,Lyintaria Lynx,83
+,Dvimne Spirits,117,Pyxanovia Pixies,105
+,Czalliso Pythons,121,Transhimalia Disasters,126
+,Bongatar Banging Bongos,114,Auspikitan Golden Falcons,95
+,TND Tanks,89,Calto Cows,107
+,Stedro Boulders,112,Height Sagua Cats,105
+,Faehrenfall Feathercats,99,Key to Don Yees,109
+,Ethanthova Ponies,129,Manwx Saguans,132
+,Dotruga Falno,118,Sagua Ocelots,109
+,Boltway Bad Dragons,123,Solea Geysers,131
+,Avura Aviators,114,Autolik Autonomy,116
+,Aiyota Pumps,125,Barsein Bats,140
+,Shmupland Dictators,125,Blanaxon Hammers,98
+,Serkr Atolls,94,Kaeshar Kaisers,97
+,Red Rainbow Sickles,97,Naxda Nomads,95
+Game 17,Home,Score,Away,Score
+,Calto Cows,96,Aahrus Moosi,108
+,Height Sagua Cats,107,Auspikitan Golden Falcons,108
+,Key to Don Yees,105,Solea Geysers,117
+,Manwx Saguans,113,Sagua Ocelots,109
+,Blanaxon Hammers,92,Autolik Autonomy,91
+,Kaeshar Kaisers,97,Barsein Bats,94
+,Naxda Nomads,134,Shmupland Dictators,95
+,Red Rainbow Sickles,81,Serkr Atolls,96
+,Lyintaria Lynx,110,Transhimalia Disasters,101
+,Holykol Bears,131,Pyxanovia Pixies,130
+,Holy Yektonisa Bishops,81,Bongatar Banging Bongos,78
+,Dvimne Spirits,106,Czalliso Pythons,100
+,Faehrenfall Feathercats,111,TND Tanks,109
+,Ethanthova Ponies,97,Stedro Boulders,112
+,Dotruga Falno,132,Aiyota Pumps,138
+,Boltway Bad Dragons,113,Avura Aviators,107
+Game 18,Home,Score,Away,Score
+,Aahrus Moosi,101,Holy Yektonisa Bishops,104
+,Holykol Bears,107,Dvimne Spirits,105
+,Lyintaria Lynx,129,Czalliso Pythons,122
+,Pyxanovia Pixies,101,Bongatar Banging Bongos,106
+,Transhimalia Disasters,117,TND Tanks,109
+,Auspikitan Golden Falcons,88,Stedro Boulders,80
+,Calto Cows,107,Faehrenfall Feathercats,93
+,Height Sagua Cats,112,Ethanthova Ponies,116
+,Key to Don Yees,118,Dotruga Falno,126
+,Manwx Saguans,115,Boltway Bad Dragons,114
+,Sagua Ocelots,123,Avura Aviators,126
+,Solea Geysers,136,Aiyota Pumps,147
+,Autolik Autonomy,76,Shmupland Dictators,87
+,Barsein Bats,107,Serkr Atolls,104
+,Blanaxon Hammers,136,Red Rainbow Sickles,125
+,Kaeshar Kaisers,89,Naxda Nomads,100
+Game 19,Home,Score,Away,Score
+,Aahrus Moosi,97,Autolik Autonomy,90
+,Solea Geysers,133,Barsein Bats,120
+,Sagua Ocelots,125,Blanaxon Hammers,102
+,Manwx Saguans,111,Kaeshar Kaisers,113
+,Key to Don Yees,106,Naxda Nomads,112
+,Height Sagua Cats,119,Red Rainbow Sickles,110
+,Calto Cows,91,Serkr Atolls,85
+,Auspikitan Golden Falcons,91,Shmupland Dictators,99
+,Transhimalia Disasters,120,Aiyota Pumps,128
+,Pyxanovia Pixies,145,Avura Aviators,148
+,Lyintaria Lynx,87,Boltway Bad Dragons,99
+,Holykol Bears,97,Dotruga Falno,127
+,Holy Yektonisa Bishops,96,Ethanthova Ponies,119
+,Dvimne Spirits,102,Faehrenfall Feathercats,84
+,Czalliso Pythons,94,Stedro Boulders,110
+,Bongatar Banging Bongos,99,TND Tanks,110
+Game 20,Home,Score,Away,Score
+,Transhimalia Disasters,102,Bongatar Banging Bongos,110
+,TND Tanks,93,Czalliso Pythons,125
+,Stedro Boulders,93,Dvimne Spirits,97
+,Faehrenfall Feathercats,87,Holy Yektonisa Bishops,92
+,Ethanthova Ponies,132,Holykol Bears,130
+,Dotruga Falno,106,Lyintaria Lynx,93
+,Boltway Bad Dragons,85,Pyxanovia Pixies,105
+,Avura Aviators,120,Aiyota Pumps,133
+,Aahrus Moosi,97,Solea Geysers,118
+,Autolik Autonomy,94,Sagua Ocelots,109
+,Barsein Bats,126,Manwx Saguans,105
+,Blanaxon Hammers,120,Key to Don Yees,116
+,Kaeshar Kaisers,117,Height Sagua Cats,110
+,Naxda Nomads,92,Calto Cows,103
+,Red Rainbow Sickles,93,Auspikitan Golden Falcons,113
+,Serkr Atolls,74,Shmupland Dictators,124
+Game 21,Home,Score,Away,Score
+,Key to Don Yees,119,Aahrus Moosi,117
+,Manwx Saguans,123,Height Sagua Cats,103
+,Sagua Ocelots,102,Calto Cows,119
+,Solea Geysers,110,Auspikitan Golden Falcons,114
+,Naxda Nomads,111,Autolik Autonomy,100
+,Red Rainbow Sickles,98,Kaeshar Kaisers,102
+,Serkr Atolls,118,Blanaxon Hammers,113
+,Shmupland Dictators,111,Barsein Bats,113
+,Holy Yektonisa Bishops,114,Transhimalia Disasters,92
+,Dvimne Spirits,101,Holykol Bears,99
+,Czalliso Pythons,111,Lyintaria Lynx,114
+,Bongatar Banging Bongos,115,Pyxanovia Pixies,101
+,Dotruga Falno,102,TND Tanks,100
+,Boltway Bad Dragons,121,Ethanthova Ponies,117
+,Avura Aviators,105,Faehrenfall Feathercats,101
+,Aiyota Pumps,114,Stedro Boulders,118
+Game 22,Home,Score,Away,Score
+,Czalliso Pythons,99,Aahrus Moosi,118
+,Bongatar Banging Bongos,88,Dvimne Spirits,98
+,TND Tanks,97,Holy Yektonisa Bishops,98
+,Stedro Boulders,121,Holykol Bears,110
+,Faehrenfall Feathercats,106,Lyintaria Lynx,113
+,Ethanthova Ponies,119,Pyxanovia Pixies,137
+,Dotruga Falno,124,Transhimalia Disasters,119
+,Boltway Bad Dragons,83,Auspikitan Golden Falcons,99
+,Avura Aviators,116,Calto Cows,108
+,Aiyota Pumps,112,Height Sagua Cats,95
+,Shmupland Dictators,115,Key to Don Yees,134
+,Serkr Atolls,94,Manwx Saguans,95
+,Red Rainbow Sickles,110,Sagua Ocelots,128
+,Naxda Nomads,113,Solea Geysers,92
+,Kaeshar Kaisers,109,Autolik Autonomy,96
+,Blanaxon Hammers,115,Barsein Bats,119
+Game 23,Home,Score,Away,Score
+,Dotruga Falno,116,Aahrus Moosi,121
+,Boltway Bad Dragons,102,Ethanthova Ponies,88
+,Avura Aviators,95,Faehrenfall Feathercats,103
+,Aiyota Pumps,117,Stedro Boulders,111
+,Shmupland Dictators,106,TND Tanks,109
+,Serkr Atolls,76,Bongatar Banging Bongos,88
+,Red Rainbow Sickles,130,Czalliso Pythons,121
+,Naxda Nomads,91,Dvimne Spirits,95
+,Kaeshar Kaisers,81,Holy Yektonisa Bishops,95
+,Blanaxon Hammers,110,Holykol Bears,121
+,Barsein Bats,91,Lyintaria Lynx,114
+,Autolik Autonomy,105,Pyxanovia Pixies,110
+,Solea Geysers,114,Transhimalia Disasters,131
+,Sagua Ocelots,95,Auspikitan Golden Falcons,92
+,Manwx Saguans,110,Calto Cows,105
+,Key to Don Yees,134,Height Sagua Cats,113
+Game 24,Home,Score,Away,Score
+,Solea Geysers,124,Aahrus Moosi,126
+,Sagua Ocelots,117,Autolik Autonomy,105
+,Manwx Saguans,122,Barsein Bats,123
+,Key to Don Yees,112,Blanaxon Hammers,111
+,Height Sagua Cats,97,Kaeshar Kaisers,105
+,Calto Cows,96,Naxda Nomads,103
+,Auspikitan Golden Falcons,85,Red Rainbow Sickles,87
+,Transhimalia Disasters,96,Serkr Atolls,101
+,Pyxanovia Pixies,99,Shmupland Dictators,100
+,Lyintaria Lynx,117,Aiyota Pumps,125
+,Holykol Bears,120,Avura Aviators,133
+,Holy Yektonisa Bishops,84,Boltway Bad Dragons,113
+,Dvimne Spirits,105,Dotruga Falno,108
+,Czalliso Pythons,148,Ethanthova Ponies,132
+,Bongatar Banging Bongos,97,Faehrenfall Feathercats,103
+,TND Tanks,101,Stedro Boulders,113
+Game 25,Home,Score,Away,Score
+,Aahrus Moosi,118,Barsein Bats,115
+,Blanaxon Hammers,107,Autolik Autonomy,110
+,Kaeshar Kaisers,85,Solea Geysers,96
+,Naxda Nomads,103,Sagua Ocelots,91
+,Red Rainbow Sickles,107,Manwx Saguans,110
+,Serkr Atolls,103,Key to Don Yees,113
+,Shmupland Dictators,114,Height Sagua Cats,98
+,Aiyota Pumps,109,Calto Cows,126
+,Avura Aviators,104,Auspikitan Golden Falcons,113
+,Boltway Bad Dragons,107,Transhimalia Disasters,91
+,Dotruga Falno,117,Pyxanovia Pixies,118
+,Ethanthova Ponies,108,Lyintaria Lynx,113
+,Faehrenfall Feathercats,101,Holykol Bears,113
+,Stedro Boulders,100,Holy Yektonisa Bishops,94
+,TND Tanks,90,Dvimne Spirits,100
+,Bongatar Banging Bongos,105,Czalliso Pythons,90
+Game 26,Home,Score,Away,Score
+,Aahrus Moosi,120,Kaeshar Kaisers,107
+,Naxda Nomads,120,Blanaxon Hammers,96
+,Red Rainbow Sickles,110,Barsein Bats,111
+,Serkr Atolls,103,Autolik Autonomy,86
+,Shmupland Dictators,108,Solea Geysers,122
+,Aiyota Pumps,113,Sagua Ocelots,105
+,Avura Aviators,118,Manwx Saguans,130
+,Boltway Bad Dragons,115,Key to Don Yees,94
+,Dotruga Falno,133,Height Sagua Cats,109
+,Ethanthova Ponies,96,Calto Cows,117
+,Faehrenfall Feathercats,102,Auspikitan Golden Falcons,98
+,Stedro Boulders,115,Transhimalia Disasters,101
+,TND Tanks,122,Pyxanovia Pixies,111
+,Bongatar Banging Bongos,98,Lyintaria Lynx,93
+,Czalliso Pythons,123,Holykol Bears,138
+,Dvimne Spirits,110,Holy Yektonisa Bishops,98
+Game 27,Home,Score,Away,Score
+,Transhimalia Disasters,109,Ethanthova Ponies,93
+,Dotruga Falno,117,Faehrenfall Feathercats,98
+,Boltway Bad Dragons,96,Stedro Boulders,91
+,Avura Aviators,141,TND Tanks,114
+,Aiyota Pumps,109,Bongatar Banging Bongos,108
+,Pyxanovia Pixies,119,Czalliso Pythons,112
+,Lyintaria Lynx,94,Dvimne Spirits,113
+,Holykol Bears,113,Holy Yektonisa Bishops,118
+,Aahrus Moosi,93,Kaeshar Kaisers,110
+,Naxda Nomads,98,Blanaxon Hammers,103
+,Red Rainbow Sickles,114,Barsein Bats,104
+,Serkr Atolls,99,Autolik Autonomy,101
+,Shmupland Dictators,121,Solea Geysers,118
+,Auspikitan Golden Falcons,108,Sagua Ocelots,117
+,Calto Cows,105,Manwx Saguans,91
+,Height Sagua Cats,115,Key to Don Yees,114
+Game 28,Home,Score,Away,Score
+,Auspikitan Golden Falcons,89,Aahrus Moosi,107
+,Transhimalia Disasters,110,Calto Cows,95
+,Pyxanovia Pixies,106,Height Sagua Cats,110
+,Lyintaria Lynx,109,Key to Don Yees,115
+,Holykol Bears,117,Manwx Saguans,125
+,Holy Yektonisa Bishops,112,Sagua Ocelots,110
+,Dvimne Spirits,122,Solea Geysers,124
+,Czalliso Pythons,113,Autolik Autonomy,112
+,Bongatar Banging Bongos,106,Barsein Bats,101
+,TND Tanks,118,Blanaxon Hammers,105
+,Stedro Boulders,97,Kaeshar Kaisers,105
+,Faehrenfall Feathercats,100,Naxda Nomads,106
+,Ethanthova Ponies,111,Red Rainbow Sickles,113
+,Dotruga Falno,97,Serkr Atolls,107
+,Boltway Bad Dragons,111,Shmupland Dictators,101
+,Avura Aviators,133,Aiyota Pumps,117
+Game 29,Home,Score,Away,Score
+,Aahrus Moosi,123,Manwx Saguans,131
+,Sagua Ocelots,111,Key to Don Yees,110
+,Solea Geysers,107,Height Sagua Cats,115
+,Auspikitan Golden Falcons,90,Calto Cows,93
+,Autolik Autonomy,100,Red Rainbow Sickles,119
+,Serkr Atolls,88,Naxda Nomads,79
+,Shmupland Dictators,94,Kaeshar Kaisers,93
+,Barsein Bats,100,Blanaxon Hammers,98
+,Transhimalia Disasters,90,Dvimne Spirits,96
+,Czalliso Pythons,111,Holy Yektonisa Bishops,124
+,Bongatar Banging Bongos,131,Holykol Bears,117
+,Pyxanovia Pixies,111,Lyintaria Lynx,122
+,TND Tanks,97,Boltway Bad Dragons,106
+,Avura Aviators,98,Dotruga Falno,119
+,Aiyota Pumps,147,Ethanthova Ponies,143
+,Stedro Boulders,75,Faehrenfall Feathercats,88
+Game 30,Home,Score,Away,Score
+,Transhimalia Disasters,109,Holykol Bears,114
+,Holy Yektonisa Bishops,82,Lyintaria Lynx,88
+,Dvimne Spirits,115,Pyxanovia Pixies,106
+,Czalliso Pythons,128,Aiyota Pumps,150
+,Bongatar Banging Bongos,116,Avura Aviators,91
+,TND Tanks,107,Boltway Bad Dragons,128
+,Stedro Boulders,118,Dotruga Falno,117
+,Faehrenfall Feathercats,120,Ethanthova Ponies,104
+,Aahrus Moosi,120,Height Sagua Cats,115
+,Key to Don Yees,88,Calto Cows,113
+,Manwx Saguans,85,Auspikitan Golden Falcons,91
+,Sagua Ocelots,122,Shmupland Dictators,106
+,Solea Geysers,96,Serkr Atolls,103
+,Autolik Autonomy,115,Red Rainbow Sickles,102
+,Barsein Bats,106,Naxda Nomads,103
+,Blanaxon Hammers,107,Kaeshar Kaisers,94
+Game 31,Home,Score,Away,Score
+,Serkr Atolls,117,Aahrus Moosi,120
+,Shmupland Dictators,131,Red Rainbow Sickles,133
+,Aiyota Pumps,130,Naxda Nomads,115
+,Avura Aviators,104,Kaeshar Kaisers,106
+,Boltway Bad Dragons,103,Blanaxon Hammers,114
+,Dotruga Falno,115,Barsein Bats,112
+,Ethanthova Ponies,117,Autolik Autonomy,124
+,Faehrenfall Feathercats,99,Solea Geysers,111
+,Stedro Boulders,100,Sagua Ocelots,104
+,TND Tanks,123,Manwx Saguans,120
+,Bongatar Banging Bongos,113,Key to Don Yees,107
+,Czalliso Pythons,123,Height Sagua Cats,129
+,Dvimne Spirits,93,Calto Cows,90
+,Holy Yektonisa Bishops,92,Auspikitan Golden Falcons,87
+,Holykol Bears,134,Transhimalia Disasters,97
+,Lyintaria Lynx,110,Pyxanovia Pixies,111
+Game 32,Home,Score,Away,Score
+,Barsein Bats,112,Aahrus Moosi,103
+,Autolik Autonomy,107,Blanaxon Hammers,115
+,Solea Geysers,106,Kaeshar Kaisers,74
+,Sagua Ocelots,103,Naxda Nomads,109
+,Manwx Saguans,103,Red Rainbow Sickles,116
+,Key to Don Yees,97,Serkr Atolls,109
+,Height Sagua Cats,110,Shmupland Dictators,108
+,Calto Cows,112,Aiyota Pumps,133
+,Auspikitan Golden Falcons,106,Avura Aviators,98
+,Transhimalia Disasters,109,Boltway Bad Dragons,97
+,Pyxanovia Pixies,118,Dotruga Falno,148
+,Lyintaria Lynx,121,Ethanthova Ponies,123
+,Holykol Bears,95,Faehrenfall Feathercats,109
+,Holy Yektonisa Bishops,104,Stedro Boulders,93
+,Dvimne Spirits,108,TND Tanks,84
+,Czalliso Pythons,95,Bongatar Banging Bongos,109
+Game 33,Home,Score,Away,Score
+,Autolik Autonomy,99,Aahrus Moosi,92
+,Barsein Bats,84,Solea Geysers,108
+,Blanaxon Hammers,117,Sagua Ocelots,116
+,Kaeshar Kaisers,110,Manwx Saguans,91
+,Naxda Nomads,110,Key to Don Yees,117
+,Red Rainbow Sickles,111,Height Sagua Cats,108
+,Serkr Atolls,91,Calto Cows,117
+,Shmupland Dictators,95,Auspikitan Golden Falcons,108
+,Aiyota Pumps,125,Transhimalia Disasters,126
+,Avura Aviators,130,Pyxanovia Pixies,146
+,Boltway Bad Dragons,99,Lyintaria Lynx,101
+,Dotruga Falno,120,Holykol Bears,106
+,Ethanthova Ponies,109,Holy Yektonisa Bishops,118
+,Faehrenfall Feathercats,82,Dvimne Spirits,110
+,Stedro Boulders,118,Czalliso Pythons,114
+,TND Tanks,93,Bongatar Banging Bongos,105
+Game 34,Home,Score,Away,Score
+,Aahrus Moosi,91,Boltway Bad Dragons,115
+,Avura Aviators,99,Dotruga Falno,153
+,Aiyota Pumps,119,Ethanthova Ponies,136
+,Shmupland Dictators,112,Faehrenfall Feathercats,109
+,Serkr Atolls,98,Stedro Boulders,107
+,Red Rainbow Sickles,105,TND Tanks,118
+,Naxda Nomads,124,Bongatar Banging Bongos,123
+,Kaeshar Kaisers,131,Czalliso Pythons,110
+,Blanaxon Hammers,97,Dvimne Spirits,95
+,Barsein Bats,118,Holy Yektonisa Bishops,108
+,Autolik Autonomy,106,Holykol Bears,115
+,Solea Geysers,122,Lyintaria Lynx,124
+,Sagua Ocelots,95,Pyxanovia Pixies,107
+,Manwx Saguans,107,Transhimalia Disasters,108
+,Key to Don Yees,85,Auspikitan Golden Falcons,102
+,Height Sagua Cats,94,Calto Cows,119
+Game 35,Home,Score,Away,Score
+,Aahrus Moosi,103,Dvimne Spirits,127
+,Czalliso Pythons,111,Holy Yektonisa Bishops,109
+,Bongatar Banging Bongos,114,Holykol Bears,97
+,TND Tanks,87,Lyintaria Lynx,115
+,Stedro Boulders,111,Pyxanovia Pixies,120
+,Faehrenfall Feathercats,118,Transhimalia Disasters,120
+,Ethanthova Ponies,127,Auspikitan Golden Falcons,102
+,Dotruga Falno,93,Calto Cows,105
+,Boltway Bad Dragons,86,Height Sagua Cats,88
+,Avura Aviators,119,Key to Don Yees,117
+,Aiyota Pumps,127,Manwx Saguans,129
+,Shmupland Dictators,106,Sagua Ocelots,104
+,Serkr Atolls,103,Solea Geysers,113
+,Red Rainbow Sickles,85,Autolik Autonomy,91
+,Naxda Nomads,95,Barsein Bats,103
+,Kaeshar Kaisers,100,Blanaxon Hammers,105
+Game 36,Home,Score,Away,Score
+,Manwx Saguans,113,Aahrus Moosi,121
+,Key to Don Yees,101,Sagua Ocelots,112
+,Height Sagua Cats,94,Solea Geysers,121
+,Calto Cows,105,Autolik Autonomy,85
+,Auspikitan Golden Falcons,102,Barsein Bats,92
+,Transhimalia Disasters,119,Blanaxon Hammers,115
+,Pyxanovia Pixies,106,Kaeshar Kaisers,117
+,Lyintaria Lynx,100,Naxda Nomads,98
+,Holykol Bears,130,Red Rainbow Sickles,114
+,Holy Yektonisa Bishops,103,Serkr Atolls,93
+,Dvimne Spirits,118,Shmupland Dictators,103
+,Czalliso Pythons,129,Aiyota Pumps,127
+,Bongatar Banging Bongos,123,Avura Aviators,101
+,TND Tanks,98,Boltway Bad Dragons,111
+,Stedro Boulders,104,Dotruga Falno,106
+,Faehrenfall Feathercats,135,Ethanthova Ponies,117
+Game 37,Home,Score,Away,Score
+,Aahrus Moosi,123,Ethanthova Ponies,128
+,Dotruga Falno,123,Faehrenfall Feathercats,116
+,Boltway Bad Dragons,90,Stedro Boulders,107
+,Avura Aviators,108,TND Tanks,109
+,Aiyota Pumps,116,Bongatar Banging Bongos,118
+,Shmupland Dictators,109,Czalliso Pythons,117
+,Serkr Atolls,85,Dvimne Spirits,90
+,Red Rainbow Sickles,101,Holy Yektonisa Bishops,112
+,Naxda Nomads,99,Holykol Bears,112
+,Kaeshar Kaisers,94,Lyintaria Lynx,90
+,Blanaxon Hammers,120,Pyxanovia Pixies,119
+,Barsein Bats,131,Transhimalia Disasters,105
+,Autolik Autonomy,81,Auspikitan Golden Falcons,85
+,Solea Geysers,105,Calto Cows,116
+,Sagua Ocelots,114,Height Sagua Cats,116
+,Manwx Saguans,133,Key to Don Yees,110
+Game 38,Home,Score,Away,Score
+,Pyxanovia Pixies,127,Aahrus Moosi,109
+,Transhimalia Disasters,106,Lyintaria Lynx,116
+,Auspikitan Golden Falcons,116,Holykol Bears,114
+,Calto Cows,107,Holy Yektonisa Bishops,95
+,Height Sagua Cats,105,Dvimne Spirits,121
+,Key to Don Yees,96,Czalliso Pythons,125
+,Manwx Saguans,110,Bongatar Banging Bongos,111
+,Sagua Ocelots,106,TND Tanks,99
+,Solea Geysers,128,Stedro Boulders,105
+,Autolik Autonomy,83,Faehrenfall Feathercats,99
+,Barsein Bats,119,Ethanthova Ponies,136
+,Blanaxon Hammers,125,Dotruga Falno,117
+,Kaeshar Kaisers,96,Boltway Bad Dragons,106
+,Naxda Nomads,115,Avura Aviators,105
+,Red Rainbow Sickles,139,Aiyota Pumps,140
+,Serkr Atolls,114,Shmupland Dictators,113
+Game 39,Home,Score,Away,Score
+,Aahrus Moosi,115,Lyintaria Lynx,106
+,Pyxanovia Pixies,137,Holykol Bears,142
+,Transhimalia Disasters,115,Holy Yektonisa Bishops,113
+,Auspikitan Golden Falcons,82,Dvimne Spirits,99
+,Calto Cows,123,Czalliso Pythons,113
+,Height Sagua Cats,100,Bongatar Banging Bongos,102
+,Key to Don Yees,108,TND Tanks,105
+,Manwx Saguans,99,Stedro Boulders,94
+,Sagua Ocelots,105,Faehrenfall Feathercats,103
+,Solea Geysers,125,Ethanthova Ponies,105
+,Autolik Autonomy,91,Dotruga Falno,107
+,Barsein Bats,103,Boltway Bad Dragons,98
+,Blanaxon Hammers,123,Avura Aviators,116
+,Kaeshar Kaisers,135,Aiyota Pumps,122
+,Naxda Nomads,113,Shmupland Dictators,107
+,Red Rainbow Sickles,95,Serkr Atolls,101
+Game 40,Home,Score,Away,Score
+,Lyintaria Lynx,97,Transhimalia Disasters,117
+,Holykol Bears,132,Pyxanovia Pixies,105
+,Holy Yektonisa Bishops,100,Aiyota Pumps,122
+,Dvimne Spirits,128,Avura Aviators,109
+,Czalliso Pythons,97,Boltway Bad Dragons,131
+,Bongatar Banging Bongos,101,Dotruga Falno,97
+,TND Tanks,132,Ethanthova Ponies,136
+,Stedro Boulders,117,Faehrenfall Feathercats,114
+,Calto Cows,114,Aahrus Moosi,122
+,Height Sagua Cats,95,Auspikitan Golden Falcons,110
+,Key to Don Yees,101,Shmupland Dictators,119
+,Manwx Saguans,79,Serkr Atolls,101
+,Sagua Ocelots,101,Red Rainbow Sickles,104
+,Solea Geysers,123,Naxda Nomads,99
+,Autolik Autonomy,87,Kaeshar Kaisers,91
+,Barsein Bats,108,Blanaxon Hammers,118
+Game 41,Home,Score,Away,Score
+,Faehrenfall Feathercats,97,Aahrus Moosi,99
+,Ethanthova Ponies,104,Stedro Boulders,108
+,Dotruga Falno,124,TND Tanks,122
+,Boltway Bad Dragons,100,Bongatar Banging Bongos,101
+,Avura Aviators,136,Czalliso Pythons,122
+,Aiyota Pumps,118,Dvimne Spirits,115
+,Shmupland Dictators,93,Holy Yektonisa Bishops,98
+,Serkr Atolls,107,Holykol Bears,114
+,Red Rainbow Sickles,109,Lyintaria Lynx,113
+,Naxda Nomads,110,Pyxanovia Pixies,108
+,Kaeshar Kaisers,109,Transhimalia Disasters,107
+,Blanaxon Hammers,107,Auspikitan Golden Falcons,112
+,Barsein Bats,73,Calto Cows,95
+,Autolik Autonomy,76,Height Sagua Cats,91
+,Solea Geysers,128,Key to Don Yees,133
+,Sagua Ocelots,121,Manwx Saguans,93
+Game 42,Home,Score,Away,Score
+,Aahrus Moosi,115,Solea Geysers,131
+,Auspikitan Golden Falcons,101,Sagua Ocelots,109
+,Calto Cows,115,Manwx Saguans,101
+,Height Sagua Cats,114,Key to Don Yees,113
+,Autolik Autonomy,107,Shmupland Dictators,108
+,Barsein Bats,124,Serkr Atolls,111
+,Blanaxon Hammers,118,Red Rainbow Sickles,113
+,Kaeshar Kaisers,117,Naxda Nomads,101
+,Transhimalia Disasters,92,Bongatar Banging Bongos,99
+,Pyxanovia Pixies,110,Czalliso Pythons,121
+,Lyintaria Lynx,93,Dvimne Spirits,105
+,Holykol Bears,107,Holy Yektonisa Bishops,111
+,TND Tanks,118,Aiyota Pumps,119
+,Stedro Boulders,115,Avura Aviators,98
+,Faehrenfall Feathercats,100,Boltway Bad Dragons,109
+,Ethanthova Ponies,136,Dotruga Falno,139
+Game 43,Home,Score,Away,Score
+,Kaeshar Kaisers,96,Aahrus Moosi,111
+,Blanaxon Hammers,91,Naxda Nomads,101
+,Barsein Bats,112,Red Rainbow Sickles,106
+,Autolik Autonomy,100,Serkr Atolls,83
+,Solea Geysers,118,Shmupland Dictators,91
+,Sagua Ocelots,125,Aiyota Pumps,123
+,Manwx Saguans,120,Avura Aviators,102
+,Key to Don Yees,88,Boltway Bad Dragons,111
+,Height Sagua Cats,94,Dotruga Falno,113
+,Calto Cows,129,Ethanthova Ponies,123
+,Auspikitan Golden Falcons,88,Faehrenfall Feathercats,92
+,Transhimalia Disasters,112,Stedro Boulders,96
+,Pyxanovia Pixies,116,TND Tanks,106
+,Lyintaria Lynx,81,Bongatar Banging Bongos,100
+,Holykol Bears,121,Czalliso Pythons,111
+,Holy Yektonisa Bishops,80,Dvimne Spirits,110
+Game 44,Home,Score,Away,Score
+,Faehrenfall Feathercats,90,Transhimalia Disasters,97
+,Ethanthova Ponies,114,Stedro Boulders,111
+,Dotruga Falno,127,TND Tanks,118
+,Boltway Bad Dragons,78,Bongatar Banging Bongos,93
+,Avura Aviators,116,Czalliso Pythons,109
+,Aiyota Pumps,112,Dvimne Spirits,103
+,Pyxanovia Pixies,108,Holy Yektonisa Bishops,107
+,Lyintaria Lynx,142,Holykol Bears,143
+,Blanaxon Hammers,113,Aahrus Moosi,103
+,Kaeshar Kaisers,92,Barsein Bats,90
+,Naxda Nomads,97,Autolik Autonomy,85
+,Red Rainbow Sickles,105,Solea Geysers,111
+,Serkr Atolls,113,Sagua Ocelots,91
+,Shmupland Dictators,110,Manwx Saguans,111
+,Auspikitan Golden Falcons,107,Key to Don Yees,104
+,Calto Cows,106,Height Sagua Cats,95
+Game 45,Home,Score,Away,Score
+,Sagua Ocelots,111,Aahrus Moosi,104
+,Solea Geysers,135,Manwx Saguans,125
+,Autolik Autonomy,104,Key to Don Yees,112
+,Barsein Bats,104,Height Sagua Cats,98
+,Blanaxon Hammers,103,Calto Cows,111
+,Kaeshar Kaisers,102,Auspikitan Golden Falcons,92
+,Naxda Nomads,114,Transhimalia Disasters,107
+,Red Rainbow Sickles,124,Pyxanovia Pixies,119
+,Serkr Atolls,103,Lyintaria Lynx,98
+,Shmupland Dictators,106,Holykol Bears,120
+,Aiyota Pumps,88,Holy Yektonisa Bishops,109
+,Avura Aviators,111,Dvimne Spirits,124
+,Boltway Bad Dragons,109,Czalliso Pythons,102
+,Dotruga Falno,96,Bongatar Banging Bongos,100
+,Ethanthova Ponies,111,TND Tanks,122
+,Faehrenfall Feathercats,97,Stedro Boulders,79
+Game 46,Home,Score,Away,Score
+,Transhimalia Disasters,112,Pyxanovia Pixies,116
+,Lyintaria Lynx,102,Aiyota Pumps,103
+,Holykol Bears,115,Avura Aviators,125
+,Holy Yektonisa Bishops,113,Boltway Bad Dragons,114
+,Dvimne Spirits,95,Dotruga Falno,94
+,Czalliso Pythons,127,Ethanthova Ponies,130
+,Bongatar Banging Bongos,99,Faehrenfall Feathercats,102
+,TND Tanks,99,Stedro Boulders,121
+,Aahrus Moosi,91,Auspikitan Golden Falcons,90
+,Calto Cows,101,Shmupland Dictators,99
+,Height Sagua Cats,101,Serkr Atolls,98
+,Key to Don Yees,93,Red Rainbow Sickles,97
+,Manwx Saguans,99,Naxda Nomads,92
+,Sagua Ocelots,99,Kaeshar Kaisers,103
+,Solea Geysers,128,Blanaxon Hammers,125
+,Autolik Autonomy,105,Barsein Bats,88
+Game 47,Home,Score,Away,Score
+,Aahrus Moosi,102,Transhimalia Disasters,101
+,Auspikitan Golden Falcons,113,Pyxanovia Pixies,92
+,Calto Cows,111,Lyintaria Lynx,102
+,Height Sagua Cats,114,Holykol Bears,112
+,Key to Don Yees,97,Holy Yektonisa Bishops,114
+,Manwx Saguans,78,Dvimne Spirits,104
+,Sagua Ocelots,143,Czalliso Pythons,116
+,Solea Geysers,110,Bongatar Banging Bongos,112
+,Autolik Autonomy,102,TND Tanks,111
+,Barsein Bats,89,Stedro Boulders,99
+,Blanaxon Hammers,113,Faehrenfall Feathercats,104
+,Kaeshar Kaisers,100,Ethanthova Ponies,123
+,Naxda Nomads,104,Dotruga Falno,128
+,Red Rainbow Sickles,108,Boltway Bad Dragons,112
+,Serkr Atolls,115,Avura Aviators,116
+,Shmupland Dictators,114,Aiyota Pumps,113
+Game 48,Home,Score,Away,Score
+,Transhimalia Disasters,96,Stedro Boulders,106
+,Faehrenfall Feathercats,88,TND Tanks,108
+,Ethanthova Ponies,120,Bongatar Banging Bongos,103
+,Dotruga Falno,128,Czalliso Pythons,123
+,Boltway Bad Dragons,117,Dvimne Spirits,94
+,Avura Aviators,90,Holy Yektonisa Bishops,100
+,Aiyota Pumps,127,Holykol Bears,135
+,Pyxanovia Pixies,106,Lyintaria Lynx,114
+,Aahrus Moosi,118,Barsein Bats,94
+,Blanaxon Hammers,92,Autolik Autonomy,103
+,Kaeshar Kaisers,130,Solea Geysers,111
+,Naxda Nomads,113,Sagua Ocelots,112
+,Red Rainbow Sickles,116,Manwx Saguans,106
+,Serkr Atolls,98,Key to Don Yees,110
+,Shmupland Dictators,102,Height Sagua Cats,101
+,Auspikitan Golden Falcons,74,Calto Cows,86
+Game 49,Home,Score,Away,Score
+,Aahrus Moosi,134,Avura Aviators,124
+,Boltway Bad Dragons,111,Aiyota Pumps,108
+,Dotruga Falno,116,Shmupland Dictators,100
+,Ethanthova Ponies,109,Serkr Atolls,107
+,Faehrenfall Feathercats,113,Red Rainbow Sickles,98
+,Stedro Boulders,91,Naxda Nomads,104
+,TND Tanks,94,Kaeshar Kaisers,91
+,Bongatar Banging Bongos,93,Blanaxon Hammers,90
+,Czalliso Pythons,118,Barsein Bats,121
+,Dvimne Spirits,103,Autolik Autonomy,108
+,Holy Yektonisa Bishops,100,Solea Geysers,103
+,Holykol Bears,122,Sagua Ocelots,125
+,Lyintaria Lynx,87,Manwx Saguans,95
+,Pyxanovia Pixies,125,Key to Don Yees,117
+,Transhimalia Disasters,118,Height Sagua Cats,123
+,Auspikitan Golden Falcons,61,Calto Cows,87
+Game 50,Home,Score,Away,Score
+,Aahrus Moosi,134,Czalliso Pythons,119
+,Dvimne Spirits,94,Bongatar Banging Bongos,90
+,Holy Yektonisa Bishops,91,TND Tanks,88
+,Holykol Bears,106,Stedro Boulders,111
+,Lyintaria Lynx,117,Faehrenfall Feathercats,108
+,Pyxanovia Pixies,129,Ethanthova Ponies,126
+,Transhimalia Disasters,104,Dotruga Falno,123
+,Auspikitan Golden Falcons,88,Boltway Bad Dragons,110
+,Calto Cows,126,Avura Aviators,122
+,Height Sagua Cats,121,Aiyota Pumps,112
+,Key to Don Yees,119,Shmupland Dictators,100
+,Manwx Saguans,108,Serkr Atolls,102
+,Sagua Ocelots,110,Red Rainbow Sickles,91
+,Solea Geysers,100,Naxda Nomads,105
+,Autolik Autonomy,86,Kaeshar Kaisers,92
+,Barsein Bats,104,Blanaxon Hammers,125
+Game 51,Home,Score,Away,Score
+,Avura Aviators,106,Aahrus Moosi,116
+,Aiyota Pumps,112,Boltway Bad Dragons,120
+,Shmupland Dictators,105,Dotruga Falno,100
+,Serkr Atolls,119,Ethanthova Ponies,103
+,Red Rainbow Sickles,99,Faehrenfall Feathercats,102
+,Naxda Nomads,81,Stedro Boulders,105
+,Kaeshar Kaisers,98,TND Tanks,105
+,Blanaxon Hammers,94,Bongatar Banging Bongos,105
+,Barsein Bats,95,Czalliso Pythons,108
+,Autolik Autonomy,92,Dvimne Spirits,106
+,Solea Geysers,109,Holy Yektonisa Bishops,98
+,Sagua Ocelots,119,Holykol Bears,126
+,Manwx Saguans,111,Lyintaria Lynx,110
+,Key to Don Yees,122,Pyxanovia Pixies,124
+,Height Sagua Cats,115,Transhimalia Disasters,118
+,Calto Cows,113,Auspikitan Golden Falcons,87
+Game 52,Home,Score,Away,Score
+,Shmupland Dictators,110,Aahrus Moosi,130
+,Serkr Atolls,130,Aiyota Pumps,116
+,Red Rainbow Sickles,112,Avura Aviators,113
+,Naxda Nomads,90,Boltway Bad Dragons,82
+,Kaeshar Kaisers,90,Dotruga Falno,102
+,Blanaxon Hammers,98,Ethanthova Ponies,113
+,Barsein Bats,100,Faehrenfall Feathercats,106
+,Autolik Autonomy,76,Stedro Boulders,85
+,Solea Geysers,123,TND Tanks,114
+,Sagua Ocelots,96,Bongatar Banging Bongos,102
+,Manwx Saguans,107,Czalliso Pythons,114
+,Key to Don Yees,99,Dvimne Spirits,115
+,Height Sagua Cats,96,Holy Yektonisa Bishops,88
+,Calto Cows,104,Holykol Bears,103
+,Auspikitan Golden Falcons,106,Lyintaria Lynx,99
+,Transhimalia Disasters,125,Pyxanovia Pixies,110
+Game 53,Home,Score,Away,Score
+,Aahrus Moosi,136,Shmupland Dictators,129
+,Aiyota Pumps,113,Serkr Atolls,106
+,Avura Aviators,127,Red Rainbow Sickles,130
+,Boltway Bad Dragons,103,Naxda Nomads,96
+,Dotruga Falno,92,Kaeshar Kaisers,81
+,Ethanthova Ponies,122,Blanaxon Hammers,109
+,Faehrenfall Feathercats,84,Barsein Bats,89
+,Stedro Boulders,89,Autolik Autonomy,95
+,TND Tanks,93,Solea Geysers,112
+,Bongatar Banging Bongos,108,Sagua Ocelots,103
+,Czalliso Pythons,116,Manwx Saguans,119
+,Dvimne Spirits,125,Key to Don Yees,111
+,Holy Yektonisa Bishops,96,Height Sagua Cats,99
+,Holykol Bears,109,Calto Cows,105
+,Lyintaria Lynx,87,Auspikitan Golden Falcons,89
+,Pyxanovia Pixies,111,Transhimalia Disasters,114
+Game 54,Home,Score,Away,Score
+,Aahrus Moosi,111,Key to Don Yees,119
+,Height Sagua Cats,95,Manwx Saguans,114
+,Calto Cows,92,Sagua Ocelots,93
+,Auspikitan Golden Falcons,95,Solea Geysers,107
+,Transhimalia Disasters,103,Autolik Autonomy,100
+,Pyxanovia Pixies,119,Barsein Bats,113
+,Lyintaria Lynx,121,Blanaxon Hammers,111
+,Holykol Bears,122,Kaeshar Kaisers,110
+,Holy Yektonisa Bishops,90,Naxda Nomads,91
+,Dvimne Spirits,111,Red Rainbow Sickles,105
+,Czalliso Pythons,106,Serkr Atolls,107
+,Bongatar Banging Bongos,95,Shmupland Dictators,92
+,TND Tanks,127,Aiyota Pumps,122
+,Stedro Boulders,115,Avura Aviators,105
+,Faehrenfall Feathercats,91,Boltway Bad Dragons,92
+,Ethanthova Ponies,98,Dotruga Falno,112
+Game 55,Home,Score,Away,Score
+,Aahrus Moosi,96,Solea Geysers,124
+,Autolik Autonomy,102,Sagua Ocelots,109
+,Barsein Bats,116,Manwx Saguans,122
+,Blanaxon Hammers,115,Key to Don Yees,128
+,Kaeshar Kaisers,105,Height Sagua Cats,95
+,Naxda Nomads,99,Calto Cows,101
+,Red Rainbow Sickles,110,Auspikitan Golden Falcons,111
+,Serkr Atolls,100,Transhimalia Disasters,109
+,Shmupland Dictators,118,Pyxanovia Pixies,124
+,Aiyota Pumps,126,Lyintaria Lynx,127
+,Avura Aviators,113,Holykol Bears,127
+,Boltway Bad Dragons,101,Holy Yektonisa Bishops,92
+,Dotruga Falno,108,Dvimne Spirits,100
+,Ethanthova Ponies,138,Czalliso Pythons,125
+,Faehrenfall Feathercats,78,Bongatar Banging Bongos,100
+,Stedro Boulders,111,TND Tanks,105
+Game 56,Home,Score,Away,Score
+,Czalliso Pythons,132,Transhimalia Disasters,126
+,Bongatar Banging Bongos,63,Dvimne Spirits,80
+,TND Tanks,99,Holy Yektonisa Bishops,95
+,Stedro Boulders,94,Holykol Bears,102
+,Faehrenfall Feathercats,105,Lyintaria Lynx,106
+,Ethanthova Ponies,127,Pyxanovia Pixies,120
+,Dotruga Falno,139,Aiyota Pumps,125
+,Boltway Bad Dragons,126,Avura Aviators,113
+,Sagua Ocelots,121,Aahrus Moosi,117
+,Solea Geysers,116,Manwx Saguans,101
+,Autolik Autonomy,102,Key to Don Yees,111
+,Barsein Bats,114,Height Sagua Cats,100
+,Blanaxon Hammers,79,Calto Cows,102
+,Kaeshar Kaisers,101,Auspikitan Golden Falcons,97
+,Naxda Nomads,90,Shmupland Dictators,83
+,Red Rainbow Sickles,103,Serkr Atolls,114
+Game 57,Home,Score,Away,Score
+,Bongatar Banging Bongos,88,Aahrus Moosi,91
+,Czalliso Pythons,123,TND Tanks,127
+,Dvimne Spirits,106,Stedro Boulders,89
+,Holy Yektonisa Bishops,94,Faehrenfall Feathercats,112
+,Holykol Bears,147,Ethanthova Ponies,142
+,Lyintaria Lynx,105,Dotruga Falno,112
+,Pyxanovia Pixies,122,Boltway Bad Dragons,119
+,Transhimalia Disasters,115,Avura Aviators,93
+,Auspikitan Golden Falcons,105,Aiyota Pumps,99
+,Calto Cows,105,Shmupland Dictators,116
+,Height Sagua Cats,96,Serkr Atolls,99
+,Key to Don Yees,102,Red Rainbow Sickles,115
+,Manwx Saguans,96,Naxda Nomads,92
+,Sagua Ocelots,92,Kaeshar Kaisers,101
+,Solea Geysers,117,Blanaxon Hammers,122
+,Autolik Autonomy,108,Barsein Bats,99
+Game 58,Home,Score,Away,Score
+,Dvimne Spirits,110,Aahrus Moosi,96
+,Holy Yektonisa Bishops,104,Czalliso Pythons,105
+,Holykol Bears,127,Bongatar Banging Bongos,109
+,Lyintaria Lynx,111,TND Tanks,96
+,Pyxanovia Pixies,113,Stedro Boulders,106
+,Transhimalia Disasters,94,Faehrenfall Feathercats,113
+,Auspikitan Golden Falcons,125,Ethanthova Ponies,110
+,Calto Cows,107,Dotruga Falno,111
+,Height Sagua Cats,106,Boltway Bad Dragons,118
+,Key to Don Yees,91,Avura Aviators,93
+,Manwx Saguans,121,Aiyota Pumps,126
+,Sagua Ocelots,101,Shmupland Dictators,107
+,Solea Geysers,117,Serkr Atolls,122
+,Autolik Autonomy,100,Red Rainbow Sickles,106
+,Barsein Bats,98,Naxda Nomads,124
+,Blanaxon Hammers,114,Kaeshar Kaisers,89
+Game 59,Home,Score,Away,Score
+,Transhimalia Disasters,111,Aiyota Pumps,116
+,Pyxanovia Pixies,97,Avura Aviators,98
+,Lyintaria Lynx,85,Boltway Bad Dragons,114
+,Holykol Bears,119,Dotruga Falno,134
+,Holy Yektonisa Bishops,86,Ethanthova Ponies,116
+,Dvimne Spirits,97,Faehrenfall Feathercats,93
+,Czalliso Pythons,101,Stedro Boulders,97
+,Bongatar Banging Bongos,98,TND Tanks,110
+,Aahrus Moosi,93,Shmupland Dictators,96
+,Auspikitan Golden Falcons,89,Serkr Atolls,107
+,Calto Cows,97,Red Rainbow Sickles,88
+,Height Sagua Cats,99,Naxda Nomads,96
+,Key to Don Yees,88,Kaeshar Kaisers,105
+,Manwx Saguans,121,Blanaxon Hammers,116
+,Sagua Ocelots,115,Barsein Bats,111
+,Solea Geysers,102,Autolik Autonomy,98
+Game 60,Home,Score,Away,Score
+,TND Tanks,114,Aahrus Moosi,117
+,Stedro Boulders,103,Bongatar Banging Bongos,101
+,Faehrenfall Feathercats,102,Czalliso Pythons,106
+,Ethanthova Ponies,103,Dvimne Spirits,109
+,Dotruga Falno,100,Holy Yektonisa Bishops,102
+,Boltway Bad Dragons,125,Holykol Bears,126
+,Avura Aviators,117,Lyintaria Lynx,120
+,Aiyota Pumps,139,Pyxanovia Pixies,120
+,Shmupland Dictators,125,Transhimalia Disasters,102
+,Serkr Atolls,104,Auspikitan Golden Falcons,97
+,Red Rainbow Sickles,94,Calto Cows,123
+,Naxda Nomads,115,Height Sagua Cats,103
+,Kaeshar Kaisers,115,Key to Don Yees,95
+,Blanaxon Hammers,91,Manwx Saguans,112
+,Barsein Bats,83,Sagua Ocelots,111
+,Autolik Autonomy,110,Solea Geysers,107
+Game 61,Home,Score,Away,Score
+,Aahrus Moosi,110,Dotruga Falno,107
+,Ethanthova Ponies,113,Boltway Bad Dragons,131
+,Faehrenfall Feathercats,102,Avura Aviators,106
+,Stedro Boulders,97,Aiyota Pumps,116
+,TND Tanks,99,Shmupland Dictators,114
+,Bongatar Banging Bongos,92,Serkr Atolls,105
+,Czalliso Pythons,113,Red Rainbow Sickles,111
+,Dvimne Spirits,100,Naxda Nomads,114
+,Holy Yektonisa Bishops,87,Kaeshar Kaisers,85
+,Holykol Bears,141,Blanaxon Hammers,132
+,Lyintaria Lynx,124,Barsein Bats,126
+,Pyxanovia Pixies,95,Autolik Autonomy,101
+,Transhimalia Disasters,115,Solea Geysers,93
+,Auspikitan Golden Falcons,105,Sagua Ocelots,118
+,Calto Cows,107,Manwx Saguans,94
+,Height Sagua Cats,123,Key to Don Yees,118
+Game 62,Home,Score,Away,Score
+,Sagua Ocelots,120,Aahrus Moosi,123
+,Solea Geysers,120,Manwx Saguans,96
+,Auspikitan Golden Falcons,113,Key to Don Yees,102
+,Height Sagua Cats,100,Calto Cows,119
+,Serkr Atolls,89,Autolik Autonomy,90
+,Shmupland Dictators,117,Red Rainbow Sickles,111
+,Barsein Bats,87,Naxda Nomads,95
+,Kaeshar Kaisers,122,Blanaxon Hammers,99
+,Czalliso Pythons,135,Transhimalia Disasters,123
+,Bongatar Banging Bongos,89,Dvimne Spirits,106
+,Pyxanovia Pixies,78,Holy Yektonisa Bishops,94
+,Holykol Bears,106,Lyintaria Lynx,91
+,Avura Aviators,110,TND Tanks,108
+,Aiyota Pumps,107,Boltway Bad Dragons,112
+,Stedro Boulders,86,Dotruga Falno,92
+,Ethanthova Ponies,109,Faehrenfall Feathercats,112
+Game 63,Home,Score,Away,Score
+,Avura Aviators,119,Transhimalia Disasters,127
+,Aiyota Pumps,109,Boltway Bad Dragons,105
+,Pyxanovia Pixies,124,Dotruga Falno,123
+,Lyintaria Lynx,103,Ethanthova Ponies,110
+,Holykol Bears,86,Faehrenfall Feathercats,99
+,Holy Yektonisa Bishops,92,Stedro Boulders,100
+,Dvimne Spirits,107,TND Tanks,99
+,Czalliso Pythons,99,Bongatar Banging Bongos,101
+,Serkr Atolls,97,Aahrus Moosi,105
+,Shmupland Dictators,106,Red Rainbow Sickles,105
+,Auspikitan Golden Falcons,112,Naxda Nomads,118
+,Calto Cows,92,Kaeshar Kaisers,99
+,Height Sagua Cats,123,Blanaxon Hammers,101
+,Key to Don Yees,108,Barsein Bats,98
+,Manwx Saguans,97,Autolik Autonomy,99
+,Sagua Ocelots,122,Solea Geysers,114
+Game 64,Home,Score,Away,Score
+,Ethanthova Ponies,106,Aahrus Moosi,107
+,Faehrenfall Feathercats,108,Dotruga Falno,121
+,Stedro Boulders,84,Boltway Bad Dragons,92
+,TND Tanks,107,Avura Aviators,111
+,Bongatar Banging Bongos,104,Aiyota Pumps,99
+,Czalliso Pythons,116,Shmupland Dictators,115
+,Dvimne Spirits,108,Serkr Atolls,98
+,Holy Yektonisa Bishops,92,Red Rainbow Sickles,99
+,Holykol Bears,114,Naxda Nomads,127
+,Lyintaria Lynx,110,Kaeshar Kaisers,113
+,Pyxanovia Pixies,111,Blanaxon Hammers,129
+,Transhimalia Disasters,97,Barsein Bats,104
+,Auspikitan Golden Falcons,78,Autolik Autonomy,98
+,Calto Cows,100,Solea Geysers,96
+,Height Sagua Cats,102,Sagua Ocelots,122
+,Key to Don Yees,103,Manwx Saguans,98
+Game 65,Home,Score,Away,Score
+,Auspikitan Golden Falcons,108,Aahrus Moosi,118
+,Calto Cows,120,Solea Geysers,119
+,Height Sagua Cats,97,Sagua Ocelots,114
+,Manwx Saguans,102,Key to Don Yees,110
+,Barsein Bats,88,Autolik Autonomy,99
+,Blanaxon Hammers,121,Shmupland Dictators,104
+,Kaeshar Kaisers,94,Serkr Atolls,96
+,Red Rainbow Sickles,104,Naxda Nomads,114
+,Pyxanovia Pixies,124,Transhimalia Disasters,113
+,Lyintaria Lynx,86,Bongatar Banging Bongos,94
+,Holykol Bears,159,Czalliso Pythons,126
+,Dvimne Spirits,102,Holy Yektonisa Bishops,101
+,Stedro Boulders,92,TND Tanks,90
+,Faehrenfall Feathercats,115,Aiyota Pumps,112
+,Ethanthova Ponies,143,Avura Aviators,127
+,Boltway Bad Dragons,109,Dotruga Falno,105
+Game 66,Home,Score,Away,Score
+,Aahrus Moosi,112,Serkr Atolls,120
+,Red Rainbow Sickles,100,Shmupland Dictators,104
+,Naxda Nomads,121,Aiyota Pumps,132
+,Kaeshar Kaisers,130,Avura Aviators,114
+,Blanaxon Hammers,115,Boltway Bad Dragons,106
+,Barsein Bats,95,Dotruga Falno,132
+,Autolik Autonomy,130,Ethanthova Ponies,126
+,Solea Geysers,114,Faehrenfall Feathercats,93
+,Sagua Ocelots,123,Stedro Boulders,96
+,Manwx Saguans,113,TND Tanks,106
+,Key to Don Yees,82,Bongatar Banging Bongos,88
+,Height Sagua Cats,129,Czalliso Pythons,108
+,Calto Cows,105,Dvimne Spirits,97
+,Auspikitan Golden Falcons,93,Holy Yektonisa Bishops,101
+,Transhimalia Disasters,112,Holykol Bears,121
+,Pyxanovia Pixies,119,Lyintaria Lynx,125
+Game 67,Home,Score,Away,Score
+,Transhimalia Disasters,91,Boltway Bad Dragons,115
+,Avura Aviators,95,Dotruga Falno,123
+,Aiyota Pumps,125,Ethanthova Ponies,134
+,Pyxanovia Pixies,91,Faehrenfall Feathercats,97
+,Lyintaria Lynx,100,Stedro Boulders,97
+,Holykol Bears,111,TND Tanks,107
+,Holy Yektonisa Bishops,87,Bongatar Banging Bongos,105
+,Dvimne Spirits,111,Czalliso Pythons,114
+,Aahrus Moosi,107,Red Rainbow Sickles,95
+,Serkr Atolls,105,Naxda Nomads,100
+,Shmupland Dictators,86,Kaeshar Kaisers,77
+,Auspikitan Golden Falcons,107,Blanaxon Hammers,105
+,Calto Cows,100,Barsein Bats,101
+,Height Sagua Cats,102,Autolik Autonomy,109
+,Key to Don Yees,114,Solea Geysers,113
+,Manwx Saguans,122,Sagua Ocelots,104
+Game 68,Home,Score,Away,Score
+,Naxda Nomads,109,Aahrus Moosi,104
+,Red Rainbow Sickles,87,Kaeshar Kaisers,105
+,Serkr Atolls,122,Blanaxon Hammers,121
+,Shmupland Dictators,103,Barsein Bats,106
+,Aiyota Pumps,112,Autolik Autonomy,99
+,Avura Aviators,90,Solea Geysers,136
+,Boltway Bad Dragons,108,Sagua Ocelots,91
+,Dotruga Falno,120,Manwx Saguans,91
+,Ethanthova Ponies,113,Key to Don Yees,125
+,Faehrenfall Feathercats,89,Height Sagua Cats,101
+,Stedro Boulders,93,Calto Cows,109
+,TND Tanks,110,Auspikitan Golden Falcons,101
+,Bongatar Banging Bongos,95,Transhimalia Disasters,87
+,Czalliso Pythons,123,Pyxanovia Pixies,115
+,Dvimne Spirits,124,Lyintaria Lynx,111
+,Holy Yektonisa Bishops,110,Holykol Bears,97
+Game 69,Home,Score,Away,Score
+,Height Sagua Cats,121,Aahrus Moosi,109
+,Calto Cows,91,Key to Don Yees,83
+,Auspikitan Golden Falcons,100,Manwx Saguans,106
+,Transhimalia Disasters,118,Sagua Ocelots,129
+,Pyxanovia Pixies,96,Solea Geysers,115
+,Lyintaria Lynx,118,Autolik Autonomy,95
+,Holykol Bears,134,Barsein Bats,115
+,Holy Yektonisa Bishops,105,Blanaxon Hammers,92
+,Dvimne Spirits,98,Kaeshar Kaisers,103
+,Czalliso Pythons,105,Naxda Nomads,124
+,Bongatar Banging Bongos,113,Red Rainbow Sickles,102
+,TND Tanks,108,Serkr Atolls,107
+,Stedro Boulders,106,Shmupland Dictators,84
+,Faehrenfall Feathercats,117,Aiyota Pumps,92
+,Ethanthova Ponies,136,Avura Aviators,137
+,Dotruga Falno,113,Boltway Bad Dragons,106
+Game 70,Home,Score,Away,Score
+,Holy Yektonisa Bishops,117,Transhimalia Disasters,110
+,Dvimne Spirits,114,Holykol Bears,121
+,Czalliso Pythons,115,Lyintaria Lynx,118
+,Bongatar Banging Bongos,104,Pyxanovia Pixies,98
+,TND Tanks,122,Aiyota Pumps,142
+,Stedro Boulders,124,Avura Aviators,125
+,Faehrenfall Feathercats,92,Boltway Bad Dragons,93
+,Ethanthova Ponies,125,Dotruga Falno,138
+,Key to Don Yees,101,Aahrus Moosi,94
+,Manwx Saguans,107,Height Sagua Cats,114
+,Sagua Ocelots,105,Calto Cows,108
+,Solea Geysers,119,Auspikitan Golden Falcons,110
+,Autolik Autonomy,93,Shmupland Dictators,98
+,Barsein Bats,87,Serkr Atolls,110
+,Blanaxon Hammers,103,Red Rainbow Sickles,108
+,Kaeshar Kaisers,98,Naxda Nomads,99
+Game 71,Home,Score,Away,Score
+,Aahrus Moosi,102,Sagua Ocelots,112
+,Manwx Saguans,92,Solea Geysers,123
+,Key to Don Yees,109,Autolik Autonomy,106
+,Height Sagua Cats,102,Barsein Bats,106
+,Calto Cows,105,Blanaxon Hammers,84
+,Auspikitan Golden Falcons,91,Kaeshar Kaisers,96
+,Transhimalia Disasters,110,Naxda Nomads,104
+,Pyxanovia Pixies,122,Red Rainbow Sickles,110
+,Lyintaria Lynx,96,Serkr Atolls,111
+,Holykol Bears,116,Shmupland Dictators,124
+,Holy Yektonisa Bishops,123,Aiyota Pumps,111
+,Dvimne Spirits,101,Avura Aviators,94
+,Czalliso Pythons,123,Boltway Bad Dragons,106
+,Bongatar Banging Bongos,92,Dotruga Falno,100
+,TND Tanks,114,Ethanthova Ponies,117
+,Stedro Boulders,79,Faehrenfall Feathercats,84
+Game 72,Home,Score,Away,Score
+,Holy Yektonisa Bishops,98,Aahrus Moosi,115
+,Dvimne Spirits,124,Holykol Bears,101
+,Czalliso Pythons,108,Lyintaria Lynx,105
+,Bongatar Banging Bongos,102,Pyxanovia Pixies,105
+,TND Tanks,104,Transhimalia Disasters,110
+,Stedro Boulders,81,Auspikitan Golden Falcons,99
+,Faehrenfall Feathercats,84,Calto Cows,95
+,Ethanthova Ponies,119,Height Sagua Cats,127
+,Dotruga Falno,113,Key to Don Yees,72
+,Boltway Bad Dragons,109,Manwx Saguans,103
+,Avura Aviators,120,Sagua Ocelots,117
+,Aiyota Pumps,127,Solea Geysers,121
+,Shmupland Dictators,97,Autolik Autonomy,111
+,Serkr Atolls,110,Barsein Bats,100
+,Red Rainbow Sickles,102,Blanaxon Hammers,108
+,Naxda Nomads,104,Kaeshar Kaisers,101
+Game 73,Home,Score,Away,Score
+,Aahrus Moosi,113,Blanaxon Hammers,107
+,Barsein Bats,106,Kaeshar Kaisers,116
+,Autolik Autonomy,99,Naxda Nomads,94
+,Solea Geysers,116,Red Rainbow Sickles,111
+,Sagua Ocelots,106,Serkr Atolls,98
+,Manwx Saguans,109,Shmupland Dictators,107
+,Key to Don Yees,131,Aiyota Pumps,112
+,Height Sagua Cats,111,Avura Aviators,132
+,Calto Cows,107,Boltway Bad Dragons,101
+,Auspikitan Golden Falcons,101,Dotruga Falno,102
+,Transhimalia Disasters,104,Ethanthova Ponies,111
+,Pyxanovia Pixies,85,Faehrenfall Feathercats,82
+,Lyintaria Lynx,99,Stedro Boulders,96
+,Holykol Bears,117,TND Tanks,109
+,Holy Yektonisa Bishops,75,Bongatar Banging Bongos,77
+,Dvimne Spirits,101,Czalliso Pythons,102
+Game 74,Home,Score,Away,Score
+,Aahrus Moosi,98,Naxda Nomads,112
+,Kaeshar Kaisers,129,Red Rainbow Sickles,116
+,Blanaxon Hammers,116,Serkr Atolls,95
+,Barsein Bats,116,Shmupland Dictators,115
+,Autolik Autonomy,121,Aiyota Pumps,114
+,Solea Geysers,117,Avura Aviators,107
+,Sagua Ocelots,91,Boltway Bad Dragons,109
+,Manwx Saguans,110,Dotruga Falno,126
+,Key to Don Yees,116,Ethanthova Ponies,120
+,Height Sagua Cats,91,Faehrenfall Feathercats,88
+,Calto Cows,77,Stedro Boulders,82
+,Auspikitan Golden Falcons,104,TND Tanks,90
+,Transhimalia Disasters,95,Bongatar Banging Bongos,96
+,Pyxanovia Pixies,120,Czalliso Pythons,125
+,Lyintaria Lynx,99,Dvimne Spirits,104
+,Holykol Bears,100,Holy Yektonisa Bishops,93
+Game 75,Home,Score,Away,Score
+,Aahrus Moosi,111,Aiyota Pumps,132
+,Shmupland Dictators,108,Avura Aviators,103
+,Serkr Atolls,101,Boltway Bad Dragons,95
+,Red Rainbow Sickles,139,Dotruga Falno,120
+,Naxda Nomads,112,Ethanthova Ponies,103
+,Kaeshar Kaisers,91,Faehrenfall Feathercats,92
+,Blanaxon Hammers,103,Stedro Boulders,93
+,Barsein Bats,108,TND Tanks,120
+,Autolik Autonomy,90,Bongatar Banging Bongos,91
+,Solea Geysers,120,Czalliso Pythons,121
+,Sagua Ocelots,104,Dvimne Spirits,107
+,Manwx Saguans,60,Holy Yektonisa Bishops,98
+,Key to Don Yees,104,Holykol Bears,125
+,Height Sagua Cats,114,Lyintaria Lynx,119
+,Calto Cows,113,Pyxanovia Pixies,100
+,Auspikitan Golden Falcons,110,Transhimalia Disasters,99
+Game 76,Home,Score,Away,Score
+,Red Rainbow Sickles,115,Aahrus Moosi,123
+,Naxda Nomads,78,Serkr Atolls,94
+,Kaeshar Kaisers,120,Shmupland Dictators,104
+,Blanaxon Hammers,96,Aiyota Pumps,109
+,Barsein Bats,100,Avura Aviators,103
+,Autolik Autonomy,113,Boltway Bad Dragons,114
+,Solea Geysers,134,Dotruga Falno,131
+,Sagua Ocelots,132,Ethanthova Ponies,116
+,Manwx Saguans,93,Faehrenfall Feathercats,80
+,Key to Don Yees,89,Stedro Boulders,92
+,Height Sagua Cats,101,TND Tanks,110
+,Calto Cows,100,Bongatar Banging Bongos,96
+,Auspikitan Golden Falcons,89,Czalliso Pythons,110
+,Transhimalia Disasters,114,Dvimne Spirits,106
+,Pyxanovia Pixies,108,Holy Yektonisa Bishops,85
+,Lyintaria Lynx,122,Holykol Bears,140
+Game 77,Home,Score,Away,Score
+,TND Tanks,119,Transhimalia Disasters,102
+,Stedro Boulders,71,Bongatar Banging Bongos,101
+,Faehrenfall Feathercats,89,Czalliso Pythons,112
+,Ethanthova Ponies,114,Dvimne Spirits,128
+,Dotruga Falno,122,Holy Yektonisa Bishops,84
+,Boltway Bad Dragons,133,Holykol Bears,117
+,Avura Aviators,114,Lyintaria Lynx,117
+,Aiyota Pumps,115,Pyxanovia Pixies,128
+,Autolik Autonomy,102,Aahrus Moosi,113
+,Barsein Bats,81,Solea Geysers,113
+,Blanaxon Hammers,111,Sagua Ocelots,128
+,Kaeshar Kaisers,98,Manwx Saguans,86
+,Naxda Nomads,116,Key to Don Yees,109
+,Red Rainbow Sickles,103,Height Sagua Cats,102
+,Serkr Atolls,112,Calto Cows,89
+,Shmupland Dictators,95,Auspikitan Golden Falcons,96
+Game 78,Home,Score,Away,Score
+,Key to Don Yees,116,Aahrus Moosi,113
+,Manwx Saguans,88,Height Sagua Cats,124
+,Sagua Ocelots,87,Calto Cows,94
+,Solea Geysers,105,Auspikitan Golden Falcons,94
+,Autolik Autonomy,105,Transhimalia Disasters,104
+,Barsein Bats,105,Pyxanovia Pixies,125
+,Blanaxon Hammers,105,Lyintaria Lynx,104
+,Kaeshar Kaisers,112,Holykol Bears,116
+,Naxda Nomads,98,Holy Yektonisa Bishops,93
+,Red Rainbow Sickles,79,Dvimne Spirits,116
+,Serkr Atolls,99,Czalliso Pythons,83
+,Shmupland Dictators,86,Bongatar Banging Bongos,107
+,Aiyota Pumps,161,TND Tanks,153
+,Avura Aviators,87,Stedro Boulders,103
+,Boltway Bad Dragons,100,Faehrenfall Feathercats,89
+,Dotruga Falno,149,Ethanthova Ponies,130
+Game 79,Home,Score,Away,Score
+,Aahrus Moosi,103,Calto Cows,109
+,Auspikitan Golden Falcons,104,Height Sagua Cats,92
+,Transhimalia Disasters,117,Key to Don Yees,103
+,Pyxanovia Pixies,116,Manwx Saguans,112
+,Lyintaria Lynx,129,Sagua Ocelots,101
+,Holykol Bears,115,Solea Geysers,113
+,Holy Yektonisa Bishops,84,Autolik Autonomy,92
+,Dvimne Spirits,101,Barsein Bats,79
+,Czalliso Pythons,115,Blanaxon Hammers,111
+,Bongatar Banging Bongos,89,Kaeshar Kaisers,84
+,TND Tanks,97,Naxda Nomads,99
+,Stedro Boulders,98,Red Rainbow Sickles,96
+,Faehrenfall Feathercats,85,Serkr Atolls,98
+,Ethanthova Ponies,123,Shmupland Dictators,111
+,Dotruga Falno,112,Aiyota Pumps,115
+,Boltway Bad Dragons,112,Avura Aviators,101
+Game 80,Home,Score,Away,Score
+,Aahrus Moosi,109,Height Sagua Cats,103
+,Key to Don Yees,73,Calto Cows,93
+,Manwx Saguans,110,Auspikitan Golden Falcons,114
+,Solea Geysers,109,Sagua Ocelots,111
+,Autolik Autonomy,73,Kaeshar Kaisers,97
+,Naxda Nomads,100,Blanaxon Hammers,88
+,Red Rainbow Sickles,111,Barsein Bats,106
+,Shmupland Dictators,110,Serkr Atolls,112
+,Transhimalia Disasters,123,Holykol Bears,119
+,Holy Yektonisa Bishops,112,Lyintaria Lynx,99
+,Dvimne Spirits,97,Pyxanovia Pixies,105
+,Bongatar Banging Bongos,120,Czalliso Pythons,107
+,TND Tanks,144,Ethanthova Ponies,134
+,Dotruga Falno,96,Faehrenfall Feathercats,90
+,Boltway Bad Dragons,76,Stedro Boulders,77
+,Aiyota Pumps,116,Avura Aviators,119
+Game 81,Home,Score,Away,Score
+,Aahrus Moosi,111,Red Rainbow Sickles,119
+,Serkr Atolls,110,Naxda Nomads,92
+,Shmupland Dictators,107,Kaeshar Kaisers,119
+,Aiyota Pumps,117,Blanaxon Hammers,107
+,Avura Aviators,90,Barsein Bats,101
+,Boltway Bad Dragons,87,Autolik Autonomy,84
+,Dotruga Falno,108,Solea Geysers,102
+,Ethanthova Ponies,127,Sagua Ocelots,128
+,Faehrenfall Feathercats,113,Manwx Saguans,97
+,Stedro Boulders,106,Key to Don Yees,93
+,TND Tanks,116,Height Sagua Cats,118
+,Bongatar Banging Bongos,90,Calto Cows,103
+,Czalliso Pythons,100,Auspikitan Golden Falcons,95
+,Dvimne Spirits,121,Transhimalia Disasters,116
+,Holy Yektonisa Bishops,110,Pyxanovia Pixies,105
+,Holykol Bears,123,Lyintaria Lynx,116
+Game 82,Home,Score,Away,Score
+,Calto Cows,91,Aahrus Moosi,114
+,Height Sagua Cats,106,Auspikitan Golden Falcons,105
+,Key to Don Yees,107,Transhimalia Disasters,113
+,Manwx Saguans,96,Pyxanovia Pixies,104
+,Sagua Ocelots,130,Lyintaria Lynx,103
+,Solea Geysers,118,Holykol Bears,108
+,Autolik Autonomy,82,Holy Yektonisa Bishops,88
+,Barsein Bats,73,Dvimne Spirits,97
+,Blanaxon Hammers,118,Czalliso Pythons,128
+,Kaeshar Kaisers,92,Bongatar Banging Bongos,102
+,Naxda Nomads,110,TND Tanks,120
+,Red Rainbow Sickles,113,Stedro Boulders,111
+,Serkr Atolls,92,Faehrenfall Feathercats,100
+,Shmupland Dictators,107,Ethanthova Ponies,123
+,Aiyota Pumps,110,Dotruga Falno,116
+,Avura Aviators,103,Boltway Bad Dragons,109
+Game 83,Home,Score,Away,Score
+,Stedro Boulders,96,Aahrus Moosi,94
+,TND Tanks,106,Faehrenfall Feathercats,111
+,Bongatar Banging Bongos,125,Ethanthova Ponies,108
+,Czalliso Pythons,108,Dotruga Falno,120
+,Dvimne Spirits,94,Boltway Bad Dragons,92
+,Holy Yektonisa Bishops,103,Avura Aviators,99
+,Holykol Bears,143,Aiyota Pumps,141
+,Lyintaria Lynx,110,Shmupland Dictators,96
+,Pyxanovia Pixies,111,Serkr Atolls,99
+,Transhimalia Disasters,115,Red Rainbow Sickles,113
+,Auspikitan Golden Falcons,105,Naxda Nomads,99
+,Calto Cows,99,Kaeshar Kaisers,89
+,Height Sagua Cats,114,Blanaxon Hammers,107
+,Key to Don Yees,108,Barsein Bats,111
+,Manwx Saguans,104,Autolik Autonomy,113
+,Sagua Ocelots,141,Solea Geysers,113
+Game 84,Home,Score,Away,Score
+,Aahrus Moosi,123,TND Tanks,131
+,Bongatar Banging Bongos,98,Stedro Boulders,94
+,Czalliso Pythons,89,Faehrenfall Feathercats,111
+,Dvimne Spirits,101,Ethanthova Ponies,106
+,Holy Yektonisa Bishops,86,Dotruga Falno,110
+,Holykol Bears,120,Boltway Bad Dragons,114
+,Lyintaria Lynx,95,Avura Aviators,113
+,Pyxanovia Pixies,149,Aiyota Pumps,142
+,Transhimalia Disasters,102,Shmupland Dictators,103
+,Auspikitan Golden Falcons,122,Serkr Atolls,102
+,Calto Cows,100,Red Rainbow Sickles,106
+,Height Sagua Cats,90,Naxda Nomads,94
+,Key to Don Yees,113,Kaeshar Kaisers,98
+,Manwx Saguans,119,Blanaxon Hammers,106
+,Sagua Ocelots,118,Barsein Bats,105
+,Solea Geysers,122,Autolik Autonomy,100

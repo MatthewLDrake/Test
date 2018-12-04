@@ -25,9 +25,9 @@ public class SetupNewSeason
         ClearTeams();
         AdvanceYear();
         MovePlayersToTeams();
-        ResizeRoster();
+        /*ResizeRoster();
 
-        CalculatePositionRank();
+        //CalculatePositionRank();
 
         PrintInformation();
 
@@ -44,7 +44,7 @@ public class SetupNewSeason
 
         PrintWikiInfo();
 
-        //GenerateFIBUTeams();
+        //GenerateFIBUTeams();*/
     }
     public SetupNewSeason(createTeams create, FormulaBasketball.Random r, FreeAgents free)
     {
@@ -1538,6 +1538,7 @@ public class SetupNewSeason
 
         for (int i = 0; i < create.size(); i++)
         {
+            if (create.getTeam(i).getAllPlayer().Count < 15) create.getTeam(i).ResizeRoster(freeAgents);
             freeAgents.Remove(create.getTeam(i).getAllPlayer());
             freeAgents.Remove(create.getTeam(i).GetAffiliate().getAllPlayer());
         }
@@ -1587,7 +1588,7 @@ public class SetupNewSeason
     }
 }
 
-class Payroll : IComparable<Payroll>
+public class Payroll : IComparable<Payroll>
 {
     private double money;
     private string team;

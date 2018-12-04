@@ -1,41 +1,41 @@
 Dotruga Falno Stats
-Player Record of Points: Persa Mersa: 38 points on game 4 against the Autolik Autonomy
-Player Record of Assists: Okaget Mabipet: 21 assists on game 10 against the Lyintaria Lynx
-Player Record of Rebounds: Okaget Mabipet: 20 rebounds on game 3 against the Boltway Bad Dragons
-Team Record in Most Points Scored: Dotruga Falno: 119 points on game 13 against the Avura Aviators
-Team Record in Least Points Scored: Dotruga Falno: 73 points on game 3 against the Boltway Bad Dragons
-Team Record in Least Points Allowed: Dotruga Falno: 76 points on game 7 against the Sagua Ocelots
-Team Record in Most Points Allowed: Dotruga Falno: 121 points on game 8 against the Blanaxon Hammers
+Player Record of Points: Atakri Kalauni: 49 points on game 42 against the Ethanthova Ponies
+Player Record of Assists: Atakri Kalauni: 19 assists on game 15 against the Red Rainbow Sickles
+Player Record of Rebounds: Atumobei Tute: 21 rebounds on game 19 against the Holykol Bears
+Team Record in Most Points Scored: Dotruga Falno: 153 points on game 34 against the Avura Aviators
+Team Record in Least Points Scored: Dotruga Falno: 92 points on game 53 against the Kaeshar Kaisers
+Team Record in Least Points Allowed: Dotruga Falno: 72 points on game 72 against the Key to Don Yees
+Team Record in Most Points Allowed: Dotruga Falno: 139 points on game 75 against the Red Rainbow Sickles
 Records vs. Each Team this season:
-Aahrus Moosi: 0-0
-Auspikitan Golden Falcons: 1-0
-Calto Cows: 0-0
-Height Sagua Cats: 0-0
-Key to Don Yees: 0-0
-Manwx Saguans: 0-0
-Sagua Ocelots: 2-0
-Solea Geysers: 0-0
-Autolik Autonomy: 1-0
-Barsein Bats: 0-0
-Blanaxon Hammers: 0-1
-Kaeshar Kaisers: 0-0
-Naxda Nomads: 1-0
-Red Rainbow Sickles: 1-0
-Serkr Atolls: 1-0
-Shmupland Dictators: 0-0
-Aiyota Pumps: 0-0
-Avura Aviators: 1-0
-Boltway Bad Dragons: 0-2
+Aahrus Moosi: 0-2
+Auspikitan Golden Falcons: 2-0
+Calto Cows: 1-1
+Height Sagua Cats: 2-0
+Key to Don Yees: 2-0
+Manwx Saguans: 2-0
+Sagua Ocelots: 1-1
+Solea Geysers: 1-1
+Autolik Autonomy: 2-0
+Barsein Bats: 2-0
+Blanaxon Hammers: 1-1
+Kaeshar Kaisers: 2-0
+Naxda Nomads: 2-0
+Red Rainbow Sickles: 1-1
+Serkr Atolls: 1-1
+Shmupland Dictators: 1-1
+Aiyota Pumps: 2-2
+Avura Aviators: 4-0
+Boltway Bad Dragons: 2-2
 Dotruga Falno: 0-0
-Ethanthova Ponies: 0-0
-Faehrenfall Feathercats: 0-0
-Stedro Boulders: 1-0
-TND Tanks: 1-0
-Bongatar Banging Bongos: 0-0
-Czalliso Pythons: 0-1
-Dvimne Spirits: 0-0
-Holy Yektonisa Bishops: 0-0
-Holykol Bears: 0-0
-Lyintaria Lynx: 1-0
-Pyxanovia Pixies: 0-0
-Transhimalia Disasters: 0-1
+Ethanthova Ponies: 4-0
+Faehrenfall Feathercats: 4-0
+Stedro Boulders: 2-2
+TND Tanks: 4-0
+Bongatar Banging Bongos: 1-2
+Czalliso Pythons: 3-0
+Dvimne Spirits: 2-1
+Holy Yektonisa Bishops: 2-1
+Holykol Bears: 3-0
+Lyintaria Lynx: 3-0
+Pyxanovia Pixies: 1-2
+Transhimalia Disasters: 2-1

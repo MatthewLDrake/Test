@@ -13,17 +13,37 @@ using System.Windows.Forms;
 
 namespace ResigningPlayers
 {
-    public partial class Form1 : Form
+    public partial class ResignPlayers : Form
     {
         private createTeams create;
         private team team;
         private FormulaBasketball.Random r;
-        public Form1()
+        public ResignPlayers()
         {
             InitializeComponent();
             r = new FormulaBasketball.Random();
             LoadInfo();
             
+        }
+        public ResignPlayers(createTeams create, team team, FormulaBasketball.Random r)
+        {
+            InitializeComponent();
+            this.r = r;
+            this.team = team;
+            this.create = create;
+
+            foreach (player player in team)
+            {
+                player.endSeason();
+                if (player.ContractExpired())
+                {
+                    dataGridView1.Rows.Add(player.getName(), player.getPosition(), player.getOverall(), player.getDevelopment(), player.GetMoneyPerYear(), player.GetPlayerID());
+                }
+                else
+                {
+                    dataGridView2.Rows.Add(player.getName(), player.getPosition(), player.getOverall(), player.getDevelopment(), player.GetMoneyPerYear(), player.GetPlayerID(), player.GetYearsLeft());
+                }
+            }
         }
         private void LoadInfo()
         {
