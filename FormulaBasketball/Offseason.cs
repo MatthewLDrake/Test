@@ -7,8 +7,8 @@ public class Offseason
     private List<team> teams;
     private FreeAgents freeAgency;
     private FormulaBasketball.Random r;
-    private List<player> rookies;
-    public Offseason(List<team> teams, FreeAgents freeAgency, List<player> rookies, FormulaBasketball.Random r)
+    private List<CollegePlayer> rookies;
+    public Offseason(List<team> teams, FreeAgents freeAgency, List<CollegePlayer> rookies, FormulaBasketball.Random r)
     {
         this.rookies = rookies;
         this.teams = teams;

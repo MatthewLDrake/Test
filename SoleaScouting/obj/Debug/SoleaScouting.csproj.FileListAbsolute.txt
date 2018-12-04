@@ -1,0 +1,11 @@
+C:\Users\Matthew\source\repos\SoleaScouting\SoleaScouting\bin\Debug\SoleaScouting.exe.config
+C:\Users\Matthew\source\repos\SoleaScouting\SoleaScouting\bin\Debug\SoleaScouting.exe
+C:\Users\Matthew\source\repos\SoleaScouting\SoleaScouting\bin\Debug\SoleaScouting.pdb
+C:\Users\Matthew\source\repos\SoleaScouting\SoleaScouting\obj\Debug\SoleaScouting.csprojResolveAssemblyReference.cache
+C:\Users\Matthew\source\repos\SoleaScouting\SoleaScouting\obj\Debug\SoleaScouting.Form1.resources
+C:\Users\Matthew\source\repos\SoleaScouting\SoleaScouting\obj\Debug\SoleaScouting.Properties.Resources.resources
+C:\Users\Matthew\source\repos\SoleaScouting\SoleaScouting\obj\Debug\SoleaScouting.csproj.GenerateResource.Cache
+C:\Users\Matthew\source\repos\SoleaScouting\SoleaScouting\obj\Debug\SoleaScouting.csproj.CoreCompileInputs.cache
+C:\Users\Matthew\source\repos\SoleaScouting\SoleaScouting\obj\Debug\SoleaScouting.exe
+C:\Users\Matthew\source\repos\SoleaScouting\SoleaScouting\obj\Debug\SoleaScouting.pdb
+C:\Users\Matthew\source\repos\SoleaScouting\SoleaScouting\obj\Debug\SoleaScouting.DisplayPlayer.resources

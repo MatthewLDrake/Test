@@ -11,16 +11,18 @@ using System.IO;
 using System.Net;
 using System.Net.Sockets;
 
+
 namespace FormulaBasketball
 {
     public partial class Form1 : Form
     {
         Random r;
         private string[] files;
-        public Form1()
+        private bool game;
+        public Form1(bool game = true)
         {
             InitializeComponent();
-
+            this.game = game;
             
 
             r = new Random();
@@ -39,7 +41,10 @@ namespace FormulaBasketball
         {
             
             Visible = false;
-            formulaBasketball formula = new formulaBasketball(sender.Equals(yesButton), listView1.SelectedCells[0].OwningRow.Cells[0].EditedFormattedValue.ToString(),null, null);
+            if (game)
+                new formulaBasketball(sender.Equals(yesButton), listView1.SelectedCells[0].OwningRow.Cells[0].EditedFormattedValue.ToString(), null, null);
+            else
+                new Free_Agency.Menu(formulaBasketball.DeSerializeObject(listView1.SelectedCells[0].OwningRow.Cells[0].EditedFormattedValue.ToString()), 7, r).ShowDialog();
             Close();
         }
 

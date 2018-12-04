@@ -101,6 +101,13 @@ namespace FormulaBasketball
         {
             textBox1.Text = textBox1.Text + Environment.NewLine + " >> " + mesg;
         }
+
+        private void Offseason_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            new Form1(false).ShowDialog();
+            this.Close();
+        }
     }
     
 }

@@ -13,7 +13,7 @@ namespace FormulaBasketball
         private List<int> humans;
         private Random r;
         private DraftPick[] draftPicks;
-        public RookieDraft(List<player> rookies, List<team> teams, List<int> humans, Random r)
+        public RookieDraft(List<CollegePlayer> rookies, List<team> teams, List<int> humans, Random r)
         {
             // TODO: Complete member initialization
             this.rookiesByPos = new List<player>[5];

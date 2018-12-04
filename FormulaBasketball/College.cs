@@ -62,9 +62,14 @@ public class College
         DetermineRookies(season);
 
     }
-    public List<player> GetRookies()
+    public List<CollegePlayer> GetRookies()
     {
-        return rookies;
+        List<CollegePlayer> retval = new List<CollegePlayer>();
+        foreach(player p in rookies)
+        {
+            retval.Add(p as CollegePlayer);
+        }
+        return retval;
     }
     private void DetermineRookies(int season)
     {

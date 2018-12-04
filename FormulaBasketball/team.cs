@@ -920,6 +920,8 @@ public class team : IComparable<team>,  IEnumerable<player>
     }
     public void addPlayer(player newPlayer)
     {
+        if (newPlayer.getTeam() != null) newPlayer.getTeam().removePlayer(newPlayer);
+
         int pos = newPlayer.getPosition()-1;
         if(activePlayers == null)activePlayers = new player[15];
 

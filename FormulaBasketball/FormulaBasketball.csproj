@@ -312,5 +312,11 @@
     <Content Include="Properties\config.txt" />
     <Content Include="names.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Free Agency\Free Agency.csproj">
+      <Project>{1284377f-a75f-4a21-a5e7-50c6ef2a144f}</Project>
+      <Name>Free Agency</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

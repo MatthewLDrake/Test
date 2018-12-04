@@ -9,6 +9,7 @@ public class CollegePlayer : player, ICloneable
     private bool isRedshirt, hasRedshirt, wentPro;
     private int year;
     private int personality;
+    public bool scout = false;
     private const int ONE_AND_DONE = 1, FOUR_YEAR_PLAYER = 2, SUCCESS_BASED = 3, OVERALL_BASED = 4, MIXED = 5; 
     public CollegePlayer(int pos, int insideScoring, int jumpStat, int threePoint, int passing, int shotContest, int defenseIQ, int jumping, int separation, int durability, int stamina, int age, String name, int peakStart, int peakEnd, int development, Country country, bool hasRedshirt, int year, int personality = 0)
         : base(pos, insideScoring, insideScoring, jumpStat, threePoint, passing, shotContest, defenseIQ, jumping, separation, durability, stamina, age, name, false, peakStart, peakEnd, development, country, -1)
@@ -168,6 +169,131 @@ public class CollegePlayer : player, ICloneable
             year++;
         }
         age++;
+    }
+    private const int SCOUT_SKILL = 20;
+    private string layupStr;
+    private string dunkStr;
+    private string jumpshotStr;
+    private string threepointStr;
+    private string passStr;
+    private string shotcontestStr;
+    private string defenseiqStr;
+    private string jumpingStr;
+    private string seperationStr;
+    private string durabilityStr;
+    private string staminaStr;
+    private string potential;
+    public void Create(FormulaBasketball.Random r)
+    {
+        int[] elevens = new int[11];
+        for (int i = 0; i < elevens.Length; i++)
+        {
+            elevens[i] = r.Next(-SCOUT_SKILL, 0);
+        }
+
+        layupStr = "" + (elevens[0] + getLayupRating(false)) + " -> " + (elevens[0] + getLayupRating(false) + SCOUT_SKILL);
+        dunkStr = "" + (elevens[1] + getDunkRating(false)) + " -> " + (elevens[1] + getDunkRating(false) + SCOUT_SKILL);
+        jumpshotStr = "" + (elevens[2] + getJumpShotRating(false)) + " -> " + (elevens[2] + getJumpShotRating(false) + SCOUT_SKILL);
+        threepointStr = "" + (elevens[3] + getThreeShotRating(false)) + " -> " + (elevens[3] + getThreeShotRating(false) + SCOUT_SKILL);
+        passStr = "" + (elevens[4] + getPassing(false)) + " -> " + (elevens[4] + getPassing(false) + SCOUT_SKILL);
+        shotcontestStr = "" + (elevens[5] + getShotContestRating(false)) + " -> " + (elevens[5] + getShotContestRating(false) + SCOUT_SKILL);
+        defenseiqStr = "" + (elevens[6] + getDefenseIQRating(false)) + " -> " + (elevens[6] + getDefenseIQRating(false) + SCOUT_SKILL);
+        jumpingStr = "" + (elevens[7] + getJumpingRating(false)) + " -> " + (elevens[7] + getJumpingRating(false) + SCOUT_SKILL);
+        seperationStr = "" + (elevens[8] + getSeperation(false)) + " -> " + (elevens[8] + getSeperation(false) + SCOUT_SKILL);
+        durabilityStr = "" + (elevens[9] + getDurabilityRating(false)) + " -> " + (elevens[9] + getDurabilityRating(false) + SCOUT_SKILL);
+        staminaStr = "" + (elevens[10] + getStaminaRating(false)) + " -> " + (elevens[10] + getStaminaRating(false) + SCOUT_SKILL);
+
+        int normalizedPS = (peakStart - 27) * 2;
+        int normalizedPE = (peakEnd - 30) * 2;
+
+        int average = (normalizedPE + normalizedPS + development * 3) / 5;
+
+        int temp = Math.Max(1, Math.Min(10, r.Next(-2, 2) + average));
+        switch (temp)
+        {
+            case 1:
+                potential = "F";
+                break;
+            case 2:
+                potential = "F+";
+                break;
+            case 3:
+                potential = "D";
+                break;
+            case 4:
+                potential = "D+";
+                break;
+            case 5:
+                potential = "C";
+                break;
+            case 6:
+                potential = "C+";
+                break;
+            case 7:
+                potential = "B";
+                break;
+            case 8:
+                potential = "B+";
+                break;
+            case 9:
+                potential = "A";
+                break;
+            case 10:
+                potential = "A+";
+                break;
+        }
+    }
+    public int GetPosition()
+    {
+        return position;
+    }
+    public string GetLayup()
+    {
+        return layupStr;
+    }
+    public string GetDunk()
+    {
+        return dunkStr;
+    }
+    public string GetJumpshot()
+    {
+        return jumpshotStr;
+    }
+    public string GetThreePoint()
+    {
+        return threepointStr;
+    }
+    public string GetPass()
+    {
+        return passStr;
+    }
+        public string GetShotContest()
+    {
+        return shotcontestStr;
+    }
+        public string GetDefenseIQ()
+    {
+        return defenseiqStr;
+    }
+    public string GetJumping()
+    {
+        return jumpingStr;
+    }
+        public string GetSeperation()
+    {
+        return seperationStr;
+    }
+    public string GetDurability()
+    {
+        return durabilityStr;
+    }
+        public string GetStamina()
+    {
+        return staminaStr;
+    }
+    public string GetPotential()
+    {
+        return potential;
     }
 }
 

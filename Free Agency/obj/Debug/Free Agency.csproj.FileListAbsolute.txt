@@ -1,0 +1,46 @@
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\Free Agency\bin\Debug\Free Agency.exe.config
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\Free Agency\bin\Debug\Free Agency.exe
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\Free Agency\bin\Debug\Free Agency.pdb
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\Free Agency\bin\Debug\FormulaBasketball.exe
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\Free Agency\bin\Debug\FormulaBasketball.pdb
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\Free Agency\obj\Debug\Free Agency.csprojResolveAssemblyReference.cache
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\Free Agency\obj\Debug\Free_Agency.Properties.Resources.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\Free Agency\obj\Debug\Free Agency.csproj.GenerateResource.Cache
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\Free Agency\obj\Debug\Free Agency.exe
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\Free Agency\obj\Debug\Free Agency.pdb
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\Free Agency\obj\Debug\Free_Agency.Menu.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\Free Agency\obj\Debug\Free_Agency.LoadScreen.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\Free Agency\obj\Debug\Free_Agency.FreeAgencyForm.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\Free Agency\obj\Debug\Free_Agency.TradeForm.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\Free Agency\bin\Debug\ResigningPlayers.exe
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\Free Agency\bin\Debug\ResigningPlayers.pdb
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\Free Agency\obj\Debug\Free_Agency.ViewRoster.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\Free Agency\obj\Debug\Free_Agency.PlayerRatings.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\Free Agency\obj\Debug\Free_Agency.PlayerStats.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\Free Agency\obj\Debug\Free_Agency.PlayerNegotiate.resources
+B:\Documents\Test\Free Agency\obj\Debug\Free Agency.csprojResolveAssemblyReference.cache
+B:\Documents\Test\Free Agency\obj\Debug\Free_Agency.FreeAgencyForm.resources
+B:\Documents\Test\Free Agency\obj\Debug\Free_Agency.LoadScreen.resources
+B:\Documents\Test\Free Agency\obj\Debug\Free_Agency.Menu.resources
+B:\Documents\Test\Free Agency\obj\Debug\Free_Agency.PlayerNegotiate.resources
+B:\Documents\Test\Free Agency\obj\Debug\Free_Agency.PlayerRatings.resources
+B:\Documents\Test\Free Agency\obj\Debug\Free_Agency.PlayerStats.resources
+B:\Documents\Test\Free Agency\obj\Debug\Free_Agency.Properties.Resources.resources
+B:\Documents\Test\Free Agency\obj\Debug\Free_Agency.TradeForm.resources
+B:\Documents\Test\Free Agency\obj\Debug\Free_Agency.ViewRoster.resources
+B:\Documents\Test\Free Agency\obj\Debug\Free Agency.csproj.GenerateResource.Cache
+B:\Documents\Test\Free Agency\obj\Debug\Free Agency.csproj.CoreCompileInputs.cache
+B:\Documents\Test\Free Agency\obj\Debug\Free Agency.exe
+B:\Documents\Test\Free Agency\obj\Debug\Free Agency.pdb
+B:\Documents\Test\Free Agency\bin\Debug\Free Agency.exe.config
+B:\Documents\Test\Free Agency\bin\Debug\Free Agency.exe
+B:\Documents\Test\Free Agency\bin\Debug\Free Agency.pdb
+B:\Documents\Test\Free Agency\bin\Debug\FormulaBasketball.exe
+B:\Documents\Test\Free Agency\bin\Debug\ResigningPlayers.exe
+B:\Documents\Test\Free Agency\bin\Debug\SoleaScouting.exe
+B:\Documents\Test\Free Agency\bin\Debug\FormulaBasketball.pdb
+B:\Documents\Test\Free Agency\bin\Debug\FormulaBasketball.exe.config
+B:\Documents\Test\Free Agency\bin\Debug\ResigningPlayers.pdb
+B:\Documents\Test\Free Agency\bin\Debug\ResigningPlayers.exe.config
+B:\Documents\Test\Free Agency\bin\Debug\SoleaScouting.pdb
+B:\Documents\Test\Free Agency\bin\Debug\SoleaScouting.exe.config

@@ -35,6 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Offseason = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -48,7 +49,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(93, 61);
+            this.button1.Location = new System.Drawing.Point(12, 61);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(90, 59);
             this.button1.TabIndex = 1;
@@ -104,11 +105,22 @@
             this.textBox2.TabIndex = 6;
             this.textBox2.Visible = false;
             // 
+            // Offseason
+            // 
+            this.Offseason.Location = new System.Drawing.Point(155, 61);
+            this.Offseason.Name = "Offseason";
+            this.Offseason.Size = new System.Drawing.Size(90, 59);
+            this.Offseason.TabIndex = 7;
+            this.Offseason.Text = "Offseason";
+            this.Offseason.UseVisualStyleBackColor = true;
+            this.Offseason.Click += new System.EventHandler(this.Offseason_Click);
+            // 
             // FirstScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(587, 282);
+            this.Controls.Add(this.Offseason);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
@@ -132,5 +144,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button Offseason;
     }
 }

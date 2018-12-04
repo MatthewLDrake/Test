@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1284377F-A75F-4A21-A5E7-50C6EF2A144F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Free_Agency</RootNamespace>
+    <AssemblyName>Free Agency</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FreeAgencyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FreeAgencyForm.Designer.cs">
+      <DependentUpon>FreeAgencyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoadScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadScreen.Designer.cs">
+      <DependentUpon>LoadScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerNegotiate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerNegotiate.Designer.cs">
+      <DependentUpon>PlayerNegotiate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerRatings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerRatings.Designer.cs">
+      <DependentUpon>PlayerRatings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerStats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerStats.Designer.cs">
+      <DependentUpon>PlayerStats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TradeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TradeForm.Designer.cs">
+      <DependentUpon>TradeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewRoster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewRoster.Designer.cs">
+      <DependentUpon>ViewRoster.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FreeAgencyForm.resx">
+      <DependentUpon>FreeAgencyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadScreen.resx">
+      <DependentUpon>LoadScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerNegotiate.resx">
+      <DependentUpon>PlayerNegotiate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerRatings.resx">
+      <DependentUpon>PlayerRatings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerStats.resx">
+      <DependentUpon>PlayerStats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="TradeForm.resx">
+      <DependentUpon>TradeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewRoster.resx">
+      <DependentUpon>ViewRoster.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ResigningPlayers\ResigningPlayers.csproj">
+      <Project>{52789df6-85af-4eb5-bb1c-24d2604db227}</Project>
+      <Name>ResigningPlayers</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Matthew\source\repos\SoleaScouting\SoleaScouting\SoleaScouting.csproj">
+      <Project>{7bb79230-4210-443c-9bd6-92fbcd447fb8}</Project>
+      <Name>SoleaScouting</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

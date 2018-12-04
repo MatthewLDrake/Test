@@ -45,8 +45,7 @@ public class formulaBasketball
         statsFile = "stats.csv";
         standingsFile = "standings.csv";
         championshipsContents = championshipsContents += "Southern Conference Winner\tSouthern Conference Games Won\t\tNorthern Conference Games Won\tNorthern Conference winner\tMVP Winner\tMVP Team\tROTY winner\tROTY Team\n";
-
-        //new SetupNewSeason();
+        
 
         /* create.SetUpCollege();
          create.PlayCollegeSeason();
@@ -54,9 +53,8 @@ public class formulaBasketball
          create.PlayCollegeSeason();
          create.PlayCollegeSeason(); 
          SerializeObject(create, fileName);*/
-        //create.SetDraftPicks();
-        //create.GetCollege().CollegeSetup();
-        //new SetupNewSeason(create,r);
+        create.SetDraftPicks();
+        create.GetCollege().CollegeSetup();
         /*for (int i = 0; i < 100; i++ )
         {
             
@@ -435,7 +433,7 @@ public class formulaBasketball
     /// </summary>
     /// <param name="fileName">The filename</param>
     /// <returns></returns>
-    public createTeams DeSerializeObject(string fileName)
+    public static createTeams DeSerializeObject(string fileName)
     {
         createTeams temp = null;
 

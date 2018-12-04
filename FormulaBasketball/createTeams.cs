@@ -31,7 +31,18 @@ public class createTeams
         schedule = new Schedule(r);
 
     }
-
+    public void Verify()
+    {
+        foreach(team team in dLeagueTeams)
+        {
+            foreach(player p in team)
+            {
+                if (!p.getTeam().Equals(team)) team.removePlayer(p);
+            }
+            team.ResizeRoster(freeAgents);
+        }
+        
+    }
     public void CreateNewSchedule()
     {
         schedule = new Schedule(r);

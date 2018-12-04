@@ -368,7 +368,14 @@ public class player : IComparable<player>
         
         return sign;
     }
-
+    public int GetOffers()
+    {
+        if (contractOffers == null)
+        {
+            contractOffers = new List<FreeAgentContracts>();
+        }
+        return contractOffers.Count;
+    }
     private List<FreeAgentContracts> contractOffers;
     public void OfferFreeAgentContract(Contract contract, team team)
     {
@@ -381,6 +388,34 @@ public class player : IComparable<player>
     public void Stamina()
     {
         stamina = 100;
+    }
+    public bool HasOfferFromTeam(team team)
+    {
+        foreach(FreeAgentContracts offer in contractOffers)
+        {
+            if (team.Equals(offer.GetTeam())) return true;
+        }
+        return false;
+    }
+    public Contract GetOfferFromTeam(team team)
+    {
+        foreach (FreeAgentContracts offer in contractOffers)
+        {
+            if (team.Equals(offer.GetTeam())) return offer.GetContract();
+        }
+        return null;
+    }
+    public bool RemoveFreeAgentOffer(team team)
+    {
+        foreach (FreeAgentContracts offer in contractOffers)
+        {
+            if (team.Equals(offer.GetTeam()))
+            {
+                contractOffers.Remove(offer);
+                return true;
+            }
+        }
+        return false;
     }
     public int peakStart, peakEnd, development;
     public void generateDevelopment(FormulaBasketball.Random rand)
@@ -1081,44 +1116,54 @@ public class player : IComparable<player>
     {
         this.position = position;
     }
-    public double getLayupRating()
+    public double getLayupRating(bool game = true)
     {
         //if (name.Equals("Atakri Kalauni")) Console.WriteLine(((ratings[0] + shootingModifier) * getStamina() / 100 )+ " " + ((ratings[0] * getStamina() / 100)));
-        return (ratings[0]/10 + shootingModifier) * getStamina() / 100;
+        if (game) return (ratings[0] / 10 + shootingModifier) * getStamina() / 100;
+        else return ratings[0];
     }
     private void setLayupRating(int rating)
     {
         this.ratings[0] = rating;
     }
-    public double getDunkRating()
+    public double getDunkRating(bool game = true)
     {
-        return (ratings[1] / 10 + shootingModifier) * getStamina() / 100;
+        if (game)
+            return (ratings[1] / 10 + shootingModifier) * getStamina() / 100;
+        else
+            return ratings[1];
     }
     private void setDunkRating(int rating)
     {
         this.ratings[1] = rating;
     }
-    public double getJumpShotRating()
+    public double getJumpShotRating(bool game = true)
     {
-        return (ratings[2] / 10 + shootingModifier) * getStamina() / 100;
+        if (game)
+            return (ratings[2] / 10 + shootingModifier) * getStamina() / 100;
+        else return ratings[2];
     }
     private void setJumpShotRating(int rating)
     {
         
         this.ratings[2] = rating;
     }
-    public double getShotContestRating()
+    public double getShotContestRating(bool game = true)
     {
-        
-        return (ratings[3] / 10 + defensiveModifier) * getStamina() / 100;
+        if (game)
+            return (ratings[3] / 10 + defensiveModifier) * getStamina() / 100;
+        else
+            return ratings[3]; 
     }
     private void setShotContestRating(int rating)
     {
         this.ratings[3] = rating;
     }
-    public double getDefenseIQRating()
+    public double getDefenseIQRating(bool game = true)
     {
-        return (ratings[4] / 10 + defensiveModifier) * getStamina() / 100;
+        if (game)
+            return (ratings[4] / 10 + defensiveModifier) * getStamina() / 100;
+        else return ratings[4];
     }
     private void setDefenseIQRating(int rating)
     {
@@ -1136,25 +1181,31 @@ public class player : IComparable<player>
     {
         isPlayingBool = b;
     }
-    public double getJumpingRating()
+    public double getJumpingRating(bool game = true)
     {
-        return (ratings[5] / 10 + otherModifier) * getStamina() / 100;
+        if (game)
+            return (ratings[5] / 10 + otherModifier) * getStamina() / 100;
+        else return ratings[5];
     }
     private void setJumpingRating(int rating)
     {
         this.ratings[5] = rating;
     }
-    public double getSeperation()
+    public double getSeperation(bool game = true)
     {
-        return (ratings[6] / 10 + otherModifier) * getStamina() / 100;
+        if (game)
+            return (ratings[6] / 10 + otherModifier) * getStamina() / 100;
+        else return ratings[6];
     }
     private void setSeperation(int rating)
     {
         this.ratings[6] = rating;
     }
-    public double getPassing()
+    public double getPassing(bool game = true)
     {
-        return (ratings[7] / 10 + otherModifier) * getStamina() / 100;
+        if (game)
+            return (ratings[7] / 10 + otherModifier) * getStamina() / 100;
+        else return ratings[7];
     }
     private void setPassing(int rating)
     {
@@ -1252,9 +1303,10 @@ public class player : IComparable<player>
         gameStats[6] += p;
         seconds += p;
     }
-    public double getStaminaRating()
+    public double getStaminaRating(bool game = true)
     {
-        return ratings[8] / 10;
+        if (game) return ratings[8] / 10;
+        else return ratings[8];
     }
     private void setStaminaRating(int rating)
     {
@@ -1487,17 +1539,20 @@ public class player : IComparable<player>
         this.otherModifier += otherModifier;
 
     }
-    public double getThreeShotRating()
+    public double getThreeShotRating(bool game = true)
     {
-        return (ratings[9] / 10 + shootingModifier) * getStamina() / 100;
+        if (game)
+            return (ratings[9] / 10 + shootingModifier) * getStamina() / 100;
+        else return ratings[9];
     }
     private void setThreeShotRating(int rating)
     {
         this.ratings[9] = rating;
     }
-    public double getDurabilityRating()
+    public double getDurabilityRating(bool game = true)
     {
-        return ratings[10] / 10;
+        if (game) return ratings[10] / 10;
+        else return ratings[10];
     }
     private void setDurabilityRating(int rating)
     {
