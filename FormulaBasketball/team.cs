@@ -205,6 +205,7 @@ public class team : IComparable<team>,  IEnumerable<player>
         int retVal = 0;
         for (int i = 0; i < activePlayers.Length; i++)
         {
+            if (activePlayers[i] == null) continue;
             if (pos == activePlayers[i].getPosition()) retVal++;
         }
         return retVal;
@@ -637,6 +638,15 @@ public class team : IComparable<team>,  IEnumerable<player>
     public List<DraftPick> GetPicks()
     {
         return picks;
+    }
+    public List<DraftPick> GetNextSeasonPicks()
+    {
+        return nextSeasonPicks;
+    }
+    public void ClearDraftPicks()
+    {
+        picks = new List<DraftPick>();
+        nextSeasonPicks = new List<DraftPick>();
     }
     public void addRetiredPlayer(player player)
     {
@@ -1707,6 +1717,10 @@ public class DraftPick
     public team GetTeamOfOrigin()
     {
         return from;
+    }
+    public int GetRound()
+    {
+        return round;
     }
     public player GetPlayerSelected()
     {

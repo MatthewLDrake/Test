@@ -54,7 +54,7 @@ public class formulaBasketball
          create.PlayCollegeSeason(); 
          SerializeObject(create, fileName);*/
         create.SetDraftPicks();
-        create.GetCollege().CollegeSetup();
+        
         /*for (int i = 0; i < 100; i++ )
         {
             
@@ -381,7 +381,7 @@ public class formulaBasketball
     /// </summary>
     /// <param name="serializableObject"></param>
     /// <param name="fileName"></param>
-    public void SerializeObject(createTeams serializableObject, string fileName)
+    public static void SerializeObject(createTeams serializableObject, string fileName)
     {
         FileStream fs = new FileStream(fileName, FileMode.Create);
 
@@ -407,7 +407,7 @@ public class formulaBasketball
     /// </summary>
     /// <param name="serializableObject"></param>
     /// <param name="fileName"></param>
-    public void SerializeObject(team serializableObject, string fileName)
+    public static void SerializeObject(team serializableObject, string fileName)
     {
         FileStream fs = new FileStream(fileName, FileMode.Create);
 

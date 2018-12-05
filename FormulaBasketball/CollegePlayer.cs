@@ -183,6 +183,7 @@ public class CollegePlayer : player, ICloneable
     private string durabilityStr;
     private string staminaStr;
     private string potential;
+    public static int[] potentials = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
     public void Create(FormulaBasketball.Random r)
     {
         int[] elevens = new int[11];
@@ -207,8 +208,8 @@ public class CollegePlayer : player, ICloneable
         int normalizedPE = (peakEnd - 30) * 2;
 
         int average = (normalizedPE + normalizedPS + development * 3) / 5;
-
-        int temp = Math.Max(1, Math.Min(10, r.Next(-2, 2) + average));
+        potentials[development - 1]++;
+        int temp = Math.Max(1, Math.Min(10, r.Next(-SCOUT_SKILL, SCOUT_SKILL) + average));
         switch (temp)
         {
             case 1:

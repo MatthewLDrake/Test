@@ -1,41 +1,41 @@
 Shmupland Dictators Stats
-Player Record of Points: Eun Cho: 40 points on game 15 against the Avura Aviators
-Player Record of Assists: Eun Cho: 22 assists on game 15 against the Avura Aviators
-Player Record of Rebounds: Eric Newton: 16 rebounds on game 21 against the Barsein Bats
-Team Record in Most Points Scored: Shmupland Dictators: 132 points on game 15 against the Avura Aviators
-Team Record in Least Points Scored: Shmupland Dictators: 76 points on game 18 against the Autolik Autonomy
-Team Record in Least Points Allowed: Shmupland Dictators: 73 points on game 13 against the Faehrenfall Feathercats
-Team Record in Most Points Allowed: Shmupland Dictators: 127 points on game 9 against the Holy Yektonisa Bishops
+Player Record of Points: Waltoko: 36 points on game 80 against the Serkr Atolls
+Player Record of Assists: Waltoko: 18 assists on game 31 against the Red Rainbow Sickles
+Player Record of Rebounds: Eric Newton: 15 rebounds on game 25 against the Height Sagua Cats
+Team Record in Most Points Scored: Shmupland Dictators: 131 points on game 31 against the Red Rainbow Sickles
+Team Record in Least Points Scored: Shmupland Dictators: 83 points on game 56 against the Naxda Nomads
+Team Record in Least Points Allowed: Shmupland Dictators: 74 points on game 20 against the Serkr Atolls
+Team Record in Most Points Allowed: Shmupland Dictators: 136 points on game 53 against the Aahrus Moosi
 Records vs. Each Team this season:
-Aahrus Moosi: 0-0
-Auspikitan Golden Falcons: 1-1
-Calto Cows: 0-1
-Height Sagua Cats: 1-1
-Key to Don Yees: 0-1
-Manwx Saguans: 0-1
-Sagua Ocelots: 1-1
-Solea Geysers: 0-2
-Autolik Autonomy: 0-1
-Barsein Bats: 2-0
-Blanaxon Hammers: 0-3
-Kaeshar Kaisers: 0-1
-Naxda Nomads: 1-1
-Red Rainbow Sickles: 1-0
-Serkr Atolls: 1-1
+Aahrus Moosi: 1-2
+Auspikitan Golden Falcons: 1-2
+Calto Cows: 2-1
+Height Sagua Cats: 2-1
+Key to Don Yees: 1-2
+Manwx Saguans: 1-2
+Sagua Ocelots: 2-1
+Solea Geysers: 1-2
+Autolik Autonomy: 3-1
+Barsein Bats: 1-3
+Blanaxon Hammers: 3-1
+Kaeshar Kaisers: 2-2
+Naxda Nomads: 0-4
+Red Rainbow Sickles: 3-1
+Serkr Atolls: 1-3
 Shmupland Dictators: 0-0
-Aiyota Pumps: 1-0
-Avura Aviators: 1-0
+Aiyota Pumps: 2-0
+Avura Aviators: 2-0
 Boltway Bad Dragons: 0-2
-Dotruga Falno: 0-0
-Ethanthova Ponies: 0-0
-Faehrenfall Feathercats: 1-1
-Stedro Boulders: 0-1
-TND Tanks: 0-1
-Bongatar Banging Bongos: 0-0
-Czalliso Pythons: 0-0
+Dotruga Falno: 1-1
+Ethanthova Ponies: 0-2
+Faehrenfall Feathercats: 2-0
+Stedro Boulders: 1-1
+TND Tanks: 1-1
+Bongatar Banging Bongos: 0-2
+Czalliso Pythons: 0-2
 Dvimne Spirits: 0-2
-Holy Yektonisa Bishops: 0-1
-Holykol Bears: 0-0
-Lyintaria Lynx: 0-1
-Pyxanovia Pixies: 1-0
-Transhimalia Disasters: 0-0
+Holy Yektonisa Bishops: 0-2
+Holykol Bears: 1-1
+Lyintaria Lynx: 0-2
+Pyxanovia Pixies: 1-1
+Transhimalia Disasters: 2-0

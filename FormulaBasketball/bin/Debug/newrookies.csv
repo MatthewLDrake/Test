@@ -1,192 +1,504 @@
 New Rookies	Player	Position	Layup	Dunk	Jumpshot	3PT	Pass	ShotContest	DefenseIQ	Jumping	Seperation	Durability	Stamina	Development	Age	Overall	Player ID	Years Remaining	Money	Position Rank	League Rank
-Dtersauuw_Sagua	P'uyo T'es'vak	3	71	74	56	52	87	53	44	32	59	81	83	F	22	55.57	-1	1	1	0	0
-Dtersauuw_Sagua	P'uyo Lek'at	4	45	45	47	42	67	59	44	30	65	49	50	F	20	50.59	-1	1	1	0	0
-Dtersauuw_Sagua	P'uyo Lek'at	1	46	37	42	12	7	69	51	93	58	25	88	F	20	55.12	-1	1	1	0	0
-Darvincia	Zagësba Kanix	1	44	42	19	15	5	69	56	75	37	28	57	F	19	45.15	-1	1	1	0	0
-Darvincia	Cabodu Gasbërr	2	77	98	73	21	40	49	67	98	42	100	79	F	22	60.75	-1	3	1	0	0
-Darvincia	The Moo Azaska	3	100	100	53	26	77	39	60	50	58	29	86	F	22	53.80	-1	1	1	0	0
-Darvincia	Kardo Ūnā	5	49	46	35	28	57	25	34	32	65	29	54	F	22	39.43	-1	1	1	0	0
-Darvincia	Zagësba Osia	1	18	22	22	14	22	23	26	46	11	68	82	F	19	26.63	-1	1	1	0	0
-Oesa	Nouka Aq'aie	3	39	47	48	63	69	42	68	14	76	57	67	F	21	55.20	-1	1	1	0	0
-Futiakep	Paekua Atona	3	35	43	44	25	19	45	51	12	66	97	65	F	22	40.85	-1	1	1	0	0
-Futiakep	Paekua Pitwa	3	24	23	17	10	14	50	15	7	24	41	67	F	22	22.71	-1	1	1	0	0
-Hinaika	Olue Pitwa	2	95	99	39	40	22	79	54	88	26	54	66	F	22	54.08	-1	1	1	0	0
-Auspikitan	Pezi Aivik	1	28	35	29	19	13	39	31	95	71	14	85	F	20	49.12	-1	1	1	0	0
-Wyverncliff	Daniel Keaton	2	85	90	65	48	35	74	75	93	53	30	84	F	22	67.64	-1	1	1	0	0
-Wyverncliff	Shadd Drake	4	73	83	82	100	11	70	56	23	58	96	81	F	20	61.42	-1	1	1	0	0
-Wyverncliff	Nathaniel Lolant	2	86	70	22	24	30	47	55	87	60	50	67	F	22	52.38	-1	1	1	0	0
-Wyverncliff	Johan Turner	3	50	50	72	43	29	44	19	21	40	20	62	F	19	39.61	-1	1	1	0	0
-Solea	petgek átnhílekh	3	65	66	27	19	61	64	46	28	83	34	84	F	22	50.64	-1	1	1	0	0
-Solea	kekh lekeŋ	4	62	73	61	56	40	80	61	25	66	81	83	F	20	58.07	-1	1	1	0	0
-Nausicaa	Atrêsga Cows	5	34	45	77	56	99	46	55	46	44	77	75	F	22	61.54	-1	1	1	0	0
-Blaist_Blaland	Kolpa Faraulik	2	46	58	23	20	21	35	20	44	48	38	98	F	22	36.31	-1	1	1	0	0
-Blaist_Blaland	Blanox Liksov	3	56	73	61	15	21	55	60	100	71	33	85	F	22	56.98	-1	1	1	0	0
-Blaist_Blaland	Danax Kolau	3	51	62	79	23	71	57	62	40	63	26	65	F	20	57.00	-1	1	1	0	0
-Blaist_Blaland	Sopratyabla Kroda	1	71	67	37	24	26	18	25	88	28	78	60	F	19	37.50	-1	1	1	0	0
-Blaist_Blaland	Zaxkla Kukroda	5	22	23	54	63	88	70	49	24	58	87	84	F	22	60.47	-1	1	1	93	405
-Blaist_Blaland	Noxrit Kaxfar	2	49	45	6	10	20	75	41	53	31	11	74	F	19	40.00	-1	1	1	0	0
-Blaist_Blaland	Ixbla Naxki	3	74	61	54	34	36	75	50	99	71	46	96	F	22	61.67	-1	2	1	70	362
-Blaist_Blaland	Kinox Prokexov	1	61	58	23	6	13	40	31	24	41	90	47	F	19	29.52	-1	1	1	0	0
-Blaist_Blaland	Uxku Noxkol	4	72	67	89	68	36	47	58	28	67	91	58	F	22	58.60	-1	1	1	0	0
-Blaist_Blaland	Blalikki Bla	2	33	29	24	17	42	36	38	41	23	21	68	F	22	33.59	-1	1	1	0	0
-Blaist_Blaland	Sovnax Sovku	4	9	6	16	13	12	10	16	14	19	53	71	F	22	17.33	-1	1	1	0	0
-Sagua	Zlágánan Zlinámhmhozlo	4	30	23	26	71	55	46	22	33	48	14	56	F	22	43.82	-1	1	1	0	0
-Sagua	Naqánkló Sŕóniqńoqi	5	19	23	36	45	56	32	7	16	19	5	85	F	19	33.97	-1	1	1	0	0
-Key_to_Don	Poqá Váva	2	54	49	38	16	35	38	23	64	18	51	82	F	22	36.80	-1	1	1	0	0
-Key_to_Don	Sova Plókli	3	41	24	36	11	53	59	37	26	45	48	74	F	22	40.30	-1	1	1	0	0
-Key_to_Don	Zlágánan Kámh	1	15	9	13	12	11	15	17	24	50	48	69	F	22	24.78	-1	1	1	0	0
-Barsein	Shishido Danjuro	5	38	23	44	36	66	43	50	33	37	31	94	F	22	47.14	-1	1	1	0	0
-Antarion	Duuśuś Neśom	2	87	96	39	22	58	77	66	96	27	68	94	F	21	59.86	-1	1	1	0	0
-Antarion	Denni O'àpàasà	3	65	54	94	30	78	50	78	42	78	45	83	F	22	65.68	-1	1	1	0	0
-Antarion	Pò'a Neśom	4	50	51	42	82	43	36	88	24	34	51	70	F	21	51.11	-1	1	1	0	0
-Antarion	Venkàgttonhasttà Nùŕèodàkpiis	3	56	46	90	5	64	90	64	13	36	62	61	F	20	52.24	-1	1	1	0	0
-Antarion	Mùnne Ńàhem	4	31	28	23	17	42	21	16	28	96	25	57	F	19	37.43	-1	1	1	0	0
-Antarion	Mùnne Muqu	4	62	76	67	45	45	50	41	19	84	84	81	F	22	54.53	-1	1	1	0	0
-Pentadominion	Noùpexi Dova'mar'éxànè	2	99	100	57	9	45	44	57	36	61	73	49	F	19	47.40	-1	1	1	0	0
-Pentadominion	Śùy Nnò'ʃiv	3	94	79	32	27	40	49	79	30	57	67	85	F	22	48.32	-1	1	1	0	0
-Shmupland	Chwa Kwang-Seok	4	34	32	46	62	30	58	53	27	47	67	79	F	22	48.19	-1	1	1	0	0
-Shmupland	Ok Song-Jin	3	13	14	16	6	6	12	16	7	20	53	96	F	22	17.07	-1	1	1	0	0
-Shmupland	Om Sung-Soo	2	83	75	84	19	79	58	39	95	76	68	63	F	21	66.02	-1	1	1	0	0
-Shmupland	Sol Yeong-Jin	5	21	24	74	45	75	33	13	22	26	32	89	F	19	44.63	-1	1	1	0	0
-Shmupland	Chwa Kwang-Jo	3	43	46	60	22	35	91	60	40	57	48	94	F	20	54.93	-1	1	1	0	0
-Shmupland	Sol Yeong-Jin	4	70	69	84	79	32	65	43	30	20	77	66	F	21	52.13	-1	1	1	0	0
-Shmupland	Chu Minsu	5	51	47	77	72	71	67	58	27	32	73	67	F	22	59.51	-1	1	1	0	0
-Shmupland	Kwak Minsu	1	92	93	18	21	29	41	59	65	75	58	57	F	22	49.18	-1	1	1	0	0
-Shmupland	Chu Sung-Soo	5	27	36	57	36	81	43	72	54	31	43	58	F	22	53.26	-1	1	1	0	0
-Shmupland	Chu Song-Jin	2	69	66	52	22	47	51	54	51	49	75	85	F	19	50.30	-1	1	1	0	0
-Kaeshar	Pau Nibrit	2	96	93	64	33	46	30	71	76	60	54	68	F	20	57.40	-1	1	1	0	0
-Kaeshar	Eke Vuki	4	94	93	97	35	24	87	43	9	63	36	72	F	21	55.09	-1	1	1	0	0
-Kaeshar	Tibiziŋag Qeki	2	88	78	72	23	37	50	91	86	19	82	94	F	21	59.04	-1	1	1	95	455
-Kaeshar	Teva Ainigdine	1	64	64	32	10	28	70	56	79	65	23	80	F	20	55.08	-1	1	1	0	0
-Kaeshar	Teva Bitsekzeba	2	90	91	19	23	33	45	72	94	30	61	70	F	22	50.56	-1	1	1	0	0
-Kaeshar	Makiaipisi Nipta	3	98	97	46	31	49	99	51	86	72	26	80	F	21	63.24	-1	1	1	0	0
-Kaeshar	Eŋipxuk Nipta	4	71	80	92	71	58	56	28	27	95	43	91	F	21	66.30	-1	1	1	0	0
-Kaeshar	Imuk Poi	5	27	29	64	95	95	36	64	21	70	20	77	F	22	65.32	-1	1	1	0	0
-Kaeshar	Taneba Vokigei	3	91	94	88	29	23	66	54	83	83	19	52	F	20	61.74	-1	1	1	69	357
-Kaeshar	Makiaipisi Zonaqa	1	99	84	46	42	13	19	59	83	42	93	71	F	22	47.24	-1	1	1	0	0
-Kaeshar	Vioŋeki Zonaqa	2	43	54	42	27	20	60	50	42	17	20	97	F	22	41.63	-1	1	1	0	0
-Kaeshar	Taneba Fiqup	4	45	45	55	44	25	43	62	23	72	49	86	F	22	49.87	-1	1	1	0	0
-Kaeshar	Aseqa Depazeoni	5	9	6	22	40	37	23	31	5	13	44	55	F	19	27.19	-1	1	1	0	0
-Kaeshar	Eŋipxuk Depazeoni	4	67	58	93	30	33	22	37	34	31	13	88	F	22	43.64	-1	1	1	0	0
-Bielosia	Lani Vatthana	3	54	45	65	39	37	36	73	52	68	25	49	F	22	53.01	-1	1	1	0	0
-Bielosia	Aulii Savang	2	96	98	28	16	41	98	45	86	75	36	97	F	22	64.05	-1	1	1	0	0
-Bielosia	Xaisomboun Thiamphasone	4	39	29	76	40	38	57	31	24	78	44	70	F	22	52.23	-1	1	1	0	0
-Bielosia	Bane Souksanh	5	55	57	41	78	99	28	98	34	32	77	96	F	22	62.48	-1	1	1	0	0
-Bielosia	Malo Phanivong	1	50	66	30	13	18	79	73	97	23	94	98	F	22	54.84	-1	1	1	0	0
-Bielosia	Keon Keothavong	3	50	63	79	75	26	92	91	50	51	63	51	F	22	64.52	-1	1	1	0	0
-Bielosia	Lilo Phomsouvanh	5	56	56	30	79	97	56	40	72	47	77	87	F	21	60.17	-1	1	1	0	0
-Bielosia	Lani Siphandon	3	61	56	59	29	47	97	65	34	74	75	47	F	19	58.34	-1	1	1	0	0
-Bielosia	Kelii Phoutthasinh	5	52	35	28	34	97	30	47	34	50	42	98	F	22	49.52	-1	1	1	0	0
-Bielosia	Ikaika Saysamongdy	2	98	97	47	29	45	66	58	49	51	38	80	F	20	53.17	-1	1	1	0	0
-Bielosia	Keon Bokeo	3	15	40	56	55	41	93	37	37	51	69	80	F	21	53.67	-1	1	1	0	0
-Bielosia	Analu Keobunta	5	51	42	70	55	83	39	68	32	45	33	84	F	22	58.44	-1	1	1	0	0
-Lyintaria	Akamu Thammasith	3	37	40	26	44	34	40	45	6	54	5	78	F	19	38.64	-1	1	1	0	0
-Lyintaria	Kaili Vatthana	4	14	14	100	18	51	64	37	30	92	61	94	F	20	59.45	-1	1	1	116	443
-Lyintaria	Lilo Cheruene	5	35	25	67	52	97	39	69	22	37	72	51	F	21	56.51	-1	1	1	0	0
-Lyintaria	Analu Phommathep	4	34	28	28	75	36	53	34	21	55	76	78	F	22	46.16	-1	1	1	0	0
-Lyintaria	Kaili Menorath	1	74	79	33	39	33	47	45	98	78	49	79	F	22	57.94	-1	1	1	0	0
-Lyintaria	Phonesavanh Saysamongdy	2	97	92	64	15	44	30	46	86	42	39	69	F	23	50.72	-1	1	1	0	0
-Lyintaria	Keon Khouphongsy	4	65	69	98	54	59	40	56	33	16	62	51	F	21	51.04	-1	1	1	0	0
-Lyintaria	Kimo Khamchanh	5	22	33	50	39	63	42	43	33	71	48	88	F	21	50.06	-1	1	1	0	0
-Lyintaria	Keoki Phothisarath	2	92	93	80	18	38	50	37	56	47	30	68	F	22	49.96	-1	1	1	0	0
-Lyintaria	Paxathipatai Cheruene	1	47	61	36	50	25	26	38	71	48	77	83	F	22	44.65	-1	1	1	0	0
-Pyxanovia	Aulii Sayasone	5	21	28	35	71	77	66	20	41	95	79	49	F	20	55.77	-1	1	1	0	0
-Pyxanovia	Koa Sengtavisouk	4	66	72	83	55	76	56	83	17	64	80	55	F	21	62.98	-1	1	1	0	0
-Holy_Yektonisa	Bane Menorath	2	67	59	48	43	24	34	74	35	59	70	54	F	22	47.50	-1	1	1	0	0
-Holy_Yektonisa	Malo Phothisarath	3	46	48	66	32	26	83	71	41	44	62	92	F	20	53.96	-1	1	1	0	0
-Holy_Yektonisa	Keowynn Douangvily	5	41	38	54	60	81	56	69	34	33	29	84	F	22	57.90	-1	1	1	0	0
-Other	Shadd Drake	2	40	38	29	11	40	52	50	33	20	73	50	F	22	35.27	-1	1	1	0	0
-Other	Brian Perch	3	35	29	91	62	30	49	65	26	70	31	94	F	22	58.62	-1	1	1	86	482
-Other	Dimitri Wilcox	2	88	93	19	14	45	69	43	32	39	93	61	F	22	40.78	-1	1	1	0	0
-Other	Bob Traenfeglia	2	82	63	62	18	12	28	38	77	26	29	92	F	22	43.69	-1	1	1	0	0
-Other	Jesse Svensson	3	44	67	100	45	66	91	42	44	38	87	92	F	21	61.12	-1	3	1	73	387
-Other	Jesse Fine	3	57	53	59	20	85	82	80	39	53	41	70	F	22	59.60	-1	1	1	80	438
-Other	Xavier Tooli	5	42	35	26	42	34	25	22	19	50	17	74	F	22	33.02	-1	1	1	0	0
-Other	Nathaniel Fine	1	49	61	28	6	22	64	38	88	56	63	84	F	21	50.17	-1	1	1	0	0
-Other	Daniel Jordanov	2	69	61	25	39	16	51	65	31	25	89	94	F	22	40.67	-1	1	1	0	0
-Other	Asher Byrne	4	47	38	97	35	49	45	26	15	82	94	88	F	21	55.15	-1	1	1	0	0
-Other	Travis Traenfeglia	5	34	28	58	47	52	33	28	17	17	91	55	F	19	38.01	-1	1	1	0	0
-Other	Yoade Turner	2	78	77	31	16	30	29	58	75	54	10	86	F	19	48.48	-1	1	1	0	0
-Ethanthova	Ivor Doyle	1	48	46	19	12	14	36	70	79	44	84	85	F	22	46.05	-1	1	1	0	0
-Ethanthova	Zane Berry	2	96	92	69	19	34	74	31	57	55	70	73	F	22	53.13	-1	1	1	0	0
-Ethanthova	William Stephen	3	90	96	46	38	66	47	76	95	68	87	90	F	21	63.12	-1	3	1	59	308
-Ethanthova	William Garber	4	58	79	60	55	40	55	50	63	97	27	83	F	22	61.76	-1	1	1	0	0
-Ethanthova	Nicholas Howe	2	50	7	6	50	10	44	5	47	29	54	59	F	19	29.40	-1	1	1	0	0
-Ethanthova	David Lavender	2	96	100	68	48	59	51	33	99	84	36	68	F	22	65.28	-1	1	1	0	0
-Ethanthova	Dominic Stephen	4	52	50	67	65	9	51	55	22	63	34	99	F	21	52.40	-1	1	1	0	0
-Ethanthova	Eric Pratt	5	20	24	49	22	67	28	56	27	46	98	78	F	22	44.33	-1	1	1	0	0
-Ethanthova	Errol Barnett	2	65	72	38	17	15	37	22	62	65	52	51	F	22	41.80	-1	1	1	0	0
-Ethanthova	Desmond Hutchison	1	30	27	9	5	22	18	25	45	39	71	45	F	22	26.44	-1	1	1	0	0
-Ethanthova	Robert Jones	2	89	83	42	10	12	40	51	41	48	28	64	F	22	41.06	-1	1	1	0	0
-Ethanthova	Rusty Caplin	5	34	36	68	79	82	31	44	25	66	69	82	F	22	58.14	-1	1	1	0	0
-Dotruga	Kaliso Olamosei	3	43	60	81	68	23	72	61	50	75	68	77	F	22	62.68	-1	2	1	0	0
-Dotruga	Sagolna Eloalerko	5	46	51	50	32	94	28	33	39	60	27	87	F	19	50.19	-1	1	1	0	0
-Dotruga	Hivek Gagodo	3	99	96	64	18	52	78	75	48	63	30	94	F	22	59.90	-1	1	1	79	424
-Dotruga	Atomobei Elolapo	1	64	55	31	18	22	27	18	91	40	73	79	F	22	39.96	-1	1	1	0	0
-Dotruga	Danomobei Kixidosu	3	39	31	64	44	78	22	67	78	42	11	85	F	20	55.37	-1	1	1	0	0
-Dotruga	Atolep Subeina	2	53	68	42	33	13	82	42	96	68	65	54	F	22	59.64	-1	1	1	0	0
-Dotruga	Kiro Elomos	3	69	75	58	27	34	59	58	73	58	93	59	F	22	52.89	-1	1	1	0	0
-Dotruga	Himiba Alumosvek	1	100	92	34	19	34	36	82	91	99	75	96	F	22	64.52	-1	1	1	0	0
-Dotruga	Sagosiei Kersidomobek	2	19	19	23	21	54	26	45	59	26	32	77	F	19	37.88	-1	1	1	0	0
-Dotruga	Dasarbi Hadosadolsei	2	55	54	45	36	41	55	70	100	50	69	63	F	20	59.99	-1	1	1	0	0
-Dotruga	Alokeili Hersa	5	29	33	57	100	71	41	47	14	54	77	96	F	20	58.18	-1	1	1	0	0
-Dotruga	Eban Elodosatrisei	5	46	52	47	57	98	20	29	30	42	22	62	F	19	48.08	-1	1	1	0	0
-Dotruga	Atusosa Bexotrugo	4	36	29	16	37	21	23	31	9	58	50	84	F	22	32.62	-1	1	1	0	0
-Tri_National_Dominion	Edgar Wagenseil	4	70	76	52	44	33	47	51	17	31	90	76	F	22	42.12	-1	1	1	0	0
-Aeridani	Nagasawa Seiho	1	48	54	23	5	53	36	29	89	74	11	68	F	19	48.21	-1	1	1	0	0
-Aeridani	Himi Danjuro	5	81	83	87	68	53	63	45	64	52	31	82	F	22	60.81	-1	3	1	0	0
-Aeridani	Koki Jo	1	29	27	14	12	20	40	24	47	18	73	70	F	19	28.63	-1	1	1	0	0
-Aeridani	Nomura Harumi	2	99	99	51	41	45	64	54	85	81	37	73	F	22	64.48	-1	3	1	0	0
-Aeridani	Yamataka Danjuro	5	34	17	68	33	95	75	25	46	31	60	83	F	22	55.32	-1	1	1	0	0
-Aeridani	Yabuta Koshiro	2	88	65	30	16	25	49	77	96	54	94	59	F	22	56.25	-1	1	1	0	0
-Aeridani	Komatsu Tadashi	2	70	76	22	24	23	68	51	60	36	10	98	F	22	47.36	-1	1	1	0	0
-Aeridani	Koki Tadashi	2	54	54	27	50	17	35	56	33	41	22	64	F	19	39.11	-1	1	1	0	0
-Aeridani	Kammuri Taki	3	41	47	85	38	67	66	81	48	36	57	66	F	20	58.68	-1	1	1	0	0
-Aeridani	Sasagawa Bunzo	4	54	68	55	73	33	49	60	26	56	81	69	F	21	52.76	-1	1	1	0	0
-Aeridani	Wakuni Sadaharu	5	44	39	38	31	98	45	24	34	64	70	73	F	19	49.52	-1	1	1	0	0
-Aeridani	Ametsuchi Kohei	3	46	47	62	40	31	48	56	65	70	22	54	F	22	53.37	-1	1	1	0	0
-Aeridani	Horie Takeji	3	52	56	50	24	47	20	22	58	66	91	64	F	22	42.70	-1	1	1	0	0
-Aeridani	Kasai Tamuramaro	2	95	93	62	17	34	48	52	94	47	73	62	F	22	55.48	-1	1	1	0	0
-Aiyota	Guooka	3	27	41	34	12	24	28	39	17	38	60	72	F	22	30.70	-1	1	1	0	0
-Aiyota	Cagi	3	29	31	21	27	14	7	40	33	33	39	85	F	19	28.33	-1	1	1	0	0
-Aiyota	Billingulbut	3	85	56	38	27	77	45	57	31	52	36	80	F	22	48.58	-1	1	1	0	0
-Aiyota	Mungymia	1	81	83	19	20	32	61	28	63	13	90	80	F	19	37.49	-1	1	1	0	0
-Aiyota	Namia	4	32	27	30	50	34	27	27	19	59	14	48	F	19	37.30	-1	1	1	0	0
-Aiyota	Nyning	5	18	50	55	12	58	46	50	34	34	34	93	F	22	44.34	-1	1	1	0	0
-Czalliso	lu	5	43	23	47	45	83	25	49	16	53	35	92	F	23	49.43	-1	1	1	0	0
-Czalliso	lu	1	66	57	21	20	10	30	24	56	14	83	94	F	22	30.40	-1	1	1	0	0
-Czalliso	pot	3	30	35	84	44	47	78	93	18	34	37	50	F	21	55.44	-1	1	1	0	0
-Czalliso	roe	4	58	51	89	45	81	94	44	48	63	67	67	F	21	65.57	-1	1	1	0	0
-Czalliso	ilo	4	71	64	83	45	86	58	48	15	94	85	70	F	22	64.46	-1	1	1	0	0
-Czalliso	noe	1	48	46	40	11	21	21	98	82	48	95	62	F	21	50.69	-1	1	1	0	0
-Czalliso	ilu	3	36	26	42	35	47	53	36	57	68	16	83	F	22	50.13	-1	1	1	0	0
-Czalliso	ilo	1	47	52	29	18	6	48	31	81	55	50	84	F	19	45.16	-1	1	1	0	0
-Czalliso	kaf	2	96	98	69	14	43	74	54	81	32	27	90	F	21	57.86	-1	1	1	110	517
-Czalliso	pot	3	99	93	59	28	35	61	84	68	75	53	69	F	21	60.35	-1	1	1	0	0
-Czalliso	noe	4	82	90	94	32	43	80	21	28	73	39	58	F	20	55.41	-1	1	1	0	0
-Czalliso	kaf	3	63	70	48	53	42	60	76	43	49	80	59	F	22	52.87	-1	1	1	0	0
-Czalliso	noe	1	85	91	31	11	18	33	26	66	22	34	100	F	22	35.83	-1	1	1	0	0
-Czalliso	noe	1	71	73	29	28	23	45	53	26	26	88	46	F	19	34.54	-1	1	1	0	0
-Holykol	kaf	3	51	46	45	30	74	35	61	77	42	17	83	F	22	51.73	-1	1	1	0	0
-Holykol	ilu	4	72	73	38	47	53	80	66	26	89	43	58	F	22	57.78	-1	1	1	0	0
-Transhimalia	Djügkeq'go Di	1	65	58	21	22	19	53	89	73	41	83	63	F	22	50.56	-1	1	1	0	0
-Transhimalia	Ametsuchi Danjuro	4	32	33	73	51	44	31	70	50	40	84	94	F	19	52.67	-1	1	1	0	0
-Transhimalia	Nomura Ieyoshi	5	13	17	46	56	95	46	64	51	28	72	89	F	20	57.00	-1	1	1	0	0
-Transhimalia	Yasutake Takeichi	1	56	56	26	14	10	65	62	93	26	67	53	F	22	47.30	-1	1	1	0	0
-Transhimalia	Nagasawa Masuhiro	3	46	40	73	30	29	21	34	9	12	32	55	F	22	30.48	-1	1	1	0	0
-Transhimalia	Gmii Hlema	3	93	95	52	38	39	96	39	80	99	64	97	F	22	66.74	-1	1	1	0	0
-Transhimalia	Yuguchi Higashikuni	4	17	33	67	53	53	63	53	13	82	61	63	F	22	57.30	-1	1	1	0	0
-Transhimalia	Ienaga Ethanthovok	3	98	95	79	28	63	38	87	86	88	14	64	F	23	67.48	-1	1	1	0	0
-Transhimalia	Wakuni Senelile	3	96	95	58	32	43	71	81	93	81	73	87	F	22	67.29	-1	1	1	0	0
-Transhimalia	Tkwalm Klwnum	5	34	21	27	34	59	21	36	9	19	5	71	F	22	33.31	-1	1	1	0	0
-Transhimalia	Higashi Kiyohira	2	33	28	53	13	23	31	100	79	50	74	73	F	22	55.88	-1	1	1	0	0
-Transhimalia	Pe!' !'ëpjÿut	2	100	91	50	22	30	46	60	37	29	18	56	F	22	42.06	-1	1	1	0	0
-Aahrus	Kujira Paradiniton	2	43	54	25	17	55	48	35	78	81	44	66	F	20	52.67	-1	1	1	0	0
-Aahrus	Matsuyama Izo	4	91	98	72	56	45	61	90	27	97	75	57	F	22	65.77	-1	1	1	0	0
-Aahrus	Uemura Takuji	4	62	70	64	59	22	79	26	29	96	31	50	F	20	56.04	-1	1	1	0	0
-Aahrus	Mochizuki Takeji	1	96	93	34	7	32	31	40	94	68	54	75	F	22	49.87	-1	1	1	0	0
-Aahrus	Yabuta Danjuro	2	80	79	32	14	57	45	25	70	34	68	61	F	22	41.88	-1	1	1	0	0
-Aahrus	Miyoshi Ton	3	45	57	89	43	58	32	61	77	53	21	58	F	22	57.51	-1	1	1	0	0
-Aahrus	Eto Yasuoka	4	92	87	77	39	27	77	45	24	76	30	97	F	20	56.73	-1	1	1	0	0
-Aahrus	Kawata Sumiteru	5	44	48	59	64	95	28	20	28	55	17	84	F	22	52.45	-1	1	1	0	0
-Bongatar	Shitt Hessar	4	53	35	73	28	77	49	45	22	97	38	60	F	21	58.01	-1	1	1	0	0
+Dtersauuw_Sagua	Ivek'il Lek'at	2	99	97	73	39	34	68	85	82	78	19	65	D+	22	70.27	-1	1	1	0	0
+Dtersauuw_Sagua	Tsekon Unup'a	3	53	46	41	49	43	88	58	36	97	57	64	C	20	60.72	-1	1	1	0	0
+Dtersauuw_Sagua	Tsekon T'es'vak	4	67	80	75	91	45	71	61	18	87	72	87	B	22	68.52	-1	1	1	0	0
+Dtersauuw_Sagua	Litsaw Unup'a	5	22	36	68	69	76	70	40	15	38	48	83	C+	23	57.14	-1	1	1	0	0
+Dtersauuw_Sagua	P'uyo Wap't'ebw	1	70	70	29	13	21	45	49	82	85	93	88	D	23	54.10	-1	1	1	0	0
+Dtersauuw_Sagua	Tsekon T'es'vak	4	96	99	79	40	48	55	65	24	74	82	89	C	22	58.84	-1	1	1	0	0
+Dtersauuw_Sagua	Litsaw Lek'at	4	64	49	58	48	44	36	48	28	98	48	59	C+	22	54.31	-1	1	1	0	0
+Dtersauuw_Sagua	Litsaw Unup'a	5	11	6	56	71	93	19	70	33	30	77	73	C+	20	55.02	-1	1	1	0	0
+Darvincia	The Moo Azaska	1	80	75	36	18	18	72	31	94	48	24	59	D+	20	50.30	-1	1	1	0	0
+Darvincia	Tapan Saχi	2	50	68	63	11	41	69	69	90	61	94	60	C+	19	62.87	-1	1	1	0	0
+Darvincia	Abi Sikasbë	3	38	50	70	27	53	76	68	39	50	81	61	D+	23	54.76	-1	1	1	0	0
+Darvincia	Nàsà Cows	4	84	94	85	71	61	74	74	41	86	48	97	C+	22	73.15	-1	1	1	0	0
+Darvincia	The Moo Sikasbë	5	63	56	98	77	89	49	50	35	53	84	94	C	22	66.75	-1	1	1	0	0
+Darvincia	The Moo Gasbërr	2	96	94	46	32	91	46	91	86	41	82	89	C	19	63.19	-1	1	1	0	0
+Oesa	Piri Porewo	3	65	70	68	53	65	65	70	79	98	61	71	C	22	71.33	-1	1	1	0	0
+Oesa	Nouka Lome	4	63	50	60	69	51	78	59	39	61	50	57	C+	19	59.49	-1	1	1	0	0
+Oesa	Nouka Lereŋ	5	48	24	99	87	91	61	56	38	94	90	96	B	20	75.82	-1	1	1	0	0
+Oesa	Paekua Porewo	2	77	63	23	20	25	48	63	51	12	94	86	C	22	39.69	-1	1	1	0	0
+Oesa	Paekua Epi	3	90	100	45	38	32	87	73	43	70	87	100	C+	19	59.33	-1	1	1	0	0
+Futiakep	Apu Tuni	1	56	55	15	21	20	66	24	68	73	26	87	D	22	47.89	-1	1	1	0	0
+Futiakep	Piri Aq'aie	2	67	69	45	21	29	42	25	65	49	58	61	C	22	43.26	-1	1	1	0	0
+Futiakep	Nouka Aq'aie	4	69	66	82	66	71	69	54	35	93	70	93	C	21	70.36	-1	1	1	0	0
+Futiakep	Oevu Lereŋ	5	36	32	66	67	88	38	29	50	59	64	62	D+	23	55.89	-1	1	1	0	0
+Futiakep	Paekua Porewo	2	19	29	25	20	38	32	37	62	32	59	59	D	23	37.41	-1	1	1	0	0
+Atapwa	Lekena Tuni	1	96	90	18	8	42	64	67	94	71	47	73	D	23	58.59	-1	1	1	0	0
+Atapwa	Apu Tuni	3	43	23	51	66	46	32	29	31	42	99	78	D	22	43.24	-1	1	1	0	0
+Atapwa	Paekua Atona	4	66	73	100	97	47	76	37	33	62	96	90	B	20	68.45	-1	1	1	0	0
+Atapwa	Piri Aq'aie	4	79	74	100	69	55	31	47	30	68	72	97	C	19	62.22	-1	1	1	0	0
+Hinaika	Oevu Epi	4	48	50	43	68	58	38	31	15	26	56	80	D+	22	43.02	-1	1	1	0	0
+Hinaika	Olue Lereŋ	3	75	70	30	27	31	39	67	63	40	90	57	F+	22	42.94	-1	1	1	0	0
+Hinaika	Olue Lereŋ	4	34	35	68	48	18	24	41	32	41	70	89	C	22	42.56	-1	1	1	0	0
+Hinaika	Piri Aq'aie	5	22	15	19	31	55	8	18	24	49	48	60	F	23	30.26	-1	1	1	0	0
+Auspikitan	Ivi Tituqu	1	60	66	14	14	13	70	43	89	61	48	54	D	19	49.80	-1	1	1	0	0
+Auspikitan	Tibiziŋag Abu	2	94	98	62	17	33	68	32	92	88	75	92	C+	23	64.08	-1	1	1	0	0
+Auspikitan	Qutka Kateni	3	90	97	86	32	90	80	98	58	80	27	91	B	22	75.88	-1	1	1	0	0
+Auspikitan	Pezi Ifet	4	78	66	97	74	63	54	34	31	99	86	59	C	19	67.80	-1	1	1	0	0
+Auspikitan	Kudqoatlop Tituqu	5	38	35	66	84	84	62	64	34	79	23	65	C	23	67.36	-1	1	1	0	0
+Auspikitan	Zeabik Aivik	1	68	66	24	19	15	56	32	65	37	45	82	D+	22	41.14	-1	1	1	0	0
+Auspikitan	Tibiziŋag Kivi	3	40	44	54	58	73	86	46	34	82	27	68	D+	21	62.12	-1	1	1	0	0
+Wyverncliff	Johan Drake	2	91	90	35	34	44	21	54	92	73	29	75	C	23	55.04	-1	1	1	0	0
+Wyverncliff	Alex Vuchko	3	56	50	94	57	49	97	62	57	98	29	96	B	22	75.41	-1	1	1	0	0
+Wyverncliff	Bob Tooli	4	77	71	99	56	100	93	96	44	99	27	79	B	21	83.72	-1	1	1	0	0
+Wyverncliff	Yoade Keaton	5	56	51	82	80	97	26	45	8	38	70	66	D+	19	57.19	-1	1	1	0	0
+Wyverncliff	Shadd Atlier	4	100	87	100	99	40	76	51	43	95	63	82	C	21	75.73	-1	1	1	0	0
+Wyverncliff	Yoade Ebron	4	97	91	87	96	73	66	77	26	70	48	88	D+	19	73.94	-1	1	1	0	0
+Solea	pihten kutap	1	92	90	54	33	53	83	68	99	78	81	91	B	20	71.34	-1	1	1	0	0
+Solea	šunokiɰev nešik	2	90	80	32	16	40	66	73	54	86	36	82	D+	20	59.51	-1	1	1	0	0
+Solea	napuk nešik	3	69	91	89	60	73	65	76	62	93	49	98	B	21	75.63	-1	1	1	0	0
+Solea	tikit' nešik	4	36	39	87	66	59	40	24	17	78	71	72	D+	22	57.32	-1	1	1	0	0
+Solea	áz átnhílekh	5	73	73	58	55	96	49	47	26	41	25	100	D+	19	57.75	-1	1	1	0	0
+Solea	vaŋun pavútekaš	3	44	41	82	94	51	77	81	45	77	59	73	D+	19	71.49	-1	1	1	0	0
+Solea	qolšŋ zaiqatpit	5	22	22	67	34	67	6	23	10	27	25	94	D+	21	38.00	-1	1	1	0	0
+Nausicaa	Abi Gasbërr	1	91	88	22	11	26	93	37	96	71	16	80	D	22	58.67	-1	1	1	0	0
+Nausicaa	Qó Si	3	43	66	76	33	58	95	52	50	71	35	61	C	22	62.36	-1	1	1	0	0
+Nausicaa	Mi'ódá Nasa	1	79	80	18	9	38	60	49	73	91	87	66	D	19	54.63	-1	1	1	0	0
+Nausicaa	Naqánkló Dakómh	2	95	94	40	21	36	31	23	70	69	66	61	D	22	45.89	-1	1	1	0	0
+Blaist_Blaland	Blaux Ritkropro	3	96	96	68	25	54	54	93	64	63	13	75	C+	21	61.31	-1	1	1	0	0
+Blaist_Blaland	Hjeki Noxtan	4	92	100	100	49	45	54	67	43	100	55	57	C	20	67.31	-1	1	1	0	0
+Blaist_Blaland	Uxproku Kikol	5	13	22	88	59	67	64	31	32	51	95	83	D	22	57.19	-1	1	1	0	0
+Blaist_Blaland	Kunaix Tanpratia	3	55	57	66	51	49	58	86	46	97	45	65	D+	19	65.90	-1	1	1	0	0
+Blaist_Blaland	Danaix Proki	4	71	81	94	81	89	56	64	29	94	89	94	C	19	76.32	-1	1	1	0	0
+Blaist_Blaland	Blaki Kaxpa	1	98	99	66	22	21	43	48	100	68	46	61	C	21	57.17	-1	1	1	0	0
+Blaist_Blaland	Tansov Ixau	4	45	65	87	94	78	67	66	18	92	26	83	C+	22	75.42	-1	1	1	0	0
+Blaist_Blaland	Blaki Krofar	1	88	77	40	19	32	92	61	82	94	71	61	C	22	66.08	-1	1	1	0	0
+Blaist_Blaland	Kinox Kaxpa	2	63	66	54	27	37	49	44	91	79	49	94	D+	19	60.79	-1	1	1	0	0
+Blaist_Blaland	Naxto Tanpratia	3	80	57	61	30	20	68	90	34	53	44	84	C+	21	53.78	-1	1	1	0	0
+Blaist_Blaland	Uxku Kipafar	4	38	48	67	42	57	59	43	33	53	60	83	C	22	52.47	-1	1	1	0	0
+Blaist_Blaland	Sovtanzax Ritkropro	5	72	44	68	90	92	53	58	53	75	65	82	B	20	69.82	-1	1	1	0	0
+Blaist_Blaland	Blanoxium Yakrosov	5	46	33	65	69	87	58	35	35	34	73	57	D+	22	55.69	-1	1	1	0	0
+Blaist_Blaland	Kolpa Yakrosov	2	95	99	38	29	15	49	63	67	85	96	69	D+	20	56.65	-1	1	1	0	0
+Blaist_Blaland	Kunaix Noxtan	3	68	67	85	37	44	83	59	36	63	62	75	D+	22	59.62	-1	1	1	0	0
+Blaist_Blaland	Kolpa Kaxpa	4	45	38	54	34	35	20	68	22	47	83	87	D+	22	43.21	-1	1	1	0	0
+Blaist_Blaland	Kudapa Sovkol	2	82	97	62	37	60	69	95	99	51	98	85	C+	21	71.35	-1	1	1	0	0
+Blaist_Blaland	Noxku Liksov	3	76	73	39	39	53	29	57	69	80	8	56	C	21	52.99	-1	1	1	0	0
+Blaist_Blaland	Sokolnox Kaxfar	4	75	86	96	80	47	73	70	45	93	38	98	B	20	75.40	-1	1	1	0	0
+Blaist_Blaland	Nuux Bla	5	62	63	38	67	72	68	47	53	61	63	96	D	23	59.10	-1	1	1	0	0
+Blaist_Blaland	Autanblanaix Toxium	1	90	87	30	6	16	65	67	95	45	84	67	C	20	53.30	-1	1	1	0	0
+Blaist_Blaland	Zax Kaxfar	2	79	92	65	26	50	77	82	81	71	97	94	C	22	70.52	-1	1	1	0	0
+Blaist_Blaland	Ikkrosovi Kaxfar	1	90	97	23	30	50	50	73	90	49	67	59	D+	20	54.85	-1	1	1	0	0
+Blaist_Blaland	Tanau Auprat	2	93	94	49	45	40	73	58	53	71	57	95	C	23	60.23	-1	1	1	0	0
+Blaist_Blaland	Sovhjekax Ixau	3	97	90	90	58	66	64	90	89	99	36	86	C+	20	79.98	-1	1	1	0	0
+Blaist_Blaland	Zaxix Kibla	4	90	94	77	77	54	46	64	41	51	62	95	D+	22	61.61	-1	1	1	0	0
+Blaist_Blaland	Sokolnox Kaxbla	5	29	22	67	48	82	64	59	44	77	94	67	D+	22	62.36	-1	1	1	0	0
+Blaist_Blaland	Naxnoxsoya Lizaxium	3	80	68	98	77	91	37	84	41	65	58	87	C	19	69.97	-1	1	1	0	0
+Blaist_Blaland	Blanoxium Kaxpa	5	36	31	64	80	63	56	33	46	36	65	91	F+	22	55.16	-1	1	1	0	0
+Blaist_Blaland	Blanoxium Kolau	1	79	87	48	23	46	100	74	100	60	72	70	C	21	68.72	-1	1	1	0	0
+Blaist_Blaland	Kaxnaixfar Lizaxium	2	98	97	43	36	44	34	25	95	84	63	93	F+	22	57.22	-1	1	1	0	0
+Blaist_Blaland	Autanblanaix Auprat	4	92	82	92	81	37	59	90	28	47	30	82	C	19	64.61	-1	1	1	0	0
+Blaist_Blaland	Blanox Kipafar	5	35	26	44	32	83	36	28	35	46	90	96	D+	22	46.46	-1	1	1	0	0
+Red_Rainbow	Nupa Kuproku	2	65	46	40	26	37	52	42	65	47	40	71	C	22	47.86	-1	1	1	0	0
+Red_Rainbow	Danax Noxkol	3	89	78	71	23	52	75	65	45	92	81	65	C+	21	62.72	-1	1	1	0	0
+Red_Rainbow	Danaix Kipafar	4	29	37	39	71	36	59	41	17	42	21	87	C	23	46.83	-1	1	1	0	0
+Red_Rainbow	Noxku Uxyakro	5	38	21	70	53	70	61	75	16	55	68	61	D	22	58.78	-1	1	1	0	0
+Red_Rainbow	Uxku Naix	1	61	49	16	26	19	36	46	68	39	9	91	D+	20	41.34	-1	1	1	0	0
+Red_Rainbow	Nuux Ixau	5	24	23	48	47	45	17	26	40	59	36	78	D+	22	40.25	-1	1	1	0	0
+Red_Rainbow	Blaki Hjetohje	4	28	34	33	68	40	29	41	42	100	35	64	C	19	52.71	-1	1	1	0	0
+Red_Rainbow	Lato Naixi	1	66	65	20	13	31	47	28	88	40	79	58	D	22	42.02	-1	1	1	0	0
+Sagua	Nho'ja Zlinámhmhozlo	1	97	96	42	12	36	67	43	95	62	96	73	C	23	56.48	-1	1	1	0	0
+Sagua	Vŕá Nhoñsła	2	99	84	61	20	65	65	71	97	61	33	89	C	20	67.77	-1	1	1	0	0
+Sagua	Nho'ja Nánpa	3	98	91	77	41	41	66	78	46	66	88	76	C+	22	61.06	-1	1	1	0	0
+Sagua	Pañha Płońiblá	4	73	71	43	72	35	31	83	10	79	89	70	D	22	54.27	-1	1	1	0	0
+Sagua	Vavi Plasámhaq	5	26	28	36	69	80	24	51	50	72	67	50	C+	23	52.65	-1	1	1	0	0
+Sagua	Mhokba Dakómh	2	41	47	54	29	29	69	67	87	52	27	86	C	20	60.88	-1	1	1	0	0
+Sagua	Sĺokámh Kánpovŕagá	3	43	54	71	14	56	49	63	23	69	24	56	C	22	50.89	-1	1	1	0	0
+Height_Sagua	Nopá Kłó	1	91	71	39	17	25	73	49	65	57	49	76	D+	22	52.18	-1	1	1	0	0
+Height_Sagua	Nokó Nháǵłá	2	89	96	65	10	20	51	50	90	62	33	91	D+	22	58.23	-1	1	1	0	0
+Height_Sagua	Kańaq Słanák	3	52	74	55	24	60	98	79	99	78	61	95	B	19	71.48	-1	1	1	0	0
+Height_Sagua	Sávákán Nonhkwaqan	4	48	61	46	76	57	63	39	17	56	95	77	D	22	53.59	-1	1	1	0	0
+Height_Sagua	Mhokba Sŕa	3	41	31	66	18	57	13	47	24	95	82	62	D+	22	48.73	-1	1	1	0	0
+Key_to_Don	Nokó Nasa	2	97	93	44	15	22	67	95	89	69	56	73	C	20	65.71	-1	1	1	0	0
+Key_to_Don	Sĺokámh Pjagwazwi	1	56	55	25	13	31	43	56	100	33	92	66	C	22	47.22	-1	1	1	0	0
+Barsein	Muŕahinni Càl	5	38	22	57	54	82	34	66	25	55	27	64	D	23	54.75	-1	1	1	0	0
+Barsein	Amano Yoshitora	2	42	29	45	12	34	31	47	80	36	59	90	D	22	46.09	-1	1	1	0	0
+Barsein	Lvieknim Paradiniton	4	63	58	81	45	26	61	53	29	44	77	88	D	22	51.40	-1	1	1	0	0
+Antarion	Gèpeènè'nè O'àpàasà	1	83	61	33	17	16	36	64	84	54	66	88	D	22	50.46	-1	1	1	0	0
+Antarion	Payhèmàw Oŕeńà	2	100	94	81	24	50	62	79	88	85	68	94	C	19	73.32	-1	1	1	0	0
+Antarion	Śùy Rrèśʃiin	3	83	85	50	16	13	53	68	96	57	68	93	D+	19	53.22	-1	1	1	0	0
+Antarion	Śa'guskeq Muqu	4	57	44	83	25	40	16	38	18	64	33	55	D	19	43.87	-1	1	1	0	0
+Antarion	Śonpennneŕgomà Vàydep	5	63	48	75	81	99	72	62	55	59	16	86	D+	22	72.50	-1	1	1	0	0
+Antarion	Pò'a Nhòà	1	71	75	24	10	21	71	19	90	54	33	57	D	21	46.78	-1	1	1	0	0
+Antarion	A'opi Nùŕèodàkpiis	3	52	75	60	27	18	56	34	60	66	62	86	C	23	49.26	-1	1	1	0	0
+Antarion	Ńà Qe	1	98	93	40	23	42	98	76	92	67	46	79	C+	21	68.24	-1	1	1	0	0
+Antarion	Viiŕce O'àpàasà	2	57	63	63	27	56	50	34	91	57	84	56	D	19	55.69	-1	1	1	0	0
+Antarion	Śa'guskeq Ńàhem	3	30	38	82	33	58	87	55	33	71	89	100	C+	19	62.37	-1	1	1	0	0
+Antarion	Ponnew Ǵèècòvèŕka	4	23	36	42	43	10	52	45	40	41	88	75	C	19	40.35	-1	1	1	0	0
+Antarion	Śùy Nnoncàśénreskèc	5	28	22	49	61	97	58	65	26	71	94	85	D	20	63.32	-1	1	1	0	0
+Antarion	Payhèmàw Peśqu	3	45	53	28	64	60	79	35	69	60	47	93	D+	22	56.98	-1	1	1	0	0
+Antarion	Ǵamà Peśqu	3	93	91	64	41	35	32	56	46	62	57	85	D+	23	50.91	-1	1	1	0	0
+Antarion	Duuśuś Nhòà	1	84	91	40	24	22	77	84	86	34	78	94	C	22	58.88	-1	1	1	0	0
+Antarion	Mùnne Dova'mar'éxànè	2	99	96	85	68	61	95	79	98	61	31	80	B	20	79.22	-1	1	1	0	0
+Antarion	Gàp Nùx́iś	3	84	80	67	55	68	95	91	66	97	34	72	C+	22	77.19	-1	1	1	0	0
+Antarion	A'opi Ggàdéʃ	4	83	78	97	80	87	59	71	28	83	96	86	C	23	75.23	-1	1	1	0	0
+Antarion	Sipip Ǵèècòvèŕka	5	32	21	47	75	86	9	33	30	38	37	78	D	23	47.65	-1	1	1	0	0
+Antarion	Denni Pègsheènnàyccoŕiiś	1	98	91	24	13	32	68	42	98	59	27	91	C	19	55.24	-1	1	1	0	0
+Antarion	Ponnew Qùcca'	3	67	65	65	16	32	62	38	26	23	50	58	D	19	38.50	-1	1	1	0	0
+Nja	Ku Càl	2	46	46	61	12	60	49	29	48	62	77	71	D+	22	48.07	-1	1	1	0	0
+Nja	Noùpexi Yor'cél	5	34	23	79	58	100	25	92	22	45	50	91	C	20	63.81	-1	1	1	0	0
+Nja	Nàgiiś Rrèśʃiin	5	19	16	29	71	68	36	30	29	64	89	77	D	22	47.78	-1	1	1	0	0
+Pentadominion	Denni Ńàhem	1	48	20	34	19	42	61	46	90	60	52	62	C+	22	53.56	-1	1	1	0	0
+Pentadominion	Gàp Hàŕselàn	3	19	27	13	38	29	59	56	40	24	37	62	D+	22	37.06	-1	1	1	0	0
+Pentadominion	Cepèg Pènnaggà	4	64	53	97	46	48	44	62	48	90	97	96	C+	20	65.40	-1	1	1	0	0
+Pentadominion	Guvggillmào Peśqu	4	56	62	77	90	56	79	56	32	96	68	77	C	22	72.17	-1	1	1	0	0
+Pentadominion	Pàʃdo Peśqu	1	70	73	6	26	12	24	19	66	33	73	78	D+	19	31.78	-1	1	1	0	0
+Pentadominion	Ku Hàŕselàn	4	73	70	83	43	39	62	48	23	80	63	78	D+	22	57.63	-1	1	1	0	0
+Shmupland	Om Chin-Ho	1	99	90	40	29	54	90	47	98	81	25	94	B	22	68.02	-1	1	1	0	0
+Shmupland	Kam Chin-Ho	2	68	59	45	28	28	68	34	95	37	50	82	D+	22	53.12	-1	1	1	0	0
+Shmupland	Ok Sung-Soo	3	98	90	93	64	84	46	73	27	76	93	99	C+	23	68.14	-1	1	1	0	0
+Shmupland	Ha Song-Jin	4	76	72	95	70	70	52	24	14	46	63	83	D	19	57.47	-1	1	1	0	0
+Shmupland	Sol Sung-Soo	5	51	42	63	47	90	58	52	31	33	77	100	D	21	57.52	-1	1	1	0	0
+Shmupland	Chwa Sung-Soo	3	77	66	76	28	68	79	89	59	97	87	79	B	21	72.50	-1	1	1	0	0
+Shmupland	Sol Jung-Ho	5	19	24	67	55	96	36	50	30	87	27	54	D+	20	59.68	-1	1	1	0	0
+Shmupland	Sol Young-Chul	3	94	100	64	27	70	97	97	62	92	62	67	C+	20	73.59	-1	1	1	0	0
+Shmupland	Ka Jung-Ho	5	66	32	98	86	95	70	45	31	65	55	96	B	22	72.48	-1	1	1	0	0
+Shmupland	Om Jae-Wook	4	70	74	31	69	29	33	24	21	93	74	67	D+	19	47.59	-1	1	1	0	0
+Shmupland	Kam Song-Jin	1	40	35	8	13	22	49	37	67	28	11	51	D+	20	35.60	-1	1	1	0	0
+Shmupland	Ok Sung-Soo	3	42	57	36	23	39	32	42	61	43	29	66	D	23	40.47	-1	1	1	0	0
+Shmupland	Sol Sung-Soo	2	99	98	39	29	49	44	67	100	50	74	89	D+	21	59.27	-1	1	1	0	0
+Shmupland	Ka Minsu	3	84	95	35	25	44	65	60	44	60	77	81	D	22	50.43	-1	1	1	0	0
+Shmupland	Sol Minsu	4	90	95	64	41	44	48	60	33	41	13	76	D	19	49.20	-1	1	1	0	0
+Shmupland	No Minsu	5	54	58	84	82	79	50	44	44	52	98	53	C	20	61.31	-1	1	1	0	0
+Shmupland	Sol Kwang-Jo	1	91	96	22	14	31	56	66	100	70	15	93	C+	22	59.24	-1	1	1	0	0
+Shmupland	Sol Kwang-Seok	2	84	91	38	27	30	88	64	91	44	41	77	D+	23	60.77	-1	1	1	0	0
+Shmupland	No Minsu	3	63	76	94	77	57	76	91	45	67	15	60	C	22	71.03	-1	1	1	0	0
+Shmupland	Sol Kwang-Seok	4	95	100	99	68	30	86	42	49	97	49	52	C+	21	68.78	-1	1	1	0	0
+Shmupland	Ok Young-Chul	1	93	99	38	10	38	71	64	98	43	94	69	C	22	56.80	-1	1	1	0	0
+Shmupland	Chwa Yeong-Jin	3	55	44	65	26	30	69	46	42	73	31	98	D	22	54.11	-1	1	1	0	0
+Shmupland	Ok Young-Chul	5	49	32	84	71	97	79	38	20	54	44	61	D	20	65.11	-1	1	1	0	0
+Shmupland	No Seung-Won	1	80	90	26	5	6	62	51	100	47	69	71	C	19	50.51	-1	1	1	0	0
+Shmupland	Kae Seung-Won	4	62	56	59	38	39	55	49	36	60	70	68	D+	22	49.39	-1	1	1	0	0
+Shmupland	Ka Kwang-Seok	1	100	99	68	55	22	70	63	95	73	83	83	C	21	67.91	-1	1	1	0	0
+Shmupland	Kae Kwang-Jo	3	95	98	56	14	27	58	96	68	94	48	69	C	21	62.07	-1	1	1	0	0
+Shmupland	Chwa Kwang-Seok	4	100	100	100	39	42	71	72	17	80	72	81	C+	20	63.93	-1	1	1	0	0
+Shmupland	Chu Song-Jin	5	51	36	90	46	100	69	48	44	78	51	94	C+	22	69.20	-1	1	1	0	0
+Shmupland	Ok Sung-Soo	1	92	71	51	22	33	42	38	99	79	32	68	C	21	56.68	-1	1	1	0	0
+Shmupland	No Sung-Soo	3	87	76	70	24	52	60	41	54	68	20	90	C+	22	55.59	-1	1	1	0	0
+Shmupland	Kam Kwang-Seok	4	68	62	61	78	53	43	58	38	62	78	81	D	22	58.58	-1	1	1	0	0
+Shmupland	Om Jae-Wook	5	26	24	53	48	78	68	56	21	67	59	65	C	23	57.18	-1	1	1	0	0
+Shmupland	Chu Jung-Ho	4	53	50	96	39	40	51	56	19	70	48	77	D+	19	56.50	-1	1	1	0	0
+Kaeshar	Qutka Tituqu	3	69	63	65	69	28	99	60	29	51	72	69	C+	23	57.76	-1	1	1	0	0
+Kaeshar	Tibiziŋag Poi	4	77	67	46	55	81	90	30	41	64	93	88	C	19	59.38	-1	1	1	0	0
+Kaeshar	Makiaipisi Kivi	4	34	32	49	30	35	73	34	10	83	12	75	F+	19	48.28	-1	1	1	0	0
+Kaeshar	Tipeprik Mopke	1	92	99	24	15	31	27	49	99	72	35	93	D+	19	52.63	-1	1	1	0	0
+Kaeshar	Makiaipisi Kateni	2	79	79	70	60	47	58	75	97	30	85	69	B	19	62.94	-1	1	1	0	0
+Kaeshar	Iveo Mopke	3	60	68	61	68	50	50	69	24	78	33	66	D+	22	58.29	-1	1	1	0	0
+Kaeshar	Dipaia Vuki	4	59	39	98	77	42	48	95	28	45	56	90	D+	20	64.50	-1	1	1	0	0
+Kaeshar	Einep Zonaqa	5	62	69	93	66	91	47	46	47	32	61	66	C	22	61.08	-1	1	1	0	0
+Kaeshar	Zeabik Tituqu	1	77	79	28	16	34	57	24	98	57	43	89	C	19	50.77	-1	1	1	0	0
+Kaeshar	Aseqa Gekxakŋi	2	61	65	36	38	32	33	43	76	65	38	86	D	22	50.90	-1	1	1	0	0
+Kaeshar	Nipka Zonaqa	1	77	75	13	13	21	56	75	95	63	52	64	C	20	54.96	-1	1	1	0	0
+Kaeshar	Taneba Ifet	2	100	98	64	28	40	75	49	94	67	99	68	D+	19	64.56	-1	1	1	0	0
+Kaeshar	Makiaipisi Gekxakŋi	3	71	76	49	81	96	64	70	94	66	64	94	C	19	72.56	-1	1	1	0	0
+Kaeshar	Aseqa Abu	4	55	52	74	72	69	44	55	17	76	45	96	C+	20	62.75	-1	1	1	0	0
+Kaeshar	Kudqoatlop Nole	5	35	36	70	24	92	73	40	37	70	7	62	C	19	58.36	-1	1	1	0	0
+Kaeshar	Taneba Fiqup	4	34	41	80	43	22	83	56	23	68	10	65	C	23	55.32	-1	1	1	0	0
+Kaeshar	Imuk Nibrit	4	61	71	33	86	41	69	40	21	69	45	70	D+	22	54.21	-1	1	1	0	0
+Kaeshar	Taneba Ifet	3	59	68	63	45	26	91	30	78	36	64	100	C+	22	54.03	-1	1	1	0	0
+Kaeshar	Eŋipxuk Poi	2	99	95	60	32	38	91	68	87	63	94	75	D+	21	68.14	-1	1	1	0	0
+Kaeshar	Eke Vevapi	3	59	60	72	72	67	39	58	46	82	36	79	C	20	62.92	-1	1	1	0	0
+Kaeshar	Klegna Aivik	4	46	40	50	63	43	53	56	17	76	29	60	C	20	53.49	-1	1	1	0	0
+Kaeshar	Nio Nide	2	97	92	41	40	65	44	73	92	76	85	96	D+	20	65.90	-1	1	1	0	0
+Kaeshar	Einep Tituqu	3	69	68	77	60	70	33	66	17	38	46	64	D	22	51.11	-1	1	1	0	0
+Kaeshar	Iveo Zonaqa	4	55	49	76	67	39	35	67	20	73	88	56	C	21	56.48	-1	1	1	0	0
+Kaeshar	Dezik Finapeke	4	51	52	64	62	36	43	45	34	89	8	63	C+	19	55.94	-1	1	1	0	0
+Bielosia	Koa Somphonpadee	1	100	94	44	16	21	53	52	96	46	82	80	C+	19	52.98	-1	1	1	0	0
+Bielosia	Oke Phanivong	3	99	99	77	44	54	79	96	74	95	56	70	C	22	74.92	-1	1	1	0	0
+Bielosia	Bane Somphousiharath	4	100	98	99	84	94	57	40	30	92	93	93	C	19	75.44	-1	1	1	0	0
+Bielosia	Lae Viravongs	5	33	9	57	49	78	63	20	26	66	68	95	D+	22	53.91	-1	1	1	0	0
+Bielosia	Keon Vongsay	3	90	97	79	54	80	80	97	80	72	66	76	D+	23	76.33	-1	1	1	0	0
+Bielosia	Aulii Thepsenavong	4	70	66	81	53	44	37	66	23	82	31	97	D+	23	60.02	-1	1	1	0	0
+Bielosia	Kalei Bokeo	3	55	57	99	40	98	63	81	50	55	97	92	B	22	69.00	-1	1	1	0	0
+Bielosia	Xaisomboun Somphonpadee	1	93	97	50	28	25	83	50	90	41	25	98	C	22	58.33	-1	1	1	0	0
+Bielosia	Palani Tayvihane	2	50	60	57	51	74	63	70	80	59	92	77	D+	20	65.02	-1	1	1	0	0
+Bielosia	Wongduan Phanivong	3	97	93	72	72	38	85	65	90	90	33	89	C+	21	74.17	-1	1	1	0	0
+Bielosia	Kelii Vongsay	4	53	56	98	43	31	74	45	48	93	62	59	D+	20	62.86	-1	1	1	0	0
+Bielosia	Wongduan Vongsay	5	21	13	53	49	97	52	56	22	31	60	97	D+	20	55.95	-1	1	1	0	0
+Bielosia	Kimo Thammasith	1	88	87	43	13	21	87	43	94	44	21	77	C	19	55.50	-1	1	1	0	0
+Bielosia	Kimo Khotpanya	2	93	83	62	18	53	72	46	99	41	63	70	D	22	59.79	-1	1	1	0	0
+Bielosia	Analu Saengsavang	5	33	30	29	80	95	27	69	39	56	32	63	C	20	57.00	-1	1	1	0	0
+Bielosia	Kawaii Rattanavongsa	1	94	99	48	36	10	32	90	92	56	89	77	C	20	57.86	-1	1	1	0	0
+Bielosia	Kaili Phothisarath	2	99	97	57	17	80	85	54	85	64	80	99	B	19	67.64	-1	1	1	0	0
+Bielosia	Ikaika Siharath	3	97	97	75	67	48	60	98	92	73	87	94	C+	22	73.67	-1	1	1	0	0
+Bielosia	Koa Vatthana	4	58	58	81	79	60	54	96	34	99	98	66	B	20	73.31	-1	1	1	0	0
+Bielosia	Palani Bouvanaat	5	46	44	82	76	98	47	54	48	84	30	74	B	19	69.25	-1	1	1	0	0
+Bielosia	Keowynn Somphonpadee	3	96	97	74	31	70	53	89	84	98	61	72	D+	20	72.18	-1	1	1	0	0
+Bielosia	Koa Sisoulith	4	91	100	79	51	52	74	95	39	57	30	78	C	19	64.49	-1	1	1	0	0
+Bielosia	Kimo Sayasone	2	93	92	35	37	41	47	66	72	56	38	95	C	21	55.74	-1	1	1	0	0
+Bielosia	Lilo Thammavong	4	63	71	66	58	40	55	42	14	94	53	70	D+	22	57.09	-1	1	1	0	0
+Bielosia	Bane Keobunta	1	62	67	32	35	31	73	73	91	75	22	88	C+	22	64.48	-1	1	1	0	0
+Bielosia	Keanu Thonemany	2	73	78	59	25	61	63	81	91	70	90	91	B	23	69.22	-1	1	1	0	0
+Bielosia	Kai Khotpanya	3	81	80	74	38	47	68	96	97	96	99	84	C	21	74.86	-1	1	1	0	0
+Bielosia	Malo Inthisane	4	99	95	72	68	46	97	28	36	48	74	100	C	22	59.66	-1	1	1	0	0
+Bielosia	Kye Vongsay	5	46	29	58	60	93	47	87	53	84	87	99	D+	20	69.57	-1	1	1	0	0
+Bielosia	Analu Thepsenavong	1	47	37	55	20	48	49	47	98	78	6	63	D	21	59.14	-1	1	1	0	0
+Bielosia	Kawaii Siyavong	2	94	78	71	44	41	62	85	86	76	57	89	C	22	71.46	-1	1	1	0	0
+Bielosia	Kawaii Louangrath	4	56	59	59	66	65	32	39	34	64	90	95	C	22	55.05	-1	1	1	0	0
+Bielosia	Ikaika Bokeo	5	21	14	79	40	80	69	39	13	53	73	93	C+	19	57.00	-1	1	1	0	0
+Bielosia	Mya Phaophanit	3	47	51	95	21	41	73	75	37	83	59	63	D	19	62.39	-1	1	1	0	0
+Lyintaria	Kawaii Bokeo	1	100	93	43	30	54	87	42	97	56	66	97	B	19	62.77	-1	1	1	0	0
+Lyintaria	Meka Thonemany	3	62	62	58	91	92	40	60	29	43	66	96	D	22	58.50	-1	1	1	0	0
+Lyintaria	Koa Vatthana	4	92	94	78	69	60	62	69	19	92	69	82	C+	21	68.10	-1	1	1	0	0
+Lyintaria	Kimo Phothisarath	5	73	61	86	63	73	20	75	39	46	61	99	D+	21	59.94	-1	1	1	0	0
+Lyintaria	Ikaika Sayasone	3	74	72	70	49	46	47	49	93	61	74	94	D	21	60.16	-1	1	1	0	0
+Lyintaria	Kimo Phothisarath	1	64	61	17	28	28	54	57	65	21	30	94	D+	22	43.26	-1	1	1	0	0
+Lyintaria	Keahi Douangvily	4	82	72	69	35	32	19	37	29	97	62	56	D+	22	49.25	-1	1	1	0	0
+Lyintaria	Oke Somphousiharath	2	100	93	42	41	22	12	42	58	63	89	92	D	23	45.27	-1	1	1	0	0
+Lyintaria	Phetdum Thepsenavong	3	95	94	57	39	53	66	69	58	71	80	66	F+	20	59.93	-1	1	1	0	0
+Lyintaria	Akamu Kethavongsa	3	51	59	69	37	62	63	48	52	53	86	96	C	23	56.39	-1	1	1	0	0
+Pyxanovia	Keoki Khamchanh	1	79	75	38	27	40	66	69	100	85	51	100	C+	19	67.44	-1	1	1	0	0
+Pyxanovia	Kimo Siyavong	4	63	62	77	69	29	75	45	29	98	40	83	C	20	64.30	-1	1	1	0	0
+Pyxanovia	Keanu Keothavong	3	21	12	53	63	33	25	45	26	45	53	66	D+	19	41.93	-1	1	1	0	0
+Pyxanovia	Ikaika Phommasane	4	62	65	70	32	32	53	57	14	82	56	62	F+	22	51.68	-1	1	1	0	0
+Pyxanovia	Kai Thonemany	1	44	39	13	23	28	59	72	95	56	24	93	D+	22	56.06	-1	1	1	0	0
+Pyxanovia	Keahi Vongsay	2	90	84	50	19	59	52	87	84	79	23	74	D+	20	66.49	-1	1	1	0	0
+Pyxanovia	Palani Sengtavisouk	3	87	76	89	41	47	69	77	43	42	88	70	C+	22	58.50	-1	1	1	0	0
+Pyxanovia	Mya Thepsenavong	4	58	49	86	44	64	67	72	53	69	32	75	D	22	64.82	-1	1	1	0	0
+Pyxanovia	Analu Saengsavang	5	45	41	63	83	93	69	63	61	65	38	77	C	19	70.20	-1	1	1	0	0
+Pyxanovia	Kimo Ketthavong	4	32	27	51	33	30	25	20	25	78	73	70	F+	21	41.24	-1	1	1	0	0
+Pyxanovia	Kaili Soulignavong	3	63	62	73	57	59	61	58	34	93	90	71	C	21	63.65	-1	1	1	0	0
+Pyxanovia	Bane Thammavong	4	43	38	60	35	24	52	83	8	26	93	71	C	22	42.93	-1	1	1	0	0
+Holy_Yektonisa	Phetdum Phothisarath	1	94	100	71	25	28	46	78	86	45	94	70	F+	22	57.81	-1	1	1	0	0
+Holy_Yektonisa	Kai Rattanavongsa	2	20	28	49	43	22	49	49	55	49	26	99	C	20	49.38	-1	1	1	0	0
+Holy_Yektonisa	Malo Sayasone	3	62	67	55	28	26	63	37	92	60	13	73	D+	21	52.58	-1	1	1	0	0
+Holy_Yektonisa	Keon Savang	4	84	92	81	61	67	99	65	52	100	56	97	C+	22	76.74	-1	1	1	0	0
+Holy_Yektonisa	Analu Bouphavanh	5	21	33	49	62	97	50	50	30	33	69	97	B	19	56.91	-1	1	1	0	0
+Holy_Yektonisa	Moke Vongsay	3	64	59	81	23	49	67	45	33	51	24	93	C	22	52.56	-1	1	1	0	0
+Holy_Yektonisa	Leilani Bouvanaat	1	79	82	22	19	23	52	58	98	62	43	73	C+	23	54.16	-1	1	1	0	0
+Holy_Yektonisa	Kanoa Phommasane	4	47	61	96	30	23	40	72	20	89	26	72	D	22	56.68	-1	1	1	0	0
+Other	Nathaniel Grabochov	4	15	11	18	28	28	21	56	13	63	6	92	D+	22	36.38	-1	1	1	0	0
+Other	Steve Tooli	5	49	24	65	61	88	35	56	43	40	43	77	C	23	56.85	-1	1	1	0	0
+Other	Matthew Wilcox	5	48	37	62	54	96	56	14	28	72	95	70	C	22	55.97	-1	1	1	0	0
+Other	Matthew Turner	1	100	99	43	15	59	75	74	97	45	47	73	D+	22	61.76	-1	1	1	0	0
+Other	Yoade Fine	3	76	64	74	82	55	64	98	52	91	64	81	B	21	74.24	-1	1	1	0	0
+Other	Thomas Jordanov	3	43	57	53	33	23	51	59	17	79	8	79	D	19	49.10	-1	1	1	0	0
+Other	Johan Ebron	4	68	73	81	54	25	48	52	36	98	14	92	C	21	60.94	-1	1	1	0	0
+Other	Zac Erickson	4	47	53	31	17	51	20	23	18	35	44	92	C+	21	31.77	-1	1	1	0	0
+Other	Brian Starks	3	42	45	65	26	47	62	54	51	35	68	64	C	22	48.34	-1	1	1	0	0
+Other	Alex Jordanov	4	31	39	25	13	23	31	19	24	48	54	54	D	20	27.94	-1	1	1	0	0
+Other	Zac Erickson	5	29	17	40	26	38	40	51	18	58	58	100	D+	22	41.86	-1	1	1	0	0
+Other	Quinten Drake	3	56	52	27	48	30	19	62	45	34	18	52	D	19	37.81	-1	1	1	0	0
+Other	Stephen Perch	3	69	57	91	60	57	52	56	56	62	89	74	C+	20	61.89	-1	1	1	0	0
+Other	Doran Wells	5	25	22	66	88	79	35	54	39	31	56	93	C+	22	58.10	-1	1	1	0	0
+Other	Brian Svensson	5	33	21	56	67	72	52	44	40	36	40	68	D	22	53.15	-1	1	1	0	0
+Other	Steve Svensson	5	24	15	59	51	73	46	41	21	49	62	92	D+	22	51.68	-1	1	1	0	0
+Other	Asher Hoover	1	79	90	72	21	27	48	49	98	78	99	92	C	21	62.14	-1	1	1	0	0
+Other	Daniel McBob	4	64	44	62	62	50	63	78	25	89	75	64	D+	19	63.04	-1	1	1	0	0
+Other	Yoade Jordanov	5	70	63	88	83	100	33	55	64	59	86	90	C	19	68.93	-1	1	1	0	0
+Other	Alex Hoover	3	71	65	51	17	52	52	43	38	74	20	96	C	21	50.87	-1	1	1	0	0
+Other	Juri Ebron	4	42	36	71	30	18	46	67	33	94	48	58	F+	23	53.11	-1	1	1	0	0
+Other	Juri Drake	5	38	45	70	51	63	70	60	29	62	20	62	D+	22	58.28	-1	1	1	0	0
+Other	Max Vuchko	5	58	39	41	43	64	50	18	25	69	72	54	D	19	44.80	-1	1	1	0	0
+Other	Brian McBob	2	93	95	37	16	64	80	34	81	53	88	69	D+	23	55.82	-1	1	1	0	0
+Other	Steve Vuchko	3	100	88	95	56	63	72	83	44	88	95	89	B	22	73.48	-1	1	1	0	0
+Other	Jesse Byrne	4	78	80	88	72	47	65	80	18	81	12	98	D+	20	68.96	-1	1	1	0	0
+Other	Doran Erickson	4	28	48	63	71	39	34	28	22	48	10	94	D+	22	48.42	-1	1	1	0	0
+Other	Xavier Tooli	1	47	54	24	13	17	45	32	92	28	95	86	D	19	41.70	-1	1	1	0	0
+Other	Bob Svensson	3	52	56	46	51	49	36	29	40	49	78	91	C	22	44.93	-1	1	1	0	0
+Ethanthova	Michael Bowyer	1	95	85	21	48	31	65	87	90	64	66	76	D	23	62.86	-1	1	1	0	0
+Ethanthova	Carlos Logan	2	99	91	84	40	31	100	100	98	53	43	99	C+	20	78.91	-1	1	1	0	0
+Ethanthova	Barney Caplin	3	68	79	79	97	63	94	98	30	55	26	71	C+	22	72.11	-1	1	1	0	0
+Ethanthova	Nicholas Barnett	4	70	67	91	66	41	81	57	46	96	81	90	C	19	71.04	-1	1	1	0	0
+Ethanthova	Thomas Hollingsworth	5	55	31	70	39	80	85	44	58	69	57	76	D+	20	62.99	-1	1	1	0	0
+Ethanthova	Robert Rooney	2	94	97	51	24	57	81	61	87	92	93	90	C+	19	71.09	-1	1	1	0	0
+Ethanthova	Vernon Fudge	3	78	58	80	79	94	59	66	68	68	32	93	B	23	72.49	-1	1	1	0	0
+Ethanthova	Greg Caplin	5	25	28	24	90	93	64	56	13	28	59	58	D+	19	55.61	-1	1	1	0	0
+Ethanthova	Owen Howe	2	78	59	27	23	15	62	72	98	59	88	80	D+	22	59.16	-1	1	1	0	0
+Ethanthova	Robert Templeton	1	66	88	25	32	37	99	65	77	79	48	70	C+	20	64.52	-1	1	1	0	0
+Ethanthova	Mitchell Berry	2	94	93	68	31	61	61	86	79	60	60	62	D	20	66.05	-1	1	1	0	0
+Ethanthova	Jasper Kirk	3	51	55	100	66	19	88	51	35	62	83	87	C	22	61.85	-1	1	1	0	0
+Ethanthova	Hamish Palmer	4	68	67	64	57	45	51	66	39	72	92	53	C	19	56.86	-1	1	1	0	0
+Ethanthova	Greg Doyle	5	43	51	71	76	93	51	38	26	50	93	72	C	22	59.92	-1	1	1	0	0
+Ethanthova	Zane Hutchison	3	70	63	79	31	82	61	93	14	65	76	57	C	23	60.91	-1	1	1	0	0
+Ethanthova	Jack Pool	1	67	67	30	10	23	56	55	98	39	96	96	D+	22	51.46	-1	1	1	0	0
+Ethanthova	Bernard Kirk	2	85	81	68	43	42	79	52	92	70	63	91	D+	20	68.51	-1	1	1	0	0
+Ethanthova	Nicholas Elliott	3	99	92	61	39	58	48	85	86	51	17	89	D+	19	61.64	-1	1	1	0	0
+Ethanthova	Uriah Bowyer	5	20	13	41	46	93	53	69	32	40	57	73	C+	19	55.62	-1	1	1	0	0
+Ethanthova	Iggy Robertson	3	76	84	63	44	15	47	71	64	64	61	67	D	20	54.11	-1	1	1	0	0
+Ethanthova	Phil Hollingsworth	1	96	94	16	6	26	15	54	82	32	37	94	F+	22	39.87	-1	1	1	0	0
+Ethanthova	Nicholas Whyman	2	86	76	53	51	24	47	43	71	82	51	62	C	23	56.67	-1	1	1	0	0
+Ethanthova	Fletcher Conway	3	44	48	73	39	11	59	80	10	64	45	57	D+	22	50.17	-1	1	1	0	0
+Ethanthova	Colin Cass	4	46	59	63	68	32	28	69	24	47	49	97	D	19	51.48	-1	1	1	0	0
+Ethanthova	Eric James	5	67	58	86	56	98	64	50	37	68	67	90	D+	21	67.65	-1	1	1	0	0
+Ethanthova	Conor Cass	2	79	93	58	25	48	65	29	70	65	62	71	D+	22	55.19	-1	1	1	0	0
+Ethanthova	Malcolm Mack	3	41	23	94	34	33	60	77	19	30	61	47	D	23	48.89	-1	1	1	0	0
+Ethanthova	Phil Harris	4	55	54	43	46	16	60	16	26	45	11	75	F	22	39.09	-1	1	1	0	0
+Ethanthova	Gerard Lavender	5	53	35	74	42	80	87	48	13	67	66	60	C+	21	60.65	-1	1	1	0	0
+Ethanthova	Julian Elliott	4	15	22	49	22	25	16	7	9	30	69	65	D+	20	26.39	-1	1	1	0	0
+Dotruga	Alomiba Aludetsei	1	91	96	30	8	39	57	70	95	86	95	95	D+	19	63.15	-1	1	1	0	0
+Dotruga	Omeli Olalomundi	2	99	88	34	56	22	52	59	75	96	94	93	C	22	62.90	-1	1	1	0	0
+Dotruga	Osiei Bexomos	3	87	97	92	69	89	40	90	41	81	91	75	C+	19	71.68	-1	1	1	0	0
+Dotruga	Falosan Aludosalomundi	4	68	70	74	42	46	36	45	26	93	93	63	D+	22	55.07	-1	1	1	0	0
+Dotruga	Iklo Elomobek	5	26	43	67	74	71	35	65	25	64	18	76	C	23	58.65	-1	1	1	0	0
+Dotruga	Eban Hadosa	1	100	90	23	23	36	78	62	92	45	57	70	C	20	56.28	-1	1	1	0	0
+Dotruga	Alumbi Osadolsei	2	98	100	63	21	71	14	49	94	72	29	62	C	21	57.10	-1	1	1	0	0
+Dotruga	Klabo Xiahelvi	2	69	81	54	14	26	42	65	94	68	34	68	C	22	58.70	-1	1	1	0	0
+Dotruga	Sabet Bexodosamosi	3	85	92	78	45	91	34	57	47	69	90	91	D+	20	61.52	-1	1	1	0	0
+Dotruga	Xai Aludosutrugo	1	93	81	41	23	42	47	65	70	68	69	63	C	23	54.49	-1	1	1	0	0
+Dotruga	Hivek Kavoan	2	99	94	72	24	56	69	57	97	38	72	98	D	21	63.64	-1	1	1	0	0
+Dotruga	Olandi Olameso	3	70	60	48	67	40	65	48	51	65	59	56	D	23	54.70	-1	1	1	0	0
+Dotruga	Paparto Tudosutrisei	4	92	79	78	50	25	89	49	27	89	62	65	C+	19	60.84	-1	1	1	0	0
+Dotruga	Alumbi Bexote	5	64	65	84	70	90	47	97	38	76	14	96	B	21	73.51	-1	1	1	0	0
+Dotruga	Alumbi Aludosutrugo	3	21	24	46	59	58	62	38	19	54	24	80	F+	20	48.97	-1	1	1	0	0
+Dotruga	Alosembi Aludetsei	4	61	80	63	61	40	54	49	18	53	95	57	D	22	50.66	-1	1	1	0	0
+Dotruga	Melebin Alulomundi	1	88	94	53	29	32	41	60	73	96	40	91	C	22	60.93	-1	1	1	0	0
+Dotruga	Ek Alovek	4	53	76	62	96	94	58	56	22	58	72	90	C+	21	66.76	-1	1	1	0	0
+Dotruga	Atososa Osamostrugo	4	87	74	73	70	32	65	26	48	64	56	57	C	22	55.50	-1	1	1	0	0
+Dotruga	Alolisiei Besedosaxek	1	74	75	48	25	35	37	54	65	52	62	70	D+	22	48.18	-1	1	1	0	0
+Dotruga	Alubembi Bexek	1	79	76	57	28	23	100	84	71	95	81	89	C	22	72.77	-1	1	1	0	0
+Dotruga	Hevek Osadolsei	2	96	100	74	54	69	64	65	92	93	82	76	C	22	74.96	-1	1	1	0	0
+Dotruga	Tusaro Dotrugo	3	78	90	67	14	42	62	67	50	99	38	100	C+	19	62.37	-1	1	1	0	0
+Dotruga	Alombi Olamos	4	96	91	75	83	53	66	70	57	94	67	96	C	23	73.64	-1	1	1	0	0
+Dotruga	Alukeili Hersa	5	54	46	63	71	100	88	49	50	79	97	83	C+	23	71.76	-1	1	1	0	0
+Dotruga	Sopei Bexomos	2	91	97	57	24	92	85	52	99	82	62	84	C+	21	73.26	-1	1	1	0	0
+Dotruga	Sagolna Bituna	4	59	45	50	61	52	66	95	45	80	61	93	D+	22	65.19	-1	1	1	0	0
+Dotruga	Alombi Fevioka	5	50	20	81	84	100	49	43	52	81	43	95	B	19	70.37	-1	1	1	0	0
+Dotruga	Bob Betrisei	2	90	94	61	36	65	63	82	88	72	55	84	D+	23	70.34	-1	1	1	0	0
+Dotruga	Atumiba Hadosadolsei	4	85	95	84	78	36	60	39	21	83	33	86	D+	20	62.66	-1	1	1	0	0
+Tri_National_Dominion	Ingo Ehrenstein	1	99	91	19	20	46	70	63	95	67	21	89	C	22	60.60	-1	1	1	0	0
+Tri_National_Dominion	Louis Stein	4	75	76	96	97	76	57	74	46	90	36	100	C	19	79.74	-1	1	1	0	0
+Tri_National_Dominion	Timo Staffel	5	40	44	51	68	81	44	51	39	47	65	58	D	21	54.72	-1	1	1	0	0
+Tri_National_Dominion	Adalbrecht Klostermann	1	91	94	28	14	26	63	69	70	100	60	90	D+	19	61.60	-1	1	1	0	0
+Tri_National_Dominion	Heine Umlauf	2	58	55	62	24	19	41	55	69	64	58	86	D	22	53.94	-1	1	1	0	0
+Tri_National_Dominion	Marko Stengel	5	52	33	78	63	79	18	36	26	55	53	93	C	22	53.47	-1	1	1	0	0
+Tri_National_Dominion	Reinhard Bischoff	1	75	83	25	14	24	66	87	95	70	66	88	D+	22	62.67	-1	1	1	0	0
+Tri_National_Dominion	Marko Schuttler	3	78	80	71	66	69	84	88	57	76	69	67	D+	23	72.12	-1	1	1	0	0
+Tri_National_Dominion	Till Staffel	4	59	69	68	64	33	95	51	17	99	82	62	D	22	63.79	-1	1	1	0	0
+Tri_National_Dominion	Niclas Kleinman	3	77	66	67	37	63	35	60	96	52	70	73	C	23	57.79	-1	1	1	0	0
+Tri_National_Dominion	Noah Meyer	3	46	53	73	42	40	39	35	18	36	52	60	D+	21	41.21	-1	1	1	0	0
+Aeridani	Usagi Sumiteru	1	96	97	54	11	26	60	92	98	76	75	79	B	22	66.89	-1	1	1	0	0
+Aeridani	Watsuji Yoshitora	2	96	99	74	15	42	87	94	93	71	30	99	C+	19	76.16	-1	1	1	0	0
+Aeridani	Yabuta Minoru	3	96	98	61	33	62	62	66	73	75	81	70	D+	20	62.50	-1	1	1	0	0
+Aeridani	Nagata Shunmyo	5	38	31	39	44	86	41	59	26	46	74	64	D	21	50.75	-1	1	1	0	0
+Aeridani	Okumura Jo	3	51	46	92	82	55	65	46	12	66	40	85	C	22	60.81	-1	1	1	0	0
+Aeridani	Okumura Seiho	1	82	80	67	25	37	63	69	95	63	83	68	D+	21	63.42	-1	1	1	0	0
+Aeridani	Iwayanagi Miyoko	2	99	99	93	29	20	92	84	95	82	74	95	C+	21	79.24	-1	1	1	0	0
+Aeridani	Miyoshi Fumihiko	3	97	96	67	53	62	96	79	88	53	31	69	C+	22	69.48	-1	1	1	0	0
+Aeridani	Himi Danjuro	4	85	76	93	91	40	99	82	41	91	43	76	C+	19	78.34	-1	1	1	0	0
+Aeridani	Iwayanagi Keizo	5	39	26	60	59	89	68	40	25	63	93	87	D+	22	60.32	-1	1	1	0	0
+Aeridani	Zoenne Paradiniton	4	71	78	83	62	36	67	50	14	95	15	85	C	23	63.29	-1	1	1	0	0
+Aeridani	Masaki Toshiyuki	2	98	92	36	9	24	70	24	82	82	49	94	C	22	56.21	-1	1	1	0	0
+Aeridani	Zoenne Toshiyuki	3	66	74	56	49	27	28	63	42	54	75	48	D	22	46.05	-1	1	1	0	0
+Aeridani	Saiki Bunzo	5	28	25	49	60	75	56	49	27	71	27	87	D	22	57.10	-1	1	1	0	0
+Aeridani	Masaki Kiyohira	1	73	66	31	22	13	69	48	74	46	19	93	D	22	50.21	-1	1	1	0	0
+Aeridani	Domen Eikichi	2	69	83	48	11	33	63	32	84	83	81	94	D+	21	58.85	-1	1	1	0	0
+Aeridani	Tamatsuki Kamlyn	5	57	50	49	42	63	71	60	14	63	60	99	C	23	55.75	-1	1	1	0	0
+Aeridani	Zoenne Sofu	2	97	96	53	15	51	86	78	92	91	73	94	B	21	74.63	-1	1	1	0	0
+Aeridani	Matsuyama Inejiro	3	73	59	88	28	30	60	73	55	52	77	87	C	21	57.15	-1	1	1	0	0
+Aeridani	Yagi Yoshitora	4	72	73	87	92	55	32	53	33	92	45	69	D+	20	67.19	-1	1	1	0	0
+Aeridani	Tamatsuki Hikozaemon	5	64	38	53	54	89	26	63	35	69	51	75	D+	22	56.98	-1	1	1	0	0
+Aeridani	Yoshida Hirotada	2	61	56	33	33	39	61	55	91	54	82	90	D	22	57.59	-1	1	1	0	0
+Aeridani	Tagawa Tomoyuki	3	64	63	20	16	38	20	46	63	60	57	67	D	22	39.78	-1	1	1	0	0
+Aeridani	Ishimoto Yoshitora	1	100	91	29	11	50	52	69	90	95	91	93	B	21	63.84	-1	1	1	0	0
+Aeridani	Yoshida Takuji	3	85	70	95	63	38	42	96	33	48	99	93	D	21	60.88	-1	1	1	0	0
+Aeridani	Steve Minoru	4	93	85	100	68	40	56	62	22	73	63	69	D	23	63.74	-1	1	1	0	0
+Aeridani	Uemura Bunzo	5	31	16	68	81	62	63	24	34	65	62	93	C	22	57.84	-1	1	1	0	0
+Aeridani	Tamatsuki Keizo	1	88	82	65	32	37	65	62	99	75	27	65	D+	22	65.65	-1	1	1	0	0
+Aeridani	Saiki Kiyohira	2	89	97	60	16	51	54	57	69	28	61	77	D+	22	51.33	-1	1	1	0	0
+Aeridani	Minamoto Goro	3	65	63	63	55	25	63	55	43	66	86	99	D+	22	55.97	-1	1	1	0	0
+Aeridani	Koyanagi Hirotada	3	74	87	44	38	38	42	58	76	82	57	79	D	22	56.31	-1	1	1	0	0
+Aeridani	Ienaga Hideki	5	54	26	44	41	77	19	32	38	42	56	97	D	20	44.84	-1	1	1	0	0
+Aiyota	Yembeane	2	39	50	63	55	46	52	37	38	70	96	61	D+	22	51.22	-1	1	1	0	0
+Aiyota	Billingulbut	3	56	65	75	30	71	83	50	45	65	94	53	C	19	59.39	-1	1	1	0	0
+Aiyota	Yearndiemurra	3	58	64	79	26	84	33	49	41	60	51	92	D	19	54.95	-1	1	1	0	0
+Aiyota	Mungagee	2	68	80	55	46	21	47	41	79	84	60	82	D+	21	58.78	-1	1	1	0	0
+Aiyota	Belangana	2	98	93	42	15	24	71	55	59	66	53	79	F+	19	54.81	-1	1	1	0	0
+Aiyota	Gnuger	1	87	88	44	13	23	76	65	95	59	68	69	D+	19	59.84	-1	1	1	0	0
+Aiyota	Mornay	4	49	55	85	74	44	42	49	48	93	60	86	F+	22	65.47	-1	1	1	0	0
+Aiyota	Mornay	5	24	22	27	60	43	33	32	22	29	38	76	F+	23	37.39	-1	1	1	0	0
+Aiyota	Cocogo	1	40	36	26	27	24	28	52	100	67	92	97	D+	19	52.51	-1	1	1	0	0
+Aiyota	Belangana	1	71	67	30	32	47	61	66	79	75	90	82	C	22	59.99	-1	1	1	0	0
+Aiyota	Mungymia	3	93	87	39	53	37	71	83	89	88	74	95	C+	19	67.89	-1	1	1	0	0
+Aiyota	Belangana	4	62	74	100	98	62	58	43	28	64	73	87	C+	22	68.83	-1	1	1	0	0
+Aiyota	Mungymia	1	96	90	46	11	30	53	70	66	68	95	95	C	23	56.23	-1	1	1	0	0
+Aiyota	Geering	2	54	50	49	40	22	21	49	94	42	24	70	D+	23	48.87	-1	1	1	0	0
+Aiyota	Namia	3	99	99	73	55	71	50	91	34	27	94	62	C+	22	55.99	-1	1	1	0	0
+Aiyota	Windella	4	67	69	63	60	58	50	61	24	74	47	93	D	22	59.46	-1	1	1	0	0
+Czalliso	ilu	2	80	64	20	31	19	47	44	52	45	67	73	C	22	41.90	-1	1	1	0	0
+Czalliso	roe	3	97	99	70	67	71	100	41	99	72	61	95	C+	22	73.97	-1	1	1	0	0
+Czalliso	noe	5	51	35	46	80	90	59	26	30	40	94	78	C+	20	55.54	-1	1	1	0	0
+Czalliso	fu	5	34	28	47	36	76	43	60	42	52	30	80	D	22	52.09	-1	1	1	0	0
+Czalliso	roe	1	96	90	49	15	38	54	57	94	57	78	88	C+	19	57.55	-1	1	1	0	0
+Czalliso	app	2	90	86	68	39	75	72	77	93	90	21	91	C+	19	77.04	-1	1	1	0	0
+Czalliso	noe	3	82	72	69	53	64	47	65	36	50	53	63	D+	22	54.71	-1	1	1	0	0
+Czalliso	roe	5	20	12	61	29	91	57	24	27	46	92	88	F+	21	50.93	-1	1	1	0	0
+Czalliso	pot	2	93	96	75	29	41	78	93	80	79	28	78	D+	19	73.64	-1	1	1	0	0
+Czalliso	roe	4	25	30	55	57	59	34	27	45	76	46	61	D+	22	51.71	-1	1	1	0	0
+Czalliso	noe	1	100	92	46	39	32	69	92	94	79	51	67	B	21	69.27	-1	1	1	0	0
+Czalliso	fu	2	95	93	70	15	73	97	74	97	62	76	99	D+	21	75.19	-1	1	1	0	0
+Czalliso	kaf	2	81	83	70	49	62	78	67	94	68	53	63	D+	20	71.06	-1	1	1	0	0
+Czalliso	noe	5	36	39	63	65	96	38	86	49	62	65	72	C+	22	65.65	-1	1	1	0	0
+Czalliso	roe	5	74	61	63	59	93	55	56	21	67	51	91	D	20	62.69	-1	1	1	0	0
+Czalliso	ilo	1	80	80	44	5	51	37	27	74	50	76	70	D	22	44.17	-1	1	1	0	0
+Czalliso	pot	4	36	52	71	66	44	63	33	48	86	51	98	C	19	62.09	-1	1	1	0	0
+Czalliso	kaf	1	65	58	19	13	27	32	59	62	50	58	60	D+	22	41.96	-1	1	1	0	0
+Czalliso	fu	1	92	91	35	26	33	55	50	98	63	78	92	C	21	57.43	-1	1	1	0	0
+Czalliso	roe	2	93	94	73	73	38	72	69	100	61	42	72	C	22	71.23	-1	1	1	0	0
+Czalliso	lu	3	95	92	64	46	53	72	56	79	64	79	62	D	22	61.57	-1	1	1	0	0
+Czalliso	fu	4	88	84	90	62	44	70	62	48	95	52	68	C	19	68.94	-1	1	1	0	0
+Czalliso	ilo	5	74	61	67	95	92	49	69	53	100	100	99	B	21	75.11	-1	1	1	0	0
+Czalliso	ilu	3	93	98	53	17	52	81	38	56	72	65	61	C	22	54.43	-1	1	1	0	0
+Czalliso	ilu	4	58	55	66	64	46	52	67	31	94	20	96	C	22	63.91	-1	1	1	0	0
+Czalliso	ilu	5	66	52	93	64	94	62	90	23	55	40	90	C+	21	72.08	-1	1	1	0	0
+Czalliso	app	2	53	64	75	31	41	47	30	30	43	54	92	D	22	44.70	-1	1	1	0	0
+Czalliso	roe	1	90	97	31	9	27	80	87	99	91	92	85	B	21	69.73	-1	1	1	0	0
+Czalliso	ilu	2	48	42	55	22	31	45	31	82	53	87	92	D+	22	51.02	-1	1	1	0	0
+Czalliso	ilo	3	49	60	99	45	50	41	61	58	100	76	99	C	21	67.94	-1	1	1	0	0
+Czalliso	pot	4	61	48	83	50	38	63	27	54	94	47	100	C	22	62.07	-1	1	1	0	0
+Czalliso	ilo	5	70	54	92	76	88	67	69	42	66	55	81	C	22	72.28	-1	1	1	0	0
+Czalliso	ilo	2	46	51	46	23	20	59	44	53	62	66	55	D	19	48.22	-1	1	1	0	0
+Czalliso	pot	4	34	31	60	66	37	62	10	12	54	32	60	D	23	46.24	-1	1	1	0	0
+Czalliso	lu	2	84	86	57	14	22	44	60	94	49	58	89	D+	22	56.20	-1	1	1	0	0
+Czalliso	app	5	39	32	56	71	95	75	49	30	56	24	77	D+	22	63.70	-1	1	1	0	0
+Holykol	kaf	1	94	91	23	21	56	49	66	95	56	94	79	C+	21	56.40	-1	1	1	0	0
+Holykol	pot	2	94	97	32	11	55	27	50	95	35	91	69	D	22	47.69	-1	1	1	0	0
+Holykol	fu	4	93	83	83	48	34	47	61	20	94	63	62	C	19	59.04	-1	1	1	0	0
+Holykol	kaf	4	74	75	70	71	35	61	73	29	43	91	96	D+	22	57.60	-1	1	1	0	0
+Holykol	ilu	3	20	19	40	17	45	63	52	57	77	60	62	F+	22	51.31	-1	1	1	0	0
+Holykol	kaf	4	47	50	58	13	18	43	29	11	97	65	90	D	19	44.33	-1	1	1	0	0
+Norkute	pot	1	71	62	26	11	10	63	51	88	65	71	73	D	23	52.55	-1	1	1	0	0
+Norkute	pot	3	83	83	13	28	52	89	38	74	82	43	97	D+	20	56.94	-1	1	1	0	0
+Norkute	lu	4	55	55	69	71	23	37	70	36	98	36	71	D+	20	60.88	-1	1	1	0	0
+Norkute	kaf	5	45	66	94	63	96	88	59	30	75	49	71	C+	19	73.32	-1	1	1	0	0
+Norkute	ilo	4	19	20	42	25	40	32	41	19	55	28	99	C	22	40.24	-1	1	1	0	0
+Transhimalia	Himi Naizen	1	80	82	36	25	33	58	43	91	69	18	62	D+	19	55.00	-1	1	1	0	0
+Transhimalia	Iwayanagi Azumamaro	2	62	80	48	30	44	37	70	98	64	53	85	C	22	61.12	-1	1	1	0	0
+Transhimalia	Watsuji Eikichi	3	100	81	86	33	80	88	91	57	71	91	82	C+	20	72.84	-1	1	1	0	0
+Transhimalia	Grozte Gatvo	4	62	55	82	48	47	74	35	20	33	28	92	D+	22	51.68	-1	1	1	0	0
+Transhimalia	Iwayanagi Salen	5	42	43	78	66	96	71	83	42	62	41	66	B	20	71.37	-1	1	1	0	0
+Transhimalia	Go Kane	3	49	39	81	43	67	58	54	23	31	39	77	C	23	51.01	-1	1	1	0	0
+Transhimalia	Nomi Seiki	4	63	62	62	73	34	41	30	24	57	39	82	F+	23	50.20	-1	1	1	0	0
+Transhimalia	Jojen Yoshitora	5	65	71	86	85	75	28	33	11	51	46	64	C	19	55.01	-1	1	1	0	0
+Transhimalia	Kai Kiyohira	1	42	26	31	12	16	39	42	66	39	66	92	C	22	41.01	-1	1	1	0	0
+Transhimalia	Ienaga Keizo	2	52	72	37	22	22	26	51	70	48	70	79	C+	22	45.14	-1	1	1	0	0
+Transhimalia	Komatsu Hikozaemon	3	97	98	86	38	49	92	75	64	74	12	74	C+	19	69.19	-1	1	1	0	0
+Transhimalia	Gjuÿttun Pjeksëÿ	4	59	45	35	49	60	33	47	30	63	90	58	D	22	46.58	-1	1	1	0	0
+Transhimalia	Hvanne Sanzo	3	82	80	72	66	79	49	60	83	54	93	68	C	22	64.03	-1	1	1	0	0
+Transhimalia	Koyanagi Tamuramaro	3	97	100	69	41	56	68	50	75	37	68	92	C	23	57.18	-1	1	1	0	0
+Transhimalia	Iwayanagi Azumamaro	4	48	32	54	73	43	45	62	19	55	96	84	D+	23	53.45	-1	1	1	0	0
+Transhimalia	Fihana Hiroaki	3	92	95	34	25	53	66	20	63	90	73	78	C	20	53.37	-1	1	1	0	0
+Transhimalia	Ogino Minoru	5	27	29	47	34	66	68	57	29	63	63	90	C	22	54.18	-1	1	1	0	0
+Transhimalia	Mochizuki Misao	4	25	31	74	39	16	42	43	6	51	94	100	D+	22	44.39	-1	1	1	0	0
+Transhimalia	Gmii Tsanak	1	50	53	29	24	31	26	31	69	66	43	63	D	22	42.81	-1	1	1	0	0
+Transhimalia	Sugimoto Isei	5	51	30	60	70	94	40	30	44	50	93	63	C	22	55.78	-1	1	1	0	0
+Transhimalia	Fihana Matsuta	4	28	43	58	22	32	63	30	26	42	54	100	C	19	42.36	-1	1	1	0	0
+Transhimalia	Matsuyama Tomoyuki	5	29	21	54	64	61	40	59	47	38	22	83	D+	22	52.55	-1	1	1	0	0
+Transhimalia	Jin Hirotada	3	33	43	36	11	52	78	33	62	60	71	65	F+	22	48.39	-1	1	1	0	0
+Aahrus	Kai Sun	2	95	95	61	25	94	81	69	93	77	74	97	B	19	74.78	-1	1	1	0	0
+Aahrus	Amano Ethanthovok	4	68	72	99	61	63	70	50	27	87	92	65	C	22	67.76	-1	1	1	0	0
+Aahrus	Isa Otsu	1	75	86	31	39	47	51	66	99	68	56	72	F+	19	60.64	-1	1	1	0	0
+Aahrus	Endo Tadashi	1	88	89	13	9	55	55	98	100	77	74	67	C	22	63.96	-1	1	1	0	0
+Aahrus	Wakuni Izo	2	98	98	43	10	42	71	85	68	70	68	53	D	23	61.24	-1	1	1	0	0
+Aahrus	Uozumi Yoshitora	3	58	67	96	75	41	46	87	50	97	68	83	C+	19	71.80	-1	1	1	0	0
+Aahrus	Tagawa Matsuta	4	73	68	42	67	48	57	67	22	80	41	93	C	23	58.47	-1	1	1	0	0
+Aahrus	Yoshizawa Juzaburo	5	28	13	56	67	95	23	61	27	82	73	79	D	20	60.04	-1	1	1	0	0
+Aahrus	Jojen Yakumo	3	37	26	100	30	77	48	63	45	80	95	86	D+	22	64.56	-1	1	1	0	0
+Aahrus	Wakuni Takeji	1	36	47	34	9	36	46	57	62	52	18	82	D	20	47.08	-1	1	1	0	0
+Bongatar	Shitt Hessar	4	67	65	65	57	28	43	83	11	74	78	86	C	23	55.96	-1	1	1	0	0
+Bongatar	Pusu Jeem	5	65	45	96	79	98	60	98	32	94	82	82	C+	19	80.49	-1	1	1	0	0
+Bongatar	Pusu Mann	1	53	47	20	32	42	66	64	79	82	22	93	D+	22	60.59	-1	1	1	0	0
+Bongatar	Luffy Hessar	4	71	63	62	46	30	47	63	16	77	94	85	C	22	53.05	-1	1	1	0	0
+Bongatar	Ydar Hessar	5	49	29	44	43	99	25	62	24	66	45	96	C	22	55.59	-1	1	1	0	0
+Bongatar	Ydar Jeem	1	96	98	25	18	21	67	84	98	50	91	58	F+	22	57.95	-1	1	1	0	0
+Bongatar	Ydar Iode	3	52	58	100	45	16	84	26	41	52	85	83	D+	22	54.03	-1	1	1	0	0
+Bongatar	Luffy Hessar	4	79	84	89	25	28	42	61	44	70	28	65	C	22	52.99	-1	1	1	0	0

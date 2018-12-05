@@ -256,9 +256,8 @@ public class CollegeTeam : team
             if(!p.isInjured())
             {
                 addPlayer(p);
-                stillInjured.Add(p);
-                
             }
+            else stillInjured.Add(p);
             
         }
         players = new List<player>();

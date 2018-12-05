@@ -1635,6 +1635,11 @@ public class createTeams
     }
     public void SetDraftPicks()
     {
+
+        foreach(team team in teams)
+        {
+            team.ClearDraftPicks();
+        }
         getTeam(19).AddDraftPick(new DraftPick(1, getTeam(23), getTeam(19)));
         getTeam(27).AddDraftPick(new DraftPick(1, getTeam(27), getTeam(27)));
         getTeam(18).AddDraftPick(new DraftPick(1, getTeam(18), getTeam(18)));
@@ -2047,6 +2052,17 @@ public class createTeams
     
     public College GetCollege()
     {
+        college = new College(r);
+        college.PlaySeason();
+        Console.WriteLine(1);
+        college.PlaySeason();
+        Console.WriteLine(2);
+        college.PlaySeason();
+        Console.WriteLine(3);
+        college.PlaySeason();
+        Console.WriteLine(4);
+        college.PlaySeason();
+        Console.WriteLine(5);
         return college;
     }
 

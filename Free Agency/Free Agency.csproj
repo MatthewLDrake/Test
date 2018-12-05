@@ -141,10 +141,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ResigningPlayers\ResigningPlayers.csproj">
-      <Project>{52789df6-85af-4eb5-bb1c-24d2604db227}</Project>
-      <Name>ResigningPlayers</Name>
-    </ProjectReference>
     <ProjectReference Include="C:\Users\Matthew\source\repos\SoleaScouting\SoleaScouting\SoleaScouting.csproj">
       <Project>{7bb79230-4210-443c-9bd6-92fbcd447fb8}</Project>
       <Name>SoleaScouting</Name>

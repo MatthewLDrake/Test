@@ -65,12 +65,61 @@
     <Compile Include="CollegeTeamType.cs" />
     <Compile Include="Contract.cs" />
     <Compile Include="ContractResult.cs" />
+    <Compile Include="DisplayPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayPlayer.designer.cs">
+      <DependentUpon>DisplayPlayer.cs</DependentUpon>
+    </Compile>
     <Compile Include="FIBUTeam.cs" />
+    <Compile Include="FreeAgencyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FreeAgencyForm.Designer.cs">
+      <DependentUpon>FreeAgencyForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FreeAgents.cs" />
+    <Compile Include="Holder.cs" />
     <Compile Include="ImagePrinter.cs" />
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
     <Compile Include="NameGenerator.cs" />
+    <Compile Include="Negotiation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negotiation.Designer.cs">
+      <DependentUpon>Negotiation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerNegotiate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerNegotiate.Designer.cs">
+      <DependentUpon>PlayerNegotiate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerRatings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerRatings.Designer.cs">
+      <DependentUpon>PlayerRatings.cs</DependentUpon>
+    </Compile>
     <Compile Include="PlayerRecords.cs" />
+    <Compile Include="PlayerStats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerStats.Designer.cs">
+      <DependentUpon>PlayerStats.cs</DependentUpon>
+    </Compile>
     <Compile Include="Record.cs" />
+    <Compile Include="ResignPlayers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResignPlayers.Designer.cs">
+      <DependentUpon>ResignPlayers.cs</DependentUpon>
+    </Compile>
     <Compile Include="retirements.cs" />
     <Compile Include="Coach.cs" />
     <Compile Include="coachShotType.cs" />
@@ -88,6 +137,12 @@
     </Compile>
     <Compile Include="Offseason.cs" />
     <Compile Include="RookieDraft.cs" />
+    <Compile Include="Scouting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scouting.designer.cs">
+      <DependentUpon>Scouting.cs</DependentUpon>
+    </Compile>
     <Compile Include="SeasonRecords.cs" />
     <Compile Include="SetupNewSeason.cs" />
     <Compile Include="Standings_Division.cs">
@@ -221,7 +276,19 @@
     <Compile Include="TempoHolder.cs" />
     <Compile Include="TestLeague.cs" />
     <Compile Include="TestSchedule.cs" />
+    <Compile Include="TradeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TradeForm.Designer.cs">
+      <DependentUpon>TradeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Trainer.cs" />
+    <Compile Include="ViewRoster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewRoster.Designer.cs">
+      <DependentUpon>ViewRoster.cs</DependentUpon>
+    </Compile>
     <Compile Include="YearSim.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +297,9 @@
     </Compile>
     <EmbeddedResource Include="bracket.resx">
       <DependentUpon>bracket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayPlayer.resx">
+      <DependentUpon>DisplayPlayer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="displayPlayers.resx">
       <DependentUpon>displayPlayers.cs</DependentUpon>
@@ -252,6 +322,15 @@
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FreeAgencyForm.resx">
+      <DependentUpon>FreeAgencyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negotiation.resx">
+      <DependentUpon>Negotiation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="newLeague.resx">
       <DependentUpon>newLeague.cs</DependentUpon>
     </EmbeddedResource>
@@ -260,6 +339,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="newTeam.resx">
       <DependentUpon>newTeam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerNegotiate.resx">
+      <DependentUpon>PlayerNegotiate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerRatings.resx">
+      <DependentUpon>PlayerRatings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerStats.resx">
+      <DependentUpon>PlayerStats.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PlayoffBracket.resx">
       <DependentUpon>PlayoffBracket.cs</DependentUpon>
@@ -277,6 +365,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ResignPlayers.resx">
+      <DependentUpon>ResignPlayers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scouting.resx">
+      <DependentUpon>Scouting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="soloScreen.resx">
       <DependentUpon>soloScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -291,6 +385,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="teamPicker.resx">
       <DependentUpon>teamPicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TradeForm.resx">
+      <DependentUpon>TradeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewRoster.resx">
+      <DependentUpon>ViewRoster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="YearSim.resx">
       <DependentUpon>YearSim.cs</DependentUpon>
@@ -311,12 +411,6 @@
   <ItemGroup>
     <Content Include="Properties\config.txt" />
     <Content Include="names.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Free Agency\Free Agency.csproj">
-      <Project>{1284377f-a75f-4a21-a5e7-50c6ef2a144f}</Project>
-      <Name>Free Agency</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
