@@ -1,41 +1,41 @@
 Pyxanovia Pixies Stats
-Player Record of Points: Handa Senichi: 60 points on game 84 against the Aiyota Pumps
-Player Record of Assists: Handa Senichi: 16 assists on game 36 against the Kaeshar Kaisers
-Player Record of Rebounds: Analu Cheruene: 19 rebounds on game 7 against the Dvimne Spirits
-Team Record in Most Points Scored: Pyxanovia Pixies: 149 points on game 84 against the Aiyota Pumps
-Team Record in Least Points Scored: Pyxanovia Pixies: 78 points on game 62 against the Holy Yektonisa Bishops
-Team Record in Least Points Allowed: Pyxanovia Pixies: 82 points on game 73 against the Faehrenfall Feathercats
-Team Record in Most Points Allowed: Pyxanovia Pixies: 148 points on game 19 against the Avura Aviators
+Player Record of Points: Pyxanovia Player #4: 49 points on game 24 against the Shmupland Dictators
+Player Record of Assists: Pyxanovia Player #2: 21 assists on game 1 against the TND Tanks
+Player Record of Rebounds: Pyxanovia Player #4: 17 rebounds on game 38 against the Aahrus Moosi
+Team Record in Most Points Scored: Pyxanovia Pixies: 132 points on game 29 against the Lyintaria Lynx
+Team Record in Least Points Scored: Pyxanovia Pixies: 76 points on game 7 against the Dvimne Spirits
+Team Record in Least Points Allowed: Pyxanovia Pixies: 76 points on game 14 against the Faehrenfall Feathercats
+Team Record in Most Points Allowed: Pyxanovia Pixies: 135 points on game 19 against the Avura Aviators
 Records vs. Each Team this season:
-Aahrus Moosi: 2-0
-Auspikitan Golden Falcons: 0-2
-Calto Cows: 0-2
-Height Sagua Cats: 1-1
-Key to Don Yees: 2-0
-Manwx Saguans: 2-0
+Aahrus Moosi: 1-1
+Auspikitan Golden Falcons: 0-1
+Calto Cows: 0-1
+Height Sagua Cats: 2-0
+Key to Don Yees: 0-0
+Manwx Saguans: 0-0
 Sagua Ocelots: 1-1
-Solea Geysers: 1-1
-Autolik Autonomy: 1-1
-Barsein Bats: 2-0
-Blanaxon Hammers: 0-2
-Kaeshar Kaisers: 1-1
-Naxda Nomads: 1-1
-Red Rainbow Sickles: 1-1
-Serkr Atolls: 2-0
-Shmupland Dictators: 1-1
-Aiyota Pumps: 2-1
-Avura Aviators: 1-2
-Boltway Bad Dragons: 2-1
-Dotruga Falno: 2-1
-Ethanthova Ponies: 2-1
-Faehrenfall Feathercats: 1-2
-Stedro Boulders: 3-0
-TND Tanks: 1-2
-Bongatar Banging Bongos: 1-3
-Czalliso Pythons: 1-3
-Dvimne Spirits: 1-3
-Holy Yektonisa Bishops: 2-2
-Holykol Bears: 1-3
-Lyintaria Lynx: 1-3
+Solea Geysers: 0-1
+Autolik Autonomy: 1-0
+Barsein Bats: 0-0
+Blanaxon Hammers: 1-0
+Kaeshar Kaisers: 0-2
+Naxda Nomads: 1-0
+Red Rainbow Sickles: 0-0
+Serkr Atolls: 0-1
+Shmupland Dictators: 0-1
+Aiyota Pumps: 0-0
+Avura Aviators: 1-1
+Boltway Bad Dragons: 0-2
+Dotruga Falno: 1-1
+Ethanthova Ponies: 0-1
+Faehrenfall Feathercats: 1-0
+Stedro Boulders: 1-1
+TND Tanks: 2-0
+Bongatar Banging Bongos: 2-0
+Czalliso Pythons: 0-1
+Dvimne Spirits: 0-3
+Holy Yektonisa Bishops: 0-0
+Holykol Bears: 0-4
+Lyintaria Lynx: 1-1
 Pyxanovia Pixies: 0-0
-Transhimalia Disasters: 2-2
+Transhimalia Disasters: 0-0

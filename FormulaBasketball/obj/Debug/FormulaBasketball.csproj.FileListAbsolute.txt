@@ -117,3 +117,14 @@ C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\F
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\FormulaBasketball.ViewRoster.resources
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\FormulaBasketball.Negotiation.resources
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\FormulaBasketball.ResignPlayers.resources
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.DisplayPlayer.resources
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.FreeAgencyForm.resources
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.Menu.resources
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.Negotiation.resources
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.PlayerNegotiate.resources
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.PlayerRatings.resources
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.PlayerStats.resources
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.ResignPlayers.resources
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.Scouting.resources
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.TradeForm.resources
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.ViewRoster.resources

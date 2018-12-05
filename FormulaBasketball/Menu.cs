@@ -80,10 +80,14 @@ namespace FormulaBasketball
         {
             this.Visible = false;
 
-            Scouting freeAgentForm = new Scouting(create.GetCollege().GetRookies(), r);
-            int[] d = CollegePlayer.potentials;
+            Scouting freeAgentForm = new Scouting(create.GetCollege().GetRookies(), r);            
             freeAgentForm.ShowDialog();
             this.Visible = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -77,6 +77,8 @@
             // 
             // listView1
             // 
+            this.listView1.AllowUserToAddRows = false;
+            this.listView1.AllowUserToDeleteRows = false;
             this.listView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.listView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.listView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;

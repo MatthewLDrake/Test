@@ -35,6 +35,7 @@
             this.viewRoster = new System.Windows.Forms.Button();
             this.viewDLeagueRoster = new System.Windows.Forms.Button();
             this.scoutButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // freeAgencyButton
@@ -69,7 +70,7 @@
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(50, 177);
+            this.exitButton.Location = new System.Drawing.Point(292, 249);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(128, 23);
             this.exitButton.TabIndex = 3;
@@ -99,19 +100,30 @@
             // 
             // scoutButton
             // 
-            this.scoutButton.Location = new System.Drawing.Point(176, 252);
+            this.scoutButton.Location = new System.Drawing.Point(50, 249);
             this.scoutButton.Name = "scoutButton";
-            this.scoutButton.Size = new System.Drawing.Size(108, 23);
+            this.scoutButton.Size = new System.Drawing.Size(128, 23);
             this.scoutButton.TabIndex = 6;
             this.scoutButton.Text = "Scout";
             this.scoutButton.UseVisualStyleBackColor = true;
             this.scoutButton.Click += new System.EventHandler(this.scoutButton_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(50, 177);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(128, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Change Depth Chart";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(504, 315);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.scoutButton);
             this.Controls.Add(this.viewDLeagueRoster);
             this.Controls.Add(this.viewRoster);
@@ -134,5 +146,6 @@
         private System.Windows.Forms.Button viewRoster;
         private System.Windows.Forms.Button viewDLeagueRoster;
         private System.Windows.Forms.Button scoutButton;
+        private System.Windows.Forms.Button button1;
     }
 }

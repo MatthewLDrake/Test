@@ -1635,7 +1635,7 @@ public class createTeams
     }
     public void SetDraftPicks()
     {
-
+        GetCollege();
         foreach(team team in teams)
         {
             team.ClearDraftPicks();
@@ -2052,7 +2052,7 @@ public class createTeams
     
     public College GetCollege()
     {
-        college = new College(r);
+        /*college = new College(r);
         college.PlaySeason();
         Console.WriteLine(1);
         college.PlaySeason();
@@ -2062,7 +2062,7 @@ public class createTeams
         college.PlaySeason();
         Console.WriteLine(4);
         college.PlaySeason();
-        Console.WriteLine(5);
+        Console.WriteLine(5);*/
         return college;
     }
 

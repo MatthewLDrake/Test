@@ -1024,15 +1024,21 @@ public class formulaBasketball
                 create.getTeam(j).setModifier(new None());
             }
         }
-        if (i == 26 || i == 18 || i == 19)
+        if (i == 26 || i == 18 || i == 1 || i == 11)
         {
             create.getTeam(i).addModifier(new gettingHot());
         }
 
-        else if (j == 26 || j == 18 || j == 19)
+        else if (j == 26 || j == 18 || j ==1 || j == 11)
         {
             create.getTeam(j).addModifier(new gettingHot());
         }
+        if(i == 4)
+        {
+            create.getTeam(i).addModifier(new LetDownGame());
+        }
+        else if(j == 4)
+            create.getTeam(j).addModifier(new LetDownGame());
         create.getTeam(j).addModifier(new HomeTeam());
         create.getTeam(i).addModifier(create.getTeam(i).getCoachModifier());
         create.getTeam(j).addModifier(create.getTeam(j).getCoachModifier());
