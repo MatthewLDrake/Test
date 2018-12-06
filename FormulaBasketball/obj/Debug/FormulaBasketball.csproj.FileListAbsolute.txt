@@ -128,3 +128,5 @@ B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.ResignPlayers.re
 B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.Scouting.resources
 B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.TradeForm.resources
 B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.ViewRoster.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\FormulaBasketball.DepthChart.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\FormulaBasketball.OfferPromises.resources

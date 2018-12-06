@@ -65,6 +65,12 @@
     <Compile Include="CollegeTeamType.cs" />
     <Compile Include="Contract.cs" />
     <Compile Include="ContractResult.cs" />
+    <Compile Include="DepthChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepthChart.Designer.cs">
+      <DependentUpon>DepthChart.cs</DependentUpon>
+    </Compile>
     <Compile Include="DisplayPlayer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,12 @@
     </Compile>
     <Compile Include="Negotiation.Designer.cs">
       <DependentUpon>Negotiation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OfferPromises.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OfferPromises.Designer.cs">
+      <DependentUpon>OfferPromises.cs</DependentUpon>
     </Compile>
     <Compile Include="PlayerNegotiate.cs">
       <SubType>Form</SubType>
@@ -298,6 +310,9 @@
     <EmbeddedResource Include="bracket.resx">
       <DependentUpon>bracket.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DepthChart.resx">
+      <DependentUpon>DepthChart.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DisplayPlayer.resx">
       <DependentUpon>DisplayPlayer.cs</DependentUpon>
     </EmbeddedResource>
@@ -339,6 +354,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="newTeam.resx">
       <DependentUpon>newTeam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfferPromises.resx">
+      <DependentUpon>OfferPromises.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PlayerNegotiate.resx">
       <DependentUpon>PlayerNegotiate.cs</DependentUpon>

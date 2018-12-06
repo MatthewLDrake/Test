@@ -32,6 +32,19 @@
             this.tabControl = new System.Windows.Forms.TabControl();
             this.Centers = new System.Windows.Forms.TabPage();
             this.centerLists = new System.Windows.Forms.DataGridView();
+            this.aName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Layup = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dunk = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Jumpshot = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.threePT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pass = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShotContest = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DefenseIQ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Jumping = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Seperation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Durability = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stamina = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Team = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PowerForwards = new System.Windows.Forms.TabPage();
             this.powerForwardList = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -96,19 +109,6 @@
             this.startbutton = new System.Windows.Forms.Button();
             this.draftButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.Team = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stamina = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Durability = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Seperation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Jumping = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DefenseIQ = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ShotContest = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pass = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.threePT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Jumpshot = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Dunk = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Layup = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.Centers.SuspendLayout();
@@ -168,6 +168,8 @@
             // 
             // centerLists
             // 
+            this.centerLists.AllowUserToAddRows = false;
+            this.centerLists.AllowUserToDeleteRows = false;
             this.centerLists.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.centerLists.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.aName,
@@ -194,6 +196,109 @@
             this.centerLists.Size = new System.Drawing.Size(1147, 324);
             this.centerLists.TabIndex = 0;
             // 
+            // aName
+            // 
+            this.aName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.aName.HeaderText = "Name";
+            this.aName.Name = "aName";
+            this.aName.ReadOnly = true;
+            this.aName.Width = 60;
+            // 
+            // Layup
+            // 
+            this.Layup.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Layup.HeaderText = "Layup";
+            this.Layup.Name = "Layup";
+            this.Layup.ReadOnly = true;
+            this.Layup.Width = 61;
+            // 
+            // Dunk
+            // 
+            this.Dunk.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Dunk.HeaderText = "Dunk";
+            this.Dunk.Name = "Dunk";
+            this.Dunk.ReadOnly = true;
+            this.Dunk.Width = 58;
+            // 
+            // Jumpshot
+            // 
+            this.Jumpshot.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Jumpshot.HeaderText = "Jumpshot";
+            this.Jumpshot.Name = "Jumpshot";
+            this.Jumpshot.ReadOnly = true;
+            this.Jumpshot.Width = 77;
+            // 
+            // threePT
+            // 
+            this.threePT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.threePT.HeaderText = "3PT";
+            this.threePT.Name = "threePT";
+            this.threePT.ReadOnly = true;
+            this.threePT.Width = 52;
+            // 
+            // Pass
+            // 
+            this.Pass.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Pass.HeaderText = "Pass";
+            this.Pass.Name = "Pass";
+            this.Pass.ReadOnly = true;
+            this.Pass.Width = 55;
+            // 
+            // ShotContest
+            // 
+            this.ShotContest.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.ShotContest.HeaderText = "Shot Contest";
+            this.ShotContest.Name = "ShotContest";
+            this.ShotContest.ReadOnly = true;
+            this.ShotContest.Width = 93;
+            // 
+            // DefenseIQ
+            // 
+            this.DefenseIQ.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.DefenseIQ.HeaderText = "Defense IQ";
+            this.DefenseIQ.Name = "DefenseIQ";
+            this.DefenseIQ.ReadOnly = true;
+            this.DefenseIQ.Width = 86;
+            // 
+            // Jumping
+            // 
+            this.Jumping.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Jumping.HeaderText = "Jumping";
+            this.Jumping.Name = "Jumping";
+            this.Jumping.ReadOnly = true;
+            this.Jumping.Width = 71;
+            // 
+            // Seperation
+            // 
+            this.Seperation.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Seperation.HeaderText = "Seperation";
+            this.Seperation.Name = "Seperation";
+            this.Seperation.ReadOnly = true;
+            this.Seperation.Width = 83;
+            // 
+            // Durability
+            // 
+            this.Durability.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Durability.HeaderText = "Durability";
+            this.Durability.Name = "Durability";
+            this.Durability.ReadOnly = true;
+            this.Durability.Width = 75;
+            // 
+            // Stamina
+            // 
+            this.Stamina.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Stamina.HeaderText = "Stamina";
+            this.Stamina.Name = "Stamina";
+            this.Stamina.ReadOnly = true;
+            this.Stamina.Width = 70;
+            // 
+            // Team
+            // 
+            this.Team.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Team.HeaderText = "Team";
+            this.Team.Name = "Team";
+            this.Team.ReadOnly = true;
+            // 
             // PowerForwards
             // 
             this.PowerForwards.Controls.Add(this.powerForwardList);
@@ -207,6 +312,8 @@
             // 
             // powerForwardList
             // 
+            this.powerForwardList.AllowUserToAddRows = false;
+            this.powerForwardList.AllowUserToDeleteRows = false;
             this.powerForwardList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.powerForwardList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -349,6 +456,8 @@
             // 
             // smallForwardList
             // 
+            this.smallForwardList.AllowUserToAddRows = false;
+            this.smallForwardList.AllowUserToDeleteRows = false;
             this.smallForwardList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.smallForwardList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn14,
@@ -491,6 +600,8 @@
             // 
             // shootingGuardList
             // 
+            this.shootingGuardList.AllowUserToAddRows = false;
+            this.shootingGuardList.AllowUserToDeleteRows = false;
             this.shootingGuardList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.shootingGuardList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn27,
@@ -633,6 +744,8 @@
             // 
             // pointGuardList
             // 
+            this.pointGuardList.AllowUserToAddRows = false;
+            this.pointGuardList.AllowUserToDeleteRows = false;
             this.pointGuardList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.pointGuardList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn40,
@@ -810,109 +923,6 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Previous Pick:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Team
-            // 
-            this.Team.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Team.HeaderText = "Team";
-            this.Team.Name = "Team";
-            this.Team.ReadOnly = true;
-            // 
-            // Stamina
-            // 
-            this.Stamina.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Stamina.HeaderText = "Stamina";
-            this.Stamina.Name = "Stamina";
-            this.Stamina.ReadOnly = true;
-            this.Stamina.Width = 70;
-            // 
-            // Durability
-            // 
-            this.Durability.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Durability.HeaderText = "Durability";
-            this.Durability.Name = "Durability";
-            this.Durability.ReadOnly = true;
-            this.Durability.Width = 75;
-            // 
-            // Seperation
-            // 
-            this.Seperation.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Seperation.HeaderText = "Seperation";
-            this.Seperation.Name = "Seperation";
-            this.Seperation.ReadOnly = true;
-            this.Seperation.Width = 83;
-            // 
-            // Jumping
-            // 
-            this.Jumping.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Jumping.HeaderText = "Jumping";
-            this.Jumping.Name = "Jumping";
-            this.Jumping.ReadOnly = true;
-            this.Jumping.Width = 71;
-            // 
-            // DefenseIQ
-            // 
-            this.DefenseIQ.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.DefenseIQ.HeaderText = "Defense IQ";
-            this.DefenseIQ.Name = "DefenseIQ";
-            this.DefenseIQ.ReadOnly = true;
-            this.DefenseIQ.Width = 86;
-            // 
-            // ShotContest
-            // 
-            this.ShotContest.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ShotContest.HeaderText = "Shot Contest";
-            this.ShotContest.Name = "ShotContest";
-            this.ShotContest.ReadOnly = true;
-            this.ShotContest.Width = 93;
-            // 
-            // Pass
-            // 
-            this.Pass.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Pass.HeaderText = "Pass";
-            this.Pass.Name = "Pass";
-            this.Pass.ReadOnly = true;
-            this.Pass.Width = 55;
-            // 
-            // threePT
-            // 
-            this.threePT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.threePT.HeaderText = "3PT";
-            this.threePT.Name = "threePT";
-            this.threePT.ReadOnly = true;
-            this.threePT.Width = 52;
-            // 
-            // Jumpshot
-            // 
-            this.Jumpshot.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Jumpshot.HeaderText = "Jumpshot";
-            this.Jumpshot.Name = "Jumpshot";
-            this.Jumpshot.ReadOnly = true;
-            this.Jumpshot.Width = 77;
-            // 
-            // Dunk
-            // 
-            this.Dunk.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Dunk.HeaderText = "Dunk";
-            this.Dunk.Name = "Dunk";
-            this.Dunk.ReadOnly = true;
-            this.Dunk.Width = 58;
-            // 
-            // Layup
-            // 
-            this.Layup.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Layup.HeaderText = "Layup";
-            this.Layup.Name = "Layup";
-            this.Layup.ReadOnly = true;
-            this.Layup.Width = 61;
-            // 
-            // aName
-            // 
-            this.aName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.aName.HeaderText = "Name";
-            this.aName.Name = "aName";
-            this.aName.ReadOnly = true;
-            this.aName.Width = 60;
             // 
             // draft
             // 

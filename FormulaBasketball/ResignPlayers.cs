@@ -18,20 +18,20 @@ namespace FormulaBasketball
         private createTeams create;
         private team team;
         private FormulaBasketball.Random r;
-        public ResignPlayers()
-        {
-            InitializeComponent();
-            r = new FormulaBasketball.Random();
-            LoadInfo();
-            
-        }
+        private List<Promises> promises;
+        private int playersUnderContract;
+        private double capSpace;
+        private double bonusCash;
         public ResignPlayers(createTeams create, team team, FormulaBasketball.Random r)
         {
             InitializeComponent();
             this.r = r;
             this.team = team;
             this.create = create;
-
+            promises = new List<Promises>();
+            playersUnderContract = 0;
+            capSpace = 100;
+            bonusCash = (team.getFianances() / 1000000.0);
             foreach (player player in team)
             {
                 player.endSeason();
@@ -41,61 +41,15 @@ namespace FormulaBasketball
                 }
                 else
                 {
+                    playersUnderContract++;
+                    capSpace -= player.GetMoneyPerYear();
                     dataGridView2.Rows.Add(player.getName(), player.getPosition(), player.getOverall(), player.getDevelopment(), player.GetMoneyPerYear(), player.GetPlayerID(), player.GetYearsLeft());
                 }
             }
+            rosterSize.Text = "Players on team " + playersUnderContract + "/15\nPlayers on affiliate " + team.GetAffiliate().Count().ToString() + "/15";
+            MoneyLabel.Text = "Penalty Free Cap Space " + String.Format("{0:0.00}", capSpace) + "M\nAvailable Bonus Money " + String.Format("{0:0.00}", bonusCash) + "M";
         }
-        private void LoadInfo()
-        {
-            create = DeSerializeObject("real.fbdata");
-
-            new SetupNewSeason(create, r);
-
-            team = create.getTeam(12);
-            foreach (player player in team)
-            {
-                player.endSeason();
-                if(player.ContractExpired())
-                {
-                    dataGridView1.Rows.Add(player.getName(), player.getPosition(), player.getOverall(), player.getDevelopment(), player.GetMoneyPerYear(), player.GetPlayerID());
-                }
-                else
-                {
-                    dataGridView2.Rows.Add(player.getName(), player.getPosition(), player.getOverall(), player.getDevelopment(), player.GetMoneyPerYear(), player.GetPlayerID(), player.GetYearsLeft());
-                }
-            }
-
-        }
-        /// <summary>
-        /// Deserializes a binary file into an object list
-        /// </summary>
-        /// <param name="fileName">The filename</param>
-        /// <returns></returns>
-        public createTeams DeSerializeObject(string fileName)
-        {
-            createTeams temp = null;
-
-            // Open the file containing the data that you want to deserialize.
-            FileStream fs = new FileStream(fileName, FileMode.Open);
-            try
-            {
-                BinaryFormatter formatter = new BinaryFormatter();
-
-                // Deserialize the hashtable from the file and 
-                // assign the reference to the local variable.
-                temp = (createTeams)formatter.Deserialize(fs);
-            }
-            catch (SerializationException e)
-            {
-                Console.WriteLine("Failed to deserialize. Reason: " + e.Message);
-                throw;
-            }
-            finally
-            {
-                fs.Close();
-            }
-            return temp;
-        }
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -109,7 +63,7 @@ namespace FormulaBasketball
                 {
                     int playerID = (int)dataGridView1.CurrentRow.Cells[5].Value;
                     player p = team.GetPlayerByID(playerID);
-                    Contract currentContract = new Contract(Convert.ToInt32(yearsNumber.Value), Convert.ToDouble(amountNumber.Value));
+                    Contract currentContract = new Contract(Convert.ToInt32(yearsNumber.Value), Convert.ToDouble(amountNumber.Value), 0, Convert.ToDouble(bonusAmount.Value), promises);
                     ContractResult result = p.ContractNegotiate(currentContract, r);
                     if (result.Equals(ContractResult.Accept))
                     {
@@ -117,8 +71,12 @@ namespace FormulaBasketball
                         p.SetNewContract(currentContract);
                         dataGridView1.Rows.Remove(dataGridView1.CurrentRow);
                         dataGridView2.Rows.Add(p.getName(), p.getPosition(), p.getOverall(), p.getDevelopment(), p.GetMoneyPerYear(), p.GetPlayerID(), p.GetYearsLeft());
-                        dataGridView2.Rows[dataGridView2.Rows.Count - 2].DefaultCellStyle.BackColor = Color.Gray;
-
+                        dataGridView2.Rows[dataGridView2.Rows.Count - 1].DefaultCellStyle.BackColor = Color.Gray;
+                        playersUnderContract++;
+                        capSpace -= p.GetMoneyPerYear();
+                        bonusCash -= p.GetBonus();
+                        rosterSize.Text = "Players on team " + playersUnderContract + "/15\nPlayers on affiliate " + team.GetAffiliate().Count().ToString() + "/15";
+                        MoneyLabel.Text = "Penalty Free Cap Space " + String.Format("{0:0.00}", capSpace) + "M\nAvailable Bonus Money " + String.Format("{0:0.00}", bonusCash) + "M";
                     }
                     else if (result.Equals(ContractResult.Reject))
                     {
@@ -133,7 +91,12 @@ namespace FormulaBasketball
                         {
                             p.SetNewContract(negotiation.GetContract());
                             dataGridView2.Rows.Add(p.getName(), p.getPosition(), p.getOverall(), p.getDevelopment(), p.GetMoneyPerYear(), p.GetPlayerID(), p.GetYearsLeft());
-                            dataGridView2.Rows[dataGridView2.Rows.Count - 2].DefaultCellStyle.BackColor = Color.Gray;
+                            dataGridView2.Rows[dataGridView2.Rows.Count - 1].DefaultCellStyle.BackColor = Color.Gray;
+                            playersUnderContract++;
+                            capSpace -= p.GetMoneyPerYear();
+                            bonusCash -= p.GetBonus();
+                            rosterSize.Text = "Players on team " + playersUnderContract + "/15\nPlayers on affiliate " + team.GetAffiliate().Count().ToString() + "/15";
+                            MoneyLabel.Text = "Penalty Free Cap Space " + String.Format("{0:0.00}", capSpace) + "M\nAvailable Bonus Money " + String.Format("{0:0.00}", bonusCash) + "M";
                         }
                         dataGridView1.Rows.Remove(dataGridView1.CurrentRow);
                     }
@@ -149,15 +112,21 @@ namespace FormulaBasketball
                 {
                     int playerID = (int)dataGridView2.CurrentRow.Cells[5].Value;
                     player p = team.GetPlayerByID(playerID);
-                    Contract currentContract = new Contract(Convert.ToInt32(yearsNumber.Value), Convert.ToDouble(amountNumber.Value));
+                    Contract currentContract = new Contract(Convert.ToInt32(yearsNumber.Value), Convert.ToDouble(amountNumber.Value), 0, Convert.ToDouble(bonusAmount.Value), promises);
                     ContractResult result = p.ContractNegotiate(currentContract, r);
                     if (result.Equals(ContractResult.Accept))
                     {
                         MessageBox.Show("Player accepted your offer");
                         p.SetNewContract(currentContract);
+                        double oldContract = (double)dataGridView2.CurrentRow.Cells[4].Value;
                         dataGridView2.CurrentRow.Cells[4].Value = p.GetMoneyPerYear();
                         dataGridView2.CurrentRow.Cells[6].Value = p.GetYearsLeft();
                         dataGridView2.Rows[dataGridView2.CurrentRow.Index].DefaultCellStyle.BackColor = Color.Gray;
+                        capSpace += oldContract;
+                        capSpace -= p.GetMoneyPerYear();
+                        bonusCash -= p.GetBonus();
+                        rosterSize.Text = "Players on team " + playersUnderContract + "/15\nPlayers on affiliate " + team.GetAffiliate().Count().ToString() + "/15";
+                        MoneyLabel.Text = "Penalty Free Cap Space " + String.Format("{0:0.00}", capSpace) + "M\nAvailable Bonus Money " + String.Format("{0:0.00}", bonusCash) + "M";
 
                     }
                     else if (result.Equals(ContractResult.Reject))
@@ -171,15 +140,22 @@ namespace FormulaBasketball
                         negotiation.ShowDialog();
                         if(negotiation.Success())
                         {
+                            double oldContract = (double)dataGridView2.CurrentRow.Cells[4].Value;
                             p.SetNewContract(negotiation.GetContract());
                             dataGridView2.CurrentRow.Cells[4].Value = p.GetMoneyPerYear();
                             dataGridView2.CurrentRow.Cells[6].Value = p.GetYearsLeft();
+                            capSpace += oldContract;
+                            capSpace -= p.GetMoneyPerYear();
+                            bonusCash -= p.GetBonus();
+                            rosterSize.Text = "Players on team " + playersUnderContract + "/15\nPlayers on affiliate " + team.GetAffiliate().Count().ToString() + "/15";
+                            MoneyLabel.Text = "Penalty Free Cap Space " + String.Format("{0:0.00}", capSpace) + "M\nAvailable Bonus Money " + String.Format("{0:0.00}", bonusCash) + "M";
                         }
                         dataGridView2.Rows[dataGridView2.CurrentRow.Index].DefaultCellStyle.BackColor = Color.Gray;
                     }
                 }
                 dataGridView2.ClearSelection();
             }
+            promises = new List<Promises>();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -225,8 +201,13 @@ namespace FormulaBasketball
         {
             if (amountNumber.Value > 25 || amountNumber.Value < 1) e.Cancel = true;
             else e.Cancel = false;
+        }
 
-            return;
+        private void promisesButtons_Click(object sender, EventArgs e)
+        {
+            OfferPromises offer = new OfferPromises(promises);
+            offer.ShowDialog();
+            promises = offer.GetPromises();
         }
     }
 }

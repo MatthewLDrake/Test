@@ -87,7 +87,10 @@ namespace FormulaBasketball
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Visible = false;
+            DepthChart depthChart = new DepthChart(team);
+            depthChart.ShowDialog();
+            this.Visible = true;
         }
     }
 }

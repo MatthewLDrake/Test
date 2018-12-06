@@ -55,6 +55,12 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.YearsLeft = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bonusAmount = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
+            this.promisesButtons = new System.Windows.Forms.Button();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.rosterSize = new System.Windows.Forms.Label();
+            this.MoneyLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -65,6 +71,8 @@
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bonusAmount)).BeginInit();
+            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -85,7 +93,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(610, 309);
+            this.dataGridView1.Size = new System.Drawing.Size(623, 344);
             this.dataGridView1.TabIndex = 0;
             // 
             // playerName
@@ -137,7 +145,7 @@
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(54, 3);
+            this.button1.Location = new System.Drawing.Point(15, 10);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(91, 41);
             this.button1.TabIndex = 1;
@@ -148,17 +156,20 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 341);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.19646F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.80133F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.00221F));
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tabControl1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 2, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(624, 100);
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(643, 510);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // tableLayoutPanel2
@@ -166,23 +177,29 @@
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64F));
+            this.tableLayoutPanel2.Controls.Add(this.label3, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.yearsNumber, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.years, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.amountNumber, 1, 1);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(419, 3);
+            this.tableLayoutPanel2.Controls.Add(this.bonusAmount, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.promisesButtons, 0, 3);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(433, 385);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(200, 94);
+            this.tableLayoutPanel2.RowCount = 4;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(207, 122);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 64);
+            this.label1.Location = new System.Drawing.Point(25, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 5;
@@ -191,7 +208,7 @@
             // yearsNumber
             // 
             this.yearsNumber.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.yearsNumber.Location = new System.Drawing.Point(75, 13);
+            this.yearsNumber.Location = new System.Drawing.Point(77, 5);
             this.yearsNumber.Maximum = new decimal(new int[] {
             20,
             0,
@@ -216,7 +233,7 @@
             // 
             this.years.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.years.AutoSize = true;
-            this.years.Location = new System.Drawing.Point(32, 17);
+            this.years.Location = new System.Drawing.Point(34, 8);
             this.years.Name = "years";
             this.years.Size = new System.Drawing.Size(37, 13);
             this.years.TabIndex = 3;
@@ -231,7 +248,7 @@
             0,
             0,
             65536});
-            this.amountNumber.Location = new System.Drawing.Point(75, 60);
+            this.amountNumber.Location = new System.Drawing.Point(77, 35);
             this.amountNumber.Maximum = new decimal(new int[] {
             25,
             0,
@@ -255,21 +272,22 @@
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Controls.Add(this.button2, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.button1, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(211, 3);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(306, 385);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(200, 94);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(121, 122);
             this.tableLayoutPanel3.TabIndex = 4;
             // 
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.Location = new System.Drawing.Point(54, 50);
+            this.button2.Location = new System.Drawing.Point(15, 71);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(91, 41);
             this.button2.TabIndex = 2;
@@ -279,13 +297,14 @@
             // 
             // tabControl1
             // 
+            this.tableLayoutPanel1.SetColumnSpan(this.tabControl1, 3);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Location = new System.Drawing.Point(3, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(624, 341);
+            this.tabControl1.Size = new System.Drawing.Size(637, 376);
             this.tabControl1.TabIndex = 3;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
@@ -295,7 +314,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(616, 315);
+            this.tabPage1.Size = new System.Drawing.Size(629, 350);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Expired Contracts";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -388,12 +407,93 @@
             this.YearsLeft.ReadOnly = true;
             this.YearsLeft.Width = 80;
             // 
+            // bonusAmount
+            // 
+            this.bonusAmount.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.bonusAmount.DecimalPlaces = 1;
+            this.bonusAmount.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.bonusAmount.Location = new System.Drawing.Point(77, 65);
+            this.bonusAmount.Maximum = new decimal(new int[] {
+            25,
+            0,
+            0,
+            0});
+            this.bonusAmount.Name = "bonusAmount";
+            this.bonusAmount.Size = new System.Drawing.Size(120, 20);
+            this.bonusAmount.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(31, 68);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Bonus:";
+            // 
+            // promisesButtons
+            // 
+            this.tableLayoutPanel2.SetColumnSpan(this.promisesButtons, 2);
+            this.promisesButtons.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.promisesButtons.Location = new System.Drawing.Point(3, 93);
+            this.promisesButtons.Name = "promisesButtons";
+            this.promisesButtons.Size = new System.Drawing.Size(201, 26);
+            this.promisesButtons.TabIndex = 11;
+            this.promisesButtons.Text = "Make Promises";
+            this.promisesButtons.UseVisualStyleBackColor = true;
+            this.promisesButtons.Click += new System.EventHandler(this.promisesButtons_Click);
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Controls.Add(this.MoneyLabel, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.rosterSize, 0, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 385);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 2;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(297, 122);
+            this.tableLayoutPanel4.TabIndex = 5;
+            // 
+            // rosterSize
+            // 
+            this.rosterSize.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rosterSize.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.rosterSize, 2);
+            this.rosterSize.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rosterSize.Location = new System.Drawing.Point(123, 21);
+            this.rosterSize.Margin = new System.Windows.Forms.Padding(3);
+            this.rosterSize.Name = "rosterSize";
+            this.rosterSize.Size = new System.Drawing.Size(51, 19);
+            this.rosterSize.TabIndex = 1;
+            this.rosterSize.Text = "label1";
+            // 
+            // MoneyLabel
+            // 
+            this.MoneyLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.MoneyLabel.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.MoneyLabel, 2);
+            this.MoneyLabel.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MoneyLabel.Location = new System.Drawing.Point(123, 82);
+            this.MoneyLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.MoneyLabel.Name = "MoneyLabel";
+            this.MoneyLabel.Size = new System.Drawing.Size(51, 19);
+            this.MoneyLabel.TabIndex = 3;
+            this.MoneyLabel.Text = "label3";
+            // 
             // ResignPlayers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 441);
-            this.Controls.Add(this.tabControl1);
+            this.ClientSize = new System.Drawing.Size(643, 510);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "ResignPlayers";
             this.Text = "Resigning Players";
@@ -408,6 +508,9 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bonusAmount)).EndInit();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -442,6 +545,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn YearsLeft;
+        private System.Windows.Forms.NumericUpDown bonusAmount;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button promisesButtons;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Label rosterSize;
+        private System.Windows.Forms.Label MoneyLabel;
     }
 }
 

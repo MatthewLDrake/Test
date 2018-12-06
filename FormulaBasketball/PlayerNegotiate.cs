@@ -14,11 +14,13 @@ namespace FormulaBasketball
     {
         private player p;
         private team team;
+        private List<Promises> promises;
         public PlayerNegotiate(player p, team userTeam)
         {
             InitializeComponent();
             team = userTeam;
             this.p = p;
+            promises = new List<Promises>();
         }
         public PlayerNegotiate(player p, team userTeam, Contract previousContract) : this(p, userTeam)
         {   
@@ -33,7 +35,7 @@ namespace FormulaBasketball
             int years = (int)yearsNumber.Value;
             double amount = (double)amountNumber.Value;
             double bonus = (double)bonusAmount.Value;
-            p.OfferFreeAgentContract(new Contract(years, amount, 0, bonus), team);
+            p.OfferFreeAgentContract(new Contract(years, amount, 0, bonus, promises), team);
             Close();
         }
 
@@ -48,6 +50,13 @@ namespace FormulaBasketball
             p.RemoveFreeAgentOffer(team);
             DialogResult = DialogResult.Cancel;
             Close();
+        }
+
+        private void promisesButton_Click(object sender, EventArgs e)
+        {
+            OfferPromises offer = new OfferPromises(promises);
+            offer.ShowDialog();
+            promises = offer.GetPromises();
         }
     }
 }

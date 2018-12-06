@@ -1007,6 +1007,10 @@ public class team : IComparable<team>,  IEnumerable<player>
         }
         return retVal;
     }
+    public player[] getActivePlayers()
+    {
+        return activePlayers;
+    }
     public override String ToString()
     {
         return teamName;
@@ -1617,6 +1621,11 @@ public class team : IComparable<team>,  IEnumerable<player>
         // old fashioned coach
         if (subs == null) return null;
         return subs[position].GetSubstitution(timeLeft);
+    }
+
+    public void SetDepthChart(player[] players)
+    {
+        activePlayers = players;
     }
 }
 [Serializable]

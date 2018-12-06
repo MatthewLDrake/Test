@@ -32,12 +32,13 @@
             this.cancelButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.yearsNumber = new System.Windows.Forms.NumericUpDown();
             this.years = new System.Windows.Forms.Label();
             this.amountNumber = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
             this.bonusAmount = new System.Windows.Forms.NumericUpDown();
             this.retractButton = new System.Windows.Forms.Button();
+            this.promisesButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.yearsNumber)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.amountNumber)).BeginInit();
@@ -93,6 +94,16 @@
             this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Amount:";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(29, 89);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Bonus:";
             // 
             // yearsNumber
             // 
@@ -156,16 +167,6 @@
             0,
             0});
             // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 89);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Bonus:";
-            // 
             // bonusAmount
             // 
             this.bonusAmount.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -196,11 +197,22 @@
             this.retractButton.Visible = false;
             this.retractButton.Click += new System.EventHandler(this.retractButton_Click);
             // 
+            // promisesButton
+            // 
+            this.promisesButton.Location = new System.Drawing.Point(41, 133);
+            this.promisesButton.Name = "promisesButton";
+            this.promisesButton.Size = new System.Drawing.Size(200, 23);
+            this.promisesButton.TabIndex = 6;
+            this.promisesButton.Text = "Add Promises";
+            this.promisesButton.UseVisualStyleBackColor = true;
+            this.promisesButton.Click += new System.EventHandler(this.promisesButton_Click);
+            // 
             // PlayerNegotiate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.promisesButton);
             this.Controls.Add(this.retractButton);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.cancelButton);
@@ -228,5 +240,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown bonusAmount;
         private System.Windows.Forms.Button retractButton;
+        private System.Windows.Forms.Button promisesButton;
     }
 }

@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             this.mainTeamGrid = new System.Windows.Forms.DataGridView();
-            this.Trade = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Overall = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Potential = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.capHit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teamList = new System.Windows.Forms.ComboBox();
             this.upButton = new System.Windows.Forms.Button();
             this.downButton = new System.Windows.Forms.Button();
             this.otherTeamGrid = new System.Windows.Forms.DataGridView();
-            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mainTeamTradeInfo = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.otherTeamTradeInfo = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.Trade = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Overall = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Potential = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.capHit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.mainTeamGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.otherTeamGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainTeamTradeInfo)).BeginInit();
@@ -75,48 +75,6 @@
             this.mainTeamGrid.Size = new System.Drawing.Size(375, 204);
             this.mainTeamGrid.TabIndex = 0;
             this.mainTeamGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.mainTeamGrid_CellContentClick);
-            // 
-            // Trade
-            // 
-            this.Trade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Trade.FillWeight = 20F;
-            this.Trade.HeaderText = "Trade";
-            this.Trade.Name = "Trade";
-            this.Trade.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Trade.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Trade.Width = 60;
-            // 
-            // name
-            // 
-            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.name.FillWeight = 200F;
-            this.name.HeaderText = "Player Name";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            // 
-            // Overall
-            // 
-            this.Overall.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Overall.HeaderText = "Overall";
-            this.Overall.Name = "Overall";
-            this.Overall.ReadOnly = true;
-            this.Overall.Width = 65;
-            // 
-            // Potential
-            // 
-            this.Potential.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Potential.HeaderText = "Potential";
-            this.Potential.Name = "Potential";
-            this.Potential.ReadOnly = true;
-            this.Potential.Width = 73;
-            // 
-            // capHit
-            // 
-            this.capHit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.capHit.HeaderText = "Cap Hit";
-            this.capHit.Name = "capHit";
-            this.capHit.ReadOnly = true;
-            this.capHit.Width = 51;
             // 
             // teamList
             // 
@@ -170,48 +128,6 @@
             this.otherTeamGrid.RowHeadersVisible = false;
             this.otherTeamGrid.Size = new System.Drawing.Size(377, 204);
             this.otherTeamGrid.TabIndex = 5;
-            // 
-            // dataGridViewCheckBoxColumn1
-            // 
-            this.dataGridViewCheckBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.dataGridViewCheckBoxColumn1.FillWeight = 20F;
-            this.dataGridViewCheckBoxColumn1.HeaderText = "Trade";
-            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            this.dataGridViewCheckBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewCheckBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewCheckBoxColumn1.Width = 60;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.FillWeight = 200F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Player Name";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Overall";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 65;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Potential";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 73;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Cap Hit";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 51;
             // 
             // mainTeamTradeInfo
             // 
@@ -288,6 +204,88 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(764, 422);
             this.tableLayoutPanel1.TabIndex = 8;
             // 
+            // Trade
+            // 
+            this.Trade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Trade.FillWeight = 20F;
+            this.Trade.HeaderText = "Trade";
+            this.Trade.Name = "Trade";
+            this.Trade.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Trade.Width = 41;
+            // 
+            // name
+            // 
+            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.name.FillWeight = 200F;
+            this.name.HeaderText = "Player Name";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            // 
+            // Overall
+            // 
+            this.Overall.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Overall.HeaderText = "Overall";
+            this.Overall.Name = "Overall";
+            this.Overall.ReadOnly = true;
+            this.Overall.Width = 65;
+            // 
+            // Potential
+            // 
+            this.Potential.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Potential.HeaderText = "Potential";
+            this.Potential.Name = "Potential";
+            this.Potential.ReadOnly = true;
+            this.Potential.Width = 73;
+            // 
+            // capHit
+            // 
+            this.capHit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.capHit.HeaderText = "Cap Hit";
+            this.capHit.Name = "capHit";
+            this.capHit.ReadOnly = true;
+            this.capHit.Width = 67;
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridViewCheckBoxColumn1.FillWeight = 20F;
+            this.dataGridViewCheckBoxColumn1.HeaderText = "Trade";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCheckBoxColumn1.Width = 41;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.FillWeight = 200F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Player Name";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Overall";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 65;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Potential";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 73;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Cap Hit";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 67;
+            // 
             // TradeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -311,21 +309,21 @@
         private System.Windows.Forms.ComboBox teamList;
         private System.Windows.Forms.Button upButton;
         private System.Windows.Forms.Button downButton;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Trade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Overall;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Potential;
-        private System.Windows.Forms.DataGridViewTextBoxColumn capHit;
         private System.Windows.Forms.DataGridView otherTeamGrid;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridView mainTeamTradeInfo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridView otherTeamTradeInfo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Trade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Overall;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Potential;
+        private System.Windows.Forms.DataGridViewTextBoxColumn capHit;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }

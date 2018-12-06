@@ -826,7 +826,7 @@ public class player : IComparable<player>
 
         if (money > 25) money = 25;
 
-        return new Contract(years,money);
+        return new Contract(years,money, 0 , previousOffer.GetBonus(), previousOffer.GetPromises());
     }
     private int playerHappiness = 0;
     public ContractResult ContractNegotiate(Contract newContract, FormulaBasketball.Random r)
@@ -1521,6 +1521,10 @@ public class player : IComparable<player>
         injuryLength--;
 
     }
+    public double GetBonus()
+    {
+        return contract.GetBonus();
+    }
     public void resetAllStats()
     {
         stats = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
@@ -1831,5 +1835,30 @@ class FreeAgentContracts
     public team GetTeam()
     {
         return team;
+    }
+}
+[Serializable]
+public class Promises
+{
+    private string description;
+    private int id;
+    public Promises(string description, int id)
+    {
+        this.description = description;
+        this.id = id;
+    }
+    public Promises Copy()
+    {
+        return new Promises(description, id);
+    }
+    public override bool Equals(Object obj)
+    {
+        if(obj is Promises)
+            return id == (obj as Promises).id;
+        return false;
+    }
+    public override string ToString()
+    {
+        return description;
     }
 }

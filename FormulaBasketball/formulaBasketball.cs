@@ -27,6 +27,7 @@ public class formulaBasketball
     public static bool injuries = true;
     private static ImagePrinter printer;
     public static bool createImages = true;
+    public static Promises[] promisesList = new Promises[] { new Promises("Year One Starter", 1), new Promises("Win Division", 2), new Promises("Win Conference", 3), new Promises("Win Championship", 4), new Promises("Make Playoffs", 5), new Promises("No trade clause", 6) };
     public formulaBasketball(bool loadSave, String fileName, List<team> teams, List<player> freeAgency, Boolean flag = false)
     {
 

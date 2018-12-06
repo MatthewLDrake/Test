@@ -16,6 +16,7 @@ namespace FormulaBasketball
         private Contract teamOfferedContract, playerOfferedContract;
         private player player;
         private FormulaBasketball.Random r;
+        private List<Promises> promises;
         public Negotiation(player p, Contract contract, FormulaBasketball.Random r)
         {
             InitializeComponent();
@@ -23,7 +24,8 @@ namespace FormulaBasketball
             this.r = r;
             player = p;
             teamOfferedContract = contract;
-            grid.Rows.Add("Team", contract.GetYearsLeft(), contract.GetMoney(), contract.GetTotalMoney());
+            promises = contract.GetPromises();
+            grid.Rows.Add("Team", contract.GetYearsLeft(), contract.GetMoney(), contract.GetTotalMoney(), contract.GetBonus(), "Promises", contract);
             PlayerCounter(false);
         }
         private void PlayerCounter(bool b = true)
@@ -38,7 +40,7 @@ namespace FormulaBasketball
                 return;
             }
 
-            grid.Rows.Add(player.getName(), playerOfferedContract.GetYearsLeft(), playerOfferedContract.GetMoney(), playerOfferedContract.GetTotalMoney());
+            grid.Rows.Add(player.getName(), playerOfferedContract.GetYearsLeft(), playerOfferedContract.GetMoney(), playerOfferedContract.GetTotalMoney(), playerOfferedContract.GetBonus(), "Promises", playerOfferedContract);
         }
         public bool Success()
         {
@@ -120,6 +122,29 @@ namespace FormulaBasketball
                 PlayerCounter();
             }
             
+        }
+
+        private void promisesButton_Click(object sender, EventArgs e)
+        {
+            OfferPromises offer = new OfferPromises(promises);
+            offer.ShowDialog();
+            promises = offer.GetPromises();
+        }
+
+        private void grid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView senderGrid = (DataGridView)sender;
+
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0)
+            {
+                Contract contract = senderGrid[6, e.RowIndex].Value as Contract;
+                if (e.ColumnIndex == 5)
+                {
+                    new OfferPromises(contract.GetPromises(), true).ShowDialog();
+                }
+               
+            }
         }
     }
 }

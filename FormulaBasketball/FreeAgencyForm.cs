@@ -80,7 +80,7 @@ namespace FormulaBasketball
                     else
                         result = new PlayerNegotiate(p, userTeam).ShowDialog();
                     
-                    senderGrid[6, e.RowIndex].Value = p.GetOffers();
+                    senderGrid[7, e.RowIndex].Value = p.GetOffers();
                     
                 }
             }
