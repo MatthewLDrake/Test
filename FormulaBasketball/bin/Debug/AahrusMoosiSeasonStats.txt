@@ -8,17 +8,17 @@ Team Record in Least Points Allowed: Aahrus Moosi: 85 points on game 14 against 
 Team Record in Most Points Allowed: Aahrus Moosi: 138 points on game 15 against the Aiyota Pumps
 Records vs. Each Team this season:
 Aahrus Moosi: 0-0
-Auspikitan Golden Falcons: 1-1
+Auspikitan Golden Falcons: 2-1
 Calto Cows: 2-0
 Height Sagua Cats: 1-1
 Key to Don Yees: 1-0
 Manwx Saguans: 3-1
-Sagua Ocelots: 0-0
-Solea Geysers: 1-1
+Sagua Ocelots: 0-1
+Solea Geysers: 2-1
 Autolik Autonomy: 1-1
-Barsein Bats: 1-1
-Blanaxon Hammers: 1-0
-Kaeshar Kaisers: 1-1
+Barsein Bats: 1-2
+Blanaxon Hammers: 1-1
+Kaeshar Kaisers: 1-2
 Naxda Nomads: 1-0
 Red Rainbow Sickles: 0-0
 Serkr Atolls: 0-1
@@ -28,7 +28,7 @@ Avura Aviators: 0-0
 Boltway Bad Dragons: 1-1
 Dotruga Falno: 1-0
 Ethanthova Ponies: 0-1
-Faehrenfall Feathercats: 0-1
+Faehrenfall Feathercats: 0-2
 Stedro Boulders: 0-1
 TND Tanks: 0-0
 Bongatar Banging Bongos: 0-1
@@ -38,4 +38,4 @@ Holy Yektonisa Bishops: 0-1
 Holykol Bears: 0-2
 Lyintaria Lynx: 1-1
 Pyxanovia Pixies: 1-1
-Transhimalia Disasters: 1-0
+Transhimalia Disasters: 1-1

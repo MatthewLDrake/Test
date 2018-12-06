@@ -1,14 +1,14 @@
 Faehrenfall Feathercats Stats
 Player Record of Points: Three Point Masta: 40 points on game 6 against the Blanaxon Hammers
-Player Record of Assists: Three Point Masta: 16 assists on game 24 against the Bongatar Banging Bongos
+Player Record of Assists: Three Point Masta: 18 assists on game 44 against the Transhimalia Disasters
 Player Record of Rebounds: Savage Soleani: 19 rebounds on game 7 against the Key to Don Yees
 Team Record in Most Points Scored: Faehrenfall Feathercats: 122 points on game 30 against the Ethanthova Ponies
 Team Record in Least Points Scored: Faehrenfall Feathercats: 65 points on game 5 against the TND Tanks
 Team Record in Least Points Allowed: Faehrenfall Feathercats: 76 points on game 9 against the Aahrus Moosi
 Team Record in Most Points Allowed: Faehrenfall Feathercats: 132 points on game 37 against the Dotruga Falno
 Records vs. Each Team this season:
-Aahrus Moosi: 1-0
-Auspikitan Golden Falcons: 0-1
+Aahrus Moosi: 2-0
+Auspikitan Golden Falcons: 1-1
 Calto Cows: 0-1
 Height Sagua Cats: 0-0
 Key to Don Yees: 2-0
@@ -17,7 +17,7 @@ Sagua Ocelots: 1-1
 Solea Geysers: 0-1
 Autolik Autonomy: 0-2
 Barsein Bats: 0-0
-Blanaxon Hammers: 0-1
+Blanaxon Hammers: 1-1
 Kaeshar Kaisers: 0-1
 Naxda Nomads: 0-2
 Red Rainbow Sickles: 0-0
@@ -25,17 +25,17 @@ Serkr Atolls: 0-0
 Shmupland Dictators: 1-1
 Aiyota Pumps: 0-2
 Avura Aviators: 2-1
-Boltway Bad Dragons: 0-0
+Boltway Bad Dragons: 0-1
 Dotruga Falno: 0-2
 Ethanthova Ponies: 3-0
 Faehrenfall Feathercats: 0-0
-Stedro Boulders: 1-1
-TND Tanks: 0-2
-Bongatar Banging Bongos: 1-0
+Stedro Boulders: 2-1
+TND Tanks: 0-3
+Bongatar Banging Bongos: 1-1
 Czalliso Pythons: 0-0
 Dvimne Spirits: 0-2
 Holy Yektonisa Bishops: 0-2
 Holykol Bears: 0-2
 Lyintaria Lynx: 0-1
 Pyxanovia Pixies: 0-1
-Transhimalia Disasters: 0-1
+Transhimalia Disasters: 0-2

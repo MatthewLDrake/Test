@@ -5,26 +5,26 @@ Player Record of Rebounds: Himi Azumamaro: 23 rebounds on game 38 against the Bo
 Team Record in Most Points Scored: Manwx Saguans: 134 points on game 9 against the Sagua Ocelots
 Team Record in Least Points Scored: Manwx Saguans: 78 points on game 8 against the Bongatar Banging Bongos
 Team Record in Least Points Allowed: Manwx Saguans: 73 points on game 10 against the Naxda Nomads
-Team Record in Most Points Allowed: Manwx Saguans: 132 points on game 24 against the Barsein Bats
+Team Record in Most Points Allowed: Manwx Saguans: 134 points on game 45 against the Solea Geysers
 Records vs. Each Team this season:
 Aahrus Moosi: 1-3
 Auspikitan Golden Falcons: 1-1
-Calto Cows: 0-2
+Calto Cows: 0-3
 Height Sagua Cats: 0-1
 Key to Don Yees: 1-1
 Manwx Saguans: 0-0
-Sagua Ocelots: 1-1
-Solea Geysers: 0-0
+Sagua Ocelots: 1-2
+Solea Geysers: 0-1
 Autolik Autonomy: 0-1
 Barsein Bats: 0-2
 Blanaxon Hammers: 0-0
 Kaeshar Kaisers: 1-1
-Naxda Nomads: 1-0
-Red Rainbow Sickles: 1-1
+Naxda Nomads: 1-1
+Red Rainbow Sickles: 2-1
 Serkr Atolls: 1-1
-Shmupland Dictators: 1-0
+Shmupland Dictators: 1-1
 Aiyota Pumps: 0-1
-Avura Aviators: 0-1
+Avura Aviators: 1-1
 Boltway Bad Dragons: 0-1
 Dotruga Falno: 0-0
 Ethanthova Ponies: 1-1
@@ -33,7 +33,7 @@ Stedro Boulders: 0-2
 TND Tanks: 0-1
 Bongatar Banging Bongos: 1-1
 Czalliso Pythons: 0-0
-Dvimne Spirits: 0-1
+Dvimne Spirits: 0-2
 Holy Yektonisa Bishops: 1-0
 Holykol Bears: 0-2
 Lyintaria Lynx: 0-0

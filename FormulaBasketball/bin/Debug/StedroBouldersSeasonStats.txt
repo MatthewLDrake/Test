@@ -5,7 +5,7 @@ Player Record of Rebounds: Mabebosei Alotro: 22 rebounds on game 32 against the 
 Team Record in Most Points Scored: Stedro Boulders: 118 points on game 1 against the Aiyota Pumps
 Team Record in Least Points Scored: Stedro Boulders: 74 points on game 10 against the Dvimne Spirits
 Team Record in Least Points Allowed: Stedro Boulders: 71 points on game 17 against the Ethanthova Ponies
-Team Record in Most Points Allowed: Stedro Boulders: 114 points on game 22 against the Holykol Bears
+Team Record in Most Points Allowed: Stedro Boulders: 122 points on game 46 against the TND Tanks
 Records vs. Each Team this season:
 Aahrus Moosi: 1-0
 Auspikitan Golden Falcons: 0-1
@@ -16,7 +16,7 @@ Manwx Saguans: 2-0
 Sagua Ocelots: 0-1
 Solea Geysers: 1-1
 Autolik Autonomy: 0-0
-Barsein Bats: 1-0
+Barsein Bats: 1-1
 Blanaxon Hammers: 1-0
 Kaeshar Kaisers: 2-0
 Naxda Nomads: 0-0
@@ -24,13 +24,13 @@ Red Rainbow Sickles: 0-0
 Serkr Atolls: 0-2
 Shmupland Dictators: 1-0
 Aiyota Pumps: 3-0
-Avura Aviators: 0-0
+Avura Aviators: 1-0
 Boltway Bad Dragons: 1-1
 Dotruga Falno: 1-2
-Ethanthova Ponies: 2-0
-Faehrenfall Feathercats: 1-1
+Ethanthova Ponies: 3-1
+Faehrenfall Feathercats: 1-2
 Stedro Boulders: 0-0
-TND Tanks: 1-0
+TND Tanks: 1-1
 Bongatar Banging Bongos: 0-0
 Czalliso Pythons: 0-2
 Dvimne Spirits: 0-2
@@ -38,4 +38,4 @@ Holy Yektonisa Bishops: 2-0
 Holykol Bears: 0-1
 Lyintaria Lynx: 1-0
 Pyxanovia Pixies: 1-1
-Transhimalia Disasters: 0-1
+Transhimalia Disasters: 0-3

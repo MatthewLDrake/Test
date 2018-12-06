@@ -98,9 +98,30 @@ namespace FormulaBasketball
             
         }
 
-        private void mainTeamTradeInfo_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        private void otherTeamGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            if (otherTeamGrid.SelectedCells == null || otherTeamGrid.SelectedCells.Count < 1) return;
+            DataGridViewCell cell = otherTeamGrid.SelectedCells[0];
+            if (cell.ColumnIndex == 0)
+            {
+                if ((bool)cell.Value)
+                {
+                    for (int i = 0; i < otherTeamTradeInfo.Rows.Count; i++)
+                    {
+                        if (otherTeamTradeInfo.Rows[i].Cells[0].Value.Equals(otherTeamGrid[1, cell.RowIndex].Value))
+                        {
+                            otherTeamTradeInfo.Rows.Remove(otherTeamTradeInfo.Rows[i]);
+                            break;
+                        }
+                    }
+
+                }
+                else
+                {
+                    otherTeamTradeInfo.Rows.Add(otherTeamGrid[1, cell.RowIndex].Value);
+                }
+                cell.Value = !((bool)cell.Value);
+            }
         }
     }
 }

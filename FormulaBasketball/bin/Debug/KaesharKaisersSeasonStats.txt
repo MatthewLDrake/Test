@@ -7,19 +7,19 @@ Team Record in Least Points Scored: Kaeshar Kaisers: 74 points on game 3 against
 Team Record in Least Points Allowed: Kaeshar Kaisers: 79 points on game 37 against the Lyintaria Lynx
 Team Record in Most Points Allowed: Kaeshar Kaisers: 127 points on game 32 against the Solea Geysers
 Records vs. Each Team this season:
-Aahrus Moosi: 1-1
-Auspikitan Golden Falcons: 0-0
+Aahrus Moosi: 2-1
+Auspikitan Golden Falcons: 1-0
 Calto Cows: 0-1
 Height Sagua Cats: 0-2
 Key to Don Yees: 0-0
 Manwx Saguans: 1-1
-Sagua Ocelots: 0-1
-Solea Geysers: 0-2
+Sagua Ocelots: 0-2
+Solea Geysers: 1-2
 Autolik Autonomy: 2-0
-Barsein Bats: 2-0
+Barsein Bats: 2-1
 Blanaxon Hammers: 2-0
 Kaeshar Kaisers: 0-0
-Naxda Nomads: 0-1
+Naxda Nomads: 0-2
 Red Rainbow Sickles: 2-0
 Serkr Atolls: 0-3
 Shmupland Dictators: 1-0
@@ -27,7 +27,7 @@ Aiyota Pumps: 0-2
 Avura Aviators: 1-0
 Boltway Bad Dragons: 0-2
 Dotruga Falno: 0-0
-Ethanthova Ponies: 1-0
+Ethanthova Ponies: 2-0
 Faehrenfall Feathercats: 1-0
 Stedro Boulders: 0-2
 TND Tanks: 0-0
@@ -38,4 +38,4 @@ Holy Yektonisa Bishops: 1-0
 Holykol Bears: 0-0
 Lyintaria Lynx: 1-0
 Pyxanovia Pixies: 2-0
-Transhimalia Disasters: 0-1
+Transhimalia Disasters: 1-1

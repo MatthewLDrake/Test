@@ -1,31 +1,31 @@
 Key to Don Yees Stats
-Player Record of Points: Stephan Hutto: 40 points on game 34 against the Auspikitan Golden Falcons
+Player Record of Points: Stephan Hutto: 43 points on game 41 against the Solea Geysers
 Player Record of Assists: Cabodu Sokàtà: 19 assists on game 4 against the TND Tanks
 Player Record of Rebounds: Gerard Holzer: 25 rebounds on game 35 against the Avura Aviators
 Team Record in Most Points Scored: Key to Don Yees: 138 points on game 20 against the Blanaxon Hammers
-Team Record in Least Points Scored: Key to Don Yees: 89 points on game 7 against the Faehrenfall Feathercats
+Team Record in Least Points Scored: Key to Don Yees: 88 points on game 48 against the Serkr Atolls
 Team Record in Least Points Allowed: Key to Don Yees: 80 points on game 5 against the Barsein Bats
-Team Record in Most Points Allowed: Key to Don Yees: 125 points on game 15 against the Holykol Bears
+Team Record in Most Points Allowed: Key to Don Yees: 128 points on game 46 against the Red Rainbow Sickles
 Records vs. Each Team this season:
 Aahrus Moosi: 0-1
-Auspikitan Golden Falcons: 2-0
+Auspikitan Golden Falcons: 3-0
 Calto Cows: 1-1
-Height Sagua Cats: 0-2
+Height Sagua Cats: 1-2
 Key to Don Yees: 0-0
 Manwx Saguans: 1-1
 Sagua Ocelots: 2-2
-Solea Geysers: 1-1
-Autolik Autonomy: 0-0
+Solea Geysers: 2-1
+Autolik Autonomy: 1-0
 Barsein Bats: 1-0
 Blanaxon Hammers: 1-1
 Kaeshar Kaisers: 0-0
 Naxda Nomads: 1-1
-Red Rainbow Sickles: 0-1
-Serkr Atolls: 0-2
+Red Rainbow Sickles: 0-2
+Serkr Atolls: 0-3
 Shmupland Dictators: 1-1
 Aiyota Pumps: 1-0
 Avura Aviators: 1-0
-Boltway Bad Dragons: 0-1
+Boltway Bad Dragons: 0-2
 Dotruga Falno: 1-0
 Ethanthova Ponies: 0-0
 Faehrenfall Feathercats: 0-2
@@ -34,7 +34,7 @@ TND Tanks: 2-0
 Bongatar Banging Bongos: 1-0
 Czalliso Pythons: 1-1
 Dvimne Spirits: 0-0
-Holy Yektonisa Bishops: 1-0
+Holy Yektonisa Bishops: 2-0
 Holykol Bears: 0-1
 Lyintaria Lynx: 2-0
 Pyxanovia Pixies: 0-0

@@ -2,13 +2,13 @@ Pyxanovia Pixies Stats
 Player Record of Points: Pyxanovia Player #4: 49 points on game 24 against the Shmupland Dictators
 Player Record of Assists: Pyxanovia Player #2: 21 assists on game 1 against the TND Tanks
 Player Record of Rebounds: Pyxanovia Player #4: 17 rebounds on game 38 against the Aahrus Moosi
-Team Record in Most Points Scored: Pyxanovia Pixies: 132 points on game 29 against the Lyintaria Lynx
+Team Record in Most Points Scored: Pyxanovia Pixies: 140 points on game 48 against the Lyintaria Lynx
 Team Record in Least Points Scored: Pyxanovia Pixies: 76 points on game 7 against the Dvimne Spirits
 Team Record in Least Points Allowed: Pyxanovia Pixies: 76 points on game 14 against the Faehrenfall Feathercats
 Team Record in Most Points Allowed: Pyxanovia Pixies: 135 points on game 19 against the Avura Aviators
 Records vs. Each Team this season:
 Aahrus Moosi: 1-1
-Auspikitan Golden Falcons: 0-1
+Auspikitan Golden Falcons: 1-1
 Calto Cows: 0-1
 Height Sagua Cats: 2-0
 Key to Don Yees: 0-0
@@ -19,8 +19,8 @@ Autolik Autonomy: 1-0
 Barsein Bats: 0-0
 Blanaxon Hammers: 1-0
 Kaeshar Kaisers: 0-2
-Naxda Nomads: 1-0
-Red Rainbow Sickles: 0-0
+Naxda Nomads: 2-0
+Red Rainbow Sickles: 1-0
 Serkr Atolls: 0-1
 Shmupland Dictators: 0-1
 Aiyota Pumps: 0-0
@@ -30,12 +30,12 @@ Dotruga Falno: 1-1
 Ethanthova Ponies: 0-1
 Faehrenfall Feathercats: 1-0
 Stedro Boulders: 1-1
-TND Tanks: 2-0
+TND Tanks: 3-0
 Bongatar Banging Bongos: 2-0
-Czalliso Pythons: 0-1
+Czalliso Pythons: 0-2
 Dvimne Spirits: 0-3
-Holy Yektonisa Bishops: 0-0
+Holy Yektonisa Bishops: 0-1
 Holykol Bears: 0-4
-Lyintaria Lynx: 1-1
+Lyintaria Lynx: 2-1
 Pyxanovia Pixies: 0-0
-Transhimalia Disasters: 0-0
+Transhimalia Disasters: 1-0

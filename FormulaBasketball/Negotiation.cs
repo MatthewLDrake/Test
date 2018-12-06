@@ -82,7 +82,7 @@ namespace FormulaBasketball
         private void button1_Click(object sender, EventArgs e)
         {
             Contract currentContract = new Contract(Convert.ToInt32(yearsNumber.Value), Convert.ToDouble(amountNumber.Value));
-            if (currentContract.GetYearsLeft() == playerOfferedContract.GetYearsLeft() && currentContract.GetMoney() >= playerOfferedContract.GetMoney())
+            if (currentContract.GetYearsLeft() == playerOfferedContract.GetYearsLeft() && currentContract.GetMoney() > playerOfferedContract.GetMoney())
             {                
                 MessageBox.Show("Player accepted your offer");
                 DialogResult d = MessageBox.Show("Are you sure you want to offer more money than the player requested?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);

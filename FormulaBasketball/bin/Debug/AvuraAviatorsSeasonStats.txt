@@ -12,7 +12,7 @@ Auspikitan Golden Falcons: 1-1
 Calto Cows: 0-1
 Height Sagua Cats: 0-1
 Key to Don Yees: 0-1
-Manwx Saguans: 1-0
+Manwx Saguans: 1-1
 Sagua Ocelots: 0-1
 Solea Geysers: 0-0
 Autolik Autonomy: 1-1
@@ -21,7 +21,7 @@ Blanaxon Hammers: 1-1
 Kaeshar Kaisers: 0-1
 Naxda Nomads: 2-0
 Red Rainbow Sickles: 0-0
-Serkr Atolls: 1-0
+Serkr Atolls: 1-1
 Shmupland Dictators: 0-1
 Aiyota Pumps: 1-2
 Avura Aviators: 0-0
@@ -29,13 +29,13 @@ Boltway Bad Dragons: 0-1
 Dotruga Falno: 0-3
 Ethanthova Ponies: 1-1
 Faehrenfall Feathercats: 1-2
-Stedro Boulders: 0-0
+Stedro Boulders: 0-1
 TND Tanks: 1-1
 Bongatar Banging Bongos: 1-2
-Czalliso Pythons: 0-1
-Dvimne Spirits: 0-1
-Holy Yektonisa Bishops: 1-0
-Holykol Bears: 0-1
+Czalliso Pythons: 0-3
+Dvimne Spirits: 0-2
+Holy Yektonisa Bishops: 2-0
+Holykol Bears: 0-2
 Lyintaria Lynx: 0-0
 Pyxanovia Pixies: 1-1
 Transhimalia Disasters: 0-1

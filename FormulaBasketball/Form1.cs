@@ -44,7 +44,7 @@ namespace FormulaBasketball
             if (game)
                 new formulaBasketball(sender.Equals(yesButton), listView1.SelectedCells[0].OwningRow.Cells[0].EditedFormattedValue.ToString(), null, null);
             else
-                new FormulaBasketball.Menu(formulaBasketball.DeSerializeObject(listView1.SelectedCells[0].OwningRow.Cells[0].EditedFormattedValue.ToString()), 7, r).ShowDialog();
+                new Menu(formulaBasketball.DeSerializeObject(listView1.SelectedCells[0].OwningRow.Cells[0].EditedFormattedValue.ToString()), 7, r).ShowDialog();
             Close();
         }
 

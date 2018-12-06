@@ -57,6 +57,7 @@ namespace FormulaBasketball
 
         private void exitButton_Click(object sender, EventArgs e)
         {
+            formulaBasketball.SerializeObject(create, "testSave.fbdata");
             Close();
         }
 

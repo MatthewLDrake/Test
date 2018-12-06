@@ -79,3 +79,16 @@ C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release\FormulaBasketball.teamPicker.resources
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release\FormulaBasketball.YearSim.resources
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release\FormulaBasketball.csproj.GenerateResource.Cache
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.DepthChart.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.DisplayPlayer.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.FreeAgencyForm.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.Menu.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.Negotiation.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.OfferPromises.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.PlayerNegotiate.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.PlayerRatings.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.PlayerStats.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.ResignPlayers.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.Scouting.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.TradeForm.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.ViewRoster.resources

@@ -130,3 +130,5 @@ B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.TradeForm.resour
 B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.ViewRoster.resources
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\FormulaBasketball.DepthChart.resources
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\FormulaBasketball.OfferPromises.resources
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.DepthChart.resources
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.OfferPromises.resources

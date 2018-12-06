@@ -1,32 +1,32 @@
 Height Sagua Cats Stats
-Player Record of Points: Sova Kłó: 40 points on game 31 against the Czalliso Pythons
+Player Record of Points: Sova Kłó: 42 points on game 48 against the Shmupland Dictators
 Player Record of Assists: Laurence Chandler: 22 assists on game 4 against the Bongatar Banging Bongos
-Player Record of Rebounds: Hvanne Takakazu: 19 rebounds on game 32 against the Shmupland Dictators
-Team Record in Most Points Scored: Height Sagua Cats: 126 points on game 22 against the Aiyota Pumps
+Player Record of Rebounds: Hvanne Takakazu: 24 rebounds on game 47 against the Holykol Bears
+Team Record in Most Points Scored: Height Sagua Cats: 140 points on game 48 against the Shmupland Dictators
 Team Record in Least Points Scored: Height Sagua Cats: 88 points on game 10 against the Serkr Atolls
 Team Record in Least Points Allowed: Height Sagua Cats: 78 points on game 16 against the Stedro Boulders
-Team Record in Most Points Allowed: Height Sagua Cats: 129 points on game 22 against the Aiyota Pumps
+Team Record in Most Points Allowed: Height Sagua Cats: 142 points on game 48 against the Shmupland Dictators
 Records vs. Each Team this season:
 Aahrus Moosi: 1-1
 Auspikitan Golden Falcons: 2-0
-Calto Cows: 0-2
+Calto Cows: 1-2
 Height Sagua Cats: 0-0
-Key to Don Yees: 2-0
+Key to Don Yees: 2-1
 Manwx Saguans: 1-0
 Sagua Ocelots: 1-1
 Solea Geysers: 0-4
-Autolik Autonomy: 1-0
-Barsein Bats: 0-0
+Autolik Autonomy: 1-1
+Barsein Bats: 0-1
 Blanaxon Hammers: 1-0
 Kaeshar Kaisers: 2-0
 Naxda Nomads: 0-0
 Red Rainbow Sickles: 0-2
-Serkr Atolls: 0-1
-Shmupland Dictators: 1-1
+Serkr Atolls: 0-2
+Shmupland Dictators: 1-2
 Aiyota Pumps: 0-1
 Avura Aviators: 1-0
 Boltway Bad Dragons: 1-0
-Dotruga Falno: 0-1
+Dotruga Falno: 0-2
 Ethanthova Ponies: 1-0
 Faehrenfall Feathercats: 0-0
 Stedro Boulders: 1-1
@@ -35,7 +35,7 @@ Bongatar Banging Bongos: 1-1
 Czalliso Pythons: 0-1
 Dvimne Spirits: 1-1
 Holy Yektonisa Bishops: 0-0
-Holykol Bears: 0-1
+Holykol Bears: 0-2
 Lyintaria Lynx: 0-1
 Pyxanovia Pixies: 0-2
 Transhimalia Disasters: 0-0

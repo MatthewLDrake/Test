@@ -7,22 +7,22 @@ Team Record in Least Points Scored: Solea Geysers: 79 points on game 16 against 
 Team Record in Least Points Allowed: Solea Geysers: 54 points on game 19 against the Barsein Bats
 Team Record in Most Points Allowed: Solea Geysers: 139 points on game 24 against the Aahrus Moosi
 Records vs. Each Team this season:
-Aahrus Moosi: 1-1
+Aahrus Moosi: 1-2
 Auspikitan Golden Falcons: 0-1
 Calto Cows: 2-0
 Height Sagua Cats: 4-0
-Key to Don Yees: 1-1
-Manwx Saguans: 0-0
+Key to Don Yees: 1-2
+Manwx Saguans: 1-0
 Sagua Ocelots: 1-0
 Solea Geysers: 0-0
 Autolik Autonomy: 0-0
 Barsein Bats: 2-0
-Blanaxon Hammers: 1-0
-Kaeshar Kaisers: 2-0
+Blanaxon Hammers: 2-0
+Kaeshar Kaisers: 2-1
 Naxda Nomads: 2-0
-Red Rainbow Sickles: 1-0
+Red Rainbow Sickles: 2-0
 Serkr Atolls: 2-0
-Shmupland Dictators: 2-0
+Shmupland Dictators: 2-1
 Aiyota Pumps: 0-1
 Avura Aviators: 0-0
 Boltway Bad Dragons: 1-1
@@ -31,7 +31,7 @@ Ethanthova Ponies: 1-1
 Faehrenfall Feathercats: 1-0
 Stedro Boulders: 1-1
 TND Tanks: 0-0
-Bongatar Banging Bongos: 1-0
+Bongatar Banging Bongos: 1-1
 Czalliso Pythons: 0-1
 Dvimne Spirits: 0-2
 Holy Yektonisa Bishops: 0-0

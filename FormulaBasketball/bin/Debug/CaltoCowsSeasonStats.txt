@@ -1,33 +1,33 @@
 Calto Cows Stats
 Player Record of Points: Trevor Oosterhout: 28 points on game 39 against the Czalliso Pythons
-Player Record of Assists: Trevor Oosterhout: 10 assists on game 28 against the Transhimalia Disasters
-Player Record of Rebounds: vo: 12 rebounds on game 10 against the Shmupland Dictators
+Player Record of Assists: Trevor Oosterhout: 11 assists on game 46 against the Shmupland Dictators
+Player Record of Rebounds: Trevor Oosterhout: 13 rebounds on game 48 against the Auspikitan Golden Falcons
 Team Record in Most Points Scored: Calto Cows: 131 points on game 25 against the Aiyota Pumps
 Team Record in Least Points Scored: Calto Cows: 87 points on game 31 against the Dvimne Spirits
 Team Record in Least Points Allowed: Calto Cows: 68 points on game 9 against the Barsein Bats
 Team Record in Most Points Allowed: Calto Cows: 123 points on game 32 against the Aiyota Pumps
 Records vs. Each Team this season:
 Aahrus Moosi: 0-2
-Auspikitan Golden Falcons: 1-0
+Auspikitan Golden Falcons: 1-1
 Calto Cows: 0-0
-Height Sagua Cats: 2-0
+Height Sagua Cats: 2-1
 Key to Don Yees: 1-1
-Manwx Saguans: 2-0
+Manwx Saguans: 3-0
 Sagua Ocelots: 0-1
 Solea Geysers: 0-2
 Autolik Autonomy: 2-1
-Barsein Bats: 1-0
-Blanaxon Hammers: 0-0
+Barsein Bats: 1-1
+Blanaxon Hammers: 0-1
 Kaeshar Kaisers: 1-0
 Naxda Nomads: 1-1
 Red Rainbow Sickles: 0-0
 Serkr Atolls: 2-0
-Shmupland Dictators: 1-0
+Shmupland Dictators: 2-0
 Aiyota Pumps: 1-1
 Avura Aviators: 1-0
 Boltway Bad Dragons: 0-1
 Dotruga Falno: 0-1
-Ethanthova Ponies: 1-0
+Ethanthova Ponies: 1-1
 Faehrenfall Feathercats: 1-0
 Stedro Boulders: 0-0
 TND Tanks: 1-1
@@ -36,6 +36,6 @@ Czalliso Pythons: 2-0
 Dvimne Spirits: 0-1
 Holy Yektonisa Bishops: 1-1
 Holykol Bears: 0-0
-Lyintaria Lynx: 1-0
+Lyintaria Lynx: 2-0
 Pyxanovia Pixies: 1-0
 Transhimalia Disasters: 1-1

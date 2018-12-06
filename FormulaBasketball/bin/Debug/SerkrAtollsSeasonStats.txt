@@ -1,7 +1,7 @@
 Serkr Atolls Stats
 Player Record of Points: Danomobei Motxev: 41 points on game 8 against the Shmupland Dictators
-Player Record of Assists: Transhilmalia Player #2: 19 assists on game 30 against the Solea Geysers
-Player Record of Rebounds: Teva Gekxakŋi: 16 rebounds on game 12 against the Kaeshar Kaisers
+Player Record of Assists: Transhilmalia Player #2: 24 assists on game 45 against the Lyintaria Lynx
+Player Record of Rebounds: Vrá Nonhkwaqan: 17 rebounds on game 46 against the Height Sagua Cats
 Team Record in Most Points Scored: Serkr Atolls: 131 points on game 4 against the Red Rainbow Sickles
 Team Record in Least Points Scored: Serkr Atolls: 72 points on game 37 against the Dvimne Spirits
 Team Record in Least Points Allowed: Serkr Atolls: 82 points on game 36 against the Holy Yektonisa Bishops
@@ -10,13 +10,13 @@ Records vs. Each Team this season:
 Aahrus Moosi: 1-0
 Auspikitan Golden Falcons: 0-0
 Calto Cows: 0-2
-Height Sagua Cats: 1-0
-Key to Don Yees: 2-0
+Height Sagua Cats: 2-0
+Key to Don Yees: 3-0
 Manwx Saguans: 1-1
-Sagua Ocelots: 1-0
+Sagua Ocelots: 2-0
 Solea Geysers: 0-2
-Autolik Autonomy: 1-1
-Barsein Bats: 1-0
+Autolik Autonomy: 2-1
+Barsein Bats: 2-0
 Blanaxon Hammers: 1-1
 Kaeshar Kaisers: 3-0
 Naxda Nomads: 1-0
@@ -24,7 +24,7 @@ Red Rainbow Sickles: 3-0
 Serkr Atolls: 0-0
 Shmupland Dictators: 1-2
 Aiyota Pumps: 0-0
-Avura Aviators: 0-1
+Avura Aviators: 1-1
 Boltway Bad Dragons: 0-1
 Dotruga Falno: 0-2
 Ethanthova Ponies: 0-0
@@ -35,7 +35,7 @@ Bongatar Banging Bongos: 1-0
 Czalliso Pythons: 0-0
 Dvimne Spirits: 0-1
 Holy Yektonisa Bishops: 1-1
-Holykol Bears: 1-0
-Lyintaria Lynx: 0-0
+Holykol Bears: 2-0
+Lyintaria Lynx: 0-1
 Pyxanovia Pixies: 1-0
 Transhimalia Disasters: 1-0
