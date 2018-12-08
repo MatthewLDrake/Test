@@ -92,3 +92,17 @@ B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.ResignPlayers.
 B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.Scouting.resources
 B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.TradeForm.resources
 B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.ViewRoster.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release\FormulaBasketball.AwardVoting.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release\FormulaBasketball.DepthChart.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release\FormulaBasketball.DisplayPlayer.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release\FormulaBasketball.FreeAgencyForm.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release\FormulaBasketball.Menu.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release\FormulaBasketball.Negotiation.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release\FormulaBasketball.OfferPromises.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release\FormulaBasketball.PlayerNegotiate.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release\FormulaBasketball.PlayerRatings.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release\FormulaBasketball.PlayerStats.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release\FormulaBasketball.ResignPlayers.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release\FormulaBasketball.Scouting.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release\FormulaBasketball.TradeForm.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release\FormulaBasketball.ViewRoster.resources

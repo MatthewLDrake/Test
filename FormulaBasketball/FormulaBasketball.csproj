@@ -50,6 +50,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="attendance.cs" />
+    <Compile Include="AwardVoting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AwardVoting.Designer.cs">
+      <DependentUpon>AwardVoting.cs</DependentUpon>
+    </Compile>
     <Compile Include="BounceBackGame.cs" />
     <Compile Include="bracket.cs">
       <SubType>UserControl</SubType>
@@ -307,6 +313,9 @@
     <Compile Include="YearSim.Designer.cs">
       <DependentUpon>YearSim.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AwardVoting.resx">
+      <DependentUpon>AwardVoting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="bracket.resx">
       <DependentUpon>bracket.cs</DependentUpon>
     </EmbeddedResource>

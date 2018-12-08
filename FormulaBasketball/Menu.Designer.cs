@@ -36,11 +36,12 @@
             this.viewDLeagueRoster = new System.Windows.Forms.Button();
             this.scoutButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.awardsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // freeAgencyButton
             // 
-            this.freeAgencyButton.Location = new System.Drawing.Point(50, 109);
+            this.freeAgencyButton.Location = new System.Drawing.Point(29, 273);
             this.freeAgencyButton.Name = "freeAgencyButton";
             this.freeAgencyButton.Size = new System.Drawing.Size(128, 23);
             this.freeAgencyButton.TabIndex = 0;
@@ -50,7 +51,7 @@
             // 
             // tradeButton
             // 
-            this.tradeButton.Location = new System.Drawing.Point(292, 109);
+            this.tradeButton.Location = new System.Drawing.Point(163, 227);
             this.tradeButton.Name = "tradeButton";
             this.tradeButton.Size = new System.Drawing.Size(128, 23);
             this.tradeButton.TabIndex = 1;
@@ -60,7 +61,7 @@
             // 
             // resignPlayersButton
             // 
-            this.resignPlayersButton.Location = new System.Drawing.Point(50, 44);
+            this.resignPlayersButton.Location = new System.Drawing.Point(29, 21);
             this.resignPlayersButton.Name = "resignPlayersButton";
             this.resignPlayersButton.Size = new System.Drawing.Size(128, 23);
             this.resignPlayersButton.TabIndex = 2;
@@ -70,17 +71,17 @@
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(292, 249);
+            this.exitButton.Location = new System.Drawing.Point(163, 273);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(128, 23);
             this.exitButton.TabIndex = 3;
-            this.exitButton.Text = "Exit";
+            this.exitButton.Text = "Save";
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // viewRoster
             // 
-            this.viewRoster.Location = new System.Drawing.Point(292, 44);
+            this.viewRoster.Location = new System.Drawing.Point(163, 21);
             this.viewRoster.Name = "viewRoster";
             this.viewRoster.Size = new System.Drawing.Size(128, 23);
             this.viewRoster.TabIndex = 4;
@@ -90,7 +91,7 @@
             // 
             // viewDLeagueRoster
             // 
-            this.viewDLeagueRoster.Location = new System.Drawing.Point(292, 177);
+            this.viewDLeagueRoster.Location = new System.Drawing.Point(163, 50);
             this.viewDLeagueRoster.Name = "viewDLeagueRoster";
             this.viewDLeagueRoster.Size = new System.Drawing.Size(128, 23);
             this.viewDLeagueRoster.TabIndex = 5;
@@ -100,7 +101,7 @@
             // 
             // scoutButton
             // 
-            this.scoutButton.Location = new System.Drawing.Point(50, 249);
+            this.scoutButton.Location = new System.Drawing.Point(29, 50);
             this.scoutButton.Name = "scoutButton";
             this.scoutButton.Size = new System.Drawing.Size(128, 23);
             this.scoutButton.TabIndex = 6;
@@ -110,7 +111,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(50, 177);
+            this.button1.Location = new System.Drawing.Point(29, 227);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(128, 23);
             this.button1.TabIndex = 7;
@@ -118,11 +119,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // awardsButton
+            // 
+            this.awardsButton.Location = new System.Drawing.Point(29, 79);
+            this.awardsButton.Name = "awardsButton";
+            this.awardsButton.Size = new System.Drawing.Size(128, 23);
+            this.awardsButton.TabIndex = 8;
+            this.awardsButton.Text = "Awards Voting";
+            this.awardsButton.UseVisualStyleBackColor = true;
+            this.awardsButton.Click += new System.EventHandler(this.awardsButton_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(504, 315);
+            this.ClientSize = new System.Drawing.Size(339, 308);
+            this.Controls.Add(this.awardsButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.scoutButton);
             this.Controls.Add(this.viewDLeagueRoster);
@@ -147,5 +159,6 @@
         private System.Windows.Forms.Button viewDLeagueRoster;
         private System.Windows.Forms.Button scoutButton;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button awardsButton;
     }
 }

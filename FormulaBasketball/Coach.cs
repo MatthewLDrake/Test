@@ -107,6 +107,18 @@ public class Coach
     {
         this.name = name;
     }
+    private team coachesTeam;
+    public team Team
+    {
+        set
+        {
+            coachesTeam = value;
+        }
+        get
+        {
+            return coachesTeam;
+        }
+    }
     public bool useSuperStar()
     {
         

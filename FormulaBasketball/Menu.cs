@@ -58,7 +58,7 @@ namespace FormulaBasketball
         private void exitButton_Click(object sender, EventArgs e)
         {
             formulaBasketball.SerializeObject(create, "testSave.fbdata");
-            Close();
+            //Close();
         }
 
         private void viewRoster_Click(object sender, EventArgs e)
@@ -91,6 +91,14 @@ namespace FormulaBasketball
             this.Visible = false;
             DepthChart depthChart = new DepthChart(team);
             depthChart.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void awardsButton_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            AwardVoting voting = new AwardVoting(create);
+            voting.ShowDialog();
             this.Visible = true;
         }
     }

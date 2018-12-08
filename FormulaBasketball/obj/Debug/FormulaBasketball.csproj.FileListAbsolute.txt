@@ -132,3 +132,4 @@ C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\F
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\FormulaBasketball.OfferPromises.resources
 B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.DepthChart.resources
 B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.OfferPromises.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\FormulaBasketball.AwardVoting.resources
