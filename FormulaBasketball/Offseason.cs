@@ -7,13 +7,15 @@ public class Offseason
     private List<team> teams;
     private FreeAgents freeAgency;
     private FormulaBasketball.Random r;
+    private createTeams create;
     private List<CollegePlayer> rookies;
-    public Offseason(List<team> teams, FreeAgents freeAgency, List<CollegePlayer> rookies, FormulaBasketball.Random r)
+    public Offseason(List<team> teams, FreeAgents freeAgency, List<CollegePlayer> rookies, FormulaBasketball.Random r, createTeams create)
     {
         this.rookies = rookies;
         this.teams = teams;
         this.freeAgency = freeAgency;
         this.r = r;
+        this.create = create;
         runOffseason();
 
     }
@@ -90,7 +92,7 @@ public class Offseason
     {
         foreach(team team in teams)
         {
-            List<player> releasedPlayers = team.resignPlayers(r);
+            List<player> releasedPlayers = team.resignPlayers(create, r);
             foreach(player player in releasedPlayers)
             {
                 freeAgency.Add(player);

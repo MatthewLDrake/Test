@@ -53,6 +53,13 @@ public class FreeAgents
         }
         list.Insert(i, player);
     }
+    public void AdvanceSeason()
+    {
+        foreach(player p in allPlayers)
+        {
+            p.endSeason();
+        }
+    }
     public List<player> GetPlayersByPos(int pos)
     {
         return playersByPos[pos - 1];

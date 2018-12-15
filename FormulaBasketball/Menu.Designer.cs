@@ -28,36 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.freeAgencyButton = new System.Windows.Forms.Button();
-            this.tradeButton = new System.Windows.Forms.Button();
             this.resignPlayersButton = new System.Windows.Forms.Button();
-            this.exitButton = new System.Windows.Forms.Button();
             this.viewRoster = new System.Windows.Forms.Button();
             this.viewDLeagueRoster = new System.Windows.Forms.Button();
             this.scoutButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.awardsButton = new System.Windows.Forms.Button();
+            this.advanceButtons = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // freeAgencyButton
-            // 
-            this.freeAgencyButton.Location = new System.Drawing.Point(29, 273);
-            this.freeAgencyButton.Name = "freeAgencyButton";
-            this.freeAgencyButton.Size = new System.Drawing.Size(128, 23);
-            this.freeAgencyButton.TabIndex = 0;
-            this.freeAgencyButton.Text = "Free Agency";
-            this.freeAgencyButton.UseVisualStyleBackColor = true;
-            this.freeAgencyButton.Click += new System.EventHandler(this.freeAgencyButton_Click);
-            // 
-            // tradeButton
-            // 
-            this.tradeButton.Location = new System.Drawing.Point(163, 227);
-            this.tradeButton.Name = "tradeButton";
-            this.tradeButton.Size = new System.Drawing.Size(128, 23);
-            this.tradeButton.TabIndex = 1;
-            this.tradeButton.Text = "Trade";
-            this.tradeButton.UseVisualStyleBackColor = true;
-            this.tradeButton.Click += new System.EventHandler(this.tradeButton_Click);
             // 
             // resignPlayersButton
             // 
@@ -68,16 +45,6 @@
             this.resignPlayersButton.Text = "Resign Players";
             this.resignPlayersButton.UseVisualStyleBackColor = true;
             this.resignPlayersButton.Click += new System.EventHandler(this.resignPlayersButton_Click);
-            // 
-            // exitButton
-            // 
-            this.exitButton.Location = new System.Drawing.Point(163, 273);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(128, 23);
-            this.exitButton.TabIndex = 3;
-            this.exitButton.Text = "Save";
-            this.exitButton.UseVisualStyleBackColor = true;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // viewRoster
             // 
@@ -109,16 +76,6 @@
             this.scoutButton.UseVisualStyleBackColor = true;
             this.scoutButton.Click += new System.EventHandler(this.scoutButton_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(29, 227);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Change Depth Chart";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // awardsButton
             // 
             this.awardsButton.Location = new System.Drawing.Point(29, 79);
@@ -129,20 +86,27 @@
             this.awardsButton.UseVisualStyleBackColor = true;
             this.awardsButton.Click += new System.EventHandler(this.awardsButton_Click);
             // 
+            // advanceButtons
+            // 
+            this.advanceButtons.Location = new System.Drawing.Point(163, 79);
+            this.advanceButtons.Name = "advanceButtons";
+            this.advanceButtons.Size = new System.Drawing.Size(128, 23);
+            this.advanceButtons.TabIndex = 9;
+            this.advanceButtons.Text = "Advance";
+            this.advanceButtons.UseVisualStyleBackColor = true;
+            this.advanceButtons.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(339, 308);
+            this.Controls.Add(this.advanceButtons);
             this.Controls.Add(this.awardsButton);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.scoutButton);
             this.Controls.Add(this.viewDLeagueRoster);
             this.Controls.Add(this.viewRoster);
-            this.Controls.Add(this.exitButton);
             this.Controls.Add(this.resignPlayersButton);
-            this.Controls.Add(this.tradeButton);
-            this.Controls.Add(this.freeAgencyButton);
             this.Name = "Menu";
             this.Text = "Menu";
             this.ResumeLayout(false);
@@ -151,14 +115,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button freeAgencyButton;
-        private System.Windows.Forms.Button tradeButton;
         private System.Windows.Forms.Button resignPlayersButton;
-        private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Button viewRoster;
         private System.Windows.Forms.Button viewDLeagueRoster;
         private System.Windows.Forms.Button scoutButton;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button awardsButton;
+        private System.Windows.Forms.Button advanceButtons;
     }
 }

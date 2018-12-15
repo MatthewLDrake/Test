@@ -259,7 +259,26 @@ public class team : IComparable<team>,  IEnumerable<player>
         foreach(player p in cutPlayers)
             affiliate.addPlayer(p);
     }
-
+    public void removePlayer(List<player> players)
+    {
+        foreach(player p in players)
+        {
+            removePlayer(p);
+            p.setTeam(null);
+        }
+    }
+    private double penalty;
+    public double CapPenalty
+    {
+        get
+        {
+            return penalty;
+        }
+        set
+        {
+            penalty = value;
+        }
+    }
     public void CreateRoster(FreeAgents freeAgents)
     {
         ResetPlayersPerPosition();
@@ -415,16 +434,21 @@ public class team : IComparable<team>,  IEnumerable<player>
         if (flag && moreImportantTeam) affiliate.ReorderRoster(freeAgents, true);
 
     }
-    public List<player> resignPlayers(FormulaBasketball.Random r)
+    public List<player> resignPlayers(createTeams create, FormulaBasketball.Random r)
     {
         List<player> players = new List<player>();
-        foreach (player p in activePlayers)
+        for(int i = 0; i < activePlayers.Length; i++)
         {
+            player p = activePlayers[i];
             if (p == null) continue;
             bool onRoster = true;
-            if(p.ContractExpired())
+            if (p.getOverall() < 55) onRoster = false;
+            if (p.ContractExpired() && onRoster)
             {
-                if (p.getGamesPlayed() < 10) onRoster = false;
+                if(i >= 5 && p.getOverall() < 80)
+                {
+                    onRoster = false;
+                }
                 else
                 {
                     double shootingPercentage = 0.0, opponentPercentage = 0.0;
@@ -444,22 +468,28 @@ public class team : IComparable<team>,  IEnumerable<player>
                     if (r.Next(-5, 5) + plus_minus < 0) onRoster = false;
                     else
                     {
-                        onRoster = NegogiateWithPlayer(p, GetRankOnTeam(p));
+                        onRoster = NegogiateWithPlayer(p, GetRankOnTeam(p), create);
                     }
                 }
+                
+
+            }
+            else if (!p.ContractExpired() && !onRoster) 
+            {
+                CapPenalty += p.GetMoneyPerYear() / 2;
             }
             if (!onRoster) players.Add(p);
         }
         return players;
     }
 
-    private bool NegogiateWithPlayer(player p, int rank)
+    private bool NegogiateWithPlayer(player p, int rank, createTeams create)
     {
-        double average = formulaBasketball.create.GetAverageSalary(rank, p.getPosition());
-        double min = formulaBasketball.create.GetMinSalary(rank, p.getPosition());
-        double max = formulaBasketball.create.GetMaxSalary(rank, p.getPosition());
+        double average = create.GetAverageSalary(rank, p.getPosition());
+        double min = create.GetMinSalary(rank, p.getPosition());
+        double max = create.GetMaxSalary(rank, p.getPosition());
 
-        int playerRank = formulaBasketball.create.GetPositionalRank(rank, p.getPosition(), p.getOverall());
+        int playerRank = create.GetPositionalRank(rank, p.getPosition(), p.getOverall());
 
         double salary = 0;
 
@@ -1479,12 +1509,12 @@ public class team : IComparable<team>,  IEnumerable<player>
 
     public double GetPayroll()
     {
-        double payroll = 0.0;
+        double payroll = CapPenalty;
         foreach(player player in activePlayers)
         {
             if (player == null) continue;
             payroll += player.GetMoney();
-        }
+        }        
         return payroll;
     }
     private string colorOne, colorTwo, colorThree, location, city, stadiumName, colorOneName, colorTwoName, colorThreeName;

@@ -34,6 +34,7 @@
             this.Overall = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Potential = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.capHit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Obj = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teamList = new System.Windows.Forms.ComboBox();
             this.upButton = new System.Windows.Forms.Button();
             this.downButton = new System.Windows.Forms.Button();
@@ -43,11 +44,16 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Object = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mainTeamTradeInfo = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.otherTeamTradeInfo = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.confirmButton = new System.Windows.Forms.Button();
+            this.loadButton = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.obje = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.o = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.mainTeamGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.otherTeamGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainTeamTradeInfo)).BeginInit();
@@ -65,7 +71,8 @@
             this.name,
             this.Overall,
             this.Potential,
-            this.capHit});
+            this.capHit,
+            this.Obj});
             this.tableLayoutPanel1.SetColumnSpan(this.mainTeamGrid, 3);
             this.mainTeamGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainTeamGrid.Location = new System.Drawing.Point(3, 3);
@@ -117,6 +124,12 @@
             this.capHit.ReadOnly = true;
             this.capHit.Width = 67;
             // 
+            // Obj
+            // 
+            this.Obj.HeaderText = "Object";
+            this.Obj.Name = "Obj";
+            this.Obj.Visible = false;
+            // 
             // teamList
             // 
             this.teamList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -160,7 +173,8 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
+            this.dataGridViewTextBoxColumn4,
+            this.Object});
             this.tableLayoutPanel1.SetColumnSpan(this.otherTeamGrid, 3);
             this.otherTeamGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.otherTeamGrid.Location = new System.Drawing.Point(384, 3);
@@ -212,6 +226,12 @@
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.Width = 67;
             // 
+            // Object
+            // 
+            this.Object.HeaderText = "Object";
+            this.Object.Name = "Object";
+            this.Object.Visible = false;
+            // 
             // mainTeamTradeInfo
             // 
             this.mainTeamTradeInfo.AllowUserToAddRows = false;
@@ -219,7 +239,8 @@
             this.mainTeamTradeInfo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.mainTeamTradeInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.mainTeamTradeInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn5});
+            this.dataGridViewTextBoxColumn5,
+            this.obje});
             this.tableLayoutPanel1.SetColumnSpan(this.mainTeamTradeInfo, 3);
             this.mainTeamTradeInfo.Location = new System.Drawing.Point(72, 283);
             this.mainTeamTradeInfo.MultiSelect = false;
@@ -228,14 +249,6 @@
             this.mainTeamTradeInfo.Size = new System.Drawing.Size(237, 136);
             this.mainTeamTradeInfo.TabIndex = 6;
             // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn5.FillWeight = 200F;
-            this.dataGridViewTextBoxColumn5.HeaderText = "Player Name";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
             // otherTeamTradeInfo
             // 
             this.otherTeamTradeInfo.AllowUserToAddRows = false;
@@ -243,7 +256,8 @@
             this.otherTeamTradeInfo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.otherTeamTradeInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.otherTeamTradeInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn6});
+            this.dataGridViewTextBoxColumn6,
+            this.o});
             this.tableLayoutPanel1.SetColumnSpan(this.otherTeamTradeInfo, 3);
             this.otherTeamTradeInfo.Location = new System.Drawing.Point(454, 283);
             this.otherTeamTradeInfo.MultiSelect = false;
@@ -251,14 +265,6 @@
             this.otherTeamTradeInfo.RowHeadersVisible = false;
             this.otherTeamTradeInfo.Size = new System.Drawing.Size(237, 136);
             this.otherTeamTradeInfo.TabIndex = 7;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn6.FillWeight = 200F;
-            this.dataGridViewTextBoxColumn6.HeaderText = "Player Name";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // tableLayoutPanel1
             // 
@@ -276,6 +282,8 @@
             this.tableLayoutPanel1.Controls.Add(this.upButton, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.downButton, 5, 1);
             this.tableLayoutPanel1.Controls.Add(this.teamList, 4, 1);
+            this.tableLayoutPanel1.Controls.Add(this.confirmButton, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.loadButton, 2, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -285,6 +293,56 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33222F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(764, 422);
             this.tableLayoutPanel1.TabIndex = 8;
+            // 
+            // confirmButton
+            // 
+            this.confirmButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.confirmButton.Location = new System.Drawing.Point(26, 233);
+            this.confirmButton.Name = "confirmButton";
+            this.confirmButton.Size = new System.Drawing.Size(75, 23);
+            this.confirmButton.TabIndex = 8;
+            this.confirmButton.Text = "Confirm";
+            this.confirmButton.UseVisualStyleBackColor = true;
+            this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
+            // 
+            // loadButton
+            // 
+            this.loadButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.loadButton.Location = new System.Drawing.Point(280, 234);
+            this.loadButton.Name = "loadButton";
+            this.loadButton.Size = new System.Drawing.Size(75, 22);
+            this.loadButton.TabIndex = 9;
+            this.loadButton.Text = "Load Trade";
+            this.loadButton.UseVisualStyleBackColor = true;
+            this.loadButton.Click += new System.EventHandler(this.loadButton_Click);
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn5.FillWeight = 200F;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Player Name";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // obje
+            // 
+            this.obje.HeaderText = "Object";
+            this.obje.Name = "obje";
+            this.obje.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn6.FillWeight = 200F;
+            this.dataGridViewTextBoxColumn6.HeaderText = "Player Name";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // o
+            // 
+            this.o.HeaderText = "Object";
+            this.o.Name = "o";
+            this.o.Visible = false;
             // 
             // TradeForm
             // 
@@ -311,19 +369,25 @@
         private System.Windows.Forms.Button downButton;
         private System.Windows.Forms.DataGridView otherTeamGrid;
         private System.Windows.Forms.DataGridView mainTeamTradeInfo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridView otherTeamTradeInfo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Trade;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Overall;
         private System.Windows.Forms.DataGridViewTextBoxColumn Potential;
         private System.Windows.Forms.DataGridViewTextBoxColumn capHit;
+        private System.Windows.Forms.Button confirmButton;
+        private System.Windows.Forms.Button loadButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Obj;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Object;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn obje;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn o;
     }
 }

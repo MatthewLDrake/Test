@@ -106,6 +106,12 @@
     <Compile Include="Negotiation.Designer.cs">
       <DependentUpon>Negotiation.cs</DependentUpon>
     </Compile>
+    <Compile Include="OfferedTrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OfferedTrade.Designer.cs">
+      <DependentUpon>OfferedTrade.cs</DependentUpon>
+    </Compile>
     <Compile Include="OfferPromises.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -22,22 +22,24 @@ namespace FormulaBasketball
         private int playersUnderContract;
         private double capSpace;
         private double bonusCash;
+        private List<player> rejectedPlayers;
         public ResignPlayers(createTeams create, team team, FormulaBasketball.Random r)
         {
             InitializeComponent();
+            rejectedPlayers = new List<player>();
             this.r = r;
             this.team = team;
             this.create = create;
             promises = new List<Promises>();
             playersUnderContract = 0;
-            capSpace = 100;
+            capSpace = 100 - team.CapPenalty;
             bonusCash = (team.getFianances() / 1000000.0);
             foreach (player player in team)
             {
-                player.endSeason();
                 if (player.ContractExpired())
                 {
                     dataGridView1.Rows.Add(player.getName(), player.getPosition(), player.getOverall(), player.getDevelopment(), player.GetMoneyPerYear(), player.GetPlayerID());
+                    rejectedPlayers.Add(player);
                 }
                 else
                 {
@@ -75,6 +77,7 @@ namespace FormulaBasketball
                         playersUnderContract++;
                         capSpace -= p.GetMoneyPerYear();
                         bonusCash -= p.GetBonus();
+                        rejectedPlayers.Remove(p);
                         rosterSize.Text = "Players on team " + playersUnderContract + "/15\nPlayers on affiliate " + team.GetAffiliate().Count().ToString() + "/15";
                         MoneyLabel.Text = "Penalty Free Cap Space " + String.Format("{0:0.00}", capSpace) + "M\nAvailable Bonus Money " + String.Format("{0:0.00}", bonusCash) + "M";
                     }
@@ -95,6 +98,7 @@ namespace FormulaBasketball
                             playersUnderContract++;
                             capSpace -= p.GetMoneyPerYear();
                             bonusCash -= p.GetBonus();
+                            rejectedPlayers.Remove(p);
                             rosterSize.Text = "Players on team " + playersUnderContract + "/15\nPlayers on affiliate " + team.GetAffiliate().Count().ToString() + "/15";
                             MoneyLabel.Text = "Penalty Free Cap Space " + String.Format("{0:0.00}", capSpace) + "M\nAvailable Bonus Money " + String.Format("{0:0.00}", bonusCash) + "M";
                         }
@@ -157,18 +161,48 @@ namespace FormulaBasketball
             }
             promises = new List<Promises>();
         }
-
+        public List<player> GetRejectedPlayers()
+        {
+            return rejectedPlayers;
+        }
         private void button2_Click(object sender, EventArgs e)
         {
-            DialogResult d = MessageBox.Show("Are you sure you want to finish negotiations with this player?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(tabControl1.SelectedIndex == 1)
+            {
+                DialogResult d = MessageBox.Show("Are you sure you want to cut this player?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            if (d == DialogResult.Yes)
-            {
-                dataGridView1.Rows.Remove(dataGridView1.CurrentRow);
+                if (d == DialogResult.Yes)
+                {
+                    
+                    int playerID = (int)dataGridView2.CurrentRow.Cells[5].Value;
+                    player p = team.GetPlayerByID(playerID);
+                    rejectedPlayers.Add(p);
+                    team.CapPenalty += p.GetMoneyPerYear() / 2;
+                    capSpace += p.GetMoneyPerYear()/2;
+
+                    playersUnderContract--;
+
+                    rosterSize.Text = "Players on team " + playersUnderContract + "/15\nPlayers on affiliate " + team.GetAffiliate().Count().ToString() + "/15";
+                    MoneyLabel.Text = "Penalty Free Cap Space " + String.Format("{0:0.00}", capSpace) + "M\nAvailable Bonus Money " + String.Format("{0:0.00}", bonusCash) + "M";
+                    dataGridView2.Rows.Remove(dataGridView2.CurrentRow);
+                }
+                else if (d == DialogResult.No)
+                {
+                    return;
+                }
             }
-            else if (d == DialogResult.No)
+            else
             {
-                return;
+                DialogResult d = MessageBox.Show("Are you sure you want to finish negotiations with this player?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (d == DialogResult.Yes)
+                {
+                    dataGridView1.Rows.Remove(dataGridView1.CurrentRow);
+                }
+                else if (d == DialogResult.No)
+                {
+                    return;
+                }
             }
         }
 
@@ -176,11 +210,11 @@ namespace FormulaBasketball
         {
             if(tabControl1.SelectedIndex == 1)
             {
-                button2.Enabled = false;
+                button2.Text = "Cut Player";
             }
             else
             {
-                button2.Enabled = true;
+                button2.Text = "Not Interested";
             }
         }
 

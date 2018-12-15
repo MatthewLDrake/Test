@@ -148,7 +148,7 @@ public class formulaBasketball
                     VoteROTY();
                     bracket.Visible = false;
                     create.SetupSalaryInfo();
-                    Offseason off = new Offseason(create.getTeams(), create.getFreeAgents(), create.GetCollege().GetRookies(), r);
+                    Offseason off = new Offseason(create.getTeams(), create.getFreeAgents(), create.GetCollege().GetRookies(), r, create);
                     new SetupNewSeason(create, r, create.getFreeAgents());
                 }
                 break;
@@ -157,9 +157,9 @@ public class formulaBasketball
             else if (result.Equals("doPlayoffs"))
             {
                 mockPlayoffs(true);
-                create.PlayCollegeSeason();
-                Offseason off = new Offseason(create.getTeams(), create.getFreeAgents(), create.GetCollege().GetRookies() ,r);
-                new SetupNewSeason(create, r, create.getFreeAgents());
+                /*create.PlayCollegeSeason();
+                Offseason off = new Offseason(create, create.getTeams(), create.getFreeAgents(), create.GetCollege().GetRookies() ,r);
+                new SetupNewSeason(create, r, create.getFreeAgents());*/
             }
             else if (result.Equals("restartSeason"))
             {
