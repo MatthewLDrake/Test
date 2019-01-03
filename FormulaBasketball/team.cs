@@ -107,10 +107,29 @@ public class team : IComparable<team>,  IEnumerable<player>
         lastTen = new List<int>();
         streak = 0;
     }
-    public void AddDraftPick(DraftPick pick)
+    public void AddDraftPick(DraftPick pick, bool currSeason = true)
     {
-        if (picks == null) picks = new List<DraftPick>();
-        picks.Add(pick);
+        if (currSeason)
+        {
+            if (picks == null) picks = new List<DraftPick>();
+            picks.Add(pick);
+        }
+        else
+        {
+            if (nextSeasonPicks == null) nextSeasonPicks = new List<DraftPick>();
+            nextSeasonPicks.Add(pick);
+        }
+    }
+    public void RemoveDraftPick(DraftPick pick, bool currSeason = true)
+    {
+        if(currSeason)
+        {
+            picks.Remove(pick);
+        }
+        else
+        {
+            nextSeasonPicks.Remove(pick);
+        }
     }
     private void CheckSeasonRecords(int pointsFor, int pointsAgainst, int gameNum, string teamAgainst)
     {
@@ -1732,7 +1751,7 @@ public class Subs
 [Serializable]
 public class DraftPick
 {
-    private int round;
+    private int round, season;
     private team from, owner;
     private player selectedPlayer;
     public DraftPick(int round, team pickFrom, team owner)
@@ -1764,6 +1783,14 @@ public class DraftPick
     public player GetPlayerSelected()
     {
         return selectedPlayer;
+    }
+    public void SetSeason(int season)
+    {
+        this.season = season;
+    }
+    public int GetSeason()
+    {
+        return season;
     }
     public void SelectPlayer(player selectedPlayer)
     {

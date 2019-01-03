@@ -18,10 +18,13 @@ namespace FormulaBasketball
         private FreeAgents freeAgents;
         private List<player>[] players;
         private team userTeam;
+        private List<FreeAgentOffers> freeAgentOffers;
         public FreeAgencyForm(FreeAgents free, team team, createTeams create)
         {
             InitializeComponent();
-            
+
+            freeAgentOffers = new List<FreeAgentOffers>();
+
             freeAgents = free;
             userTeam = team;
 
@@ -73,19 +76,64 @@ namespace FormulaBasketball
                 }
                 else if(e.ColumnIndex == 8)
                 {
-                    //Console.WriteLine("Negotiate hit");
-                    DialogResult result;
                     if (p.HasOfferFromTeam(userTeam))
-                        result = new PlayerNegotiate(p, userTeam, p.GetOfferFromTeam(userTeam)).ShowDialog();
+                        new PlayerNegotiate(p, userTeam, p.GetOfferFromTeam(userTeam)).ShowDialog();
                     else
-                        result = new PlayerNegotiate(p, userTeam).ShowDialog();
-                    
+                         new PlayerNegotiate(p, userTeam).ShowDialog();
+
+
+                    if(p.HasOfferFromTeam(userTeam))
+                    {
+                        bool flag = true;
+                        foreach(FreeAgentOffers offer in freeAgentOffers)
+                        {
+                            if(offer.playerID == p.GetPlayerID())
+                            {
+                                offer.offer = p.GetOfferFromTeam(userTeam);
+                                flag = false;
+                                break;
+                            }
+                        }
+                        if(flag)
+                        {
+                            freeAgentOffers.Add(new FreeAgentOffers(p.GetPlayerID(), p.GetOfferFromTeam(userTeam), userTeam.getTeamNum()));
+                        }
+                    }
+                    else
+                    {
+                        FreeAgentOffers temp = null;
+                        foreach (FreeAgentOffers offer in freeAgentOffers)
+                        {
+                            if (offer.playerID == p.GetPlayerID())
+                            {
+                                temp = offer;
+                            }
+                        }
+                        if (temp != null) freeAgentOffers.Remove(temp);
+                    }
+
                     senderGrid[7, e.RowIndex].Value = p.GetOffers();
                     
                 }
             }
         }
-        
+        public List<FreeAgentOffers> GetOffers()
+        {
+            return freeAgentOffers;
+        }
 
+    }
+    [Serializable]
+    public class FreeAgentOffers
+    {
+        public int playerID;
+        public Contract offer;
+        public int teamID;
+        public FreeAgentOffers(int playerID, Contract offer, int teamID)
+        {
+            this.playerID = playerID;
+            this.offer = offer;
+            this.teamID = teamID;
+        }
     }
 }

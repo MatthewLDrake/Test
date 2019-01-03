@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -401,6 +404,67 @@ namespace FormulaBasketball
             UpdateGrid(top10CoachingGrid, coaches);
             top10CoachingGrid.Rows[0].Selected = false;
             top10CoachingGrid.Rows[rowOneIndex + 1].Selected = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            List<int> topTenMVP = new List<int>();
+            for(int i = 0; i < top10MVPGrid.Rows.Count; i++)
+            {
+                player player = top10MVPGrid.Rows[i].Cells[2].Value as player;
+                topTenMVP.Add(player.GetPlayerID());
+                if (i == 9) break;
+            }
+
+            List<int> topTenROTY = new List<int>();
+            for (int i = 0; i < top10ROTYGrid.Rows.Count; i++)
+            {
+                player player = top10ROTYGrid.Rows[i].Cells[2].Value as player;
+                topTenROTY.Add(player.GetPlayerID());
+                if (i == 9) break;
+            }
+
+            List<Coach> topTenCoaches = new List<Coach>();
+            for(int i = 0; i < top10CoachingGrid.Rows.Count; i++)
+            {
+                Coach coach = top10CoachingGrid.Rows[i].Cells[2].Value as Coach;
+                topTenCoaches.Add(coach);
+                if (i == 9) break;
+            }
+
+
+            FileStream fs = new FileStream("awardVotes.fbvotes", FileMode.Create);
+
+            // Construct a BinaryFormatter and use it to serialize the data to the stream.
+            BinaryFormatter formatter = new BinaryFormatter();
+            try
+            {
+                formatter.Serialize(fs, new AwardVotes(topTenMVP, topTenROTY, topTenCoaches));
+            }
+            catch (SerializationException ex)
+            {
+                Console.WriteLine("Failed to serialize. Reason: " + ex.Message);
+                throw;
+            }
+            finally
+            {
+                fs.Close();
+            }
+            Close();
+        }
+        
+    }
+    [Serializable]
+    public class AwardVotes
+    {
+        public List<int> mvpVotes, rotyVotes;
+        public List<Coach> coaches;
+        public AwardVotes(List<int> mvpVotes, List<int> rotyVotes, List<Coach> coaches)
+        {
+            this.mvpVotes = mvpVotes;
+            this.rotyVotes = rotyVotes;
+            this.coaches = coaches;
+
         }
     }
 }

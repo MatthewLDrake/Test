@@ -370,6 +370,9 @@
     <EmbeddedResource Include="newTeam.resx">
       <DependentUpon>newTeam.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OfferedTrade.resx">
+      <DependentUpon>OfferedTrade.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OfferPromises.resx">
       <DependentUpon>OfferPromises.cs</DependentUpon>
     </EmbeddedResource>

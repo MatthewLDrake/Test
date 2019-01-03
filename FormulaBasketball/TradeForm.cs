@@ -35,6 +35,25 @@ namespace FormulaBasketball
             teamList.SelectedIndex = 0;
             FillGridWithTeam(mainTeamGrid, mainTeam);
         }
+        public TradeForm(createTeams create, Trade prevTrade)
+        {
+            InitializeComponent();
+            this.create = create;
+            this.team = create.getTeam(prevTrade.teamOneID);
+            teamNum = prevTrade.teamOneID;
+
+            for (int i = 0; i < create.size(); i++)
+            {
+                if (i == teamNum) continue;
+                teamList.Items.Add(create.getTeam(i).ToString());
+            }
+
+            int index = prevTrade.teamTwoID;
+            if (index > teamNum) index--;
+            teamList.SelectedIndex = index;
+            FillGridWithTeam(mainTeamGrid, team);
+
+        }
 
         private void teamList_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -154,7 +173,7 @@ namespace FormulaBasketball
 
             string fileName = firstTeam + "_" + otherTeam + ".fbtrade";
 
-            Trade trade = new Trade(teamOneTradeItems, teamTwoTradeItems, firstTeam, otherTeam);
+            Trade trade = new Trade(teamOneTradeItems, teamTwoTradeItems, firstTeam, otherTeam, teamNum, index);
 
             SerializeObject(trade, fileName);
 
@@ -174,7 +193,7 @@ namespace FormulaBasketball
                 {
                     if (trade.CanView(team.ToString()))
                     {
-                        OfferedTrade offered = new OfferedTrade(trade);
+                        OfferedTrade offered = new OfferedTrade(trade, create, teamNum);
                         offered.ShowDialog();
 
                     }
@@ -191,7 +210,7 @@ namespace FormulaBasketball
         /// </summary>
         /// <param name="serializableObject"></param>
         /// <param name="fileName"></param>
-        private static void SerializeObject(Trade serializableObject, string fileName)
+        public static void SerializeObject(Trade serializableObject, string fileName)
         {
             FileStream fs = new FileStream(fileName, FileMode.Create);
 
@@ -217,7 +236,7 @@ namespace FormulaBasketball
         /// </summary>
         /// <param name="fileName">The filename</param>
         /// <returns></returns>
-        private static Trade DeSerializeObject(string fileName)
+        public static Trade DeSerializeObject(string fileName)
         {
             Trade temp = null;
 
@@ -249,17 +268,36 @@ namespace FormulaBasketball
 
         private List<object> teamOneTradeItems, teamTwoTradeItems;
         private String teamOneName, teamTwoName;
-        public Trade(List<object> teamOne, List<object> teamTwo, String teamOneName, String teamTwoName)
+        public int teamOneID, teamTwoID;
+        public Trade(List<object> teamOne, List<object> teamTwo, String teamOneName, String teamTwoName, int teamOneID, int teamTwoID)
         {
             teamOneTradeItems = teamOne;
             teamTwoTradeItems = teamTwo;
             this.teamOneName = teamOneName;
             this.teamTwoName = teamTwoName;
+            this.teamOneID = teamOneID;
+            this.teamTwoID = teamTwoID;
         }
         public bool CanView(String team)
         {
             if (TradeForm.master) return TradeForm.master;
             return team.Equals(teamTwoName);
+        }
+        public List<object> GetTeamOneTradeItems()
+        {
+            return teamOneTradeItems;
+        }
+        public List<object> GetTeamTwoTradeItems()
+        {
+            return teamTwoTradeItems;
+        }
+        public String GetTeamOneName()
+        {
+            return teamOneName;
+        }
+        public String GetTeamTwoName()
+        {
+            return teamTwoName;
         }
     }
 }
