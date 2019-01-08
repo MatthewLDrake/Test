@@ -69,7 +69,7 @@ namespace FormulaBasketball
 
         private void negotiateButton_Click(object sender, EventArgs e)
         {
-            TradeForm trade = new TradeForm(create, trade);
+            TradeForm trade = new TradeForm(create, this.trade);
             result = 2;
         }
 

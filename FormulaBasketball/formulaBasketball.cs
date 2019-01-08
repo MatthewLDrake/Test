@@ -792,8 +792,7 @@ public class formulaBasketball
     }
     public static void playGames(int firstGame, int secondGame)
     {
-        Schedule schedule = create.GetSchedule();
-        schedule.playGames(firstGame, secondGame, r);
+        create.playGames(firstGame, secondGame, r);
 
         if (gameWriter != null) gameWriter.writeLines();
 
@@ -1187,3 +1186,4 @@ public class formulaBasketball
     private static player playerRebounds, playersAssists, playersPoints;
 
 }
+    

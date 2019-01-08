@@ -368,6 +368,10 @@ public class player : IComparable<player>
         
         return sign;
     }
+    public string SavePlayer()
+    {
+        return "";
+    }
     public int GetOffers()
     {
         if (contractOffers == null)

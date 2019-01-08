@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using FormulaBasketball;
+using System.IO;
 [Serializable]
 public class createTeams
 {
     private FormulaBasketball.Random r;
     private List<team> teams, dLeagueTeams;
     private List<player> freeAgency;
-    private Schedule schedule;
     private FreeAgents freeAgents;
     private College college;
     private double[,] averagePositionSalaries, minPositionSalaries, maxPositionsSalaries;
     private double[,] averageOverall, minOverall, maxOverall, allOveralls;
+    private List<int> gameNums;
     public createTeams(List<team> teams, FreeAgents freeAgency, FormulaBasketball.Random r)
     {
         this.teams = teams;
@@ -29,8 +30,23 @@ public class createTeams
         maxOverall = new double[3,5];
         allOveralls = new double[15, 32];
 
-        schedule = new Schedule(r);
+    }
+    public void SaveCreate()
+    {
+        String fileName = "saveFile.csv";
+        String contents = "";
 
+        foreach(team team in teams)
+        {
+            contents += team.SaveTeam();
+        }
+        contents += "\n";
+        foreach(player p in freeAgents.GetAllPlayers())
+        {
+            contents += p.SavePlayer();
+        }
+
+        File.WriteAllText(fileName, contents);
     }
     public void Verify()
     {
@@ -46,12 +62,31 @@ public class createTeams
     }
     public void CreateNewSchedule()
     {
-        schedule = new Schedule(r);
+        gameNums = new List<int>();
+        for(int i = 0; i < 84; i++)
+        {
+            gameNums.Add(i);
+        }
     }
-    public Schedule GetSchedule()
+    public void playGames(int firstGame, int lastGame, FormulaBasketball.Random r)
     {
-        if (schedule == null) CreateNewSchedule();
-        return schedule;
+        for(int i = firstGame - 1; i < lastGame; i++)
+        {
+            if(i % 28 == 0)
+            {
+                foreach(team team in formulaBasketball.create.getTeams())
+                {
+                    foreach(player p in team)
+                    {
+                        p.Develop(r);
+                    }
+                    team.CheckInjuries(formulaBasketball.create.getFreeAgents());
+                }
+            }
+
+            Schedule.GetInstance(r).playGames(gameNums[i]);
+            formulaBasketball.updateStandings();
+        }
     }
     public createTeams(FormulaBasketball.Random r)
     {

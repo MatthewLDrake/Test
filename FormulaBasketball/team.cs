@@ -1435,6 +1435,12 @@ public class team : IComparable<team>,  IEnumerable<player>
 
         return new changeAbleModifier(offense, defense);
     }
+    public string SaveTeam(bool affiliate = false)
+    {
+        string content = "";
+        if (affiliate) return content;
+        else return content + this.affiliate.SaveTeam(true);
+    }
     public void doExpenses()
     {
         totalIncome[3] += currentSponsers + expenses.getWeeklySponser();

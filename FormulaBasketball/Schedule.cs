@@ -4,7 +4,13 @@ using System.Collections.Generic;
 public class Schedule
 {
     List<Action> list;
-    public Schedule(FormulaBasketball.Random r)
+    private static Schedule instance;
+    public static Schedule GetInstance(FormulaBasketball.Random r)
+    {
+        if (instance == null) instance = new Schedule(r);
+        return instance;
+    }
+    private Schedule(FormulaBasketball.Random r)
     {
         list = new List<Action>();
         list.Add(() => Game1());        
@@ -91,11 +97,9 @@ public class Schedule
         list.Add(() => Game82());
         list.Add(() => Game83());
         list.Add(() => Game84());
-
-        list.Shuffle(r);
         
     }
-    public void playGames(int firstGame, int lastGame, FormulaBasketball.Random r)
+    /*public void playGames(int firstGame, int lastGame, FormulaBasketball.Random r)
     {
         for(int i = firstGame - 1; i < lastGame; i++)
         {
@@ -114,6 +118,10 @@ public class Schedule
             list[i].Invoke();
             formulaBasketball.updateStandings();
         }
+    }*/
+    public void playGames(int gameNum)
+    {
+        list[gameNum].Invoke();
     }
     private void Game1()
     {
