@@ -22,6 +22,19 @@ public class player : IComparable<player>
     public double[] ratings;
     protected Contract contract;
     protected PlayerRecords playerRecords;
+    public string SavePlayer()
+    {
+        String content = "<player>" + name + "," + playerAge + "," + country.ToString() + contract.ToString() + "," + position;
+        for (int i = 0; i < ratings.Length; i++ )
+        {
+            content += "," + ratings[i];
+        }
+        for (int i = 0; i < careerStats.Length; i++ )
+        {
+            content += "," + careerStats[i];
+        }
+        return content;
+    }
     public player(int pos, double[] ratings, int age, String name, int peakStart, int peakEnd, int development, Country country, int playerID)
     {
         careerEnd = false;
@@ -368,10 +381,7 @@ public class player : IComparable<player>
         
         return sign;
     }
-    public string SavePlayer()
-    {
-        return "";
-    }
+    
     public int GetOffers()
     {
         if (contractOffers == null)

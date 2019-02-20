@@ -36,7 +36,46 @@ public class team : IComparable<team>,  IEnumerable<player>
     private List<DraftPick> picks, nextSeasonPicks;
     private DisabledLists sevenGame, fifteenGame, season;
     protected player[] activePlayers;
-    public team(String teamName, FormulaBasketball.Random r)
+    private double penalty;
+    private team affiliate;
+    private bool moreImportantTeam;
+    private bool firstFree = true;
+    private int draftPlace;
+    private int Division;
+    private player[] presets = null;
+    private string colorOne, colorTwo, colorThree, location, city, stadiumName, colorOneName, colorTwoName, colorThreeName;
+    private int playoffAppearances;
+    private int leagueChampionships, conferenceChampionships, divisionChampionships;
+    public string SaveTeam(bool affiliate = false)
+    {
+        string content = "<team>" + teamName + "," + allTime.GetWins() + "," + allTime.GetLosses() + "," + allTimePlayoffs.GetWins() + "," + allTimePlayoffs.GetLosses() +"\n";
+        content += allTimeVsTeam[0].GetWins() + "," + allTimeVsTeam[0].GetLosses();
+        for(int i = 1; i < allTimeVsTeam.Length; i++)
+        {
+            content += "," + allTimeVsTeam[i].GetWins() + "," + allTimeVsTeam[i].GetLosses(); 
+        }
+        content += "\n" + penalty + "," + draftPlace + "," + playoffAppearances + "," + leagueChampionships + "," + conferenceChampionships + "," + divisionChampionships + "," + colorOne + "," +  colorTwo + "," +  colorThree + "," +  location + "," +  city + "," +  stadiumName + "," +  colorOneName + "," +  colorTwoName + "," +  colorThreeName + "\n";
+        content += coach.SaveTeam();
+        content += trainer.SaveTeam();
+        foreach (player p in activePlayers)
+            if(p != null)
+                content += p.SavePlayer();
+        if (affiliate) return content;
+        else return content + this.affiliate.SaveTeam(true);
+    }
+    public team(String info)
+    {
+        String[] lines = info.Split('\n');
+        String[] arr = lines[0].Split(',');
+        teamName = arr[0];
+        allTime = new Record(arr[1], arr[2]);
+        allTimePlayoffs = new Record(arr[3], arr[4]);
+
+        arr = lines[1].Split(',');
+
+
+    }
+    /*public team(String teamName, FormulaBasketball.Random r)
     {
         picks = new List<DraftPick>();
         nextSeasonPicks = new List<DraftPick>();
@@ -106,7 +145,7 @@ public class team : IComparable<team>,  IEnumerable<player>
         fianance = 50000000;
         lastTen = new List<int>();
         streak = 0;
-    }
+    }*/
     public void AddDraftPick(DraftPick pick, bool currSeason = true)
     {
         if (currSeason)
@@ -286,7 +325,7 @@ public class team : IComparable<team>,  IEnumerable<player>
             p.setTeam(null);
         }
     }
-    private double penalty;
+    
     public double CapPenalty
     {
         get
@@ -351,8 +390,7 @@ public class team : IComparable<team>,  IEnumerable<player>
         return retVal;
 
     }
-    private team affiliate;
-    private bool moreImportantTeam;
+    
     public void SetAffiliate(team team, bool setOther = true)
     {
         moreImportantTeam = setOther;
@@ -705,7 +743,7 @@ public class team : IComparable<team>,  IEnumerable<player>
         }
         retiredList.Add(player);
     }
-    private bool firstFree= true;
+    
     public void SetFree()
     {
         firstFree = true;
@@ -1023,7 +1061,7 @@ public class team : IComparable<team>,  IEnumerable<player>
         newPlayer.setTeam(this);
         addPos(pos);
     }
-    private int draftPlace;
+    
     public void SetDraftPlace(int place)
     {
         draftPlace = place;
@@ -1397,7 +1435,7 @@ public class team : IComparable<team>,  IEnumerable<player>
         }
 
     }
-    private int Division;
+    
     public void setDivison(int div)
     {
         Division = div;
@@ -1407,7 +1445,7 @@ public class team : IComparable<team>,  IEnumerable<player>
         return Division;
 
     }
-    private player[] presets = null;
+    
     public void setPresets(player[] presets)
     {
         this.presets = presets;
@@ -1435,12 +1473,7 @@ public class team : IComparable<team>,  IEnumerable<player>
 
         return new changeAbleModifier(offense, defense);
     }
-    public string SaveTeam(bool affiliate = false)
-    {
-        string content = "";
-        if (affiliate) return content;
-        else return content + this.affiliate.SaveTeam(true);
-    }
+    
     public void doExpenses()
     {
         totalIncome[3] += currentSponsers + expenses.getWeeklySponser();
@@ -1542,9 +1575,7 @@ public class team : IComparable<team>,  IEnumerable<player>
         }        
         return payroll;
     }
-    private string colorOne, colorTwo, colorThree, location, city, stadiumName, colorOneName, colorTwoName, colorThreeName;
-    private int playoffAppearances;
-    private int leagueChampionships, conferenceChampionships, divisionChampionships;
+    
 
     public void SetTeamInfo(int franchiseWins, int franchiseLosses, int playoffAppearances, int playoffWins, int playoffLosses,
         int divChampionships, int conferenceChampionships, int championships, string colorOne, string colorTwo, string colorThree,

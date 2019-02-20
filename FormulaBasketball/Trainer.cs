@@ -102,4 +102,11 @@ public class Trainer
         this.staminaModifier = staminaModifier;
     }
 
+
+    public string SaveTeam()
+    {
+        string content = "<trainer>";
+        content += name + "," + injuryPrevention + "," + injuryDuration + "," + staminaModifier;
+        return content + "\n";
+    }
 }

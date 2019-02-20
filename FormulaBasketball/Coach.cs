@@ -27,6 +27,12 @@ public class Coach
         this.setPreferredShotType(preferredShotType);
         this.setSuperStarInvolvment(superStarInvolvment);
     }
+    public string SaveTeam()
+    {
+        string content = "<coach>";
+        content += name + "," + staminaSubIn + "," + staminaSubOut + "," + offenseModifier + "," + offenseModifierProbability + "," + defenseModifier + "," + defenseModifierProbability;
+        return content + "\n";
+    }
     public int getStaminaSubOut()
     {
         return staminaSubOut;

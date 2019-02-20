@@ -11,6 +11,12 @@ public class Record
         this.wins = wins;
         this.losses = losses;
     }
+
+    public Record(string p1, string p2)
+    {
+        wins = int.Parse(p1);
+        losses = int.Parse(p2);
+    }
     public void AddWins(int newWins = 1)
     {
         wins += newWins;
