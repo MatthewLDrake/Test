@@ -155,7 +155,7 @@ namespace FormulaBasketball
                     return;
                 }
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 MessageBox.Show("Please ensure all ratings are only numbers.");
                 return;

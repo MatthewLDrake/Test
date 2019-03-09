@@ -34,7 +34,7 @@ namespace FormulaBasketball
                 result = client.DownloadString(url);
                 return result;
             }
-            catch (Exception ex) { return "127.0.0.1"; }
+            catch (Exception) { return "127.0.0.1"; }
         }
 
         private void button1_Click(object sender, EventArgs e)

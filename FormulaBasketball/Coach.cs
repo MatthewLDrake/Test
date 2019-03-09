@@ -27,6 +27,23 @@ public class Coach
         this.setPreferredShotType(preferredShotType);
         this.setSuperStarInvolvment(superStarInvolvment);
     }
+    public Coach(String info, FormulaBasketball.Random r)
+    {
+        this.r = r;
+        String[] arr = info.Split(',');
+        name = arr[0].Replace("<coach>", "");
+        staminaSubIn = int.Parse(arr[1]);
+        staminaSubOut = int.Parse(arr[2]);
+        offenseModifier = Double.Parse(arr[3]);
+        offenseModifierProbability = int.Parse(arr[4]);
+        defenseModifier = Double.Parse(arr[5]);
+        defenseModifierProbability = int.Parse(arr[6]);
+
+        // TODO: Save this info
+        preferredTempo = new Tempo(0);
+        preferredShotType = coachShotType.BALANCED;
+        superStarInvolvment = ssInvolvment.MEDIUM;
+    }
     public string SaveTeam()
     {
         string content = "<coach>";

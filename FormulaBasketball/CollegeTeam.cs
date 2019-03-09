@@ -5,7 +5,6 @@ using System.Collections.Generic;
 public class CollegeTeam : team
 {
     private Country country;
-    private FormulaBasketball.Random r;
     private CollegeTeamType type;
     private Record currentSeason;
     private List<CollegePlayer> collegePlayers, redshirtPlayers;

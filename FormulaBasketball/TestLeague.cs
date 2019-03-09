@@ -17,7 +17,7 @@ public class TestLeague
 
         for (int i = 0; i < teams.Length; i++)
         {
-            teams[i] = new team("Team " + i, r);
+            teams[i] = new team("Team " + i, "TM" + i, r);
             
         }
         for(int i = 0; i < 15; i++)

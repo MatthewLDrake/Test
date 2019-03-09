@@ -14,6 +14,15 @@ public class Trainer
         this.setInjuryPrevention(injuryPrevention);
         this.setStaminaModifier(staminaModifier);
     }
+    public Trainer(string info, FormulaBasketball.Random r)
+    {
+        this.r = r;
+        String[] arr = info.Split(',');
+        name = arr[0].Replace("<trainer>", "");
+        injuryPrevention = int.Parse(arr[1]);
+        injuryDuration = int.Parse(arr[2]);
+        staminaModifier = Double.Parse(arr[3]);
+    }
     public String getName()
     {
         return name;
@@ -100,9 +109,7 @@ public class Trainer
     public void setStaminaModifier(double staminaModifier)
     {
         this.staminaModifier = staminaModifier;
-    }
-
-
+    }    
     public string SaveTeam()
     {
         string content = "<trainer>";

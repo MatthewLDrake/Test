@@ -35,6 +35,26 @@ public class player : IComparable<player>
         }
         return content;
     }
+    public player(String info)
+    {
+        String[] arr = info.Split(',');
+        name = arr[0].Replace("<player>", "");
+        playerAge = int.Parse(arr[1]);
+        country = StringUtils.GetCountryFromString(arr[2]);
+        contract = new Contract(arr[3]);
+        position = int.Parse(arr[4]);
+        int location = 5;
+        for (int i = 0; i < ratings.Length; i++)
+        {
+            ratings[i] += double.Parse(arr[location]);
+            location++;
+        }
+        for (int i = 0; i < careerStats.Length; i++)
+        {
+           careerStats[i] += int.Parse(arr[location]);
+           location++;
+        }
+    }
     public player(int pos, double[] ratings, int age, String name, int peakStart, int peakEnd, int development, Country country, int playerID)
     {
         careerEnd = false;

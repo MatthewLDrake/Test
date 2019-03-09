@@ -63,17 +63,53 @@ public class team : IComparable<team>,  IEnumerable<player>
         if (affiliate) return content;
         else return content + this.affiliate.SaveTeam(true);
     }
-    public team(String info)
+    public team(String teamInfo, String affiliate, FormulaBasketball.Random r, bool isAffiliate)
     {
-        String[] lines = info.Split('\n');
+        String[] lines = teamInfo.Split('\n');
         String[] arr = lines[0].Split(',');
         teamName = arr[0];
         allTime = new Record(arr[1], arr[2]);
         allTimePlayoffs = new Record(arr[3], arr[4]);
 
         arr = lines[1].Split(',');
+        allTimeVsTeam = new Record[32];
+        for (int i = 0; i < allTimeVsTeam.Length; i += 2 )
+        {
+            allTimeVsTeam[i / 2] = new Record(arr[i], arr[i + 1]);
+        }
+        arr = lines[2].Split(',');
 
+        penalty = Double.Parse(arr[0]);
+        draftPlace = int.Parse(arr[1]);
+        playoffAppearances = int.Parse(arr[2]);
+        leagueChampionships = int.Parse(arr[3]);
+        conferenceChampionships = int.Parse(arr[4]);
+        divisionChampionships = int.Parse(arr[5]);
+        colorOne = arr[6];
+        colorTwo = arr[7];
+        colorThree = arr[8];
+        location = arr[9];
+        city = arr[10];
+        stadiumName = arr[11];
+        colorOneName = arr[12];
+        colorTwoName = arr[13];
+        colorThreeName = arr[14];
 
+        coach = new Coach(lines[3], r);
+        trainer = new Trainer(lines[4], r);
+
+        string[] players = lines[5].Split(new string[] { "<player>" }, StringSplitOptions.None);
+        for (int i = 1; i < players.Length; i++ )
+        {
+            addPlayer(new player(players[i]));
+        }
+        if (!isAffiliate)
+        {
+            moreImportantTeam = true;
+            this.affiliate = new team(affiliate, "", r, false);
+            this.affiliate.SetAffiliate(this, false);
+        }
+        
     }
     /*public team(String teamName, FormulaBasketball.Random r)
     {
@@ -112,6 +148,7 @@ public class team : IComparable<team>,  IEnumerable<player>
 
     
 
+    */
     public team(String teamName, String threeLetter, FormulaBasketball.Random r)
     {
         nextSeasonPicks = new List<DraftPick>();
@@ -145,7 +182,7 @@ public class team : IComparable<team>,  IEnumerable<player>
         fianance = 50000000;
         lastTen = new List<int>();
         streak = 0;
-    }*/
+    }
     public void AddDraftPick(DraftPick pick, bool currSeason = true)
     {
         if (currSeason)

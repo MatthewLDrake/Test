@@ -120,7 +120,7 @@ namespace FormulaBasketball
             {
                 fs = new FileStream(fileName, FileMode.Open);
             }
-            catch(FileNotFoundException e)
+            catch(FileNotFoundException)
             {
                 DialogResult result = MessageBox.Show("Could not open save file, if you removed it please replace it.", "File Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 if (result == System.Windows.Forms.DialogResult.OK)

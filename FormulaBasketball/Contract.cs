@@ -15,6 +15,15 @@ public class Contract
         if (promises == null) this.promises = new List<Promises>();
         else this.promises = promises;
     }
+    public Contract(String contract)
+    {
+        String[] info = contract.Split('\t');
+        years = int.Parse(info[0]);
+        money = double.Parse(info[1]);
+        yearsIn = 0;
+        bonus = 0;
+        this.promises = new List<Promises>();
+    }
     public double GetBonus()
     {
         return bonus;

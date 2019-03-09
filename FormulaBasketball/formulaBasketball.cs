@@ -473,7 +473,7 @@ public class formulaBasketball
         else
         {
             FreeAgents free = new FreeAgents();
-            foreach (player p in freeAgency) free.Add(p);
+            if (freeAgency != null) foreach (player p in freeAgency) free.Add(p);
             if (teams == null) create = new createTeams(r);
             else create = new createTeams(teams, free, r);
             doSetup(flag);
@@ -924,7 +924,6 @@ public class formulaBasketball
 
 
         int randomValue = r.Next(0, 100);
-        bool bob = false;
         if (away == 0 && home == 0)
         {
             if (randomValue < 10)
@@ -954,7 +953,6 @@ public class formulaBasketball
             {
                 create.getTeam(i).setModifier(new BounceBackGame());
                 create.getTeam(j).setModifier(new LetDownGame());
-                bob = true;
             }
             else if (randomValue < 25)
             {
@@ -974,7 +972,6 @@ public class formulaBasketball
             {
                 create.getTeam(j).setModifier(new BounceBackGame());
                 create.getTeam(i).setModifier(new LetDownGame());
-                bob = true;
             }
             else if (randomValue < 25)
             {

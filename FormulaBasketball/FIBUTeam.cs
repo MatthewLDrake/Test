@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class FIBUTeam : team
 {
     private double[] lowestOveralls = new double[5];
-    public FIBUTeam(string teamName, FormulaBasketball.Random r) : base(teamName, r)
+    public FIBUTeam(string teamName, FormulaBasketball.Random r) : base(teamName, teamName.Substring(0,3).ToUpper(), r)
     {
 
     }
