@@ -30,14 +30,14 @@ namespace FormulaBasketball
             this.create = create;
             
             team = create.getTeam(teamNum);
-            foreach (player player in team)
+            /*foreach (player player in team)
             {
                 player.endSeason();
             }
             foreach(player player in team.GetAffiliate())
             {
                 player.endSeason();
-            }
+            }*/
             foreach(team t in create.getTeams())
             {
                 foreach(DraftPick pick in t.GetPicks())
@@ -49,7 +49,7 @@ namespace FormulaBasketball
                     pick.SetSeason(7);
                 }
             }
-            create.getFreeAgents().AdvanceSeason();
+            //create.getFreeAgents().AdvanceSeason();
             create.SetupSalaryInfo();
             this.r = r;
             this.teamNum = teamNum;

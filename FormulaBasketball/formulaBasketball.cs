@@ -54,7 +54,7 @@ public class formulaBasketball
          create.PlayCollegeSeason();
          create.PlayCollegeSeason(); 
          SerializeObject(create, fileName);*/
-        create.SetDraftPicks();
+        //create.SetDraftPicks();
         
         /*for (int i = 0; i < 100; i++ )
         {
@@ -437,25 +437,33 @@ public class formulaBasketball
     public static createTeams DeSerializeObject(string fileName)
     {
         createTeams temp = null;
-
-        // Open the file containing the data that you want to deserialize.
-        FileStream fs = new FileStream(fileName, FileMode.Open);
-        try
+        if (fileName.EndsWith(".fbusave"))
         {
-            BinaryFormatter formatter = new BinaryFormatter();
-
-            // Deserialize the hashtable from the file and 
-            // assign the reference to the local variable.
-            temp = (createTeams)formatter.Deserialize(fs);
+            String info = File.ReadAllText(fileName);
+            
+            temp = new createTeams(info, new FormulaBasketball.Random());
         }
-        catch (SerializationException e)
+        else
         {
-            Console.WriteLine("Failed to deserialize. Reason: " + e.Message);
-            throw;
-        }
-        finally
-        {
-            fs.Close();
+            // Open the file containing the data that you want to deserialize.
+            FileStream fs = new FileStream(fileName, FileMode.Open);
+            try
+            {
+                BinaryFormatter formatter = new BinaryFormatter();
+
+                // Deserialize the hashtable from the file and 
+                // assign the reference to the local variable.
+                temp = (createTeams)formatter.Deserialize(fs);
+            }
+            catch (SerializationException e)
+            {
+                Console.WriteLine("Failed to deserialize. Reason: " + e.Message);
+                throw;
+            }
+            finally
+            {
+                fs.Close();
+            }
         }
         return temp;
     }
@@ -474,7 +482,7 @@ public class formulaBasketball
         {
             FreeAgents free = new FreeAgents();
             if (freeAgency != null) foreach (player p in freeAgency) free.Add(p);
-            if (teams == null) create = new createTeams(r);
+            if (teams == null) create = new createTeams("", r);
             else create = new createTeams(teams, free, r);
             doSetup(flag);
             startingGame = 1;

@@ -65,6 +65,8 @@ public class team : IComparable<team>,  IEnumerable<player>
     }
     public team(String teamInfo, String affiliate, FormulaBasketball.Random r, bool isAffiliate)
     {
+        playersPerPos = new int[5];
+
         String[] lines = teamInfo.Split('\n');
         String[] arr = lines[0].Split(',');
         teamName = arr[0];
@@ -101,12 +103,12 @@ public class team : IComparable<team>,  IEnumerable<player>
         string[] players = lines[5].Split(new string[] { "<player>" }, StringSplitOptions.None);
         for (int i = 1; i < players.Length; i++ )
         {
-            addPlayer(new player(players[i]));
+            SimpleAddPlayer(new player(players[i]));
         }
         if (!isAffiliate)
         {
             moreImportantTeam = true;
-            this.affiliate = new team(affiliate, "", r, false);
+            this.affiliate = new team(affiliate, "", r, true);
             this.affiliate.SetAffiliate(this, false);
         }
         
@@ -1051,6 +1053,18 @@ public class team : IComparable<team>,  IEnumerable<player>
             coach = new Coach(ToString() + " Coach", 65, 90, 0, 0, 0, 0, new Tempo(1), coachShotType.BALANCED, ssInvolvment.MEDIUM, r);
         }
         return coach;
+    }
+    public void SimpleAddPlayer(player newPlayer)
+    {
+        int pos = newPlayer.getPosition() - 1;
+        if (activePlayers == null) activePlayers = new player[15];
+
+        if (activePlayers[pos] == null) activePlayers[pos] = newPlayer;
+        else if (activePlayers[pos + 5] == null) activePlayers[pos + 5] = newPlayer;
+        else activePlayers[pos + 10] = newPlayer;
+
+        newPlayer.setTeam(this);
+        addPos(pos);
     }
     public void addPlayer(player newPlayer)
     {

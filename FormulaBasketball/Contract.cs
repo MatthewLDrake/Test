@@ -18,7 +18,7 @@ public class Contract
     public Contract(String contract)
     {
         String[] info = contract.Split('\t');
-        years = int.Parse(info[0]);
+        years = int.Parse(info[0])+1;
         money = double.Parse(info[1]);
         yearsIn = 0;
         bonus = 0;
@@ -38,7 +38,7 @@ public class Contract
     }
     public bool IsExpired()
     {
-        return yearsIn == years;
+        return yearsIn >= years;
     }
     public void AdvanceYear()
     {

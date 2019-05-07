@@ -31,6 +31,38 @@ public class createTeams
         allOveralls = new double[15, 32];
 
     }
+    public createTeams(String info, FormulaBasketball.Random r)
+    {
+        this.r = r;
+        teams = new List<team>();
+        dLeagueTeams = new List<team>();
+        freeAgents = new FreeAgents();
+        college = new College(r);
+        createTheTeams(info);
+        averagePositionSalaries = new double[3, 5];
+        minPositionSalaries = new double[3, 5];
+        for (int x = 0; x < minPositionSalaries.GetLength(0); x += 1)
+        {
+            for (int y = 0; y < minPositionSalaries.GetLength(1); y += 1)
+            {
+                minPositionSalaries[x, y] = 26;
+            }
+        }
+        maxPositionsSalaries = new double[3, 5];
+
+        averageOverall = new double[3, 5];
+        minOverall = new double[3, 5];
+        for (int x = 0; x < minOverall.GetLength(0); x += 1)
+        {
+            for (int y = 0; y < minOverall.GetLength(1); y += 1)
+            {
+                minOverall[x, y] = 100;
+            }
+        }
+        maxOverall = new double[3, 5];
+
+        SetDraftPicks();
+    }
     public void SaveCreate()
     {
         String fileName = "saveFile.csv";
@@ -88,46 +120,13 @@ public class createTeams
             formulaBasketball.updateStandings();
         }
     }
-    public createTeams(FormulaBasketball.Random r)
+    private void createTheTeams(string info)
     {
-        this.r = r;
-        teams = new List<team>();
-        dLeagueTeams = new List<team>();
-        freeAgents = new FreeAgents();
-        college = new College(r);
-        createTheTeams();
-        //createTeamTwo();
-        averagePositionSalaries = new double[3, 5];
-        minPositionSalaries = new double[3, 5];
-        for (int x = 0; x < minPositionSalaries.GetLength(0); x += 1)
-        {
-            for (int y = 0; y < minPositionSalaries.GetLength(1); y += 1)
-            {
-                minPositionSalaries[x, y] = 26;
-            }
-        }
-        maxPositionsSalaries = new double[3, 5];
-
-        averageOverall = new double[3, 5];
-        minOverall = new double[3, 5];
-        for (int x = 0; x < minOverall.GetLength(0); x += 1)
-        {
-            for (int y = 0; y < minOverall.GetLength(1); y += 1)
-            {
-                minOverall[x, y] = 100;
-            }
-        }
-        maxOverall = new double[3, 5];
-    }
-    private void createTheTeams()
-    {
-        string info = File.ReadAllText("saveFile.fbusave");
-
         string[] data = info.Split(new string[] { "<team>" }, StringSplitOptions.None);
         teams = new List<team>();
         for(int i = 1; i < data.Length; i += 2)
         {
-            teams.Add(new team(data[i], data[i + 1], r, true));
+            teams.Add(new team(data[i], data[i + 1], r, false));
         }
 
     }
@@ -232,7 +231,6 @@ public class createTeams
     }
     public void SetDraftPicks()
     {
-        GetCollege();
         foreach(team team in teams)
         {
             team.ClearDraftPicks();

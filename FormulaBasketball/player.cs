@@ -24,7 +24,7 @@ public class player : IComparable<player>
     protected PlayerRecords playerRecords;
     public string SavePlayer()
     {
-        String content = "<player>" + name + "," + playerAge + "," + country.ToString() + contract.ToString() + "," + position;
+        String content = "<player>" + name + "," + playerAge + "," + country.ToString() + "," + contract.ToString() + "," + position + "," + peakStart + "," + peakEnd + "," + development;
         for (int i = 0; i < ratings.Length; i++ )
         {
             content += "," + ratings[i];
@@ -40,10 +40,34 @@ public class player : IComparable<player>
         String[] arr = info.Split(',');
         name = arr[0].Replace("<player>", "");
         playerAge = int.Parse(arr[1]);
-        country = StringUtils.GetCountryFromString(arr[2]);
+        string temp = "";       
+        bool flag = false;
+        foreach(char c in arr[2])
+        {
+            if(Char.IsLetter(c) || c == '_')
+            {
+                temp += c;
+            }
+            else
+            {
+                flag = true;
+                break;
+            }
+        }
+        country = StringUtils.GetCountryFromString(temp);
+        
+       
         contract = new Contract(arr[3]);
         position = int.Parse(arr[4]);
-        int location = 5;
+        peakStart = int.Parse(arr[5]);
+        peakEnd = int.Parse(arr[6]);
+        development = int.Parse(arr[7]);
+        ratings = new double[11];
+        stats = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        gameStats = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        careerStats = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        stamina = 100;
+        int location = 8;
         for (int i = 0; i < ratings.Length; i++)
         {
             ratings[i] += double.Parse(arr[location]);
