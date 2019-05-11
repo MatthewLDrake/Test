@@ -99,6 +99,12 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="MockDraftView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MockDraftView.Designer.cs">
+      <DependentUpon>MockDraftView.cs</DependentUpon>
+    </Compile>
     <Compile Include="NameGenerator.cs" />
     <Compile Include="Negotiation.cs">
       <SubType>Form</SubType>
@@ -161,6 +167,7 @@
     </Compile>
     <Compile Include="Offseason.cs" />
     <Compile Include="RookieDraft.cs" />
+    <Compile Include="Scout.cs" />
     <Compile Include="Scouting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -357,6 +364,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MockDraftView.resx">
+      <DependentUpon>MockDraftView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Negotiation.resx">
       <DependentUpon>Negotiation.cs</DependentUpon>

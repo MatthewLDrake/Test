@@ -171,18 +171,6 @@ public class CollegePlayer : player, ICloneable
         age++;
     }
     private const int SCOUT_SKILL = 20;
-    private string layupStr;
-    private string dunkStr;
-    private string jumpshotStr;
-    private string threepointStr;
-    private string passStr;
-    private string shotcontestStr;
-    private string defenseiqStr;
-    private string jumpingStr;
-    private string seperationStr;
-    private string durabilityStr;
-    private string staminaStr;
-    private string potential;
     public static int[] potentials = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
     public void Create(FormulaBasketball.Random r)
     {

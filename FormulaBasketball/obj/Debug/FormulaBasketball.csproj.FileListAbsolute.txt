@@ -134,3 +134,4 @@ B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.DepthChart.resou
 B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.OfferPromises.resources
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\FormulaBasketball.AwardVoting.resources
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\FormulaBasketball.OfferedTrade.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\FormulaBasketball.MockDraftView.resources

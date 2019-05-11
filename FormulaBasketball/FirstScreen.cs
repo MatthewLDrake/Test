@@ -46,7 +46,7 @@ namespace FormulaBasketball
 
         private void button2_Click(object sender, EventArgs e)
         {
-            TcpListener serverSocket = new TcpListener(8888);
+            /*TcpListener serverSocket = new TcpListener(8888);
             
             int requestCount = 0;
             TcpClient clientSocket = default(TcpClient);
@@ -75,7 +75,7 @@ namespace FormulaBasketball
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
-            }
+            }*/
         }
 
         private void button3_Click(object sender, EventArgs e)

@@ -46,6 +46,7 @@ public class team : IComparable<team>,  IEnumerable<player>
     private string colorOne, colorTwo, colorThree, location, city, stadiumName, colorOneName, colorTwoName, colorThreeName;
     private int playoffAppearances;
     private int leagueChampionships, conferenceChampionships, divisionChampionships;
+    private Scout scout;
     public string SaveTeam(bool affiliate = false)
     {
         string content = "<team>" + teamName + "," + allTime.GetWins() + "," + allTime.GetLosses() + "," + allTimePlayoffs.GetWins() + "," + allTimePlayoffs.GetLosses() +"\n";
@@ -72,6 +73,8 @@ public class team : IComparable<team>,  IEnumerable<player>
         teamName = arr[0];
         allTime = new Record(arr[1], arr[2]);
         allTimePlayoffs = new Record(arr[3], arr[4]);
+
+        this.players = new List<player>();
 
         arr = lines[1].Split(',');
         allTimeVsTeam = new Record[32];
@@ -103,7 +106,9 @@ public class team : IComparable<team>,  IEnumerable<player>
         string[] players = lines[5].Split(new string[] { "<player>" }, StringSplitOptions.None);
         for (int i = 1; i < players.Length; i++ )
         {
-            SimpleAddPlayer(new player(players[i]));
+            player p = new player(players[i]);
+            SimpleAddPlayer(p);
+            this.players.Add(p);
         }
         if (!isAffiliate)
         {
@@ -1054,6 +1059,14 @@ public class team : IComparable<team>,  IEnumerable<player>
         }
         return coach;
     }
+    public Scout GetScout()
+    {
+        if(scout == null)
+        {
+            scout = new Scout(ToString() + " Scout", 20, 80);
+        }
+        return scout;
+    }
     public void SimpleAddPlayer(player newPlayer)
     {
         int pos = newPlayer.getPosition() - 1;
@@ -1764,7 +1777,50 @@ public class team : IComparable<team>,  IEnumerable<player>
     {
         activePlayers = players;
     }
+
+    public List<player> GetRoster()
+    {
+        List<player> bigList = new List<player>(players);
+        bigList.AddRange(affiliate.players);
+        return bigList;
+    }
+    private List<player> mockPlayerList;
+    public List<player> GetMockRoster()
+    {
+        if (mockPlayerList == null) mockPlayerList = new List<player>(players);
+        List<player> bigList = new List<player>(mockPlayerList);
+        bigList.AddRange(affiliate.players);
+        return bigList;
+    }
+    public void AddMockedPlayer(player player)
+    {
+        mockPlayerList.Add(player);
+    }
+    public void AddDraftedPlayer(player player)
+    {
+        players.Add(player);
+    }
+
+    private DraftStrategy strat;
+    public DraftStrategy DraftStrategy
+    {
+        get
+        {
+            return strat;
+        }
+        set
+        {
+            strat = value;
+        }
+    }
 }
+
+[Serializable]
+public enum DraftStrategy
+{
+    WIN_NOW, WIN_SOON, REBUILD
+}
+
 [Serializable]
 class PlayerEnum : IEnumerator<player>
 {

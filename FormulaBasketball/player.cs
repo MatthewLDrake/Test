@@ -22,6 +22,14 @@ public class player : IComparable<player>
     public double[] ratings;
     protected Contract contract;
     protected PlayerRecords playerRecords;
+    public static player GeneratePlayer(int pos, Country country, int overall)
+    {
+        NameGenerator gen = NameGenerator.Instance();
+        String name = gen.GenerateName(country);
+        
+        
+
+    }
     public string SavePlayer()
     {
         String content = "<player>" + name + "," + playerAge + "," + country.ToString() + "," + contract.ToString() + "," + position + "," + peakStart + "," + peakEnd + "," + development;
@@ -40,22 +48,10 @@ public class player : IComparable<player>
         String[] arr = info.Split(',');
         name = arr[0].Replace("<player>", "");
         playerAge = int.Parse(arr[1]);
-        string temp = "";       
-        bool flag = false;
-        foreach(char c in arr[2])
-        {
-            if(Char.IsLetter(c) || c == '_')
-            {
-                temp += c;
-            }
-            else
-            {
-                flag = true;
-                break;
-            }
-        }
-        country = StringUtils.GetCountryFromString(temp);
-        
+       
+        country = StringUtils.GetCountryFromString(arr[2]);
+        playerID = createTeams.nextID;
+        createTeams.nextID++;
        
         contract = new Contract(arr[3]);
         position = int.Parse(arr[4]);
@@ -78,6 +74,43 @@ public class player : IComparable<player>
            careerStats[i] += int.Parse(arr[location]);
            location++;
         }
+    }
+    public player(CollegePlayer player, int id)
+    {
+        ratings = new double[11];
+        stats = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        gameStats = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        careerStats = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        country = player.GetCountry();
+        contract = null;
+
+        playerID = id;
+        position = player.position;
+        name = player.name;
+
+        shootingModifier = 0.0;
+        otherModifier = 0.0;
+        defensiveModifier = 0.0;
+        gameFouls = 0;
+
+        setLayupRating((int)player.getLayupRating(false));
+        setDunkRating((int)player.getDunkRating(false));
+        setJumpShotRating((int)player.getJumpShotRating(false));
+        setThreeShotRating((int)player.getThreeShotRating(false));
+        setDurabilityRating((int)player.getDurabilityRating(false));
+        setShotContestRating((int)player.getShotContestRating(false));
+        setDefenseIQRating((int)player.getDefenseIQRating(false));
+        setJumpingRating((int)player.getJumpingRating(false));
+        setSeperation((int)player.getSeperation(false));
+        setPassing((int)player.getPassing(false));
+        setStaminaRating((int)player.getStaminaRating(false));
+
+        stamina = 100;
+
+        playerAge = player.age;
+        peakStart = player.peakStart;
+        peakEnd = player.peakEnd;
+        development = player.development;
     }
     public player(int pos, double[] ratings, int age, String name, int peakStart, int peakEnd, int development, Country country, int playerID)
     {
@@ -930,6 +963,81 @@ public class player : IComparable<player>
 
         return ContractResult.Continue;
     }
+    public string layupStr;
+    public string dunkStr;
+    public string jumpshotStr;
+    public string threepointStr;
+    public string passStr;
+    public string shotcontestStr;
+    public string defenseiqStr;
+    public string jumpingStr;
+    public string seperationStr;
+    public string durabilityStr;
+    public string staminaStr;
+    public string potential;
+    public bool scout;
+    public void Scout(FormulaBasketball.Random r, int scoutSkill)
+    {
+        scout = false;
+        int[] elevens = new int[11];
+        for (int i = 0; i < elevens.Length; i++)
+        {
+            elevens[i] = r.Next(-scoutSkill, 0);
+        }
+
+        layupStr = "" + (elevens[0] + getLayupRating(false)) + " -> " + (elevens[0] + getLayupRating(false) + scoutSkill);
+        dunkStr = "" + (elevens[1] + getDunkRating(false)) + " -> " + (elevens[1] + getDunkRating(false) + scoutSkill);
+        jumpshotStr = "" + (elevens[2] + getJumpShotRating(false)) + " -> " + (elevens[2] + getJumpShotRating(false) + scoutSkill);
+        threepointStr = "" + (elevens[3] + getThreeShotRating(false)) + " -> " + (elevens[3] + getThreeShotRating(false) + scoutSkill);
+        passStr = "" + (elevens[4] + getPassing(false)) + " -> " + (elevens[4] + getPassing(false) + scoutSkill);
+        shotcontestStr = "" + (elevens[5] + getShotContestRating(false)) + " -> " + (elevens[5] + getShotContestRating(false) + scoutSkill);
+        defenseiqStr = "" + (elevens[6] + getDefenseIQRating(false)) + " -> " + (elevens[6] + getDefenseIQRating(false) + scoutSkill);
+        jumpingStr = "" + (elevens[7] + getJumpingRating(false)) + " -> " + (elevens[7] + getJumpingRating(false) + scoutSkill);
+        seperationStr = "" + (elevens[8] + getSeperation(false)) + " -> " + (elevens[8] + getSeperation(false) + scoutSkill);
+        durabilityStr = "" + (elevens[9] + getDurabilityRating(false)) + " -> " + (elevens[9] + getDurabilityRating(false) + scoutSkill);
+        staminaStr = "" + (elevens[10] + getStaminaRating(false)) + " -> " + (elevens[10] + getStaminaRating(false) + scoutSkill);
+
+        int normalizedPS = (peakStart - 27) * 2;
+        int normalizedPE = (peakEnd - 30) * 2;
+
+        int average = (normalizedPE + normalizedPS + development * 3) / 5;
+
+        int temp = Math.Max(1, Math.Min(10, r.Next(-scoutSkill, scoutSkill) + average));
+        switch (temp)
+        {
+            case 1:
+                potential = "F";
+                break;
+            case 2:
+                potential = "F+";
+                break;
+            case 3:
+                potential = "D";
+                break;
+            case 4:
+                potential = "D+";
+                break;
+            case 5:
+                potential = "C";
+                break;
+            case 6:
+                potential = "C+";
+                break;
+            case 7:
+                potential = "B";
+                break;
+            case 8:
+                potential = "B+";
+                break;
+            case 9:
+                potential = "A";
+                break;
+            case 10:
+                potential = "A+";
+                break;
+        }
+    }
+
     public string getDevelopment()
     {
         string potential = "";
@@ -1742,13 +1850,97 @@ public class player : IComparable<player>
 
         return retVal;
     }
+    /*
+     * 0: Inside
+     * 1: Jump
+     * 2: Three Point
+     * 3: Passing
+     * 4: Shot Contest
+     * 5: Defense IQ
+     * 6: Jumping
+     * 7: Seperation
+     * 8: Stamina
+     */ 
+    public double getOverall(int pos, double[] rating)
+    {
+        double retVal = 0.0;
+        if (pos == 1)
+        {
+            retVal += rating[0] * 1.4;
+            retVal += rating[1] * 1;
+            retVal += rating[2] * .7;
+            retVal += rating[3] * .6;
+            retVal += rating[4] * 1.4;
+            retVal += rating[5] * 1.4;
+            retVal += rating[6] * 1.4;
+            retVal += rating[7] * 1.6;
+            retVal += rating[8] * .5;
+
+        }
+        // 8
+        else if (pos == 2)
+        {
+            retVal += rating[0] * 1.4;
+            retVal += rating[1] * 1.1;
+            retVal += rating[2] * .6;
+            retVal += rating[3] * .6;
+            retVal += rating[4] * 1.4;
+            retVal += rating[5] * 1.4;
+            retVal += rating[6] * 1.5;
+            retVal += rating[7] * 1.6;
+            retVal += rating[8] * .5;
+
+        }
+        // 9
+        else if (pos == 3)
+        {
+            retVal += rating[0] * 1.3;
+            retVal += rating[1] * 1.2;
+            retVal += rating[2] * 1;
+            retVal += rating[3] * 1;
+            retVal += rating[4] * 1.2;
+            retVal += rating[5] * 1.2;
+            retVal += rating[6] * 1;
+            retVal += rating[7] * 1.6;
+            retVal += rating[8] * .5;
+        }
+        else if (pos == 4)
+        {
+            retVal += rating[0] * 1.2;
+            retVal += rating[1] * 1.4;
+            retVal += rating[2] * 1.4;
+            retVal += rating[3] * 1.1;
+            retVal += rating[4] * 1.05;
+            retVal += rating[5] * 1.05;
+            retVal += rating[6] * .7;
+            retVal += rating[7] * 1.5;
+            retVal += rating[8] * .5;
+        }
+        else
+        {
+            retVal += rating[0] * 1.2;
+            retVal += rating[1] * 1.2;
+            retVal += rating[2] * 1.2;
+            retVal += rating[3] * 1.5;
+            retVal += rating[4] * 1.3;
+            retVal += rating[5] * 1.3;
+            retVal += rating[6] * .6;
+            retVal += rating[7] * 1;
+            retVal += rating[8] * .5;
+        }
+
+        retVal = Math.Min(99.99, ((retVal / 10) / 90) * 100);
+
+        return retVal;
+
+    }
     public double getOverall(player player = null, bool developmentIncluded = false)
     {
         if (player == null) player = this;
         double inside = Math.Max(player.ratings[0], player.ratings[1])/10;
         double retVal = 0;
         // 8.7
-        if (position == 1)
+        if (player.position == 1)
         {
             retVal += inside * 1.4;
             retVal += player.ratings[2] * 1;
@@ -1762,7 +1954,7 @@ public class player : IComparable<player>
 
         }
         // 8
-        else if (position == 2)
+        else if (player.position == 2)
         {
             retVal += inside * 1.4;
             retVal += player.ratings[2] * 1.1;
@@ -1776,7 +1968,7 @@ public class player : IComparable<player>
 
         }
         // 9
-        else if (position == 3)
+        else if (player.position == 3)
         {
             retVal += inside * 1.3;
             retVal += player.ratings[2] * 1.2;
@@ -1788,7 +1980,7 @@ public class player : IComparable<player>
             retVal += player.ratings[6] * 1.6;
             retVal += player.ratings[8] * .5;
         }
-        else if (position == 4)
+        else if (player.position == 4)
         {
             retVal += inside * 1.2;
             retVal += player.ratings[2] * 1.4;

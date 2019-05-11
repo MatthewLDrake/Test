@@ -323,9 +323,10 @@ namespace FormulaBasketball
 
         private void button3_Click(object sender, EventArgs e)
         {
-            draft newDraft = new draft(true, players, teams, humanTeams, r);
-            this.Visible = false;
-            newDraft.ShowDialog();
+            // TODO: draft
+            //draft newDraft = new draft(true, players, teams, humanTeams, r);
+            //this.Visible = false;
+           // newDraft.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)

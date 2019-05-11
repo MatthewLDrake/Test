@@ -13,6 +13,7 @@ public class createTeams
     private double[,] averagePositionSalaries, minPositionSalaries, maxPositionsSalaries;
     private double[,] averageOverall, minOverall, maxOverall, allOveralls;
     private List<int> gameNums;
+    public static int nextID = 0;
     public createTeams(List<team> teams, FreeAgents freeAgency, FormulaBasketball.Random r)
     {
         this.teams = teams;
@@ -62,6 +63,10 @@ public class createTeams
         maxOverall = new double[3, 5];
 
         SetDraftPicks();
+        for(int i = 0 ; i < teams.Count; i++)
+        {
+            teams[i].setTeamNum(i);
+        }
     }
     public void SaveCreate()
     {
@@ -235,6 +240,41 @@ public class createTeams
         {
             team.ClearDraftPicks();
         }
+       
+        getTeam(0).SetDraftPlace(25);
+        getTeam(1).SetDraftPlace(22);
+        getTeam(2).SetDraftPlace(32);
+        getTeam(3).SetDraftPlace(15);
+        getTeam(4).SetDraftPlace(1);
+        getTeam(5).SetDraftPlace(5);
+        getTeam(6).SetDraftPlace(28);
+        getTeam(7).SetDraftPlace(29);
+        getTeam(8).SetDraftPlace(13);
+        getTeam(9).SetDraftPlace(10);
+        getTeam(10).SetDraftPlace(8);
+        getTeam(11).SetDraftPlace(24);
+        getTeam(12).SetDraftPlace(12);
+        getTeam(13).SetDraftPlace(3);
+        getTeam(14).SetDraftPlace(18);
+        getTeam(15).SetDraftPlace(19);
+        getTeam(16).SetDraftPlace(20);
+        getTeam(17).SetDraftPlace(9);
+        getTeam(18).SetDraftPlace(31);
+        getTeam(19).SetDraftPlace(23);
+        getTeam(20).SetDraftPlace(2);
+        getTeam(21).SetDraftPlace(4);
+        getTeam(22).SetDraftPlace(6);
+        getTeam(23).SetDraftPlace(16);
+        getTeam(24).SetDraftPlace(21);
+        getTeam(25).SetDraftPlace(17);
+        getTeam(26).SetDraftPlace(30);
+        getTeam(27).SetDraftPlace(14);
+        getTeam(28).SetDraftPlace(27);
+        getTeam(29).SetDraftPlace(7);
+        getTeam(30).SetDraftPlace(26);
+        getTeam(31).SetDraftPlace(11);
+
+
         getTeam(19).AddDraftPick(new DraftPick(1, getTeam(23), getTeam(19)));
         getTeam(27).AddDraftPick(new DraftPick(1, getTeam(27), getTeam(27)));
         getTeam(18).AddDraftPick(new DraftPick(1, getTeam(18), getTeam(18)));
@@ -777,6 +817,11 @@ public class createTeams
 
     }
 
+
+    public void SetCollege(College college)
+    {
+        this.college = college;
+    }
 }
 
    

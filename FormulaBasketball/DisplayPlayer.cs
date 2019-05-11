@@ -12,7 +12,7 @@ namespace FormulaBasketball
 {
     public partial class DisplayPlayer : Form
     {
-        public DisplayPlayer(CollegePlayer p)
+        public DisplayPlayer(player p)
         {
             InitializeComponent();
             double shootingPercentage = 0.0, oppontentShootingPercentage = 0.0;

@@ -13,12 +13,12 @@ namespace FormulaBasketball
     {
         private List<DataGridView> lists;
         private Holder holder;
-        private string fileName = "dotruga.save";
-        public Scouting(List<CollegePlayer> collegePlayers, FormulaBasketball.Random r)
+        private static string fileName = "scouting.save";
+        public Scouting(List<player> collegePlayers, Scout scout, FormulaBasketball.Random r)
         {
             InitializeComponent();
             //holder = DeSerializeObject();
-            holder = new Holder(collegePlayers, r);
+            holder = new Holder(collegePlayers, scout, r);
             SerializeObject();
             label1.Text = "Players Able to be Scouted: " + holder.GetNumLeft();
 
@@ -38,7 +38,7 @@ namespace FormulaBasketball
         }
         private void AddPlayersToLists(int i)
         {
-            List<CollegePlayer> players = holder.GetPlayers(i);
+            List<player> players = holder.GetPlayers(i);
             for(int j = 0; j < players.Count; j++)
             {
                 if (!players[j].scout)
@@ -47,7 +47,7 @@ namespace FormulaBasketball
                 }
                 else
                 {
-                    lists[i - 1].Rows.Add(players[j].getName(), players[j].GetLayup(), players[j].GetDunk(), players[j].GetJumpshot(), players[j].GetThreePoint(), players[j].GetPass(), players[j].GetShotContest(), players[j].GetDefenseIQ(), players[j].GetJumping(), players[j].GetSeperation(), players[j].GetDurability(), players[j].GetStamina(), players[j].GetPotential());
+                    lists[i - 1].Rows.Add(players[j].getName(), players[j].layupStr, players[j].dunkStr, players[j].jumpshotStr, players[j].threepointStr, players[j].passStr, players[j].shotcontestStr, players[j].defenseiqStr, players[j].jumpingStr, players[j].seperationStr, players[j].durabilityStr, players[j].staminaStr, players[j].potential);
                 }
             }
         }
@@ -60,7 +60,7 @@ namespace FormulaBasketball
 
             int i = lists[currList].SelectedRows[0].Index;
 
-            CollegePlayer currentPlayer = holder.GetPlayer(currList, i, true);
+            player currentPlayer = holder.GetPlayer(currList, i, true);
 
             if(currentPlayer == null)
             {
@@ -71,7 +71,7 @@ namespace FormulaBasketball
             currentPlayer.scout = true;
             SerializeObject();
 
-            lists[currList].Rows[i].SetValues(currentPlayer.getName(), currentPlayer.GetLayup(), currentPlayer.GetDunk(), currentPlayer.GetJumpshot(), currentPlayer.GetThreePoint(), currentPlayer.GetPass(), currentPlayer.GetShotContest(), currentPlayer.GetDefenseIQ(), currentPlayer.GetJumping(), currentPlayer.GetSeperation(), currentPlayer.GetDurability(), currentPlayer.GetStamina(), currentPlayer.GetPotential());
+            lists[currList].Rows[i].SetValues(currentPlayer.getName(), currentPlayer.layupStr, currentPlayer.dunkStr, currentPlayer.jumpshotStr, currentPlayer.threepointStr, currentPlayer.passStr, currentPlayer.shotcontestStr, currentPlayer.defenseiqStr, currentPlayer.jumpingStr, currentPlayer.seperationStr, currentPlayer.durabilityStr, currentPlayer.staminaStr, currentPlayer.potential);
         }
 
         private void lists_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -80,7 +80,7 @@ namespace FormulaBasketball
 
             int i = lists[currList].SelectedRows[0].Index;
 
-            CollegePlayer currentPlayer = holder.GetPlayer(currList, i);
+            player currentPlayer = holder.GetPlayer(currList, i);
 
             DisplayPlayer display = new DisplayPlayer(currentPlayer);
             display.ShowDialog();
@@ -110,7 +110,7 @@ namespace FormulaBasketball
                 fs.Close();
             }
         }
-        private Holder DeSerializeObject()
+        public static Holder DeSerializeObject()
         {
             Holder temp = null;
 
@@ -122,12 +122,7 @@ namespace FormulaBasketball
             }
             catch(FileNotFoundException)
             {
-                DialogResult result = MessageBox.Show("Could not open save file, if you removed it please replace it.", "File Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                if (result == System.Windows.Forms.DialogResult.OK)
-                {
-                    this.Close();
-
-                }
+                DialogResult result = MessageBox.Show("Could not open save file, if you removed it please replace it.", "File Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);                
             }
             
             try
@@ -156,16 +151,16 @@ namespace FormulaBasketball
 
             for (int i = 1; i <= 5; i++)
             {
-                List<CollegePlayer> players = holder.GetPlayers(i);
+                List<player> players = holder.GetPlayers(i);
                 for (int j = 0; j < players.Count; j++)
                 {
                     if (!players[j].scout)
                     {
-                        str += players[j].getName() + "," + players[j].GetPosition() + ",?,?,?,?,?,?,?,?,?,?,?,?," + players[j].age + "\n";
+                        str += players[j].getName() + "," + players[j].getPosition() + ",?,?,?,?,?,?,?,?,?,?,?,?," + players[j].age + "\n";
                     }
                     else
                     {
-                        str += players[j].getName() + "," + players[j].GetPosition() + "," + players[j].GetLayup() + "," + players[j].GetDunk() + "," + players[j].GetJumpshot() + "," + players[j].GetThreePoint() + "," + players[j].GetPass() + "," + players[j].GetShotContest() + "," + players[j].GetDefenseIQ() + "," + players[j].GetJumping() + "," + players[j].GetSeperation() + "," + players[j].GetDurability() + "," + players[j].GetStamina() + "," + players[j].GetPotential() + "," + players[j].age + "\n";
+                        str += players[j].getName() + "," + players[j].getPosition() + "," + players[j].layupStr + "," + players[j].dunkStr + "," + players[j].jumpshotStr + "," + players[j].threepointStr + "," + players[j].passStr + "," + players[j].shotcontestStr + "," + players[j].defenseiqStr + "," + players[j].jumpingStr + "," + players[j].seperationStr + "," + players[j].durabilityStr + "," + players[j].staminaStr + "," + players[j].potential + "," + players[j].age + "\n";
                     }
                 }
             }
@@ -179,16 +174,16 @@ namespace FormulaBasketball
 
             for (int i = 1; i <= 5; i++)
             {
-                List<CollegePlayer> players = holder.GetPlayers(i);
+                List<player> players = holder.GetPlayers(i);
                 for (int j = 0; j < players.Count; j++)
                 {
                     if (!players[j].scout)
                     {
-                        str += players[j].ToString() + "," + players[j].GetPosition() + ",?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?," + players[j].age + "\n";
+                        str += players[j].ToString() + "," + players[j].getPosition() + ",?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?," + players[j].age + "\n";
                     }
                     else
                     {
-                        str += players[j].ToString() + "," + players[j].GetPosition() + "," + players[j].GetLayup().Replace(" -> ", ",") + "," + players[j].GetDunk().Replace(" -> ", ",") + "," + players[j].GetJumpshot().Replace(" -> ", ",") + "," + players[j].GetThreePoint().Replace(" -> ", ",") + "," + players[j].GetPass().Replace(" -> ", ",") + "," + players[j].GetShotContest().Replace(" -> ", ",") + "," + players[j].GetDefenseIQ().Replace(" -> ", ",") + "," + players[j].GetJumping().Replace(" -> ", ",") + "," + players[j].GetSeperation().Replace(" -> ", ",") + "," + players[j].GetDurability().Replace(" -> ", ",") + "," + players[j].GetStamina().Replace(" -> ", ",") + "," + players[j].GetPotential() + "," + players[j].age + "\n";
+                        str += players[j].ToString() + "," + players[j].getPosition() + "," + players[j].layupStr.Replace(" -> ", ",") + "," + players[j].dunkStr.Replace(" -> ", ",") + "," + players[j].jumpshotStr.Replace(" -> ", ",") + "," + players[j].threepointStr.Replace(" -> ", ",") + "," + players[j].passStr.Replace(" -> ", ",") + "," + players[j].shotcontestStr.Replace(" -> ", ",") + "," + players[j].defenseiqStr.Replace(" -> ", ",") + "," + players[j].jumpingStr.Replace(" -> ", ",") + "," + players[j].seperationStr.Replace(" -> ", ",") + "," + players[j].durabilityStr.Replace(" -> ", ",") + "," + players[j].staminaStr.Replace(" -> ", ",") + "," + players[j].potential + "," + players[j].age + "\n";
                     }
                 }
             }
