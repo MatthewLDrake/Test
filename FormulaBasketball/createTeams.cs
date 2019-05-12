@@ -704,115 +704,166 @@ public class createTeams
     private List<player> rookies;
     public List<player> GetRookies()
     {
-        foreach(player p in rookies) p.IsRookie();
+        AddRookies();
+        Dictionary<string, int> players = new Dictionary<string, int>();
+        foreach (player p in rookies)
+        {
+            p.addPlayerID(nextID);
+            nextID++;
+            p.IsRookie();
+            if (p.getName().Contains("Player"))
+            {
+                if(players.ContainsKey(p.getName()))
+                {
+                    players[p.getName()]++; 
+                }
+                else
+                    players.Add(p.getName(), 1);
+            }
+        }
+        foreach(KeyValuePair<string, int> pair in players)
+        {
+            Console.WriteLine(pair.Key + ": " + pair.Value);
+        }
+        
+
+
         return rookies;
     }
     public void AddRookies()
     {
         rookies = new List<player>();
-        rookies.Add(new player(1, 6, 7, 4, 4, 3, 3, 2, 8, 3, 8, 8, 24, "Sovnox Naixi ", false, 32, 34, 7, Country.Blaist_Blaland, 1191));
-        rookies.Add(new player(3, 5, 2, 8, 1, 8, 7, 7, 8, 8, 10, 5, 19, "Olandi Amodetsei ", false, 27, 33, 7, Country.Dotruga, 1192));
-        rookies.Add(new player(4, 5, 3, 6, 4, 7, 7, 9, 1, 4, 8, 9, 22, "Handa Seiki ", false, 30, 36, 1, Country.Transhimalia, 1193));
-        rookies.Add(new player(1, 5, 7, 1, 4, 4, 6, 5, 9, 3, 9, 8, 22, "Sagolna Hartotasek ", false, 31, 32, 6, Country.Dotruga, 1194));
-        rookies.Add(new player(3, 4, 1, 10, 8, 8, 9, 4, 4, 8, 8, 7, 19, "Lee Stidham", false, 28, 33, 3, Country.Ethanthova, 1195));
-        rookies.Add(new player(5, 4, 2, 5, 6, 9, 6, 4, 4, 2, 2, 7, 21, "Calvin Hayhurst", false, 30, 36, 9, Country.Ethanthova, 1196));
-        rookies.Add(new player(2, 7, 7, 3, 4, 3, 8, 8, 4, 5, 2, 9, 21, "Dennis Tsoi", false, 29, 33, 8, Country.Ethanthova, 1197));
-        rookies.Add(new player(5, 8, 1, 5, 3, 6, 3, 5, 2, 7, 6, 8, 22, "Stephen Chapman", false, 28, 32, 5, Country.Wyverncliff, 1198));
-        rookies.Add(new player(3, 1, 10, 7, 7, 9, 8, 6, 3, 1, 10, 5, 20, "Váqáp Qlámipanońqo ", false, 27, 32, 9, Country.Sagua, 1199));
-        rookies.Add(new player(5, 4, 1, 6, 5, 5, 8, 6, 2, 2, 9, 10, 22, "Kiromibakeili Tute ", false, 28, 32, 6, Country.Dotruga, 1200));
-        rookies.Add(new player(1, 4, 3, 1, 1, 2, 8, 9, 10, 4, 6, 7, 22, "Abosa Aludetsei ", false, 30, 36, 7, Country.Dotruga, 1201));
-        rookies.Add(new player(3, 8, 10, 6, 9, 6, 5, 4, 1, 10, 7, 10, 22, "Sol Young-Chul ", false, 29, 33, 6, Country.Shmupland, 1202));
-        rookies.Add(new player(1, 5, 8, 2, 3, 2, 5, 6, 9, 6, 1, 6, 21, "Harri Umlauf ", false, 30, 34, 5, Country.Tri_National_Dominion, 1203));
-        rookies.Add(new player(5, 5, 4, 6, 4, 6, 8, 7, 1, 3, 6, 10, 20, "Mack Cesar", false, 29, 35, 7, Country.Ethanthova, 1204));
-        rookies.Add(new player(4, 3, 3, 7, 6, 5, 5, 7, 4, 6, 10, 7, 21, "Wahlady", false, 27, 30, 4, Country.Aiyota, 1205));
-        rookies.Add(new player(5, 4, 9, 8, 10, 10, 9, 7, 1, 9, 8, 10, 22, "Làto Cows ", false, 27, 32, 5, Country.Darvincia, 1206));
-        rookies.Add(new player(1, 8, 6, 4, 2, 7, 6, 4, 6, 5, 9, 6, 22, "Goormurra", false, 30, 34, 4, Country.Aiyota, 1207));
-        rookies.Add(new player(2, 6, 6, 10, 9, 3, 3, 3, 7, 3, 4, 9, 19, "Bane Phothisarath ", false, 27, 31, 9, Country.Lyintaria, 1208));
-        rookies.Add(new player(3, 3, 7, 2, 2, 10, 1, 3, 10, 4, 4, 5, 24, "James Ayala", false, 32, 36, 3, Country.Ethanthova, 1209));
-        rookies.Add(new player(2, 5, 6, 4, 1, 3, 8, 9, 7, 8, 4, 7, 21, "Onishi Yoshiiku ", false, 29, 34, 5, Country.Barsein, 1210));
-        rookies.Add(new player(3, 9, 8, 4, 10, 8, 1, 1, 3, 7, 8, 7, 20, "Nukunaix Hjetohje ", false, 29, 33, 5, Country.Blaist_Blaland, 1211));
-        rookies.Add(new player(3, 2, 9, 4, 2, 8, 7, 8, 5, 5, 10, 10, 19, "Om Jae-Wook ", false, 32, 34, 4, Country.Shmupland, 1212));
-        rookies.Add(new player(4, 10, 3, 4, 6, 5, 2, 5, 3, 6, 9, 9, 23, "Alundi Bituna ", false, 29, 34, 6, Country.Dotruga, 1213));
-        rookies.Add(new player(5, 6, 4, 3, 5, 9, 2, 5, 2, 6, 9, 10, 23, "Nuux Naxix ", false, 32, 33, 6, Country.Blaist_Blaland, 1214));
-        rookies.Add(new player(4, 9, 4, 9, 8, 5, 8, 8, 6, 9, 5, 9, 19, "Iklo Eloalerko ", false, 28, 33, 6, Country.Dotruga, 1215));
-        rookies.Add(new player(5, 4, 5, 7, 6, 8, 2, 6, 4, 2, 1, 8, 22, "Alotru Fevioka ", false, 32, 35, 7, Country.Dotruga, 1216));
-        rookies.Add(new player(5, 4, 2, 4, 6, 7, 7, 5, 1, 2, 6, 9, 23, "Uxku Toxium ", false, 32, 35, 4, Country.Blaist_Blaland, 1217));
-        rookies.Add(new player(4, 10, 2, 8, 5, 3, 8, 5, 3, 3, 1, 8, 19, "Himiba Olalomundi ", false, 32, 33, 5, Country.Dotruga, 1218));
-        rookies.Add(new player(5, 4, 1, 7, 6, 8, 5, 3, 1, 3, 3, 10, 19, "Nho'ja Vanho ", false, 28, 31, 5, Country.Key_to_Don, 1219));
-        rookies.Add(new player(1, 6, 4, 3, 4, 3, 7, 8, 6, 7, 5, 6, 23, "Nàsà Sikasbë ", false, 28, 31, 6, Country.Darvincia, 1220));
-        rookies.Add(new player(4, 8, 3, 5, 5, 3, 8, 5, 4, 5, 8, 10, 20, "Rael Ssekien ", false, 31, 35, 10, Country.Barsein, 1221));
-        rookies.Add(new player(1, 5, 8, 1, 3, 2, 5, 6, 9, 5, 4, 9, 20, "Cagi  ", false, 27, 33, 5, Country.Aiyota, 1222));
-        rookies.Add(new player(1, 6, 7, 1, 1, 8, 4, 5, 6, 8, 10, 9, 19, "Rezinal Naizen ", false, 29, 34, 10, Country.Aeridani, 1223));
-        rookies.Add(new player(2, 7, 3, 3, 2, 4, 6, 6, 8, 10, 6, 7, 21, "Alotru Amodetsei ", false, 29, 34, 5, Country.Dotruga, 1224));
-        rookies.Add(new player(2, 7, 7, 5, 2, 1, 6, 6, 10, 6, 8, 7, 19, "Nyning  ", false, 27, 30, 4, Country.Aiyota, 1225));
-        rookies.Add(new player(4, 7, 2, 6, 7, 4, 7, 4, 1, 8, 1, 5, 20, "Ingo Wagenseil ", false, 31, 32, 7, Country.Tri_National_Dominion, 1226));
-        rookies.Add(new player(5, 3, 1, 4, 5, 7, 3, 3, 4, 10, 7, 8, 21, "Blaki Dazaxka ", false, 29, 33, 6, Country.Blaist_Blaland, 1227));
-        rookies.Add(new player(2, 3, 2, 1, 3, 7, 6, 4, 8, 10, 10, 10, 22, "Uxnax Sovix ", false, 31, 34, 5, Country.Blaist_Blaland, 1228));
-        rookies.Add(new player(3, 2, 7, 1, 9, 4, 4, 2, 10, 4, 3, 6, 21, "Ixux Zaxau ", false, 29, 33, 4, Country.Blaist_Blaland, 1229));
-        rookies.Add(new player(4, 6, 2, 7, 6, 6, 5, 5, 3, 6, 3, 9, 22, "Pakomha Nánpa ", false, 29, 34, 9, Country.Key_to_Don, 1230));
-        rookies.Add(new player(3, 10, 3, 5, 2, 9, 7, 5, 5, 3, 10, 7, 22, "Randy Feltman", false, 32, 35, 6, Country.Ethanthova, 1231));
-        rookies.Add(new player(4, 8, 4, 6, 4, 3, 4, 2, 4, 9, 9, 9, 22, "Xai Alodetsei ", false, 29, 35, 4, Country.Dotruga, 1232));
-        rookies.Add(new player(2, 4, 5, 4, 1, 4, 6, 8, 8, 7, 7, 9, 21, "Kanoa Thammavong ", false, 27, 32, 5, Country.Bielosia, 1233));
-        rookies.Add(new player(3, 1, 6, 4, 9, 10, 9, 6, 7, 7, 7, 6, 22, "Ḿavwápŕi Pimh ", false, 27, 32, 6, Country.Sagua, 1234));
-        rookies.Add(new player(2, 6, 7, 1, 1, 5, 6, 4, 9, 4, 7, 7, 22, "Maik Menorath ", false, 31, 34, 6, Country.Holy_Yektonisa, 1235));
-        rookies.Add(new player(1, 7, 7, 3, 4, 4, 3, 3, 6, 6, 8, 10, 21, "Alve Higashikuni ", false, 28, 34, 5, Country.Barsein, 1236));
-        rookies.Add(new player(4, 7, 2, 6, 5, 5, 5, 8, 4, 5, 4, 8, 22, "Yamataka Hiroaki ", false, 27, 30, 3, Country.Transhimalia, 1237));
-        rookies.Add(new player(2, 10, 6, 6, 8, 3, 7, 6, 8, 9, 6, 8, 19, "Phetdum Bouvanaat ", false, 28, 31, 6, Country.Holy_Yektonisa, 1238));
-        rookies.Add(new player(4, 8, 4, 4, 3, 4, 4, 9, 2, 9, 7, 9, 23, "Uwe Bischoff ", false, 29, 34, 4, Country.Tri_National_Dominion, 1239));
-        rookies.Add(new player(1, 6, 10, 4, 2, 5, 7, 7, 15, 7, 3, 8, 19, "Thomas Skinner", false, 28, 34, 6, Country.Wyverncliff, 1240));
-        rookies.Add(new player(5, 3, 4, 5, 3, 10, 6, 2, 4, 7, 3, 5, 19, "Kompasu Toshiyuki ", false, 30, 35, 4, Country.Aeridani, 1241));
-        rookies.Add(new player(1, 9, 1, 2, 4, 4, 6, 6, 7, 4, 5, 5, 20, "Pusu Iode ", false, 30, 34, 6, Country.Bongatar, 1242));
-        rookies.Add(new player(2, 10, 6, 3, 3, 5, 4, 4, 7, 4, 5, 8, 23, "Pranga  ", false, 29, 33, 9, Country.Aiyota, 1243));
-        rookies.Add(new player(1, 8, 5, 1, 2, 4, 9, 4, 8, 6, 7, 8, 19, "noe  ", false, 31, 35, 5, Country.Czalliso, 1244));
-        rookies.Add(new player(4, 9, 1, 8, 2, 5, 2, 2, 3, 7, 9, 8, 22, "Danomobei Hiemeta ", false, 30, 33, 7, Country.Dotruga, 1245));
-        rookies.Add(new player(2, 5, 6, 3, 4, 3, 7, 6, 7, 5, 4, 7, 22, "Autanblanaix Auproda ", false, 32, 34, 7, Country.Blaist_Blaland, 1246));
-        rookies.Add(new player(4, 7, 1, 5, 5, 2, 3, 6, 4, 3, 9, 6, 23, "Milton Solorzano", false, 29, 35, 8, Country.Ethanthova, 1247));
-        rookies.Add(new player(3, 2, 2, 1, 8, 5, 1, 7, 3, 8, 7, 9, 21, "Kiro Hidolundi ", false, 28, 32, 6, Country.Dotruga, 1248));
-        rookies.Add(new player(3, 3, 6, 4, 9, 1, 7, 5, 3, 9, 8, 8, 23, "Ulatrusiei Hisei ", false, 27, 30, 5, Country.Dotruga, 1249));
-        rookies.Add(new player(2, 4, 5, 6, 4, 5, 4, 10, 7, 6, 1, 10, 23, "Sathanalat Vatthana ", false, 27, 31, 3, Country.Bielosia, 1250));
-        rookies.Add(new player(2, 6, 8, 4, 6, 2, 4, 8, 8, 5, 6, 6, 21, "Stanley Price", false, 27, 30, 5, Country.Ethanthova, 1251));
-        rookies.Add(new player(4, 6, 3, 5, 5, 7, 2, 6, 4, 6, 4, 5, 19, "Jeff Bellow", false, 28, 34, 6, Country.Ethanthova, 1252));
-        rookies.Add(new player(5, 7, 4, 5, 2, 7, 3, 5, 1, 3, 7, 8, 20, "Hvanne Shunmyo ", false, 28, 34, 6, Country.Barsein, 1253));
-        rookies.Add(new player(2, 10, 2, 4, 5, 6, 7, 7, 7, 8, 5, 7, 23, "Asser Hutto ", false, 27, 33, 7, Country.Tri_National_Dominion, 1254));
-        rookies.Add(new player(1, 5, 6, 2, 1, 5, 3, 4, 7, 5, 5, 10, 20, "Atusosa Hisei ", false, 28, 33, 2, Country.Dotruga, 1255));
-        rookies.Add(new player(1, 4, 7, 2, 2, 3, 5, 2, 7, 6, 2, 8, 22, "Charrat  ", false, 30, 36, 1, Country.Aiyota, 1256));
-        rookies.Add(new player(1, 4, 5, 3, 1, 4, 5, 2, 7, 8, 7, 6, 23, "Cocogo  ", false, 27, 33, 7, Country.Aiyota, 1257));
-        rookies.Add(new player(1, 4, 4, 1, 4, 5, 7, 8, 7, 3, 4, 5, 19, "Dgenek Kvviiké ", false, 30, 36, 4, Country.Transhimalia, 1258));
-        rookies.Add(new player(1, 8, 6, 1, 1, 4, 4, 3, 8, 2, 8, 5, 21, "Kersuvi Himamosei ", false, 30, 35, 4, Country.Dotruga, 1259));
-        rookies.Add(new player(1, 6, 7, 1, 2, 1, 10, 8, 8, 1, 2, 6, 20, "Makan Savang ", false, 31, 32, 1, Country.Pyxanovia, 1260));
-        rookies.Add(new player(1, 7, 7, 1, 4, 1, 4, 5, 7, 1, 8, 10, 19, "Nagata Saikaku ", false, 28, 34, 2, Country.Transhimalia, 1261));
-        rookies.Add(new player(1, 5, 8, 2, 1, 4, 4, 1, 7, 2, 4, 7, 24, "Sovtanzax Kibla ", false, 29, 34, 6, Country.Blaist_Blaland, 1262));
-        rookies.Add(new player(1, 5, 4, 1, 2, 2, 10, 10, 4, 1, 1, 8, 20, "Volkhardt Klostermann ", false, 28, 34, 6, Country.Tri_National_Dominion, 1263));
-        rookies.Add(new player(1, 7, 5, 4, 4, 4, 3, 5, 7, 4, 8, 8, 22, "Volkhardt Schröpfer ", false, 32, 35, 1, Country.Tri_National_Dominion, 1264));
-        rookies.Add(new player(2, 4, 3, 5, 3, 1, 5, 4, 6, 3, 10, 10, 21, "Alfred Alt ", false, 29, 34, 6, Country.Tri_National_Dominion, 1265));
-        rookies.Add(new player(2, 8, 4, 1, 1, 2, 3, 2, 7, 5, 3, 8, 23, "Anthony Mendez", false, 32, 33, 8, Country.Wyverncliff, 1266));
-        rookies.Add(new player(2, 5, 5, 5, 2, 3, 6, 4, 7, 7, 6, 5, 21, "Boḿa Pámhóǵwá ", false, 31, 32, 1, Country.Nausicaa, 1267));
-        rookies.Add(new player(2, 6, 6, 6, 6, 1, 7, 4, 7, 6, 2, 5, 23, "Ingo Samter ", false, 31, 32, 1, Country.Tri_National_Dominion, 1268));
-        rookies.Add(new player(2, 7, 4, 3, 1, 2, 8, 2, 9, 6, 8, 7, 22, "James Dunn", false, 28, 31, 4, Country.Wyverncliff, 1269));
-        rookies.Add(new player(2, 4, 4, 5, 3, 5, 10, 6, 5, 2, 8, 6, 22, "Joshua Doney", false, 27, 30, 4, Country.Wyverncliff, 1270));
-        rookies.Add(new player(2, 6, 6, 7, 2, 3, 6, 5, 7, 5, 6, 8, 22, "Liko Menorath ", false, 28, 33, 3, Country.Bielosia, 1271));
-        rookies.Add(new player(2, 6, 4, 2, 2, 7, 3, 10, 7, 3, 5, 7, 24, "Louis Wagenseil ", false, 27, 33, 1, Country.Tri_National_Dominion, 1272));
-        rookies.Add(new player(2, 4, 5, 3, 5, 2, 6, 4, 8, 4, 5, 7, 20, "Matthew Vermillion", false, 28, 34, 6, Country.Ethanthova, 1273));
-        rookies.Add(new player(3, 6, 6, 6, 1, 3, 4, 3, 2, 9, 1, 7, 23, "Atumundikeili Bexote ", false, 30, 35, 3, Country.Dotruga, 1274));
-        rookies.Add(new player(3, 6, 3, 2, 6, 4, 2, 1, 4, 9, 9, 5, 21, "Ydar Jeem ", false, 32, 34, 4, Country.Bongatar, 1275));
-        rookies.Add(new player(4, 8, 4, 7, 6, 4, 1, 1, 2, 4, 5, 7, 22, "Alumobei Hialerko ", false, 30, 33, 5, Country.Dotruga, 1276));
-        rookies.Add(new player(4, 7, 2, 5, 6, 3, 6, 4, 2, 5, 4, 7, 21, "Ametsuchi Hideki ", false, 27, 31, 3, Country.Aeridani, 1277));
-        rookies.Add(new player(4, 8, 4, 3, 1, 7, 6, 4, 2, 1, 5, 6, 20, "Charles Alday", false, 27, 32, 4, Country.Ethanthova, 1278));
-        rookies.Add(new player(4, 3, 4, 4, 4, 6, 5, 7, 2, 5, 2, 9, 24, "Havika Phothisarath ", false, 31, 32, 3, Country.Lyintaria, 1279));
-        rookies.Add(new player(4, 10, 1, 4, 3, 4, 9, 1, 3, 4, 4, 9, 21, "Kimo Rattanavongsa ", false, 28, 31, 3, Country.Bielosia, 1280));
-        rookies.Add(new player(4, 9, 3, 5, 3, 4, 10, 5, 2, 1, 1, 7, 22, "Leilani Thammavong ", false, 27, 31, 6, Country.Pyxanovia, 1281));
-        rookies.Add(new player(4, 9, 3, 2, 1, 3, 7, 5, 1, 4, 3, 10, 24, "Ńà Nhòà ", false, 31, 34, 6, Country.Pentadominion, 1282));
-        rookies.Add(new player(4, 1, 1, 2, 3, 5, 2, 5, 2, 3, 9, 6, 21, "Timblejoorany  ", false, 31, 35, 7, Country.Aiyota, 1283));
-        rookies.Add(new player(4, 3, 3, 7, 7, 7, 3, 2, 1, 5, 5, 7, 22, "Weer  ", false, 27, 30, 7, Country.Aiyota, 1284));
-        rookies.Add(new player(4, 8, 4, 8, 4, 6, 3, 5, 1, 3, 10, 7, 24, "Yuguchi Izo ", false, 31, 34, 1, Country.Transhimalia, 1285));
-        rookies.Add(new player(5, 6, 1, 3, 3, 8, 5, 4, 1, 2, 7, 7, 20, "Hannes Kluck ", false, 29, 32, 3, Country.Tri_National_Dominion, 1286));
-        rookies.Add(new player(5, 5, 1, 7, 4, 8, 2, 3, 4, 2, 10, 6, 19, "Kawata Hakuseki ", false, 30, 35, 3, Country.Transhimalia, 1287));
-        rookies.Add(new player(5, 5, 2, 4, 2, 4, 5, 8, 1, 3, 4, 9, 23, "Kye Genevong ", false, 29, 35, 7, Country.Bielosia, 1288));
-        rookies.Add(new player(5, 7, 3, 5, 6, 4, 5, 3, 2, 4, 5, 10, 21, "lu  ", false, 28, 31, 2, Country.Norkute, 1289));
-        rookies.Add(new player(5, 2, 1, 7, 3, 8, 3, 8, 3, 1, 2, 8, 22, "Tugano Bexosek ", false, 32, 34, 4, Country.Dotruga, 1290));
-        rookies.Add(new player(5, 3, 1, 6, 4, 5, 8, 4, 3, 2, 10, 10, 22, "Tusaro Elolapo ", false, 28, 34, 5, Country.Dotruga, 1291));
-        rookies.Add(new player(5, 6, 8, 1, 1, 5, 5, 4, 1, 7, 9, 8, 21, "Warren Radcliffe", false, 31, 33, 5, Country.Ethanthova, 1292));
-        rookies.Add(new player(5, 2, 1, 5, 4, 3, 1, 4, 3, 4, 6, 10, 23, "Watsuji Sumiteru ", false, 32, 36, 6, Country.Barsein, 1293));
+
+        string[] players = File.ReadAllText("college.fibusave").Split(new string[] { "<player>" }, StringSplitOptions.None);
+        for (int i = 1; i <players.Length; i++)
+        {
+            rookies.Add(new player(players[i]));
+        }
+        
+
+        /*rookies.Add(player.GeneratePlayer(1, Country.Wyverncliff, 47, 21, 3, 27, 28, r));
+        rookies.Add(player.GeneratePlayer(1, Country.Wyverncliff, 76, 22, 8, 29, 32, r));
+        rookies.Add(player.GeneratePlayer(1, Country.Wyverncliff, 65, 20, 6, 27, 31, r));
+        rookies.Add(player.GeneratePlayer(1, Country.Dotruga, 53, 23, 6, 27, 32, r));
+        rookies.Add(player.GeneratePlayer(1, Country.Dotruga, 68, 21, 2, 27, 32, r));
+        rookies.Add(player.GeneratePlayer(1, Country.Dotruga, 73, 19, 7, 31, 35, r));
+        rookies.Add(player.GeneratePlayer(1, Country.Dotruga, 55, 19, 4, 32, 36, r));
+        rookies.Add(player.GeneratePlayer(1, Country.Tjedigar, 62, 19, 3, 29, 30, r));
+        rookies.Add(player.GeneratePlayer(1, Country.Tjedigar, 64, 19, 4, 24, 25, r));
+        rookies.Add(player.GeneratePlayer(1, Country.Auspikitan, 69, 23, 5, 28, 31, r));
+        rookies.Add(player.GeneratePlayer(1, Country.Auspikitan, 71, 22, 2, 29, 31, r));
+        rookies.Add(player.GeneratePlayer(1, Country.Darvincia, 60, 19, 10, 31, 33, r));
+        rookies.Add(player.GeneratePlayer(1, Country.Blaist_Blaland, 57, 22, 5, 25, 29, r));
+        rookies.Add(player.GeneratePlayer(1, Country.Holykol, 60, 19, 8, 26, 28, r));
+        rookies.Add(player.GeneratePlayer(1, Country.Shmupland, 67, 23, 6, 29, 34, r));
+        rookies.Add(player.GeneratePlayer(1, Country.Ethanthova, 68, 22, 2, 31, 34, r));
+        rookies.Add(player.GeneratePlayer(1, Country.Ethanthova, 60, 23, 6, 30, 33, r));
+        rookies.Add(player.GeneratePlayer(1, Country.Ethanthova, 52, 19, 3, 26, 28, r));
+        rookies.Add(player.GeneratePlayer(1, Country.Nausicaa, 50, 21, 3, 28, 32, r));
+        rookies.Add(player.GeneratePlayer(1, Country.Lyintaria, 42, 20, 3, 30, 33, r));
+        rookies.Add(player.GeneratePlayer(1, Country.Lyintaria, 64, 23, 6, 28, 31, r));
+        rookies.Add(player.GeneratePlayer(1, Country.Aovensiiv, 40, 19, 6, 29, 33, r));
+        rookies.Add(player.GeneratePlayer(1, Country.Eqkirium, 60, 23, 7, 30, 35, r));
+        rookies.Add(player.GeneratePlayer(1, Country.Eqkirium, 65, 21, 6, 27, 28, r));
+        rookies.Add(player.GeneratePlayer(1, Country.Auspikitan, 70, 21, 4, 29, 34, r));
+        rookies.Add(player.GeneratePlayer(1, Country.Sagua, 56, 19, 3, 32, 36, r));
+        rookies.Add(player.GeneratePlayer(1, Country.Sagua, 50, 21, 5, 29, 30, r));
+        rookies.Add(player.GeneratePlayer(1, Country.Sagua, 71, 19, 8, 28, 32, r));
+        rookies.Add(player.GeneratePlayer(1, Country.Barsein, 62, 19, 7, 27, 32, r));
+        rookies.Add(player.GeneratePlayer(2, Country.Ethanthova, 82, 22, 5, 27, 30, r));
+        rookies.Add(player.GeneratePlayer(2, Country.Dotruga, 75, 22, 8, 30, 33, r));
+        rookies.Add(player.GeneratePlayer(2, Country.Wyverncliff, 72, 20, 7, 26, 30, r));
+        rookies.Add(player.GeneratePlayer(2, Country.Dotruga, 68, 22, 3, 28, 32, r));
+        rookies.Add(player.GeneratePlayer(2, Country.Dotruga, 68, 21, 4, 29, 31, r));
+        rookies.Add(player.GeneratePlayer(2, Country.Bielosia, 66, 21, 5, 26, 28, r));
+        rookies.Add(player.GeneratePlayer(2, Country.Bielosia, 64, 19, 5, 30, 33, r));
+        rookies.Add(player.GeneratePlayer(2, Country.Solea, 60, 19, 5, 27, 28, r));
+        rookies.Add(player.GeneratePlayer(2, Country.Shmupland, 60, 19, 3, 28, 31, r));
+        rookies.Add(player.GeneratePlayer(2, Country.Aeridani, 69, 22, 4, 26, 28, r));
+        rookies.Add(player.GeneratePlayer(2, Country.Czalliso, 59, 21, 7, 28, 30, r));
+        rookies.Add(player.GeneratePlayer(2, Country.Aiyota, 57, 19, 5, 30, 32, r));
+        rookies.Add(player.GeneratePlayer(2, Country.Auspikitan, 57, 21, 6, 30, 33, r));
+        rookies.Add(player.GeneratePlayer(2, Country.Aeridani, 53, 20, 3, 28, 32, r));
+        rookies.Add(player.GeneratePlayer(2, Country.Dtersauuw_Sagua, 53, 19, 8, 30, 31, r));
+        rookies.Add(player.GeneratePlayer(2, Country.Darvincia, 51, 20, 5, 26, 29, r));
+        rookies.Add(player.GeneratePlayer(2, Country.Sagua, 50, 20, 6, 30, 33, r));
+        rookies.Add(player.GeneratePlayer(2, Country.Aahrus, 44, 21, 4, 27, 28, r));
+        rookies.Add(player.GeneratePlayer(3, Country.Dotruga, 73, 20, 10, 26, 30, r));
+        rookies.Add(player.GeneratePlayer(3, Country.Lyintaria, 70, 21, 4, 29, 31, r));
+        rookies.Add(player.GeneratePlayer(3, Country.Wyverncliff, 67, 23, 5, 28, 30, r));
+        rookies.Add(player.GeneratePlayer(3, Country.Holykol, 66, 21, 1, 29, 33, r));
+        rookies.Add(player.GeneratePlayer(3, Country.Bielosia, 65, 21, 10, 29, 32, r));
+        rookies.Add(player.GeneratePlayer(3, Country.Sagua, 63, 19, 3, 26, 30, r));
+        rookies.Add(player.GeneratePlayer(3, Country.Darvincia, 60, 21, 5, 28, 30, r));
+        rookies.Add(player.GeneratePlayer(3, Country.Tjedigar, 59, 19, 3, 27, 29, r));
+        rookies.Add(player.GeneratePlayer(3, Country.Barsein, 58, 23, 8, 26, 29, r));
+        rookies.Add(player.GeneratePlayer(3, Country.Atapwa, 58, 22, 10, 27, 29, r));
+        rookies.Add(player.GeneratePlayer(3, Country.Oesa, 57, 20, 8, 26, 28, r));
+        rookies.Add(player.GeneratePlayer(3, Country.Nja, 55, 21, 7, 28, 31, r));
+        rookies.Add(player.GeneratePlayer(3, Country.Blaist_Blaland, 54, 19, 4, 29, 32, r));
+        rookies.Add(player.GeneratePlayer(3, Country.Barsein, 55, 22, 2, 28, 32, r));
+        rookies.Add(player.GeneratePlayer(3, Country.Transhimalia, 63, 19, 6, 29, 32, r));
+        rookies.Add(player.GeneratePlayer(3, Country.Czalliso, 61, 20, 4, 27, 29, r));
+        rookies.Add(player.GeneratePlayer(3, Country.Aiyota, 62, 20, 6, 29, 31, r));
+        rookies.Add(player.GeneratePlayer(3, Country.Aeridani, 64, 19, 7, 26, 29, r));
+        rookies.Add(player.GeneratePlayer(3, Country.Aeridani, 53, 21, 3, 28, 32, r));
+        rookies.Add(player.GeneratePlayer(3, Country.Teralm, 51, 23, 4, 26, 29, r));
+        rookies.Add(player.GeneratePlayer(3, Country.Timbalta, 50, 22, 2, 28, 30, r));
+        rookies.Add(player.GeneratePlayer(3, Country.Height_Sagua, 48, 22, 5, 26, 30, r));
+        rookies.Add(player.GeneratePlayer(3, Country.Lyintaria, 44, 22, 8, 27, 30, r));
+        rookies.Add(player.GeneratePlayer(3, Country.Wyverncliff, 46, 22, 4, 27, 30, r));
+        rookies.Add(player.GeneratePlayer(3, Country.Dotruga, 47, 20, 2, 27, 29, r));
+        rookies.Add(player.GeneratePlayer(4, Country.Solea, 85, 21, 8, 26, 31, r));
+        rookies.Add(player.GeneratePlayer(4, Country.Auspikitan, 74, 22, 7, 28, 29, r));
+        rookies.Add(player.GeneratePlayer(4, Country.Auspikitan, 75, 19, 4, 29, 30, r));
+        rookies.Add(player.GeneratePlayer(4, Country.Auspikitan, 42, 20, 4, 27, 31, r));
+        rookies.Add(player.GeneratePlayer(4, Country.Wyverncliff, 67, 20, 5, 29, 31, r));
+        rookies.Add(player.GeneratePlayer(4, Country.Bielosia, 56, 19, 6, 30, 34, r));
+        rookies.Add(player.GeneratePlayer(4, Country.Pyxanovia, 45, 22, 5, 28, 30, r));
+        rookies.Add(player.GeneratePlayer(4, Country.Dotruga, 80, 19, 5, 27, 29, r));
+        rookies.Add(player.GeneratePlayer(4, Country.Dotruga, 67, 22, 4, 28, 29, r));
+        rookies.Add(player.GeneratePlayer(4, Country.Dotruga, 66, 19, 5, 28, 30, r));
+        rookies.Add(player.GeneratePlayer(4, Country.Helvaena, 70, 22, 5, 26, 27, r));
+        rookies.Add(player.GeneratePlayer(4, Country.Shmupland, 47, 21, 6, 29, 33, r));
+        rookies.Add(player.GeneratePlayer(4, Country.Tri_National_Dominion, 55, 21, 6, 28, 32, r));
+        rookies.Add(player.GeneratePlayer(4, Country.Ethanthova, 58, 23, 8, 28, 31, r));
+        rookies.Add(player.GeneratePlayer(4, Country.Ethanthova, 63, 22, 6, 28, 32, r));
+        rookies.Add(player.GeneratePlayer(4, Country.Ipal, 47, 22, 6, 29, 32, r));
+        rookies.Add(player.GeneratePlayer(4, Country.Tjedigar, 71, 20, 2, 27, 28, r));
+        rookies.Add(player.GeneratePlayer(4, Country.Tjedigar, 63, 19, 6, 29, 32, r));
+        rookies.Add(player.GeneratePlayer(4, Country.Teralm, 57, 23, 6, 29, 32, r));
+        rookies.Add(player.GeneratePlayer(4, Country.Ipal, 60, 22, 4, 28, 30, r));
+        rookies.Add(player.GeneratePlayer(4, Country.Aeridani, 51, 19, 5, 29, 33, r));
+        rookies.Add(player.GeneratePlayer(4, Country.Aahrus, 42, 22, 5, 25, 27, r));
+        rookies.Add(player.GeneratePlayer(4, Country.Transhimalia, 37, 23, 6, 28, 29, r));
+        rookies.Add(player.GeneratePlayer(4, Country.Dtersauuw_Sagua, 46, 23, 1, 28, 29, r));
+        rookies.Add(player.GeneratePlayer(4, Country.Czalliso, 48, 21, 4, 29, 30, r));
+        rookies.Add(player.GeneratePlayer(4, Country.Aiyota, 51, 21, 5, 28, 31, r));
+        rookies.Add(player.GeneratePlayer(4, Country.Bongatar, 52, 20, 10, 28, 31, r));
+        rookies.Add(player.GeneratePlayer(5, Country.Holy_Yektonisa, 82, 23, 6, 27, 31, r));
+        rookies.Add(player.GeneratePlayer(5, Country.Bielosia, 59, 19, 8, 28, 29, r));
+        rookies.Add(player.GeneratePlayer(5, Country.Darvincia, 67, 22, 2, 27, 30, r));
+        rookies.Add(player.GeneratePlayer(5, Country.Eksola, 64, 22, 7, 29, 33, r));
+        rookies.Add(player.GeneratePlayer(5, Country.Kolauk, 62, 22, 8, 28, 29, r));
+        rookies.Add(player.GeneratePlayer(5, Country.Wyverncliff, 68, 20, 3, 29, 31, r));
+        rookies.Add(player.GeneratePlayer(5, Country.Pyxanovia, 64, 21, 6, 28, 29, r));
+        rookies.Add(player.GeneratePlayer(5, Country.Pyxanovia, 60, 21, 1, 26, 27, r));
+        rookies.Add(player.GeneratePlayer(5, Country.Shmupland, 71, 22, 7, 27, 31, r));
+        rookies.Add(player.GeneratePlayer(5, Country.Helvaena, 68, 23, 6, 29, 31, r));
+        rookies.Add(player.GeneratePlayer(5, Country.Lyintaria, 66, 20, 2, 28, 31, r));
+        rookies.Add(player.GeneratePlayer(5, Country.Dotruga, 77, 21, 7, 28, 30, r));
+        rookies.Add(player.GeneratePlayer(5, Country.Dotruga, 65, 21, 3, 27, 30, r));
+        rookies.Add(player.GeneratePlayer(5, Country.Elvine, 63, 22, 8, 28, 32, r));
+        rookies.Add(player.GeneratePlayer(5, Country.Tjedigar, 67, 22, 3, 29, 33, r));
+        rookies.Add(player.GeneratePlayer(5, Country.Key_to_Don, 58, 21, 9, 27, 31, r));
+        rookies.Add(player.GeneratePlayer(5, Country.Sagua, 52, 21, 5, 26, 27, r));
+        rookies.Add(player.GeneratePlayer(5, Country.Barsein, 47, 23, 3, 28, 29, r));
+        rookies.Add(player.GeneratePlayer(5, Country.Blaist_Blaland, 56, 19, 6, 29, 33, r));
+        rookies.Add(player.GeneratePlayer(5, Country.Height_Sagua, 77, 19, 6, 27, 31, r));
+        rookies.Add(player.GeneratePlayer(5, Country.Aiyota, 68, 21, 4, 28, 29, r));
+        rookies.Add(player.GeneratePlayer(5, Country.Aeridani, 76, 23, 3, 29, 33, r));*/
+
+
 
 
     }

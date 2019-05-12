@@ -22,16 +22,119 @@ public class player : IComparable<player>
     public double[] ratings;
     protected Contract contract;
     protected PlayerRecords playerRecords;
-    public static player GeneratePlayer(int pos, Country country, int overall)
+    /*
+     * 0: Inside
+     * 1: Jump
+     * 7: Three Point
+     * 6: Passing
+     * 2: Shot Contest
+     * 3: Defense IQ
+     * 4: Jumping
+     * 5: Seperation
+     * 8: Stamina
+     */
+     public override string ToString()
+    {
+        return name + " " + getOverall().ToString("0.##");
+    }
+    private static int[][] probabilites = new int[][] {new int[]{ 25, 5, 15, 15, 30, 15, 5, 2 }, new int[]{ 25, 10, 15, 15, 20, 15, 10, 5 }, new int[] { 20, 10, 15, 15, 15, 15, 10, 5 }, new int[] { 15, 25, 20, 20, 5, 15, 15, 15 }, new int[] { 20, 20, 15, 15, 5, 25, 10, 15 },new int[] { 10, 20, 15, 15, 10, 15, 35, 20 } };
+    public static player GeneratePlayer(int pos, Country country, int overall, int age, int development, int peakStart, int peakEnd, FormulaBasketball.Random r)
     {
         NameGenerator gen = NameGenerator.Instance();
         String name = gen.GenerateName(country);
+        overall += 5;
+        int[] ratings = new int[] {1,1,1,1,1,1,1,1,r.Next(5,10), r.Next(1,10) };
+
+        double currentOverall = getOverall(pos, ratings);
+        int[] selectedProbability;
+        if (pos < 3 || (pos == 3 && r.NextBool()))
+        {
+            selectedProbability = probabilites[pos - 1];
+        }
+        else
+        {
+            selectedProbability = probabilites[pos];
+        }
+        int sum = 0;
+        foreach(int num in selectedProbability)
+        {
+            sum += num;
+        }
+
+        int selected = r.Next(sum);
+        int currSum = 0;
+        int i;
+        while (currentOverall < overall)
+        {
+            selected = r.Next(sum);
+            currSum = 0;
+            for (i = 0; i < selectedProbability.Length - 1; i++)
+            {
+                if (selected < selectedProbability[i] + currSum)
+                {
+                    break;
+                }
+                currSum += selectedProbability[i];
+            }
+            if (ratings[i] == 10) continue;
+            ratings[i]++;
+            currentOverall = getOverall(pos, ratings);
+        }
+        selected = r.Next(sum);
+        currSum = 0;
+        for (i = 0; i < selectedProbability.Length - 1; i++)
+        {
+            if (selected < selectedProbability[i] + currSum)
+            {
+                break;
+            }
+            currSum += selectedProbability[i];
+        }
+        if (ratings[i] != 10)
+           ratings[i]++;
+        return new player(pos, ratings, age, name, country, development, peakStart, peakEnd, r);
         
-        
+    }
+    public player(int pos, int[] ratings, int age, string name, Country country, int development, int peakStart, int peakEnd,  FormulaBasketball.Random r)
+    {
+        this.ratings = new double[11];
+        stats = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        gameStats = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        careerStats = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        stamina = 100;
+
+        this.name = name;
+        this.age = age;
+        this.position = pos;
+        this.country = country;
+        this.development = development;
+        this.peakStart = peakStart;
+        this.peakEnd = peakEnd;
+
+        if(r.NextBool())
+        {
+            this.ratings[0] = Math.Max(1, ratings[0] - r.Next(1, 3)) * 10 + r.Next(-5, 5);
+            this.ratings[1] = ratings[0] *10 + r.Next(-5, 5);
+        }
+        else
+        {
+            this.ratings[1] = Math.Max(1, ratings[0] - r.Next(1, 3)) * 10 + r.Next(-5, 5);
+            this.ratings[0] = ratings[0] * 10 + r.Next(-5, 5);
+        }
+        this.ratings[2] = ratings[1] * 10 + r.Next(-5, 5);
+        this.ratings[3] = ratings[2] * 10 + r.Next(-5, 5);
+        this.ratings[4] = ratings[3] * 10 + r.Next(-5, 5);
+        this.ratings[5] = ratings[4] * 10 + r.Next(-5, 5);
+        this.ratings[6] = ratings[5] * 10 + r.Next(-5, 5);
+        this.ratings[7] = ratings[6] * 10 + r.Next(-5, 5);
+        this.ratings[8] = ratings[8] * 10 + r.Next(-5, 5);
+        this.ratings[9] = ratings[7] * 10 + r.Next(-5, 5);
+        this.ratings[10] = ratings[9] * 10 + r.Next(-5, 5);
 
     }
     public string SavePlayer()
     {
+        if (contract == null) contract = new Contract(0, 0);
         String content = "<player>" + name + "," + playerAge + "," + country.ToString() + "," + contract.ToString() + "," + position + "," + peakStart + "," + peakEnd + "," + development;
         for (int i = 0; i < ratings.Length; i++ )
         {
@@ -76,6 +179,43 @@ public class player : IComparable<player>
         }
     }
     public player(CollegePlayer player, int id)
+    {
+        ratings = new double[11];
+        stats = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        gameStats = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        careerStats = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        country = player.GetCountry();
+        contract = null;
+
+        playerID = id;
+        position = player.position;
+        name = player.name;
+
+        shootingModifier = 0.0;
+        otherModifier = 0.0;
+        defensiveModifier = 0.0;
+        gameFouls = 0;
+
+        setLayupRating((int)player.getLayupRating(false));
+        setDunkRating((int)player.getDunkRating(false));
+        setJumpShotRating((int)player.getJumpShotRating(false));
+        setThreeShotRating((int)player.getThreeShotRating(false));
+        setDurabilityRating((int)player.getDurabilityRating(false));
+        setShotContestRating((int)player.getShotContestRating(false));
+        setDefenseIQRating((int)player.getDefenseIQRating(false));
+        setJumpingRating((int)player.getJumpingRating(false));
+        setSeperation((int)player.getSeperation(false));
+        setPassing((int)player.getPassing(false));
+        setStaminaRating((int)player.getStaminaRating(false));
+
+        stamina = 100;
+
+        playerAge = player.age;
+        peakStart = player.peakStart;
+        peakEnd = player.peakEnd;
+        development = player.development;
+    }
+    public player(player player, int id)
     {
         ratings = new double[11];
         stats = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
@@ -1773,6 +1913,7 @@ public class player : IComparable<player>
      * ratings[9] = threepoint
      * ratings[10] = durability
      */
+
     private double previousOverall = 0;
     public double GetOldOverall()
     {
@@ -1853,80 +1994,93 @@ public class player : IComparable<player>
     /*
      * 0: Inside
      * 1: Jump
-     * 2: Three Point
-     * 3: Passing
-     * 4: Shot Contest
-     * 5: Defense IQ
-     * 6: Jumping
-     * 7: Seperation
+     * 7: Three Point
+     * 6: Passing
+     * 2: Shot Contest
+     * 3: Defense IQ
+     * 4: Jumping
+     * 5: Seperation
      * 8: Stamina
-     */ 
-    public double getOverall(int pos, double[] rating)
+     */
+    /*
+* Ratings: 
+* 
+* 
+* collegeProbabilties[1] = inside
+* collegeProbabilties[2] = jumpshot
+* collegeProbabilties[3] = shot contest
+* collegeProbabilties[4] = defense iq
+* collegeProbabilties[5] = jumping
+* collegeProbabilties[6] = seperation
+* collegeProbabilties[7] = passing
+* collegeProbabilties[8] = threepoint
+*/
+    public static double getOverall(int pos, int[] rating)
     {
         double retVal = 0.0;
         if (pos == 1)
         {
-            retVal += rating[0] * 1.4;
-            retVal += rating[1] * 1;
-            retVal += rating[2] * .7;
-            retVal += rating[3] * .6;
-            retVal += rating[4] * 1.4;
-            retVal += rating[5] * 1.4;
-            retVal += rating[6] * 1.4;
-            retVal += rating[7] * 1.6;
-            retVal += rating[8] * .5;
+            retVal += rating[0] * 14;
+            retVal += rating[1] * 10;
+            retVal += rating[7] * 7;
+            retVal += rating[6] * 6;
+            retVal += rating[2] * 14;
+            retVal += rating[3] * 14;
+            retVal += rating[4] * 14;
+            retVal += rating[5] * 16;
+            retVal += rating[8] * 5;
 
         }
         // 8
         else if (pos == 2)
         {
-            retVal += rating[0] * 1.4;
-            retVal += rating[1] * 1.1;
-            retVal += rating[2] * .6;
-            retVal += rating[3] * .6;
-            retVal += rating[4] * 1.4;
-            retVal += rating[5] * 1.4;
-            retVal += rating[6] * 1.5;
-            retVal += rating[7] * 1.6;
-            retVal += rating[8] * .5;
+            retVal += rating[0] * 14;
+            retVal += rating[1] * 11;
+            retVal += rating[7] * 6;
+            retVal += rating[6] * 6;
+            retVal += rating[2] * 14;
+            retVal += rating[3] * 14;
+            retVal += rating[4] * 15;
+            retVal += rating[5] * 16;
+            retVal += rating[8] * 5;
 
         }
         // 9
         else if (pos == 3)
         {
-            retVal += rating[0] * 1.3;
-            retVal += rating[1] * 1.2;
-            retVal += rating[2] * 1;
-            retVal += rating[3] * 1;
-            retVal += rating[4] * 1.2;
-            retVal += rating[5] * 1.2;
-            retVal += rating[6] * 1;
-            retVal += rating[7] * 1.6;
-            retVal += rating[8] * .5;
+            retVal += rating[0] * 13;
+            retVal += rating[1] * 12;
+            retVal += rating[7] * 10;
+            retVal += rating[6] * 10;
+            retVal += rating[2] * 12;
+            retVal += rating[3] * 12;
+            retVal += rating[4] * 10;
+            retVal += rating[5] * 16;
+            retVal += rating[8] * 5;
         }
         else if (pos == 4)
         {
-            retVal += rating[0] * 1.2;
-            retVal += rating[1] * 1.4;
-            retVal += rating[2] * 1.4;
-            retVal += rating[3] * 1.1;
-            retVal += rating[4] * 1.05;
-            retVal += rating[5] * 1.05;
-            retVal += rating[6] * .7;
-            retVal += rating[7] * 1.5;
-            retVal += rating[8] * .5;
+            retVal += rating[0] * 12;
+            retVal += rating[1] * 14;
+            retVal += rating[7] * 14;
+            retVal += rating[6] * 11;
+            retVal += rating[2] * 10.5;
+            retVal += rating[3] * 10.5;
+            retVal += rating[4] * 7;
+            retVal += rating[5] * 15;
+            retVal += rating[8] * 5;
         }
         else
         {
-            retVal += rating[0] * 1.2;
-            retVal += rating[1] * 1.2;
-            retVal += rating[2] * 1.2;
-            retVal += rating[3] * 1.5;
-            retVal += rating[4] * 1.3;
-            retVal += rating[5] * 1.3;
-            retVal += rating[6] * .6;
-            retVal += rating[7] * 1;
-            retVal += rating[8] * .5;
+            retVal += rating[0] * 12;
+            retVal += rating[1] * 12;
+            retVal += rating[7] * 12;
+            retVal += rating[6] * 15;
+            retVal += rating[2] * 13;
+            retVal += rating[3] * 13;
+            retVal += rating[4] * 6;
+            retVal += rating[5] * 10;
+            retVal += rating[8] * 5;
         }
 
         retVal = Math.Min(99.99, ((retVal / 10) / 90) * 100);

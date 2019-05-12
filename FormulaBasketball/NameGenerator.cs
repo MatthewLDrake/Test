@@ -82,7 +82,9 @@ public class NameGenerator
 
     public string GenerateName(Country country)
     {
-        return names[countryConvert[country].GetCountry()].GetName();
+        if (countryConvert.ContainsKey(country))
+            return names[countryConvert[country].GetCountry()].GetName();
+        else return country.ToString() + " Player";
     }
 }
 class ActualCountry

@@ -74,7 +74,7 @@ namespace FormulaBasketball
                 else t.DraftStrategy = DraftStrategy.WIN_NOW;
             }
             //create.getFreeAgents().AdvanceSeason();
-            rookies = ConvertToProPlayers(create.GetCollege().GetRookies());
+            rookies = create.GetRookies();
             create.SetupSalaryInfo();
             this.r = r;
             this.teamNum = teamNum;
@@ -90,7 +90,7 @@ namespace FormulaBasketball
                 }
             }
 
-        }       
+        }
 
         private void resignPlayersButton_Click(object sender, EventArgs e)
         {
