@@ -38,6 +38,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.pickNum,
@@ -46,9 +47,10 @@
             this.Player});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(378, 535);
+            this.dataGridView1.Size = new System.Drawing.Size(756, 1029);
             this.dataGridView1.TabIndex = 0;
             // 
             // pickNum
@@ -56,21 +58,21 @@
             this.pickNum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.pickNum.HeaderText = "Pick Number";
             this.pickNum.Name = "pickNum";
-            this.pickNum.Width = 93;
+            this.pickNum.Width = 179;
             // 
             // team
             // 
             this.team.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.team.HeaderText = "Team";
             this.team.Name = "team";
-            this.team.Width = 59;
+            this.team.Width = 111;
             // 
             // Position
             // 
             this.Position.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Position.HeaderText = "Position";
             this.Position.Name = "Position";
-            this.Position.Width = 69;
+            this.Position.Width = 134;
             // 
             // Player
             // 
@@ -80,10 +82,11 @@
             // 
             // MockDraftView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(378, 535);
+            this.ClientSize = new System.Drawing.Size(756, 1029);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "MockDraftView";
             this.Text = "MockDraftView";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

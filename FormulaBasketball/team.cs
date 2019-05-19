@@ -47,6 +47,7 @@ public class team : IComparable<team>,  IEnumerable<player>
     private int playoffAppearances;
     private int leagueChampionships, conferenceChampionships, divisionChampionships;
     private Scout scout;
+    public int elo;
     public string SaveTeam(bool affiliate = false)
     {
         string content = "<team>" + teamName + "," + allTime.GetWins() + "," + allTime.GetLosses() + "," + allTimePlayoffs.GetWins() + "," + allTimePlayoffs.GetLosses() +"\n";
@@ -67,6 +68,9 @@ public class team : IComparable<team>,  IEnumerable<player>
     public team(String teamInfo, String affiliate, FormulaBasketball.Random r, bool isAffiliate)
     {
         playersPerPos = new int[5];
+
+        this.r = r;
+        elo = 1200;
 
         String[] lines = teamInfo.Split('\n');
         String[] arr = lines[0].Split(',');

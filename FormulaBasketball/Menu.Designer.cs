@@ -36,13 +36,16 @@
             this.advanceButtons = new System.Windows.Forms.Button();
             this.loadButton = new System.Windows.Forms.Button();
             this.mockDraft = new System.Windows.Forms.Button();
+            this.eventButton = new System.Windows.Forms.Button();
+            this.eventCounter = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // resignPlayersButton
             // 
-            this.resignPlayersButton.Location = new System.Drawing.Point(29, 21);
+            this.resignPlayersButton.Location = new System.Drawing.Point(58, 40);
+            this.resignPlayersButton.Margin = new System.Windows.Forms.Padding(6);
             this.resignPlayersButton.Name = "resignPlayersButton";
-            this.resignPlayersButton.Size = new System.Drawing.Size(128, 23);
+            this.resignPlayersButton.Size = new System.Drawing.Size(256, 44);
             this.resignPlayersButton.TabIndex = 2;
             this.resignPlayersButton.Text = "Resign Players";
             this.resignPlayersButton.UseVisualStyleBackColor = true;
@@ -50,9 +53,10 @@
             // 
             // viewRoster
             // 
-            this.viewRoster.Location = new System.Drawing.Point(163, 21);
+            this.viewRoster.Location = new System.Drawing.Point(326, 40);
+            this.viewRoster.Margin = new System.Windows.Forms.Padding(6);
             this.viewRoster.Name = "viewRoster";
-            this.viewRoster.Size = new System.Drawing.Size(128, 23);
+            this.viewRoster.Size = new System.Drawing.Size(256, 44);
             this.viewRoster.TabIndex = 4;
             this.viewRoster.Text = "View Roster";
             this.viewRoster.UseVisualStyleBackColor = true;
@@ -60,9 +64,10 @@
             // 
             // viewDLeagueRoster
             // 
-            this.viewDLeagueRoster.Location = new System.Drawing.Point(163, 50);
+            this.viewDLeagueRoster.Location = new System.Drawing.Point(326, 96);
+            this.viewDLeagueRoster.Margin = new System.Windows.Forms.Padding(6);
             this.viewDLeagueRoster.Name = "viewDLeagueRoster";
-            this.viewDLeagueRoster.Size = new System.Drawing.Size(128, 23);
+            this.viewDLeagueRoster.Size = new System.Drawing.Size(256, 44);
             this.viewDLeagueRoster.TabIndex = 5;
             this.viewDLeagueRoster.Text = "View DLeague Roster";
             this.viewDLeagueRoster.UseVisualStyleBackColor = true;
@@ -70,9 +75,10 @@
             // 
             // scoutButton
             // 
-            this.scoutButton.Location = new System.Drawing.Point(29, 50);
+            this.scoutButton.Location = new System.Drawing.Point(58, 96);
+            this.scoutButton.Margin = new System.Windows.Forms.Padding(6);
             this.scoutButton.Name = "scoutButton";
-            this.scoutButton.Size = new System.Drawing.Size(128, 23);
+            this.scoutButton.Size = new System.Drawing.Size(256, 44);
             this.scoutButton.TabIndex = 6;
             this.scoutButton.Text = "Scout";
             this.scoutButton.UseVisualStyleBackColor = true;
@@ -80,9 +86,10 @@
             // 
             // awardsButton
             // 
-            this.awardsButton.Location = new System.Drawing.Point(29, 79);
+            this.awardsButton.Location = new System.Drawing.Point(58, 152);
+            this.awardsButton.Margin = new System.Windows.Forms.Padding(6);
             this.awardsButton.Name = "awardsButton";
-            this.awardsButton.Size = new System.Drawing.Size(128, 23);
+            this.awardsButton.Size = new System.Drawing.Size(256, 44);
             this.awardsButton.TabIndex = 8;
             this.awardsButton.Text = "Awards Voting";
             this.awardsButton.UseVisualStyleBackColor = true;
@@ -90,9 +97,10 @@
             // 
             // advanceButtons
             // 
-            this.advanceButtons.Location = new System.Drawing.Point(163, 79);
+            this.advanceButtons.Location = new System.Drawing.Point(326, 152);
+            this.advanceButtons.Margin = new System.Windows.Forms.Padding(6);
             this.advanceButtons.Name = "advanceButtons";
-            this.advanceButtons.Size = new System.Drawing.Size(128, 23);
+            this.advanceButtons.Size = new System.Drawing.Size(256, 44);
             this.advanceButtons.TabIndex = 9;
             this.advanceButtons.Text = "Advance";
             this.advanceButtons.UseVisualStyleBackColor = true;
@@ -100,9 +108,10 @@
             // 
             // loadButton
             // 
-            this.loadButton.Location = new System.Drawing.Point(29, 108);
+            this.loadButton.Location = new System.Drawing.Point(58, 208);
+            this.loadButton.Margin = new System.Windows.Forms.Padding(6);
             this.loadButton.Name = "loadButton";
-            this.loadButton.Size = new System.Drawing.Size(128, 23);
+            this.loadButton.Size = new System.Drawing.Size(256, 44);
             this.loadButton.TabIndex = 10;
             this.loadButton.Text = "Load File";
             this.loadButton.UseVisualStyleBackColor = true;
@@ -110,19 +119,45 @@
             // 
             // mockDraft
             // 
-            this.mockDraft.Location = new System.Drawing.Point(163, 108);
+            this.mockDraft.Location = new System.Drawing.Point(326, 208);
+            this.mockDraft.Margin = new System.Windows.Forms.Padding(6);
             this.mockDraft.Name = "mockDraft";
-            this.mockDraft.Size = new System.Drawing.Size(128, 23);
+            this.mockDraft.Size = new System.Drawing.Size(256, 44);
             this.mockDraft.TabIndex = 11;
             this.mockDraft.Text = "View Mock Draft";
             this.mockDraft.UseVisualStyleBackColor = true;
             this.mockDraft.Click += new System.EventHandler(this.mockDraft_Click);
             // 
+            // eventButton
+            // 
+            this.eventButton.Location = new System.Drawing.Point(58, 264);
+            this.eventButton.Margin = new System.Windows.Forms.Padding(6);
+            this.eventButton.Name = "eventButton";
+            this.eventButton.Size = new System.Drawing.Size(256, 44);
+            this.eventButton.TabIndex = 12;
+            this.eventButton.Text = "View Events";
+            this.eventButton.UseVisualStyleBackColor = true;
+            this.eventButton.Click += new System.EventHandler(this.eventButton_Click);
+            // 
+            // eventCounter
+            // 
+            this.eventCounter.AutoSize = true;
+            this.eventCounter.BackColor = System.Drawing.Color.Red;
+            this.eventCounter.ForeColor = System.Drawing.Color.White;
+            this.eventCounter.Location = new System.Drawing.Point(290, 264);
+            this.eventCounter.Name = "eventCounter";
+            this.eventCounter.Size = new System.Drawing.Size(24, 25);
+            this.eventCounter.TabIndex = 13;
+            this.eventCounter.Text = "0";
+            this.eventCounter.Visible = false;
+            // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(339, 308);
+            this.ClientSize = new System.Drawing.Size(678, 592);
+            this.Controls.Add(this.eventCounter);
+            this.Controls.Add(this.eventButton);
             this.Controls.Add(this.mockDraft);
             this.Controls.Add(this.loadButton);
             this.Controls.Add(this.advanceButtons);
@@ -131,9 +166,11 @@
             this.Controls.Add(this.viewDLeagueRoster);
             this.Controls.Add(this.viewRoster);
             this.Controls.Add(this.resignPlayersButton);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Menu";
             this.Text = "Menu";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -147,5 +184,7 @@
         private System.Windows.Forms.Button advanceButtons;
         private System.Windows.Forms.Button loadButton;
         private System.Windows.Forms.Button mockDraft;
+        private System.Windows.Forms.Button eventButton;
+        private System.Windows.Forms.Label eventCounter;
     }
 }

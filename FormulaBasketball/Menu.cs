@@ -32,6 +32,10 @@ namespace FormulaBasketball
             InitializeComponent();
             this.create = create;
 
+            events = new List<Event>();
+            events.Add(new Event("Players from new countries enter the draft!", "Players from the nations of Helvaena have joined the draft for the first time in UBA history. The only question remaining is whether or not they will ever see the court."));
+            eventViewer = new EventViewer(events);
+            UpdatedEvents();
 
             string fileName = "college.fbcollege";
             FileStream fs = new FileStream(fileName, FileMode.Open);
@@ -91,7 +95,14 @@ namespace FormulaBasketball
             }
 
         }
-
+        private void UpdatedEvents()
+        {
+            int num = eventViewer.GetUnreadEvents();
+            eventCounter.Text = "" + num;
+            if (num == 0) eventCounter.Visible = false;
+            else eventCounter.Visible = true;
+            
+        }
         private void resignPlayersButton_Click(object sender, EventArgs e)
         {
             if (stage == 0)
@@ -255,6 +266,23 @@ namespace FormulaBasketball
                             create.getTeam(i).removePlayer(players);
                             create.getTeam(i).SetFree();
                         }
+                        FileStream createFS = new FileStream("Stage1Results.fbdata", FileMode.Create);
+
+                        // Construct a BinaryFormatter and use it to serialize the data to the stream.
+                        BinaryFormatter outFormatter = new BinaryFormatter();
+                        try
+                        {
+                            outFormatter.Serialize(createFS, create);
+                        }
+                        catch (SerializationException ex)
+                        {
+                            Console.WriteLine("Failed to serialize. Reason: " + ex.Message);
+                            throw;
+                        }
+                        finally
+                        {
+                            createFS.Close();
+                        }
                     }
                     else
                     {
@@ -331,6 +359,25 @@ namespace FormulaBasketball
                             }
                             create.getFreeAgents().UpdateOffers(temp, create);
                             teamNumbers.Add(temp[0].teamID);
+
+                            FileStream createFS = new FileStream("Stage" + stage + "Results.fbdata", FileMode.Create);
+
+                            // Construct a BinaryFormatter and use it to serialize the data to the stream.
+                            BinaryFormatter outFormatter = new BinaryFormatter();
+                            try
+                            {
+                                outFormatter.Serialize(createFS, create);
+                            }
+                            catch (SerializationException ex)
+                            {
+                                Console.WriteLine("Failed to serialize. Reason: " + ex.Message);
+                                throw;
+                            }
+                            finally
+                            {
+                                createFS.Close();
+                            }
+
                         }
 
                         create.getFreeAgents().UpdateOffers(offers, create);
@@ -466,6 +513,20 @@ namespace FormulaBasketball
             }
             MockDraftView mdv = new MockDraftView(currentDraft.GetMockedDraft(), picks);
             mdv.ShowDialog();
+            this.Visible = true;
+        }
+        private EventViewer eventViewer;
+        private List<Event> events;
+        private void eventButton_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            if(eventViewer == null)
+            {
+                eventViewer = new EventViewer(events);
+            }
+            eventViewer.GotSelected();
+            eventViewer.ShowDialog();
+            UpdatedEvents();
             this.Visible = true;
         }
     }    

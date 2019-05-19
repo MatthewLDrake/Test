@@ -129,12 +129,50 @@ public class createTeams
     {
         string[] data = info.Split(new string[] { "<team>" }, StringSplitOptions.None);
         teams = new List<team>();
+        dLeagueTeams = new List<team>();
         for(int i = 1; i < data.Length; i += 2)
         {
-            teams.Add(new team(data[i], data[i + 1], r, false));
+            team newTeam = new team(data[i], data[i + 1], r, false);
+            teams.Add(newTeam);
+            dLeagueTeams.Add(newTeam.GetAffiliate());
+        }
+        
+        for(int i = 0; i < teams.Count; i++)
+        {
+            for(int j = 0; j < teams.Count/2; j++)
+            {
+                game game = new game(null, teams[j], teams[31-j], r);
+                CalculateELO(ref teams[j].elo, ref teams[31-j].elo, game.getWinner() ? 1 : 0);
+                teams[j].AddResult(0, game.getAwayTeamScore(), game.getHomeTeamScore());
+                teams[31 - j].AddResult(0, game.getHomeTeamScore(), game.getAwayTeamScore());
+            }
+
+            team t = teams[31];
+            teams.Remove(t);
+            teams.Insert(1, t);
+            
+        }
+        foreach(team t in teams)
+        {
+            Console.WriteLine(t.ToString() + " - " + t.elo + "(" + t.getWins() + "-" + t.getLosses() + ")");
         }
 
+
     }
+    static double ExpectationToWin(int playerOneRating, int playerTwoRating)
+    {
+        return 1 / (1 + Math.Pow(10, (playerTwoRating - playerOneRating) / 400.0));
+    }
+    static void CalculateELO(ref int playerOneRating, ref int playerTwoRating, int outcome)
+    {
+        int eloK = 10;
+
+        int delta = (int)(eloK * ((int)outcome - ExpectationToWin(playerOneRating, playerTwoRating)));
+
+        playerOneRating += delta;
+        playerTwoRating -= delta;
+    }
+
     public void SetupSalaryInfo()
     {
         averagePositionSalaries = new double[3, 5];

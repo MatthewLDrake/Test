@@ -83,6 +83,13 @@
     <Compile Include="DisplayPlayer.designer.cs">
       <DependentUpon>DisplayPlayer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Event.cs" />
+    <Compile Include="EventViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventViewer.Designer.cs">
+      <DependentUpon>EventViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="FIBUTeam.cs" />
     <Compile Include="FreeAgencyForm.cs">
       <SubType>Form</SubType>
@@ -346,6 +353,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="draft.resx">
       <DependentUpon>draft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventViewer.resx">
+      <DependentUpon>EventViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FirstScreen.resx">
       <DependentUpon>FirstScreen.cs</DependentUpon>
