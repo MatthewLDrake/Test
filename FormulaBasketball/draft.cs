@@ -81,9 +81,10 @@ namespace FormulaBasketball
         private void AiPick()
         {
             // TODO: Implement new draft logic for AI
-            List<player> roster = picks[currentPick].GetOwner().GetRoster();
+            List<player> roster = picks[currentPick].GetOwner().GetOffSeasonPlayers();
             player selectedPlayer = PickPlayer(roster, picks[currentPick].GetOwner().DraftStrategy);
             players.Remove(selectedPlayer.GetPlayerID());
+            picks[currentPick].GetOwner().OffSeasonAddPlayer(selectedPlayer);
             bool flag = false;
             for(int i = 0; i < grids.Length; i++)
             {
@@ -118,7 +119,7 @@ namespace FormulaBasketball
                 player p = entry.Value;
                 double score = GetScore(players[p.getPosition() - 1], p, strat);
 
-                if(score > topScores[p.getPosition() - 1])
+                if (score > topScores[p.getPosition() - 1] || (score == topScores[p.getPosition() - 1] && topPlayers[p.getPosition() - 1].GetPlayerID() > p.GetPlayerID()))
                 {
                     topScores[p.getPosition() - 1] = score;
                     topPlayers[p.getPosition() - 1] = p;
@@ -127,7 +128,7 @@ namespace FormulaBasketball
                 {
                     for(int i = 5; i < topScores.Length; i++)
                     {
-                        if(score > topScores[i])
+                        if(score > topScores[i] || (score == topScores[i] && topPlayers[i].GetPlayerID() > p.GetPlayerID()))
                         {
                             topScores[i] = score;
                             topPlayers[i] = p;
@@ -345,6 +346,7 @@ namespace FormulaBasketball
             player selectedPlayer = players[playerID];
             players.Remove(playerID);
             UpdateGrid(grids[tabControl.SelectedIndex].SelectedRows[0], selectedPlayer);
+            picks[currentPick].GetOwner().OffSeasonAddPlayer(selectedPlayer);
             currentPick++;
             if (currentPick == 64) label1.Text = "Draft Finished";
             else label1.Text = "Round " + (currentPick / 32 + 1) + " - Pick " + (currentPick % 32 + 1) + "/32\n" + picks[currentPick].GetOwner() + " is on the clock";
@@ -361,6 +363,7 @@ namespace FormulaBasketball
                 nextPickButton.Enabled = true;
                 nextUserButton.Enabled = true;
             }
+
            
         }
         private void UpdateGrid(DataGridViewRow row, player selectedPlayer)

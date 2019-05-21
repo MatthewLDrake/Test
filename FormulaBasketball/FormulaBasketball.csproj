@@ -144,6 +144,12 @@
       <DependentUpon>PlayerRatings.cs</DependentUpon>
     </Compile>
     <Compile Include="PlayerRecords.cs" />
+    <Compile Include="PlayerSigned.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerSigned.Designer.cs">
+      <DependentUpon>PlayerSigned.cs</DependentUpon>
+    </Compile>
     <Compile Include="PlayerStats.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -401,6 +407,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PlayerRatings.resx">
       <DependentUpon>PlayerRatings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerSigned.resx">
+      <DependentUpon>PlayerSigned.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PlayerStats.resx">
       <DependentUpon>PlayerStats.cs</DependentUpon>

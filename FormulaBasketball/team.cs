@@ -104,7 +104,7 @@ public class team : IComparable<team>,  IEnumerable<player>
         colorTwoName = arr[13];
         colorThreeName = arr[14];
 
-        coach = new Coach(lines[3], r);
+        coach = new Coach(lines[3], r, this);
         trainer = new Trainer(lines[4], r);
 
         string[] players = lines[5].Split(new string[] { "<player>" }, StringSplitOptions.None);
@@ -1350,6 +1350,30 @@ public class team : IComparable<team>,  IEnumerable<player>
 
         return retVal;
     }
+    private List<player> offseasonPlayers;
+    public void StartOffSeason()
+    {
+        offseasonPlayers = new List<player>(activePlayers);
+        offseasonPlayers.AddRange(affiliate.activePlayers);
+    }
+    public void OffSeasonAddPlayer(player p)
+    {
+        offseasonPlayers.Add(p);
+    }
+    public List<player> GetOffSeasonPlayers()
+    {
+        return offseasonPlayers;
+    }
+    public void OffSeasonRemovePlayers(List<player> players)
+    {
+        foreach (player p in players)
+            OffSeasonRemovePlayer(p);
+    }
+    public void OffSeasonRemovePlayer(player p)
+    {
+        offseasonPlayers.Remove(p);
+    }
+
     public player GetPlayerByID(int id)
     {
         foreach(player player in activePlayers)

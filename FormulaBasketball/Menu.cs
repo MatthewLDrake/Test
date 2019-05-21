@@ -27,19 +27,25 @@ namespace FormulaBasketball
         private bool master = false;
         private List<player> rookies;
         private DraftPick[] picks;
+        private Scouting scoutingForm; 
+        private AwardVoting voting;
+        private Dictionary<int, int> mvpVotes, rotyVotes, cotyVotes;
         public Menu(createTeams create, int teamNum, FormulaBasketball.Random r)
         {
             InitializeComponent();
             this.create = create;
 
+            mvpVotes = new Dictionary<int, int>();
+            rotyVotes = new Dictionary<int, int>();
+            cotyVotes = new Dictionary<int, int>();
+
             events = new List<Event>();
-            events.Add(new Event("Players from new countries enter the draft!", "Players from the nations of Helvaena have joined the draft for the first time in UBA history. The only question remaining is whether or not they will ever see the court."));
+            //events.Add(new Event("Players from new countries enter the draft!", "Players from the nations of Helvaena have joined the draft for the first time in UBA history. The only question remaining is whether or not they will ever see the court."));
             eventViewer = new EventViewer(events);
             UpdatedEvents();
 
             string fileName = "college.fbcollege";
             FileStream fs = new FileStream(fileName, FileMode.Open);
-
             // Construct a BinaryFormatter and use it to serialize the data to the stream.
             BinaryFormatter formatter = new BinaryFormatter();
             try
@@ -57,6 +63,7 @@ namespace FormulaBasketball
                 fs.Close();
             }
             team = create.getTeam(teamNum);
+
             humans = new List<int>
             {
                 3, 7, 19
@@ -76,9 +83,14 @@ namespace FormulaBasketball
                 if (t.GetDraftPlace() < 10) t.DraftStrategy = DraftStrategy.REBUILD;
                 else if (t.GetDraftPlace() < 20) t.DraftStrategy = DraftStrategy.WIN_SOON;
                 else t.DraftStrategy = DraftStrategy.WIN_NOW;
+
+                t.StartOffSeason();
+
             }
             //create.getFreeAgents().AdvanceSeason();
             rookies = create.GetRookies();
+            voting = new AwardVoting(create);
+            scoutingForm = new Scouting(rookies, team.GetScout(), r);
             create.SetupSalaryInfo();
             this.r = r;
             this.teamNum = teamNum;
@@ -156,15 +168,14 @@ namespace FormulaBasketball
         {
             if (stage < 4)
             {
-                this.Visible = false;
-                Scouting scoutingForm = new Scouting(rookies,team.GetScout(), r);
+                this.Visible = false;                
                 scoutingForm.ShowDialog();
                 this.Visible = true;
             }
             else
             {                
                 this.Visible = false;
-                draft draft = new draft(rookies, picks, humans, r);
+                draft draft = new draft(rookies, picks, humans, new FormulaBasketball.Random(80085));
                 draft.ShowDialog();
                 this.Visible = true;
 
@@ -189,7 +200,7 @@ namespace FormulaBasketball
             if (stage == 0)
             {
                 this.Visible = false;
-                AwardVoting voting = new AwardVoting(create);
+                
                 voting.ShowDialog();
                 this.Visible = true;
             }
@@ -251,19 +262,35 @@ namespace FormulaBasketball
                                 fs.Close();
                             }
                             create.getFreeAgents().Add(temp.players);
-                            create.getTeam(temp.teamNum).removePlayer(temp.players);
+                            create.getTeam(temp.teamNum).OffSeasonRemovePlayers(temp.players);
                             teamNumbers.Add(temp.teamNum);
+
+
+                            /*AwardVotes theVotes = temp.votes;
+                            if(theVotes == null)
+                            {
+                                theVotes = SimulateVotes(temp.teamNum);
+                            }
+                            
+                            for(int i = 0; i < theVotes.mvpVotes.Count; i++)
+                            {
+                                if(mvpVotes.ContainsKey(theVotes.mvpVotes[i]))
+                                {
+
+                                }
+                            }*/
+
                         }
 
                         create.getFreeAgents().Add(players);
-                        team.removePlayer(players);
+                        team.OffSeasonRemovePlayers(players);
                         teamNumbers.Add(teamNum);
                         for(int i = 0; i < create.size(); i++)
                         {
                             if (teamNumbers.Contains(i)) continue;
                             players = create.getTeam(i).resignPlayers(create, r);
                             create.getFreeAgents().Add(players);
-                            create.getTeam(i).removePlayer(players);
+                            create.getTeam(i).OffSeasonRemovePlayers(players);
                             create.getTeam(i).SetFree();
                         }
                         FileStream createFS = new FileStream("Stage1Results.fbdata", FileMode.Create);
@@ -293,7 +320,7 @@ namespace FormulaBasketball
                         BinaryFormatter formatter = new BinaryFormatter();
                         try
                         {
-                            formatter.Serialize(fs, new FreeAgentInfo(teamNum, players));
+                            formatter.Serialize(fs, new FreeAgentInfo(teamNum, players, voting.GetVotes()));
                         }
                         catch (SerializationException ex)
                         {
@@ -307,7 +334,9 @@ namespace FormulaBasketball
                     }
 
                     resignPlayersButton.Text = "Free Agency";
+                    resignPlayersButton.Enabled = false;
                     awardsButton.Text = "Trade";
+                    awardsButton.Enabled = false;
                 }
                  
                 else if(stage <= 4)
@@ -394,6 +423,11 @@ namespace FormulaBasketball
                             {
                                 newFreeAgents.Add(p);
                             }
+                            else
+                            {
+                                PlayerSigned playerSigned = new PlayerSigned(p);
+                                playerSigned.ShowDialog();
+                            }
                         }
                         create.SetFreeAgents(newFreeAgents);
                         //create.getFreeAgents().
@@ -433,7 +467,7 @@ namespace FormulaBasketball
         private void loadButton_Click(object sender, EventArgs e)
         {
             OpenFileDialog fileDialog = new OpenFileDialog();
-            fileDialog.Title = "Open Trade File";
+            fileDialog.Title = "Open Formula Basketball File";
             fileDialog.Filter = "FBTrade files (*.fbtrade)|*.fbtrade|FBData files (*.fbdata)|*.fbdata|FB Trade Response File (*.fbtr)|*.fbtr";
             fileDialog.Multiselect = false;
             if (fileDialog.ShowDialog() == DialogResult.OK)
@@ -455,6 +489,10 @@ namespace FormulaBasketball
                 else if(extension.Equals(".fbdata"))
                 {
                     create = formulaBasketball.DeSerializeObject(fileName);
+                    resignPlayersButton.Text = "Free Agency";
+                    resignPlayersButton.Enabled = true;
+                    awardsButton.Text = "Trade";
+                    awardsButton.Enabled = true;
                 }
                 else if(extension.Equals(".fbtr"))
                 {
@@ -469,8 +507,8 @@ namespace FormulaBasketball
                             if(item is player)
                             {
                                 player p = item as player;
-                                teamOne.removePlayer(p);
-                                teamTwo.addPlayer(p);
+                                teamOne.OffSeasonRemovePlayer(p);
+                                teamTwo.OffSeasonAddPlayer(p);
                             }
                             else if(item is DraftPick)
                             {
@@ -484,8 +522,8 @@ namespace FormulaBasketball
                             if (item is player)
                             {
                                 player p = item as player;
-                                teamTwo.removePlayer(p);
-                                teamOne.addPlayer(p);
+                                teamTwo.OffSeasonRemovePlayer(p);
+                                teamOne.OffSeasonAddPlayer(p);
                             }
                             else if (item is DraftPick)
                             {
@@ -535,10 +573,12 @@ namespace FormulaBasketball
     {
         public List<player> players;
         public int teamNum;
-        public FreeAgentInfo(int teamNum, List<player> players)
+        public AwardVotes votes;
+        public FreeAgentInfo(int teamNum, List<player> players, AwardVotes votes)
         {
             this.teamNum = teamNum;
             this.players = players;
+            this.votes = votes;
         }
         
     }

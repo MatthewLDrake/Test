@@ -136,7 +136,7 @@ public class createTeams
             teams.Add(newTeam);
             dLeagueTeams.Add(newTeam.GetAffiliate());
         }
-        
+        /*
         for(int i = 0; i < teams.Count; i++)
         {
             for(int j = 0; j < teams.Count/2; j++)
@@ -155,7 +155,7 @@ public class createTeams
         foreach(team t in teams)
         {
             Console.WriteLine(t.ToString() + " - " + t.elo + "(" + t.getWins() + "-" + t.getLosses() + ")");
-        }
+        }*/
 
 
     }

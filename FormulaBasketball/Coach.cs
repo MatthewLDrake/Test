@@ -13,6 +13,7 @@ public class Coach
     private ssInvolvment superStarInvolvment;
     private String name;
     private FormulaBasketball.Random r;
+    public team currTeam;
     public Coach(String name, int staminaSubOut, int staminaSubIn, double offenseModifier, int offenseModifierProbability, double defenseModifier, int defenseModifierProbability, Tempo preferredTempo, coachShotType preferredShotType, ssInvolvment superStarInvolvment, FormulaBasketball.Random r)
     {
         this.r = r;
@@ -27,8 +28,9 @@ public class Coach
         this.setPreferredShotType(preferredShotType);
         this.setSuperStarInvolvment(superStarInvolvment);
     }
-    public Coach(String info, FormulaBasketball.Random r)
+    public Coach(String info, FormulaBasketball.Random r, team team)
     {
+        currTeam = team;
         this.r = r;
         String[] arr = info.Split(',');
         name = arr[0].Replace("<coach>", "");

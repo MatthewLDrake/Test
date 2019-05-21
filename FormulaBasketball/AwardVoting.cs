@@ -405,7 +405,7 @@ namespace FormulaBasketball
             top10CoachingGrid.Rows[0].Selected = false;
             top10CoachingGrid.Rows[rowOneIndex + 1].Selected = true;
         }
-
+        AwardVotes votes;
         private void button2_Click(object sender, EventArgs e)
         {
             List<int> topTenMVP = new List<int>();
@@ -424,42 +424,29 @@ namespace FormulaBasketball
                 if (i == 9) break;
             }
 
-            List<Coach> topTenCoaches = new List<Coach>();
+            List<int> topTenCoaches = new List<int>();
             for(int i = 0; i < top10CoachingGrid.Rows.Count; i++)
             {
                 Coach coach = top10CoachingGrid.Rows[i].Cells[2].Value as Coach;
-                topTenCoaches.Add(coach);
+                topTenCoaches.Add(coach.currTeam.getTeamNum());
                 if (i == 9) break;
             }
 
 
-            FileStream fs = new FileStream("awardVotes.fbvotes", FileMode.Create);
-
-            // Construct a BinaryFormatter and use it to serialize the data to the stream.
-            BinaryFormatter formatter = new BinaryFormatter();
-            try
-            {
-                formatter.Serialize(fs, new AwardVotes(topTenMVP, topTenROTY, topTenCoaches));
-            }
-            catch (SerializationException ex)
-            {
-                Console.WriteLine("Failed to serialize. Reason: " + ex.Message);
-                throw;
-            }
-            finally
-            {
-                fs.Close();
-            }
+            votes = new AwardVotes(topTenMVP, topTenROTY, topTenCoaches);
             Close();
         }
-        
+        public AwardVotes GetVotes()
+        {
+            return votes;
+        }
     }
     [Serializable]
     public class AwardVotes
     {
         public List<int> mvpVotes, rotyVotes;
-        public List<Coach> coaches;
-        public AwardVotes(List<int> mvpVotes, List<int> rotyVotes, List<Coach> coaches)
+        public List<int> coaches;
+        public AwardVotes(List<int> mvpVotes, List<int> rotyVotes, List<int> coaches)
         {
             this.mvpVotes = mvpVotes;
             this.rotyVotes = rotyVotes;

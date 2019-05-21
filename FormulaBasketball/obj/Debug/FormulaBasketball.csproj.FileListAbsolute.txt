@@ -139,3 +139,4 @@ B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.AwardVoting.reso
 B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.MockDraftView.resources
 B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.OfferedTrade.resources
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\FormulaBasketball.EventViewer.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\FormulaBasketball.PlayerSigned.resources

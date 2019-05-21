@@ -589,8 +589,8 @@ public class player : IComparable<player>
             double num = 1.6666666666667 * highestScore - 0.012 * highestScore * highestScore + 5.3333333333333E-5 * highestScore * highestScore * highestScore;
             if (last || r.Next(100) < num)
             {
-                highestTeam.GetTeam().addPlayer(this);
-                contract = highestTeam.GetContract();
+                //highestTeam.GetTeam().addPlayer(this);
+                //contract = highestTeam.GetContract();
                 sign = true;
             }
 
@@ -606,6 +606,10 @@ public class player : IComparable<player>
             contractOffers = new List<FreeAgentContracts>();
         }
         return contractOffers.Count;
+    }
+    public List<FreeAgentContracts> GetFreeAgentOffers()
+    {
+        return contractOffers;
     }
     private List<FreeAgentContracts> contractOffers;
     public void OfferFreeAgentContract(Contract contract, team team)
@@ -1142,7 +1146,7 @@ public class player : IComparable<player>
 
         int average = (normalizedPE + normalizedPS + development * 3) / 5;
 
-        int temp = Math.Max(1, Math.Min(10, r.Next(-scoutSkill, scoutSkill) + average));
+        int temp = Math.Max(1, Math.Min(10, r.Next(-(scoutSkill/10), scoutSkill/10) + average));
         switch (temp)
         {
             case 1:
@@ -2223,7 +2227,8 @@ public class player : IComparable<player>
         seconds = 0;
     }
 }
-class FreeAgentContracts
+[Serializable]
+public class FreeAgentContracts
 {
     private Contract contract;
     private team team;

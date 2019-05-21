@@ -43,6 +43,19 @@ namespace FormulaBasketball
                     teamOneGrid.Rows.Add("Season " + p.GetSeason() +" Round " + p.GetRound() + " pick from " + p.GetTeamOfOrigin(), "???", "B", 0, p);
                 }
             }
+            foreach (object item in trade.GetTeamTwoTradeItems())
+            {
+                if (item is player)
+                {
+                    player p = item as player;
+                    teamTwoGrid.Rows.Add(p.getName(), String.Format("{0:0.00}", p.getOverall()), p.getDevelopment(), p.GetMoneyPerYear(), p);
+                }
+                else if (item is DraftPick)
+                {
+                    DraftPick p = item as DraftPick;
+                    teamTwoGrid.Rows.Add("Season " + p.GetSeason() + " Round " + p.GetRound() + " pick from " + p.GetTeamOfOrigin(), "???", "B", 0, p);
+                }
+            }
         }
 
         private void acceptButton_Click(object sender, EventArgs e)

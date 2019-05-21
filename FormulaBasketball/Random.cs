@@ -14,6 +14,10 @@ namespace FormulaBasketball
         {
             r = new System.Random();
         }
+        public Random(int key)
+        {
+            r = new System.Random(key);
+        }
         public int Next(int v1, int v2)
         {
             return r.Next(v1, v2);
