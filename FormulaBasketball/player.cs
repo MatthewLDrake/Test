@@ -135,16 +135,22 @@ public class player : IComparable<player>
     public string SavePlayer()
     {
         if (contract == null) contract = new Contract(0, 0);
-        String content = "<player>" + name + "," + playerAge + "," + country.ToString() + "," + contract.ToString() + "," + position + "," + peakStart + "," + peakEnd + "," + development;
-        for (int i = 0; i < ratings.Length; i++ )
+        String content = "<player>" + name + "," + playerAge + "," + country.ToString() + "," + contract.ToString() + "," + position + "," + peakStart + "," + peakEnd + "," + development + "," + gamesPreviousPlayed + "," + prevPointDiff + "," + (isRookie ? 1 : 0);
+        for (int i = 0; i < ratings.Length; i++)
         {
             content += "," + ratings[i];
         }
-        for (int i = 0; i < careerStats.Length; i++ )
+        for (int i = 0; i < careerStats.Length; i++)
         {
             content += "," + careerStats[i];
         }
+        if (previousSeasonStats == null) previousSeasonStats = new int[careerStats.Length];
+        for (int i = 0; i < previousSeasonStats.Length; i++)
+        {
+            content += "," + previousSeasonStats[i];
+        }
         return content;
+
     }
     public player(String info)
     {
@@ -161,12 +167,15 @@ public class player : IComparable<player>
         peakStart = int.Parse(arr[5]);
         peakEnd = int.Parse(arr[6]);
         development = int.Parse(arr[7]);
+        gamesPlayed = int.Parse(arr[8]);
+        pointDiff = int.Parse(arr[9]);
+        isRookie = int.Parse(arr[10]) == 1;
         ratings = new double[11];
         stats = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
         gameStats = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
         careerStats = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
         stamina = 100;
-        int location = 8;
+        int location = 11;
         for (int i = 0; i < ratings.Length; i++)
         {
             ratings[i] += double.Parse(arr[location]);
@@ -176,6 +185,11 @@ public class player : IComparable<player>
         {
            careerStats[i] += int.Parse(arr[location]);
            location++;
+        }
+        for (int i = 0; i < careerStats.Length; i++)
+        {
+            stats[i] += int.Parse(arr[location]);
+            location++;
         }
     }
     public player(CollegePlayer player, int id)
@@ -913,7 +927,9 @@ public class player : IComparable<player>
 
 
     }
-    private int[] careerStats;
+    private int[] careerStats, previousSeasonStats;
+    private int gamesPreviousPlayed;
+    private int prevPointDiff;
     public void endSeason()
     {        
         if(contract != null)

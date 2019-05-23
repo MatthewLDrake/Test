@@ -771,15 +771,15 @@ public class createTeams
     public void AddRookies()
     {
         rookies = new List<player>();
-
+        
         string[] players = File.ReadAllText("college.fibusave").Split(new string[] { "<player>" }, StringSplitOptions.None);
         for (int i = 1; i <players.Length; i++)
         {
             rookies.Add(new player(players[i]));
         }
-        
+        /*
 
-        /*rookies.Add(player.GeneratePlayer(1, Country.Wyverncliff, 47, 21, 3, 27, 28, r));
+        rookies.Add(player.GeneratePlayer(1, Country.Wyverncliff, 47, 21, 3, 27, 28, r));
         rookies.Add(player.GeneratePlayer(1, Country.Wyverncliff, 76, 22, 8, 29, 32, r));
         rookies.Add(player.GeneratePlayer(1, Country.Wyverncliff, 65, 20, 6, 27, 31, r));
         rookies.Add(player.GeneratePlayer(1, Country.Dotruga, 53, 23, 6, 27, 32, r));
@@ -899,11 +899,15 @@ public class createTeams
         rookies.Add(player.GeneratePlayer(5, Country.Blaist_Blaland, 56, 19, 6, 29, 33, r));
         rookies.Add(player.GeneratePlayer(5, Country.Height_Sagua, 77, 19, 6, 27, 31, r));
         rookies.Add(player.GeneratePlayer(5, Country.Aiyota, 68, 21, 4, 28, 29, r));
-        rookies.Add(player.GeneratePlayer(5, Country.Aeridani, 76, 23, 3, 29, 33, r));*/
+        rookies.Add(player.GeneratePlayer(5, Country.Aeridani, 76, 23, 3, 29, 33, r));
 
+        string content = "";
+        foreach (player p in rookies)
+            content += p.SavePlayer();
 
+        File.WriteAllText("college.fibusave", content);
 
-
+    */
     }
 
 

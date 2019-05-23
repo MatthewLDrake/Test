@@ -87,22 +87,22 @@ public class team : IComparable<team>,  IEnumerable<player>
             allTimeVsTeam[i / 2] = new Record(arr[i], arr[i + 1]);
         }
         arr = lines[2].Split(',');
-
-        penalty = Double.Parse(arr[0]);
-        draftPlace = int.Parse(arr[1]);
-        playoffAppearances = int.Parse(arr[2]);
-        leagueChampionships = int.Parse(arr[3]);
-        conferenceChampionships = int.Parse(arr[4]);
-        divisionChampionships = int.Parse(arr[5]);
-        colorOne = arr[6];
-        colorTwo = arr[7];
-        colorThree = arr[8];
-        location = arr[9];
-        city = arr[10];
-        stadiumName = arr[11];
-        colorOneName = arr[12];
-        colorTwoName = arr[13];
-        colorThreeName = arr[14];
+        fianance = int.Parse(arr[0]);
+        penalty = Double.Parse(arr[1]);
+        draftPlace = int.Parse(arr[2]);
+        playoffAppearances = int.Parse(arr[3]);
+        leagueChampionships = int.Parse(arr[4]);
+        conferenceChampionships = int.Parse(arr[5]);
+        divisionChampionships = int.Parse(arr[6]);
+        colorOne = arr[7];
+        colorTwo = arr[8];
+        colorThree = arr[9];
+        location = arr[10];
+        city = arr[11];
+        stadiumName = arr[12];
+        colorOneName = arr[13];
+        colorTwoName = arr[14];
+        colorThreeName = arr[15];
 
         coach = new Coach(lines[3], r, this);
         trainer = new Trainer(lines[4], r);
