@@ -40,19 +40,6 @@ public class FreeAgents
             GetPlayerByID(offer.playerID).OfferFreeAgentContract(offer.offer, t);
         }
     }
-    public void Verify()
-    {
-        List<player> playersToRemove = new List<player>();
-        foreach (player p in allPlayers)
-        {
-            if (p.getTeam() != null) playersToRemove.Add(p);
-        }
-        foreach (player p in playersToRemove)
-        {
-            allPlayers.Remove(p);
-            playersByPos[p.getPosition() - 1].Remove(p);
-        }
-    }
     public void Add(player player)
     {
         if (allPlayers.Contains(player)) return;

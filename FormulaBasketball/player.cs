@@ -1795,10 +1795,12 @@ public class player : IComparable<player>
     {
         return String.Compare(this.getName(), otherPlayer.getName());
     }*/
+    private team previousTeam;
     public void setTeam(team team)
     {
+        if(this.team != null)
+            previousTeam = this.team;
         this.team = team;
-
     }
     public team getTeam()
     {

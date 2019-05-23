@@ -32,16 +32,6 @@
             this.tabControl = new System.Windows.Forms.TabControl();
             this.Centers = new System.Windows.Forms.TabPage();
             this.centerLists = new System.Windows.Forms.DataGridView();
-            this.PowerForwards = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.PointGuards = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.nextUserButton = new System.Windows.Forms.Button();
-            this.nextPickButton = new System.Windows.Forms.Button();
-            this.startbutton = new System.Windows.Forms.Button();
-            this.draftButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.aName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Layup = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Dunk = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,6 +47,7 @@
             this.Potential = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Team = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PlayerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PowerForwards = new System.Windows.Forms.TabPage();
             this.powerForwardGrid = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,6 +64,7 @@
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn53 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn54 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.smallForwardGrid = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -89,6 +81,7 @@
             this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn55 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn56 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.shootingGuardList = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -105,6 +98,7 @@
             this.dataGridViewTextBoxColumn39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn57 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn58 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PointGuards = new System.Windows.Forms.TabPage();
             this.pointGuardList = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -121,35 +115,46 @@
             this.dataGridViewTextBoxColumn52 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn59 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn60 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.nextUserButton = new System.Windows.Forms.Button();
+            this.nextPickButton = new System.Windows.Forms.Button();
+            this.startbutton = new System.Windows.Forms.Button();
+            this.draftButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.Centers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.centerLists)).BeginInit();
             this.PowerForwards.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.PointGuards.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.powerForwardGrid)).BeginInit();
+            this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.smallForwardGrid)).BeginInit();
+            this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.shootingGuardList)).BeginInit();
+            this.PointGuards.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pointGuardList)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.tabControl, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.tabControl, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1114, 561);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
@@ -161,10 +166,10 @@
             this.tabControl.Controls.Add(this.tabPage4);
             this.tabControl.Controls.Add(this.PointGuards);
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl.Location = new System.Drawing.Point(3, 59);
+            this.tabControl.Location = new System.Drawing.Point(3, 115);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(1108, 442);
+            this.tabControl.Size = new System.Drawing.Size(1108, 386);
             this.tabControl.TabIndex = 0;
             // 
             // Centers
@@ -173,7 +178,7 @@
             this.Centers.Location = new System.Drawing.Point(4, 22);
             this.Centers.Name = "Centers";
             this.Centers.Padding = new System.Windows.Forms.Padding(3);
-            this.Centers.Size = new System.Drawing.Size(1100, 416);
+            this.Centers.Size = new System.Drawing.Size(1100, 360);
             this.Centers.TabIndex = 0;
             this.Centers.Text = "C";
             this.Centers.UseVisualStyleBackColor = true;
@@ -207,127 +212,8 @@
             this.centerLists.RowHeadersVisible = false;
             this.centerLists.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.centerLists.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.centerLists.Size = new System.Drawing.Size(1094, 410);
+            this.centerLists.Size = new System.Drawing.Size(1094, 354);
             this.centerLists.TabIndex = 0;
-            // 
-            // PowerForwards
-            // 
-            this.PowerForwards.Controls.Add(this.powerForwardGrid);
-            this.PowerForwards.Location = new System.Drawing.Point(4, 22);
-            this.PowerForwards.Name = "PowerForwards";
-            this.PowerForwards.Padding = new System.Windows.Forms.Padding(3);
-            this.PowerForwards.Size = new System.Drawing.Size(1100, 416);
-            this.PowerForwards.TabIndex = 1;
-            this.PowerForwards.Text = "PF";
-            this.PowerForwards.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.smallForwardGrid);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1100, 416);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "SF";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.shootingGuardList);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1100, 416);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "SG";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // PointGuards
-            // 
-            this.PointGuards.Controls.Add(this.pointGuardList);
-            this.PointGuards.Location = new System.Drawing.Point(4, 22);
-            this.PointGuards.Name = "PointGuards";
-            this.PointGuards.Padding = new System.Windows.Forms.Padding(3);
-            this.PointGuards.Size = new System.Drawing.Size(1100, 416);
-            this.PointGuards.TabIndex = 4;
-            this.PointGuards.Text = "PG";
-            this.PointGuards.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.nextUserButton);
-            this.panel1.Controls.Add(this.nextPickButton);
-            this.panel1.Controls.Add(this.startbutton);
-            this.panel1.Controls.Add(this.draftButton);
-            this.panel1.Location = new System.Drawing.Point(3, 507);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1108, 51);
-            this.panel1.TabIndex = 1;
-            // 
-            // nextUserButton
-            // 
-            this.nextUserButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nextUserButton.Location = new System.Drawing.Point(436, 14);
-            this.nextUserButton.Name = "nextUserButton";
-            this.nextUserButton.Size = new System.Drawing.Size(75, 23);
-            this.nextUserButton.TabIndex = 5;
-            this.nextUserButton.Text = "Next User";
-            this.nextUserButton.UseVisualStyleBackColor = true;
-            this.nextUserButton.Visible = false;
-            this.nextUserButton.Click += new System.EventHandler(this.advanceToHuman);
-            // 
-            // nextPickButton
-            // 
-            this.nextPickButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nextPickButton.Location = new System.Drawing.Point(598, 14);
-            this.nextPickButton.Name = "nextPickButton";
-            this.nextPickButton.Size = new System.Drawing.Size(75, 23);
-            this.nextPickButton.TabIndex = 4;
-            this.nextPickButton.Text = "Next Pick";
-            this.nextPickButton.UseVisualStyleBackColor = true;
-            this.nextPickButton.Visible = false;
-            this.nextPickButton.Click += new System.EventHandler(this.nextPick);
-            // 
-            // startbutton
-            // 
-            this.startbutton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.startbutton.Location = new System.Drawing.Point(517, 14);
-            this.startbutton.Name = "startbutton";
-            this.startbutton.Size = new System.Drawing.Size(75, 23);
-            this.startbutton.TabIndex = 3;
-            this.startbutton.Text = "Start Draft";
-            this.startbutton.UseVisualStyleBackColor = true;
-            this.startbutton.Click += new System.EventHandler(this.startbutton_Click);
-            // 
-            // draftButton
-            // 
-            this.draftButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.draftButton.Location = new System.Drawing.Point(517, 14);
-            this.draftButton.Name = "draftButton";
-            this.draftButton.Size = new System.Drawing.Size(75, 23);
-            this.draftButton.TabIndex = 2;
-            this.draftButton.Text = "Draft Player";
-            this.draftButton.UseVisualStyleBackColor = true;
-            this.draftButton.Visible = false;
-            this.draftButton.Click += new System.EventHandler(this.humanDraft);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1108, 56);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Draft Not Started";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // aName
             // 
@@ -447,6 +333,17 @@
             this.PlayerID.ReadOnly = true;
             this.PlayerID.Visible = false;
             // 
+            // PowerForwards
+            // 
+            this.PowerForwards.Controls.Add(this.powerForwardGrid);
+            this.PowerForwards.Location = new System.Drawing.Point(4, 22);
+            this.PowerForwards.Name = "PowerForwards";
+            this.PowerForwards.Padding = new System.Windows.Forms.Padding(3);
+            this.PowerForwards.Size = new System.Drawing.Size(1100, 360);
+            this.PowerForwards.TabIndex = 1;
+            this.PowerForwards.Text = "PF";
+            this.PowerForwards.UseVisualStyleBackColor = true;
+            // 
             // powerForwardGrid
             // 
             this.powerForwardGrid.AllowUserToAddRows = false;
@@ -476,7 +373,7 @@
             this.powerForwardGrid.RowHeadersVisible = false;
             this.powerForwardGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.powerForwardGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.powerForwardGrid.Size = new System.Drawing.Size(1094, 410);
+            this.powerForwardGrid.Size = new System.Drawing.Size(1094, 354);
             this.powerForwardGrid.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -597,6 +494,17 @@
             this.dataGridViewTextBoxColumn54.ReadOnly = true;
             this.dataGridViewTextBoxColumn54.Visible = false;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.smallForwardGrid);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1100, 360);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "SF";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
             // smallForwardGrid
             // 
             this.smallForwardGrid.AllowUserToAddRows = false;
@@ -626,7 +534,7 @@
             this.smallForwardGrid.RowHeadersVisible = false;
             this.smallForwardGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.smallForwardGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.smallForwardGrid.Size = new System.Drawing.Size(1094, 410);
+            this.smallForwardGrid.Size = new System.Drawing.Size(1094, 354);
             this.smallForwardGrid.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn14
@@ -747,6 +655,17 @@
             this.dataGridViewTextBoxColumn56.ReadOnly = true;
             this.dataGridViewTextBoxColumn56.Visible = false;
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.shootingGuardList);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1100, 360);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "SG";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
             // shootingGuardList
             // 
             this.shootingGuardList.AllowUserToAddRows = false;
@@ -776,7 +695,7 @@
             this.shootingGuardList.RowHeadersVisible = false;
             this.shootingGuardList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.shootingGuardList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.shootingGuardList.Size = new System.Drawing.Size(1094, 410);
+            this.shootingGuardList.Size = new System.Drawing.Size(1094, 354);
             this.shootingGuardList.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn27
@@ -897,6 +816,17 @@
             this.dataGridViewTextBoxColumn58.ReadOnly = true;
             this.dataGridViewTextBoxColumn58.Visible = false;
             // 
+            // PointGuards
+            // 
+            this.PointGuards.Controls.Add(this.pointGuardList);
+            this.PointGuards.Location = new System.Drawing.Point(4, 22);
+            this.PointGuards.Name = "PointGuards";
+            this.PointGuards.Padding = new System.Windows.Forms.Padding(3);
+            this.PointGuards.Size = new System.Drawing.Size(1100, 360);
+            this.PointGuards.TabIndex = 4;
+            this.PointGuards.Text = "PG";
+            this.PointGuards.UseVisualStyleBackColor = true;
+            // 
             // pointGuardList
             // 
             this.pointGuardList.AllowUserToAddRows = false;
@@ -926,7 +856,7 @@
             this.pointGuardList.RowHeadersVisible = false;
             this.pointGuardList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.pointGuardList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.pointGuardList.Size = new System.Drawing.Size(1094, 410);
+            this.pointGuardList.Size = new System.Drawing.Size(1094, 354);
             this.pointGuardList.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn40
@@ -1047,6 +977,94 @@
             this.dataGridViewTextBoxColumn60.ReadOnly = true;
             this.dataGridViewTextBoxColumn60.Visible = false;
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.nextUserButton);
+            this.panel1.Controls.Add(this.nextPickButton);
+            this.panel1.Controls.Add(this.startbutton);
+            this.panel1.Controls.Add(this.draftButton);
+            this.panel1.Location = new System.Drawing.Point(3, 507);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1108, 51);
+            this.panel1.TabIndex = 1;
+            // 
+            // nextUserButton
+            // 
+            this.nextUserButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nextUserButton.Location = new System.Drawing.Point(436, 14);
+            this.nextUserButton.Name = "nextUserButton";
+            this.nextUserButton.Size = new System.Drawing.Size(75, 23);
+            this.nextUserButton.TabIndex = 5;
+            this.nextUserButton.Text = "Next User";
+            this.nextUserButton.UseVisualStyleBackColor = true;
+            this.nextUserButton.Visible = false;
+            this.nextUserButton.Click += new System.EventHandler(this.advanceToHuman);
+            // 
+            // nextPickButton
+            // 
+            this.nextPickButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nextPickButton.Location = new System.Drawing.Point(598, 14);
+            this.nextPickButton.Name = "nextPickButton";
+            this.nextPickButton.Size = new System.Drawing.Size(75, 23);
+            this.nextPickButton.TabIndex = 4;
+            this.nextPickButton.Text = "Next Pick";
+            this.nextPickButton.UseVisualStyleBackColor = true;
+            this.nextPickButton.Visible = false;
+            this.nextPickButton.Click += new System.EventHandler(this.nextPick);
+            // 
+            // startbutton
+            // 
+            this.startbutton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.startbutton.Location = new System.Drawing.Point(517, 14);
+            this.startbutton.Name = "startbutton";
+            this.startbutton.Size = new System.Drawing.Size(75, 23);
+            this.startbutton.TabIndex = 3;
+            this.startbutton.Text = "Start Draft";
+            this.startbutton.UseVisualStyleBackColor = true;
+            this.startbutton.Click += new System.EventHandler(this.startbutton_Click);
+            // 
+            // draftButton
+            // 
+            this.draftButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.draftButton.Location = new System.Drawing.Point(517, 14);
+            this.draftButton.Name = "draftButton";
+            this.draftButton.Size = new System.Drawing.Size(75, 23);
+            this.draftButton.TabIndex = 2;
+            this.draftButton.Text = "Draft Player";
+            this.draftButton.UseVisualStyleBackColor = true;
+            this.draftButton.Visible = false;
+            this.draftButton.Click += new System.EventHandler(this.humanDraft);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1108, 56);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Draft Not Started";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 56);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(1108, 56);
+            this.label3.TabIndex = 4;
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // draft
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1061,14 +1079,14 @@
             this.Centers.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.centerLists)).EndInit();
             this.PowerForwards.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
-            this.PointGuards.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.powerForwardGrid)).EndInit();
+            this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.smallForwardGrid)).EndInit();
+            this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.shootingGuardList)).EndInit();
+            this.PointGuards.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pointGuardList)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1168,5 +1186,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn52;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn59;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn60;
+        private System.Windows.Forms.Label label3;
     }
 }

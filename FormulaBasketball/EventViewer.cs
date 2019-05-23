@@ -32,8 +32,10 @@ namespace FormulaBasketball
         public void GotSelected()
         {
             if (dataGridView1.Rows.Count > 0)
+            {
                 dataGridView1.Rows[0].Selected = true;
-            dataGridView1.Rows[0].Cells[2].Value = 1;
+                dataGridView1.Rows[0].Cells[2].Value = 1;
+            }
         }
         public int GetUnreadEvents()
         {

@@ -12,8 +12,8 @@ namespace FormulaBasketball
 {
     public partial class ViewRoster : Form
     {
-        private team team;
-        public ViewRoster(team team)
+        private List<player> team;
+        public ViewRoster(List<player> team)
         {
             InitializeComponent();
             this.team = team;

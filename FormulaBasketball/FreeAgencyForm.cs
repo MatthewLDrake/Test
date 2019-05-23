@@ -31,8 +31,8 @@ namespace FormulaBasketball
             for (int i = 0; i < create.size(); i++)
                 freeAgents.Add(create.getDLeagueTeam(i).getAllPlayer());
 
-            rosterSize.Text = "Players on team " + userTeam.Count().ToString() + "/15\nPlayers on affiliate " + userTeam.GetAffiliate().Count().ToString() +  "/15";
-            MoneyLabel.Text = "Penalty Free Cap Space " + String.Format("{0:0.00}", (100 - userTeam.GetPayroll())) + "M\nAvailable Bonus Money " + String.Format("{0:0.00}", (userTeam.getFianances()/1000000.0)) + "M";
+            rosterSize.Text = "Players on team " + userTeam.GetOffSeasonPlayers(false).Count.ToString() + "/15\nPlayers on affiliate " + userTeam.GetAffiliate().Count().ToString() +  "/15";
+            MoneyLabel.Text = "Penalty Free Cap Space " + String.Format("{0:0.00}", (100 - userTeam.GetPayroll(true))) + "M\nAvailable Bonus Money " + String.Format("{0:0.00}", (userTeam.getFianances()/1000000.0)) + "M";
             DataGridView[] grids = new DataGridView[5];
             grids[0] = centersGrid;
             grids[1] = powerForwardGrid;

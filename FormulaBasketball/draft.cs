@@ -85,6 +85,7 @@ namespace FormulaBasketball
             player selectedPlayer = PickPlayer(roster, picks[currentPick].GetOwner().DraftStrategy);
             players.Remove(selectedPlayer.GetPlayerID());
             picks[currentPick].GetOwner().OffSeasonAddPlayer(selectedPlayer);
+            label3.Text = "Previous pick: " + selectedPlayer.GetPositionAsString() + " " + selectedPlayer.getName() + " by the " + picks[currentPick].GetOwner();
             bool flag = false;
             for(int i = 0; i < grids.Length; i++)
             {
@@ -347,10 +348,11 @@ namespace FormulaBasketball
             players.Remove(playerID);
             UpdateGrid(grids[tabControl.SelectedIndex].SelectedRows[0], selectedPlayer);
             picks[currentPick].GetOwner().OffSeasonAddPlayer(selectedPlayer);
+            label3.Text = "Previous pick: " + selectedPlayer.GetPositionAsString() + " " + selectedPlayer.getName() + " by the " + picks[currentPick].GetOwner();
             currentPick++;
             if (currentPick == 64) label1.Text = "Draft Finished";
             else label1.Text = "Round " + (currentPick / 32 + 1) + " - Pick " + (currentPick % 32 + 1) + "/32\n" + picks[currentPick].GetOwner() + " is on the clock";
-
+            
             if (humanPlayers.Contains(picks[currentPick].GetOwner().getTeamNum()))
             {
                 draftButton.Enabled = true;

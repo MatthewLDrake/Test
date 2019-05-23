@@ -1360,9 +1360,17 @@ public class team : IComparable<team>,  IEnumerable<player>
     {
         offseasonPlayers.Add(p);
     }
-    public List<player> GetOffSeasonPlayers()
+    public List<player> GetOffSeasonPlayers(bool includeDLeague = true)
     {
-        return offseasonPlayers;
+        if(includeDLeague)
+            return offseasonPlayers;
+        List<player> list = new List<player>(offseasonPlayers);
+
+        foreach(player p in affiliate)
+        {
+            list.Remove(p);
+        }
+        return list;
     }
     public void OffSeasonRemovePlayers(List<player> players)
     {
@@ -1372,6 +1380,7 @@ public class team : IComparable<team>,  IEnumerable<player>
     public void OffSeasonRemovePlayer(player p)
     {
         offseasonPlayers.Remove(p);
+        p.setTeam(null);
     }
 
     public player GetPlayerByID(int id)
@@ -1657,14 +1666,25 @@ public class team : IComparable<team>,  IEnumerable<player>
         return (IEnumerator) GetEnumerator();
     }
 
-    public double GetPayroll()
-    {
+    public double GetPayroll(bool offseason = false)
+    {        
         double payroll = CapPenalty;
-        foreach(player player in activePlayers)
+        if (offseason)
         {
-            if (player == null) continue;
-            payroll += player.GetMoney();
-        }        
+            List<player> players = GetOffSeasonPlayers(false);
+            foreach (player player in players)
+            {
+                payroll += player.GetMoney();
+            }
+        }
+        else
+        {
+            foreach (player player in activePlayers)
+            {
+                if (player == null) continue;
+                payroll += player.GetMoney();
+            }
+        }
         return payroll;
     }
     

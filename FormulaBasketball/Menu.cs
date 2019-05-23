@@ -24,11 +24,12 @@ namespace FormulaBasketball
         private int stage;
         private ResignPlayers resignForm;
         private FreeAgencyForm freeAgentForm;
-        private bool master = false;
+        private bool master = true;
         private List<player> rookies;
         private DraftPick[] picks;
         private Scouting scoutingForm; 
         private AwardVoting voting;
+        private player roty, mvp;
         private Dictionary<int, int> mvpVotes, rotyVotes, cotyVotes;
         public Menu(createTeams create, int teamNum, FormulaBasketball.Random r)
         {
@@ -128,7 +129,6 @@ namespace FormulaBasketball
             else if(stage < 4)
             {
                 this.Visible = false;
-                create.getFreeAgents().Verify();
                 freeAgentForm = new FreeAgencyForm(create.getFreeAgents(), team, create);
                 freeAgentForm.ShowDialog();
                 this.Visible = true;
@@ -151,7 +151,7 @@ namespace FormulaBasketball
         private void viewRoster_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            ViewRoster rosterForm = new ViewRoster(team);
+            ViewRoster rosterForm = new ViewRoster(team.GetOffSeasonPlayers(false));
             rosterForm.ShowDialog();
             this.Visible = true;
         }
@@ -159,7 +159,7 @@ namespace FormulaBasketball
         private void viewDLeagueRoster_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            ViewRoster rosterForm = new ViewRoster(team.GetAffiliate());
+            ViewRoster rosterForm = new ViewRoster(team.GetAffiliate().getAllPlayer());
             rosterForm.ShowDialog();
             this.Visible = true;
         }
@@ -227,60 +227,60 @@ namespace FormulaBasketball
 
                     if(master)
                     {
-                        DialogResult dResult = DialogResult.Cancel;
-                        OpenFileDialog dialog = null;
-                        while (dResult != DialogResult.OK)
-                        {
-                            dialog = new OpenFileDialog();
-                            dialog.Multiselect = true;
+                        OpenFileDialog dialog = new OpenFileDialog();
+                        dialog.Multiselect = true;
 
-                            dResult = dialog.ShowDialog();
-                        }
+                        dialog.ShowDialog();
+                        
 
                         String[] fileNames = dialog.FileNames;
                         List<int> teamNumbers = new List<int>();
-                        foreach(string file in fileNames)
+                        if(fileNames != null)
                         {
-                            FreeAgentInfo temp;
-                            // Open the file containing the data that you want to deserialize.
-                            FileStream fs = new FileStream(file, FileMode.Open);
-                            try
+                            foreach (string file in fileNames)
                             {
-                                BinaryFormatter formatter = new BinaryFormatter();
-
-                                // Deserialize the hashtable from the file and 
-                                // assign the reference to the local variable.
-                                temp = (FreeAgentInfo)formatter.Deserialize(fs);
-                            }
-                            catch (SerializationException exc)
-                            {
-                                Console.WriteLine("Failed to deserialize. Reason: " + exc.Message);
-                                throw;
-                            }
-                            finally
-                            {
-                                fs.Close();
-                            }
-                            create.getFreeAgents().Add(temp.players);
-                            create.getTeam(temp.teamNum).OffSeasonRemovePlayers(temp.players);
-                            teamNumbers.Add(temp.teamNum);
-
-
-                            /*AwardVotes theVotes = temp.votes;
-                            if(theVotes == null)
-                            {
-                                theVotes = SimulateVotes(temp.teamNum);
-                            }
-                            
-                            for(int i = 0; i < theVotes.mvpVotes.Count; i++)
-                            {
-                                if(mvpVotes.ContainsKey(theVotes.mvpVotes[i]))
+                                FreeAgentInfo temp;
+                                // Open the file containing the data that you want to deserialize.
+                                FileStream fs = new FileStream(file, FileMode.Open);
+                                try
                                 {
+                                    BinaryFormatter formatter = new BinaryFormatter();
 
+                                    // Deserialize the hashtable from the file and 
+                                    // assign the reference to the local variable.
+                                    temp = (FreeAgentInfo)formatter.Deserialize(fs);
                                 }
-                            }*/
+                                catch (SerializationException exc)
+                                {
+                                    Console.WriteLine("Failed to deserialize. Reason: " + exc.Message);
+                                    throw;
+                                }
+                                finally
+                                {
+                                    fs.Close();
+                                }
+                                create.getFreeAgents().Add(temp.players);
+                                create.getTeam(temp.teamNum).OffSeasonRemovePlayers(temp.players);
+                                teamNumbers.Add(temp.teamNum);
 
+
+                                /*AwardVotes theVotes = temp.votes;
+                                if(theVotes == null)
+                                {
+                                    theVotes = SimulateVotes(temp.teamNum);
+                                }
+                            
+                                for(int i = 0; i < theVotes.mvpVotes.Count; i++)
+                                {
+                                    if(mvpVotes.ContainsKey(theVotes.mvpVotes[i]))
+                                    {
+
+                                    }
+                                }*/
+
+                            }
                         }
+                        
 
                         create.getFreeAgents().Add(players);
                         team.OffSeasonRemovePlayers(players);
@@ -331,12 +331,12 @@ namespace FormulaBasketball
                         {
                             fs.Close();
                         }
+                        //resignPlayersButton.Enabled = false;                        
+                        //awardsButton.Enabled = false;
                     }
 
                     resignPlayersButton.Text = "Free Agency";
-                    resignPlayersButton.Enabled = false;
                     awardsButton.Text = "Trade";
-                    awardsButton.Enabled = false;
                 }
                  
                 else if(stage <= 4)
@@ -566,6 +566,161 @@ namespace FormulaBasketball
             eventViewer.ShowDialog();
             UpdatedEvents();
             this.Visible = true;
+        }
+        private void VoteMVP()
+        {
+            List<player> playerList = new List<player>();
+            foreach (team team in create.getTeams())
+            {
+                foreach (player p in team)
+                {
+                    if (p.getMinutes() > 2000)
+                    {
+                        mvpVotes.Add(p.GetPlayerID(), 0);
+                        playerList.Add(p);
+                    }
+                }
+            }
+            mvp = FindBest(playerList, mvpVotes);
+        }
+        private void VoteROTY()
+        {
+            List<player> playerList = new List<player>();
+            foreach (team team in create.getTeams())
+            {
+                foreach (player p in team)
+                {
+                    if (p.Rookie())
+                    {
+                        rotyVotes.Add(p.GetPlayerID(), 0);
+                        playerList.Add(p);
+                    }
+                }
+            }
+            roty = FindBest(playerList, rotyVotes);
+        }
+        
+        private player FindBest(List<player> list, Dictionary<int, int> dict)
+        {
+            if (list.Count == 0) return null;
+
+            for (int teamNum = 0; teamNum < create.size(); teamNum++)
+            {
+                int[] points = GetPoints(create.getTeam(teamNum), list);
+                for (int i = 0; i < points.Length; i++)
+                {                    
+                    dict[points[i]] += 10 - i;
+                    
+                }
+            }
+            int id = 0;
+            int highest = 0;
+            foreach(KeyValuePair<int, int> pair in dict)
+            {               
+                if (highest < pair.Value)
+                {
+                    highest = pair.Value;
+                    id = pair.Key;
+                }
+            }
+            for (int i = 0; i < list.Count; i++ )
+            {
+                if (list[i].GetPlayerID() == id) return list[i];
+            }
+
+            return null;
+
+        }
+        private int[] GetPoints(team team, List<player> list)
+        {
+            int[] retVal = new int[Math.Min(10, list.Count)];
+            //double[] scores = new double[list.Count];
+            double[] tempList = new double[retVal.Length];
+            int value = r.Next(1, 100);
+            int focus = 6;
+            if (value <= 10)
+                focus = 1;
+            else if (value <= 20)
+                focus = 2;
+            else if (value <= 50)
+                focus = 3;
+            else if (value <= 75)
+                focus = 4;
+            else if (value <= 90)
+                focus = 5;
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                double score = GetScore(list[i], focus, team);
+                int playerID = list[i].GetPlayerID();
+                for(int j = 0; j < retVal.Length; j++)
+                {
+                    if(tempList[j] < score)
+                    {
+                        double temp = score;
+                        score = tempList[j];
+                        tempList[j] = temp;
+                        int pID = playerID;
+                        playerID = retVal[j];
+                        retVal[j] = pID;
+                    }
+                }
+            }
+
+           
+
+            return retVal;
+        }
+        private double GetScore(player p, int focus, team team)
+        {
+            int bonus = 0;
+
+            if (p.getTeam().Equals(team))
+                bonus = 20;
+            // read in minutes first, then find out the per minute situations
+            int Minutes = p.getMinutes();
+            double APM = ((double)p.getAssists() / (double)Minutes) * 100;
+            double PPM = ((double)p.getPoints() / (double)Minutes) * 100;
+            double Percent = 0;
+            if (p.getShotsTaken() > 0)
+                Percent = p.getShotsMade() / p.getShotsTaken() * 100;
+            double Turnovers = ((double)p.getTurnovers() / (double)Minutes) * 100;
+            double Steals = ((double)p.getSteals() / (double)Minutes) * 100;
+            // add the random value
+            double retVal = bonus + r.Next(-40, 60);
+
+            // this is probably bad style, but eh it was the best way I thought of doing it
+            if (focus == 1)
+                retVal += APM * 4 + PPM + Percent - Turnovers + Steals;
+            else if (focus == 2)
+                retVal += APM + PPM + Percent - Turnovers + Steals * 100;
+            else if (focus == 3)
+                retVal += APM * 2 + PPM + Percent * 3 - Turnovers + Steals * 2;
+            else if (focus == 4)
+                retVal += APM + PPM * 4 + Percent * 3 - Turnovers + Steals;
+            else if (focus == 5)
+                retVal += APM * 4 + PPM + Percent * 5 - Turnovers + Steals * 2;
+            else
+                retVal += APM + PPM + Percent - Turnovers + Steals;
+
+            return retVal;
+        }
+        private double[] Sort(double[] list)
+        {
+            double temp = 0;
+            for (int write = 0; write < list.Length; write++)
+            {
+                for (int sort = 0; sort < list.Length - 1; sort++)
+                {
+                    if (list[sort] < list[sort + 1])
+                    {
+                        temp = list[sort + 1];
+                        list[sort + 1] = list[sort];
+                        list[sort] = temp;
+                    }
+                }
+            }
+            return list;
         }
     }    
     [Serializable]

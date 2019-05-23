@@ -113,7 +113,7 @@ namespace FormulaBasketball
             }
             else
             {
-                grid.Rows.Add("Team", currentContract.GetYearsLeft(), currentContract.GetMoney(), currentContract.GetTotalMoney());
+                grid.Rows.Add("Team", currentContract.GetYearsLeft(), currentContract.GetMoney(), currentContract.GetTotalMoney(), currentContract.GetBonus(), "Promises", currentContract);
                 button1.Visible = false;
                 button2.Visible = false;
                 button3.Visible = true;

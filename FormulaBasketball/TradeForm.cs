@@ -67,19 +67,19 @@ namespace FormulaBasketball
         private void FillGridWithTeam(DataGridView grid, team team)
         {
             grid.Rows.Clear();
-            foreach(player p in team)
+            foreach(player p in team.GetOffSeasonPlayers(false))
             {
-                grid.Rows.Add(false, p.getName(), String.Format("{0:0.00}", p.getOverall()), p.getDevelopment(), p.GetMoneyPerYear(), p);
+                grid.Rows.Add(false, p.getName(), p.getPosition(), String.Format("{0:0.00}", p.getOverall()), p.getDevelopment(), p.GetMoneyPerYear(), p);
             }
             List<DraftPick> picks = team.GetPicks();
             foreach(DraftPick p in picks)
             {
-                grid.Rows.Add(false, "Season 6 Round " + p.GetRound() + " pick from " + p.GetTeamOfOrigin(), "???", "B", 0, p);
+                grid.Rows.Add(false, "Season 6 Round " + p.GetRound() + " pick from " + p.GetTeamOfOrigin(),"?", "???", "B", 0, p);
             }
             picks = team.GetNextSeasonPicks();
             foreach (DraftPick p in picks)
             {
-                grid.Rows.Add(false, "Season 7 Round " + p.GetRound() + " pick from " + p.GetTeamOfOrigin(), "???", "B", 0, p);
+                grid.Rows.Add(false, "Season 7 Round " + p.GetRound() + " pick from " + p.GetTeamOfOrigin(), "?", "???", "B", 0, p);
             }
         }
 
@@ -260,6 +260,58 @@ namespace FormulaBasketball
                 fs.Close();
             }
             return temp;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog theDialog = new OpenFileDialog();
+            theDialog.Title = "Open Trade File";
+            theDialog.Filter = "FBTrade files|*.fbtrade";
+            theDialog.Multiselect = false;
+            if (theDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    Trade t = TradeForm.DeSerializeObject(theDialog.FileName);
+                    team teamOne = create.getTeam(t.teamOneID);
+                    team teamTwo = create.getTeam(t.teamTwoID);
+
+                    foreach (Object item in t.GetTeamOneTradeItems())
+                    {
+                        if (item is player)
+                        {
+                            player p = item as player;
+                            teamOne.OffSeasonRemovePlayer(p);
+                            teamTwo.OffSeasonAddPlayer(p);
+                        }
+                        else if (item is DraftPick)
+                        {
+                            DraftPick p = item as DraftPick;
+                            teamOne.RemoveDraftPick(p, p.GetSeason() == 6);
+                            teamTwo.AddDraftPick(p, p.GetSeason() == 6);
+                        }
+                    }
+                    foreach (Object item in t.GetTeamTwoTradeItems())
+                    {
+                        if (item is player)
+                        {
+                            player p = item as player;
+                            teamTwo.OffSeasonRemovePlayer(p);
+                            teamOne.OffSeasonAddPlayer(p);
+                        }
+                        else if (item is DraftPick)
+                        {
+                            DraftPick p = item as DraftPick;
+                            teamTwo.RemoveDraftPick(p, p.GetSeason() == 6);
+                            teamOne.AddDraftPick(p, p.GetSeason() == 6);
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Trade was rejected");
+                }
+            }
         }
     }
     [Serializable]
