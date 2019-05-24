@@ -38,14 +38,18 @@
             this.mockDraft = new System.Windows.Forms.Button();
             this.eventButton = new System.Windows.Forms.Button();
             this.eventCounter = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // resignPlayersButton
             // 
-            this.resignPlayersButton.Location = new System.Drawing.Point(58, 40);
-            this.resignPlayersButton.Margin = new System.Windows.Forms.Padding(6);
+            this.resignPlayersButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.resignPlayersButton.Location = new System.Drawing.Point(3, 3);
             this.resignPlayersButton.Name = "resignPlayersButton";
-            this.resignPlayersButton.Size = new System.Drawing.Size(256, 44);
+            this.resignPlayersButton.Size = new System.Drawing.Size(129, 26);
             this.resignPlayersButton.TabIndex = 2;
             this.resignPlayersButton.Text = "Resign Players";
             this.resignPlayersButton.UseVisualStyleBackColor = true;
@@ -53,10 +57,10 @@
             // 
             // viewRoster
             // 
-            this.viewRoster.Location = new System.Drawing.Point(326, 40);
-            this.viewRoster.Margin = new System.Windows.Forms.Padding(6);
+            this.viewRoster.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.viewRoster.Location = new System.Drawing.Point(138, 3);
             this.viewRoster.Name = "viewRoster";
-            this.viewRoster.Size = new System.Drawing.Size(256, 44);
+            this.viewRoster.Size = new System.Drawing.Size(130, 26);
             this.viewRoster.TabIndex = 4;
             this.viewRoster.Text = "View Roster";
             this.viewRoster.UseVisualStyleBackColor = true;
@@ -64,10 +68,10 @@
             // 
             // viewDLeagueRoster
             // 
-            this.viewDLeagueRoster.Location = new System.Drawing.Point(326, 96);
-            this.viewDLeagueRoster.Margin = new System.Windows.Forms.Padding(6);
+            this.viewDLeagueRoster.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.viewDLeagueRoster.Location = new System.Drawing.Point(138, 35);
             this.viewDLeagueRoster.Name = "viewDLeagueRoster";
-            this.viewDLeagueRoster.Size = new System.Drawing.Size(256, 44);
+            this.viewDLeagueRoster.Size = new System.Drawing.Size(130, 26);
             this.viewDLeagueRoster.TabIndex = 5;
             this.viewDLeagueRoster.Text = "View DLeague Roster";
             this.viewDLeagueRoster.UseVisualStyleBackColor = true;
@@ -75,10 +79,10 @@
             // 
             // scoutButton
             // 
-            this.scoutButton.Location = new System.Drawing.Point(58, 96);
-            this.scoutButton.Margin = new System.Windows.Forms.Padding(6);
+            this.scoutButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scoutButton.Location = new System.Drawing.Point(3, 35);
             this.scoutButton.Name = "scoutButton";
-            this.scoutButton.Size = new System.Drawing.Size(256, 44);
+            this.scoutButton.Size = new System.Drawing.Size(129, 26);
             this.scoutButton.TabIndex = 6;
             this.scoutButton.Text = "Scout";
             this.scoutButton.UseVisualStyleBackColor = true;
@@ -86,10 +90,10 @@
             // 
             // awardsButton
             // 
-            this.awardsButton.Location = new System.Drawing.Point(58, 152);
-            this.awardsButton.Margin = new System.Windows.Forms.Padding(6);
+            this.awardsButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.awardsButton.Location = new System.Drawing.Point(3, 67);
             this.awardsButton.Name = "awardsButton";
-            this.awardsButton.Size = new System.Drawing.Size(256, 44);
+            this.awardsButton.Size = new System.Drawing.Size(129, 26);
             this.awardsButton.TabIndex = 8;
             this.awardsButton.Text = "Awards Voting";
             this.awardsButton.UseVisualStyleBackColor = true;
@@ -97,10 +101,10 @@
             // 
             // advanceButtons
             // 
-            this.advanceButtons.Location = new System.Drawing.Point(326, 152);
-            this.advanceButtons.Margin = new System.Windows.Forms.Padding(6);
+            this.advanceButtons.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.advanceButtons.Location = new System.Drawing.Point(138, 67);
             this.advanceButtons.Name = "advanceButtons";
-            this.advanceButtons.Size = new System.Drawing.Size(256, 44);
+            this.advanceButtons.Size = new System.Drawing.Size(130, 26);
             this.advanceButtons.TabIndex = 9;
             this.advanceButtons.Text = "Advance";
             this.advanceButtons.UseVisualStyleBackColor = true;
@@ -108,10 +112,10 @@
             // 
             // loadButton
             // 
-            this.loadButton.Location = new System.Drawing.Point(58, 208);
-            this.loadButton.Margin = new System.Windows.Forms.Padding(6);
+            this.loadButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.loadButton.Location = new System.Drawing.Point(3, 99);
             this.loadButton.Name = "loadButton";
-            this.loadButton.Size = new System.Drawing.Size(256, 44);
+            this.loadButton.Size = new System.Drawing.Size(129, 26);
             this.loadButton.TabIndex = 10;
             this.loadButton.Text = "Load File";
             this.loadButton.UseVisualStyleBackColor = true;
@@ -119,10 +123,10 @@
             // 
             // mockDraft
             // 
-            this.mockDraft.Location = new System.Drawing.Point(326, 208);
-            this.mockDraft.Margin = new System.Windows.Forms.Padding(6);
+            this.mockDraft.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mockDraft.Location = new System.Drawing.Point(138, 99);
             this.mockDraft.Name = "mockDraft";
-            this.mockDraft.Size = new System.Drawing.Size(256, 44);
+            this.mockDraft.Size = new System.Drawing.Size(130, 26);
             this.mockDraft.TabIndex = 11;
             this.mockDraft.Text = "View Mock Draft";
             this.mockDraft.UseVisualStyleBackColor = true;
@@ -130,10 +134,10 @@
             // 
             // eventButton
             // 
-            this.eventButton.Location = new System.Drawing.Point(58, 264);
-            this.eventButton.Margin = new System.Windows.Forms.Padding(6);
+            this.eventButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.eventButton.Location = new System.Drawing.Point(0, 0);
             this.eventButton.Name = "eventButton";
-            this.eventButton.Size = new System.Drawing.Size(256, 44);
+            this.eventButton.Size = new System.Drawing.Size(129, 30);
             this.eventButton.TabIndex = 12;
             this.eventButton.Text = "View Events";
             this.eventButton.UseVisualStyleBackColor = true;
@@ -141,36 +145,65 @@
             // 
             // eventCounter
             // 
+            this.eventCounter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.eventCounter.AutoSize = true;
             this.eventCounter.BackColor = System.Drawing.Color.Red;
             this.eventCounter.ForeColor = System.Drawing.Color.White;
-            this.eventCounter.Location = new System.Drawing.Point(290, 264);
+            this.eventCounter.Location = new System.Drawing.Point(113, 0);
+            this.eventCounter.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.eventCounter.Name = "eventCounter";
-            this.eventCounter.Size = new System.Drawing.Size(24, 25);
+            this.eventCounter.Size = new System.Drawing.Size(13, 13);
             this.eventCounter.TabIndex = 13;
             this.eventCounter.Text = "0";
             this.eventCounter.Visible = false;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.resignPlayersButton, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.mockDraft, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.viewRoster, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.advanceButtons, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.scoutButton, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.viewDLeagueRoster, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.loadButton, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.awardsButton, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 4);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(55, 45);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(271, 164);
+            this.tableLayoutPanel1.TabIndex = 14;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.eventCounter);
+            this.panel1.Controls.Add(this.eventButton);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 131);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(129, 30);
+            this.panel1.TabIndex = 11;
+            // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(678, 592);
-            this.Controls.Add(this.eventCounter);
-            this.Controls.Add(this.eventButton);
-            this.Controls.Add(this.mockDraft);
-            this.Controls.Add(this.loadButton);
-            this.Controls.Add(this.advanceButtons);
-            this.Controls.Add(this.awardsButton);
-            this.Controls.Add(this.scoutButton);
-            this.Controls.Add(this.viewDLeagueRoster);
-            this.Controls.Add(this.viewRoster);
-            this.Controls.Add(this.resignPlayersButton);
-            this.Margin = new System.Windows.Forms.Padding(6);
+            this.ClientSize = new System.Drawing.Size(375, 327);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Menu";
             this.Text = "Menu";
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -186,5 +219,7 @@
         private System.Windows.Forms.Button mockDraft;
         private System.Windows.Forms.Button eventButton;
         private System.Windows.Forms.Label eventCounter;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

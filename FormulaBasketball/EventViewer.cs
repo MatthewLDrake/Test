@@ -17,24 +17,17 @@ namespace FormulaBasketball
             InitializeComponent();
             foreach(Event e in events)
             {
-                dataGridView1.Rows.Add(new object[] { e.GetTitle(), e.GetText(),0 });
+                dataGridView1.Rows.Add(new object[] { e.GetTitle(), e.GetText(),0});
             }
         }
 
-        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
-        {
-            if(dataGridView1.SelectedRows.Count > 0)
-            {
-                textBox1.Text = (string)dataGridView1.SelectedRows[0].Cells[1].Value;
-                dataGridView1.SelectedRows[0].Cells[2].Value = ((int)dataGridView1.SelectedRows[0].Cells[2].Value) + 1;
-            }
-        }
         public void GotSelected()
         {
             if (dataGridView1.Rows.Count > 0)
             {
                 dataGridView1.Rows[0].Selected = true;
                 dataGridView1.Rows[0].Cells[2].Value = 1;
+                textBox1.Text = (string)dataGridView1.Rows[0].Cells[1].Value;
             }
         }
         public int GetUnreadEvents()
@@ -50,6 +43,19 @@ namespace FormulaBasketball
         public void AddEvent(Event newEvent)
         {
             dataGridView1.Rows.Insert(0, new object[] {newEvent.GetTitle(), newEvent.GetText(), 0});
+        }
+
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if(e.Button.Equals(MouseButtons.Right))
+            {
+                dataGridView1.Rows.RemoveAt(e.RowIndex);
+            }
+            else if(e.Button.Equals(MouseButtons.Left))
+            {
+                textBox1.Text = (string)dataGridView1.Rows[e.RowIndex].Cells[1].Value;
+                dataGridView1.Rows[e.RowIndex].Cells[2].Value = ((int)dataGridView1.Rows[e.RowIndex].Cells[2].Value) + 1; 
+            }
         }
 
     }

@@ -78,12 +78,14 @@ namespace FormulaBasketball
                 fs.Close();
             }
             result = 1;
+            Close();
         }
 
         private void negotiateButton_Click(object sender, EventArgs e)
         {
             TradeForm trade = new TradeForm(create, this.trade);
             result = 2;
+            Close();
         }
 
         private void declineButton_Click(object sender, EventArgs e)
@@ -106,6 +108,7 @@ namespace FormulaBasketball
                 fs.Close();
             }
             result = 3;
+            Close();
         }
 
     }

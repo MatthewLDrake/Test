@@ -47,14 +47,16 @@
             this.TextHolder,
             this.EventViewCount});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Location = new System.Drawing.Point(2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(370, 447);
+            this.dataGridView1.Size = new System.Drawing.Size(184, 232);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
             // tableLayoutPanel1
             // 
@@ -65,20 +67,22 @@
             this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(752, 453);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(376, 236);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // textBox1
             // 
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(379, 3);
+            this.textBox1.Location = new System.Drawing.Point(190, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(370, 447);
+            this.textBox1.Size = new System.Drawing.Size(184, 232);
             this.textBox1.TabIndex = 1;
             // 
             // Event
@@ -93,20 +97,23 @@
             // 
             this.TextHolder.HeaderText = "Column1";
             this.TextHolder.Name = "TextHolder";
+            this.TextHolder.ReadOnly = true;
             this.TextHolder.Visible = false;
             // 
             // EventViewCount
             // 
             this.EventViewCount.HeaderText = "Column1";
             this.EventViewCount.Name = "EventViewCount";
+            this.EventViewCount.ReadOnly = true;
             this.EventViewCount.Visible = false;
             // 
             // EventViewer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(752, 453);
+            this.ClientSize = new System.Drawing.Size(376, 236);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "EventViewer";
             this.Text = "EventViewer";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

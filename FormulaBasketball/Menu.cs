@@ -31,17 +31,27 @@ namespace FormulaBasketball
         private AwardVoting voting;
         private player roty, mvp;
         private Dictionary<int, int> mvpVotes, rotyVotes, cotyVotes;
+        public static Menu menu;
         public Menu(createTeams create, int teamNum, FormulaBasketball.Random r)
         {
             InitializeComponent();
             this.create = create;
-
+            menu = this;
             mvpVotes = new Dictionary<int, int>();
             rotyVotes = new Dictionary<int, int>();
             cotyVotes = new Dictionary<int, int>();
 
             events = new List<Event>();
-            //events.Add(new Event("Players from new countries enter the draft!", "Players from the nations of Helvaena have joined the draft for the first time in UBA history. The only question remaining is whether or not they will ever see the court."));
+            events.Add(new Event("Players from new countries enter the draft!", "Players from the nations of Tjedigar have joined the draft for the first time in UBA history. The only question remaining is whether or not they will ever see the court."));
+            events.Add(new Event("Players from new countries enter the draft!", "Players from the nations of Aovensiiv have joined the draft for the first time in UBA history. The only question remaining is whether or not they will ever see the court."));
+            events.Add(new Event("Players from new countries enter the draft!", "Players from the nations of Eqkirium have joined the draft for the first time in UBA history. The only question remaining is whether or not they will ever see the court."));
+            events.Add(new Event("Players from new countries enter the draft!", "Players from the nations of Teralm have joined the draft for the first time in UBA history. The only question remaining is whether or not they will ever see the court."));
+            events.Add(new Event("Players from new countries enter the draft!", "Players from the nations of Timbalta have joined the draft for the first time in UBA history. The only question remaining is whether or not they will ever see the court."));            
+            events.Add(new Event("Players from new countries enter the draft!", "Players from the nations of Helvaena have joined the draft for the first time in UBA history. The only question remaining is whether or not they will ever see the court."));
+            events.Add(new Event("Players from new countries enter the draft!", "Players from the nations of Ipal have joined the draft for the first time in UBA history. The only question remaining is whether or not they will ever see the court."));
+            events.Add(new Event("Players from new countries enter the draft!", "Players from the nations of Eksola have joined the draft for the first time in UBA history. The only question remaining is whether or not they will ever see the court."));
+            events.Add(new Event("Players from new countries enter the draft!", "Players from the nations of Kolauk have joined the draft for the first time in UBA history. The only question remaining is whether or not they will ever see the court."));
+            events.Add(new Event("Players from new countries enter the draft!", "Players from the nations of Elvine have joined the draft for the first time in UBA history. The only question remaining is whether or not they will ever see the court."));
             eventViewer = new EventViewer(events);
             UpdatedEvents();
 
@@ -90,6 +100,7 @@ namespace FormulaBasketball
             }
             //create.getFreeAgents().AdvanceSeason();
             rookies = create.GetRookies();
+            
             voting = new AwardVoting(create);
             scoutingForm = new Scouting(rookies, team.GetScout(), r);
             create.SetupSalaryInfo();
@@ -175,10 +186,11 @@ namespace FormulaBasketball
             else
             {                
                 this.Visible = false;
-                draft draft = new draft(rookies, picks, humans, new FormulaBasketball.Random(80085));
+                draft draft = new draft(rookies, picks, humans, new FormulaBasketball.Random(69420));
                 draft.ShowDialog();
                 this.Visible = true;
-
+                create.getFreeAgents().Add(draft.GetUndraftedPlayers());
+                
             }
         }
         private List<player> ConvertToProPlayers(List<CollegePlayer> players)
@@ -278,8 +290,13 @@ namespace FormulaBasketball
                                     }
                                 }*/
 
+                                
                             }
                         }
+                        VoteMVP();
+                        VoteROTY();
+
+                        MessageBox.Show(mvp.getName() + " of " + mvp.getTeam() + " wins the MVP!\n" + roty.getName() + " of " + roty.getTeam() + " wins the ROTY!");
                         
 
                         create.getFreeAgents().Add(players);
@@ -337,6 +354,16 @@ namespace FormulaBasketball
 
                     resignPlayersButton.Text = "Free Agency";
                     awardsButton.Text = "Trade";
+
+                    for(int i = 0; i < create.size(); i++)
+                    {
+                        foreach(player p in create.getTeam(i))
+                            p.IsRookie(false);
+                        
+                        foreach(player p in create.getTeam(i).GetAffiliate())
+                            p.IsRookie(false);
+                    }
+
                 }
                  
                 else if(stage <= 4)
@@ -352,15 +379,11 @@ namespace FormulaBasketball
 
                     if(master)
                     {
-                        DialogResult dResult = DialogResult.Cancel;
-                        OpenFileDialog dialog = null;
-                        while (dResult != DialogResult.OK)
-                        {
-                            dialog = new OpenFileDialog();
-                            dialog.Multiselect = true;
+                        OpenFileDialog dialog = new OpenFileDialog();
+                        dialog.Multiselect = true;
 
-                            dResult = dialog.ShowDialog();
-                        }
+                        dialog.ShowDialog();
+
 
                         String[] fileNames = dialog.FileNames;
                         List<int> teamNumbers = new List<int>();
@@ -532,6 +555,7 @@ namespace FormulaBasketball
                                 teamOne.AddDraftPick(p, p.GetSeason() == 6);
                             }
                         }
+                        UpdatePicks();
                     }
                     catch(Exception)
                     {
@@ -541,13 +565,72 @@ namespace FormulaBasketball
             }
             
         }
+        public void UpdatePicks()
+        {
+            picks = new DraftPick[64];
+
+            foreach (team t in create.getTeams())
+            {
+                foreach (DraftPick pick in t.GetPicks())
+                {
+                    picks[pick.GetPickNumber() - 1] = pick;
+                }
+            }
+        }
         private draft currentDraft;
         private void mockDraft_Click(object sender, EventArgs e)
         {
             this.Visible = false;
             if(currentDraft == null || stage == 4)
             {
-                currentDraft = new draft(rookies, picks, new List<int>(), r);                
+                currentDraft = new draft(rookies, picks, new List<int>(), r);     
+                if(stage == 4)
+                {
+                    List<player> mock = currentDraft.GetMockedDraft();
+                    player topPick = mock[0];
+                    bool teamIndex = true;
+                    for(int i = 0; i < picks.Length; i++)
+                    {
+                        if(picks[i].GetOwner().Equals(team))
+                        {
+                            teamIndex = false;
+                            if(i == 0)
+                                AddEvent(new Event("Newest Mock Draft Released!", "The newest mock draft, done by draft experts in " + team.GetLocation() + " has " + topPick.getName() + " going first overall to " + team.ToString()));
+                            else
+                                AddEvent(new Event("Newest Mock Draft Released!", "The newest mock draft, done by draft experts in " + team.GetLocation() + " has " + topPick.getName() + " going first overall to " + picks[0].GetOwner().ToString() +
+                                    ". Additionally, " + mock[i].getName() + " is mocked to the " + team.ToString() + " at pick #" + (i + 1)));
+                            break;
+                        }
+                    }
+                    if(teamIndex)
+                    {
+                        AddEvent(new Event("Newest Mock Draft Released!", "The newest mock draft, done by draft experts in " + team.GetLocation() + " has " + topPick.getName() + " going first overall to " + picks[0].GetOwner().ToString()));
+                    }
+                    
+                }
+                else
+                {
+                    List<player> mock = currentDraft.GetMockedDraft();
+                    player topPick = mock[0];
+                    bool teamIndex = true;
+                    for (int i = 0; i < picks.Length; i++)
+                    {
+                        if (picks[i].GetOwner().Equals(team))
+                        {
+                            teamIndex = false;
+                            if (i == 0)
+                                AddEvent(new Event("First Mock Draft Released!", "The first mock draft of the season, done by draft experts in " + team.GetLocation() + " has " + topPick.getName() + " going first overall to " + team.ToString()));
+                            else
+                                AddEvent(new Event("First Mock Draft Released!", "The first mock draft of the season, done by draft experts in " + team.GetLocation() + " has " + topPick.getName() + " going first overall to " + picks[0].GetOwner().ToString() +
+                                    ". Additionally, " + mock[i].getName() + " is mocked to the " + team.ToString() + " at pick #" + (i + 1)));
+                            break;
+                        }
+                    }
+                    if (teamIndex)
+                    {
+                        AddEvent(new Event("First Mock Draft Released!", "The first mock draft of the season, done by draft experts in " + team.GetLocation() + " has " + topPick.getName() + " going first overall to " + picks[0].GetOwner().ToString()));
+                    }
+                }
             }
             MockDraftView mdv = new MockDraftView(currentDraft.GetMockedDraft(), picks);
             mdv.ShowDialog();
@@ -582,6 +665,7 @@ namespace FormulaBasketball
                 }
             }
             mvp = FindBest(playerList, mvpVotes);
+            
         }
         private void VoteROTY()
         {
@@ -721,6 +805,12 @@ namespace FormulaBasketball
                 }
             }
             return list;
+        }
+
+        public void AddEvent(Event p)
+        {
+            eventViewer.AddEvent(p);
+            UpdatedEvents();
         }
     }    
     [Serializable]

@@ -445,9 +445,9 @@ public class player : IComparable<player>
 
     }
     private bool isRookie;
-    public void IsRookie()
+    public void IsRookie(bool rookie = true)
     {
-        isRookie = true;
+        isRookie = rookie;
     }
     public bool Rookie()
     {

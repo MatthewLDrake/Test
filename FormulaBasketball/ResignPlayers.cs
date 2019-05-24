@@ -23,6 +23,7 @@ namespace FormulaBasketball
         private double capSpace;
         private double bonusCash;
         private List<player> rejectedPlayers;
+        private bool rejectedPlayer, cutPlayer, playerRejected;
         public ResignPlayers(createTeams create, team team, FormulaBasketball.Random r)
         {
             InitializeComponent();
@@ -197,7 +198,14 @@ namespace FormulaBasketball
 
                 if (d == DialogResult.Yes)
                 {
+                    int playerID = (int)dataGridView1.CurrentRow.Cells[5].Value;
+                    player p = team.GetPlayerByID(playerID);
                     dataGridView1.Rows.Remove(dataGridView1.CurrentRow);
+                    if(!rejectedPlayer && r.NextBool())
+                    {
+                        rejectedPlayer = true;
+                        FormulaBasketball.Menu.menu.AddEvent(new Event("Fan Favorite " + p.getName() + " not given an offer", "This week the " + team.ToString() + " announced that " + p.getName() + " would not be joining the team next season. Fans are bitterly disappointed"));
+                    }
                 }
                 else if (d == DialogResult.No)
                 {

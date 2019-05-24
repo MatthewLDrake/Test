@@ -19,7 +19,7 @@ namespace FormulaBasketball
         private int currentPick;
         private FormulaBasketball.Random r;
         private DataGridView[] grids;
-        private List<player> mockDraft;
+        private List<player> mockDraft, drafted, undrafted;
         public draft(List<player> collegePlayers, DraftPick[] picks, List<int> humanPlayers, FormulaBasketball.Random r)
         {
             InitializeComponent();
@@ -84,6 +84,7 @@ namespace FormulaBasketball
             List<player> roster = picks[currentPick].GetOwner().GetOffSeasonPlayers();
             player selectedPlayer = PickPlayer(roster, picks[currentPick].GetOwner().DraftStrategy);
             players.Remove(selectedPlayer.GetPlayerID());
+            drafted.Add(selectedPlayer);
             picks[currentPick].GetOwner().OffSeasonAddPlayer(selectedPlayer);
             label3.Text = "Previous pick: " + selectedPlayer.GetPositionAsString() + " " + selectedPlayer.getName() + " by the " + picks[currentPick].GetOwner();
             bool flag = false;
@@ -323,7 +324,7 @@ namespace FormulaBasketball
         {
             AiPick();
             currentPick++;
-            if (currentPick == 64) label1.Text = "Draft Finished";
+            if (currentPick == 64) FinishDraft();
             else label1.Text = "Round " + (currentPick / 32 + 1) + " - Pick " + (currentPick % 32 + 1) + "/32\n" + picks[currentPick].GetOwner() + " is on the clock";
 
             if (humanPlayers.Contains(picks[currentPick].GetOwner().getTeamNum()))
@@ -340,17 +341,40 @@ namespace FormulaBasketball
             }
 
         }
-
+        private void FinishDraft()
+        {
+            label1.Text = "Draft Finished";
+            undrafted = players.Values.ToList();
+            drafted[0].SetNewContract(new Contract(2, 10));
+            drafted[1].SetNewContract(new Contract(2, 8));
+            drafted[2].SetNewContract(new Contract(2, 7));
+            drafted[3].SetNewContract(new Contract(2, 5.5));
+            drafted[4].SetNewContract(new Contract(2, 4.5));
+            int i = 5;
+            for(; i < 32; i++)
+            {
+                drafted[i].SetNewContract(new Contract(2, 3));
+            }
+            for(; i < 64; i++)
+            {
+                drafted[i].SetNewContract(new Contract(2, 1));
+            }
+        }
+        public List<player> GetUndraftedPlayers()
+        {
+            return undrafted;
+        }
         private void humanDraft(object sender, EventArgs e)
         {
             int playerID = (int)grids[tabControl.SelectedIndex].SelectedRows[0].Cells[14].Value;
             player selectedPlayer = players[playerID];
             players.Remove(playerID);
+            drafted.Add(selectedPlayer);
             UpdateGrid(grids[tabControl.SelectedIndex].SelectedRows[0], selectedPlayer);
             picks[currentPick].GetOwner().OffSeasonAddPlayer(selectedPlayer);
             label3.Text = "Previous pick: " + selectedPlayer.GetPositionAsString() + " " + selectedPlayer.getName() + " by the " + picks[currentPick].GetOwner();
             currentPick++;
-            if (currentPick == 64) label1.Text = "Draft Finished";
+            if (currentPick == 64) FinishDraft();
             else label1.Text = "Round " + (currentPick / 32 + 1) + " - Pick " + (currentPick % 32 + 1) + "/32\n" + picks[currentPick].GetOwner() + " is on the clock";
             
             if (humanPlayers.Contains(picks[currentPick].GetOwner().getTeamNum()))
@@ -391,7 +415,7 @@ namespace FormulaBasketball
            {
                AiPick();
                currentPick++;
-               if (currentPick == 64) label1.Text = "Draft Finished";
+               if (currentPick == 64) FinishDraft();
                else label1.Text = "Round " + (currentPick / 32 + 1) + " - Pick " + (currentPick % 32 + 1) + "/32\n" + picks[currentPick].GetOwner() + " is on the clock";
            }
            draftButton.Enabled = true;

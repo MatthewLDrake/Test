@@ -35,11 +35,11 @@ namespace FormulaBasketball
                 {
                     if (p.getMinutes() > 2000)
                     {
-                        MVPCandidates.Rows.Add("Add Player", p.getName(), p);
+                        MVPCandidates.Rows.Add("Add Player", p.getName(), p, curr.ToString());
                     }
                     if (p.Rookie())
                     {
-                        rotyCandidateGrid.Rows.Add("Add Player", p.getName(), p);
+                        rotyCandidateGrid.Rows.Add("Add Player", p.getName(), p, curr.ToString());
                     }
                 }
                 curr.getCoach().Team = curr;
@@ -131,7 +131,7 @@ namespace FormulaBasketball
             int place = 1;
             for (int i = players.Count - 1; i >= 0; i-- )
             {
-                grid.Rows.Add(place, players[i].getName(), players[i], i);
+                grid.Rows.Add(place, players[i].getName(),players[i].getTeam().ToString(), players[i], i);
                 place++;
             }
 

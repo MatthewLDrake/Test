@@ -306,6 +306,7 @@ namespace FormulaBasketball
                             teamOne.AddDraftPick(p, p.GetSeason() == 6);
                         }
                     }
+                    FormulaBasketball.Menu.menu.UpdatePicks();
                 }
                 catch (Exception)
                 {

@@ -87,7 +87,7 @@ public class team : IComparable<team>,  IEnumerable<player>
             allTimeVsTeam[i / 2] = new Record(arr[i], arr[i + 1]);
         }
         arr = lines[2].Split(',');
-        fianance = int.Parse(arr[0]);
+        fianance = int.Parse(arr[0]) + 100000000;
         penalty = Double.Parse(arr[1]);
         draftPlace = int.Parse(arr[2]);
         playoffAppearances = int.Parse(arr[3]);
@@ -587,7 +587,10 @@ public class team : IComparable<team>,  IEnumerable<player>
         }
         return players;
     }
-
+    public String GetLocation()
+    {
+        return location;
+    }
     private bool NegogiateWithPlayer(player p, int rank, createTeams create)
     {
         double average = create.GetAverageSalary(rank, p.getPosition());
