@@ -1079,49 +1079,244 @@ public class player : IComparable<player>
 
         return new Contract(years,money, 0 , previousOffer.GetBonus(), previousOffer.GetPromises());
     }
-    private int playerHappiness = 0;
+    private int playerHappiness = 0;//, personality = 0;
     public ContractResult ContractNegotiate(Contract newContract, FormulaBasketball.Random r)
     {
 
-        double score = 0;
-
         double minResult = .8 * getOverall() - 43;
-
-        minResult = Math.Max(1,Math.Min(25, minResult));
-
         if (playerHappiness == 0)
             playerHappiness = r.Next(20, 80);
-
-        score += -80 + 3.2 * playerHappiness - 0.048 * playerHappiness * playerHappiness + 0.00032 * playerHappiness * playerHappiness * playerHappiness;
-
-        double moneyDiff = newContract.GetMoney() - minResult;
-
-        if(moneyDiff > 0)
+        minResult = Math.Max(contract.GetMoney(), Math.Min(25, minResult));
+        if(personality == 0)
         {
-            score += 0.04762 * moneyDiff * moneyDiff + 6.524 * moneyDiff + 30.00;
-        }
-        else if(moneyDiff < -17)
-        {
-            return ContractResult.Reject;
+            int num = r.Next(80);
+            // Winning Only
+            if (num < 10)
+            {
+                personality = 1;
+                if (team.GetDraftPlace() < 26)
+                {
+                    if (minResult <= contract.GetMoney() && newContract.GetPromises().Contains(Promises.Win_Conference)) 
+                    {
+                        return ContractResult.Accept;
+                    }
+                    return ContractResult.Reject;
+                }
+                else if (minResult <= contract.GetMoney()) return ContractResult.Accept;
+                else return ContractResult.Continue;
+            }
+            // Balanced
+            else if (num < 25)
+            {
+                personality = 2;
+
+                double score = 0;
+
+                double moneyDiff = newContract.GetMoney() - minResult;
+
+                List<Promises> promises = newContract.GetPromises();
+
+                if (playerHappiness < 40) score -= 1000;
+
+                if(promises != null)
+                {
+                    if (promises.Contains(Promises.Make_Playoffs))
+                        score += 10;
+                    if (promises.Contains(Promises.No_Trade))
+                        score += 20;
+                    if (promises.Contains(Promises.Win_Championship))
+                        score += 100;
+                    if (promises.Contains(Promises.Win_Conference))
+                        score += 25;
+                    if (promises.Contains(Promises.Win_Division))
+                        score += 20;
+                    if (promises.Contains(Promises.Year_One_Starter))
+                        score += 20;
+                }
+
+                score += playerHappiness - 55;
+
+                if (moneyDiff > 5) score += 900;
+                else if (moneyDiff > 0) score += 50;
+                else if (moneyDiff > -2) score -= 20;
+                else score -= 500;
+
+                if (score >= 50) return ContractResult.Accept;
+                else if (score >= 0) return ContractResult.Continue;
+                else return ContractResult.Reject;
+
+            }
+            // Championship Required
+            else if (num < 27)
+            {
+                personality = 3;
+                if (newContract.GetMoney() - 1 >= contract.GetMoney() && newContract.GetPromises().Contains(Promises.Win_Championship)) return ContractResult.Accept;
+                else if (newContract.GetPromises().Contains(Promises.Win_Championship) || newContract.GetMoney() - 1 >= contract.GetMoney()) return ContractResult.Continue;
+                else return ContractResult.Reject;
+            }
+            else if (num < 70)
+            {
+                minResult += 2.5;
+                personality = 4;
+
+                minResult = Math.Min(25, minResult);
+
+
+                double moneyDiff = newContract.GetMoney() - minResult;
+
+                if (moneyDiff < -17)
+                {
+                    return ContractResult.Reject;
+                }
+
+                if (minResult < newContract.GetMoney() && playerHappiness > 35) return ContractResult.Accept;
+
+
+
+                if (newContract.GetMoney() < contract.GetMoney()) return ContractResult.Reject;
+
+                if (playerHappiness < 40) return ContractResult.Reject;
+
+                if (newContract.GetMoney() - minResult < 2.5 && playerHappiness > 70) return ContractResult.Accept;
+
+                return ContractResult.Continue;
+            }
+            else
+            {
+                personality = 5;
+                
+
+
+                double moneyDiff = newContract.GetMoney() - minResult;
+
+                if (moneyDiff < -17)
+                {
+                    return ContractResult.Reject;
+                }
+
+                if (minResult < newContract.GetMoney() && playerHappiness > 35) return ContractResult.Accept;
+
+
+
+                if (newContract.GetMoney() < contract.GetMoney()) return ContractResult.Reject;
+
+                if (playerHappiness < 40) return ContractResult.Reject;
+
+                if (newContract.GetMoney() - minResult < 2.5 && playerHappiness > 70) return ContractResult.Accept;
+
+                return ContractResult.Continue;
+            }
         }
         else
         {
-            score += 0.5238 * moneyDiff * moneyDiff + 18.24 * moneyDiff + 30.00;
-        }
+            switch (personality)
+            {
+                case 1:
+                    if (team.GetDraftPlace() < 26)
+                    {
+                        if (minResult <= contract.GetMoney() && newContract.GetPromises().Contains(Promises.Win_Conference))
+                        {
+                            return ContractResult.Accept;
+                        }
+                        return ContractResult.Reject;
+                    }
+                    else if (minResult <= contract.GetMoney()) return ContractResult.Accept;
+                    else return ContractResult.Continue;
+                case 2:
+                     double score = 0;
 
-        if (minResult < newContract.GetMoney() && playerHappiness > 35) return ContractResult.Accept;
+                    double moneyDiff = newContract.GetMoney() - minResult;
+
+                    List<Promises> promises = newContract.GetPromises();
+
+                    if (playerHappiness < 40) score -= 1000;
+
+                    if(promises != null)
+                    {
+                        if (promises.Contains(Promises.Make_Playoffs))
+                            score += 10;
+                        if (promises.Contains(Promises.No_Trade))
+                            score += 20;
+                        if (promises.Contains(Promises.Win_Championship))
+                            score += 100;
+                        if (promises.Contains(Promises.Win_Conference))
+                            score += 25;
+                        if (promises.Contains(Promises.Win_Division))
+                            score += 20;
+                        if (promises.Contains(Promises.Year_One_Starter))
+                            score += 20;
+                    }
+
+                    score += playerHappiness - 55;
+
+                    if (moneyDiff > 5) score += 900;
+                    else if (moneyDiff > 0) score += 50;
+                    else if (moneyDiff > -2) score -= 20;
+                    else score -= 500;
+
+                    if (score >= 50) return ContractResult.Accept;
+                    else if (score >= 0) return ContractResult.Continue;
+                    else return ContractResult.Reject;
+
+                case 3:
+                    if (newContract.GetMoney() - 1 >= contract.GetMoney() && newContract.GetPromises().Contains(Promises.Win_Championship)) return ContractResult.Accept;
+                    else if (newContract.GetPromises().Contains(Promises.Win_Championship) || newContract.GetMoney() - 1 >= contract.GetMoney()) return ContractResult.Continue;
+                    else return ContractResult.Reject;
+                case 4:
+                    minResult += 2.5;
+
+                    minResult = Math.Min(25, minResult);
+
+
+                    moneyDiff = newContract.GetMoney() - minResult;
+
+                    if (moneyDiff < -17)
+                    {
+                        return ContractResult.Reject;
+                    }
+
+                    if (minResult < newContract.GetMoney() && playerHappiness > 35) return ContractResult.Accept;
+
+
+
+                    if (newContract.GetMoney() < contract.GetMoney()) return ContractResult.Reject;
+
+                    if (playerHappiness < 40) return ContractResult.Reject;
+
+                    if (newContract.GetMoney() - minResult < 2.5 && playerHappiness > 70) return ContractResult.Accept;
+
+                    return ContractResult.Continue;
+                default:
+
+
+                    moneyDiff = newContract.GetMoney() - minResult;
+
+                    if (moneyDiff < -17)
+                    {
+                        return ContractResult.Reject;
+                    }
+
+                    if (minResult < newContract.GetMoney() && playerHappiness > 35) return ContractResult.Accept;
+
+
+
+                    if (newContract.GetMoney() < contract.GetMoney()) return ContractResult.Reject;
+
+                    if (playerHappiness < 40) return ContractResult.Reject;
+
+                    if (newContract.GetMoney() - minResult < 2.5 && playerHappiness > 70) return ContractResult.Accept;
+
+                    return ContractResult.Continue;
+
+            }
+            
+        }
 
        
 
-        if (newContract.GetMoney() < contract.GetMoney()) return ContractResult.Reject;
-
-        if (playerHappiness < 40) return ContractResult.Reject;
-
-        if (newContract.GetMoney() - minResult < 2.5 && playerHappiness > 70) return ContractResult.Accept;
 
 
-
-        return ContractResult.Continue;
+        
     }
     public string layupStr;
     public string dunkStr;
@@ -2265,27 +2460,8 @@ public class FreeAgentContracts
     }
 }
 [Serializable]
-public class Promises
-{
-    private string description;
-    private int id;
-    public Promises(string description, int id)
-    {
-        this.description = description;
-        this.id = id;
-    }
-    public Promises Copy()
-    {
-        return new Promises(description, id);
-    }
-    public override bool Equals(Object obj)
-    {
-        if(obj is Promises)
-            return id == (obj as Promises).id;
-        return false;
-    }
-    public override string ToString()
-    {
-        return description;
-    }
+public enum Promises
+{    
+   Year_One_Starter, Win_Division, Win_Conference, Win_Championship, Make_Playoffs, No_Trade
+    
 }
