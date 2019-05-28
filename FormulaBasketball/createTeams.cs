@@ -127,7 +127,13 @@ public class createTeams
     }
     private void createTheTeams(string info)
     {
-        string[] data = info.Split(new string[] { "<team>" }, StringSplitOptions.None);
+        string[] splits = info.Split(new string[] { "<freeagents>" }, StringSplitOptions.None);
+        string[] players = splits[1].Split(new string[] { "<player>" }, StringSplitOptions.None);
+        for (int i = 1; i < players.Length; i++)
+        {
+            freeAgents.Add(new player(players[i]));
+        }
+        string[] data = splits[0].Split(new string[] { "<team>" }, StringSplitOptions.None);
         teams = new List<team>();
         dLeagueTeams = new List<team>();
         for(int i = 1; i < data.Length; i += 2)

@@ -640,6 +640,7 @@ public class player : IComparable<player>
     }
     public bool HasOfferFromTeam(team team)
     {
+        if (contractOffers == null) return false;
         foreach(FreeAgentContracts offer in contractOffers)
         {
             if (team.Equals(offer.GetTeam())) return true;
@@ -1023,67 +1024,90 @@ public class player : IComparable<player>
     {
         int years = 0;
         double money = 0;
-
-        if (age < 26)
+        double bonus = 0;
+        List<Promises> promises = new List<Promises>();
+        double minResult = .8 * getOverall() - 43;
+        switch (personality)
         {
-            if (previousOffer.GetYearsLeft() > 3)
-            {
-                years = 1;
-                if (previousPlayer == null)
-                {
-                    money = previousOffer.GetMoney() + (r.Next(0, 40) / 10);
-                }
-                else
-                {
-                    if (previousOffer.GetMoney() > previousPlayer.GetMoney()) money = previousOffer.GetMoney();
-                    else money = r.Next(Convert.ToInt32(previousOffer.GetMoney() * 10), Convert.ToInt32(previousPlayer.GetMoney() * 10));
-                }
-            }
-            else
-            {
+            case 1:
                 years = previousOffer.GetYearsLeft();
-                if (previousPlayer == null)
-                    money = previousOffer.GetMoney() + (r.Next(5, 40) / 10);
-                else
+                money = minResult + (r.Next(0, 25) / 10);
+                if(previousPlayer != null)
                 {
-                    if (previousOffer.GetMoney() > previousPlayer.GetMoney()) money = previousOffer.GetMoney();
-                    else money = r.Next(Convert.ToInt32(previousOffer.GetMoney() * 10), Convert.ToInt32(previousPlayer.GetMoney() * 10))/10;
+                    if(money >= previousPlayer.GetMoney())
+                    {
+                        money = minResult;
+                    }
                 }
-            }
+                bonus = money * (r.Next(5, 150) / 100);
+                promises = new List<Promises>(previousOffer.GetPromises());
+                break;
+            case 2:
+
+                years = previousOffer.GetYearsLeft();
+
+                money = minResult + (r.Next(0, 25) / 10);
+                if (previousPlayer != null)
+                {
+                    if (money >= previousPlayer.GetMoney())
+                    {
+                        money = minResult;
+                    }
+                }
+                bonus = money * (r.Next(5, 150) / 100);
+                promises = new List<Promises>(previousOffer.GetPromises());
+
+                if (getOverall() > 70 && !promises.Contains(Promises.Year_One_Starter))promises.Add(Promises.Year_One_Starter);
+
+
+                break;
+
+            case 3:
+                promises = new List<Promises>(previousOffer.GetPromises());
+                years = previousOffer.GetYearsLeft();
+                bonus = Math.Max(previousOffer.GetMoney() * .1, previousOffer.GetBonus());
+                money = previousOffer.GetMoney();
+                break;
+            case 4:
+                minResult += 2.5;
+
+                minResult = Math.Min(25, minResult);
+                years = previousOffer.GetYearsLeft();
+
+                money = minResult + (r.Next(0, 25) / 10);
+                if (previousPlayer != null)
+                {
+                    if (money >= previousPlayer.GetMoney())
+                    {
+                        money = minResult;
+                    }
+                }
+                bonus = money * (r.Next(5, 150) / 100);
+                promises = new List<Promises>(previousOffer.GetPromises());
+                break; 
+            default:
+                years = previousOffer.GetYearsLeft();
+
+                money = minResult + (r.Next(0, 25) / 10);
+                if (previousPlayer != null)
+                {
+                    if (money >= previousPlayer.GetMoney())
+                    {
+                        money = minResult;
+                    }
+                }
+                bonus = money * (r.Next(5, 150) / 100);
+                promises = new List<Promises>(previousOffer.GetPromises());
+                break;
         }
-        else if(age > 33)
-        {
-            //TODO: Worry about this later
-        }
-        else
-        {
-            if (previousPlayer == null)
-                money = previousOffer.GetMoney() + (r.Next(5, 40) / 10);
-            else
-            {
-                if (previousOffer.GetMoney() > previousPlayer.GetMoney()) money = previousOffer.GetMoney();
-                else money = r.Next(Convert.ToInt32(previousOffer.GetMoney() * 10), Convert.ToInt32(previousPlayer.GetMoney() * 10));
-            }
 
-            years = previousOffer.GetYearsLeft();
-            
-                
-            if (money == previousOffer.GetMoney())
-            {
-                while (years == previousOffer.GetYearsLeft()) years = r.Next(1, 5);
-            }
-
-        }
-
-        if (money > 25) money = 25;
-
-        return new Contract(years,money, 0 , previousOffer.GetBonus(), previousOffer.GetPromises());
+        return new Contract(years,money, 0 , bonus, promises);
     }
     private int playerHappiness = 0;//, personality = 0;
     public ContractResult ContractNegotiate(Contract newContract, FormulaBasketball.Random r)
     {
 
-        double minResult = .8 * getOverall() - 43;
+        double minResult = .7 * getOverall() - 43;
         if (playerHappiness == 0)
             playerHappiness = r.Next(20, 80);
         minResult = Math.Max(contract.GetMoney(), Math.Min(25, minResult));

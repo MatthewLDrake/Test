@@ -18,13 +18,13 @@ namespace FormulaBasketball
             InitializeComponent();
             this.promises = promises;
             promiseGrid.Columns[1].ReadOnly = readOnly;
-            foreach(Promises promise in formulaBasketball.promisesList)
+            foreach(KeyValuePair<Promises,String> promise in formulaBasketball.promisesList)
             {
                 promiseGrid.Rows.Add();
                 DataGridViewCheckBoxCell cell = (DataGridViewCheckBoxCell)promiseGrid[0,promiseGrid.Rows.Count - 1];
-                cell.Value = promises.Contains(promise);
-                promiseGrid[1,promiseGrid.Rows.Count - 1].Value = promise.ToString();
-                promiseGrid[2, promiseGrid.Rows.Count - 1].Value = promise;
+                cell.Value = promises.Contains(promise.Key);
+                promiseGrid[1,promiseGrid.Rows.Count - 1].Value = promise.Value;
+                promiseGrid[2, promiseGrid.Rows.Count - 1].Value = promise.Key;
             }
         }
         public List<Promises> GetPromises()
@@ -38,7 +38,7 @@ namespace FormulaBasketball
             for (int i = 0; i < promiseGrid.Rows.Count; i++ )
             {
                 bool cell = (bool)promiseGrid[0, i].Value;
-                if (cell) promises.Add(promiseGrid[2, i].Value as Promises);
+                if (cell) promises.Add((Promises)promiseGrid[2, i].Value);
             }
             Close();
         }

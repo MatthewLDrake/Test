@@ -18,6 +18,7 @@ namespace FormulaBasketball
     {
         private createTeams create;
         private team team;
+
         private FormulaBasketball.Random r;
         private int teamNum;
         private List<int> humans;
@@ -77,7 +78,7 @@ namespace FormulaBasketball
 
             humans = new List<int>
             {
-                3, 7, 19
+                2, 7, 19
             };
             
 
@@ -294,9 +295,8 @@ namespace FormulaBasketball
                             }
                         }
                         VoteMVP();
-                        VoteROTY();
 
-                        MessageBox.Show(mvp.getName() + " of " + mvp.getTeam() + " wins the MVP!\n" + roty.getName() + " of " + roty.getTeam() + " wins the ROTY!");
+                        MessageBox.Show(mvp.getName() + " of " + mvp.getTeam() + " wins the MVP!\n");
                         
 
                         create.getFreeAgents().Add(players);
@@ -410,7 +410,8 @@ namespace FormulaBasketball
                                 fs.Close();
                             }
                             create.getFreeAgents().UpdateOffers(temp, create);
-                            teamNumbers.Add(temp[0].teamID);
+                            if(temp.Count > 0)
+                                teamNumbers.Add(temp[0].teamID);
 
                             FileStream createFS = new FileStream("Stage" + stage + "Results.fbdata", FileMode.Create);
 

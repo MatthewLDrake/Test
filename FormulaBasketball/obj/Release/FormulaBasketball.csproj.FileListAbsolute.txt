@@ -106,3 +106,8 @@ C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release\FormulaBasketball.Scouting.resources
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release\FormulaBasketball.TradeForm.resources
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release\FormulaBasketball.ViewRoster.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.AwardVoting.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.EventViewer.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.MockDraftView.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.OfferedTrade.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.PlayerSigned.resources

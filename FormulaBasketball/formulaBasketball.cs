@@ -27,7 +27,10 @@ public class formulaBasketball
     public static bool injuries = true;
     private static ImagePrinter printer;
     public static bool createImages = true;
-    public static Dictionary<Promises,String> promisesList = new Promises[] { new Promises(Promises.Year_One_Starter,"Year One Starter"), new Promises("Win Division", 2), new Promises("Win Conference", 3), new Promises("Win Championship", 4), new Promises("Make Playoffs", 5), new Promises("No trade clause", 6) };
+    public static Dictionary<Promises,String> promisesList = new Dictionary<Promises, String>()
+    {
+        { Promises.Year_One_Starter, "Year One Starter" }, {Promises.Win_Division, "Win Division" }, {Promises.Win_Conference, "Win Conference" }, {Promises.Win_Championship, "Win Championship" }, {Promises.Make_Playoffs, "Make Playoffs"},{ Promises.No_Trade ,"No trade clause" }
+    };
     public formulaBasketball(bool loadSave, String fileName, List<team> teams, List<player> freeAgency, Boolean flag = false)
     {
 
