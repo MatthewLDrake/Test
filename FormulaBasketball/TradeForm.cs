@@ -113,7 +113,7 @@ namespace FormulaBasketball
                 }
                 else
                 {
-                    mainTeamTradeInfo.Rows.Add(mainTeamGrid[1, cell.RowIndex].Value, mainTeamGrid[5, cell.RowIndex].Value);
+                    mainTeamTradeInfo.Rows.Add(mainTeamGrid[1, cell.RowIndex].Value, mainTeamGrid[6, cell.RowIndex].Value);
                 }
                 cell.Value = !((bool)cell.Value);
             }
@@ -141,7 +141,7 @@ namespace FormulaBasketball
                 }
                 else
                 {
-                    otherTeamTradeInfo.Rows.Add(otherTeamGrid[1, cell.RowIndex].Value, otherTeamGrid[5, cell.RowIndex].Value);
+                    otherTeamTradeInfo.Rows.Add(otherTeamGrid[1, cell.RowIndex].Value, otherTeamGrid[6, cell.RowIndex].Value);
                 }
                 cell.Value = !((bool)cell.Value);
             }

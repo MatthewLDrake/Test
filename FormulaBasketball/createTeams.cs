@@ -921,6 +921,11 @@ public class createTeams
     {
         this.college = college;
     }
+
+    public void ReplaceTeam(team temp)
+    {
+        teams[temp.getTeamNum()] = temp;
+    }
 }
 
    

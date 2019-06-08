@@ -100,6 +100,12 @@
     <Compile Include="FreeAgents.cs" />
     <Compile Include="Holder.cs" />
     <Compile Include="ImagePrinter.cs" />
+    <Compile Include="LeagueRoster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeagueRoster.Designer.cs">
+      <DependentUpon>LeagueRoster.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,12 @@
     </Compile>
     <Compile Include="OfferPromises.Designer.cs">
       <DependentUpon>OfferPromises.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OffseasonFreeAgentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OffseasonFreeAgentForm.Designer.cs">
+      <DependentUpon>OffseasonFreeAgentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PlayerNegotiate.cs">
       <SubType>Form</SubType>
@@ -180,6 +192,12 @@
     </Compile>
     <Compile Include="Offseason.cs" />
     <Compile Include="RookieDraft.cs" />
+    <Compile Include="RosterControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RosterControl.Designer.cs">
+      <DependentUpon>RosterControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Scout.cs" />
     <Compile Include="Scouting.cs">
       <SubType>Form</SubType>
@@ -378,6 +396,9 @@
     <EmbeddedResource Include="FreeAgencyForm.resx">
       <DependentUpon>FreeAgencyForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LeagueRoster.resx">
+      <DependentUpon>LeagueRoster.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
@@ -401,6 +422,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OfferPromises.resx">
       <DependentUpon>OfferPromises.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OffseasonFreeAgentForm.resx">
+      <DependentUpon>OffseasonFreeAgentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PlayerNegotiate.resx">
       <DependentUpon>PlayerNegotiate.cs</DependentUpon>
@@ -432,6 +456,9 @@
     </Compile>
     <EmbeddedResource Include="ResignPlayers.resx">
       <DependentUpon>ResignPlayers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RosterControl.resx">
+      <DependentUpon>RosterControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Scouting.resx">
       <DependentUpon>Scouting.cs</DependentUpon>

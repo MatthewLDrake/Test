@@ -489,27 +489,27 @@ public class player : IComparable<player>
         return sign;
     }
     private bool sign = false;
-    int personality = 0;
-    public bool Signed(FormulaBasketball.Random r, bool last)
+    int personality = 0, singingPersonality = 0;
+    public bool Signed(FormulaBasketball.Random r, bool last, createTeams create)
     {        
         if (contractOffers != null && contractOffers.Count > 0)
         {
             double highestScore = -1240100;
-            FreeAgentContracts highestTeam = null;
+            int highestTeam = -1;
 
-            foreach (FreeAgentContracts contract in contractOffers)
+            foreach (KeyValuePair<int, Contract> contract in contractOffers)
             {
-                if (personality == 0) personality = r.Next(1, 3);
+                if (singingPersonality == 0) personality = r.Next(1, 3);
 
-                if (personality == 1)
+                if (singingPersonality == 1)
                 {
-                    double score = 26.036253880057 - 1.0221013187906 * (32 - contract.GetTeam().GetDraftPlace()) - 0.014819245082403 * (32 - contract.GetTeam().GetDraftPlace()) * (32 - contract.GetTeam().GetDraftPlace()) + 0.00066668381608959 * (32 - contract.GetTeam().GetDraftPlace()) * (32 - contract.GetTeam().GetDraftPlace()) * (32 - contract.GetTeam().GetDraftPlace());
+                    double score = 26.036253880057 - 1.0221013187906 * (32 - create.getTeam(contract.Key).GetDraftPlace()) - 0.014819245082403 * (32 - create.getTeam(contract.Key).GetDraftPlace()) * (32 - create.getTeam(contract.Key).GetDraftPlace()) + 0.00066668381608959 * (32 - create.getTeam(contract.Key).GetDraftPlace()) * (32 - create.getTeam(contract.Key).GetDraftPlace()) * (32 - create.getTeam(contract.Key).GetDraftPlace());
                     double minResult = .8 * getOverall() - 43;
 
                     minResult = Math.Max(1, Math.Min(25, minResult));
 
 
-                    double moneyDiff = contract.GetContract().GetMoney() - minResult;
+                    double moneyDiff = contract.Value.GetMoney() - minResult;
 
                     if (moneyDiff > 0)
                     {
@@ -522,15 +522,15 @@ public class player : IComparable<player>
                     if(score > highestScore)
                     {
                         highestScore = score;
-                        highestTeam = contract;
+                        highestTeam = contract.Key;
                     }
                 }
                 // playingTime
-                else if(personality == 2)
+                else if (singingPersonality == 2)
                 {
                     double score = 0;
                     player bestPlayer = null;
-                    foreach (player p in contract.GetTeam().getAllPlayer())
+                    foreach (player p in create.getTeam(contract.Key).getAllPlayer())
                     {
                         if(p.getPosition() == getPosition())
                         {
@@ -540,7 +540,7 @@ public class player : IComparable<player>
                     if (getOverall() > bestPlayer.getOverall()) score = 1000;
                     else
                     {
-                        foreach (player p in contract.GetTeam().getAllPlayer())
+                        foreach (player p in create.getTeam(contract.Key).getAllPlayer())
                         {
                             int rank = 1;
                             if (p.getPosition() == getPosition())
@@ -554,22 +554,22 @@ public class player : IComparable<player>
 
                     if(score == 1000 && highestScore == 1000)
                     {
-                        if(contract.GetTeam().GetDraftPlace() < highestTeam.GetTeam().GetDraftPlace())
+                        if (create.getTeam(contract.Key).GetDraftPlace() < create.getTeam(highestTeam).GetDraftPlace())
                         {
-                            highestTeam = contract;
+                            highestTeam = contract.Key;
                         }
                     }
 
                     if (score > highestScore)
                     {
                         highestScore = score;
-                        highestTeam = contract;
+                        highestTeam = contract.Key;
                     }
                     else if(score == highestScore)
                     {
-                        if (contract.GetTeam().GetDraftPlace() < highestTeam.GetTeam().GetDraftPlace())
+                        if (create.getTeam(contract.Key).GetDraftPlace() < create.getTeam(highestTeam).GetDraftPlace())
                         {
-                            highestTeam = contract;
+                            highestTeam = contract.Key;
                         }
                     }
                 }
@@ -582,7 +582,7 @@ public class player : IComparable<player>
                     minResult = Math.Max(1, Math.Min(25, minResult));
 
 
-                    double moneyDiff = contract.GetContract().GetMoney() - minResult;
+                    double moneyDiff = contract.Value.GetMoney() - minResult;
 
                     if (moneyDiff > 0)
                     {
@@ -595,7 +595,7 @@ public class player : IComparable<player>
                     if (score > highestScore)
                     {
                         highestScore = score;
-                        highestTeam = contract;
+                        highestTeam = contract.Key;
                     }
                 }
 
@@ -612,27 +612,28 @@ public class player : IComparable<player>
         
         return sign;
     }
-    
+    public void SetFreeAgent()
+    {
+        contractOffers = new Dictionary<int, Contract>();
+    }
+    private int offerCount;
+    public void SetAdditionalOffers(int offer)
+    {
+        offerCount = offer;
+    }
     public int GetOffers()
     {
-        if (contractOffers == null)
-        {
-            contractOffers = new List<FreeAgentContracts>();
-        }
-        return contractOffers.Count;
+        return contractOffers.Count + offerCount;
     }
-    public List<FreeAgentContracts> GetFreeAgentOffers()
+    public Dictionary<int, Contract> GetFreeAgentOffers()
     {
         return contractOffers;
     }
-    private List<FreeAgentContracts> contractOffers;
+    private Dictionary<int, Contract> contractOffers;
     public void OfferFreeAgentContract(Contract contract, team team)
     {
-        if(contractOffers == null)
-        {
-            contractOffers = new List<FreeAgentContracts>();
-        }
-        contractOffers.Add(new FreeAgentContracts(contract,team));
+        if (contractOffers.ContainsKey(team.getTeamNum())) contractOffers[team.getTeamNum()] = contract;
+        else contractOffers.Add(team.getTeamNum() ,contract);
     }
     public void Stamina()
     {
@@ -641,31 +642,17 @@ public class player : IComparable<player>
     public bool HasOfferFromTeam(team team)
     {
         if (contractOffers == null) return false;
-        foreach(FreeAgentContracts offer in contractOffers)
-        {
-            if (team.Equals(offer.GetTeam())) return true;
-        }
-        return false;
+        return contractOffers.ContainsKey(team.getTeamNum());
     }
     public Contract GetOfferFromTeam(team team)
     {
-        foreach (FreeAgentContracts offer in contractOffers)
-        {
-            if (team.Equals(offer.GetTeam())) return offer.GetContract();
-        }
+        if (contractOffers.ContainsKey(team.getTeamNum())) return contractOffers[team.getTeamNum()];
+        
         return null;
     }
     public bool RemoveFreeAgentOffer(team team)
     {
-        foreach (FreeAgentContracts offer in contractOffers)
-        {
-            if (team.Equals(offer.GetTeam()))
-            {
-                contractOffers.Remove(offer);
-                return true;
-            }
-        }
-        return false;
+        return contractOffers.Remove(team.getTeamNum());
     }
     public int peakStart, peakEnd, development;
     public void generateDevelopment(FormulaBasketball.Random rand)
@@ -2462,25 +2449,6 @@ public class player : IComparable<player>
     public void Pulled()
     {
         seconds = 0;
-    }
-}
-[Serializable]
-public class FreeAgentContracts
-{
-    private Contract contract;
-    private team team;
-    public FreeAgentContracts(Contract contract, team team)
-    {
-        this.contract = contract;
-        this.team = team;            
-    }
-    public Contract GetContract()
-    {
-        return contract;
-    }
-    public team GetTeam()
-    {
-        return team;
     }
 }
 [Serializable]

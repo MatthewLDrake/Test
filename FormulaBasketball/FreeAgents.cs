@@ -24,10 +24,9 @@ public class FreeAgents
             Add(player);
         }
     }
-    public void UpdateOffers(List<FreeAgentOffers> offers, createTeams create)
+    public void UpdateOffers(Dictionary<int, Contract> offers, team t)
     {
-        if (offers.Count < 1) return;
-        team t = create.getTeam(offers[0].teamID);
+        if (offers == null || offers.Count < 1) return;
         foreach (player p in allPlayers)
         {
             if (p.HasOfferFromTeam(t))
@@ -35,9 +34,9 @@ public class FreeAgents
                 p.RemoveFreeAgentOffer(t);
             }
         }
-        foreach (FreeAgentOffers offer in offers)
+        foreach (KeyValuePair<int, Contract> offer in offers)
         {
-            GetPlayerByID(offer.playerID).OfferFreeAgentContract(offer.offer, t);
+            GetPlayerByID(offer.Key).OfferFreeAgentContract(offer.Value, t);
         }
     }
     public void Add(player player)

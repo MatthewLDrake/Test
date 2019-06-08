@@ -799,88 +799,7 @@ public class team : IComparable<team>,  IEnumerable<player>
     {
         firstFree = true;
     }
-    private List<player>[] playersOffered;
-    public void offerToFreeAgents(FreeAgents freeAgency, FormulaBasketball.Random r)
-    {
-        if(firstFree)
-        {
-            playersOffered = new List<player>[5];
-            for (int i = 0; i < playersOffered.Length; i++)
-                playersOffered[i] = new List<player>();
-        }
-        else
-        {
-            for (int i = 0; i < playersOffered.Length; i++)
-                foreach (player p in playersOffered[i])
-                    if (p.FreeAgentSigned())
-                        playersOffered[i].Remove(p);
-        }
-        List<player>[] organizationPlayers = new List<player>[5];
-        for (int i = 0; i < organizationPlayers.Length; i++)
-            organizationPlayers[i] = new List<player>();
-        foreach (player p in activePlayers)if(p != null) organizationPlayers[p.getPosition() - 1].Add(p);
-        foreach (player p in affiliate.getAllPlayer()) organizationPlayers[p.getPosition() - 1].Add(p);
-
-        for (int i = 0; i < organizationPlayers.Length; i++)
-            organizationPlayers[i] = Sort(organizationPlayers[i]);
-
-        int[] counts = new int[5];
-        for(int i = 0; i < counts.Length; i++)
-        {
-            counts[i] = 7 - organizationPlayers[i].Count;
-        }
-
-        for(int i = 0; i < counts.Length; i++)
-        {
-            List<player> freeAgentPlayers = freeAgency.GetPlayersByPos(i + 1);
-            int index = 0;
-            while(true)
-            {
-                if (freeAgentPlayers[index].getOverall() < organizationPlayers[i][organizationPlayers[i].Count - 1].getOverall()) break;
-
-                player current = freeAgentPlayers[index];
-
-                int playersLeft = counts[i] - playersOffered[i].Count;
-
-                double percent = 41.5625 + 17.604166666667 * playersLeft + 0.9375 * playersLeft * playersLeft - 0.10416666666667 * playersLeft * playersLeft * playersLeft;
-
-                if (percent < 0) break;
-                if (r.Next(100) < percent)
-                {
-                    OfferFreeAgent(current);
-                    playersOffered[i].Add(current);
-                }
-
-                index++;
-            }
-        }
-
-
-    }
-    private void OfferFreeAgent(player p)
-    {
-        Contract contract = null;
-
-        if (p.getOverall() < 60)
-        {
-            contract = new Contract(1, 1);
-        }
-        else
-        {
-            double money = -9270 + 402.41666666667 * p.getOverall() - 5.825 * p.getOverall() * p.getOverall() + 0.028333333333333 * p.getOverall() * p.getOverall() * p.getOverall();
-
-            money = Math.Round(money);
-            money = r.Next(-10, 10);
-            money = money / 10;            
-
-            money = Math.Min(Math.Max(money, 1), 25);
-
-            contract = new Contract(r.Next(1, 4), money);
-        }       
-
-        p.OfferFreeAgentContract(contract, this);
-
-    }
+    
     private List<player> Sort(List<player> list)
     {
         player temp = null;
@@ -1863,6 +1782,32 @@ public class team : IComparable<team>,  IEnumerable<player>
         {
             strat = value;
         }
+    }
+    public Dictionary<int, Contract> offers;
+    public void AddOffer(player p, Contract contract)
+    {
+        if (offers == null) offers = new Dictionary<int, Contract>();
+        if (offers.ContainsKey(p.GetPlayerID())) offers[p.GetPlayerID()] = contract;
+        else offers.Add(p.GetPlayerID(), contract);
+    }
+    public void RemoveOffer(player p)
+    {
+        if (offers == null) offers = new Dictionary<int, Contract>();
+        offers.Remove(p.GetPlayerID());
+    }
+    public Dictionary<int, Contract> GetOffers()
+    {
+        return offers;
+    }
+
+    public void OfferFreeAgents(FreeAgents freeAgents, FormulaBasketball.Random r, bool firstRound)
+    {
+        List<player> c, pf, sf, sg, pg;
+        c = freeAgents.GetPlayersByPos(1);
+        pf = freeAgents.GetPlayersByPos(2);
+        sf = freeAgents.GetPlayersByPos(3);
+        sg = freeAgents.GetPlayersByPos(4);
+        pg = freeAgents.GetPlayersByPos(5);
     }
 }
 

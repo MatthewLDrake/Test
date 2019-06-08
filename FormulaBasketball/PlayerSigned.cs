@@ -14,17 +14,18 @@ namespace FormulaBasketball
     {
         private int pos;
         private player p;
-        private List<FreeAgentContracts> contracts; 
-        public PlayerSigned(player p)
+        private Dictionary<int, Contract> contracts; 
+        public PlayerSigned(player p, createTeams create)
         {
             InitializeComponent();
             this.p = p;
             pos = p.getPosition();
             contracts = p.GetFreeAgentOffers();
-            foreach(FreeAgentContracts contract in contracts)
+            foreach(KeyValuePair<int, Contract> contract in contracts)
             {
-                dataGridView1.Rows.Add(new object[] { "Y: " + contract.GetContract().GetYearsLeft() + "M: " + contract.GetContract().GetMoney(), contract.GetTeam().ToString(), contract.GetTeam() });
+                dataGridView1.Rows.Add(new object[] { "Y: " + contract.Value.GetYearsLeft() + "M: " + contract.Value.GetMoney(),create.getTeam(contract.Key).ToString(), create.getTeam(contract.Key) });
             }
+            dataGridView3.Rows.Add(p.getName(), p.age, String.Format("{0:0.00}", p.getOverall()), p.getDevelopment(),  0);
         }
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)

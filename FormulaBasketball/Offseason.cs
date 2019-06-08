@@ -114,12 +114,12 @@ public class Offseason
         foreach(team team in teams)
         {
             team.SetFree();
-            team.offerToFreeAgents(freeAgency, r);
+            //team.offerToFreeAgents(freeAgency, r);
         }
         FreeAgents newFreeAgents = new FreeAgents();
         foreach(player p in freeAgency.GetAllPlayers())
         {
-            if(!p.Signed(r, false))
+            if(!p.Signed(r, false, create))
             {
                 newFreeAgents.Add(p);
             }
@@ -127,12 +127,12 @@ public class Offseason
         freeAgency = newFreeAgents;
         foreach (team team in teams)
         {
-            team.offerToFreeAgents(freeAgency, r);
+            //team.offerToFreeAgents(freeAgency, r);
         }
         newFreeAgents = new FreeAgents();
         foreach (player p in freeAgency.GetAllPlayers())
         {
-            if (!p.Signed(r, false))
+            if (!p.Signed(r, false, create))
             {
                 newFreeAgents.Add(p);
             }
@@ -140,12 +140,12 @@ public class Offseason
         freeAgency = newFreeAgents;
         foreach (team team in teams)
         {
-            team.offerToFreeAgents(freeAgency, r);
+            //team.offerToFreeAgents(freeAgency, r);
         }
         newFreeAgents = new FreeAgents();
         foreach (player p in freeAgency.GetAllPlayers())
         {
-            if (!p.Signed(r, true))
+            if (!p.Signed(r, true, create))
             {
                 newFreeAgents.Add(p);
             }
