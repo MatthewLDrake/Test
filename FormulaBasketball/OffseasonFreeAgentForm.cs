@@ -15,7 +15,8 @@ namespace FormulaBasketball
         private FreeAgents freeAgents;
         private DataGridView currentGrid;
         private DataGridView[] grids;
-        public OffseasonFreeAgentForm(FreeAgents free)
+        private createTeams create;
+        public OffseasonFreeAgentForm(FreeAgents free, createTeams create)
         {
             InitializeComponent();
             freeAgents = free;
@@ -26,6 +27,10 @@ namespace FormulaBasketball
             grids[2] = smallForwardGrid;
             grids[3] = shootingGuardGrid;
             grids[4] = pointGuardGrid;
+
+            this.create = create;
+
+            UpdateFreeAgents();
         }
         public void UpdateFreeAgents()
         {
@@ -55,7 +60,7 @@ namespace FormulaBasketball
 
         private void button2_Click(object sender, EventArgs e)
         {
-            PlayerSigned 
+            PlayerSigned sign = new PlayerSigned(((player)currentGrid.SelectedRows[0].Cells[6].Value), create);
         }
     }
 }

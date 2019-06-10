@@ -632,6 +632,7 @@ public class player : IComparable<player>
     private Dictionary<int, Contract> contractOffers;
     public void OfferFreeAgentContract(Contract contract, team team)
     {
+        if (contractOffers == null) contractOffers = new Dictionary<int, Contract>();
         if (contractOffers.ContainsKey(team.getTeamNum())) contractOffers[team.getTeamNum()] = contract;
         else contractOffers.Add(team.getTeamNum() ,contract);
     }

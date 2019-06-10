@@ -21,7 +21,7 @@ namespace FormulaBasketball
 
         private FormulaBasketball.Random r;
         private int teamNum;
-        private List<int> humans;
+        public static List<int> humans;
         private int stage;
         private ResignPlayers resignForm;
         private FreeAgencyForm freeAgentForm;
@@ -383,23 +383,7 @@ namespace FormulaBasketball
                             
                             teamNumbers.Add(temp.getTeamNum());
 
-                            FileStream createFS = new FileStream("Stage" + stage + "Results.fbdata", FileMode.Create);
-
-                            // Construct a BinaryFormatter and use it to serialize the data to the stream.
-                            BinaryFormatter outFormatter = new BinaryFormatter();
-                            try
-                            {
-                                outFormatter.Serialize(createFS, create);
-                            }
-                            catch (SerializationException ex)
-                            {
-                                Console.WriteLine("Failed to serialize. Reason: " + ex.Message);
-                                throw;
-                            }
-                            finally
-                            {
-                                createFS.Close();
-                            }
+                            
 
                         }
 
@@ -425,6 +409,27 @@ namespace FormulaBasketball
                         }
                         create.SetFreeAgents(newFreeAgents);*/
                         new LeagueRoster(humans, create).Show();
+                        OffseasonFreeAgentForm form = new OffseasonFreeAgentForm(create.getFreeAgents(), create);
+                        form.ShowDialog();
+
+                        FileStream createFS = new FileStream("Stage" + stage + "Results.fbdata", FileMode.Create);
+
+                        // Construct a BinaryFormatter and use it to serialize the data to the stream.
+                        BinaryFormatter outFormatter = new BinaryFormatter();
+                        try
+                        {
+                            outFormatter.Serialize(createFS, create);
+                        }
+                        catch (SerializationException ex)
+                        {
+                            Console.WriteLine("Failed to serialize. Reason: " + ex.Message);
+                            throw;
+                        }
+                        finally
+                        {
+                            createFS.Close();
+                        }
+
                         //create.getFreeAgents().
                     }
                     else

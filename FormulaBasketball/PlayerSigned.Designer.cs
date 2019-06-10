@@ -38,7 +38,6 @@
             this.Contract = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Team = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.t = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.teamSelect = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,10 +45,19 @@
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.teamSelect = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.yearsUpDown = new System.Windows.Forms.NumericUpDown();
+            this.moneyUpDown = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.rosterGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.yearsUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moneyUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // rosterGrid
@@ -148,17 +156,6 @@
             this.t.Name = "t";
             this.t.Visible = false;
             // 
-            // teamSelect
-            // 
-            this.teamSelect.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.teamSelect.Location = new System.Drawing.Point(243, 524);
-            this.teamSelect.Name = "teamSelect";
-            this.teamSelect.Size = new System.Drawing.Size(75, 23);
-            this.teamSelect.TabIndex = 7;
-            this.teamSelect.Text = "Select Team";
-            this.teamSelect.UseVisualStyleBackColor = true;
-            this.teamSelect.Click += new System.EventHandler(this.teamSelect_Click);
-            // 
             // dataGridView3
             // 
             this.dataGridView3.AllowUserToAddRows = false;
@@ -224,9 +221,9 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.Controls.Add(this.dataGridView3, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.teamSelect, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.rosterGrid, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -235,6 +232,63 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1124, 564);
             this.tableLayoutPanel1.TabIndex = 8;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.moneyUpDown);
+            this.panel1.Controls.Add(this.yearsUpDown);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.teamSelect);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 510);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(556, 51);
+            this.panel1.TabIndex = 8;
+            // 
+            // teamSelect
+            // 
+            this.teamSelect.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.teamSelect.Location = new System.Drawing.Point(9, 19);
+            this.teamSelect.Name = "teamSelect";
+            this.teamSelect.Size = new System.Drawing.Size(75, 23);
+            this.teamSelect.TabIndex = 8;
+            this.teamSelect.Text = "Select Team";
+            this.teamSelect.UseVisualStyleBackColor = true;
+            this.teamSelect.Click += new System.EventHandler(this.teamSelect_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(133, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(34, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Years";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(281, 4);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Money";
+            // 
+            // yearsUpDown
+            // 
+            this.yearsUpDown.Location = new System.Drawing.Point(104, 19);
+            this.yearsUpDown.Name = "yearsUpDown";
+            this.yearsUpDown.Size = new System.Drawing.Size(120, 20);
+            this.yearsUpDown.TabIndex = 11;
+            // 
+            // moneyUpDown
+            // 
+            this.moneyUpDown.DecimalPlaces = 1;
+            this.moneyUpDown.Location = new System.Drawing.Point(271, 20);
+            this.moneyUpDown.Name = "moneyUpDown";
+            this.moneyUpDown.Size = new System.Drawing.Size(120, 20);
+            this.moneyUpDown.TabIndex = 12;
             // 
             // PlayerSigned
             // 
@@ -248,6 +302,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.yearsUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moneyUpDown)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -264,7 +322,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Potential;
         private System.Windows.Forms.DataGridViewTextBoxColumn CapHit;
         private System.Windows.Forms.DataGridViewTextBoxColumn t;
-        private System.Windows.Forms.Button teamSelect;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
@@ -272,5 +329,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button teamSelect;
+        private System.Windows.Forms.NumericUpDown moneyUpDown;
+        private System.Windows.Forms.NumericUpDown yearsUpDown;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

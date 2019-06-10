@@ -21,9 +21,18 @@ namespace FormulaBasketball
             this.p = p;
             pos = p.getPosition();
             contracts = p.GetFreeAgentOffers();
-            foreach(KeyValuePair<int, Contract> contract in contracts)
+            for(int i = 0; i < create.size();i++ )
             {
-                dataGridView1.Rows.Add(new object[] { "Y: " + contract.Value.GetYearsLeft() + "M: " + contract.Value.GetMoney(),create.getTeam(contract.Key).ToString(), create.getTeam(contract.Key) });
+                team t = create.getTeam(i);
+
+                if (FormulaBasketball.Menu.humans.Contains(i))
+                {
+                    Contract contract = t.GetContract(p);
+                    if (contract != null)
+                        dataGridView1.Rows.Add(new object[] { "Y: " + contract.GetYearsLeft() + "M: " + contract.GetMoney(), t.ToString(), t });
+                }
+                else
+                    dataGridView1.Rows.Add(new object[] { "TBD", t.ToString(), t });
             }
             dataGridView3.Rows.Add(p.getName(), p.age, String.Format("{0:0.00}", p.getOverall()), p.getDevelopment(),  0);
         }
@@ -61,6 +70,10 @@ namespace FormulaBasketball
         {
             if (dataGridView1.SelectedRows.Count == 0)            
                 return;
+            if (FormulaBasketball.Menu.humans.Contains(((team)dataGridView1.SelectedRows[0].Cells[2].Value).getTeamNum()))
+                p.SetNewContract(new Contract((int)yearsUpDown.Value, (double)moneyUpDown.Value));
+            else
+                p.SetNewContract(((team)dataGridView1.SelectedRows[0].Cells[2].Value).GetContract(p));
 
             ((team)dataGridView1.SelectedRows[0].Cells[2].Value).OffSeasonAddPlayer(p);
 

@@ -144,3 +144,6 @@ B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.EventViewer.reso
 B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.PlayerSigned.resources
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\FormulaBasketball.LeagueRoster.resources
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\FormulaBasketball.RosterControl.resources
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.LeagueRoster.resources
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.OffseasonFreeAgentForm.resources
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.RosterControl.resources

@@ -1799,6 +1799,11 @@ public class team : IComparable<team>,  IEnumerable<player>
     {
         return offers;
     }
+    public Contract GetContract(player p)
+    {
+        if (offers.ContainsKey(p.GetPlayerID())) return offers[p.GetPlayerID()];
+        return null;
+    }
 
     public void OfferFreeAgents(FreeAgents freeAgents, FormulaBasketball.Random r, bool firstRound)
     {
