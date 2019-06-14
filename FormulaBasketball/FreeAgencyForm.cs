@@ -26,9 +26,19 @@ namespace FormulaBasketball
             userTeam = team;
 
             for (int i = 0; i < create.size(); i++)
+            {
                 freeAgents.Add(create.getDLeagueTeam(i).getAllPlayer());
+            }
+            for (int i = 1; i < 6; i++ )
+                foreach (player p in freeAgents.GetPlayersByPos(i))
+                {
+                    if (p.getTeam() != null) p.SetStatus(1);
+                    else p.SetStatus(0);
 
-            UpdateFreeAgents(create);
+                    p.SetFreeAgent();
+                }
+
+            
 
             
 
@@ -88,15 +98,35 @@ namespace FormulaBasketball
 
             for (int i = 0; i < players.Length; i++)
             {
+                grids[i].Rows.Clear();
                 players[i] = freeAgents.GetPlayersByPos(i + 1);
                 for (int j = 0; j < players[i].Count; j++)
                 {
+                    switch(players[i][j].GetStatus())
+                    {
+                        case 1:
+                            if (!checkBox1.Checked)
+                                continue;
+                            break;
+                        case 2:
+                            if (!checkBox2.Checked)
+                                continue;
+                            break;
+                        default:
+                            break;
+                    }
+
+
                     String strTeam = "";
-                    players[i][j].SetFreeAgent();
                     if (players[i][j].getTeam() != null) strTeam = players[i][j].getTeam().ToString();
                     grids[i].Rows.Add(strTeam, players[i][j].getName(), players[i][j].age, String.Format("{0:0.00}", players[i][j].getOverall()), players[i][j].getDevelopment(), "Show Ratings", "Show Stats", players[i][j].GetOffers(), "Negotiate", players[i][j]);
                 }
             }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateFreeAgents(FormulaBasketball.Menu.menu.create);
         }
 
     }    

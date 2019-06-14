@@ -16,7 +16,7 @@ namespace FormulaBasketball
 {
     public partial class Menu : Form
     {
-        private createTeams create;
+        public createTeams create;
         private team team;
 
         private FormulaBasketball.Random r;
@@ -128,8 +128,8 @@ namespace FormulaBasketball
                 this.Visible = false;
                 if (freeAgentForm == null)
                     freeAgentForm = new FreeAgencyForm(create.getFreeAgents(), team, create);
-                else
-                    freeAgentForm.UpdateFreeAgents(create);
+                
+                freeAgentForm.UpdateFreeAgents(create);
                 freeAgentForm.ShowDialog();
                 this.Visible = true;
             }

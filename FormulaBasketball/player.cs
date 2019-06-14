@@ -616,7 +616,15 @@ public class player : IComparable<player>
     {
         contractOffers = new Dictionary<int, Contract>();
     }
-    private int offerCount;
+    private int offerCount, status;
+    public int GetStatus()
+    {
+        return status;
+    }
+    public void SetStatus(int newStatus)
+    {
+        status = newStatus;
+    }
     public void SetAdditionalOffers(int offer)
     {
         offerCount = offer;
