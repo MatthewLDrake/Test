@@ -356,6 +356,8 @@ namespace FormulaBasketball
 
                         String[] fileNames = dialog.FileNames;
                         List<int> teamNumbers = new List<int>();
+                        List<Dictionary<int, Contract>> offers = new List<Dictionary<int, Contract>>();
+                        List<team> teams = new List<team>();
                         foreach (string file in fileNames)
                         {
                             team temp;
@@ -379,15 +381,17 @@ namespace FormulaBasketball
                             {
                                 fs.Close();
                             }
-                            create.getFreeAgents().UpdateOffers(temp.GetOffers(), temp);
-                            
+                            //create.getFreeAgents().UpdateOffers(temp.GetOffers(), temp);
+                            offers.Add(temp.GetOffers());
                             teamNumbers.Add(temp.getTeamNum());
+                            teams.Add(temp);
 
                             
 
                         }
-
-                        create.getFreeAgents().UpdateOffers(team.GetOffers(), team);
+                        teams.Add(team);
+                        offers.Add(team.GetOffers());
+                        create.getFreeAgents().UpdateOffers(offers, teams);
                         teamNumbers.Add(teamNum);
                         for (int i = 0; i < create.size(); i++)
                         {
@@ -408,9 +412,10 @@ namespace FormulaBasketball
                             }
                         }
                         create.SetFreeAgents(newFreeAgents);*/
-                        new LeagueRoster(humans, create).Show();
-                        OffseasonFreeAgentForm form = new OffseasonFreeAgentForm(create.getFreeAgents(), create);
+                        OffseasonFreeAgentForm form = new OffseasonFreeAgentForm(create.getFreeAgents(), create, humans);
                         form.ShowDialog();
+
+                        
 
                         FileStream createFS = new FileStream("Stage" + stage + "Results.fbdata", FileMode.Create);
 
@@ -469,7 +474,7 @@ namespace FormulaBasketball
         {
             OpenFileDialog fileDialog = new OpenFileDialog();
             fileDialog.Title = "Open Formula Basketball File";
-            fileDialog.Filter = "FBTrade files (*.fbtrade)|*.fbtrade|FBData files (*.fbdata)|*.fbdata|FB Trade Response File (*.fbtr)|*.fbtr";
+            fileDialog.Filter = "FBData files (*.fbdata)|*.fbdata|FBTrade files (*.fbtrade)|*.fbtrade|FB Trade Response File (*.fbtr)|*.fbtr";
             fileDialog.Multiselect = false;
             if (fileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -493,6 +498,7 @@ namespace FormulaBasketball
                     resignPlayersButton.Enabled = true;
                     awardsButton.Enabled = true;
                     team = create.getTeam(teamNum);
+                    freeAgentForm = null;
                 }
                 else if(extension.Equals(".fbtr"))
                 {

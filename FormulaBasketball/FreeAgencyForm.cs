@@ -36,11 +36,7 @@ namespace FormulaBasketball
                     else p.SetStatus(0);
 
                     p.SetFreeAgent();
-                }
-
-            
-
-            
+                }            
 
         }
         private void centerList_CellContentClick(object sender, DataGridViewCellEventArgs e)

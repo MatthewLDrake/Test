@@ -23,7 +23,7 @@ namespace FormulaBasketball
             {
                 if(p.getPosition() == pos)
                 {
-                    mainTeamGrid.Rows.Add(new object[] { p.getName(), p.getOverall(), p.getDevelopment(), p.GetMoneyPerYear() });
+                    mainTeamGrid.Rows.Add(new object[] { p.getName(), String.Format("{0:0.00}", p.getOverall()), p.getDevelopment(), p.GetMoneyPerYear() });
                 }
             }
             label1.Text = team;

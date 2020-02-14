@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.mainTeamGrid = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Overall = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Potential = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.capHit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.mainTeamGrid)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -56,38 +56,6 @@
             this.mainTeamGrid.RowHeadersVisible = false;
             this.mainTeamGrid.Size = new System.Drawing.Size(485, 265);
             this.mainTeamGrid.TabIndex = 1;
-            // 
-            // name
-            // 
-            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.name.FillWeight = 200F;
-            this.name.HeaderText = "Player Name";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            // 
-            // Overall
-            // 
-            this.Overall.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Overall.HeaderText = "Overall";
-            this.Overall.Name = "Overall";
-            this.Overall.ReadOnly = true;
-            this.Overall.Width = 65;
-            // 
-            // Potential
-            // 
-            this.Potential.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Potential.HeaderText = "Potential";
-            this.Potential.Name = "Potential";
-            this.Potential.ReadOnly = true;
-            this.Potential.Width = 73;
-            // 
-            // capHit
-            // 
-            this.capHit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.capHit.HeaderText = "Cap Hit";
-            this.capHit.Name = "capHit";
-            this.capHit.ReadOnly = true;
-            this.capHit.Width = 67;
             // 
             // tableLayoutPanel1
             // 
@@ -114,6 +82,41 @@
             this.label1.Size = new System.Drawing.Size(485, 30);
             this.label1.TabIndex = 2;
             // 
+            // name
+            // 
+            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.name.FillWeight = 200F;
+            this.name.HeaderText = "Player Name";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            // 
+            // Overall
+            // 
+            this.Overall.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Overall.HeaderText = "Overall";
+            this.Overall.Name = "Overall";
+            this.Overall.ReadOnly = true;
+            this.Overall.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Overall.Width = 46;
+            // 
+            // Potential
+            // 
+            this.Potential.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Potential.HeaderText = "Potential";
+            this.Potential.Name = "Potential";
+            this.Potential.ReadOnly = true;
+            this.Potential.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Potential.Width = 54;
+            // 
+            // capHit
+            // 
+            this.capHit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.capHit.HeaderText = "Cap Hit";
+            this.capHit.Name = "capHit";
+            this.capHit.ReadOnly = true;
+            this.capHit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.capHit.Width = 48;
+            // 
             // RosterControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -131,11 +134,11 @@
         #endregion
 
         private System.Windows.Forms.DataGridView mainTeamGrid;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Overall;
         private System.Windows.Forms.DataGridViewTextBoxColumn Potential;
         private System.Windows.Forms.DataGridViewTextBoxColumn capHit;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label1;
     }
 }

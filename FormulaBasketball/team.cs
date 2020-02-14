@@ -1280,6 +1280,7 @@ public class team : IComparable<team>,  IEnumerable<player>
     }
     public void OffSeasonAddPlayer(player p)
     {
+        p.setTeam(this);
         offseasonPlayers.Add(p);
     }
     public List<player> GetOffSeasonPlayers(bool includeDLeague = true)
@@ -1801,7 +1802,7 @@ public class team : IComparable<team>,  IEnumerable<player>
     }
     public Contract GetContract(player p)
     {
-        if (offers.ContainsKey(p.GetPlayerID())) return offers[p.GetPlayerID()];
+        if (offers != null && offers.ContainsKey(p.GetPlayerID())) return offers[p.GetPlayerID()];
         return null;
     }
 

@@ -614,7 +614,8 @@ public class player : IComparable<player>
     }
     public void SetFreeAgent()
     {
-        contractOffers = new Dictionary<int, Contract>();
+        if(contractOffers == null)
+            contractOffers = new Dictionary<int, Contract>();
     }
     private int offerCount, status;
     public int GetStatus()
@@ -635,11 +636,19 @@ public class player : IComparable<player>
     }
     public Dictionary<int, Contract> GetFreeAgentOffers()
     {
+        if(playerID == 373)
+        {
+            Console.WriteLine("Test for alomundi");
+        }
         return contractOffers;
     }
     private Dictionary<int, Contract> contractOffers;
     public void OfferFreeAgentContract(Contract contract, team team)
     {
+        if (playerID == 373)
+        {
+            Console.WriteLine("Test for alomundi");
+        }
         if (contractOffers == null) contractOffers = new Dictionary<int, Contract>();
         if (contractOffers.ContainsKey(team.getTeamNum())) contractOffers[team.getTeamNum()] = contract;
         else contractOffers.Add(team.getTeamNum() ,contract);
@@ -650,17 +659,29 @@ public class player : IComparable<player>
     }
     public bool HasOfferFromTeam(team team)
     {
+        if (playerID == 373)
+        {
+            Console.WriteLine("Test for alomundi");
+        }
         if (contractOffers == null) return false;
         return contractOffers.ContainsKey(team.getTeamNum());
     }
     public Contract GetOfferFromTeam(team team)
     {
+        if (playerID == 373)
+        {
+            Console.WriteLine("Test for alomundi");
+        }
         if (contractOffers.ContainsKey(team.getTeamNum())) return contractOffers[team.getTeamNum()];
         
         return null;
     }
     public bool RemoveFreeAgentOffer(team team)
     {
+        if (playerID == 373)
+        {
+            Console.WriteLine("Test for alomundi");
+        }
         return contractOffers.Remove(team.getTeamNum());
     }
     public int peakStart, peakEnd, development;

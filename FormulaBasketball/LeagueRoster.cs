@@ -15,6 +15,7 @@ namespace FormulaBasketball
         private RosterControl[] controls;
         private createTeams create;
         private List<int> humans;
+        private int lastPos;
         public LeagueRoster(List<int> humans, createTeams create)
         {
             InitializeComponent();
@@ -56,34 +57,43 @@ namespace FormulaBasketball
             controls[31] = rosterControl32;
 
         }
+        public void UpdateLeagueRoster()
+        {
+            UpdateRosterControls(lastPos);
+        }
         private void ButtonClick(object sender, EventArgs e)
         {
             Button button = (Button)sender;
             int pos = int.Parse((String)button.Tag);
+            lastPos = pos;
 
+            UpdateRosterControls(pos);
+
+        }
+        private void UpdateRosterControls(int pos)
+        {
             List<team> teams = new List<team>(create.getTeams());
 
             SortedList<double, team> list = new SortedList<double, team>(new DuplicateKeyComparer<double>());
-            for(int i = 0; i < teams.Count; i++)
+            for (int i = 0; i < teams.Count; i++)
             {
                 team team = teams[i];
-                
+
                 double highestOverall = 0;
                 if (humans.Contains(i)) highestOverall = 100 + i;
-                foreach(player p in team.GetOffSeasonPlayers())
+                foreach (player p in team.GetOffSeasonPlayers())
                 {
-                    if(p.getPosition() == pos && p.getOverall() > highestOverall)
+                    if (p.getPosition() == pos && p.getOverall() > highestOverall)
                     {
                         highestOverall = p.getOverall();
                     }
                 }
                 list.Add(highestOverall, team);
             }
-            for(int i = 0; i < list.Count; i ++)
+            for (int i = 0; i < list.Count; i++)
             {
                 controls[i].SetControl(list.ElementAt(i).Value.GetOffSeasonPlayers(), pos, list.ElementAt(i).Value.ToString());
             }
-
         }
     }
 }

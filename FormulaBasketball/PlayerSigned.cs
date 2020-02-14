@@ -27,6 +27,7 @@ namespace FormulaBasketball
 
                 if (FormulaBasketball.Menu.humans.Contains(i))
                 {
+                    // TODO: Fix this if there is no contract
                     Contract contract = t.GetContract(p);
                     if (contract != null)
                         dataGridView1.Rows.Add(new object[] { "Y: " + contract.GetYearsLeft() + "M: " + contract.GetMoney(), t.ToString(), t });
@@ -39,9 +40,10 @@ namespace FormulaBasketball
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
+            rosterGrid.Rows.Clear();
             if(dataGridView1.SelectedRows.Count > 0)
             {
-                foreach (player p in (team)dataGridView1.SelectedRows[0].Cells[2].Value)
+                foreach (player p in ((team)dataGridView1.SelectedRows[0].Cells[2].Value).GetOffSeasonPlayers())
                 {
                     if (p.getPosition() == pos)
                     {
@@ -52,7 +54,7 @@ namespace FormulaBasketball
                         rosterGrid.Rows.Add(p.getName(), p.age, String.Format("{0:0.00}", p.getOverall()), p.getDevelopment(),  p.GetMoneyPerYear());
                     }
                 }
-                foreach (player p in ((team)dataGridView1.SelectedRows[0].Cells[2].Value).GetAffiliate())
+                /*foreach (player p in ((team)dataGridView1.SelectedRows[0].Cells[2].Value).GetAffiliate())
                 {
                     if (p.getPosition() == pos)
                     {
@@ -62,7 +64,7 @@ namespace FormulaBasketball
                         p.setStamina(100);
                         rosterGrid.Rows.Add(p.getName(), p.age, String.Format("{0:0.00}", p.getOverall()), p.getDevelopment(), p.GetMoneyPerYear());
                     }
-                }
+                }*/
             }
         }
 
@@ -70,7 +72,7 @@ namespace FormulaBasketball
         {
             if (dataGridView1.SelectedRows.Count == 0)            
                 return;
-            if (FormulaBasketball.Menu.humans.Contains(((team)dataGridView1.SelectedRows[0].Cells[2].Value).getTeamNum()))
+            if (!FormulaBasketball.Menu.humans.Contains(((team)dataGridView1.SelectedRows[0].Cells[2].Value).getTeamNum()))
                 p.SetNewContract(new Contract((int)yearsUpDown.Value, (double)moneyUpDown.Value));
             else
                 p.SetNewContract(((team)dataGridView1.SelectedRows[0].Cells[2].Value).GetContract(p));

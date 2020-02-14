@@ -24,19 +24,25 @@ public class FreeAgents
             Add(player);
         }
     }
-    public void UpdateOffers(Dictionary<int, Contract> offers, team t)
+    public void UpdateOffers(List<Dictionary<int, Contract>> listOffers, List<team> teams)
     {
-        if (offers == null || offers.Count < 1) return;
+        if (listOffers == null || listOffers.Count < 1) return;
         foreach (player p in allPlayers)
         {
+            foreach(team t in teams)
             if (p.HasOfferFromTeam(t))
             {
                 p.RemoveFreeAgentOffer(t);
             }
         }
-        foreach (KeyValuePair<int, Contract> offer in offers)
+        for (int i = 0; i < listOffers.Count; i++)
         {
-            GetPlayerByID(offer.Key).OfferFreeAgentContract(offer.Value, t);
+            if (listOffers[i] == null || listOffers[i].Count < 1)
+                continue;
+            foreach (KeyValuePair<int, Contract> offer in listOffers[i])
+            {
+                GetPlayerByID(offer.Key).OfferFreeAgentContract(offer.Value, teams[i]);
+            }
         }
     }
     public void Add(player player)
