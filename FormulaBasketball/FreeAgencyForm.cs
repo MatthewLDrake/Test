@@ -32,6 +32,8 @@ namespace FormulaBasketball
             for (int i = 1; i < 6; i++ )
                 foreach (player p in freeAgents.GetPlayersByPos(i))
                 {
+                    if (p.GetStatus() == 2)
+                        continue;
                     if (p.getTeam() != null) p.SetStatus(1);
                     else p.SetStatus(0);
 
@@ -123,6 +125,11 @@ namespace FormulaBasketball
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             UpdateFreeAgents(FormulaBasketball.Menu.menu.create);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new ViewRoster(userTeam.GetOffSeasonPlayers()).Show();
         }
 
     }    

@@ -40,9 +40,9 @@ public class Contract
     {
         return yearsIn >= years;
     }
-    public void AdvanceYear()
+    public void AdvanceYear(int years = 1)
     {
-        yearsIn++;
+        yearsIn += years;
     }
     public double GetMoney()
     {

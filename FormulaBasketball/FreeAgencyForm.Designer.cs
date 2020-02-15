@@ -93,9 +93,10 @@
             this.dataGridViewButtonColumn12 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -290,7 +291,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(716, 324);
+            this.tabPage2.Size = new System.Drawing.Size(770, 348);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Power Forwards";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -316,7 +317,7 @@
             this.powerForwardGrid.MultiSelect = false;
             this.powerForwardGrid.Name = "powerForwardGrid";
             this.powerForwardGrid.RowHeadersVisible = false;
-            this.powerForwardGrid.Size = new System.Drawing.Size(710, 318);
+            this.powerForwardGrid.Size = new System.Drawing.Size(764, 342);
             this.powerForwardGrid.TabIndex = 6;
             this.powerForwardGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.centerList_CellContentClick);
             // 
@@ -402,7 +403,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(716, 324);
+            this.tabPage3.Size = new System.Drawing.Size(770, 348);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Small Forwards";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -428,7 +429,7 @@
             this.smallForwardGrid.MultiSelect = false;
             this.smallForwardGrid.Name = "smallForwardGrid";
             this.smallForwardGrid.RowHeadersVisible = false;
-            this.smallForwardGrid.Size = new System.Drawing.Size(710, 318);
+            this.smallForwardGrid.Size = new System.Drawing.Size(764, 342);
             this.smallForwardGrid.TabIndex = 6;
             this.smallForwardGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.centerList_CellContentClick);
             // 
@@ -514,7 +515,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(716, 324);
+            this.tabPage4.Size = new System.Drawing.Size(770, 348);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Shooting Guards";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -540,7 +541,7 @@
             this.shootingGuardGrid.MultiSelect = false;
             this.shootingGuardGrid.Name = "shootingGuardGrid";
             this.shootingGuardGrid.RowHeadersVisible = false;
-            this.shootingGuardGrid.Size = new System.Drawing.Size(710, 318);
+            this.shootingGuardGrid.Size = new System.Drawing.Size(764, 342);
             this.shootingGuardGrid.TabIndex = 6;
             this.shootingGuardGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.centerList_CellContentClick);
             // 
@@ -626,7 +627,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(716, 324);
+            this.tabPage5.Size = new System.Drawing.Size(770, 348);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Point Guards";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -652,7 +653,7 @@
             this.pointGuardGrid.MultiSelect = false;
             this.pointGuardGrid.Name = "pointGuardGrid";
             this.pointGuardGrid.RowHeadersVisible = false;
-            this.pointGuardGrid.Size = new System.Drawing.Size(710, 318);
+            this.pointGuardGrid.Size = new System.Drawing.Size(764, 342);
             this.pointGuardGrid.TabIndex = 5;
             this.pointGuardGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.centerList_CellContentClick);
             // 
@@ -741,6 +742,23 @@
             this.panel1.Size = new System.Drawing.Size(152, 89);
             this.panel1.TabIndex = 6;
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.checkBox1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.checkBox2, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.button1, 0, 2);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 3;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(152, 89);
+            this.tableLayoutPanel2.TabIndex = 2;
+            // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
@@ -749,7 +767,7 @@
             this.checkBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkBox1.Location = new System.Drawing.Point(3, 3);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(146, 38);
+            this.checkBox1.Size = new System.Drawing.Size(146, 23);
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "Show D-League Players";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -761,28 +779,23 @@
             this.checkBox2.Checked = true;
             this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox2.Location = new System.Drawing.Point(3, 47);
+            this.checkBox2.Location = new System.Drawing.Point(3, 32);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(146, 39);
+            this.checkBox2.Size = new System.Drawing.Size(146, 23);
             this.checkBox2.TabIndex = 1;
             this.checkBox2.Text = "Show Signed Players";
             this.checkBox2.UseVisualStyleBackColor = true;
             this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // tableLayoutPanel2
+            // button1
             // 
-            this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.checkBox1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.checkBox2, 0, 1);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(152, 89);
-            this.tableLayoutPanel2.TabIndex = 2;
+            this.button1.Location = new System.Drawing.Point(3, 61);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(145, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "View Offseason Roster";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FreeAgencyForm
             // 
@@ -882,6 +895,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.Button button1;
     }
 }
 

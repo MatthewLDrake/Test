@@ -91,6 +91,12 @@
       <DependentUpon>EventViewer.cs</DependentUpon>
     </Compile>
     <Compile Include="FIBUTeam.cs" />
+    <Compile Include="FixScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FixScreen.Designer.cs">
+      <DependentUpon>FixScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="FreeAgencyForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -383,6 +389,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FirstScreen.resx">
       <DependentUpon>FirstScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FixScreen.resx">
+      <DependentUpon>FixScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

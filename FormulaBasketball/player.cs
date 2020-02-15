@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 [Serializable]
 public class player : IComparable<player>
 {
@@ -611,6 +612,57 @@ public class player : IComparable<player>
         }
         
         return sign;
+    }
+   
+   
+    public static Dictionary<String, int[]> dict;
+    public void FixPlayer()
+    {
+        if(dict == null)
+        {
+            dict = new Dictionary<string, int[]>();
+            String info = File.ReadAllText("fixSolea.csv");
+            string[] players = info.Split('\n');
+            
+            foreach(string player in players)
+            {
+                int[] arr = new int[stats.Length + 1];
+                string[] statsStr = player.Split(',');
+                arr[0] = int.Parse(statsStr[4]);
+                arr[1] = int.Parse(statsStr[5]);
+                arr[2] = int.Parse(statsStr[6]);
+                arr[3] = int.Parse(statsStr[3]);
+                arr[4] = int.Parse(statsStr[12]);
+                arr[5] = int.Parse(statsStr[13]);
+                arr[6] = int.Parse(statsStr[2]);
+                arr[7] = int.Parse(statsStr[14]);
+                arr[8] = int.Parse(statsStr[15]);
+                arr[9] = int.Parse(statsStr[16]);
+                arr[10] = int.Parse(statsStr[17]);
+                arr[11] = int.Parse(statsStr[8]);
+                arr[12] = int.Parse(statsStr[10]);
+                arr[13] = int.Parse(statsStr[12]);
+                arr[14] = int.Parse(statsStr[9]);
+                arr[15] = int.Parse(statsStr[18]);
+                arr[16] = int.Parse(statsStr[19]);
+                arr[17] = int.Parse(statsStr[1]);
+                dict.Add(statsStr[0], arr);
+            }
+        }
+        playerAge--;        
+        contract.AdvanceYear(-1);
+        
+        int[] theArr = new int[18];
+        if(dict.ContainsKey(name))
+        {
+            theArr = dict[name];
+            
+        }
+        for(int i = 0; i < stats.Length; i++)
+        {            
+            stats[i] = theArr[i];
+        }
+        gamesPlayed = theArr[17];
     }
     public void SetFreeAgent()
     {

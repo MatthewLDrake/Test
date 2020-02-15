@@ -116,6 +116,206 @@ public class FreeAgents
             Remove(player);
         }
     }
+    public void Remove(String name, double overall)
+    {
+        Remove(GetPlayer(name, overall));
+    }
+    public bool HasPlayer(String name, double overall)
+    {
+        return GetPlayer(name, overall) != null;
+    }
+    private player GetPlayer(String name, double overall)
+    {
+        foreach (player p in allPlayers)
+        {
+            if (p.getName().Equals(name) && p.getOverall() == overall) return p;
+        }
+        return null;
+    }
+    public void GeneratePlayers(FormulaBasketball.Random r)
+    {
+        CollegePlayerGen playerGen = new CollegePlayerGen(r);
+        for (int i = 0; i < 47; i++ )
+        {
+            Country country;
+            int randForCountry = r.Next(100);
+            if (randForCountry < 5)
+                country = Country.Aeridani;
+            else if (randForCountry < 10)
+                country = Country.Tri_National_Dominion;
+            else if (randForCountry < 23)
+                country = Country.Auspikitan;
+            else if (randForCountry < 28)
+                country = Country.Bielosia;
+            else if (randForCountry < 30)
+                country = Country.Blaist_Blaland;
+            else if (randForCountry < 33)
+                country = Country.Bongatar;
+            else if (randForCountry < 35)
+                country = Country.Czalliso;
+            else if (randForCountry < 38)
+                country = Country.Darvincia;
+            else if (randForCountry < 43)
+                country = Country.Pyxanovia;
+            else if (randForCountry < 50)
+                country = Country.Wyverncliff;
+            else if (randForCountry < 68)
+                country = Country.Ethanthova;
+            else if (randForCountry < 90)
+                country = Country.Dotruga;
+            else if (randForCountry < 95)
+                country = Country.Solea;
+            else
+                country = Country.Sagua;
+
+            int peakStart = r.Next(26, 30);
+            Add(playerGen.GenerateCenter(r.Next(30, 60), country, r.Next(3, 7), peakStart, peakStart + r.Next(1, 4), true, r.Next(1, 10), 0));
+        }
+        for (int i = 0; i < 34; i++)
+        {
+            Country country;
+            int randForCountry = r.Next(100);
+            if (randForCountry < 5)
+                country = Country.Aeridani;
+            else if (randForCountry < 10)
+                country = Country.Tri_National_Dominion;
+            else if (randForCountry < 23)
+                country = Country.Auspikitan;
+            else if (randForCountry < 28)
+                country = Country.Bielosia;
+            else if (randForCountry < 30)
+                country = Country.Blaist_Blaland;
+            else if (randForCountry < 33)
+                country = Country.Bongatar;
+            else if (randForCountry < 35)
+                country = Country.Czalliso;
+            else if (randForCountry < 38)
+                country = Country.Darvincia;
+            else if (randForCountry < 43)
+                country = Country.Pyxanovia;
+            else if (randForCountry < 50)
+                country = Country.Wyverncliff;
+            else if (randForCountry < 68)
+                country = Country.Ethanthova;
+            else if (randForCountry < 90)
+                country = Country.Dotruga;
+            else if (randForCountry < 95)
+                country = Country.Solea;
+            else
+                country = Country.Sagua;
+
+            int peakStart = r.Next(26, 30);
+            Add(playerGen.GeneratePowerForward(r.Next(30, 60), country, r.Next(3, 7), peakStart, peakStart + r.Next(1, 4), true, r.Next(1, 10), 0));
+        }
+        for (int i = 0; i < 27; i++)
+        {
+            Country country;
+            int randForCountry = r.Next(100);
+            if (randForCountry < 5)
+                country = Country.Aeridani;
+            else if (randForCountry < 10)
+                country = Country.Tri_National_Dominion;
+            else if (randForCountry < 23)
+                country = Country.Auspikitan;
+            else if (randForCountry < 28)
+                country = Country.Bielosia;
+            else if (randForCountry < 30)
+                country = Country.Blaist_Blaland;
+            else if (randForCountry < 33)
+                country = Country.Bongatar;
+            else if (randForCountry < 35)
+                country = Country.Czalliso;
+            else if (randForCountry < 38)
+                country = Country.Darvincia;
+            else if (randForCountry < 43)
+                country = Country.Pyxanovia;
+            else if (randForCountry < 50)
+                country = Country.Wyverncliff;
+            else if (randForCountry < 68)
+                country = Country.Ethanthova;
+            else if (randForCountry < 90)
+                country = Country.Dotruga;
+            else if (randForCountry < 95)
+                country = Country.Solea;
+            else
+                country = Country.Sagua;
+
+            int peakStart = r.Next(26, 30);
+            Add(playerGen.GenerateSmallForward(r.Next(30, 60), country, r.Next(3, 7), peakStart, peakStart + r.Next(1, 4), true, r.Next(1, 10), 0));
+        }
+        for (int i = 0; i < 36; i++)
+        {
+            Country country;
+            int randForCountry = r.Next(100);
+            if (randForCountry < 5)
+                country = Country.Aeridani;
+            else if (randForCountry < 10)
+                country = Country.Tri_National_Dominion;
+            else if (randForCountry < 23)
+                country = Country.Auspikitan;
+            else if (randForCountry < 28)
+                country = Country.Bielosia;
+            else if (randForCountry < 30)
+                country = Country.Blaist_Blaland;
+            else if (randForCountry < 33)
+                country = Country.Bongatar;
+            else if (randForCountry < 35)
+                country = Country.Czalliso;
+            else if (randForCountry < 38)
+                country = Country.Darvincia;
+            else if (randForCountry < 43)
+                country = Country.Pyxanovia;
+            else if (randForCountry < 50)
+                country = Country.Wyverncliff;
+            else if (randForCountry < 68)
+                country = Country.Ethanthova;
+            else if (randForCountry < 90)
+                country = Country.Dotruga;
+            else if (randForCountry < 95)
+                country = Country.Solea;
+            else
+                country = Country.Sagua;
+
+            int peakStart = r.Next(26, 30);
+            Add(playerGen.GenerateShootingGuard(r.Next(30, 60), country, r.Next(3, 7), peakStart, peakStart + r.Next(1, 4), true, r.Next(1, 10), 0));
+        }
+        for (int i = 0; i < 27; i++)
+        {
+            Country country;
+            int randForCountry = r.Next(100);
+            if (randForCountry < 5)
+                country = Country.Aeridani;
+            else if (randForCountry < 10)
+                country = Country.Tri_National_Dominion;
+            else if (randForCountry < 23)
+                country = Country.Auspikitan;
+            else if (randForCountry < 28)
+                country = Country.Bielosia;
+            else if (randForCountry < 30)
+                country = Country.Blaist_Blaland;
+            else if (randForCountry < 33)
+                country = Country.Bongatar;
+            else if (randForCountry < 35)
+                country = Country.Czalliso;
+            else if (randForCountry < 38)
+                country = Country.Darvincia;
+            else if (randForCountry < 43)
+                country = Country.Pyxanovia;
+            else if (randForCountry < 50)
+                country = Country.Wyverncliff;
+            else if (randForCountry < 68)
+                country = Country.Ethanthova;
+            else if (randForCountry < 90)
+                country = Country.Dotruga;
+            else if (randForCountry < 95)
+                country = Country.Solea;
+            else
+                country = Country.Sagua;
+
+            int peakStart = r.Next(26, 30);
+            Add(playerGen.GeneratePointGuard(r.Next(30, 60), country, r.Next(3, 7), peakStart, peakStart + r.Next(1, 4), true, r.Next(1, 10), 0));
+        }
+    }
     public List<player> GetAllPlayers()
     {
         return allPlayers;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
@@ -106,6 +107,13 @@ namespace FormulaBasketball
         {
             this.Visible = false;
             new Form1(false).ShowDialog();
+            this.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            new FixScreen(formulaBasketball.DeSerializeObject("saveFile.fbusave"), new Random()).ShowDialog();
             this.Close();
         }
     }

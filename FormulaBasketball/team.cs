@@ -1282,6 +1282,7 @@ public class team : IComparable<team>,  IEnumerable<player>
     {
         p.setTeam(this);
         offseasonPlayers.Add(p);
+        p.SetStatus(2);
     }
     public List<player> GetOffSeasonPlayers(bool includeDLeague = true)
     {

@@ -465,7 +465,48 @@ namespace FormulaBasketball
                 }
                 else
                 {
-                    MessageBox.Show("Nothing to advance");
+                    if (master)
+                    {
+                        FileStream createFS = new FileStream("NextSeason.fbdata", FileMode.Create);
+
+                        // Construct a BinaryFormatter and use it to serialize the data to the stream.
+                        BinaryFormatter outFormatter = new BinaryFormatter();
+                        try
+                        {
+                            outFormatter.Serialize(createFS, create);
+                        }
+                        catch (SerializationException ex)
+                        {
+                            Console.WriteLine("Failed to serialize. Reason: " + ex.Message);
+                            throw;
+                        }
+                        finally
+                        {
+                            createFS.Close();
+                        }
+                    }
+                    else
+                    {
+                        string fileName = team.ToString() + "Stage" + stage + ".fbteam";
+                        FileStream fs = new FileStream(fileName, FileMode.Create);
+
+                        // Construct a BinaryFormatter and use it to serialize the data to the stream.
+                        BinaryFormatter formatter = new BinaryFormatter();
+                        try
+                        {
+                            formatter.Serialize(fs, team);
+                        }
+                        catch (SerializationException ex)
+                        {
+                            Console.WriteLine("Failed to serialize. Reason: " + ex.Message);
+                            throw;
+                        }
+                        finally
+                        {
+                            fs.Close();
+                        }
+                    }
+                    MessageBox.Show("File Saved");
                 }
             }
         }

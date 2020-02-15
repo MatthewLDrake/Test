@@ -30,6 +30,7 @@
         {
             this.rosterGrid = new System.Windows.Forms.DataGridView();
             this.playerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Position = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Age = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Overall = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Potential = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +48,7 @@
             this.rosterGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.rosterGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.playerName,
+            this.Position,
             this.Age,
             this.Overall,
             this.Potential,
@@ -69,14 +71,23 @@
             this.playerName.HeaderText = "Player Name";
             this.playerName.Name = "playerName";
             // 
+            // Position
+            // 
+            this.Position.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Position.HeaderText = "Position";
+            this.Position.Name = "Position";
+            this.Position.Width = 69;
+            // 
             // Age
             // 
+            this.Age.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.Age.HeaderText = "Age";
             this.Age.Name = "Age";
+            this.Age.Width = 51;
             // 
             // Overall
             // 
-            this.Overall.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Overall.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.Overall.HeaderText = "Overall";
             this.Overall.Name = "Overall";
             this.Overall.ReadOnly = true;
@@ -84,8 +95,10 @@
             // 
             // Potential
             // 
+            this.Potential.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.Potential.HeaderText = "Potential";
             this.Potential.Name = "Potential";
+            this.Potential.Width = 73;
             // 
             // Ratings
             // 
@@ -107,14 +120,18 @@
             // 
             // CapHit
             // 
+            this.CapHit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.CapHit.HeaderText = "Cap Hit";
             this.CapHit.Name = "CapHit";
+            this.CapHit.Width = 67;
             // 
             // PlayerObject
             // 
+            this.PlayerObject.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.PlayerObject.HeaderText = "PlayerObject";
             this.PlayerObject.Name = "PlayerObject";
             this.PlayerObject.Visible = false;
+            this.PlayerObject.Width = 92;
             // 
             // ViewRoster
             // 
@@ -133,6 +150,7 @@
 
         private System.Windows.Forms.DataGridView rosterGrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn playerName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Position;
         private System.Windows.Forms.DataGridViewTextBoxColumn Age;
         private System.Windows.Forms.DataGridViewTextBoxColumn Overall;
         private System.Windows.Forms.DataGridViewTextBoxColumn Potential;

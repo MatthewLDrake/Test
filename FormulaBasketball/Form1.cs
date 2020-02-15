@@ -26,7 +26,7 @@ namespace FormulaBasketball
             
 
             r = new Random();
-            files = Directory.GetFiles(Directory.GetCurrentDirectory(), "*.fbusave");
+            files = Directory.GetFiles(Directory.GetCurrentDirectory(), "*.fbsave");
             foreach(string str in files)
             {
                 DateTime dateTime = File.GetLastWriteTime(str);

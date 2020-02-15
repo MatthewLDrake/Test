@@ -32,6 +32,8 @@ namespace FormulaBasketball
 
             this.humanPlayers = humanPlayers;
 
+            drafted = new List<player>();
+
             Holder hol = Scouting.DeSerializeObject();
 
             players = new Dictionary<int, player>();
@@ -46,7 +48,7 @@ namespace FormulaBasketball
             }
             
             this.picks = picks;
-            this.r = r;
+            this.r = new Random(80085);
 
             currentPick = 0;
 
@@ -327,6 +329,12 @@ namespace FormulaBasketball
             if (currentPick == 64) FinishDraft();
             else label1.Text = "Round " + (currentPick / 32 + 1) + " - Pick " + (currentPick % 32 + 1) + "/32\n" + picks[currentPick].GetOwner() + " is on the clock";
 
+            if(currentPick >= picks.Length)
+            {
+                draftButton.Enabled = false;
+                nextPickButton.Enabled = false;
+                nextUserButton.Enabled = false;
+            }
             if (humanPlayers.Contains(picks[currentPick].GetOwner().getTeamNum()))
             {
                 draftButton.Enabled = true;
@@ -377,7 +385,13 @@ namespace FormulaBasketball
             if (currentPick == 64) FinishDraft();
             else label1.Text = "Round " + (currentPick / 32 + 1) + " - Pick " + (currentPick % 32 + 1) + "/32\n" + picks[currentPick].GetOwner() + " is on the clock";
             
-            if (humanPlayers.Contains(picks[currentPick].GetOwner().getTeamNum()))
+            if(currentPick >= picks.Length)
+            {
+                draftButton.Enabled = false;
+                nextPickButton.Enabled = false;
+                nextUserButton.Enabled = false;
+            }
+            else if (humanPlayers.Contains(picks[currentPick].GetOwner().getTeamNum()))
             {
                 draftButton.Enabled = true;
                 nextPickButton.Enabled = false;
@@ -418,9 +432,18 @@ namespace FormulaBasketball
                if (currentPick == 64) FinishDraft();
                else label1.Text = "Round " + (currentPick / 32 + 1) + " - Pick " + (currentPick % 32 + 1) + "/32\n" + picks[currentPick].GetOwner() + " is on the clock";
            }
-           draftButton.Enabled = true;
-           nextPickButton.Enabled = false;
-           nextUserButton.Enabled = false;
+           if (currentPick >= picks.Length)
+           {
+               draftButton.Enabled = false;
+               nextPickButton.Enabled = false;
+               nextUserButton.Enabled = false;
+           }
+           else
+           {
+               draftButton.Enabled = true;
+               nextPickButton.Enabled = false;
+               nextUserButton.Enabled = false;
+           }
         }
 
         private void startbutton_Click(object sender, EventArgs e)
