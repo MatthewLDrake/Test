@@ -23,6 +23,8 @@ namespace FormulaBasketball
         {
             foreach(player p in team)
             {
+                if (p == null)
+                    continue;
                 p.setDefensiveModifier(0);
                 p.setOtherModifier(0);
                 p.setShootingModifier(0);
@@ -38,12 +40,12 @@ namespace FormulaBasketball
                 e.RowIndex >= 0)
             {
                 player p = senderGrid[8, e.RowIndex].Value as player;
-                if (e.ColumnIndex == 4)
+                if (e.ColumnIndex == 5)
                 {
                     //Console.WriteLine("Ratings hit");
                     new PlayerRatings(p).ShowDialog();
                 }
-                else if (e.ColumnIndex == 5)
+                else if (e.ColumnIndex == 6)
                 {
                     //Console.WriteLine("Stats hit");
                     new PlayerStats(p).ShowDialog();

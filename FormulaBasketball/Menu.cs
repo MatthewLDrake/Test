@@ -40,6 +40,22 @@ namespace FormulaBasketball
             this.create = create;
 
             this.r = r;
+
+            System.Threading.Thread thread = new System.Threading.Thread(LaunchFreeAgency);
+            thread.Start();
+            thread = new System.Threading.Thread(LaunchRoster);
+            thread.Start();
+            
+            
+
+        }
+        private void LaunchRoster()
+        {
+            new FreeAgencyForm(create.getFreeAgents(), create.getTeam(2), create).ShowDialog();
+        }
+        private void LaunchFreeAgency()
+        {
+            new LeagueRoster(new List<int>(), create).ShowDialog();
         }
         private void Contruct()
         {
@@ -467,6 +483,9 @@ namespace FormulaBasketball
                 {
                     if (master)
                     {
+
+                        create.FinishOffseason(humans);
+
                         FileStream createFS = new FileStream("NextSeason.fbdata", FileMode.Create);
 
                         // Construct a BinaryFormatter and use it to serialize the data to the stream.

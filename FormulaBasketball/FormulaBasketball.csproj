@@ -71,6 +71,12 @@
     <Compile Include="CollegeTeamType.cs" />
     <Compile Include="Contract.cs" />
     <Compile Include="ContractResult.cs" />
+    <Compile Include="CutPlayers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CutPlayers.Designer.cs">
+      <DependentUpon>CutPlayers.cs</DependentUpon>
+    </Compile>
     <Compile Include="DepthChart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +179,12 @@
     </Compile>
     <Compile Include="PlayerStats.Designer.cs">
       <DependentUpon>PlayerStats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PostOffSeason.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PostOffSeason.Designer.cs">
+      <DependentUpon>PostOffSeason.cs</DependentUpon>
     </Compile>
     <Compile Include="Record.cs" />
     <Compile Include="ResignPlayers.cs">
@@ -339,6 +351,12 @@
       <DependentUpon>teamPicker.cs</DependentUpon>
     </Compile>
     <Compile Include="teamResults.cs" />
+    <Compile Include="TeamSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeamSelector.Designer.cs">
+      <DependentUpon>TeamSelector.cs</DependentUpon>
+    </Compile>
     <Compile Include="teamTier.cs" />
     <Compile Include="Tempo.cs" />
     <Compile Include="TempoHolder.cs" />
@@ -368,6 +386,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="bracket.resx">
       <DependentUpon>bracket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CutPlayers.resx">
+      <DependentUpon>CutPlayers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DepthChart.resx">
       <DependentUpon>DepthChart.cs</DependentUpon>
@@ -453,6 +474,9 @@
     <EmbeddedResource Include="playScrimmage.resx">
       <DependentUpon>playScrimmage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PostOffSeason.resx">
+      <DependentUpon>PostOffSeason.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -486,6 +510,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="teamPicker.resx">
       <DependentUpon>teamPicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeamSelector.resx">
+      <DependentUpon>TeamSelector.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TradeForm.resx">
       <DependentUpon>TradeForm.cs</DependentUpon>

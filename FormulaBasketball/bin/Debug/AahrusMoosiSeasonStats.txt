@@ -1,41 +1,41 @@
 Aahrus Moosi Stats
-Player Record of Points: Kardo Gasbërr: 39 points on game 32 against the Barsein Bats
-Player Record of Assists: Kardo Gasbërr: 14 assists on game 29 against the Manwx Saguans
-Player Record of Rebounds: Aahrus Player #1: 19 rebounds on game 38 against the Pyxanovia Pixies
-Team Record in Most Points Scored: Aahrus Moosi: 139 points on game 24 against the Solea Geysers
-Team Record in Least Points Scored: Aahrus Moosi: 75 points on game 13 against the Boltway Bad Dragons
-Team Record in Least Points Allowed: Aahrus Moosi: 85 points on game 14 against the Blanaxon Hammers
-Team Record in Most Points Allowed: Aahrus Moosi: 138 points on game 15 against the Aiyota Pumps
+Player Record of Points: Fihana Jo: 30 points on game 4 against the TND Tanks
+Player Record of Assists: Fihana Jo: 7 assists on game 3 against the Holy Yektonisa Bishops
+Player Record of Rebounds: Akamu Phomsouvanh: 11 rebounds on game 3 against the Holy Yektonisa Bishops
+Team Record in Most Points Scored: Aahrus Moosi: 106 points on game 4 against the TND Tanks
+Team Record in Least Points Scored: Aahrus Moosi: 72 points on game 3 against the Holy Yektonisa Bishops
+Team Record in Least Points Allowed: Aahrus Moosi: 71 points on game 3 against the Holy Yektonisa Bishops
+Team Record in Most Points Allowed: Aahrus Moosi: 102 points on game 4 against the TND Tanks
 Records vs. Each Team this season:
 Aahrus Moosi: 0-0
-Auspikitan Golden Falcons: 2-1
-Calto Cows: 2-0
-Height Sagua Cats: 1-1
-Key to Don Yees: 1-0
-Manwx Saguans: 3-1
-Sagua Ocelots: 0-1
-Solea Geysers: 2-1
-Autolik Autonomy: 1-1
-Barsein Bats: 1-2
-Blanaxon Hammers: 1-1
-Kaeshar Kaisers: 1-2
-Naxda Nomads: 1-0
-Red Rainbow Sickles: 0-0
-Serkr Atolls: 0-1
+Auspikitan Golden Falcons: 0-0
+Calto Cows: 0-0
+Height Sagua Cats: 0-0
+Key to Don Yees: 0-0
+Manwx Saguans: 0-0
+Sagua Ocelots: 0-0
+Solea Geysers: 0-0
+Autolik Autonomy: 0-0
+Barsein Bats: 0-0
+Blanaxon Hammers: 0-0
+Kaeshar Kaisers: 0-0
+Naxda Nomads: 0-0
+Red Rainbow Sickles: 0-1
+Serkr Atolls: 0-0
 Shmupland Dictators: 0-0
-Aiyota Pumps: 0-1
+Aiyota Pumps: 0-0
 Avura Aviators: 0-0
-Boltway Bad Dragons: 1-1
-Dotruga Falno: 1-0
-Ethanthova Ponies: 0-1
-Faehrenfall Feathercats: 0-2
-Stedro Boulders: 0-1
-TND Tanks: 0-0
-Bongatar Banging Bongos: 0-1
-Czalliso Pythons: 0-1
-Dvimne Spirits: 0-1
-Holy Yektonisa Bishops: 0-1
-Holykol Bears: 0-2
-Lyintaria Lynx: 1-1
-Pyxanovia Pixies: 1-1
-Transhimalia Disasters: 1-1
+Boltway Bad Dragons: 0-0
+Dotruga Falno: 0-0
+Ethanthova Ponies: 0-0
+Faehrenfall Feathercats: 0-0
+Stedro Boulders: 0-0
+TND Tanks: 1-0
+Bongatar Banging Bongos: 0-0
+Czalliso Pythons: 0-0
+Dvimne Spirits: 0-0
+Holy Yektonisa Bishops: 1-0
+Holykol Bears: 0-0
+Lyintaria Lynx: 0-0
+Pyxanovia Pixies: 1-0
+Transhimalia Disasters: 0-0

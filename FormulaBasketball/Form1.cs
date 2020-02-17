@@ -26,7 +26,7 @@ namespace FormulaBasketball
             
 
             r = new Random();
-            files = Directory.GetFiles(Directory.GetCurrentDirectory(), "*.fbsave");
+            files = Directory.GetFiles(Directory.GetCurrentDirectory(), "*.fbdata");
             foreach(string str in files)
             {
                 DateTime dateTime = File.GetLastWriteTime(str);
@@ -44,7 +44,7 @@ namespace FormulaBasketball
             if (game)
                 new formulaBasketball(sender.Equals(yesButton), listView1.SelectedCells[0].OwningRow.Cells[0].EditedFormattedValue.ToString(), null, null);
             else
-                new Menu(formulaBasketball.DeSerializeObject(listView1.SelectedCells[0].OwningRow.Cells[0].EditedFormattedValue.ToString()), r).ShowDialog();
+                new PostOffSeason(formulaBasketball.DeSerializeObject(listView1.SelectedCells[0].OwningRow.Cells[0].EditedFormattedValue.ToString()), r).ShowDialog();
             Close();
         }
 

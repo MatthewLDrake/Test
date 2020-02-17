@@ -18,11 +18,15 @@ namespace FormulaBasketball
         private FreeAgents freeAgents;
         private List<player>[] players;
         private team userTeam;
+        private bool postOffseason;
+        private createTeams create;
         public FreeAgencyForm(FreeAgents free, team team, createTeams create)
         {
             InitializeComponent();
-            
+
+            postOffseason = false;
             freeAgents = free;
+            this.create = create;
             userTeam = team;
 
             for (int i = 0; i < create.size(); i++)
@@ -40,6 +44,31 @@ namespace FormulaBasketball
                     p.SetFreeAgent();
                 }            
 
+        }
+        public FreeAgencyForm(createTeams create, team team)
+        {
+            InitializeComponent();
+
+            freeAgents = create.getFreeAgents();
+            userTeam = team;
+            postOffseason = true;
+            this.create = create;
+
+            for (int i = 0; i < create.size(); i++)
+            {
+                freeAgents.Add(create.getDLeagueTeam(i).getAllPlayer());
+            }
+            for (int i = 1; i < 6; i++)
+                foreach (player p in freeAgents.GetPlayersByPos(i))
+                {
+                    if (p.GetStatus() == 2)
+                        continue;
+                    if (p.getTeam() != null) p.SetStatus(1);
+                    else p.SetStatus(0);
+
+                    p.SetFreeAgent();
+                }
+            UpdateFreeAgents(create);
         }
         private void centerList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -62,21 +91,31 @@ namespace FormulaBasketball
                 }
                 else if(e.ColumnIndex == 8)
                 {
-                    if (p.HasOfferFromTeam(userTeam))
-                        new PlayerNegotiate(p, userTeam, p.GetOfferFromTeam(userTeam)).ShowDialog();
-                    else
-                         new PlayerNegotiate(p, userTeam).ShowDialog();
-
-
-                    if (p.HasOfferFromTeam(userTeam))
+                    if (postOffseason)
                     {
-                        userTeam.AddOffer(p, p.GetOfferFromTeam(userTeam));
+                        TeamSelector team = new TeamSelector();
+                        team.ShowDialog();
+                        create.getTeam(team.teamNum).OffSeasonAddPlayer(p);
+                        p.SetNewContract(new Contract(1, 1));
                     }
                     else
                     {
-                        userTeam.RemoveOffer(p);
+                        if (p.HasOfferFromTeam(userTeam))
+                            new PlayerNegotiate(p, userTeam, p.GetOfferFromTeam(userTeam)).ShowDialog();
+                        else
+                            new PlayerNegotiate(p, userTeam).ShowDialog();
+
+
+                        if (p.HasOfferFromTeam(userTeam))
+                        {
+                            userTeam.AddOffer(p, p.GetOfferFromTeam(userTeam));
+                        }
+                        else
+                        {
+                            userTeam.RemoveOffer(p);
+                        }
+                        senderGrid.Rows[e.RowIndex].Cells[7].Value = p.GetOffers();
                     }
-                    senderGrid.Rows[e.RowIndex].Cells[7].Value = p.GetOffers();
                 }
             }
             
@@ -117,14 +156,14 @@ namespace FormulaBasketball
 
                     String strTeam = "";
                     if (players[i][j].getTeam() != null) strTeam = players[i][j].getTeam().ToString();
-                    grids[i].Rows.Add(strTeam, players[i][j].getName(), players[i][j].age, String.Format("{0:0.00}", players[i][j].getOverall()), players[i][j].getDevelopment(), "Show Ratings", "Show Stats", players[i][j].GetOffers(), "Negotiate", players[i][j]);
+                    grids[i].Rows.Add(strTeam, players[i][j].getName(), players[i][j].age, String.Format("{0:0.00}", players[i][j].getOverall()), players[i][j].getDevelopment(), "Show Ratings", "Show Stats", players[i][j].GetOffers(), postOffseason ? "Sign" : "Negotiate", players[i][j]);
                 }
             }
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            UpdateFreeAgents(FormulaBasketball.Menu.menu.create);
+            UpdateFreeAgents(postOffseason ? FormulaBasketball.PostOffSeason.current.create : FormulaBasketball.Menu.menu.create);
         }
 
         private void button1_Click(object sender, EventArgs e)

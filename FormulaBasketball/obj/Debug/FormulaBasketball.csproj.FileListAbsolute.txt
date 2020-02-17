@@ -149,3 +149,7 @@ B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.OffseasonFreeAge
 B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.RosterControl.resources
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\FormulaBasketball.OffseasonFreeAgentForm.resources
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\FormulaBasketball.FixScreen.resources
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.FixScreen.resources
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.PostOffSeason.resources
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.TeamSelector.resources
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.CutPlayers.resources

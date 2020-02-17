@@ -230,6 +230,13 @@ public class team : IComparable<team>,  IEnumerable<player>
             p.updatePlayerRecords(gameNum, teamAgainst);
         }
     }
+    private List<player> cutPlayers;
+    public void AddCutPlayer(player p)
+    {
+        if (cutPlayers == null)
+            cutPlayers = new List<player>();
+        cutPlayers.Add(p);
+    }
     public void PrintSeasonRecords()
     {
         seasonRecords.Print(currentSeasonVsTeam);
@@ -270,12 +277,56 @@ public class team : IComparable<team>,  IEnumerable<player>
         if (nextSeasonPicks == null) nextSeasonPicks = new List<DraftPick>();
         nextSeasonPicks.Add(pick);
     }
+    public void ProgressPlayers(bool human)
+    {        
+        foreach(player p in offseasonPlayers)
+        {
+            p.Develop(r);
+            p.Develop(r);
+            p.Develop(r);
+        }
+        if (human)
+        {
+            int positionUpgrade = 5, playerUpgrade = 1;
+            activePlayers[playerUpgrade].Develop(r);
+            foreach (player p in activePlayers)
+            {
+                if (p.getPosition() == positionUpgrade)
+                    p.Develop(r);
+            }
+        }
+        else
+        {
+            int lowestPos = int.MaxValue, currValue = 0;
+            int lowestStarter = int.MaxValue, currV = 0;
+            for(int i = 0; i < 5; i++)
+            {
+                int temp = ((int)(activePlayers[i].getOverall() + activePlayers[i + 5].getOverall())) / 2;
+                if (temp < lowestPos)
+                {
+                    lowestPos = temp;
+                    currValue = i + 1;
+                }
+                if (activePlayers[i].getOverall() < lowestStarter)
+                {
+                    lowestStarter = (int)activePlayers[i].getOverall();
+                    currV = i;
+                }
+            }
+            activePlayers[currV].Develop(r);
+            foreach(player p in activePlayers)
+            {
+                if (p.getPosition() == currValue)
+                    p.Develop(r);
+            }
+        }
+    }
     public void FinishDraft()
     {
-        foreach(DraftPick pick in picks)
+        /*foreach(DraftPick pick in picks)
         {
             addPlayer(pick.GetPlayerSelected());
-        }
+        }*/
         picks = nextSeasonPicks;
         nextSeasonPicks = new List<DraftPick>();
         nextSeasonPicks.Add(new DraftPick(1, this, this));
@@ -461,6 +512,7 @@ public class team : IComparable<team>,  IEnumerable<player>
     }
     public void CheckInjuries(FreeAgents freeAgents)
     {
+        return;
         if(sevenGame == null)
         {
             sevenGame = new DisabledLists(7);
@@ -920,6 +972,8 @@ public class team : IComparable<team>,  IEnumerable<player>
     }
     public String getThreeLetters()
     {
+        if(threeLetterAbbreviation == null)
+            threeLetterAbbreviation = teamName.Substring(0, 3);
         return threeLetterAbbreviation;
     }
     public void setRandom(FormulaBasketball.Random r)
@@ -1240,7 +1294,13 @@ public class team : IComparable<team>,  IEnumerable<player>
      */
     public int lastThreeGames(int num)
     {
-        
+        if (lastGames == null)
+        {
+            lastGames = new Queue<Int32>();
+            lastTen = new List<int>();
+        }
+
+
         if (num != -1)
         {
             if (lastGames.Count == 3) lastGames.Dequeue();
@@ -1261,7 +1321,7 @@ public class team : IComparable<team>,  IEnumerable<player>
 
 
         int temp = 0;
-
+        
         for (int i = 0; i < lastGames.Count; i++)
         {
             temp = lastGames.Dequeue();
@@ -1277,6 +1337,68 @@ public class team : IComparable<team>,  IEnumerable<player>
     {
         offseasonPlayers = new List<player>(activePlayers);
         offseasonPlayers.AddRange(affiliate.activePlayers);
+    }
+    public void FinishOffseason(bool human)
+    {
+        currentPlayoffs = new Record();
+        currentSeason = new Record();
+        conferenceRecord = new Record();
+        divisionRecord = new Record();
+         currentSeasonVsTeam = new Record[32];
+        for (int i = 0; i < currentSeasonVsTeam.Length; i++)
+            currentSeasonVsTeam[i] = new Record();
+        
+        if (!human)
+        {
+            offseasonPlayers.Sort();
+            offseasonPlayers.Reverse();
+        }
+        List<player> pgs = new List<player>(), sgs = new List<player>(), pfs = new List<player>(), sfs = new List<player>(), cs = new List<player>();
+        foreach (player p in offseasonPlayers)
+        {
+            switch (p.getPosition())
+            {
+                case 1:
+                    cs.Add(p);
+                    break;
+                case 2:
+                    pfs.Add(p);
+                    break;
+                case 3:
+                    sfs.Add(p);
+                    break;
+                case 4:
+                    sgs.Add(p);
+                    break;
+                case 5:
+                    pgs.Add(p);
+                    break;
+            }
+        }
+        
+            
+        activePlayers = new player[15];
+        affiliate.activePlayers = new player[15];
+        for(int i = 0; i < 6; i++)
+        {
+            if(i > 2)
+            {
+                affiliate.activePlayers[(i - 3) * 5] = cs[i];
+                affiliate.activePlayers[1 + (i - 3) * 5] = pfs[i];
+                affiliate.activePlayers[2 + (i - 3) * 5] = sfs[i];
+                affiliate.activePlayers[3 + (i - 3) * 5] = sgs[i];
+                affiliate.activePlayers[4 + (i - 3) * 5] = pgs[i];
+
+            }
+            else
+            {
+                activePlayers[i  * 5] = cs[i];
+                activePlayers[1 + i * 5] = pfs[i];
+                activePlayers[2 + i * 5] = sfs[i];
+                activePlayers[3 + i * 5] = sgs[i];
+                activePlayers[4 + i * 5] = pgs[i];
+            }
+        }
     }
     public void OffSeasonAddPlayer(player p)
     {
@@ -1501,6 +1623,11 @@ public class team : IComparable<team>,  IEnumerable<player>
     
     public void doExpenses()
     {
+        if (totalIncome == null)
+        {
+            totalIncome = new double[] { 0, 0, 0, 0 };
+            merchandise = new Merchandise(r);
+        }
         totalIncome[3] += currentSponsers + expenses.getWeeklySponser();
         fianance = expenses.chargeExpenses(fianance, currentSponsers);
         fianance += merchandise.getWeeklyRevenue() - weeklyTravel;
@@ -1745,9 +1872,34 @@ public class team : IComparable<team>,  IEnumerable<player>
         return subs[position].GetSubstitution(timeLeft);
     }
 
-    public void SetDepthChart(player[] players)
+    public void SetDepthChart(List<List<player>> players)
     {
-        activePlayers = players;
+        activePlayers = new player[15];
+        int curr = 0;
+        for(int i = 0; i < 3; i++)
+        {
+            for(int j = 0; j < players.Count; j++)
+            {
+                activePlayers[curr] = players[j][i];
+                curr++;
+            }
+        }
+        curr = 0;
+        affiliate.activePlayers = new player[15];
+        for (int i = 3; i < 6; i++)
+        {
+            for (int j = 0; j < players.Count; j++)
+            {
+                if(players[j].Count > i)
+                    affiliate.activePlayers[curr] = players[j][i];
+                curr++;
+            }
+        }
+        offseasonPlayers.Clear();
+        foreach (player p in activePlayers)
+            offseasonPlayers.Add(p);
+        foreach (player p in affiliate.activePlayers)
+            offseasonPlayers.Add(p);
     }
 
     public List<player> GetRoster()

@@ -111,3 +111,10 @@ B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.EventViewer.re
 B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.MockDraftView.resources
 B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.OfferedTrade.resources
 B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.PlayerSigned.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.FixScreen.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.LeagueRoster.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.OffseasonFreeAgentForm.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.RosterControl.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.CutPlayers.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.PostOffSeason.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.TeamSelector.resources

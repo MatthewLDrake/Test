@@ -24,7 +24,7 @@ public class formulaBasketball
     public static Standings standingsForm;
     private static PlayoffBracket bracket;
     public static int nextPlayerID;
-    public static bool injuries = true;
+    public static bool injuries = false;
     private static ImagePrinter printer;
     public static bool createImages = true;
     public static Dictionary<Promises,String> promisesList = new Dictionary<Promises, String>()
@@ -49,7 +49,9 @@ public class formulaBasketball
         statsFile = "stats.csv";
         standingsFile = "standings.csv";
         championshipsContents = championshipsContents += "Southern Conference Winner\tSouthern Conference Games Won\t\tNorthern Conference Games Won\tNorthern Conference winner\tMVP Winner\tMVP Team\tROTY winner\tROTY Team\n";
-        
+
+        create.CreateNewSchedule();
+        create.FixTeams();
 
         /* create.SetUpCollege();
          create.PlayCollegeSeason();

@@ -1,41 +1,41 @@
 Avura Aviators Stats
-Player Record of Points: Floenne Zan: 42 points on game 24 against the Holykol Bears
-Player Record of Assists: Kilik Farhje: 23 assists on game 24 against the Holykol Bears
-Player Record of Rebounds: Sichaizei Sha: 19 rebounds on game 26 against the Manwx Saguans
-Team Record in Most Points Scored: Avura Aviators: 140 points on game 24 against the Holykol Bears
-Team Record in Least Points Scored: Avura Aviators: 88 points on game 16 against the Autolik Autonomy
-Team Record in Least Points Allowed: Avura Aviators: 92 points on game 7 against the Autolik Autonomy
-Team Record in Most Points Allowed: Avura Aviators: 143 points on game 24 against the Holykol Bears
+Player Record of Points: Floenne Zan: 22 points on game 3 against the Sagua Ocelots
+Player Record of Assists: Kilik Farhje: 13 assists on game 2 against the Barsein Bats
+Player Record of Rebounds: Yamazaki Senichi: 10 rebounds on game 4 against the Lyintaria Lynx
+Team Record in Most Points Scored: Avura Aviators: 105 points on game 1 against the Naxda Nomads
+Team Record in Least Points Scored: Avura Aviators: 93 points on game 2 against the Barsein Bats
+Team Record in Least Points Allowed: Avura Aviators: 93 points on game 4 against the Lyintaria Lynx
+Team Record in Most Points Allowed: Avura Aviators: 106 points on game 3 against the Sagua Ocelots
 Records vs. Each Team this season:
 Aahrus Moosi: 0-0
-Auspikitan Golden Falcons: 1-1
-Calto Cows: 0-1
-Height Sagua Cats: 0-1
-Key to Don Yees: 0-1
-Manwx Saguans: 1-1
+Auspikitan Golden Falcons: 0-0
+Calto Cows: 0-0
+Height Sagua Cats: 0-0
+Key to Don Yees: 0-0
+Manwx Saguans: 0-0
 Sagua Ocelots: 0-1
 Solea Geysers: 0-0
-Autolik Autonomy: 1-1
-Barsein Bats: 0-0
-Blanaxon Hammers: 1-1
-Kaeshar Kaisers: 0-1
-Naxda Nomads: 2-0
+Autolik Autonomy: 0-0
+Barsein Bats: 0-1
+Blanaxon Hammers: 0-0
+Kaeshar Kaisers: 0-0
+Naxda Nomads: 1-0
 Red Rainbow Sickles: 0-0
-Serkr Atolls: 1-1
-Shmupland Dictators: 0-1
-Aiyota Pumps: 1-2
+Serkr Atolls: 0-0
+Shmupland Dictators: 0-0
+Aiyota Pumps: 0-0
 Avura Aviators: 0-0
-Boltway Bad Dragons: 0-1
-Dotruga Falno: 0-3
-Ethanthova Ponies: 1-1
-Faehrenfall Feathercats: 1-2
-Stedro Boulders: 0-1
-TND Tanks: 1-1
-Bongatar Banging Bongos: 1-2
-Czalliso Pythons: 0-3
-Dvimne Spirits: 0-2
-Holy Yektonisa Bishops: 2-0
-Holykol Bears: 0-2
-Lyintaria Lynx: 0-0
-Pyxanovia Pixies: 1-1
-Transhimalia Disasters: 0-1
+Boltway Bad Dragons: 0-0
+Dotruga Falno: 0-0
+Ethanthova Ponies: 0-0
+Faehrenfall Feathercats: 0-0
+Stedro Boulders: 0-0
+TND Tanks: 0-0
+Bongatar Banging Bongos: 0-0
+Czalliso Pythons: 0-0
+Dvimne Spirits: 0-0
+Holy Yektonisa Bishops: 0-0
+Holykol Bears: 0-0
+Lyintaria Lynx: 1-0
+Pyxanovia Pixies: 0-0
+Transhimalia Disasters: 0-0

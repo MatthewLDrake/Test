@@ -105,6 +105,31 @@ public class createTeams
             gameNums.Add(i);
         }
     }
+    public void FixTeams()
+    {
+        setFianancials();
+        string content = "";
+        foreach (team t in teams)
+        {
+            content += t.ToString()+ ",Player,Position,Layup,Dunk,Jumpshot,3PT,Pass,ShotContenst,DefenseIQ,Jumping,Seperation,Durability,Stamina,Potential,Age,Overall\n";
+            if (t.ToString().Equals("Dotruga Falno"))
+            {
+                player p = freeAgents.GetTopPlayerByPos(5);
+                t.OffSeasonAddPlayer(p);
+                p.SetNewContract(new Contract(1,1));
+                freeAgents.Remove(p);
+            }
+            t.FinishOffseason(t.getTeamNum() == 2 || t.getTeamNum() == 7 || t.getTeamNum() == 19);
+            foreach(player p in t)
+            {
+                p.setInjured(false);
+                p.setStamina(100);
+                content += p.GetCountry() + "," + p.getName() + "," + p.getPosition() + "," + p.getLayupRating(false) + "," + p.getDunkRating(false) + "," + p.getJumpShotRating(false) + "," + p.getThreeShotRating(false) + "," + p.getPassing(false) + "," + p.getShotContestRating(false) + "," + p.getDefenseIQRating(false) + "," + p.getJumpingRating(false) + "," + p.getSeperation(false) + "," + p.getDurabilityRating(false) + "," + p.getStaminaRating(false) + "," + p.getDevelopment() + "," + p.age + "," + p.getOverall() + "\n";
+
+            }
+        }
+        File.WriteAllText("rosters.csv", content);
+    }
     public void playGames(int firstGame, int lastGame, FormulaBasketball.Random r)
     {
         for(int i = firstGame - 1; i < lastGame; i++)
@@ -123,6 +148,242 @@ public class createTeams
 
             Schedule.GetInstance(r).playGames(gameNums[i]);
             formulaBasketball.updateStandings();
+        }
+    }
+    public void FinishOffseason(List<int> humans)
+    {
+        new LeagueRoster(new List<int>(), this).ShowDialog();
+        List<Tuple<int, team, int>> teamNeeds = new List<Tuple<int, team, int>>();
+        foreach(team team in teams)
+        {
+            if (humans.Contains(team.getTeamNum()))
+                continue;
+            List<player> players = team.GetOffSeasonPlayers();
+            List<player> pgs = new List<player>(), sgs = new List<player>(), pfs = new List<player>(), sfs = new List<player>(), cs = new List<player>();
+            foreach(player p in players)
+            {
+                switch(p.getPosition())
+                {
+                    case 1:
+                        cs.Add(p);
+                        break;
+                    case 2:
+                        pfs.Add(p);
+                        break;
+                    case 3:
+                        sfs.Add(p);
+                        break;
+                    case 4:
+                        sgs.Add(p);
+                        break;
+                    case 5:
+                        pgs.Add(p);
+                        break;
+                }
+            }
+            if(pgs.Count < 6)
+            {
+                teamNeeds.Add(new Tuple<int, team, int>(5, team, 6 - pgs.Count));
+            }
+            else if(pgs.Count > 6)
+            {
+                player[] playersToCut = new player[pgs.Count - 6];
+                foreach(player p in pgs)
+                {
+                    player currPlayer = p;
+                    for(int i = 0; i < playersToCut.Length; i++)
+                    {
+                        if (playersToCut[i] == null)
+                        {
+                            playersToCut[i] = currPlayer;
+                            break;
+                        }
+                        else if (playersToCut[i].getOverall(null, true) > currPlayer.getOverall(null, true))
+                        {
+                            player temp = currPlayer;
+                            currPlayer = playersToCut[i];
+                            playersToCut[i] = temp;
+                        }
+                    }
+                }
+                foreach(player p in playersToCut)
+                {
+                    team.OffSeasonRemovePlayer(p);
+                    freeAgents.Add(p);
+                }
+            }
+            if (sgs.Count < 6)
+            {
+                teamNeeds.Add(new Tuple<int, team, int>(4, team, 6 - sgs.Count));
+            }
+            else if (sgs.Count > 6)
+            {
+                player[] playersToCut = new player[sgs.Count - 6];
+                foreach (player p in sgs)
+                {
+                    player currPlayer = p;
+                    for (int i = 0; i < playersToCut.Length; i++)
+                    {
+                        if (playersToCut[i] == null)
+                        {
+                            playersToCut[i] = currPlayer;
+                            break;
+                        }
+                        else if (playersToCut[i].getOverall(null, true) > currPlayer.getOverall(null, true))
+                        {
+                            player temp = currPlayer;
+                            currPlayer = playersToCut[i];
+                            playersToCut[i] = temp;
+                        }
+                    }
+                }
+                foreach (player p in playersToCut)
+                {
+                    team.OffSeasonRemovePlayer(p);
+                    freeAgents.Add(p);
+                }
+            }
+            if (sfs.Count < 6)
+            {
+                teamNeeds.Add(new Tuple<int, team, int>(3, team, 6 - sfs.Count));
+            }
+            else if (sfs.Count > 6)
+            {
+                player[] playersToCut = new player[sfs.Count - 6];
+                foreach (player p in sfs)
+                {
+                    player currPlayer = p;
+                    for (int i = 0; i < playersToCut.Length; i++)
+                    {
+                        if (playersToCut[i] == null)
+                        {
+                            playersToCut[i] = currPlayer;
+                            break;
+                        }
+                        else if (playersToCut[i].getOverall(null, true) > currPlayer.getOverall(null, true))
+                        {
+                            player temp = currPlayer;
+                            currPlayer = playersToCut[i];
+                            playersToCut[i] = temp;
+                        }
+                    }
+                }
+                foreach (player p in playersToCut)
+                {
+                    team.OffSeasonRemovePlayer(p);
+                    freeAgents.Add(p);
+                }
+            }
+            if (pfs.Count < 6)
+            {
+                teamNeeds.Add(new Tuple<int, team, int>(2, team, 6 - pfs.Count));
+            }
+            else if (pfs.Count > 6)
+            {
+                player[] playersToCut = new player[pfs.Count - 6];
+                foreach (player p in pfs)
+                {
+                    player currPlayer = p;
+                    for (int i = 0; i < playersToCut.Length; i++)
+                    {
+                        if (playersToCut[i] == null)
+                        {
+                            playersToCut[i] = currPlayer;
+                            break;
+                        }
+                        else if (playersToCut[i].getOverall(null, true) > currPlayer.getOverall(null, true))
+                        {
+                            player temp = currPlayer;
+                            currPlayer = playersToCut[i];
+                            playersToCut[i] = temp;
+                        }
+                    }
+                }
+                foreach (player p in playersToCut)
+                {
+                    team.OffSeasonRemovePlayer(p);
+                    freeAgents.Add(p);
+                }
+            }
+            if (cs.Count < 6)
+            {
+                teamNeeds.Add(new Tuple<int, team, int>(1, team, 6 - cs.Count));
+            }
+            else if (cs.Count > 6)
+            {
+                player[] playersToCut = new player[cs.Count - 6];
+                foreach (player p in cs)
+                {
+                    player currPlayer = p;
+                    for (int i = 0; i < playersToCut.Length; i++)
+                    {
+                        if (playersToCut[i] == null)
+                        {
+                            playersToCut[i] = currPlayer;
+                            break;
+                        }
+                        else if (playersToCut[i].getOverall(null, true) > currPlayer.getOverall(null, true))
+                        {
+                            player temp = currPlayer;
+                            currPlayer = playersToCut[i];
+                            playersToCut[i] = temp;
+                        }
+                    }
+                }
+                foreach (player p in playersToCut)
+                {
+                    team.OffSeasonRemovePlayer(p);
+                    freeAgents.Add(p);
+                }
+            }
+
+        }
+        List<player> playersToRemove = new List<player>();
+        foreach(player p in freeAgents.GetAllPlayers())
+        {
+            if (p.GetStatus() == 2)
+                playersToRemove.Add(p);
+        }
+        freeAgents.Remove(playersToRemove);
+        while(teamNeeds.Count > 0)
+        {
+            Tuple<int, team, int> next = teamNeeds[r.Next(teamNeeds.Count)];
+            teamNeeds.Remove(next);
+            List<player> players = freeAgents.GetPlayersByPos(next.Item1);
+            player[] topPlayers = new player[next.Item3];
+
+            foreach (player p in players)
+            {
+                player currPlayer = p;
+                for (int i = 0; i < topPlayers.Length; i++)
+                {
+                    if (topPlayers[i] == null)
+                    {
+                        topPlayers[i] = currPlayer;
+                        break;
+                    }
+                    else if (topPlayers[i].getOverall(null, true) < currPlayer.getOverall(null, true))
+                    {
+                        player temp = currPlayer;
+                        currPlayer = topPlayers[i];
+                        topPlayers[i] = temp;
+                    }
+                }
+            }
+
+            foreach (player p in topPlayers)
+            {
+                freeAgents.Remove(p);
+                next.Item2.OffSeasonAddPlayer(p);
+                p.SetNewContract(new Contract(1, 1));
+            }
+        }
+        foreach (team team in teams)
+        {
+            if (humans.Contains(team.getTeamNum()))
+                continue;
+
+            team.FinishOffseason(true);
         }
     }
     private void createTheTeams(string info)
@@ -773,6 +1034,24 @@ public class createTeams
 
 
         return rookies;
+    }
+    public void Progress(List<int> humans)
+    {
+        foreach(team t in teams)
+        {
+            if (t.ToString().Equals("Manwx Saguans"))
+            {
+                player p = freeAgents.GetTopPlayerByPos(1);
+                t.OffSeasonAddPlayer(p);
+                freeAgents.Remove(p);
+                p.SetNewContract(new Contract(1, 1));
+            }
+            t.FinishDraft();
+            t.ProgressPlayers(humans.Contains(t.getTeamNum()));
+            if (!humans.Contains(t.getTeamNum()))
+                t.FinishOffseason(true);
+        }
+        
     }
     public void AddRookies()
     {

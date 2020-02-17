@@ -74,12 +74,12 @@ namespace FormulaBasketball
             List<DraftPick> picks = team.GetPicks();
             foreach(DraftPick p in picks)
             {
-                grid.Rows.Add(false, "Season 6 Round " + p.GetRound() + " pick from " + p.GetTeamOfOrigin(),"?", "???", "B", 0, p);
+                grid.Rows.Add(false, "Season 7 Round " + p.GetRound() + " pick from " + p.GetTeamOfOrigin(),"?", "???", "B", 0, p);
             }
             picks = team.GetNextSeasonPicks();
             foreach (DraftPick p in picks)
             {
-                grid.Rows.Add(false, "Season 7 Round " + p.GetRound() + " pick from " + p.GetTeamOfOrigin(), "?", "???", "B", 0, p);
+                grid.Rows.Add(false, "Season 8 Round " + p.GetRound() + " pick from " + p.GetTeamOfOrigin(), "?", "???", "B", 0, p);
             }
         }
 
@@ -265,8 +265,8 @@ namespace FormulaBasketball
         private void button1_Click(object sender, EventArgs e)
         {
             OpenFileDialog theDialog = new OpenFileDialog();
-            theDialog.Title = "Open Trade File";
-            theDialog.Filter = "FBTrade files|*.fbtrade";
+            theDialog.Title = "Open Trade Response File";
+            theDialog.Filter = "FB Trade Response files|*.fbtr";
             theDialog.Multiselect = false;
             if (theDialog.ShowDialog() == DialogResult.OK)
             {
