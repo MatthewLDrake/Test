@@ -1,21 +1,21 @@
 Solea Geysers Stats
-Player Record of Points: Kersok Milan: 27 points on game 4 against the Autolik Autonomy
-Player Record of Assists: Kersok Milan: 11 assists on game 3 against the Aiyota Pumps
-Player Record of Rebounds: Alomundi Bituna: 8 rebounds on game 2 against the Dotruga Falno
-Team Record in Most Points Scored: Solea Geysers: 105 points on game 1 against the Stedro Boulders
-Team Record in Least Points Scored: Solea Geysers: 86 points on game 3 against the Aiyota Pumps
-Team Record in Least Points Allowed: Solea Geysers: 71 points on game 2 against the Dotruga Falno
-Team Record in Most Points Allowed: Solea Geysers: 88 points on game 3 against the Aiyota Pumps
+Player Record of Points: Kersok Milan: 30 points on game 4 against the Autolik Autonomy
+Player Record of Assists: Kersok Milan: 15 assists on game 7 against the Dvimne Spirits
+Player Record of Rebounds: Alomundi Bituna: 13 rebounds on game 6 against the Calto Cows
+Team Record in Most Points Scored: Solea Geysers: 107 points on game 7 against the Dvimne Spirits
+Team Record in Least Points Scored: Solea Geysers: 92 points on game 1 against the Stedro Boulders
+Team Record in Least Points Allowed: Solea Geysers: 86 points on game 2 against the Dotruga Falno
+Team Record in Most Points Allowed: Solea Geysers: 104 points on game 8 against the Aahrus Moosi
 Records vs. Each Team this season:
-Aahrus Moosi: 0-0
+Aahrus Moosi: 0-1
 Auspikitan Golden Falcons: 0-0
-Calto Cows: 0-0
+Calto Cows: 0-1
 Height Sagua Cats: 0-0
 Key to Don Yees: 0-0
 Manwx Saguans: 0-0
 Sagua Ocelots: 0-0
 Solea Geysers: 0-0
-Autolik Autonomy: 1-0
+Autolik Autonomy: 0-1
 Barsein Bats: 0-0
 Blanaxon Hammers: 0-0
 Kaeshar Kaisers: 0-0
@@ -23,8 +23,8 @@ Naxda Nomads: 0-0
 Red Rainbow Sickles: 0-0
 Serkr Atolls: 0-0
 Shmupland Dictators: 0-0
-Aiyota Pumps: 0-1
-Avura Aviators: 0-0
+Aiyota Pumps: 1-0
+Avura Aviators: 1-0
 Boltway Bad Dragons: 0-0
 Dotruga Falno: 1-0
 Ethanthova Ponies: 0-0
@@ -33,7 +33,7 @@ Stedro Boulders: 1-0
 TND Tanks: 0-0
 Bongatar Banging Bongos: 0-0
 Czalliso Pythons: 0-0
-Dvimne Spirits: 0-0
+Dvimne Spirits: 1-0
 Holy Yektonisa Bishops: 0-0
 Holykol Bears: 0-0
 Lyintaria Lynx: 0-0

@@ -599,11 +599,11 @@ namespace FormulaBasketball
 
             for (int k = 0; k < team1.getSize(); k++)
             {
-                team1.getPlayer(k).resetGameStats();
+                team1.getPlayer(k).resetGameStats(team1, team2);
             }
             for (int k = 0; k < team2.getSize(); k++)
             {
-                team2.getPlayer(k).resetGameStats();
+                team2.getPlayer(k).resetGameStats(team2, team1);
             }
             return newGame.getHomeTeamScore() > newGame.getAwayTeamScore();
         }

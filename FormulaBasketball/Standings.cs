@@ -18,7 +18,7 @@ namespace FormulaBasketball
             InitializeComponent();
         }
 
-        public void updateStandings(createTeams create)
+        public void updateStandings(createTeams create, bool main)
         {
             List<team> divisionA = new List<team>();
             List<team> divisionB = new List<team>();
@@ -26,10 +26,10 @@ namespace FormulaBasketball
             List<team> divisionD = new List<team>();
             for (int i = 0; i < 8; i++)
             {
-                divisionA.Add(create.getTeam(i));
-                divisionB.Add(create.getTeam(i + 8));
-                divisionC.Add(create.getTeam(i + 16));
-                divisionD.Add(create.getTeam(i + 24));
+                divisionA.Add(main ? create.getTeam(i) : create.getTeam(i).GetAffiliate());
+                divisionB.Add(main ? create.getTeam(i + 8) : create.getTeam(i + 8).GetAffiliate());
+                divisionC.Add(main ? create.getTeam(i + 16) : create.getTeam(i + 16).GetAffiliate());
+                divisionD.Add(main ? create.getTeam(i + 24) : create.getTeam(i + 24).GetAffiliate());
             }
             List<team> conferenceA = new List<team>();
             List<team> conferenceB = new List<team>();

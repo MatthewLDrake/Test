@@ -1,11 +1,11 @@
 Serkr Atolls Stats
-Player Record of Points: Transhilmalia Player #2: 32 points on game 3 against the Barsein Bats
-Player Record of Assists: Transhilmalia Player #2: 9 assists on game 3 against the Barsein Bats
-Player Record of Rebounds: Vrá Nonhkwaqan: 11 rebounds on game 1 against the Shmupland Dictators
-Team Record in Most Points Scored: Serkr Atolls: 105 points on game 3 against the Barsein Bats
-Team Record in Least Points Scored: Serkr Atolls: 92 points on game 1 against the Shmupland Dictators
-Team Record in Least Points Allowed: Serkr Atolls: 91 points on game 2 against the Naxda Nomads
-Team Record in Most Points Allowed: Serkr Atolls: 108 points on game 4 against the Auspikitan Golden Falcons
+Player Record of Points: Transhilmalia Player #2: 28 points on game 4 against the Auspikitan Golden Falcons
+Player Record of Assists: Transhilmalia Player #2: 15 assists on game 6 against the Dvimne Spirits
+Player Record of Rebounds: Vrá Nonhkwaqan: 11 rebounds on game 8 against the Shmupland Dictators
+Team Record in Most Points Scored: Serkr Atolls: 99 points on game 2 against the Naxda Nomads
+Team Record in Least Points Scored: Serkr Atolls: 83 points on game 7 against the Dotruga Falno
+Team Record in Least Points Allowed: Serkr Atolls: 82 points on game 8 against the Shmupland Dictators
+Team Record in Most Points Allowed: Serkr Atolls: 99 points on game 4 against the Auspikitan Golden Falcons
 Records vs. Each Team this season:
 Aahrus Moosi: 0-0
 Auspikitan Golden Falcons: 0-1
@@ -16,24 +16,24 @@ Manwx Saguans: 0-0
 Sagua Ocelots: 0-0
 Solea Geysers: 0-0
 Autolik Autonomy: 0-0
-Barsein Bats: 1-0
-Blanaxon Hammers: 0-0
+Barsein Bats: 0-1
+Blanaxon Hammers: 1-0
 Kaeshar Kaisers: 0-0
 Naxda Nomads: 1-0
 Red Rainbow Sickles: 0-0
 Serkr Atolls: 0-0
-Shmupland Dictators: 0-1
+Shmupland Dictators: 2-0
 Aiyota Pumps: 0-0
 Avura Aviators: 0-0
 Boltway Bad Dragons: 0-0
-Dotruga Falno: 0-0
+Dotruga Falno: 0-1
 Ethanthova Ponies: 0-0
 Faehrenfall Feathercats: 0-0
 Stedro Boulders: 0-0
 TND Tanks: 0-0
 Bongatar Banging Bongos: 0-0
 Czalliso Pythons: 0-0
-Dvimne Spirits: 0-0
+Dvimne Spirits: 1-0
 Holy Yektonisa Bishops: 0-0
 Holykol Bears: 0-0
 Lyintaria Lynx: 0-0

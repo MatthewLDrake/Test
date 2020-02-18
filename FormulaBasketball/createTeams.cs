@@ -108,10 +108,8 @@ public class createTeams
     public void FixTeams()
     {
         setFianancials();
-        string content = "";
         foreach (team t in teams)
         {
-            content += t.ToString()+ ",Player,Position,Layup,Dunk,Jumpshot,3PT,Pass,ShotContenst,DefenseIQ,Jumping,Seperation,Durability,Stamina,Potential,Age,Overall\n";
             if (t.ToString().Equals("Dotruga Falno"))
             {
                 player p = freeAgents.GetTopPlayerByPos(5);
@@ -124,11 +122,19 @@ public class createTeams
             {
                 p.setInjured(false);
                 p.setStamina(100);
-                content += p.GetCountry() + "," + p.getName() + "," + p.getPosition() + "," + p.getLayupRating(false) + "," + p.getDunkRating(false) + "," + p.getJumpShotRating(false) + "," + p.getThreeShotRating(false) + "," + p.getPassing(false) + "," + p.getShotContestRating(false) + "," + p.getDefenseIQRating(false) + "," + p.getJumpingRating(false) + "," + p.getSeperation(false) + "," + p.getDurabilityRating(false) + "," + p.getStaminaRating(false) + "," + p.getDevelopment() + "," + p.age + "," + p.getOverall() + "\n";
-
+               
             }
+            t.FixTeam();
+            t.GetAffiliate().FixTeam();
+
+            t.FixStats();
         }
-        File.WriteAllText("rosters.csv", content);
+        freeAgents.Fix();
+
+
+        foreach(team t in teams)
+        {
+        }
     }
     public void playGames(int firstGame, int lastGame, FormulaBasketball.Random r)
     {
@@ -147,6 +153,26 @@ public class createTeams
             }
 
             Schedule.GetInstance(r).playGames(gameNums[i]);
+            formulaBasketball.updateStandings();
+        }
+    }
+    public void playDLeagueGames(int firstGame, int lastGame, FormulaBasketball.Random r)
+    {
+        for (int i = firstGame - 1; i < lastGame; i++)
+        {
+            if (i % 28 == 0)
+            {
+                foreach (team team in formulaBasketball.create.getTeams())
+                {
+                    foreach (player p in team)
+                    {
+                        p.Develop(r);
+                    }
+                    team.CheckInjuries(formulaBasketball.create.getFreeAgents());
+                }
+            }
+
+            Schedule.GetInstance(r).playDLeagueGames(gameNums[i]);
             formulaBasketball.updateStandings();
         }
     }

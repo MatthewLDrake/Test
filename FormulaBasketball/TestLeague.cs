@@ -233,11 +233,11 @@ public class TestLeague
 
         for (int k = 0; k < teams[i].getSize(); k++)
         {
-            teams[i].getPlayer(k).resetGameStats();
+            teams[i].getPlayer(k).resetGameStats(teams[i], teams[j]);
         }
         for (int k = 0; k < teams[j].getSize(); k++)
         {
-            teams[j].getPlayer(k).resetGameStats();
+            teams[j].getPlayer(k).resetGameStats(teams[i], teams[j]);
         }
         return retVal;
     }

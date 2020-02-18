@@ -1414,15 +1414,6 @@ public class College
                 teams[j].setModifier(new None());
             }
         }
-        if (i == 26 || i == 7 || i == 19)
-        {
-            teams[i].setModifier(new gettingHot());
-        }
-
-        else if (j == 26 || j == 7 || j == 19)
-        {
-            teams[j].setModifier(new gettingHot());
-        }
         teams[i].addModifier(new HomeTeam());
         teams[i].addModifier(teams[i].getCoachModifier());
         teams[j].addModifier(teams[j].getCoachModifier());
@@ -1432,17 +1423,14 @@ public class College
 
         teams[i].AddResult(j, newGame.getAwayTeamScore(), newGame.getHomeTeamScore());
         teams[j].AddResult(i, newGame.getHomeTeamScore(), newGame.getAwayTeamScore());
-
-
-
-
+        
         for (int k = 0; k < teams[i].getSize(); k++)
         {
-            teams[i].getPlayer(k).resetGameStats();
+            teams[i].getPlayer(k).resetGameStats(teams[i], teams[j]);
         }
         for (int k = 0; k < teams[j].getSize(); k++)
         {
-            teams[j].getPlayer(k).resetGameStats();
+            teams[j].getPlayer(k).resetGameStats(teams[j], teams[i]);
         }
         return retVal;
     }

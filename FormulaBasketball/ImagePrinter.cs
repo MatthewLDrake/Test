@@ -40,8 +40,11 @@ public class ImagePrinter
         stringWidth = maxWidth * 2 + TextRenderer.MeasureText("-", font).Width + (2 * TextRenderer.MeasureText(" 100 ", font).Width);
 
     }
-    public void AddResult(string awayTeam, string homeTeam, int awayScore, int homeScore)
+    public void AddResult(string awayTeam, string homeTeam, int awayScore, int homeScore, bool dLeague)
     {
+        // TODO: Maybe something with this
+        if (dLeague)
+            return;
         info[i] = new PrintInfo(awayTeam, awayScore, homeTeam, homeScore);
         i++;
         if(i == 16)

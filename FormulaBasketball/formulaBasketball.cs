@@ -21,7 +21,7 @@ public class formulaBasketball
     public static StringUtils StringUtils;
     public static bool writeGames;
     public static FormulaBasketball.Random r;
-    public static Standings standingsForm;
+    public static Standings standingsForm, dLeagueStandingsForm;
     private static PlayoffBracket bracket;
     public static int nextPlayerID;
     public static bool injuries = false;
@@ -41,6 +41,7 @@ public class formulaBasketball
         
         Startup(loadSave, fileName, teams, freeAgency, !flag);
         standingsForm = new Standings();
+        dLeagueStandingsForm = new Standings();
         bracket = new PlayoffBracket();
         bracket.Show();
         bracket.Visible = false;
@@ -49,9 +50,9 @@ public class formulaBasketball
         statsFile = "stats.csv";
         standingsFile = "standings.csv";
         championshipsContents = championshipsContents += "Southern Conference Winner\tSouthern Conference Games Won\t\tNorthern Conference Games Won\tNorthern Conference winner\tMVP Winner\tMVP Team\tROTY winner\tROTY Team\n";
-
-        create.CreateNewSchedule();
+                
         create.FixTeams();
+        create.CreateNewSchedule();
 
         /* create.SetUpCollege();
          create.PlayCollegeSeason();
@@ -91,8 +92,15 @@ public class formulaBasketball
             create.getTeam(i).setTeamNum(i);
         }
         printer = new ImagePrinter(startingGame);
-        standingsForm.updateStandings(create);
+        standingsForm.updateStandings(create, true);
         standingsForm.Visible = true;
+
+        //create.FixTeams();
+        //create.playDLeagueGames(1, 4, r);
+
+        dLeagueStandingsForm.updateStandings(create, false);
+        dLeagueStandingsForm.Visible = true;
+
         while (!flag)
         {
             Form2 resultFinder = new Form2();
@@ -112,7 +120,7 @@ public class formulaBasketball
                 standingsForm.Visible = true;
                 playGames(startingGame, endGame);
 
-
+                playDLeagueGames(startingGame, endGame);
 
             }
             else if (result.Equals("playSeason"))
@@ -497,7 +505,8 @@ public class formulaBasketball
 
     public static void updateStandings()
     {
-        standingsForm.updateStandings(create);
+        standingsForm.updateStandings(create, true);
+        dLeagueStandingsForm.updateStandings(create, false);
         //System.Threading.Thread.Sleep(5);
     }
     public static void doSetup(Boolean flag)
@@ -815,6 +824,18 @@ public class formulaBasketball
 
 
     }
+    public static void playDLeagueGames(int firstGame, int secondGame)
+    {
+        create.playDLeagueGames(firstGame, secondGame, r);
+
+        if (gameWriter != null) gameWriter.writeLines();
+
+        printFianances();
+
+        printInjuries();
+
+
+    }
 
     public static void printFianances()
     {
@@ -928,11 +949,15 @@ public class formulaBasketball
 
     }
 
-    public static bool executeGame(bool b, int i, int j)
+    public static bool executeGame(bool b, int i, int j, bool dLeague = false)
     {
         bool retVal = false;
-        int away = create.getTeam(i).lastThreeGames(-1);
-        int home = create.getTeam(j).lastThreeGames(-1);
+
+        team awayTeam = dLeague ? create.getTeam(i).GetAffiliate() : create.getTeam(i);
+        team homeTeam = dLeague ? create.getTeam(j).GetAffiliate() : create.getTeam(j);
+
+        int away = awayTeam.lastThreeGames(-1);
+        int home = homeTeam.lastThreeGames(-1);
 
 
 
@@ -941,41 +966,41 @@ public class formulaBasketball
         {
             if (randomValue < 10)
             {
-                create.getTeam(i).setModifier(new BounceBackGame());
-                create.getTeam(j).setModifier(new None());
+                awayTeam.setModifier(new BounceBackGame());
+                homeTeam.setModifier(new None());
             }
             else if (randomValue < 30)
             {
-                create.getTeam(i).setModifier(new DefensiveNightmare());
-                create.getTeam(j).setModifier(new DefensiveNightmare());
+                awayTeam.setModifier(new DefensiveNightmare());
+                homeTeam.setModifier(new DefensiveNightmare());
             }
             else if (randomValue < 40)
             {
-                create.getTeam(i).setModifier(new None());
-                create.getTeam(j).setModifier(new BounceBackGame());
+                awayTeam.setModifier(new None());
+                homeTeam.setModifier(new BounceBackGame());
             }
             else
             {
-                create.getTeam(i).setModifier(new None());
-                create.getTeam(j).setModifier(new None());
+                awayTeam.setModifier(new None());
+                homeTeam.setModifier(new None());
             }
         }
         else if ((away == 0 || away == 1) && home == 3)
         {
             if (randomValue < 15)
             {
-                create.getTeam(i).setModifier(new BounceBackGame());
-                create.getTeam(j).setModifier(new LetDownGame());
+                awayTeam.setModifier(new BounceBackGame());
+                homeTeam.setModifier(new LetDownGame());
             }
             else if (randomValue < 25)
             {
-                create.getTeam(i).setModifier(new StrugglesContinue());
-                create.getTeam(j).setModifier(new ContinueRolling());
+                awayTeam.setModifier(new StrugglesContinue());
+                homeTeam.setModifier(new ContinueRolling());
             }
             else
             {
-                create.getTeam(i).setModifier(new None());
-                create.getTeam(j).setModifier(new None());
+                awayTeam.setModifier(new None());
+                homeTeam.setModifier(new None());
             }
 
         }
@@ -983,36 +1008,36 @@ public class formulaBasketball
         {
             if (randomValue < 15)
             {
-                create.getTeam(j).setModifier(new BounceBackGame());
-                create.getTeam(i).setModifier(new LetDownGame());
+                homeTeam.setModifier(new BounceBackGame());
+                awayTeam.setModifier(new LetDownGame());
             }
             else if (randomValue < 25)
             {
-                create.getTeam(j).setModifier(new StrugglesContinue());
-                create.getTeam(i).setModifier(new ContinueRolling());
+                homeTeam.setModifier(new StrugglesContinue());
+                awayTeam.setModifier(new ContinueRolling());
             }
             else
             {
-                create.getTeam(j).setModifier(new None());
-                create.getTeam(i).setModifier(new None());
+                homeTeam.setModifier(new None());
+                awayTeam.setModifier(new None());
             }
         }
         else if (away == 3 && home == 3)
         {
             if (randomValue < 5)
             {
-                create.getTeam(i).setModifier(new ContinueRolling());
-                create.getTeam(j).setModifier(new LetDownGame());
+                awayTeam.setModifier(new ContinueRolling());
+                homeTeam.setModifier(new LetDownGame());
             }
             else if (randomValue < 10)
             {
-                create.getTeam(i).setModifier(new LetDownGame());
-                create.getTeam(j).setModifier(new ContinueRolling());
+                awayTeam.setModifier(new LetDownGame());
+                homeTeam.setModifier(new ContinueRolling());
             }
             else
             {
-                create.getTeam(i).setModifier(new None());
-                create.getTeam(j).setModifier(new None());
+                awayTeam.setModifier(new None());
+                homeTeam.setModifier(new None());
             }
 
         }
@@ -1020,74 +1045,74 @@ public class formulaBasketball
         {
             if (randomValue < 12)
             {
-                create.getTeam(i).setModifier(new DefensiveNightmare());
-                create.getTeam(j).setModifier(new None());
+                awayTeam.setModifier(new DefensiveNightmare());
+                homeTeam.setModifier(new None());
             }
             else if (randomValue < 25)
             {
-                create.getTeam(i).setModifier(new OffenisveNightmare());
-                create.getTeam(j).setModifier(new OffenisveNightmare());
+                awayTeam.setModifier(new OffenisveNightmare());
+                homeTeam.setModifier(new OffenisveNightmare());
             }
             else
             {
-                create.getTeam(i).setModifier(new None());
-                create.getTeam(j).setModifier(new None());
+                awayTeam.setModifier(new None());
+                homeTeam.setModifier(new None());
             }
         }
         if (i == 26 || i == 18 || i == 1 || i == 11)
         {
-            create.getTeam(i).addModifier(new gettingHot());
+            awayTeam.addModifier(new gettingHot());
         }
 
         else if (j == 26 || j == 18 || j ==1 || j == 11)
         {
-            create.getTeam(j).addModifier(new gettingHot());
+            homeTeam.addModifier(new gettingHot());
         }
         if(i == 4)
         {
-            create.getTeam(i).addModifier(new LetDownGame());
+            awayTeam.addModifier(new LetDownGame());
         }
         else if(j == 4)
-            create.getTeam(j).addModifier(new LetDownGame());
-        create.getTeam(j).addModifier(new HomeTeam());
-        create.getTeam(i).addModifier(create.getTeam(i).getCoachModifier());
-        create.getTeam(j).addModifier(create.getTeam(j).getCoachModifier());
-        game newGame = new game(gameWriter, create.getTeam(i), create.getTeam(j), r);
+            homeTeam.addModifier(new LetDownGame());
+        homeTeam.addModifier(new HomeTeam());
+        awayTeam.addModifier(awayTeam.getCoachModifier());
+        homeTeam.addModifier(homeTeam.getCoachModifier());
+        game newGame = new game(gameWriter, awayTeam, homeTeam, r);
 
 
         retVal = newGame.getWinner();
 
-        create.getTeam(i).AddResult(j, newGame.getAwayTeamScore(), newGame.getHomeTeamScore());
-        create.getTeam(j).AddResult(i, newGame.getHomeTeamScore(), newGame.getAwayTeamScore());
+        awayTeam.AddResult(j, newGame.getAwayTeamScore(), newGame.getHomeTeamScore());
+        homeTeam.AddResult(i, newGame.getHomeTeamScore(), newGame.getAwayTeamScore());
 
-        printer.AddResult(create.getTeam(i).ToString(), create.getTeam(j).ToString(), newGame.getAwayTeamScore(), newGame.getHomeTeamScore());
+        printer.AddResult(awayTeam.ToString(), homeTeam.ToString(), newGame.getAwayTeamScore(), newGame.getHomeTeamScore(), dLeague);
        
-        gameResultsContents += ("," + create.getTeam(i).ToString() + "," + newGame.getAwayTeamScore() + "," + create.getTeam(j).ToString() + "," + newGame.getHomeTeamScore() + "\n");
+        gameResultsContents += ("," + awayTeam.ToString() + "," + newGame.getAwayTeamScore() + "," + homeTeam.ToString() + "," + newGame.getHomeTeamScore() + "\n");
 
 
-        /*attendance temp = create.getTeam(i).getStadium().getAttendance(create.getTeam(i), create.getTeam(j), false);
-        create.getTeam(i).setFianances((int)temp.income, false);
-        attendance[] concessions = create.getTeam(i).getStadium().getConcessions(temp);
+        /*attendance temp = awayTeam.getStadium().getAttendance(awayTeam, homeTeam, false);
+        awayTeam.setFianances((int)temp.income, false);
+        attendance[] concessions = awayTeam.getStadium().getConcessions(temp);
         for (int k = 0; k < concessions.Length; k++)
         {
-            create.getTeam(i).setFianances((int)concessions[k].income, true);
+            awayTeam.setFianances((int)concessions[k].income, true);
         }
-        create.getTeam(i).homeGameOccurred();
-        create.getTeam(j).awayGameOccurred(j, i);
+        awayTeam.homeGameOccurred();
+        homeTeam.awayGameOccurred(j, i);
         /*if (b)
         {
-            string tempWriterFile ="Game " + (startingGame - 1) + " - " + create.getTeam(i).ToString() + " - " + create.getTeam(j).ToString() + " box score.txt";
+            string tempWriterFile ="Game " + (startingGame - 1) + " - " + awayTeam.ToString() + " - " + homeTeam.ToString() + " box score.txt";
             string tempWriterContents = "";
             tempWriterContents += "-----------------------------------------------------------");
-            tempWriterContents += ("| " + StringUtils.rightPad(create.getTeam(i).ToString(), 25) + " | " + newGame.getQuarterOneScore()[0] + " | " + newGame.getQuarterTwoScore()[0] + " | " + newGame.getQuarterThreeScore()[0] + " | " + newGame.getQuarterFourScore()[0] + " | " + newGame.getQuarterOTScore()[0] + " | " + StringUtils.rightPad("" + newGame.getAwayTeamScore(), 3) + " |\n");
-            tempWriterContents += ("| " + StringUtils.rightPad(create.getTeam(j).ToString(), 25) + " | " + newGame.getQuarterOneScore()[1] + " | " + newGame.getQuarterTwoScore()[1] + " | " + newGame.getQuarterThreeScore()[1] + " | " + newGame.getQuarterFourScore()[1] + " | " + newGame.getQuarterOTScore()[1] + " | " + StringUtils.rightPad("" + newGame.getHomeTeamScore(), 3) + " |\n");
+            tempWriterContents += ("| " + StringUtils.rightPad(awayTeam.ToString(), 25) + " | " + newGame.getQuarterOneScore()[0] + " | " + newGame.getQuarterTwoScore()[0] + " | " + newGame.getQuarterThreeScore()[0] + " | " + newGame.getQuarterFourScore()[0] + " | " + newGame.getQuarterOTScore()[0] + " | " + StringUtils.rightPad("" + newGame.getAwayTeamScore(), 3) + " |\n");
+            tempWriterContents += ("| " + StringUtils.rightPad(homeTeam.ToString(), 25) + " | " + newGame.getQuarterOneScore()[1] + " | " + newGame.getQuarterTwoScore()[1] + " | " + newGame.getQuarterThreeScore()[1] + " | " + newGame.getQuarterFourScore()[1] + " | " + newGame.getQuarterOTScore()[1] + " | " + StringUtils.rightPad("" + newGame.getHomeTeamScore(), 3) + " |\n");
             tempWriterContents += "-----------------------------------------------------------");
-            tempWriterContents += create.getTeam(i).ToString());
+            tempWriterContents += awayTeam.ToString());
             tempWriterContents += "POS NAME                    MIN  PTS  AST  FGA  FGM    FG%  3TA  3TM  FTA FTM   TO  STL  REB  ORB  DRB  FLS  OSA  OSM    OS%");
-            for (int k = 0; k < create.getTeam(i).getSize(); k++)
+            for (int k = 0; k < awayTeam.getSize(); k++)
             {
                 String position = "";
-                switch (create.getTeam(i).getPlayer(k).getPosition())
+                switch (awayTeam.getPlayer(k).getPosition())
                 {
                     case 1:
                         position = "C  ";
@@ -1106,25 +1131,25 @@ public class formulaBasketball
                         break;
                 }
                 double shootingPercentage = 0.0, opponentPercentage = 0.0;
-                if (create.getTeam(i).getPlayer(k).getGameShotsTaken() != 0)
+                if (awayTeam.getPlayer(k).getGameShotsTaken() != 0)
                 {
 
-                    shootingPercentage = ((double)create.getTeam(i).getPlayer(k).getGameShotsMade() / (double)create.getTeam(i).getPlayer(k).getGameShotsTaken()) * 100;
+                    shootingPercentage = ((double)awayTeam.getPlayer(k).getGameShotsMade() / (double)awayTeam.getPlayer(k).getGameShotsTaken()) * 100;
                 }
-                if (create.getTeam(i).getPlayer(k).getGameShotsAttemptedAgainst() != 0)
-                    opponentPercentage = ((double)create.getTeam(i).getPlayer(k).getGameShotsMadeAgainst() / (double)create.getTeam(i).getPlayer(k).getGameShotsAttemptedAgainst()) * 100;
-                writer.printf(position + StringUtils.rightPad(create.getTeam(i).getPlayer(k).getName(), 25) + "%2d   %2d   %2d   %2d   %2d   %4.1f   %2d   %2d   %2d  %2d   %2d   %2d   %2d   %2d   %2d   %2d   %2d   %2d   %3.1f\n", create.getTeam(i).getPlayer(k).getGameMinutes(), create.getTeam(i).getPlayer(k).getGamePoints(), create.getTeam(i).getPlayer(k).getGameAssists(), create.getTeam(i).getPlayer(k).getGameShotsTaken()
-                        , create.getTeam(i).getPlayer(k).getGameShotsMade(), shootingPercentage, create.getTeam(i).getPlayer(k).getGameThreesTaken(), create.getTeam(i).getPlayer(k).getGameThreePointersMade(), create.getTeam(i).getPlayer(k).getGameFreeThrowsTaken(), create.getTeam(i).getPlayer(k).getGameFreeThrowsMade()
-                        , create.getTeam(i).getPlayer(k).getGameTurnovers(), create.getTeam(i).getPlayer(k).getGameSteals(), create.getTeam(i).getPlayer(k).getGameRebounds(), create.getTeam(i).getPlayer(k).getGameOffensiveRebounds(), create.getTeam(i).getPlayer(k).getGameDefensiveRebounds()
-                        , create.getTeam(i).getPlayer(k).getBoxScoreFouls(), create.getTeam(i).getPlayer(k).getGameShotsAttemptedAgainst(), create.getTeam(i).getPlayer(k).getGameShotsMadeAgainst(),
+                if (awayTeam.getPlayer(k).getGameShotsAttemptedAgainst() != 0)
+                    opponentPercentage = ((double)awayTeam.getPlayer(k).getGameShotsMadeAgainst() / (double)awayTeam.getPlayer(k).getGameShotsAttemptedAgainst()) * 100;
+                writer.printf(position + StringUtils.rightPad(awayTeam.getPlayer(k).getName(), 25) + "%2d   %2d   %2d   %2d   %2d   %4.1f   %2d   %2d   %2d  %2d   %2d   %2d   %2d   %2d   %2d   %2d   %2d   %2d   %3.1f\n", awayTeam.getPlayer(k).getGameMinutes(), awayTeam.getPlayer(k).getGamePoints(), awayTeam.getPlayer(k).getGameAssists(), awayTeam.getPlayer(k).getGameShotsTaken()
+                        , awayTeam.getPlayer(k).getGameShotsMade(), shootingPercentage, awayTeam.getPlayer(k).getGameThreesTaken(), awayTeam.getPlayer(k).getGameThreePointersMade(), awayTeam.getPlayer(k).getGameFreeThrowsTaken(), awayTeam.getPlayer(k).getGameFreeThrowsMade()
+                        , awayTeam.getPlayer(k).getGameTurnovers(), awayTeam.getPlayer(k).getGameSteals(), awayTeam.getPlayer(k).getGameRebounds(), awayTeam.getPlayer(k).getGameOffensiveRebounds(), awayTeam.getPlayer(k).getGameDefensiveRebounds()
+                        , awayTeam.getPlayer(k).getBoxScoreFouls(), awayTeam.getPlayer(k).getGameShotsAttemptedAgainst(), awayTeam.getPlayer(k).getGameShotsMadeAgainst(),
                         opponentPercentage);
             }
-            writerContents += create.getTeam(j).ToString());
+            writerContents += homeTeam.ToString());
             writerContents += "POS NAME                    MIN  PTS  AST  FGA  FGM    FG%  3TA  3TM  FTA FTM   TO  STL  REB  ORB  DRB  FLS  OSA  OSM    OS%");
-            for (int k = 0; k < create.getTeam(j).getSize(); k++)
+            for (int k = 0; k < homeTeam.getSize(); k++)
             {
                 String position = "";
-                switch (create.getTeam(j).getPlayer(k).getPosition())
+                switch (homeTeam.getPlayer(k).getPosition())
                 {
                     case 1:
                         position = "C  ";
@@ -1143,17 +1168,17 @@ public class formulaBasketball
                         break;
                 }
                 double shootingPercentage = 0.0, opponentPercentage = 0.0;
-                if (create.getTeam(j).getPlayer(k).getGameShotsTaken() != 0)
+                if (homeTeam.getPlayer(k).getGameShotsTaken() != 0)
                 {
 
-                    shootingPercentage = ((double)create.getTeam(j).getPlayer(k).getGameShotsMade() / (double)create.getTeam(j).getPlayer(k).getGameShotsTaken()) * 100;
+                    shootingPercentage = ((double)homeTeam.getPlayer(k).getGameShotsMade() / (double)homeTeam.getPlayer(k).getGameShotsTaken()) * 100;
                 }
-                if (create.getTeam(j).getPlayer(k).getGameShotsAttemptedAgainst() != 0)
-                    opponentPercentage = ((double)create.getTeam(j).getPlayer(k).getGameShotsMadeAgainst() / (double)create.getTeam(j).getPlayer(k).getGameShotsAttemptedAgainst()) * 100;
-                writer.printf(position + StringUtils.rightPad(create.getTeam(j).getPlayer(k).getName(), 25) + "%2d   %2d   %2d   %2d   %2d   %4.1f   %2d   %2d   %2d  %2d   %2d   %2d   %2d   %2d   %2d   %2d   %2d   %2d   %3.1f\n", create.getTeam(j).getPlayer(k).getGameMinutes(), create.getTeam(j).getPlayer(k).getGamePoints(), create.getTeam(j).getPlayer(k).getGameAssists(), create.getTeam(j).getPlayer(k).getGameShotsTaken()
-                        , create.getTeam(j).getPlayer(k).getGameShotsMade(), shootingPercentage, create.getTeam(j).getPlayer(k).getGameThreesTaken(), create.getTeam(j).getPlayer(k).getGameThreePointersMade(), create.getTeam(j).getPlayer(k).getGameFreeThrowsTaken(), create.getTeam(j).getPlayer(k).getGameFreeThrowsMade()
-                        , create.getTeam(j).getPlayer(k).getGameTurnovers(), create.getTeam(j).getPlayer(k).getGameSteals(), create.getTeam(j).getPlayer(k).getGameRebounds(), create.getTeam(j).getPlayer(k).getGameOffensiveRebounds(), create.getTeam(j).getPlayer(k).getGameDefensiveRebounds()
-                        , create.getTeam(j).getPlayer(k).getBoxScoreFouls(), create.getTeam(j).getPlayer(k).getGameShotsAttemptedAgainst(), create.getTeam(j).getPlayer(k).getGameShotsMadeAgainst(),
+                if (homeTeam.getPlayer(k).getGameShotsAttemptedAgainst() != 0)
+                    opponentPercentage = ((double)homeTeam.getPlayer(k).getGameShotsMadeAgainst() / (double)homeTeam.getPlayer(k).getGameShotsAttemptedAgainst()) * 100;
+                writer.printf(position + StringUtils.rightPad(homeTeam.getPlayer(k).getName(), 25) + "%2d   %2d   %2d   %2d   %2d   %4.1f   %2d   %2d   %2d  %2d   %2d   %2d   %2d   %2d   %2d   %2d   %2d   %2d   %3.1f\n", homeTeam.getPlayer(k).getGameMinutes(), homeTeam.getPlayer(k).getGamePoints(), homeTeam.getPlayer(k).getGameAssists(), homeTeam.getPlayer(k).getGameShotsTaken()
+                        , homeTeam.getPlayer(k).getGameShotsMade(), shootingPercentage, homeTeam.getPlayer(k).getGameThreesTaken(), homeTeam.getPlayer(k).getGameThreePointersMade(), homeTeam.getPlayer(k).getGameFreeThrowsTaken(), homeTeam.getPlayer(k).getGameFreeThrowsMade()
+                        , homeTeam.getPlayer(k).getGameTurnovers(), homeTeam.getPlayer(k).getGameSteals(), homeTeam.getPlayer(k).getGameRebounds(), homeTeam.getPlayer(k).getGameOffensiveRebounds(), homeTeam.getPlayer(k).getGameDefensiveRebounds()
+                        , homeTeam.getPlayer(k).getBoxScoreFouls(), homeTeam.getPlayer(k).getGameShotsAttemptedAgainst(), homeTeam.getPlayer(k).getGameShotsMadeAgainst(),
                         opponentPercentage);
 
             }
@@ -1182,13 +1207,13 @@ public class formulaBasketball
             mostAssists = assists.getGameAssists();
         }
 
-        for (int k = 0; k < create.getTeam(i).getSize(); k++)
+        for (int k = 0; k < awayTeam.getSize(); k++)
         {
-            create.getTeam(i).getPlayer(k).resetGameStats();
+            awayTeam.getPlayer(k).resetGameStats(awayTeam, homeTeam);
         }
-        for (int k = 0; k < create.getTeam(j).getSize(); k++)
+        for (int k = 0; k < homeTeam.getSize(); k++)
         {
-            create.getTeam(j).getPlayer(k).resetGameStats();
+            homeTeam.getPlayer(k).resetGameStats(homeTeam, awayTeam);
         }
         return retVal;
     }

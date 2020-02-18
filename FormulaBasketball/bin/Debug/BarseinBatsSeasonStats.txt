@@ -1,19 +1,19 @@
 Barsein Bats Stats
-Player Record of Points: Matthew Grabochov: 19 points on game 4 against the Sagua Ocelots
-Player Record of Assists: Hivek Ekxtr: 15 assists on game 4 against the Sagua Ocelots
-Player Record of Rebounds: Keon Saengsavang: 11 rebounds on game 3 against the Serkr Atolls
-Team Record in Most Points Scored: Barsein Bats: 112 points on game 4 against the Sagua Ocelots
-Team Record in Least Points Scored: Barsein Bats: 93 points on game 3 against the Serkr Atolls
-Team Record in Least Points Allowed: Barsein Bats: 93 points on game 2 against the Avura Aviators
-Team Record in Most Points Allowed: Barsein Bats: 117 points on game 4 against the Sagua Ocelots
+Player Record of Points: Aulii Thonemany: 19 points on game 4 against the Sagua Ocelots
+Player Record of Assists: Hivek Ekxtr: 13 assists on game 4 against the Sagua Ocelots
+Player Record of Rebounds: Keon Saengsavang: 13 rebounds on game 3 against the Serkr Atolls
+Team Record in Most Points Scored: Barsein Bats: 108 points on game 2 against the Avura Aviators
+Team Record in Least Points Scored: Barsein Bats: 82 points on game 5 against the Shmupland Dictators
+Team Record in Least Points Allowed: Barsein Bats: 84 points on game 4 against the Sagua Ocelots
+Team Record in Most Points Allowed: Barsein Bats: 107 points on game 7 against the Bongatar Banging Bongos
 Records vs. Each Team this season:
 Aahrus Moosi: 0-0
 Auspikitan Golden Falcons: 0-0
 Calto Cows: 0-0
 Height Sagua Cats: 0-0
 Key to Don Yees: 0-0
-Manwx Saguans: 0-0
-Sagua Ocelots: 0-1
+Manwx Saguans: 1-0
+Sagua Ocelots: 1-0
 Solea Geysers: 0-0
 Autolik Autonomy: 0-0
 Barsein Bats: 0-0
@@ -21,21 +21,21 @@ Blanaxon Hammers: 0-0
 Kaeshar Kaisers: 0-0
 Naxda Nomads: 0-0
 Red Rainbow Sickles: 0-0
-Serkr Atolls: 0-1
-Shmupland Dictators: 0-0
+Serkr Atolls: 1-0
+Shmupland Dictators: 0-1
 Aiyota Pumps: 0-0
 Avura Aviators: 1-0
 Boltway Bad Dragons: 0-0
 Dotruga Falno: 0-0
-Ethanthova Ponies: 1-0
+Ethanthova Ponies: 0-1
 Faehrenfall Feathercats: 0-0
 Stedro Boulders: 0-0
 TND Tanks: 0-0
-Bongatar Banging Bongos: 0-0
+Bongatar Banging Bongos: 0-1
 Czalliso Pythons: 0-0
 Dvimne Spirits: 0-0
 Holy Yektonisa Bishops: 0-0
 Holykol Bears: 0-0
 Lyintaria Lynx: 0-0
 Pyxanovia Pixies: 0-0
-Transhimalia Disasters: 0-0
+Transhimalia Disasters: 0-1

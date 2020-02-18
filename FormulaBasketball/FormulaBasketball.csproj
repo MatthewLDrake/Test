@@ -334,6 +334,7 @@
     <Compile Include="Standings.Designer.cs">
       <DependentUpon>Standings.cs</DependentUpon>
     </Compile>
+    <Compile Include="StatsHolders.cs" />
     <Compile Include="statWriter.cs" />
     <Compile Include="StringUtils.cs" />
     <Compile Include="StrugglesContinue.cs" />

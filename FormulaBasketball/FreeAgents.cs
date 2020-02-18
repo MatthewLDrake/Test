@@ -24,6 +24,11 @@ public class FreeAgents
             Add(player);
         }
     }
+    public void Fix()
+    {
+        foreach (player p in allPlayers)
+            p.setTeam(null);
+    }
     public void UpdateOffers(List<Dictionary<int, Contract>> listOffers, List<team> teams)
     {
         if (listOffers == null || listOffers.Count < 1) return;

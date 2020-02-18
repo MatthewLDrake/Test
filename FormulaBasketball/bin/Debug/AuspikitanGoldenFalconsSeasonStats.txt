@@ -1,13 +1,13 @@
 Auspikitan Golden Falcons Stats
-Player Record of Points: Lato Ikro: 26 points on game 2 against the Czalliso Pythons
-Player Record of Assists: Jesse McSteve: 8 assists on game 4 against the Serkr Atolls
-Player Record of Rebounds: Ajanis Vealerko: 8 rebounds on game 1 against the Holykol Bears
-Team Record in Most Points Scored: Auspikitan Golden Falcons: 110 points on game 1 against the Holykol Bears
-Team Record in Least Points Scored: Auspikitan Golden Falcons: 102 points on game 2 against the Czalliso Pythons
-Team Record in Least Points Allowed: Auspikitan Golden Falcons: 84 points on game 2 against the Czalliso Pythons
-Team Record in Most Points Allowed: Auspikitan Golden Falcons: 104 points on game 4 against the Serkr Atolls
+Player Record of Points: Lato Ikro: 22 points on game 7 against the Aahrus Moosi
+Player Record of Assists: Ajanis Vealerko: 9 assists on game 6 against the Autolik Autonomy
+Player Record of Rebounds: Ajanis Vealerko: 13 rebounds on game 7 against the Aahrus Moosi
+Team Record in Most Points Scored: Auspikitan Golden Falcons: 102 points on game 7 against the Aahrus Moosi
+Team Record in Least Points Scored: Auspikitan Golden Falcons: 92 points on game 8 against the Red Rainbow Sickles
+Team Record in Least Points Allowed: Auspikitan Golden Falcons: 81 points on game 8 against the Red Rainbow Sickles
+Team Record in Most Points Allowed: Auspikitan Golden Falcons: 100 points on game 2 against the Czalliso Pythons
 Records vs. Each Team this season:
-Aahrus Moosi: 0-0
+Aahrus Moosi: 1-0
 Auspikitan Golden Falcons: 0-0
 Calto Cows: 0-0
 Height Sagua Cats: 0-0
@@ -15,12 +15,12 @@ Key to Don Yees: 0-0
 Manwx Saguans: 0-0
 Sagua Ocelots: 0-0
 Solea Geysers: 0-0
-Autolik Autonomy: 0-0
+Autolik Autonomy: 1-0
 Barsein Bats: 0-0
 Blanaxon Hammers: 0-0
 Kaeshar Kaisers: 0-0
 Naxda Nomads: 0-0
-Red Rainbow Sickles: 0-0
+Red Rainbow Sickles: 1-0
 Serkr Atolls: 1-0
 Shmupland Dictators: 0-0
 Aiyota Pumps: 0-0
@@ -30,9 +30,9 @@ Dotruga Falno: 0-0
 Ethanthova Ponies: 0-0
 Faehrenfall Feathercats: 0-0
 Stedro Boulders: 1-0
-TND Tanks: 0-0
+TND Tanks: 1-0
 Bongatar Banging Bongos: 0-0
-Czalliso Pythons: 1-0
+Czalliso Pythons: 0-1
 Dvimne Spirits: 0-0
 Holy Yektonisa Bishops: 0-0
 Holykol Bears: 1-0

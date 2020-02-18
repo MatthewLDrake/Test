@@ -1197,9 +1197,35 @@ public class team : IComparable<team>,  IEnumerable<player>
     {
         return pointsAgainst;
     }
-    
+    public void FixTeam()
+    {
+        foreach (player p in activePlayers)
+        {
+            p.setTeam(this);
+            p.setInjured(false);
+            p.setStamina(100);
+        }
+    }
+    public void FixStats()
+    {
+        foreach (player p in activePlayers)
+        {
+            p.ResetStats();
+        }
+    }
     public virtual void AddResult(int opponent, int teamScore, int opposingScore, bool isPlayoffs = false)
     {
+        if(conferenceRecord == null)
+        {
+            currentPlayoffs = new Record();
+            currentSeason = new Record();
+            conferenceRecord = new Record();
+            divisionRecord = new Record();
+            currentSeasonVsTeam = new Record[32];
+            for (int i = 0; i < currentSeasonVsTeam.Length; i++)
+                currentSeasonVsTeam[i] = new Record();
+
+        }
         bool conferenceOpponent = false, divisionalOpponent = false;
         if (getDivisionLetter().Equals(getDivisionLetter(opponent)))
         {
@@ -1356,6 +1382,7 @@ public class team : IComparable<team>,  IEnumerable<player>
         List<player> pgs = new List<player>(), sgs = new List<player>(), pfs = new List<player>(), sfs = new List<player>(), cs = new List<player>();
         foreach (player p in offseasonPlayers)
         {
+            if(p != null)
             switch (p.getPosition())
             {
                 case 1:

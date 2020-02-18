@@ -1,25 +1,25 @@
 Holykol Bears Stats
-Player Record of Points: Red Rainbow Player #2: 30 points on game 4 against the Boltway Bad Dragons
-Player Record of Assists: Red Rainbow Player #2: 18 assists on game 2 against the Lyintaria Lynx
-Player Record of Rebounds: Kolpa Uxyakro: 10 rebounds on game 3 against the Dvimne Spirits
-Team Record in Most Points Scored: Holykol Bears: 117 points on game 4 against the Boltway Bad Dragons
-Team Record in Least Points Scored: Holykol Bears: 90 points on game 3 against the Dvimne Spirits
-Team Record in Least Points Allowed: Holykol Bears: 92 points on game 2 against the Lyintaria Lynx
-Team Record in Most Points Allowed: Holykol Bears: 110 points on game 1 against the Auspikitan Golden Falcons
+Player Record of Points: Red Rainbow Player #2: 28 points on game 5 against the Holy Yektonisa Bishops
+Player Record of Assists: Red Rainbow Player #2: 18 assists on game 1 against the Auspikitan Golden Falcons
+Player Record of Rebounds: Nobira Taki: 11 rebounds on game 4 against the Boltway Bad Dragons
+Team Record in Most Points Scored: Holykol Bears: 110 points on game 2 against the Lyintaria Lynx
+Team Record in Least Points Scored: Holykol Bears: 90 points on game 6 against the Naxda Nomads
+Team Record in Least Points Allowed: Holykol Bears: 85 points on game 7 against the Manwx Saguans
+Team Record in Most Points Allowed: Holykol Bears: 112 points on game 5 against the Holy Yektonisa Bishops
 Records vs. Each Team this season:
 Aahrus Moosi: 0-0
 Auspikitan Golden Falcons: 0-1
 Calto Cows: 0-0
 Height Sagua Cats: 0-0
 Key to Don Yees: 0-0
-Manwx Saguans: 0-0
+Manwx Saguans: 1-0
 Sagua Ocelots: 0-0
 Solea Geysers: 0-0
 Autolik Autonomy: 0-0
 Barsein Bats: 0-0
 Blanaxon Hammers: 0-0
 Kaeshar Kaisers: 0-0
-Naxda Nomads: 0-0
+Naxda Nomads: 0-1
 Red Rainbow Sickles: 0-0
 Serkr Atolls: 0-0
 Shmupland Dictators: 0-0
@@ -27,14 +27,14 @@ Aiyota Pumps: 0-0
 Avura Aviators: 0-0
 Boltway Bad Dragons: 1-0
 Dotruga Falno: 0-0
-Ethanthova Ponies: 0-0
+Ethanthova Ponies: 1-0
 Faehrenfall Feathercats: 0-0
 Stedro Boulders: 0-0
 TND Tanks: 0-0
 Bongatar Banging Bongos: 0-0
 Czalliso Pythons: 0-0
-Dvimne Spirits: 0-1
-Holy Yektonisa Bishops: 0-0
+Dvimne Spirits: 1-0
+Holy Yektonisa Bishops: 0-1
 Holykol Bears: 0-0
 Lyintaria Lynx: 1-0
 Pyxanovia Pixies: 0-0

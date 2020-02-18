@@ -1,22 +1,22 @@
 Transhimalia Disasters Stats
-Player Record of Points: The Dimension Slaughterer: 22 points on game 2 against the Dvimne Spirits
-Player Record of Assists: Steve Masuhiro: 16 assists on game 3 against the TND Tanks
-Player Record of Rebounds: Jesse Erickson: 12 rebounds on game 2 against the Dvimne Spirits
-Team Record in Most Points Scored: Transhimalia Disasters: 91 points on game 1 against the Lyintaria Lynx
-Team Record in Least Points Scored: Transhimalia Disasters: 81 points on game 4 against the Shmupland Dictators
-Team Record in Least Points Allowed: Transhimalia Disasters: 74 points on game 1 against the Lyintaria Lynx
-Team Record in Most Points Allowed: Transhimalia Disasters: 92 points on game 4 against the Shmupland Dictators
+Player Record of Points: The Dimension Slaughterer: 30 points on game 6 against the Barsein Bats
+Player Record of Assists: Steve Masuhiro: 17 assists on game 5 against the Bongatar Banging Bongos
+Player Record of Rebounds: Kalani Phanivong: 9 rebounds on game 2 against the Dvimne Spirits
+Team Record in Most Points Scored: Transhimalia Disasters: 105 points on game 4 against the Shmupland Dictators
+Team Record in Least Points Scored: Transhimalia Disasters: 87 points on game 7 against the Calto Cows
+Team Record in Least Points Allowed: Transhimalia Disasters: 79 points on game 5 against the Bongatar Banging Bongos
+Team Record in Most Points Allowed: Transhimalia Disasters: 113 points on game 4 against the Shmupland Dictators
 Records vs. Each Team this season:
 Aahrus Moosi: 0-0
 Auspikitan Golden Falcons: 0-0
-Calto Cows: 0-0
+Calto Cows: 0-1
 Height Sagua Cats: 0-0
 Key to Don Yees: 0-0
 Manwx Saguans: 0-0
 Sagua Ocelots: 0-0
 Solea Geysers: 0-0
 Autolik Autonomy: 0-0
-Barsein Bats: 0-0
+Barsein Bats: 1-0
 Blanaxon Hammers: 0-0
 Kaeshar Kaisers: 0-0
 Naxda Nomads: 0-0
@@ -31,11 +31,11 @@ Ethanthova Ponies: 0-0
 Faehrenfall Feathercats: 0-0
 Stedro Boulders: 0-0
 TND Tanks: 0-1
-Bongatar Banging Bongos: 0-0
+Bongatar Banging Bongos: 1-1
 Czalliso Pythons: 0-0
 Dvimne Spirits: 0-1
 Holy Yektonisa Bishops: 0-0
 Holykol Bears: 0-0
-Lyintaria Lynx: 1-0
+Lyintaria Lynx: 0-1
 Pyxanovia Pixies: 0-0
 Transhimalia Disasters: 0-0

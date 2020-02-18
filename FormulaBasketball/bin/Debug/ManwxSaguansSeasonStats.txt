@@ -1,22 +1,22 @@
 Manwx Saguans Stats
-Player Record of Points: Sol Jae-Wook: 28 points on game 4 against the Blanaxon Hammers
-Player Record of Assists: Sol Jae-Wook: 9 assists on game 3 against the Boltway Bad Dragons
-Player Record of Rebounds: Kiromi Kersidomobek: 11 rebounds on game 4 against the Blanaxon Hammers
-Team Record in Most Points Scored: Manwx Saguans: 100 points on game 3 against the Boltway Bad Dragons
-Team Record in Least Points Scored: Manwx Saguans: 79 points on game 1 against the Bongatar Banging Bongos
-Team Record in Least Points Allowed: Manwx Saguans: 85 points on game 4 against the Blanaxon Hammers
-Team Record in Most Points Allowed: Manwx Saguans: 115 points on game 3 against the Boltway Bad Dragons
+Player Record of Points: Sol Jae-Wook: 38 points on game 3 against the Boltway Bad Dragons
+Player Record of Assists: Sol Jae-Wook: 11 assists on game 5 against the Dotruga Falno
+Player Record of Rebounds: Kiromi Kersidomobek: 10 rebounds on game 2 against the Faehrenfall Feathercats
+Team Record in Most Points Scored: Manwx Saguans: 119 points on game 5 against the Dotruga Falno
+Team Record in Least Points Scored: Manwx Saguans: 85 points on game 7 against the Holykol Bears
+Team Record in Least Points Allowed: Manwx Saguans: 88 points on game 2 against the Faehrenfall Feathercats
+Team Record in Most Points Allowed: Manwx Saguans: 109 points on game 3 against the Boltway Bad Dragons
 Records vs. Each Team this season:
 Aahrus Moosi: 0-0
 Auspikitan Golden Falcons: 0-0
 Calto Cows: 0-0
 Height Sagua Cats: 0-0
-Key to Don Yees: 0-0
+Key to Don Yees: 1-0
 Manwx Saguans: 0-0
 Sagua Ocelots: 0-0
 Solea Geysers: 0-0
 Autolik Autonomy: 0-0
-Barsein Bats: 0-0
+Barsein Bats: 0-1
 Blanaxon Hammers: 1-0
 Kaeshar Kaisers: 0-0
 Naxda Nomads: 0-0
@@ -26,16 +26,16 @@ Shmupland Dictators: 0-0
 Aiyota Pumps: 0-0
 Avura Aviators: 0-0
 Boltway Bad Dragons: 0-1
-Dotruga Falno: 0-0
+Dotruga Falno: 1-0
 Ethanthova Ponies: 0-0
-Faehrenfall Feathercats: 0-1
+Faehrenfall Feathercats: 1-0
 Stedro Boulders: 0-0
 TND Tanks: 0-0
 Bongatar Banging Bongos: 0-1
 Czalliso Pythons: 0-0
 Dvimne Spirits: 0-0
 Holy Yektonisa Bishops: 0-0
-Holykol Bears: 0-0
+Holykol Bears: 0-1
 Lyintaria Lynx: 0-0
 Pyxanovia Pixies: 0-0
 Transhimalia Disasters: 0-0

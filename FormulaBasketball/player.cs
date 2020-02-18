@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FormulaBasketball;
+using System;
 using System.Collections.Generic;
 using System.IO;
 [Serializable]
@@ -23,6 +24,8 @@ public class player : IComparable<player>
     public double[] ratings;
     protected Contract contract;
     protected PlayerRecords playerRecords;
+    protected List<StatsHolders> seasonStats;
+    protected List<List<StatsHolders>> newCareerStats;
     /*
      * 0: Inside
      * 1: Jump
@@ -1027,7 +1030,14 @@ public class player : IComparable<player>
         injuryLength = 0;
         isInjuredBool = false;
         stamina = 100;
-        
+        if (seasonStats == null)
+        {
+            newCareerStats = new List<List<StatsHolders>>();
+        }
+        else
+            newCareerStats.Add(seasonStats);
+        seasonStats = new List<StatsHolders>();
+
     }
     public void Reset()
     {
@@ -1827,7 +1837,10 @@ public class player : IComparable<player>
     }
     public int getPoints()
     {
-        return stats[0];
+        int amount = 0;
+        foreach (StatsHolders stat in seasonStats)
+            amount += stat.getPoints();
+        return amount;
     }
     public int getGamePoints()
     {
@@ -1835,12 +1848,14 @@ public class player : IComparable<player>
     }
     public void addPoints(int p)
     {
-        stats[0] += p;
         gameStats[0] += p;
     }
     public int getShotsTaken()
     {
-        return stats[1];
+        int amount = 0;
+        foreach (StatsHolders stat in seasonStats)
+            amount += stat.getShotsTaken();
+        return amount;
     }
     public int getGameShotsTaken()
     {
@@ -1848,12 +1863,14 @@ public class player : IComparable<player>
     }
     public void addShotTaken(int p)
     {
-        stats[1] += p;
         gameStats[1] += p;
     }
     public int getShotsMade()
     {
-        return stats[2];
+        int amount = 0;
+        foreach (StatsHolders stat in seasonStats)
+            amount += stat.getShotsMade();
+        return amount;
     }
     public int getGameShotsMade()
     {
@@ -1861,12 +1878,14 @@ public class player : IComparable<player>
     }
     public void addShotMade(int p)
     {
-        stats[2] += p;
         gameStats[2] += p;
     }
     public int getAssists()
     {
-        return stats[3];
+        int amount = 0;
+        foreach (StatsHolders stat in seasonStats)
+            amount += stat.getAssists();
+        return amount;
     }
     public int getGameAssists()
     {
@@ -1874,12 +1893,14 @@ public class player : IComparable<player>
     }
     public void addAssists(int p)
     {
-        stats[3] += p;
         gameStats[3] += p;
     }
     public int getTurnovers()
     {
-        return stats[4];
+        int amount = 0;
+        foreach (StatsHolders stat in seasonStats)
+            amount += stat.getTurnovers();
+        return amount;
     }
     public int getGameTurnovers()
     {
@@ -1887,12 +1908,14 @@ public class player : IComparable<player>
     }
     public void addTurnovers(int p)
     {
-        stats[4] += p;
         gameStats[4] += p;
     }
     public int getSteals()
     {
-        return stats[5];
+        int amount = 0;
+        foreach (StatsHolders stat in seasonStats)
+            amount += stat.getSteals();
+        return amount;
     }
     public int getGameSteals()
     {
@@ -1900,12 +1923,14 @@ public class player : IComparable<player>
     }
     public void addSteals(int p)
     {
-        stats[5] += p;
         gameStats[5] += p;
     }
     public int getMinutes()
     {
-        return (int)Math.Round(stats[6] / 60.0);
+        int amount = 0;
+        foreach (StatsHolders stat in seasonStats)
+            amount += stat.getMinutes();
+        return amount;
     }
     public int getGameMinutes()
     {
@@ -1913,7 +1938,6 @@ public class player : IComparable<player>
     }
     public void addMinutes(int p)
     {
-        stats[6] += p;
         gameStats[6] += p;
         seconds += p;
     }
@@ -1928,12 +1952,14 @@ public class player : IComparable<player>
     }
     public void addRebound(int i)
     {
-        stats[7] += i;
         gameStats[7] += i;
     }
     public int getRebounds()
     {
-        return stats[7];
+        int amount = 0;
+        foreach (StatsHolders stat in seasonStats)
+            amount += stat.getRebounds();
+        return amount;
     }
     public int getGameRebounds()
     {
@@ -1941,13 +1967,14 @@ public class player : IComparable<player>
     }
     public void addOffensiveRebound(int i)
     {
-        stats[8] += i;
         gameStats[8] += i;
-
     }
     public int getOffensiveRebounds()
     {
-        return stats[8];
+        int amount = 0;
+        foreach (StatsHolders stat in seasonStats)
+            amount += stat.getOffensiveRebounds();
+        return amount;
     }
     public int getGameOffensiveRebounds()
     {
@@ -1955,13 +1982,14 @@ public class player : IComparable<player>
     }
     public void addDefensiveRebound(int i)
     {
-        stats[9] += i;
         gameStats[9] += i;
-
     }
     public int getDefensiveRebounds()
     {
-        return stats[9];
+        int amount = 0;
+        foreach (StatsHolders stat in seasonStats)
+            amount += stat.getDefensiveRebounds();
+        return amount;
     }
     public int getGameDefensiveRebounds()
     {
@@ -1969,13 +1997,15 @@ public class player : IComparable<player>
     }
     public void addFoul(int i)
     {
-        stats[10] += i;
         gameFouls += i;
         //if (gameFouls == 6) Console.WriteLine("tf");
     }
     public int getFouls()
     {
-        return stats[10];
+        int amount = 0;
+        foreach (StatsHolders stat in seasonStats)
+            amount += stat.getFouls();
+        return amount;
     }
     public void resetGame()
     {
@@ -2008,13 +2038,15 @@ public class player : IComparable<player>
     }
     public void addThreeTaken(int i)
     {
-        stats[11] += i;
         gameStats[11] += i;
 
     }
     public int getThreesTaken()
     {
-        return stats[11];
+        int amount = 0;
+        foreach (StatsHolders stat in seasonStats)
+            amount += stat.getThreesTaken();
+        return amount;
     }
     public int getGameThreesTaken()
     {
@@ -2022,22 +2054,26 @@ public class player : IComparable<player>
     }
     public void addFreeThrowsTaken(int i)
     {
-        stats[12] += i;
         gameStats[12] += i;
     }
     public void addFreeThrowsMade(int i)
     {
-        stats[13] += i;
         gameStats[13] += i;
 
     }
     public int getFreeThrowsTaken()
     {
-        return stats[12];
+        int amount = 0;
+        foreach (StatsHolders stat in seasonStats)
+            amount += stat.getFreeThrowsTaken();
+        return amount;
     }
     public int getFreeThrowsMade()
     {
-        return stats[13];
+        int amount = 0;
+        foreach (StatsHolders stat in seasonStats)
+            amount += stat.getFreeThrowsMade();
+        return amount;
     }
     public int getGameFreeThrowsTaken()
     {
@@ -2049,12 +2085,14 @@ public class player : IComparable<player>
     }
     public void addThreePointerMade(int i)
     {
-        stats[14] += i;
         gameStats[14] += i;
     }
     public int getThreePointersMade()
     {
-        return stats[14];
+        int amount = 0;
+        foreach (StatsHolders stat in seasonStats)
+            amount += stat.getThreePointersMade();
+        return amount;
     }
     public int getGameThreePointersMade()
     {
@@ -2062,12 +2100,14 @@ public class player : IComparable<player>
     }
     public void addShotsAttemptedAgainst(int i)
     {
-        stats[15] += i;
         gameStats[15] += i;
     }
     public int getShotsAttemptedAgainst()
     {
-        return stats[15];
+        int amount = 0;
+        foreach (StatsHolders stat in seasonStats)
+            amount += stat.getShotsAttemptedAgainst();
+        return amount;
     }
     public int getGameShotsAttemptedAgainst()
     {
@@ -2075,19 +2115,22 @@ public class player : IComparable<player>
     }
     public void addShotsMadeAgainst(int i)
     {
-        stats[16] += i;
         gameStats[16] += i;
     }
     public int getShotsMadeAgainst()
     {
-        return stats[16];
+        int amount = 0;
+        foreach (StatsHolders stat in seasonStats)
+            amount += stat.getShotsMadeAgainst();
+        return amount;
     }
     public int getGameShotsMadeAgainst()
     {
         return gameStats[16];
     }
-    public void resetGameStats()
+    public void resetGameStats(team team, team opponent)
     {
+        seasonStats.Add(new StatsHolders(team, gameStats, opponent));
         gameStats = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
     }
     public void setName(String newName)
