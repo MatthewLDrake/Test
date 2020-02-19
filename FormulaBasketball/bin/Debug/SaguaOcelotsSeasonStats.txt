@@ -1,10 +1,10 @@
 Sagua Ocelots Stats
-Player Record of Points: Pakomha Pjagwazwi: 24 points on game 4 against the Barsein Bats
+Player Record of Points: Pakomha Pjagwazwi: 28 points on game 10 against the Autolik Autonomy
 Player Record of Assists: Point Guard #131: 10 assists on game 1 against the TND Tanks
 Player Record of Rebounds: Thomas Skinner: 13 rebounds on game 2 against the Ethanthova Ponies
-Team Record in Most Points Scored: Sagua Ocelots: 110 points on game 2 against the Ethanthova Ponies
-Team Record in Least Points Scored: Sagua Ocelots: 88 points on game 6 against the Height Sagua Cats
-Team Record in Least Points Allowed: Sagua Ocelots: 84 points on game 2 against the Ethanthova Ponies
+Team Record in Most Points Scored: Sagua Ocelots: 111 points on game 10 against the Autolik Autonomy
+Team Record in Least Points Scored: Sagua Ocelots: 87 points on game 9 against the Bongatar Banging Bongos
+Team Record in Least Points Allowed: Sagua Ocelots: 77 points on game 12 against the Barsein Bats
 Team Record in Most Points Allowed: Sagua Ocelots: 110 points on game 6 against the Height Sagua Cats
 Records vs. Each Team this season:
 Aahrus Moosi: 0-0
@@ -15,8 +15,8 @@ Key to Don Yees: 0-0
 Manwx Saguans: 0-0
 Sagua Ocelots: 0-0
 Solea Geysers: 0-0
-Autolik Autonomy: 1-0
-Barsein Bats: 0-1
+Autolik Autonomy: 2-0
+Barsein Bats: 1-1
 Blanaxon Hammers: 0-0
 Kaeshar Kaisers: 0-0
 Naxda Nomads: 0-0
@@ -28,10 +28,10 @@ Avura Aviators: 1-0
 Boltway Bad Dragons: 1-0
 Dotruga Falno: 0-0
 Ethanthova Ponies: 1-0
-Faehrenfall Feathercats: 0-0
+Faehrenfall Feathercats: 0-1
 Stedro Boulders: 0-0
 TND Tanks: 0-1
-Bongatar Banging Bongos: 0-0
+Bongatar Banging Bongos: 0-1
 Czalliso Pythons: 0-0
 Dvimne Spirits: 0-0
 Holy Yektonisa Bishops: 0-1

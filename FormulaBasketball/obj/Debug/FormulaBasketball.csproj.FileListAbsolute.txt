@@ -157,3 +157,5 @@ C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\F
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\FormulaBasketball.PostOffSeason.resources
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\FormulaBasketball.TeamSelector.resources
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\FormulaBasketball.InSeasonViewer.resources
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.InSeasonViewer.resources
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.StatsForm.resources

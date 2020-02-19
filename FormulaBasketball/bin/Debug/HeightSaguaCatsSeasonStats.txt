@@ -1,6 +1,6 @@
 Height Sagua Cats Stats
 Player Record of Points: Atumundikeili Halapodetsei: 25 points on game 6 against the Sagua Ocelots
-Player Record of Assists: Uemura Tadashi: 9 assists on game 4 against the Naxda Nomads
+Player Record of Assists: Danotra Himadolsei: 11 assists on game 9 against the Holy Yektonisa Bishops
 Player Record of Rebounds: Uemura Tadashi: 11 rebounds on game 1 against the Dvimne Spirits
 Team Record in Most Points Scored: Height Sagua Cats: 112 points on game 4 against the Naxda Nomads
 Team Record in Least Points Scored: Height Sagua Cats: 69 points on game 3 against the Ethanthova Ponies
@@ -18,8 +18,8 @@ Solea Geysers: 0-0
 Autolik Autonomy: 0-0
 Barsein Bats: 0-0
 Blanaxon Hammers: 0-0
-Kaeshar Kaisers: 0-1
-Naxda Nomads: 1-0
+Kaeshar Kaisers: 0-2
+Naxda Nomads: 1-1
 Red Rainbow Sickles: 0-0
 Serkr Atolls: 0-0
 Shmupland Dictators: 0-0
@@ -31,10 +31,10 @@ Ethanthova Ponies: 0-1
 Faehrenfall Feathercats: 1-0
 Stedro Boulders: 0-0
 TND Tanks: 1-0
-Bongatar Banging Bongos: 0-0
+Bongatar Banging Bongos: 0-1
 Czalliso Pythons: 0-0
 Dvimne Spirits: 1-0
-Holy Yektonisa Bishops: 0-0
+Holy Yektonisa Bishops: 1-0
 Holykol Bears: 0-0
 Lyintaria Lynx: 0-0
 Pyxanovia Pixies: 1-0

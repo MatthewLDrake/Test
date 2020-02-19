@@ -1,13 +1,13 @@
 Shmupland Dictators Stats
 Player Record of Points: Eun Cho: 31 points on game 6 against the Czalliso Pythons
 Player Record of Assists: Eun Cho: 10 assists on game 5 against the Barsein Bats
-Player Record of Rebounds: Center #113: 8 rebounds on game 1 against the Serkr Atolls
-Team Record in Most Points Scored: Shmupland Dictators: 100 points on game 1 against the Serkr Atolls
-Team Record in Least Points Scored: Shmupland Dictators: 84 points on game 3 against the Autolik Autonomy
-Team Record in Least Points Allowed: Shmupland Dictators: 76 points on game 3 against the Autolik Autonomy
+Player Record of Rebounds: Eric Newton: 9 rebounds on game 9 against the Aahrus Moosi
+Team Record in Most Points Scored: Shmupland Dictators: 118 points on game 12 against the Transhimalia Disasters
+Team Record in Least Points Scored: Shmupland Dictators: 81 points on game 9 against the Aahrus Moosi
+Team Record in Least Points Allowed: Shmupland Dictators: 67 points on game 9 against the Aahrus Moosi
 Team Record in Most Points Allowed: Shmupland Dictators: 110 points on game 1 against the Serkr Atolls
 Records vs. Each Team this season:
-Aahrus Moosi: 0-0
+Aahrus Moosi: 1-0
 Auspikitan Golden Falcons: 0-0
 Calto Cows: 0-0
 Height Sagua Cats: 0-0
@@ -19,7 +19,7 @@ Autolik Autonomy: 1-0
 Barsein Bats: 0-1
 Blanaxon Hammers: 0-0
 Kaeshar Kaisers: 0-1
-Naxda Nomads: 0-0
+Naxda Nomads: 0-1
 Red Rainbow Sickles: 0-0
 Serkr Atolls: 0-2
 Shmupland Dictators: 0-0
@@ -37,5 +37,5 @@ Dvimne Spirits: 0-0
 Holy Yektonisa Bishops: 0-0
 Holykol Bears: 0-0
 Lyintaria Lynx: 0-0
-Pyxanovia Pixies: 0-0
-Transhimalia Disasters: 1-0
+Pyxanovia Pixies: 0-1
+Transhimalia Disasters: 2-0

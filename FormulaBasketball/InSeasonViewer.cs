@@ -34,13 +34,13 @@ namespace FormulaBasketball
             team = create.getTeam(teamNum);
             if(teamNum == 7)
             {
-                label1.BackColor = Color.FromArgb(255, 153, 0);
+                tableLayoutPanel1.BackColor = Color.FromArgb(255, 153, 0);
                 label2.BackColor = Color.FromArgb(56, 118, 29);
                 label2.ForeColor = Color.FromArgb(235, 235, 235);
             }
             else
             {
-                label1.BackColor = Color.FromArgb(0,43,255);
+                tableLayoutPanel1.BackColor = Color.FromArgb(0,43,255);
                 label2.BackColor = Color.FromArgb(255, 255, 255);
                 label2.ForeColor = Color.FromArgb(25, 25, 25);
             }
@@ -137,6 +137,16 @@ namespace FormulaBasketball
             LeagueRoster roster = new LeagueRoster(new List<int>(), create);
             roster.ShowDialog();
         }
+        private void LaunchTrade()
+        {
+            TradeForm tradeForm = new TradeForm(create, team, teamNum);
+            tradeForm.ShowDialog();
+        }
+        private void LaunchStats()
+        {
+            StatsForm statsForm = new StatsForm(create, teamNum);
+            statsForm.ShowDialog();
+        }
         private void standingsButton_Click(object sender, EventArgs e)
         {
             System.Threading.Thread thread = new System.Threading.Thread(LaunchStandings);
@@ -146,6 +156,18 @@ namespace FormulaBasketball
         private void viewRosterButton_Click(object sender, EventArgs e)
         {
             System.Threading.Thread thread = new System.Threading.Thread(LaunchRoster);
+            thread.Start();
+        }
+
+        private void tradeButton_Click(object sender, EventArgs e)
+        {
+            System.Threading.Thread thread = new System.Threading.Thread(LaunchTrade);
+            thread.Start();
+        }
+
+        private void statsButton_Click(object sender, EventArgs e)
+        {
+            System.Threading.Thread thread = new System.Threading.Thread(LaunchStats);
             thread.Start();
         }
     }

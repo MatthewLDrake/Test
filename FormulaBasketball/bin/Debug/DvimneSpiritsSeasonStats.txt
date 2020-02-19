@@ -4,14 +4,14 @@ Player Record of Assists: Sago Alodetsei: 23 assists on game 6 against the Serkr
 Player Record of Rebounds: Seong-Su Gang: 11 rebounds on game 4 against the Ethanthova Ponies
 Team Record in Most Points Scored: Dvimne Spirits: 120 points on game 6 against the Serkr Atolls
 Team Record in Least Points Scored: Dvimne Spirits: 84 points on game 7 against the Solea Geysers
-Team Record in Least Points Allowed: Dvimne Spirits: 83 points on game 8 against the Stedro Boulders
+Team Record in Least Points Allowed: Dvimne Spirits: 81 points on game 10 against the Dotruga Falno
 Team Record in Most Points Allowed: Dvimne Spirits: 119 points on game 6 against the Serkr Atolls
 Records vs. Each Team this season:
 Aahrus Moosi: 0-0
-Auspikitan Golden Falcons: 0-0
+Auspikitan Golden Falcons: 0-1
 Calto Cows: 0-0
 Height Sagua Cats: 0-1
-Key to Don Yees: 0-0
+Key to Don Yees: 0-1
 Manwx Saguans: 0-0
 Sagua Ocelots: 0-0
 Solea Geysers: 0-1
@@ -26,8 +26,8 @@ Shmupland Dictators: 0-0
 Aiyota Pumps: 0-0
 Avura Aviators: 0-0
 Boltway Bad Dragons: 0-0
-Dotruga Falno: 0-0
-Ethanthova Ponies: 1-0
+Dotruga Falno: 1-0
+Ethanthova Ponies: 2-0
 Faehrenfall Feathercats: 0-0
 Stedro Boulders: 1-0
 TND Tanks: 0-0

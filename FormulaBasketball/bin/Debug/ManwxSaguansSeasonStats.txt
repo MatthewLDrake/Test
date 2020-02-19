@@ -1,10 +1,10 @@
 Manwx Saguans Stats
 Player Record of Points: Sol Jae-Wook: 30 points on game 4 against the Blanaxon Hammers
-Player Record of Assists: Sol Jae-Wook: 8 assists on game 4 against the Blanaxon Hammers
+Player Record of Assists: Sol Jae-Wook: 10 assists on game 11 against the Stedro Boulders
 Player Record of Rebounds: Kiromi Kersidomobek: 13 rebounds on game 7 against the Holykol Bears
-Team Record in Most Points Scored: Manwx Saguans: 109 points on game 7 against the Holykol Bears
+Team Record in Most Points Scored: Manwx Saguans: 119 points on game 10 against the Barsein Bats
 Team Record in Least Points Scored: Manwx Saguans: 77 points on game 2 against the Faehrenfall Feathercats
-Team Record in Least Points Allowed: Manwx Saguans: 94 points on game 2 against the Faehrenfall Feathercats
+Team Record in Least Points Allowed: Manwx Saguans: 85 points on game 12 against the Blanaxon Hammers
 Team Record in Most Points Allowed: Manwx Saguans: 118 points on game 3 against the Boltway Bad Dragons
 Records vs. Each Team this season:
 Aahrus Moosi: 0-0
@@ -16,8 +16,8 @@ Manwx Saguans: 0-0
 Sagua Ocelots: 0-0
 Solea Geysers: 0-0
 Autolik Autonomy: 0-0
-Barsein Bats: 1-0
-Blanaxon Hammers: 0-1
+Barsein Bats: 2-0
+Blanaxon Hammers: 1-1
 Kaeshar Kaisers: 0-0
 Naxda Nomads: 0-0
 Red Rainbow Sickles: 0-0
@@ -29,10 +29,10 @@ Boltway Bad Dragons: 0-1
 Dotruga Falno: 1-0
 Ethanthova Ponies: 0-0
 Faehrenfall Feathercats: 0-1
-Stedro Boulders: 0-0
+Stedro Boulders: 0-1
 TND Tanks: 0-0
 Bongatar Banging Bongos: 1-0
-Czalliso Pythons: 0-0
+Czalliso Pythons: 0-1
 Dvimne Spirits: 0-0
 Holy Yektonisa Bishops: 0-0
 Holykol Bears: 1-0

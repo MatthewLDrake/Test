@@ -1,16 +1,16 @@
 Holy Yektonisa Bishops Stats
 Player Record of Points: Kamil Jones: 30 points on game 7 against the Sagua Ocelots
-Player Record of Assists: Key To Don Player #4: 8 assists on game 1 against the Calto Cows
+Player Record of Assists: Kamil Jones: 10 assists on game 10 against the Boltway Bad Dragons
 Player Record of Rebounds: Holy Yektonesia Player #1: 11 rebounds on game 6 against the Red Rainbow Sickles
 Team Record in Most Points Scored: Holy Yektonisa Bishops: 111 points on game 3 against the Aahrus Moosi
-Team Record in Least Points Scored: Holy Yektonisa Bishops: 86 points on game 8 against the Faehrenfall Feathercats
+Team Record in Least Points Scored: Holy Yektonisa Bishops: 83 points on game 9 against the Height Sagua Cats
 Team Record in Least Points Allowed: Holy Yektonisa Bishops: 82 points on game 6 against the Red Rainbow Sickles
 Team Record in Most Points Allowed: Holy Yektonisa Bishops: 112 points on game 1 against the Calto Cows
 Records vs. Each Team this season:
 Aahrus Moosi: 1-0
 Auspikitan Golden Falcons: 0-0
 Calto Cows: 0-1
-Height Sagua Cats: 0-0
+Height Sagua Cats: 0-1
 Key to Don Yees: 0-0
 Manwx Saguans: 0-0
 Sagua Ocelots: 1-0
@@ -25,8 +25,8 @@ Serkr Atolls: 0-0
 Shmupland Dictators: 0-0
 Aiyota Pumps: 0-0
 Avura Aviators: 0-0
-Boltway Bad Dragons: 0-0
-Dotruga Falno: 0-1
+Boltway Bad Dragons: 0-1
+Dotruga Falno: 1-1
 Ethanthova Ponies: 0-0
 Faehrenfall Feathercats: 0-1
 Stedro Boulders: 0-0
@@ -38,4 +38,4 @@ Holy Yektonisa Bishops: 0-0
 Holykol Bears: 0-1
 Lyintaria Lynx: 0-0
 Pyxanovia Pixies: 0-1
-Transhimalia Disasters: 0-0
+Transhimalia Disasters: 0-1

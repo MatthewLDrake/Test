@@ -340,6 +340,12 @@
     <Compile Include="Standings.Designer.cs">
       <DependentUpon>Standings.cs</DependentUpon>
     </Compile>
+    <Compile Include="StatsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StatsForm.Designer.cs">
+      <DependentUpon>StatsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="StatsHolders.cs" />
     <Compile Include="statWriter.cs" />
     <Compile Include="StringUtils.cs" />
@@ -514,6 +520,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Standings_Division.resx">
       <DependentUpon>Standings_Division.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatsForm.resx">
+      <DependentUpon>StatsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="teamNumPrompt.resx">
       <DependentUpon>teamNumPrompt.cs</DependentUpon>

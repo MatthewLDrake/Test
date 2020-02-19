@@ -1,10 +1,10 @@
 Pyxanovia Pixies Stats
-Player Record of Points: Autolik Player #2: 23 points on game 4 against the Aiyota Pumps
-Player Record of Assists: Pyxanovia Player #4: 8 assists on game 2 against the Holy Yektonisa Bishops
+Player Record of Points: Three Point Masta: 26 points on game 9 against the Transhimalia Disasters
+Player Record of Assists: Three Point Masta: 9 assists on game 10 against the Shmupland Dictators
 Player Record of Rebounds: Pyxanovia Player #4: 9 rebounds on game 6 against the Blanaxon Hammers
-Team Record in Most Points Scored: Pyxanovia Pixies: 99 points on game 5 against the Czalliso Pythons
+Team Record in Most Points Scored: Pyxanovia Pixies: 110 points on game 10 against the Shmupland Dictators
 Team Record in Least Points Scored: Pyxanovia Pixies: 81 points on game 7 against the Height Sagua Cats
-Team Record in Least Points Allowed: Pyxanovia Pixies: 90 points on game 2 against the Holy Yektonisa Bishops
+Team Record in Least Points Allowed: Pyxanovia Pixies: 82 points on game 9 against the Transhimalia Disasters
 Team Record in Most Points Allowed: Pyxanovia Pixies: 109 points on game 1 against the Aahrus Moosi
 Records vs. Each Team this season:
 Aahrus Moosi: 0-1
@@ -22,8 +22,8 @@ Kaeshar Kaisers: 0-0
 Naxda Nomads: 0-0
 Red Rainbow Sickles: 0-0
 Serkr Atolls: 0-0
-Shmupland Dictators: 0-0
-Aiyota Pumps: 1-0
+Shmupland Dictators: 1-0
+Aiyota Pumps: 1-1
 Avura Aviators: 0-0
 Boltway Bad Dragons: 0-1
 Dotruga Falno: 0-0
@@ -35,7 +35,7 @@ Bongatar Banging Bongos: 0-1
 Czalliso Pythons: 0-1
 Dvimne Spirits: 0-0
 Holy Yektonisa Bishops: 1-0
-Holykol Bears: 0-0
+Holykol Bears: 1-0
 Lyintaria Lynx: 0-0
 Pyxanovia Pixies: 0-0
-Transhimalia Disasters: 0-0
+Transhimalia Disasters: 1-0

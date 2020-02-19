@@ -1,6 +1,6 @@
 Boltway Bad Dragons Stats
 Player Record of Points: Litsaw Wap't'ebw: 24 points on game 8 against the Pyxanovia Pixies
-Player Record of Assists: Litsaw Wap't'ebw: 12 assists on game 7 against the Shmupland Dictators
+Player Record of Assists: Litsaw Wap't'ebw: 13 assists on game 9 against the Naxda Nomads
 Player Record of Rebounds: Boḿa Blamhákpwano: 8 rebounds on game 7 against the Shmupland Dictators
 Team Record in Most Points Scored: Boltway Bad Dragons: 118 points on game 3 against the Manwx Saguans
 Team Record in Least Points Scored: Boltway Bad Dragons: 84 points on game 6 against the Stedro Boulders
@@ -16,10 +16,10 @@ Manwx Saguans: 1-0
 Sagua Ocelots: 0-1
 Solea Geysers: 0-0
 Autolik Autonomy: 1-0
-Barsein Bats: 0-0
+Barsein Bats: 1-0
 Blanaxon Hammers: 0-0
 Kaeshar Kaisers: 0-1
-Naxda Nomads: 0-0
+Naxda Nomads: 0-1
 Red Rainbow Sickles: 0-0
 Serkr Atolls: 0-0
 Shmupland Dictators: 1-0
@@ -34,8 +34,8 @@ TND Tanks: 0-0
 Bongatar Banging Bongos: 0-0
 Czalliso Pythons: 0-0
 Dvimne Spirits: 0-0
-Holy Yektonisa Bishops: 0-0
-Holykol Bears: 0-1
+Holy Yektonisa Bishops: 1-0
+Holykol Bears: 1-1
 Lyintaria Lynx: 0-0
 Pyxanovia Pixies: 1-0
 Transhimalia Disasters: 0-0

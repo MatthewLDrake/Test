@@ -1,6 +1,6 @@
 Serkr Atolls Stats
 Player Record of Points: Transhilmalia Player #2: 30 points on game 1 against the Shmupland Dictators
-Player Record of Assists: Transhilmalia Player #2: 15 assists on game 2 against the Naxda Nomads
+Player Record of Assists: Transhilmalia Player #2: 20 assists on game 10 against the Transhimalia Disasters
 Player Record of Rebounds: Vrá Nonhkwaqan: 16 rebounds on game 2 against the Naxda Nomads
 Team Record in Most Points Scored: Serkr Atolls: 119 points on game 6 against the Dvimne Spirits
 Team Record in Least Points Scored: Serkr Atolls: 82 points on game 4 against the Auspikitan Golden Falcons
@@ -8,7 +8,7 @@ Team Record in Least Points Allowed: Serkr Atolls: 79 points on game 7 against t
 Team Record in Most Points Allowed: Serkr Atolls: 120 points on game 6 against the Dvimne Spirits
 Records vs. Each Team this season:
 Aahrus Moosi: 0-0
-Auspikitan Golden Falcons: 0-1
+Auspikitan Golden Falcons: 0-2
 Calto Cows: 0-0
 Height Sagua Cats: 0-0
 Key to Don Yees: 0-0
@@ -20,10 +20,10 @@ Barsein Bats: 0-1
 Blanaxon Hammers: 0-1
 Kaeshar Kaisers: 0-0
 Naxda Nomads: 1-0
-Red Rainbow Sickles: 0-0
+Red Rainbow Sickles: 1-0
 Serkr Atolls: 0-0
 Shmupland Dictators: 2-0
-Aiyota Pumps: 0-0
+Aiyota Pumps: 0-1
 Avura Aviators: 0-0
 Boltway Bad Dragons: 0-0
 Dotruga Falno: 1-0
@@ -38,4 +38,4 @@ Holy Yektonisa Bishops: 0-0
 Holykol Bears: 0-0
 Lyintaria Lynx: 0-0
 Pyxanovia Pixies: 0-0
-Transhimalia Disasters: 0-0
+Transhimalia Disasters: 1-0

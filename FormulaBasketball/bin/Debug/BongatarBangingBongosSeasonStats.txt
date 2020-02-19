@@ -1,6 +1,6 @@
 Bongatar Banging Bongos Stats
 Player Record of Points: Miyoshi Masami: 30 points on game 4 against the Stedro Boulders
-Player Record of Assists: apseŋ kép tónaqig: 10 assists on game 3 against the Pyxanovia Pixies
+Player Record of Assists: Fujikawa Masuhiro: 15 assists on game 11 against the Height Sagua Cats
 Player Record of Rebounds: Kalani Saysamongdy: 12 rebounds on game 1 against the Manwx Saguans
 Team Record in Most Points Scored: Bongatar Banging Bongos: 120 points on game 8 against the Transhimalia Disasters
 Team Record in Least Points Scored: Bongatar Banging Bongos: 76 points on game 5 against the Transhimalia Disasters
@@ -10,10 +10,10 @@ Records vs. Each Team this season:
 Aahrus Moosi: 0-0
 Auspikitan Golden Falcons: 0-0
 Calto Cows: 0-1
-Height Sagua Cats: 0-0
+Height Sagua Cats: 1-0
 Key to Don Yees: 0-0
 Manwx Saguans: 0-1
-Sagua Ocelots: 0-0
+Sagua Ocelots: 1-0
 Solea Geysers: 0-0
 Autolik Autonomy: 0-0
 Barsein Bats: 1-0
@@ -28,8 +28,8 @@ Avura Aviators: 0-0
 Boltway Bad Dragons: 0-0
 Dotruga Falno: 0-0
 Ethanthova Ponies: 0-0
-Faehrenfall Feathercats: 0-0
-Stedro Boulders: 0-1
+Faehrenfall Feathercats: 1-0
+Stedro Boulders: 1-1
 TND Tanks: 0-0
 Bongatar Banging Bongos: 0-0
 Czalliso Pythons: 0-0

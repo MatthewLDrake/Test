@@ -1,11 +1,11 @@
 Calto Cows Stats
-Player Record of Points: Its'a Lełqutyi: 21 points on game 4 against the Red Rainbow Sickles
+Player Record of Points: Michael Barnett: 25 points on game 11 against the Czalliso Pythons
 Player Record of Assists: Its'a Lełqutyi: 13 assists on game 2 against the Bongatar Banging Bongos
-Player Record of Rebounds: Trevor Oosterhout: 11 rebounds on game 6 against the Solea Geysers
-Team Record in Most Points Scored: Calto Cows: 112 points on game 1 against the Holy Yektonisa Bishops
-Team Record in Least Points Scored: Calto Cows: 95 points on game 8 against the Naxda Nomads
-Team Record in Least Points Allowed: Calto Cows: 86 points on game 8 against the Naxda Nomads
-Team Record in Most Points Allowed: Calto Cows: 107 points on game 6 against the Solea Geysers
+Player Record of Rebounds: Trevor Oosterhout: 14 rebounds on game 10 against the Naxda Nomads
+Team Record in Most Points Scored: Calto Cows: 119 points on game 11 against the Czalliso Pythons
+Team Record in Least Points Scored: Calto Cows: 91 points on game 12 against the Red Rainbow Sickles
+Team Record in Least Points Allowed: Calto Cows: 76 points on game 10 against the Naxda Nomads
+Team Record in Most Points Allowed: Calto Cows: 108 points on game 11 against the Czalliso Pythons
 Records vs. Each Team this season:
 Aahrus Moosi: 0-0
 Auspikitan Golden Falcons: 0-0
@@ -19,8 +19,8 @@ Autolik Autonomy: 0-0
 Barsein Bats: 0-0
 Blanaxon Hammers: 0-0
 Kaeshar Kaisers: 0-0
-Naxda Nomads: 1-0
-Red Rainbow Sickles: 1-0
+Naxda Nomads: 2-0
+Red Rainbow Sickles: 2-0
 Serkr Atolls: 0-0
 Shmupland Dictators: 0-0
 Aiyota Pumps: 0-0
@@ -32,10 +32,10 @@ Faehrenfall Feathercats: 0-1
 Stedro Boulders: 0-1
 TND Tanks: 0-0
 Bongatar Banging Bongos: 1-0
-Czalliso Pythons: 0-0
+Czalliso Pythons: 1-0
 Dvimne Spirits: 0-0
 Holy Yektonisa Bishops: 1-0
-Holykol Bears: 0-0
+Holykol Bears: 0-1
 Lyintaria Lynx: 0-0
 Pyxanovia Pixies: 0-0
 Transhimalia Disasters: 1-0

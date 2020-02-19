@@ -1,8 +1,8 @@
 Auspikitan Golden Falcons Stats
 Player Record of Points: Lato Ikro: 20 points on game 6 against the Autolik Autonomy
-Player Record of Assists: Jesse McSteve: 10 assists on game 3 against the Stedro Boulders
+Player Record of Assists: Jesse McSteve: 12 assists on game 11 against the Dvimne Spirits
 Player Record of Rebounds: Ajanis Vealerko: 11 rebounds on game 5 against the TND Tanks
-Team Record in Most Points Scored: Auspikitan Golden Falcons: 106 points on game 3 against the Stedro Boulders
+Team Record in Most Points Scored: Auspikitan Golden Falcons: 112 points on game 11 against the Dvimne Spirits
 Team Record in Least Points Scored: Auspikitan Golden Falcons: 89 points on game 2 against the Czalliso Pythons
 Team Record in Least Points Allowed: Auspikitan Golden Falcons: 81 points on game 8 against the Red Rainbow Sickles
 Team Record in Most Points Allowed: Auspikitan Golden Falcons: 114 points on game 3 against the Stedro Boulders
@@ -20,8 +20,8 @@ Barsein Bats: 0-0
 Blanaxon Hammers: 0-0
 Kaeshar Kaisers: 0-0
 Naxda Nomads: 0-0
-Red Rainbow Sickles: 1-0
-Serkr Atolls: 1-0
+Red Rainbow Sickles: 2-0
+Serkr Atolls: 2-0
 Shmupland Dictators: 0-0
 Aiyota Pumps: 0-0
 Avura Aviators: 0-0
@@ -33,9 +33,9 @@ Stedro Boulders: 0-1
 TND Tanks: 0-1
 Bongatar Banging Bongos: 0-0
 Czalliso Pythons: 0-1
-Dvimne Spirits: 0-0
+Dvimne Spirits: 1-0
 Holy Yektonisa Bishops: 0-0
 Holykol Bears: 1-0
-Lyintaria Lynx: 0-0
+Lyintaria Lynx: 1-0
 Pyxanovia Pixies: 0-0
 Transhimalia Disasters: 0-0

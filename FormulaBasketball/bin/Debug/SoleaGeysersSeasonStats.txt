@@ -1,13 +1,13 @@
 Solea Geysers Stats
-Player Record of Points: Kersok Milan: 28 points on game 6 against the Calto Cows
+Player Record of Points: Kersok Milan: 30 points on game 10 against the Aahrus Moosi
 Player Record of Assists: Kersok Milan: 17 assists on game 2 against the Dotruga Falno
-Player Record of Rebounds: Alomundi Bituna: 11 rebounds on game 3 against the Aiyota Pumps
+Player Record of Rebounds: Alomundi Bituna: 12 rebounds on game 11 against the Ethanthova Ponies
 Team Record in Most Points Scored: Solea Geysers: 107 points on game 6 against the Calto Cows
-Team Record in Least Points Scored: Solea Geysers: 87 points on game 7 against the Dvimne Spirits
+Team Record in Least Points Scored: Solea Geysers: 79 points on game 9 against the TND Tanks
 Team Record in Least Points Allowed: Solea Geysers: 75 points on game 3 against the Aiyota Pumps
 Team Record in Most Points Allowed: Solea Geysers: 108 points on game 8 against the Aahrus Moosi
 Records vs. Each Team this season:
-Aahrus Moosi: 0-1
+Aahrus Moosi: 1-1
 Auspikitan Golden Falcons: 0-0
 Calto Cows: 1-0
 Height Sagua Cats: 0-0
@@ -15,7 +15,7 @@ Key to Don Yees: 0-0
 Manwx Saguans: 0-0
 Sagua Ocelots: 0-0
 Solea Geysers: 0-0
-Autolik Autonomy: 1-0
+Autolik Autonomy: 2-0
 Barsein Bats: 0-0
 Blanaxon Hammers: 0-0
 Kaeshar Kaisers: 0-0
@@ -27,10 +27,10 @@ Aiyota Pumps: 1-0
 Avura Aviators: 1-0
 Boltway Bad Dragons: 0-0
 Dotruga Falno: 0-1
-Ethanthova Ponies: 0-0
+Ethanthova Ponies: 1-0
 Faehrenfall Feathercats: 0-0
 Stedro Boulders: 1-0
-TND Tanks: 0-0
+TND Tanks: 1-0
 Bongatar Banging Bongos: 0-0
 Czalliso Pythons: 0-0
 Dvimne Spirits: 1-0

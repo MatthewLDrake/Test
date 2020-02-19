@@ -1,9 +1,9 @@
 Ethanthova Ponies Stats
 Player Record of Points: Phetdum Vatthana: 31 points on game 7 against the Red Rainbow Sickles
 Player Record of Assists: Phetdum Vatthana: 8 assists on game 5 against the Key to Don Yees
-Player Record of Rebounds: Uxnax Prokexov: 11 rebounds on game 3 against the Height Sagua Cats
-Team Record in Most Points Scored: Ethanthova Ponies: 104 points on game 6 against the Aahrus Moosi
-Team Record in Least Points Scored: Ethanthova Ponies: 83 points on game 3 against the Height Sagua Cats
+Player Record of Rebounds: Uxnax Prokexov: 13 rebounds on game 9 against the Blanaxon Hammers
+Team Record in Most Points Scored: Ethanthova Ponies: 108 points on game 9 against the Blanaxon Hammers
+Team Record in Least Points Scored: Ethanthova Ponies: 77 points on game 11 against the Solea Geysers
 Team Record in Least Points Allowed: Ethanthova Ponies: 69 points on game 3 against the Height Sagua Cats
 Team Record in Most Points Allowed: Ethanthova Ponies: 110 points on game 2 against the Sagua Ocelots
 Records vs. Each Team this season:
@@ -14,10 +14,10 @@ Height Sagua Cats: 1-0
 Key to Don Yees: 0-1
 Manwx Saguans: 0-0
 Sagua Ocelots: 0-1
-Solea Geysers: 0-0
+Solea Geysers: 0-1
 Autolik Autonomy: 0-0
 Barsein Bats: 1-0
-Blanaxon Hammers: 0-0
+Blanaxon Hammers: 1-0
 Kaeshar Kaisers: 0-0
 Naxda Nomads: 0-0
 Red Rainbow Sickles: 1-0
@@ -32,8 +32,8 @@ Faehrenfall Feathercats: 0-0
 Stedro Boulders: 0-0
 TND Tanks: 0-0
 Bongatar Banging Bongos: 0-0
-Czalliso Pythons: 0-0
-Dvimne Spirits: 0-1
+Czalliso Pythons: 0-1
+Dvimne Spirits: 0-2
 Holy Yektonisa Bishops: 0-0
 Holykol Bears: 0-1
 Lyintaria Lynx: 0-0

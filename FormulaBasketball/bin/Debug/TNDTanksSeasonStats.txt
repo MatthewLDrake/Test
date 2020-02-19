@@ -3,18 +3,18 @@ Player Record of Points: Pakomha Nhoñsła: 32 points on game 3 against the Tran
 Player Record of Assists: Carsten Meyer: 14 assists on game 6 against the Avura Aviators
 Player Record of Rebounds: Maere Eirikursson: 14 rebounds on game 8 against the Czalliso Pythons
 Team Record in Most Points Scored: TND Tanks: 105 points on game 1 against the Sagua Ocelots
-Team Record in Least Points Scored: TND Tanks: 85 points on game 2 against the Height Sagua Cats
-Team Record in Least Points Allowed: TND Tanks: 82 points on game 6 against the Avura Aviators
+Team Record in Least Points Scored: TND Tanks: 78 points on game 9 against the Solea Geysers
+Team Record in Least Points Allowed: TND Tanks: 79 points on game 9 against the Solea Geysers
 Team Record in Most Points Allowed: TND Tanks: 105 points on game 7 against the Blanaxon Hammers
 Records vs. Each Team this season:
-Aahrus Moosi: 1-0
+Aahrus Moosi: 2-0
 Auspikitan Golden Falcons: 1-0
 Calto Cows: 0-0
 Height Sagua Cats: 0-1
-Key to Don Yees: 0-0
+Key to Don Yees: 0-1
 Manwx Saguans: 0-0
 Sagua Ocelots: 1-0
-Solea Geysers: 0-0
+Solea Geysers: 0-1
 Autolik Autonomy: 0-0
 Barsein Bats: 0-0
 Blanaxon Hammers: 0-1
@@ -29,7 +29,7 @@ Boltway Bad Dragons: 0-0
 Dotruga Falno: 0-0
 Ethanthova Ponies: 0-0
 Faehrenfall Feathercats: 0-0
-Stedro Boulders: 0-0
+Stedro Boulders: 1-0
 TND Tanks: 0-0
 Bongatar Banging Bongos: 0-0
 Czalliso Pythons: 1-0

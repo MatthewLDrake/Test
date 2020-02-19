@@ -42,30 +42,32 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(103, 3);
+            this.groupBox1.Controls.Add(this.tableLayoutPanel3);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 100);
+            this.groupBox1.Size = new System.Drawing.Size(374, 96);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             // 
             // radioButton3
             // 
+            this.radioButton3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(6, 65);
+            this.radioButton3.Location = new System.Drawing.Point(138, 55);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(92, 17);
             this.radioButton3.TabIndex = 17;
@@ -76,8 +78,9 @@
             // 
             // radioButton2
             // 
+            this.radioButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(6, 42);
+            this.radioButton2.Location = new System.Drawing.Point(137, 29);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(93, 17);
             this.radioButton2.TabIndex = 16;
@@ -88,8 +91,9 @@
             // 
             // radioButton1
             // 
+            this.radioButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 19);
+            this.radioButton1.Location = new System.Drawing.Point(145, 4);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(78, 17);
             this.radioButton1.TabIndex = 15;
@@ -109,7 +113,8 @@
             this.tableLayoutPanel1.Controls.Add(this.tradeButton, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.standingsButton, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.loadButton, 0, 2);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(23, 25);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -117,7 +122,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(333, 235);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(374, 297);
             this.tableLayoutPanel1.TabIndex = 18;
             this.tableLayoutPanel1.Visible = false;
             // 
@@ -126,17 +131,18 @@
             this.statsButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.statsButton.Location = new System.Drawing.Point(3, 3);
             this.statsButton.Name = "statsButton";
-            this.statsButton.Size = new System.Drawing.Size(160, 41);
+            this.statsButton.Size = new System.Drawing.Size(181, 53);
             this.statsButton.TabIndex = 2;
             this.statsButton.Text = "View Stats";
             this.statsButton.UseVisualStyleBackColor = true;
+            this.statsButton.Click += new System.EventHandler(this.statsButton_Click);
             // 
             // viewRosterButton
             // 
             this.viewRosterButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.viewRosterButton.Location = new System.Drawing.Point(169, 3);
+            this.viewRosterButton.Location = new System.Drawing.Point(190, 3);
             this.viewRosterButton.Name = "viewRosterButton";
-            this.viewRosterButton.Size = new System.Drawing.Size(161, 41);
+            this.viewRosterButton.Size = new System.Drawing.Size(181, 53);
             this.viewRosterButton.TabIndex = 4;
             this.viewRosterButton.Text = "View Roster";
             this.viewRosterButton.UseVisualStyleBackColor = true;
@@ -145,9 +151,9 @@
             // saveButton
             // 
             this.saveButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.saveButton.Location = new System.Drawing.Point(169, 97);
+            this.saveButton.Location = new System.Drawing.Point(190, 121);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(161, 41);
+            this.saveButton.Size = new System.Drawing.Size(181, 53);
             this.saveButton.TabIndex = 9;
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = true;
@@ -156,19 +162,20 @@
             // tradeButton
             // 
             this.tradeButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tradeButton.Location = new System.Drawing.Point(3, 50);
+            this.tradeButton.Location = new System.Drawing.Point(3, 62);
             this.tradeButton.Name = "tradeButton";
-            this.tradeButton.Size = new System.Drawing.Size(160, 41);
+            this.tradeButton.Size = new System.Drawing.Size(181, 53);
             this.tradeButton.TabIndex = 6;
             this.tradeButton.Text = "Trade";
             this.tradeButton.UseVisualStyleBackColor = true;
+            this.tradeButton.Click += new System.EventHandler(this.tradeButton_Click);
             // 
             // standingsButton
             // 
             this.standingsButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.standingsButton.Location = new System.Drawing.Point(169, 50);
+            this.standingsButton.Location = new System.Drawing.Point(190, 62);
             this.standingsButton.Name = "standingsButton";
-            this.standingsButton.Size = new System.Drawing.Size(161, 41);
+            this.standingsButton.Size = new System.Drawing.Size(181, 53);
             this.standingsButton.TabIndex = 5;
             this.standingsButton.Text = "View Standings";
             this.standingsButton.UseVisualStyleBackColor = true;
@@ -177,9 +184,9 @@
             // loadButton
             // 
             this.loadButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.loadButton.Location = new System.Drawing.Point(3, 97);
+            this.loadButton.Location = new System.Drawing.Point(3, 121);
             this.loadButton.Name = "loadButton";
-            this.loadButton.Size = new System.Drawing.Size(160, 41);
+            this.loadButton.Size = new System.Drawing.Size(181, 53);
             this.loadButton.TabIndex = 10;
             this.loadButton.Text = "Load File";
             this.loadButton.UseVisualStyleBackColor = true;
@@ -213,6 +220,16 @@
             this.panel2.Size = new System.Drawing.Size(374, 96);
             this.panel2.TabIndex = 21;
             // 
+            // label2
+            // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(374, 96);
+            this.label2.TabIndex = 20;
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
@@ -228,15 +245,22 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(380, 405);
             this.tableLayoutPanel2.TabIndex = 22;
             // 
-            // label2
+            // tableLayoutPanel3
             // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(374, 96);
-            this.label2.TabIndex = 20;
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Controls.Add(this.radioButton1, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.radioButton3, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.radioButton2, 0, 1);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 3;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(368, 77);
+            this.tableLayoutPanel3.TabIndex = 18;
             // 
             // InSeasonViewer
             // 
@@ -247,11 +271,12 @@
             this.Name = "InSeasonViewer";
             this.Text = "InSeasonViewer";
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -274,5 +299,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
     }
 }
