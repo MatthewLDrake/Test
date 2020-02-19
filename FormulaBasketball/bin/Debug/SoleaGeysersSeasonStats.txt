@@ -1,21 +1,21 @@
 Solea Geysers Stats
-Player Record of Points: Kersok Milan: 30 points on game 4 against the Autolik Autonomy
-Player Record of Assists: Kersok Milan: 15 assists on game 7 against the Dvimne Spirits
-Player Record of Rebounds: Alomundi Bituna: 13 rebounds on game 6 against the Calto Cows
-Team Record in Most Points Scored: Solea Geysers: 107 points on game 7 against the Dvimne Spirits
-Team Record in Least Points Scored: Solea Geysers: 92 points on game 1 against the Stedro Boulders
-Team Record in Least Points Allowed: Solea Geysers: 86 points on game 2 against the Dotruga Falno
-Team Record in Most Points Allowed: Solea Geysers: 104 points on game 8 against the Aahrus Moosi
+Player Record of Points: Kersok Milan: 28 points on game 6 against the Calto Cows
+Player Record of Assists: Kersok Milan: 17 assists on game 2 against the Dotruga Falno
+Player Record of Rebounds: Alomundi Bituna: 11 rebounds on game 3 against the Aiyota Pumps
+Team Record in Most Points Scored: Solea Geysers: 107 points on game 6 against the Calto Cows
+Team Record in Least Points Scored: Solea Geysers: 87 points on game 7 against the Dvimne Spirits
+Team Record in Least Points Allowed: Solea Geysers: 75 points on game 3 against the Aiyota Pumps
+Team Record in Most Points Allowed: Solea Geysers: 108 points on game 8 against the Aahrus Moosi
 Records vs. Each Team this season:
 Aahrus Moosi: 0-1
 Auspikitan Golden Falcons: 0-0
-Calto Cows: 0-1
+Calto Cows: 1-0
 Height Sagua Cats: 0-0
 Key to Don Yees: 0-0
 Manwx Saguans: 0-0
 Sagua Ocelots: 0-0
 Solea Geysers: 0-0
-Autolik Autonomy: 0-1
+Autolik Autonomy: 1-0
 Barsein Bats: 0-0
 Blanaxon Hammers: 0-0
 Kaeshar Kaisers: 0-0
@@ -26,7 +26,7 @@ Shmupland Dictators: 0-0
 Aiyota Pumps: 1-0
 Avura Aviators: 1-0
 Boltway Bad Dragons: 0-0
-Dotruga Falno: 1-0
+Dotruga Falno: 0-1
 Ethanthova Ponies: 0-0
 Faehrenfall Feathercats: 0-0
 Stedro Boulders: 1-0

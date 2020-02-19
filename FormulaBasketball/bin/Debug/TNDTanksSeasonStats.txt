@@ -1,14 +1,14 @@
 TND Tanks Stats
-Player Record of Points: Pakomha Nhoñsła: 28 points on game 7 against the Blanaxon Hammers
-Player Record of Assists: Carsten Meyer: 19 assists on game 6 against the Avura Aviators
-Player Record of Rebounds: Maere Eirikursson: 13 rebounds on game 4 against the Aahrus Moosi
-Team Record in Most Points Scored: TND Tanks: 107 points on game 3 against the Transhimalia Disasters
-Team Record in Least Points Scored: TND Tanks: 75 points on game 4 against the Aahrus Moosi
-Team Record in Least Points Allowed: TND Tanks: 85 points on game 8 against the Czalliso Pythons
-Team Record in Most Points Allowed: TND Tanks: 107 points on game 2 against the Height Sagua Cats
+Player Record of Points: Pakomha Nhoñsła: 32 points on game 3 against the Transhimalia Disasters
+Player Record of Assists: Carsten Meyer: 14 assists on game 6 against the Avura Aviators
+Player Record of Rebounds: Maere Eirikursson: 14 rebounds on game 8 against the Czalliso Pythons
+Team Record in Most Points Scored: TND Tanks: 105 points on game 1 against the Sagua Ocelots
+Team Record in Least Points Scored: TND Tanks: 85 points on game 2 against the Height Sagua Cats
+Team Record in Least Points Allowed: TND Tanks: 82 points on game 6 against the Avura Aviators
+Team Record in Most Points Allowed: TND Tanks: 105 points on game 7 against the Blanaxon Hammers
 Records vs. Each Team this season:
-Aahrus Moosi: 0-1
-Auspikitan Golden Falcons: 0-1
+Aahrus Moosi: 1-0
+Auspikitan Golden Falcons: 1-0
 Calto Cows: 0-0
 Height Sagua Cats: 0-1
 Key to Don Yees: 0-0
@@ -17,7 +17,7 @@ Sagua Ocelots: 1-0
 Solea Geysers: 0-0
 Autolik Autonomy: 0-0
 Barsein Bats: 0-0
-Blanaxon Hammers: 1-0
+Blanaxon Hammers: 0-1
 Kaeshar Kaisers: 0-0
 Naxda Nomads: 0-0
 Red Rainbow Sickles: 0-0
@@ -38,4 +38,4 @@ Holy Yektonisa Bishops: 0-0
 Holykol Bears: 0-0
 Lyintaria Lynx: 0-0
 Pyxanovia Pixies: 0-0
-Transhimalia Disasters: 1-0
+Transhimalia Disasters: 0-1

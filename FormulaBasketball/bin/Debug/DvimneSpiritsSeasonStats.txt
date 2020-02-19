@@ -1,16 +1,16 @@
 Dvimne Spirits Stats
-Player Record of Points: Sago Alodetsei: 28 points on game 7 against the Solea Geysers
-Player Record of Assists: Sago Alodetsei: 16 assists on game 5 against the Lyintaria Lynx
-Player Record of Rebounds: Seong-Su Gang: 10 rebounds on game 2 against the Transhimalia Disasters
-Team Record in Most Points Scored: Dvimne Spirits: 102 points on game 4 against the Ethanthova Ponies
-Team Record in Least Points Scored: Dvimne Spirits: 84 points on game 5 against the Lyintaria Lynx
+Player Record of Points: Sago Alodetsei: 22 points on game 2 against the Transhimalia Disasters
+Player Record of Assists: Sago Alodetsei: 23 assists on game 6 against the Serkr Atolls
+Player Record of Rebounds: Seong-Su Gang: 11 rebounds on game 4 against the Ethanthova Ponies
+Team Record in Most Points Scored: Dvimne Spirits: 120 points on game 6 against the Serkr Atolls
+Team Record in Least Points Scored: Dvimne Spirits: 84 points on game 7 against the Solea Geysers
 Team Record in Least Points Allowed: Dvimne Spirits: 83 points on game 8 against the Stedro Boulders
-Team Record in Most Points Allowed: Dvimne Spirits: 107 points on game 7 against the Solea Geysers
+Team Record in Most Points Allowed: Dvimne Spirits: 119 points on game 6 against the Serkr Atolls
 Records vs. Each Team this season:
 Aahrus Moosi: 0-0
 Auspikitan Golden Falcons: 0-0
 Calto Cows: 0-0
-Height Sagua Cats: 1-0
+Height Sagua Cats: 0-1
 Key to Don Yees: 0-0
 Manwx Saguans: 0-0
 Sagua Ocelots: 0-0
@@ -21,7 +21,7 @@ Blanaxon Hammers: 0-0
 Kaeshar Kaisers: 0-0
 Naxda Nomads: 0-0
 Red Rainbow Sickles: 0-0
-Serkr Atolls: 0-1
+Serkr Atolls: 1-0
 Shmupland Dictators: 0-0
 Aiyota Pumps: 0-0
 Avura Aviators: 0-0
@@ -35,7 +35,7 @@ Bongatar Banging Bongos: 0-0
 Czalliso Pythons: 0-0
 Dvimne Spirits: 0-0
 Holy Yektonisa Bishops: 0-0
-Holykol Bears: 0-1
-Lyintaria Lynx: 0-1
+Holykol Bears: 1-0
+Lyintaria Lynx: 1-0
 Pyxanovia Pixies: 0-0
 Transhimalia Disasters: 1-0

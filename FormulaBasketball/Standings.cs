@@ -12,14 +12,18 @@ namespace FormulaBasketball
 {
     public partial class Standings : Form
     {
-
-        public Standings()
+        private createTeams create;
+        public Standings(bool normalViewer)
         {
             InitializeComponent();
+            checkBox1.Visible = !normalViewer;
+            label1.Visible = normalViewer;
+            label2.Visible = normalViewer;
         }
 
         public void updateStandings(createTeams create, bool main)
         {
+            this.create = create;
             List<team> divisionA = new List<team>();
             List<team> divisionB = new List<team>();
             List<team> divisionC = new List<team>();
@@ -63,13 +67,19 @@ namespace FormulaBasketball
             solo.ShowDialog();
         }
 
-        public void SaveForm()
+        public void SaveForm(string location)
         {
             using (var bmp = new Bitmap(this.Width, this.Height))
             {
                 this.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height));
-                bmp.Save("images/standings.png");
+                bmp.Save(location);
             }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (create != null)
+                updateStandings(create, !checkBox1.Checked);
         }
     }
 }

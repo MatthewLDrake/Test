@@ -1578,7 +1578,6 @@ public class player : IComparable<player>
     {
         if (firstTimeInGame)
         {
-            gamesPlayed++;
             firstTimeInGame = false;
         }
     }
@@ -2128,15 +2127,44 @@ public class player : IComparable<player>
     {
         return gameStats[16];
     }
+    public int GetDevelopmentRating()
+    {
+        return development;
+    }
+    public int GetPeakStart()
+    {
+        return peakStart;
+    }
+    public int GetPeakEnd()
+    {
+        return peakEnd;
+    }
+    public List<StatsHolders> GetSeasonStats()
+    {
+        return seasonStats;
+    }
+    public void SetSeasonStats(List<StatsHolders> stats)
+    {
+        seasonStats = stats;
+    }
     public void resetGameStats(team team, team opponent)
     {
-        seasonStats.Add(new StatsHolders(team, gameStats, opponent));
+        if (seasonStats == null)
+            seasonStats = new List<StatsHolders>();
+        StatsHolders hold = new StatsHolders(team, gameStats, opponent);
+        seasonStats.Add(hold);
+        if (hold.getMinutes() > 0)
+            gamesPlayed++;
         gameStats = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
     }
     public void setName(String newName)
     {
         name = newName;
 
+    }
+    public void SetGamesPlayed(int gamesPlayed)
+    {
+        this.gamesPlayed = gamesPlayed;
     }
     /*public int compareTo(player otherPlayer)
     {

@@ -176,7 +176,7 @@
             this.tableLayoutPanel1.Controls.Add(this.loadButton, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.awardsButton, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 4);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(55, 45);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(71, 45);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));

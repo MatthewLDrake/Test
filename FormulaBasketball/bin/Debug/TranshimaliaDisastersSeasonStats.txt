@@ -1,11 +1,11 @@
 Transhimalia Disasters Stats
-Player Record of Points: The Dimension Slaughterer: 30 points on game 6 against the Barsein Bats
-Player Record of Assists: Steve Masuhiro: 17 assists on game 5 against the Bongatar Banging Bongos
-Player Record of Rebounds: Kalani Phanivong: 9 rebounds on game 2 against the Dvimne Spirits
-Team Record in Most Points Scored: Transhimalia Disasters: 105 points on game 4 against the Shmupland Dictators
-Team Record in Least Points Scored: Transhimalia Disasters: 87 points on game 7 against the Calto Cows
-Team Record in Least Points Allowed: Transhimalia Disasters: 79 points on game 5 against the Bongatar Banging Bongos
-Team Record in Most Points Allowed: Transhimalia Disasters: 113 points on game 4 against the Shmupland Dictators
+Player Record of Points: The Dimension Slaughterer: 27 points on game 2 against the Dvimne Spirits
+Player Record of Assists: Steve Masuhiro: 16 assists on game 1 against the Lyintaria Lynx
+Player Record of Rebounds: Jesse Erickson: 17 rebounds on game 1 against the Lyintaria Lynx
+Team Record in Most Points Scored: Transhimalia Disasters: 103 points on game 3 against the TND Tanks
+Team Record in Least Points Scored: Transhimalia Disasters: 77 points on game 5 against the Bongatar Banging Bongos
+Team Record in Least Points Allowed: Transhimalia Disasters: 76 points on game 5 against the Bongatar Banging Bongos
+Team Record in Most Points Allowed: Transhimalia Disasters: 120 points on game 8 against the Bongatar Banging Bongos
 Records vs. Each Team this season:
 Aahrus Moosi: 0-0
 Auspikitan Golden Falcons: 0-0
@@ -30,12 +30,12 @@ Dotruga Falno: 0-0
 Ethanthova Ponies: 0-0
 Faehrenfall Feathercats: 0-0
 Stedro Boulders: 0-0
-TND Tanks: 0-1
+TND Tanks: 1-0
 Bongatar Banging Bongos: 1-1
 Czalliso Pythons: 0-0
 Dvimne Spirits: 0-1
 Holy Yektonisa Bishops: 0-0
 Holykol Bears: 0-0
-Lyintaria Lynx: 0-1
+Lyintaria Lynx: 1-0
 Pyxanovia Pixies: 0-0
 Transhimalia Disasters: 0-0

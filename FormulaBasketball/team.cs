@@ -1311,6 +1311,62 @@ public class team : IComparable<team>,  IEnumerable<player>
         if (conferenceRecord == null) conferenceRecord = new Record();
         return conferenceRecord.GetLosses();
     }
+    public void FixDuplicatePlayers()
+    {
+        for(int i = 0; i < activePlayers.Length; i++)
+        {
+            if (!activePlayers[i].getTeam().Equals(this))
+            {
+                CollegePlayerGen playerGen = new CollegePlayerGen(r);
+                player newPlayer;
+                switch(activePlayers[i].getPosition())
+                {
+                    case 1:
+                        newPlayer = playerGen.GenerateCenter((int)activePlayers[i].getOverall(), activePlayers[i].GetCountry(), activePlayers[i].GetDevelopmentRating(), activePlayers[i].GetPeakStart(), activePlayers[i].GetPeakEnd(), false, activePlayers[i].age, 0);
+                        break;
+                    case 2:
+                        newPlayer = playerGen.GeneratePowerForward((int)activePlayers[i].getOverall(), activePlayers[i].GetCountry(), activePlayers[i].GetDevelopmentRating(), activePlayers[i].GetPeakStart(), activePlayers[i].GetPeakEnd(), false, activePlayers[i].age, 0);
+                        break;
+                    case 3:
+                        newPlayer = playerGen.GenerateSmallForward((int)activePlayers[i].getOverall(), activePlayers[i].GetCountry(), activePlayers[i].GetDevelopmentRating(), activePlayers[i].GetPeakStart(), activePlayers[i].GetPeakEnd(), false, activePlayers[i].age, 0);
+                        break;
+                    case 4:
+                        newPlayer = playerGen.GenerateShootingGuard((int)activePlayers[i].getOverall(), activePlayers[i].GetCountry(), activePlayers[i].GetDevelopmentRating(), activePlayers[i].GetPeakStart(), activePlayers[i].GetPeakEnd(), false, activePlayers[i].age, 0);
+                        break;
+                    default:
+                        newPlayer = playerGen.GeneratePointGuard((int)activePlayers[i].getOverall(), activePlayers[i].GetCountry(), activePlayers[i].GetDevelopmentRating(), activePlayers[i].GetPeakStart(), activePlayers[i].GetPeakEnd(), false, activePlayers[i].age, 0);
+                        break;
+                }
+                List<StatsHolders> thisTeamStats = new List<StatsHolders>(), playerStats = activePlayers[i].GetSeasonStats();
+                foreach(StatsHolders stat in playerStats)
+                {
+                    if (stat.GetTeamFor().Equals(ToString()))
+                        thisTeamStats.Add(stat);
+                }
+                foreach (StatsHolders stat in thisTeamStats)
+                {
+                    playerStats.Remove(stat);
+                }
+                activePlayers[i].SetSeasonStats(playerStats);
+                newPlayer.SetSeasonStats(thisTeamStats);
+                activePlayers[i].SetGamesPlayed(playerStats.Count);
+                activePlayers[i] = newPlayer;
+                newPlayer.SetNewContract(new Contract(1, 1));
+                newPlayer.setTeam(this);
+                newPlayer.setInjured(false);
+                newPlayer.setStamina(100);
+
+            }
+            List<StatsHolders> activePlayersStats = activePlayers[i].GetSeasonStats();
+            int gamesPlayed = 0;
+            foreach (StatsHolders stat in activePlayersStats)
+            {
+                if (stat.getMinutes() > 0)
+                    gamesPlayed++;
+            }
+            activePlayers[i].SetGamesPlayed(gamesPlayed);
+        }
+    }
     /*
      * return codes:
      * 0: Three Losses
@@ -1338,7 +1394,7 @@ public class team : IComparable<team>,  IEnumerable<player>
             }
             if (streak > 0 && num == 1) streak++;
             else if (streak < 0 && num == 0) streak--;
-            else if (streak > 0) streak = -1;
+            else if (num == 0) streak = -1;
             else streak = 1;
         }
 

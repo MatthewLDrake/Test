@@ -1,11 +1,11 @@
 Calto Cows Stats
-Player Record of Points: Selby Schneiders: 26 points on game 7 against the Transhimalia Disasters
-Player Record of Assists: Its'a Lełqutyi: 9 assists on game 3 against the Faehrenfall Feathercats
-Player Record of Rebounds: Trevor Oosterhout: 13 rebounds on game 1 against the Holy Yektonisa Bishops
-Team Record in Most Points Scored: Calto Cows: 105 points on game 4 against the Red Rainbow Sickles
-Team Record in Least Points Scored: Calto Cows: 76 points on game 3 against the Faehrenfall Feathercats
-Team Record in Least Points Allowed: Calto Cows: 87 points on game 7 against the Transhimalia Disasters
-Team Record in Most Points Allowed: Calto Cows: 104 points on game 4 against the Red Rainbow Sickles
+Player Record of Points: Its'a Lełqutyi: 21 points on game 4 against the Red Rainbow Sickles
+Player Record of Assists: Its'a Lełqutyi: 13 assists on game 2 against the Bongatar Banging Bongos
+Player Record of Rebounds: Trevor Oosterhout: 11 rebounds on game 6 against the Solea Geysers
+Team Record in Most Points Scored: Calto Cows: 112 points on game 1 against the Holy Yektonisa Bishops
+Team Record in Least Points Scored: Calto Cows: 95 points on game 8 against the Naxda Nomads
+Team Record in Least Points Allowed: Calto Cows: 86 points on game 8 against the Naxda Nomads
+Team Record in Most Points Allowed: Calto Cows: 107 points on game 6 against the Solea Geysers
 Records vs. Each Team this season:
 Aahrus Moosi: 0-0
 Auspikitan Golden Falcons: 0-0
@@ -14,12 +14,12 @@ Height Sagua Cats: 0-0
 Key to Don Yees: 0-0
 Manwx Saguans: 0-0
 Sagua Ocelots: 0-0
-Solea Geysers: 1-0
+Solea Geysers: 0-1
 Autolik Autonomy: 0-0
 Barsein Bats: 0-0
 Blanaxon Hammers: 0-0
 Kaeshar Kaisers: 0-0
-Naxda Nomads: 0-1
+Naxda Nomads: 1-0
 Red Rainbow Sickles: 1-0
 Serkr Atolls: 0-0
 Shmupland Dictators: 0-0

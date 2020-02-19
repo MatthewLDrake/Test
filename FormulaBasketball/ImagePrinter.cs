@@ -21,15 +21,16 @@ public class ImagePrinter
         createTeams temp = formulaBasketball.create;
         int maxHeight = 0;
         int maxWidth = 0;
-        for (int teamNum = 0; teamNum < temp.size(); teamNum++)
+        foreach (team t in temp.getTeams()) 
         {
-            Size theSize = TextRenderer.MeasureText(temp.getTeam(teamNum).ToString(), font);
+            string text = t.ToString() + " (" + t.getWins() + "-" + t.getLosses() + ") ";
+            Size theSize = TextRenderer.MeasureText(text , font);
             if (theSize.Height > maxHeight)
                 maxHeight = theSize.Height;
             if (theSize.Width > maxWidth)
             {
                 maxWidth = theSize.Width;
-                Width = temp.getTeam(teamNum).ToString().Length;
+                Width = text.ToString().Length;
             }
         }
 
@@ -40,12 +41,12 @@ public class ImagePrinter
         stringWidth = maxWidth * 2 + TextRenderer.MeasureText("-", font).Width + (2 * TextRenderer.MeasureText(" 100 ", font).Width);
 
     }
-    public void AddResult(string awayTeam, string homeTeam, int awayScore, int homeScore, bool dLeague)
+    public void AddResult(team awayTeam, team homeTeam, int awayScore, int homeScore, bool dLeague)
     {
         // TODO: Maybe something with this
         if (dLeague)
             return;
-        info[i] = new PrintInfo(awayTeam, awayScore, homeTeam, homeScore);
+        info[i] = new PrintInfo(awayTeam.ToString() + " (" + awayTeam.getWins() + "-" + awayTeam.getLosses() + ") ", awayScore, homeTeam.ToString() + " (" + homeTeam.getWins() + "-" + homeTeam.getLosses() + ") ", homeScore);
         i++;
         if(i == 16)
         {

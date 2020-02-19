@@ -1,11 +1,11 @@
 Aiyota Pumps Stats
-Player Record of Points: Paparto Bexosek: 32 points on game 2 against the Blanaxon Hammers
-Player Record of Assists: Aiyota Player #2: 10 assists on game 2 against the Blanaxon Hammers
-Player Record of Rebounds: Danotra Beselapo: 14 rebounds on game 6 against the Bongatar Banging Bongos
-Team Record in Most Points Scored: Aiyota Pumps: 104 points on game 8 against the Avura Aviators
-Team Record in Least Points Scored: Aiyota Pumps: 74 points on game 5 against the Autolik Autonomy
-Team Record in Least Points Allowed: Aiyota Pumps: 79 points on game 5 against the Autolik Autonomy
-Team Record in Most Points Allowed: Aiyota Pumps: 104 points on game 7 against the Avura Aviators
+Player Record of Points: Paparto Bexosek: 40 points on game 8 against the Avura Aviators
+Player Record of Assists: Small Forward #114: 10 assists on game 6 against the Bongatar Banging Bongos
+Player Record of Rebounds: Danotra Beselapo: 12 rebounds on game 5 against the Autolik Autonomy
+Team Record in Most Points Scored: Aiyota Pumps: 111 points on game 8 against the Avura Aviators
+Team Record in Least Points Scored: Aiyota Pumps: 75 points on game 3 against the Solea Geysers
+Team Record in Least Points Allowed: Aiyota Pumps: 88 points on game 2 against the Blanaxon Hammers
+Team Record in Most Points Allowed: Aiyota Pumps: 101 points on game 7 against the Avura Aviators
 Records vs. Each Team this season:
 Aahrus Moosi: 0-0
 Auspikitan Golden Falcons: 0-0
@@ -17,25 +17,25 @@ Sagua Ocelots: 0-0
 Solea Geysers: 0-1
 Autolik Autonomy: 0-1
 Barsein Bats: 0-0
-Blanaxon Hammers: 1-0
+Blanaxon Hammers: 0-1
 Kaeshar Kaisers: 0-0
 Naxda Nomads: 0-0
-Red Rainbow Sickles: 0-1
+Red Rainbow Sickles: 1-0
 Serkr Atolls: 0-0
 Shmupland Dictators: 0-0
 Aiyota Pumps: 0-0
-Avura Aviators: 1-1
+Avura Aviators: 2-0
 Boltway Bad Dragons: 0-0
 Dotruga Falno: 0-0
 Ethanthova Ponies: 0-0
 Faehrenfall Feathercats: 0-0
 Stedro Boulders: 0-0
 TND Tanks: 0-0
-Bongatar Banging Bongos: 1-0
+Bongatar Banging Bongos: 0-1
 Czalliso Pythons: 0-0
 Dvimne Spirits: 0-0
 Holy Yektonisa Bishops: 0-0
 Holykol Bears: 0-0
 Lyintaria Lynx: 0-0
-Pyxanovia Pixies: 1-0
+Pyxanovia Pixies: 0-1
 Transhimalia Disasters: 0-0

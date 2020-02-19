@@ -16,6 +16,7 @@ namespace FormulaBasketball
         private createTeams create;
         private List<int> humans;
         private int lastPos;
+        private bool includeDLeague;
         public LeagueRoster(List<int> humans, createTeams create)
         {
             InitializeComponent();
@@ -56,6 +57,10 @@ namespace FormulaBasketball
             controls[30] = rosterControl31;
             controls[31] = rosterControl32;
 
+            lastPos = 1;
+            UpdateRosterControls(lastPos);
+            button1.Focus();
+
         }
         public void UpdateLeagueRoster()
         {
@@ -81,7 +86,7 @@ namespace FormulaBasketball
 
                 double highestOverall = 0;
                 if (humans.Contains(i)) highestOverall = 100 + i;
-                foreach (player p in team.GetOffSeasonPlayers())
+                foreach (player p in team.getActivePlayers())
                 {
                     if (p.getPosition() == pos && p.getOverall() > highestOverall)
                     {
@@ -92,8 +97,17 @@ namespace FormulaBasketball
             }
             for (int i = 0; i < list.Count; i++)
             {
-                controls[i].SetControl(list.ElementAt(i).Value.GetOffSeasonPlayers(), pos, list.ElementAt(i).Value.ToString());
+                List<player> players = new List<player>(list.ElementAt(i).Value.getActivePlayers());
+                if(includeDLeague)
+                    players.AddRange(list.ElementAt(i).Value.GetAffiliate().getActivePlayers());
+                controls[i].SetControl(players, pos, list.ElementAt(i).Value.ToString());
             }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            includeDLeague = checkBox1.Checked;
+            UpdateRosterControls(lastPos);
         }
     }
 }

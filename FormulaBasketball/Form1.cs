@@ -38,13 +38,12 @@ namespace FormulaBasketball
         }
         
         private void loadButtonConfirm_Click(object sender, EventArgs e)
-        {
-            
+        {            
             Visible = false;
             if (game)
                 new formulaBasketball(sender.Equals(yesButton), listView1.SelectedCells[0].OwningRow.Cells[0].EditedFormattedValue.ToString(), null, null);
             else
-                new PostOffSeason(formulaBasketball.DeSerializeObject(listView1.SelectedCells[0].OwningRow.Cells[0].EditedFormattedValue.ToString()), r).ShowDialog();
+                new InSeasonViewer(formulaBasketball.DeSerializeObject(listView1.SelectedCells[0].OwningRow.Cells[0].EditedFormattedValue.ToString())).ShowDialog();
             Close();
         }
 

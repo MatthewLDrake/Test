@@ -1,13 +1,13 @@
 Pyxanovia Pixies Stats
-Player Record of Points: Three Point Masta: 27 points on game 3 against the Bongatar Banging Bongos
-Player Record of Assists: Three Point Masta: 9 assists on game 8 against the Boltway Bad Dragons
-Player Record of Rebounds: Pyxanovia Player #4: 12 rebounds on game 5 against the Czalliso Pythons
-Team Record in Most Points Scored: Pyxanovia Pixies: 110 points on game 3 against the Bongatar Banging Bongos
-Team Record in Least Points Scored: Pyxanovia Pixies: 89 points on game 2 against the Holy Yektonisa Bishops
-Team Record in Least Points Allowed: Pyxanovia Pixies: 70 points on game 5 against the Czalliso Pythons
-Team Record in Most Points Allowed: Pyxanovia Pixies: 116 points on game 2 against the Holy Yektonisa Bishops
+Player Record of Points: Autolik Player #2: 23 points on game 4 against the Aiyota Pumps
+Player Record of Assists: Pyxanovia Player #4: 8 assists on game 2 against the Holy Yektonisa Bishops
+Player Record of Rebounds: Pyxanovia Player #4: 9 rebounds on game 6 against the Blanaxon Hammers
+Team Record in Most Points Scored: Pyxanovia Pixies: 99 points on game 5 against the Czalliso Pythons
+Team Record in Least Points Scored: Pyxanovia Pixies: 81 points on game 7 against the Height Sagua Cats
+Team Record in Least Points Allowed: Pyxanovia Pixies: 90 points on game 2 against the Holy Yektonisa Bishops
+Team Record in Most Points Allowed: Pyxanovia Pixies: 109 points on game 1 against the Aahrus Moosi
 Records vs. Each Team this season:
-Aahrus Moosi: 1-0
+Aahrus Moosi: 0-1
 Auspikitan Golden Falcons: 0-0
 Calto Cows: 0-0
 Height Sagua Cats: 0-1
@@ -17,24 +17,24 @@ Sagua Ocelots: 0-0
 Solea Geysers: 0-0
 Autolik Autonomy: 0-0
 Barsein Bats: 0-0
-Blanaxon Hammers: 1-0
+Blanaxon Hammers: 0-1
 Kaeshar Kaisers: 0-0
 Naxda Nomads: 0-0
 Red Rainbow Sickles: 0-0
 Serkr Atolls: 0-0
 Shmupland Dictators: 0-0
-Aiyota Pumps: 0-1
+Aiyota Pumps: 1-0
 Avura Aviators: 0-0
-Boltway Bad Dragons: 1-0
+Boltway Bad Dragons: 0-1
 Dotruga Falno: 0-0
 Ethanthova Ponies: 0-0
 Faehrenfall Feathercats: 0-0
 Stedro Boulders: 0-0
 TND Tanks: 0-0
-Bongatar Banging Bongos: 1-0
-Czalliso Pythons: 1-0
+Bongatar Banging Bongos: 0-1
+Czalliso Pythons: 0-1
 Dvimne Spirits: 0-0
-Holy Yektonisa Bishops: 0-1
+Holy Yektonisa Bishops: 1-0
 Holykol Bears: 0-0
 Lyintaria Lynx: 0-0
 Pyxanovia Pixies: 0-0

@@ -107,7 +107,7 @@ public class createTeams
     }
     public void FixTeams()
     {
-        setFianancials();
+        /*setFianancials();
         foreach (team t in teams)
         {
             if (t.ToString().Equals("Dotruga Falno"))
@@ -124,17 +124,35 @@ public class createTeams
                 p.setStamina(100);
                
             }
-            t.FixTeam();
-            t.GetAffiliate().FixTeam();
+            
+           
 
             t.FixStats();
         }
-        freeAgents.Fix();
+        
+        */
 
+        freeAgents.Fix();
 
         foreach(team t in teams)
         {
+            t.FixTeam();
+            t.GetAffiliate().FixTeam();
+            
         }
+        List<player> allPlayers = new List<player>(freeAgents.GetAllPlayers());
+        foreach(player p in allPlayers)
+        {
+            if (p.getTeam() != null)
+                freeAgents.Remove(p);
+        }
+        foreach(team t in teams)
+        {
+            t.FixDuplicatePlayers();
+            t.GetAffiliate().FixDuplicatePlayers();
+        }
+
+
     }
     public void playGames(int firstGame, int lastGame, FormulaBasketball.Random r)
     {

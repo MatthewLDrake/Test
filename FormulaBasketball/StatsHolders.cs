@@ -85,5 +85,13 @@ namespace FormulaBasketball
         {
             return stats[16];
         }
+        public string GetTeamFor()
+        {
+            return team;
+        }
+        public string GetTeamAgainst()
+        {
+            return opponent;
+        }
     }
 }

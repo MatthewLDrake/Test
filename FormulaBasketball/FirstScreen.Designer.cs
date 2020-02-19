@@ -111,7 +111,7 @@
             this.Offseason.Name = "Offseason";
             this.Offseason.Size = new System.Drawing.Size(90, 59);
             this.Offseason.TabIndex = 7;
-            this.Offseason.Text = "Offseason";
+            this.Offseason.Text = "Season Viewer";
             this.Offseason.UseVisualStyleBackColor = true;
             this.Offseason.Click += new System.EventHandler(this.Offseason_Click);
             // 

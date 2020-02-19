@@ -1,11 +1,11 @@
 Shmupland Dictators Stats
-Player Record of Points: Waltoko: 25 points on game 1 against the Serkr Atolls
-Player Record of Assists: Eun Cho: 14 assists on game 7 against the Boltway Bad Dragons
-Player Record of Rebounds: Power Forward #166: 8 rebounds on game 5 against the Barsein Bats
-Team Record in Most Points Scored: Shmupland Dictators: 115 points on game 3 against the Autolik Autonomy
-Team Record in Least Points Scored: Shmupland Dictators: 82 points on game 8 against the Serkr Atolls
-Team Record in Least Points Allowed: Shmupland Dictators: 82 points on game 5 against the Barsein Bats
-Team Record in Most Points Allowed: Shmupland Dictators: 105 points on game 4 against the Transhimalia Disasters
+Player Record of Points: Eun Cho: 31 points on game 6 against the Czalliso Pythons
+Player Record of Assists: Eun Cho: 10 assists on game 5 against the Barsein Bats
+Player Record of Rebounds: Center #113: 8 rebounds on game 1 against the Serkr Atolls
+Team Record in Most Points Scored: Shmupland Dictators: 100 points on game 1 against the Serkr Atolls
+Team Record in Least Points Scored: Shmupland Dictators: 84 points on game 3 against the Autolik Autonomy
+Team Record in Least Points Allowed: Shmupland Dictators: 76 points on game 3 against the Autolik Autonomy
+Team Record in Most Points Allowed: Shmupland Dictators: 110 points on game 1 against the Serkr Atolls
 Records vs. Each Team this season:
 Aahrus Moosi: 0-0
 Auspikitan Golden Falcons: 0-0
@@ -16,7 +16,7 @@ Manwx Saguans: 0-0
 Sagua Ocelots: 0-0
 Solea Geysers: 0-0
 Autolik Autonomy: 1-0
-Barsein Bats: 1-0
+Barsein Bats: 0-1
 Blanaxon Hammers: 0-0
 Kaeshar Kaisers: 0-1
 Naxda Nomads: 0-0
@@ -25,14 +25,14 @@ Serkr Atolls: 0-2
 Shmupland Dictators: 0-0
 Aiyota Pumps: 0-0
 Avura Aviators: 0-0
-Boltway Bad Dragons: 1-0
+Boltway Bad Dragons: 0-1
 Dotruga Falno: 0-0
 Ethanthova Ponies: 0-0
 Faehrenfall Feathercats: 0-0
 Stedro Boulders: 0-0
 TND Tanks: 0-0
 Bongatar Banging Bongos: 0-0
-Czalliso Pythons: 1-0
+Czalliso Pythons: 0-1
 Dvimne Spirits: 0-0
 Holy Yektonisa Bishops: 0-0
 Holykol Bears: 0-0

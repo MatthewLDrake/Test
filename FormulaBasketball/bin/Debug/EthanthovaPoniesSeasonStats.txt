@@ -1,17 +1,17 @@
 Ethanthova Ponies Stats
-Player Record of Points: Phetdum Vatthana: 31 points on game 3 against the Height Sagua Cats
-Player Record of Assists: Phetdum Vatthana: 11 assists on game 3 against the Height Sagua Cats
+Player Record of Points: Phetdum Vatthana: 31 points on game 7 against the Red Rainbow Sickles
+Player Record of Assists: Phetdum Vatthana: 8 assists on game 5 against the Key to Don Yees
 Player Record of Rebounds: Uxnax Prokexov: 11 rebounds on game 3 against the Height Sagua Cats
-Team Record in Most Points Scored: Ethanthova Ponies: 112 points on game 3 against the Height Sagua Cats
-Team Record in Least Points Scored: Ethanthova Ponies: 89 points on game 5 against the Key to Don Yees
-Team Record in Least Points Allowed: Ethanthova Ponies: 88 points on game 1 against the Barsein Bats
-Team Record in Most Points Allowed: Ethanthova Ponies: 110 points on game 8 against the Holykol Bears
+Team Record in Most Points Scored: Ethanthova Ponies: 104 points on game 6 against the Aahrus Moosi
+Team Record in Least Points Scored: Ethanthova Ponies: 83 points on game 3 against the Height Sagua Cats
+Team Record in Least Points Allowed: Ethanthova Ponies: 69 points on game 3 against the Height Sagua Cats
+Team Record in Most Points Allowed: Ethanthova Ponies: 110 points on game 2 against the Sagua Ocelots
 Records vs. Each Team this season:
 Aahrus Moosi: 0-1
 Auspikitan Golden Falcons: 0-0
 Calto Cows: 0-0
 Height Sagua Cats: 1-0
-Key to Don Yees: 1-0
+Key to Don Yees: 0-1
 Manwx Saguans: 0-0
 Sagua Ocelots: 0-1
 Solea Geysers: 0-0
@@ -20,7 +20,7 @@ Barsein Bats: 1-0
 Blanaxon Hammers: 0-0
 Kaeshar Kaisers: 0-0
 Naxda Nomads: 0-0
-Red Rainbow Sickles: 0-1
+Red Rainbow Sickles: 1-0
 Serkr Atolls: 0-0
 Shmupland Dictators: 0-0
 Aiyota Pumps: 0-0

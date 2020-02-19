@@ -40,8 +40,8 @@ public class formulaBasketball
         StringUtils = new StringUtils();
         
         Startup(loadSave, fileName, teams, freeAgency, !flag);
-        standingsForm = new Standings();
-        dLeagueStandingsForm = new Standings();
+        standingsForm = new Standings(true);
+        dLeagueStandingsForm = new Standings(true);
         bracket = new PlayoffBracket();
         bracket.Show();
         bracket.Visible = false;
@@ -51,8 +51,8 @@ public class formulaBasketball
         standingsFile = "standings.csv";
         championshipsContents = championshipsContents += "Southern Conference Winner\tSouthern Conference Games Won\t\tNorthern Conference Games Won\tNorthern Conference winner\tMVP Winner\tMVP Team\tROTY winner\tROTY Team\n";
                 
-        create.FixTeams();
-        create.CreateNewSchedule();
+        //create.FixTeams();
+        //create.CreateNewSchedule();
 
         /* create.SetUpCollege();
          create.PlayCollegeSeason();
@@ -96,7 +96,6 @@ public class formulaBasketball
         standingsForm.Visible = true;
 
         //create.FixTeams();
-        //create.playDLeagueGames(1, 4, r);
 
         dLeagueStandingsForm.updateStandings(create, false);
         dLeagueStandingsForm.Visible = true;
@@ -118,8 +117,9 @@ public class formulaBasketball
                 int endGame = tempScreen.getFinishPoint();
 
                 standingsForm.Visible = true;
+                int oldStartingGame = startingGame;
                 playGames(startingGame, endGame);
-
+                startingGame = oldStartingGame;
                 playDLeagueGames(startingGame, endGame);
 
             }
@@ -187,7 +187,8 @@ public class formulaBasketball
             else if (result.Equals("Save"))
             {                
                 SerializeObject(create, fileName);
-                standingsForm.SaveForm();
+                standingsForm.SaveForm("images/standings.png");
+                dLeagueStandingsForm.SaveForm("images/dLeagueStandings.png");
             }
             for(int i = 0; i < create.size(); i++)
             {
@@ -1085,7 +1086,7 @@ public class formulaBasketball
         awayTeam.AddResult(j, newGame.getAwayTeamScore(), newGame.getHomeTeamScore());
         homeTeam.AddResult(i, newGame.getHomeTeamScore(), newGame.getAwayTeamScore());
 
-        printer.AddResult(awayTeam.ToString(), homeTeam.ToString(), newGame.getAwayTeamScore(), newGame.getHomeTeamScore(), dLeague);
+        printer.AddResult(awayTeam, homeTeam, newGame.getAwayTeamScore(), newGame.getHomeTeamScore(), dLeague);
        
         gameResultsContents += ("," + awayTeam.ToString() + "," + newGame.getAwayTeamScore() + "," + homeTeam.ToString() + "," + newGame.getHomeTeamScore() + "\n");
 

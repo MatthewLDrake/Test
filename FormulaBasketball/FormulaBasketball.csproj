@@ -112,6 +112,12 @@
     <Compile Include="FreeAgents.cs" />
     <Compile Include="Holder.cs" />
     <Compile Include="ImagePrinter.cs" />
+    <Compile Include="InSeasonViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InSeasonViewer.Designer.cs">
+      <DependentUpon>InSeasonViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="LeagueRoster.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -426,6 +432,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FreeAgencyForm.resx">
       <DependentUpon>FreeAgencyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InSeasonViewer.resx">
+      <DependentUpon>InSeasonViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LeagueRoster.resx">
       <DependentUpon>LeagueRoster.cs</DependentUpon>

@@ -1,16 +1,16 @@
 Kaeshar Kaisers Stats
-Player Record of Points: Akamine Naizen: 25 points on game 4 against the Key to Don Yees
-Player Record of Assists: Akamine Naizen: 11 assists on game 2 against the Shmupland Dictators
-Player Record of Rebounds: Aahrus Player #2: 11 rebounds on game 5 against the Red Rainbow Sickles
-Team Record in Most Points Scored: Kaeshar Kaisers: 120 points on game 3 against the Naxda Nomads
-Team Record in Least Points Scored: Kaeshar Kaisers: 81 points on game 8 against the Height Sagua Cats
-Team Record in Least Points Allowed: Kaeshar Kaisers: 88 points on game 5 against the Red Rainbow Sickles
-Team Record in Most Points Allowed: Kaeshar Kaisers: 114 points on game 3 against the Naxda Nomads
+Player Record of Points: Akamine Naizen: 26 points on game 2 against the Shmupland Dictators
+Player Record of Assists: Lilo Vatthana: 11 assists on game 1 against the Boltway Bad Dragons
+Player Record of Rebounds: Lilo Vatthana: 18 rebounds on game 8 against the Height Sagua Cats
+Team Record in Most Points Scored: Kaeshar Kaisers: 118 points on game 1 against the Boltway Bad Dragons
+Team Record in Least Points Scored: Kaeshar Kaisers: 83 points on game 5 against the Red Rainbow Sickles
+Team Record in Least Points Allowed: Kaeshar Kaisers: 76 points on game 8 against the Height Sagua Cats
+Team Record in Most Points Allowed: Kaeshar Kaisers: 112 points on game 3 against the Naxda Nomads
 Records vs. Each Team this season:
 Aahrus Moosi: 0-0
 Auspikitan Golden Falcons: 0-0
 Calto Cows: 0-0
-Height Sagua Cats: 0-1
+Height Sagua Cats: 1-0
 Key to Don Yees: 0-1
 Manwx Saguans: 0-0
 Sagua Ocelots: 0-0
@@ -19,8 +19,8 @@ Autolik Autonomy: 0-0
 Barsein Bats: 0-0
 Blanaxon Hammers: 0-0
 Kaeshar Kaisers: 0-0
-Naxda Nomads: 1-0
-Red Rainbow Sickles: 1-0
+Naxda Nomads: 0-1
+Red Rainbow Sickles: 0-1
 Serkr Atolls: 0-0
 Shmupland Dictators: 1-0
 Aiyota Pumps: 0-0
@@ -29,7 +29,7 @@ Boltway Bad Dragons: 1-0
 Dotruga Falno: 0-0
 Ethanthova Ponies: 0-0
 Faehrenfall Feathercats: 0-0
-Stedro Boulders: 0-1
+Stedro Boulders: 1-0
 TND Tanks: 0-0
 Bongatar Banging Bongos: 0-0
 Czalliso Pythons: 0-0
