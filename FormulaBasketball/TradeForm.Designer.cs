@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.mainTeamGrid = new System.Windows.Forms.DataGridView();
             this.teamList = new System.Windows.Forms.ComboBox();
             this.upButton = new System.Windows.Forms.Button();
@@ -88,7 +90,7 @@
             this.mainTeamGrid.MultiSelect = false;
             this.mainTeamGrid.Name = "mainTeamGrid";
             this.mainTeamGrid.RowHeadersVisible = false;
-            this.mainTeamGrid.Size = new System.Drawing.Size(426, 210);
+            this.mainTeamGrid.Size = new System.Drawing.Size(459, 210);
             this.mainTeamGrid.TabIndex = 0;
             this.mainTeamGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.mainTeamGrid_CellContentClick);
             // 
@@ -97,16 +99,16 @@
             this.teamList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.teamList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.teamList.FormattingEnabled = true;
-            this.teamList.Location = new System.Drawing.Point(521, 241);
+            this.teamList.Location = new System.Drawing.Point(561, 241);
             this.teamList.Name = "teamList";
-            this.teamList.Size = new System.Drawing.Size(253, 21);
+            this.teamList.Size = new System.Drawing.Size(274, 21);
             this.teamList.TabIndex = 2;
             this.teamList.SelectedIndexChanged += new System.EventHandler(this.teamList_SelectedIndexChanged);
             // 
             // upButton
             // 
             this.upButton.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.upButton.Location = new System.Drawing.Point(455, 240);
+            this.upButton.Location = new System.Drawing.Point(495, 240);
             this.upButton.Name = "upButton";
             this.upButton.Size = new System.Drawing.Size(60, 23);
             this.upButton.TabIndex = 3;
@@ -117,7 +119,7 @@
             // downButton
             // 
             this.downButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.downButton.Location = new System.Drawing.Point(780, 240);
+            this.downButton.Location = new System.Drawing.Point(841, 240);
             this.downButton.Name = "downButton";
             this.downButton.Size = new System.Drawing.Size(60, 23);
             this.downButton.TabIndex = 4;
@@ -140,11 +142,11 @@
             this.Object});
             this.tableLayoutPanel1.SetColumnSpan(this.otherTeamGrid, 3);
             this.otherTeamGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.otherTeamGrid.Location = new System.Drawing.Point(435, 3);
+            this.otherTeamGrid.Location = new System.Drawing.Point(468, 3);
             this.otherTeamGrid.MultiSelect = false;
             this.otherTeamGrid.Name = "otherTeamGrid";
             this.otherTeamGrid.RowHeadersVisible = false;
-            this.otherTeamGrid.Size = new System.Drawing.Size(426, 210);
+            this.otherTeamGrid.Size = new System.Drawing.Size(464, 210);
             this.otherTeamGrid.TabIndex = 5;
             this.otherTeamGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.otherTeamGrid_CellContentClick);
             // 
@@ -158,7 +160,7 @@
             this.dataGridViewTextBoxColumn5,
             this.obje});
             this.tableLayoutPanel1.SetColumnSpan(this.mainTeamTradeInfo, 3);
-            this.mainTeamTradeInfo.Location = new System.Drawing.Point(97, 291);
+            this.mainTeamTradeInfo.Location = new System.Drawing.Point(114, 291);
             this.mainTeamTradeInfo.MultiSelect = false;
             this.mainTeamTradeInfo.Name = "mainTeamTradeInfo";
             this.mainTeamTradeInfo.RowHeadersVisible = false;
@@ -189,7 +191,7 @@
             this.dataGridViewTextBoxColumn6,
             this.o});
             this.tableLayoutPanel1.SetColumnSpan(this.otherTeamTradeInfo, 3);
-            this.otherTeamTradeInfo.Location = new System.Drawing.Point(529, 291);
+            this.otherTeamTradeInfo.Location = new System.Drawing.Point(581, 291);
             this.otherTeamTradeInfo.MultiSelect = false;
             this.otherTeamTradeInfo.Name = "otherTeamTradeInfo";
             this.otherTeamTradeInfo.RowHeadersVisible = false;
@@ -236,13 +238,13 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66945F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33222F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(864, 434);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(935, 434);
             this.tableLayoutPanel1.TabIndex = 8;
             // 
             // confirmButton
             // 
             this.confirmButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.confirmButton.Location = new System.Drawing.Point(34, 240);
+            this.confirmButton.Location = new System.Drawing.Point(40, 240);
             this.confirmButton.Name = "confirmButton";
             this.confirmButton.Size = new System.Drawing.Size(75, 23);
             this.confirmButton.TabIndex = 8;
@@ -253,7 +255,7 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(288, 216);
+            this.splitContainer1.Location = new System.Drawing.Point(310, 216);
             this.splitContainer1.Margin = new System.Windows.Forms.Padding(0);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -265,14 +267,14 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.loadButton);
-            this.splitContainer1.Size = new System.Drawing.Size(144, 72);
+            this.splitContainer1.Size = new System.Drawing.Size(155, 72);
             this.splitContainer1.SplitterDistance = 39;
             this.splitContainer1.TabIndex = 10;
             // 
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(12, 8);
+            this.button1.Location = new System.Drawing.Point(17, 8);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 22);
             this.button1.TabIndex = 10;
@@ -283,7 +285,7 @@
             // loadButton
             // 
             this.loadButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.loadButton.Location = new System.Drawing.Point(12, 2);
+            this.loadButton.Location = new System.Drawing.Point(17, 2);
             this.loadButton.Name = "loadButton";
             this.loadButton.Size = new System.Drawing.Size(121, 22);
             this.loadButton.TabIndex = 9;
@@ -318,6 +320,9 @@
             // Overall
             // 
             this.Overall.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.Overall.DefaultCellStyle = dataGridViewCellStyle1;
             this.Overall.HeaderText = "Overall";
             this.Overall.Name = "Overall";
             this.Overall.ReadOnly = true;
@@ -367,11 +372,15 @@
             this.pos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.pos.HeaderText = "Position";
             this.pos.Name = "pos";
-            this.pos.Width = 69;
+            this.pos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.pos.Width = 50;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTextBoxColumn2.HeaderText = "Overall";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
@@ -403,7 +412,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(864, 434);
+            this.ClientSize = new System.Drawing.Size(935, 434);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "TradeForm";
             this.Text = "TradeForm";

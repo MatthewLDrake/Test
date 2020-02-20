@@ -18,14 +18,12 @@ namespace FormulaBasketball
         private Trade trade;
         public int result;
         private createTeams create;
-        private int teamNum;
-        public OfferedTrade(Trade trade, createTeams create, int teamNum)
+        public OfferedTrade(Trade trade, createTeams create)
         {
             InitializeComponent();
             this.trade = trade;
 
             this.create = create;
-            this.teamNum = teamNum;
 
             teamOneLabel.Text = trade.GetTeamOneName();
             teamTwoLabel.Text = trade.GetTeamTwoName();
@@ -83,7 +81,7 @@ namespace FormulaBasketball
 
         private void negotiateButton_Click(object sender, EventArgs e)
         {
-            TradeForm trade = new TradeForm(create, this.trade);
+            new TradeForm(create, this.trade, TradeForm.master).ShowDialog();
             result = 2;
             Close();
         }

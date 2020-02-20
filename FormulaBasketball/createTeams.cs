@@ -14,6 +14,7 @@ public class createTeams
     private double[,] averageOverall, minOverall, maxOverall, allOveralls;
     private List<int> gameNums;
     public static int nextID = 0;
+    public static int currentSeason = 7;
     public createTeams(List<team> teams, FreeAgents freeAgency, FormulaBasketball.Random r)
     {
         this.teams = teams;

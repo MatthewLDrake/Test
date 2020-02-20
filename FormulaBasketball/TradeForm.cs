@@ -9,6 +9,7 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Forms;
 
 namespace FormulaBasketball
@@ -18,14 +19,14 @@ namespace FormulaBasketball
         private createTeams create;
         private team team;
         private int teamNum;
-        public static bool master = true;
-        public TradeForm(createTeams create, team mainTeam, int teamNum)
+        public static bool master;
+        public TradeForm(createTeams create, team mainTeam, int teamNum, bool master)
         {
             InitializeComponent();
             team = mainTeam;
             this.create = create;
             this.teamNum = teamNum;
-
+            TradeForm.master = master;
             for(int i = 0; i < create.size(); i++)
             {
                 if(i == teamNum)continue;
@@ -35,12 +36,13 @@ namespace FormulaBasketball
             teamList.SelectedIndex = 0;
             FillGridWithTeam(mainTeamGrid, mainTeam);
         }
-        public TradeForm(createTeams create, Trade prevTrade)
+        public TradeForm(createTeams create, Trade prevTrade, bool master)
         {
             InitializeComponent();
             this.create = create;
-            this.team = create.getTeam(prevTrade.teamOneID);
-            teamNum = prevTrade.teamOneID;
+            this.team = create.getTeam(prevTrade.teamTwoID);
+            TradeForm.master = master;
+            teamNum = prevTrade.teamTwoID;
 
             for (int i = 0; i < create.size(); i++)
             {
@@ -48,10 +50,65 @@ namespace FormulaBasketball
                 teamList.Items.Add(create.getTeam(i).ToString());
             }
 
-            int index = prevTrade.teamTwoID;
+            int index = prevTrade.teamOneID;
             if (index > teamNum) index--;
             teamList.SelectedIndex = index;
             FillGridWithTeam(mainTeamGrid, team);
+
+            foreach(object item in prevTrade.GetTeamOneTradeItems())
+            {
+                if(item is player)
+                {
+                    for(int i = 0; i < otherTeamGrid.Rows.Count; i++)
+                    {
+                        object value = otherTeamGrid[6, i].Value;
+                        if(value is player && (value as player).Equals(item as player))
+                        {
+                            otherTeamGrid.Rows[i].Cells[0].Value = true;
+                            otherTeamTradeInfo.Rows.Add(otherTeamGrid[1, i].Value, otherTeamGrid[6, i].Value);
+                        }
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i < otherTeamGrid.Rows.Count; i++)
+                    {
+                        object value = otherTeamGrid[6, i].Value;
+                        if (value is DraftPick && (value as DraftPick).Equals(item as DraftPick))
+                        {
+                            otherTeamGrid.Rows[i].Cells[0].Value = true;
+                            otherTeamTradeInfo.Rows.Add(otherTeamGrid[1, i].Value, otherTeamGrid[6, i].Value);
+                        }
+                    }
+                }
+            }
+            foreach (object item in prevTrade.GetTeamTwoTradeItems())
+            {
+                if (item is player)
+                {
+                    for (int i = 0; i < mainTeamGrid.Rows.Count; i++)
+                    {
+                        object value = mainTeamGrid[6, i].Value;
+                        if (value is player && (value as player).Equals(item as player))
+                        {
+                            mainTeamGrid.Rows[i].Cells[0].Value = true;
+                            mainTeamTradeInfo.Rows.Add(mainTeamGrid[1, i].Value, mainTeamGrid[6, i].Value);
+                        }
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i < mainTeamGrid.Rows.Count; i++)
+                    {
+                        object value = mainTeamGrid[6, i].Value;
+                        if (value is DraftPick && (value as DraftPick).Equals(item as DraftPick))
+                        {
+                            mainTeamGrid.Rows[i].Cells[0].Value = true;
+                            mainTeamTradeInfo.Rows.Add(mainTeamGrid[1, i].Value, mainTeamGrid[6, i].Value);
+                        }
+                    }
+                }
+            }
 
         }
 
@@ -67,19 +124,19 @@ namespace FormulaBasketball
         private void FillGridWithTeam(DataGridView grid, team team)
         {
             grid.Rows.Clear();
-            foreach(player p in team.GetOffSeasonPlayers(false))
+            foreach(player p in team.getActivePlayers())
             {
-                grid.Rows.Add(false, p.getName(), p.getPosition(), String.Format("{0:0.00}", p.getOverall()), p.getDevelopment(), p.GetMoneyPerYear(), p);
+                grid.Rows.Add(false, p.getName(), p.getPosition(), p.getOverall(), p.getDevelopment(), p.GetMoneyPerYear(), p);
             }
             List<DraftPick> picks = team.GetPicks();
             foreach(DraftPick p in picks)
             {
-                grid.Rows.Add(false, "Season 7 Round " + p.GetRound() + " pick from " + p.GetTeamOfOrigin(),"?", "???", "B", 0, p);
+                grid.Rows.Add(false, "Season " + createTeams.currentSeason  + " Round " + p.GetRound() + " pick from " + p.GetTeamOfOrigin(),"?", "???", "B", 0, p);
             }
             picks = team.GetNextSeasonPicks();
             foreach (DraftPick p in picks)
             {
-                grid.Rows.Add(false, "Season 8 Round " + p.GetRound() + " pick from " + p.GetTeamOfOrigin(), "?", "???", "B", 0, p);
+                grid.Rows.Add(false, "Season " + (createTeams.currentSeason + 1) + " Round " + p.GetRound() + " pick from " + p.GetTeamOfOrigin(), "?", "???", "B", 0, p);
             }
         }
 
@@ -177,6 +234,8 @@ namespace FormulaBasketball
 
             SerializeObject(trade, fileName);
 
+            MessageBox.Show("Trade saved successfully. It is called " + fileName + " and is in the same directory as the exe");
+
         }
 
         private void loadButton_Click(object sender, EventArgs e)
@@ -193,9 +252,8 @@ namespace FormulaBasketball
                 {
                     if (trade.CanView(team.ToString()))
                     {
-                        OfferedTrade offered = new OfferedTrade(trade, create, teamNum);
+                        OfferedTrade offered = new OfferedTrade(trade, create);
                         offered.ShowDialog();
-
                     }
                     else
                     {
@@ -333,8 +391,7 @@ namespace FormulaBasketball
         }
         public bool CanView(String team)
         {
-            if (TradeForm.master) return TradeForm.master;
-            return team.Equals(teamTwoName);
+            return TradeForm.master || team.Equals(teamTwoName);
         }
         public List<object> GetTeamOneTradeItems()
         {

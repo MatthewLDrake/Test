@@ -375,6 +375,12 @@
     <Compile Include="TempoHolder.cs" />
     <Compile Include="TestLeague.cs" />
     <Compile Include="TestSchedule.cs" />
+    <Compile Include="TradeFormAI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TradeFormAI.Designer.cs">
+      <DependentUpon>TradeFormAI.cs</DependentUpon>
+    </Compile>
     <Compile Include="TradeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -532,6 +538,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TeamSelector.resx">
       <DependentUpon>TeamSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TradeFormAI.resx">
+      <DependentUpon>TradeFormAI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TradeForm.resx">
       <DependentUpon>TradeForm.cs</DependentUpon>

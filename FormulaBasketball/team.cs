@@ -1367,6 +1367,26 @@ public class team : IComparable<team>,  IEnumerable<player>
             activePlayers[i].SetGamesPlayed(gamesPlayed);
         }
     }
+    public void ReplacePlayer(int activePlayerLoc, player newPlayer)
+    {
+        activePlayers[activePlayerLoc] = newPlayer;
+        newPlayer.setTeam(this);
+        newPlayer.setInjured(false);
+        newPlayer.setStamina(100);
+        newPlayer.SetNewContract(new Contract(1, 1));
+        newPlayer.SetSeasonStats(new List<StatsHolders>());
+    }
+    public void UpdateDraftPicks()
+    {
+        foreach(DraftPick pick in picks)
+        {
+            pick.SetSeason(createTeams.currentSeason);
+        }
+        foreach(DraftPick pick in nextSeasonPicks)
+        {
+            pick.SetSeason(createTeams.currentSeason + 1);
+        }
+    }
     /*
      * return codes:
      * 0: Three Losses
@@ -2179,6 +2199,13 @@ public class DraftPick
         this.selectedPlayer = selectedPlayer;
         player newPlayer = new player(selectedPlayer.getPosition(), selectedPlayer.ratings, selectedPlayer.age, selectedPlayer.getName(), selectedPlayer.peakStart, selectedPlayer.peakEnd, selectedPlayer.development, selectedPlayer.GetCountry(), formulaBasketball.nextPlayerID++);
         owner.addPlayer(newPlayer);
+    }
+    public override bool Equals(object obj)
+    {
+        if(!(obj is DraftPick))
+            return false;
+        DraftPick otherPick = obj as DraftPick;
+        return otherPick.round == round && otherPick.from.ToString().Equals(from.ToString());
     }
 }
 [Serializable]

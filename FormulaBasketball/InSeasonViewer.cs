@@ -22,7 +22,11 @@ namespace FormulaBasketball
         public InSeasonViewer(createTeams create)
         {
             InitializeComponent();
-            this.create = create;            
+            this.create = create;           
+            foreach(team t in create.getTeams())
+            {
+                t.UpdateDraftPicks();
+            }
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -137,11 +141,6 @@ namespace FormulaBasketball
             LeagueRoster roster = new LeagueRoster(new List<int>(), create);
             roster.ShowDialog();
         }
-        private void LaunchTrade()
-        {
-            TradeForm tradeForm = new TradeForm(create, team, teamNum);
-            tradeForm.ShowDialog();
-        }
         private void LaunchStats()
         {
             StatsForm statsForm = new StatsForm(create, teamNum);
@@ -158,17 +157,24 @@ namespace FormulaBasketball
             System.Threading.Thread thread = new System.Threading.Thread(LaunchRoster);
             thread.Start();
         }
-
-        private void tradeButton_Click(object sender, EventArgs e)
-        {
-            System.Threading.Thread thread = new System.Threading.Thread(LaunchTrade);
-            thread.Start();
-        }
-
         private void statsButton_Click(object sender, EventArgs e)
         {
             System.Threading.Thread thread = new System.Threading.Thread(LaunchStats);
             thread.Start();
+        }
+
+        private void tradeButton_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (master && e.Button.Equals(MouseButtons.Right))
+            {
+                TradeFormAI tradeForm = new TradeFormAI(create, teamNum, master);
+                tradeForm.ShowDialog();
+            }
+            else
+            {
+                TradeForm tradeForm = new TradeForm(create, team, teamNum, master);
+                tradeForm.ShowDialog();
+            }
         }
     }
 }

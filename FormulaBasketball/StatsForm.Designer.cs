@@ -28,14 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.upButton = new System.Windows.Forms.Button();
             this.teamList = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.downButton = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.upButton = new System.Windows.Forms.Button();
             this.team = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Minutes = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,6 +79,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -119,11 +140,11 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.upButton, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.teamList, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -134,16 +155,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1533, 575);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
-            // upButton
-            // 
-            this.upButton.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.upButton.Location = new System.Drawing.Point(243, 31);
-            this.upButton.Name = "upButton";
-            this.upButton.Size = new System.Drawing.Size(60, 22);
-            this.upButton.TabIndex = 6;
-            this.upButton.Text = "▲";
-            this.upButton.UseVisualStyleBackColor = true;
-            // 
             // teamList
             // 
             this.teamList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -153,6 +164,7 @@
             this.teamList.Name = "teamList";
             this.teamList.Size = new System.Drawing.Size(913, 21);
             this.teamList.TabIndex = 5;
+            this.teamList.SelectedIndexChanged += new System.EventHandler(this.teamList_SelectedIndexChanged);
             // 
             // tableLayoutPanel2
             // 
@@ -179,6 +191,7 @@
             this.downButton.TabIndex = 9;
             this.downButton.Text = "▼";
             this.downButton.UseVisualStyleBackColor = true;
+            this.downButton.Click += new System.EventHandler(this.downButton_Click);
             // 
             // checkBox1
             // 
@@ -191,6 +204,46 @@
             this.checkBox1.Text = "Per Game";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.checkBox2, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.upButton, 1, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 28);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(306, 28);
+            this.tableLayoutPanel3.TabIndex = 8;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.checkBox2.Location = new System.Drawing.Point(77, 5);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(73, 17);
+            this.checkBox2.TabIndex = 11;
+            this.checkBox2.Text = "D League";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
+            // upButton
+            // 
+            this.upButton.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.upButton.Location = new System.Drawing.Point(243, 3);
+            this.upButton.Name = "upButton";
+            this.upButton.Size = new System.Drawing.Size(60, 22);
+            this.upButton.TabIndex = 7;
+            this.upButton.Text = "▲";
+            this.upButton.UseVisualStyleBackColor = true;
+            this.upButton.Click += new System.EventHandler(this.upButton_Click);
             // 
             // team
             // 
@@ -211,6 +264,9 @@
             // Minutes
             // 
             this.Minutes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle1.Format = "0.##";
+            dataGridViewCellStyle1.NullValue = "0";
+            this.Minutes.DefaultCellStyle = dataGridViewCellStyle1;
             this.Minutes.HeaderText = "Minutes";
             this.Minutes.Name = "Minutes";
             this.Minutes.ReadOnly = true;
@@ -219,6 +275,9 @@
             // Assists
             // 
             this.Assists.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle2.Format = "0.##";
+            dataGridViewCellStyle2.NullValue = "0";
+            this.Assists.DefaultCellStyle = dataGridViewCellStyle2;
             this.Assists.HeaderText = "Assists";
             this.Assists.Name = "Assists";
             this.Assists.ReadOnly = true;
@@ -227,6 +286,9 @@
             // Points
             // 
             this.Points.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle3.Format = "0.##";
+            dataGridViewCellStyle3.NullValue = "0";
+            this.Points.DefaultCellStyle = dataGridViewCellStyle3;
             this.Points.HeaderText = "Points";
             this.Points.Name = "Points";
             this.Points.ReadOnly = true;
@@ -235,22 +297,31 @@
             // ShotsTaken
             // 
             this.ShotsTaken.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle4.Format = "0.##";
+            dataGridViewCellStyle4.NullValue = "0";
+            this.ShotsTaken.DefaultCellStyle = dataGridViewCellStyle4;
             this.ShotsTaken.HeaderText = "Shots Taken";
             this.ShotsTaken.Name = "ShotsTaken";
             this.ShotsTaken.ReadOnly = true;
-            this.ShotsTaken.Width = 86;
+            this.ShotsTaken.Width = 93;
             // 
             // shotsMade
             // 
             this.shotsMade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle5.Format = "0.##";
+            dataGridViewCellStyle5.NullValue = "0";
+            this.shotsMade.DefaultCellStyle = dataGridViewCellStyle5;
             this.shotsMade.HeaderText = "Shots Made";
             this.shotsMade.Name = "shotsMade";
             this.shotsMade.ReadOnly = true;
-            this.shotsMade.Width = 82;
+            this.shotsMade.Width = 89;
             // 
             // fgPercent
             // 
             this.fgPercent.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle6.Format = "0.00\\%";
+            dataGridViewCellStyle6.NullValue = "0";
+            this.fgPercent.DefaultCellStyle = dataGridViewCellStyle6;
             this.fgPercent.HeaderText = "FG%";
             this.fgPercent.Name = "fgPercent";
             this.fgPercent.ReadOnly = true;
@@ -259,15 +330,21 @@
             // ThreesTaken
             // 
             this.ThreesTaken.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle7.Format = "0.##";
+            dataGridViewCellStyle7.NullValue = "0";
+            this.ThreesTaken.DefaultCellStyle = dataGridViewCellStyle7;
             this.ThreesTaken.HeaderText = "Threes Taken";
             this.ThreesTaken.Name = "ThreesTaken";
             this.ThreesTaken.ReadOnly = true;
-            this.ThreesTaken.Width = 91;
+            this.ThreesTaken.Width = 99;
             // 
             // ThreesMade
             // 
             this.ThreesMade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ThreesMade.HeaderText = "ThreesMade";
+            dataGridViewCellStyle8.Format = "0.##";
+            dataGridViewCellStyle8.NullValue = "0";
+            this.ThreesMade.DefaultCellStyle = dataGridViewCellStyle8;
+            this.ThreesMade.HeaderText = "Threes Made";
             this.ThreesMade.Name = "ThreesMade";
             this.ThreesMade.ReadOnly = true;
             this.ThreesMade.Width = 92;
@@ -275,6 +352,9 @@
             // Turnovers
             // 
             this.Turnovers.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle9.Format = "0.##";
+            dataGridViewCellStyle9.NullValue = "0";
+            this.Turnovers.DefaultCellStyle = dataGridViewCellStyle9;
             this.Turnovers.HeaderText = "Turnovers";
             this.Turnovers.Name = "Turnovers";
             this.Turnovers.ReadOnly = true;
@@ -283,6 +363,9 @@
             // Steals
             // 
             this.Steals.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle10.Format = "0.##";
+            dataGridViewCellStyle10.NullValue = "0";
+            this.Steals.DefaultCellStyle = dataGridViewCellStyle10;
             this.Steals.HeaderText = "Steals";
             this.Steals.Name = "Steals";
             this.Steals.ReadOnly = true;
@@ -291,6 +374,9 @@
             // Rebounds
             // 
             this.Rebounds.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle11.Format = "0.##";
+            dataGridViewCellStyle11.NullValue = "0";
+            this.Rebounds.DefaultCellStyle = dataGridViewCellStyle11;
             this.Rebounds.HeaderText = "Rebounds";
             this.Rebounds.Name = "Rebounds";
             this.Rebounds.ReadOnly = true;
@@ -299,22 +385,31 @@
             // DefensiveRebounds
             // 
             this.DefensiveRebounds.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle12.Format = "0.##";
+            dataGridViewCellStyle12.NullValue = "0";
+            this.DefensiveRebounds.DefaultCellStyle = dataGridViewCellStyle12;
             this.DefensiveRebounds.HeaderText = "Def Rebounds";
             this.DefensiveRebounds.Name = "DefensiveRebounds";
             this.DefensiveRebounds.ReadOnly = true;
-            this.DefensiveRebounds.Width = 93;
+            this.DefensiveRebounds.Width = 101;
             // 
             // OffensiveRebounds
             // 
             this.OffensiveRebounds.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle13.Format = "0.##";
+            dataGridViewCellStyle13.NullValue = "0";
+            this.OffensiveRebounds.DefaultCellStyle = dataGridViewCellStyle13;
             this.OffensiveRebounds.HeaderText = "Off Rebounds";
             this.OffensiveRebounds.Name = "OffensiveRebounds";
             this.OffensiveRebounds.ReadOnly = true;
-            this.OffensiveRebounds.Width = 90;
+            this.OffensiveRebounds.Width = 98;
             // 
             // Fouls
             // 
             this.Fouls.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle14.Format = "0.##";
+            dataGridViewCellStyle14.NullValue = "0";
+            this.Fouls.DefaultCellStyle = dataGridViewCellStyle14;
             this.Fouls.HeaderText = "Fouls";
             this.Fouls.Name = "Fouls";
             this.Fouls.ReadOnly = true;
@@ -323,6 +418,9 @@
             // OpponentShotsTaken
             // 
             this.OpponentShotsTaken.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle15.Format = "0.##";
+            dataGridViewCellStyle15.NullValue = "0";
+            this.OpponentShotsTaken.DefaultCellStyle = dataGridViewCellStyle15;
             this.OpponentShotsTaken.HeaderText = "Shots Taken Against";
             this.OpponentShotsTaken.Name = "OpponentShotsTaken";
             this.OpponentShotsTaken.ReadOnly = true;
@@ -331,6 +429,9 @@
             // shotsMadeAgainst
             // 
             this.shotsMadeAgainst.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle16.Format = "0.##";
+            dataGridViewCellStyle16.NullValue = "0";
+            this.shotsMadeAgainst.DefaultCellStyle = dataGridViewCellStyle16;
             this.shotsMadeAgainst.HeaderText = "Shots Made Against";
             this.shotsMadeAgainst.Name = "shotsMadeAgainst";
             this.shotsMadeAgainst.ReadOnly = true;
@@ -339,6 +440,9 @@
             // OFGP
             // 
             this.OFGP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle17.Format = "0.00\\%";
+            dataGridViewCellStyle17.NullValue = "0";
+            this.OFGP.DefaultCellStyle = dataGridViewCellStyle17;
             this.OFGP.HeaderText = "OFG%";
             this.OFGP.Name = "OFGP";
             this.OFGP.ReadOnly = true;
@@ -347,6 +451,9 @@
             // PlusMinus
             // 
             this.PlusMinus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle18.Format = "0.###";
+            dataGridViewCellStyle18.NullValue = "0";
+            this.PlusMinus.DefaultCellStyle = dataGridViewCellStyle18;
             this.PlusMinus.HeaderText = "+/-";
             this.PlusMinus.Name = "PlusMinus";
             this.PlusMinus.ReadOnly = true;
@@ -365,6 +472,8 @@
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -374,11 +483,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button upButton;
         private System.Windows.Forms.ComboBox teamList;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button downButton;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.Button upButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn team;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Minutes;

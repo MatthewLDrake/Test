@@ -103,7 +103,7 @@ namespace FormulaBasketball
         private void awardsButton_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            TradeForm tradeForm = new TradeForm(create, team, teamNum);
+            TradeForm tradeForm = new TradeForm(create, team, teamNum, master);
             tradeForm.ShowDialog();
             this.Visible = true;
         }
@@ -241,7 +241,7 @@ namespace FormulaBasketball
                     Trade trade = TradeForm.DeSerializeObject(fileName);
                     if (trade.CanView(team.ToString()))
                     {
-                        OfferedTrade offer = new OfferedTrade(trade, create, teamNum);
+                        OfferedTrade offer = new OfferedTrade(trade, create);
                         offer.ShowDialog();
                     }
 

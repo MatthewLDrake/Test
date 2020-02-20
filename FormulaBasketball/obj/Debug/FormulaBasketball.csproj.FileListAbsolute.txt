@@ -159,3 +159,5 @@ C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\F
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\FormulaBasketball.InSeasonViewer.resources
 B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.InSeasonViewer.resources
 B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.StatsForm.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\FormulaBasketball.StatsForm.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\FormulaBasketball.TradeFormAI.resources
