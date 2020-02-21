@@ -364,6 +364,12 @@
       <DependentUpon>teamPicker.cs</DependentUpon>
     </Compile>
     <Compile Include="teamResults.cs" />
+    <Compile Include="TeamRoster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeamRoster.Designer.cs">
+      <DependentUpon>TeamRoster.cs</DependentUpon>
+    </Compile>
     <Compile Include="TeamSelector.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -535,6 +541,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="teamPicker.resx">
       <DependentUpon>teamPicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeamRoster.resx">
+      <DependentUpon>TeamRoster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TeamSelector.resx">
       <DependentUpon>TeamSelector.cs</DependentUpon>

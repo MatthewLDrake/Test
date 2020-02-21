@@ -44,9 +44,63 @@ namespace FormulaBasketball
                 aiTeamList.Items.Add(create.getTeam(i).ToString());
             }
 
-            aiTeamList.SelectedIndex = prevTrade.teamOneID;
-            teamList.SelectedIndex = prevTrade.teamTwoID;
+            aiTeamList.SelectedIndex = prevTrade.teamTwoID;
+            teamList.SelectedIndex = prevTrade.teamOneID;
 
+            foreach (object item in prevTrade.GetTeamOneTradeItems())
+            {
+                if (item is player)
+                {
+                    for (int i = 0; i < otherTeamGrid.Rows.Count; i++)
+                    {
+                        object value = otherTeamGrid[6, i].Value;
+                        if (value is player && (value as player).Equals(item as player))
+                        {
+                            otherTeamGrid.Rows[i].Cells[0].Value = true;
+                            otherTeamTradeInfo.Rows.Add(otherTeamGrid[1, i].Value, otherTeamGrid[6, i].Value);
+                        }
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i < otherTeamGrid.Rows.Count; i++)
+                    {
+                        object value = otherTeamGrid[6, i].Value;
+                        if (value is DraftPick && (value as DraftPick).Equals(item as DraftPick))
+                        {
+                            otherTeamGrid.Rows[i].Cells[0].Value = true;
+                            otherTeamTradeInfo.Rows.Add(otherTeamGrid[1, i].Value, otherTeamGrid[6, i].Value);
+                        }
+                    }
+                }
+            }
+            foreach (object item in prevTrade.GetTeamTwoTradeItems())
+            {
+                if (item is player)
+                {
+                    for (int i = 0; i < mainTeamGrid.Rows.Count; i++)
+                    {
+                        object value = mainTeamGrid[6, i].Value;
+                        if (value is player && (value as player).Equals(item as player))
+                        {
+                            mainTeamGrid.Rows[i].Cells[0].Value = true;
+                            mainTeamTradeInfo.Rows.Add(mainTeamGrid[1, i].Value, mainTeamGrid[6, i].Value);
+                        }
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i < mainTeamGrid.Rows.Count; i++)
+                    {
+                        object value = mainTeamGrid[6, i].Value;
+                        if (value is DraftPick && (value as DraftPick).Equals(item as DraftPick))
+                        {
+                            mainTeamGrid.Rows[i].Cells[0].Value = true;
+                            mainTeamTradeInfo.Rows.Add(mainTeamGrid[1, i].Value, mainTeamGrid[6, i].Value);
+                        }
+                    }
+                }
+            }
         }
 
         private void teamList_SelectedIndexChanged(object sender, EventArgs e)

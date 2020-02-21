@@ -1503,6 +1503,201 @@ public class team : IComparable<team>,  IEnumerable<player>
             }
         }
     }
+    public void TradeOccurred(List<object> tradedItems, List<object> receivedItems, FreeAgents freeAgents, bool human)
+    {
+        List<player> players = new List<player>(activePlayers);
+        players.AddRange(affiliate.activePlayers);
+
+        foreach(object obj in tradedItems)
+        {
+            if(obj is player)
+            {
+                players.Remove(obj as player);
+            }
+            else
+            {
+                DraftPick pick = obj as DraftPick;
+                if(!picks.Remove(pick))
+                {
+                    nextSeasonPicks.Remove(pick);
+                }
+            }
+        }
+        foreach(object obj in receivedItems)
+        {
+            if (obj is player)
+            {
+                players.Add(obj as player);
+            }
+            else
+            {
+                DraftPick pick = obj as DraftPick;
+                if (pick.GetSeason() == createTeams.currentSeason)
+                    picks.Add(pick);
+                else
+                    nextSeasonPicks.Add(pick);
+                
+            }
+        }
+
+        if (human)
+        {
+            new DepthChart(this, players).ShowDialog();
+        }
+        else
+        {
+            players.Sort();
+            players.Reverse();
+
+            List<player> pgs = new List<player>(), sgs = new List<player>(), pfs = new List<player>(), sfs = new List<player>(), cs = new List<player>();
+            foreach (player p in players)
+            {
+                if (p != null)
+                    switch (p.getPosition())
+                    {
+                        case 1:
+                            cs.Add(p);
+                            break;
+                        case 2:
+                            pfs.Add(p);
+                            break;
+                        case 3:
+                            sfs.Add(p);
+                            break;
+                        case 4:
+                            sgs.Add(p);
+                            break;
+                        case 5:
+                            pgs.Add(p);
+                            break;
+                    }
+            }
+            if(cs.Count < 6)
+            {
+                while(cs.Count < 6)
+                {
+                    player p = freeAgents.GetTopPlayerByPos(1);
+                    cs.Add(p);
+                    p.setTeam(this);
+                    p.SetNewContract(new Contract(1, 1));
+                    p.SetSeasonStats(new List<StatsHolders>());
+                }
+            }
+            else if(cs.Count > 6)
+            {
+                while (cs.Count > 6)
+                {
+                    cs[cs.Count - 1].setTeam(null);
+                    freeAgents.Add(cs[cs.Count - 1]);
+                    cs.Remove(cs[cs.Count - 1]);
+                }
+            }
+            if (pfs.Count < 6)
+            {
+                while (pfs.Count < 6)
+                {
+                    player p = freeAgents.GetTopPlayerByPos(2);
+                    pfs.Add(p);
+                    p.setTeam(this);
+                    p.SetNewContract(new Contract(1, 1));
+                    p.SetSeasonStats(new List<StatsHolders>());
+                }
+            }
+            else if (pfs.Count > 6)
+            {
+                while (pfs.Count > 6)
+                {
+                    pfs[pfs.Count - 1].setTeam(null);
+                    freeAgents.Add(pfs[pfs.Count - 1]);
+                    pfs.Remove(pfs[pfs.Count - 1]);
+                }
+            }
+            if (sfs.Count < 6)
+            {
+                while (sfs.Count < 6)
+                {
+                    player p = freeAgents.GetTopPlayerByPos(3);
+                    sfs.Add(p);
+                    p.setTeam(this);
+                    p.SetNewContract(new Contract(1, 1));
+                    p.SetSeasonStats(new List<StatsHolders>());
+                }
+            }
+            else if (sfs.Count > 6)
+            {
+                while (sfs.Count > 6)
+                {
+                    sfs[sfs.Count - 1].setTeam(null);
+                    freeAgents.Add(sfs[sfs.Count - 1]);
+                    sfs.Remove(sfs[sfs.Count - 1]);
+                }
+            }
+            if (sgs.Count < 6)
+            {
+                while (sgs.Count < 6)
+                {
+                    player p = freeAgents.GetTopPlayerByPos(4);
+                    sgs.Add(p);
+                    p.setTeam(this);
+                    p.SetNewContract(new Contract(1, 1));
+                    p.SetSeasonStats(new List<StatsHolders>());
+                }
+            }
+            else if (sgs.Count > 6)
+            {
+                while (sgs.Count > 6)
+                {
+                    sgs[sgs.Count - 1].setTeam(null);
+                    freeAgents.Add(sgs[sgs.Count - 1]);
+                    sgs.Remove(sgs[sgs.Count - 1]);
+                }
+            }
+            if (pgs.Count < 6)
+            {
+                while (pgs.Count < 6)
+                {
+                    player p = freeAgents.GetTopPlayerByPos(5);
+                    pgs.Add(p);
+                    p.setTeam(this);
+                    p.SetNewContract(new Contract(1, 1));
+                    p.SetSeasonStats(new List<StatsHolders>());
+                }
+            }
+            else if (pgs.Count > 6)
+            {
+                while (pgs.Count > 6)
+                {
+                    pgs[pgs.Count - 1].setTeam(null);
+                    freeAgents.Add(pgs[pgs.Count - 1]);
+                    pgs.Remove(pgs[pgs.Count - 1]);
+                }
+            }
+
+            activePlayers = new player[15];
+            affiliate.activePlayers = new player[15];
+            for (int i = 0; i < 6; i++)
+            {
+                if (i > 2)
+                {
+                    affiliate.activePlayers[(i - 3) * 5] = cs[i];
+                    affiliate.activePlayers[1 + (i - 3) * 5] = pfs[i];
+                    affiliate.activePlayers[2 + (i - 3) * 5] = sfs[i];
+                    affiliate.activePlayers[3 + (i - 3) * 5] = sgs[i];
+                    affiliate.activePlayers[4 + (i - 3) * 5] = pgs[i];
+
+                }
+                else
+                {
+                    activePlayers[i * 5] = cs[i];
+                    activePlayers[1 + i * 5] = pfs[i];
+                    activePlayers[2 + i * 5] = sfs[i];
+                    activePlayers[3 + i * 5] = sgs[i];
+                    activePlayers[4 + i * 5] = pgs[i];
+                }
+            }
+        }
+        
+    }
     public void OffSeasonAddPlayer(player p)
     {
         p.setTeam(this);

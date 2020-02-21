@@ -34,6 +34,7 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.teamRosterButton = new System.Windows.Forms.Button();
             this.statsButton = new System.Windows.Forms.Button();
             this.viewRosterButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
@@ -45,6 +46,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -84,12 +86,13 @@
             // 
             this.radioButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(145, 4);
+            this.radioButton1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.Location = new System.Drawing.Point(126, 3);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(78, 17);
+            this.radioButton1.Size = new System.Drawing.Size(116, 19);
             this.radioButton1.TabIndex = 15;
             this.radioButton1.Tag = "2";
-            this.radioButton1.Text = "Calto Cows";
+            this.radioButton1.Text = "Calto Cows   ";
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
@@ -97,9 +100,10 @@
             // 
             this.radioButton3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(138, 55);
+            this.radioButton3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton3.Location = new System.Drawing.Point(126, 54);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(92, 17);
+            this.radioButton3.Size = new System.Drawing.Size(116, 19);
             this.radioButton3.TabIndex = 17;
             this.radioButton3.Tag = "19";
             this.radioButton3.Text = "Dotruga Falno";
@@ -110,9 +114,10 @@
             // 
             this.radioButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(137, 29);
+            this.radioButton2.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.Location = new System.Drawing.Point(126, 28);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(93, 17);
+            this.radioButton2.Size = new System.Drawing.Size(116, 19);
             this.radioButton2.TabIndex = 16;
             this.radioButton2.Tag = "7";
             this.radioButton2.Text = "Solea Geysers";
@@ -124,12 +129,14 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.teamRosterButton, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.statsButton, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.viewRosterButton, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.saveButton, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.saveButton, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.tradeButton, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.standingsButton, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.loadButton, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.loadButton, 0, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -142,6 +149,17 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(374, 297);
             this.tableLayoutPanel1.TabIndex = 18;
             this.tableLayoutPanel1.Visible = false;
+            // 
+            // teamRosterButton
+            // 
+            this.teamRosterButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.teamRosterButton.Location = new System.Drawing.Point(190, 121);
+            this.teamRosterButton.Name = "teamRosterButton";
+            this.teamRosterButton.Size = new System.Drawing.Size(181, 53);
+            this.teamRosterButton.TabIndex = 11;
+            this.teamRosterButton.Text = "View Team Roster";
+            this.teamRosterButton.UseVisualStyleBackColor = true;
+            this.teamRosterButton.Click += new System.EventHandler(this.teamRosterButton_Click);
             // 
             // statsButton
             // 
@@ -161,14 +179,14 @@
             this.viewRosterButton.Name = "viewRosterButton";
             this.viewRosterButton.Size = new System.Drawing.Size(181, 53);
             this.viewRosterButton.TabIndex = 4;
-            this.viewRosterButton.Text = "View Roster";
+            this.viewRosterButton.Text = "View League Roster";
             this.viewRosterButton.UseVisualStyleBackColor = true;
             this.viewRosterButton.Click += new System.EventHandler(this.viewRosterButton_Click);
             // 
             // saveButton
             // 
             this.saveButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.saveButton.Location = new System.Drawing.Point(190, 121);
+            this.saveButton.Location = new System.Drawing.Point(190, 180);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(181, 53);
             this.saveButton.TabIndex = 9;
@@ -201,12 +219,13 @@
             // loadButton
             // 
             this.loadButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.loadButton.Location = new System.Drawing.Point(3, 121);
+            this.loadButton.Location = new System.Drawing.Point(3, 180);
             this.loadButton.Name = "loadButton";
             this.loadButton.Size = new System.Drawing.Size(181, 53);
             this.loadButton.TabIndex = 10;
             this.loadButton.Text = "Load File";
             this.loadButton.UseVisualStyleBackColor = true;
+            this.loadButton.Click += new System.EventHandler(this.loadButton_Click);
             // 
             // label1
             // 
@@ -262,6 +281,17 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(380, 405);
             this.tableLayoutPanel2.TabIndex = 22;
             // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.Enabled = false;
+            this.button1.Location = new System.Drawing.Point(3, 121);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(181, 53);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Multi Team Trade (coming soon)";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // InSeasonViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -300,5 +330,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Button teamRosterButton;
+        private System.Windows.Forms.Button button1;
     }
 }

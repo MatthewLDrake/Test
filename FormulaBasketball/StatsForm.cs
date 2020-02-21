@@ -136,8 +136,8 @@ namespace FormulaBasketball
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
             dLeague = checkBox2.Checked;
-            UpdateStats();
             UpdateList();
+            teamList.SelectedIndex = viewingNumber;
         }
 
         private void teamList_SelectedIndexChanged(object sender, EventArgs e)

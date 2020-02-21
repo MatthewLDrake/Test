@@ -146,6 +146,11 @@ namespace FormulaBasketball
             StatsForm statsForm = new StatsForm(create, teamNum);
             statsForm.ShowDialog();
         }
+        private void LaunchTeamRoster()
+        {
+            TeamRoster rosterForm = new TeamRoster(create, teamNum);
+            rosterForm.ShowDialog();
+        }
         private void standingsButton_Click(object sender, EventArgs e)
         {
             System.Threading.Thread thread = new System.Threading.Thread(LaunchStandings);
@@ -157,6 +162,7 @@ namespace FormulaBasketball
             System.Threading.Thread thread = new System.Threading.Thread(LaunchRoster);
             thread.Start();
         }
+        
         private void statsButton_Click(object sender, EventArgs e)
         {
             System.Threading.Thread thread = new System.Threading.Thread(LaunchStats);
@@ -176,5 +182,59 @@ namespace FormulaBasketball
                 tradeForm.ShowDialog();
             }
         }
+
+        private void teamRosterButton_Click(object sender, EventArgs e)
+        {
+            System.Threading.Thread thread = new System.Threading.Thread(LaunchTeamRoster);
+            thread.Start();
+        }
+
+        private void loadButton_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.Title = "Open Formula Basketball File";
+            fileDialog.Filter = "FBData files (*.fbdata)|*.fbdata|FBTrade files (*.fbtrade)|*.fbtrade|FB Trade Response File (*.fbtr)|*.fbtr";
+            fileDialog.Multiselect = false;
+            if (fileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string fileName = fileDialog.FileName;
+                string extension = Path.GetExtension(fileName);
+
+                if(extension.Equals(".fbtrade"))
+                {
+                    Trade trade = TradeForm.DeSerializeObject(fileName);
+                    if (trade.CanView(team.ToString()))
+                    {
+                        OfferedTrade offer = new OfferedTrade(trade, create);
+                        offer.ShowDialog();
+                    }
+                    
+                    // TODO: something with trades
+                }
+                else if(extension.Equals(".fbdata"))
+                {
+                    create = formulaBasketball.DeSerializeObject(fileName);
+                    team = create.getTeam(teamNum);
+                }
+                else if(extension.Equals(".fbtr"))
+                {
+                    try
+                    {
+                        Trade t = TradeForm.DeSerializeObject(fileName);
+                        team teamOne = create.getTeam(t.teamOneID);
+                        team teamTwo = create.getTeam(t.teamTwoID);
+
+                        teamOne.TradeOccurred(t.GetTeamOneTradeItems(), t.GetTeamTwoTradeItems(), create.getFreeAgents(), teamNum == t.teamOneID);
+                        teamTwo.TradeOccurred(t.GetTeamTwoTradeItems(), t.GetTeamOneTradeItems(), create.getFreeAgents(), teamNum == t.teamTwoID);
+                    }
+                    catch(Exception)
+                    {
+                        MessageBox.Show("Trade was rejected");
+                    }
+                }
+            }
+            
+        }
+        
     }
 }

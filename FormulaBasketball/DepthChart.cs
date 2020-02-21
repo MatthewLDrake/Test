@@ -18,7 +18,8 @@ namespace FormulaBasketball
         public DepthChart(team team)
         {
             InitializeComponent();
-            players = team.GetOffSeasonPlayers();
+            players = new List<player>(team.getActivePlayers());
+            players.AddRange(team.GetAffiliate().getActivePlayers());
             playersAtPosition = new List<List<player>>();
             for(int i = 0; i < 5; i++)
             {
@@ -28,6 +29,23 @@ namespace FormulaBasketball
             {
                 if(p != null)
                     playersAtPosition[p.getPosition()- 1].Add(p);
+            }
+            comboBox1.SelectedIndex = 0;
+            this.team = team;
+        }
+        public DepthChart(team team, List<player> players)
+        {
+            InitializeComponent();
+            this.players = players;
+            playersAtPosition = new List<List<player>>();
+            for (int i = 0; i < 5; i++)
+            {
+                playersAtPosition.Add(new List<player>());
+            }
+            foreach (player p in players)
+            {
+                if (p != null)
+                    playersAtPosition[p.getPosition() - 1].Add(p);
             }
             comboBox1.SelectedIndex = 0;
             this.team = team;
