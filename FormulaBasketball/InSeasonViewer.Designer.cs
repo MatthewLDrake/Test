@@ -47,6 +47,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
+            this.scrimmageButton = new System.Windows.Forms.Button();
+            this.newCoachesButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -129,6 +131,8 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.newCoachesButton, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.scrimmageButton, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.button1, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.teamRosterButton, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.statsButton, 0, 0);
@@ -292,6 +296,28 @@
             this.button1.Text = "Multi Team Trade (coming soon)";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // scrimmageButton
+            // 
+            this.scrimmageButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scrimmageButton.Location = new System.Drawing.Point(190, 239);
+            this.scrimmageButton.Name = "scrimmageButton";
+            this.scrimmageButton.Size = new System.Drawing.Size(181, 55);
+            this.scrimmageButton.TabIndex = 13;
+            this.scrimmageButton.Text = "Scrimmage";
+            this.scrimmageButton.UseVisualStyleBackColor = true;
+            this.scrimmageButton.Click += new System.EventHandler(this.scrimmageButton_Click);
+            // 
+            // newCoachesButton
+            // 
+            this.newCoachesButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.newCoachesButton.Enabled = false;
+            this.newCoachesButton.Location = new System.Drawing.Point(3, 239);
+            this.newCoachesButton.Name = "newCoachesButton";
+            this.newCoachesButton.Size = new System.Drawing.Size(181, 55);
+            this.newCoachesButton.TabIndex = 14;
+            this.newCoachesButton.Text = "Test New Coaches";
+            this.newCoachesButton.UseVisualStyleBackColor = true;
+            // 
             // InSeasonViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -332,5 +358,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button teamRosterButton;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button newCoachesButton;
+        private System.Windows.Forms.Button scrimmageButton;
     }
 }

@@ -155,6 +155,26 @@ public class createTeams
 
 
     }
+    public void Clean()
+    {
+        rookies = null;
+        dLeagueTeams = null;
+        foreach(team team in teams)
+        {
+            foreach(player p in team)
+            {
+                p.setPreviousTeam(null);
+            }
+            foreach(player p in team.GetAffiliate())
+            {
+                p.setPreviousTeam(null);
+            }
+        }
+        foreach(player p in freeAgents.GetAllPlayers())
+        {
+            p.setPreviousTeam(null);
+        }
+    }
     public void playGames(int firstGame, int lastGame, FormulaBasketball.Random r)
     {
         for(int i = firstGame - 1; i < lastGame; i++)

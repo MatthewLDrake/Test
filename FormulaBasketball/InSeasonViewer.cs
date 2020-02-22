@@ -19,14 +19,17 @@ namespace FormulaBasketball
         private bool master;
         private createTeams create;
         private team team;
+        
         public InSeasonViewer(createTeams create)
         {
             InitializeComponent();
-            this.create = create;           
-            foreach(team t in create.getTeams())
+            this.create = create;
+            foreach (team team in create.getTeams())
             {
-                t.UpdateDraftPicks();
+                team.CleanPlayers();
+                team.GetAffiliate().CleanPlayers();
             }
+            create.Clean();
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -151,6 +154,11 @@ namespace FormulaBasketball
             TeamRoster rosterForm = new TeamRoster(create, teamNum);
             rosterForm.ShowDialog();
         }
+        private void LaunchScrimamgeForm()
+        {
+            ScrimmageForm form = new ScrimmageForm(create, teamNum);
+            form.ShowDialog();
+        }
         private void standingsButton_Click(object sender, EventArgs e)
         {
             System.Threading.Thread thread = new System.Threading.Thread(LaunchStandings);
@@ -234,6 +242,12 @@ namespace FormulaBasketball
                 }
             }
             
+        }
+
+        private void scrimmageButton_Click(object sender, EventArgs e)
+        {
+            System.Threading.Thread thread = new System.Threading.Thread(LaunchScrimamgeForm);
+            thread.Start();
         }
         
     }

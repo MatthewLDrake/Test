@@ -101,6 +101,14 @@ public class game
                 mostPoints = p.getGamePoints();
             }
         }
+        foreach (player p in homeTeam)
+        {
+            if (p.getGamePoints() > mostPoints)
+            {
+                highestScorer = p;
+                mostPoints = p.getGamePoints();
+            }
+        }
         return highestScorer;
     }
     public player GetGameRebound()
@@ -108,6 +116,14 @@ public class game
         int mostRebounds = 0;
         player highestRebounder = null;
         foreach (player p in awayTeam)
+        {
+            if (p.getGameRebounds() > mostRebounds)
+            {
+                highestRebounder = p;
+                mostRebounds = p.getGameRebounds();
+            }
+        }
+        foreach (player p in homeTeam)
         {
             if (p.getGameRebounds() > mostRebounds)
             {
@@ -127,6 +143,14 @@ public class game
             {
                 highestAssister = p;
                 mostAssists = p.getGameAssists();
+            }
+        }
+        foreach (player p in homeTeam)
+        {
+            if (p.getGameRebounds() > mostAssists)
+            {
+                highestAssister = p;
+                mostAssists = p.getGameRebounds();
             }
         }
         return highestAssister;

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using FormulaBasketball;
 using System.Globalization;
 using System.Drawing;
+using System.IO;
 
 [Serializable]
 public class team : IComparable<team>,  IEnumerable<player>
@@ -65,6 +66,26 @@ public class team : IComparable<team>,  IEnumerable<player>
         if (affiliate) return content;
         else return content + this.affiliate.SaveTeam(true);
     }
+    /*public void Save()
+    {
+        Directory.CreateDirectory(teamName);
+        
+        foreach(player p in activePlayers)
+        {
+            p.setTeam(null);
+            p.setPreviousTeam(null);
+            formulaBasketball.SerializeObject(p, teamName + "/" + p.getName() + ".fbplayer");
+        }
+        foreach(player p in affiliate.activePlayers)
+        {
+            p.setTeam(null);
+            p.setPreviousTeam(null);
+            formulaBasketball.SerializeObject(p, teamName + "/" + p.getName() + ".fbplayer");
+        }
+        formulaBasketball.SerializeObject(this, teamName + "/teamObj.fbteam");
+    }*/
+
+   
     public team(String teamInfo, String affiliate, FormulaBasketball.Random r, bool isAffiliate)
     {
         playersPerPos = new int[5];
@@ -366,6 +387,12 @@ public class team : IComparable<team>,  IEnumerable<player>
             if (pos == activePlayers[i].getPosition()) retVal++;
         }
         return retVal;
+    }
+    public void CleanPlayers()
+    {
+        players = null;
+        offseasonPlayers = null;
+        mockPlayerList = null;
     }
     public List<player> ClearPlayers()
     {

@@ -422,6 +422,32 @@ public class formulaBasketball
     /// </summary>
     /// <param name="serializableObject"></param>
     /// <param name="fileName"></param>
+    public static void SerializeObject(object serializableObject, string fileName)
+    {
+        FileStream fs = new FileStream(fileName, FileMode.Create);
+
+        // Construct a BinaryFormatter and use it to serialize the data to the stream.
+        BinaryFormatter formatter = new BinaryFormatter();
+        try
+        {
+            formatter.Serialize(fs, serializableObject);
+        }
+        catch (SerializationException e)
+        {
+            Console.WriteLine("Failed to serialize. Reason: " + e.Message);
+            throw;
+        }
+        finally
+        {
+            fs.Close();
+        }
+    }
+
+    /// <summary>
+    /// Serializes an object.
+    /// </summary>
+    /// <param name="serializableObject"></param>
+    /// <param name="fileName"></param>
     public static void SerializeObject(team serializableObject, string fileName)
     {
         FileStream fs = new FileStream(fileName, FileMode.Create);
