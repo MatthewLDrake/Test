@@ -46,6 +46,17 @@ public class Coach
         preferredShotType = coachShotType.BALANCED;
         superStarInvolvment = ssInvolvment.MEDIUM;
     }
+    private OffensivePhilosophy offensivePhilosophy;
+    private DefensivePhilosophy defensivePhilosophy;
+    // New style of coach
+    public Coach(string name, OffensivePhilosophy offense, DefensivePhilosophy defense)
+    {
+        this.name = name;
+        offensivePhilosophy = offense;
+        defensivePhilosophy = defense;
+    }
+
+
     public string SaveTeam()
     {
         string content = "<coach>";
@@ -150,4 +161,12 @@ public class Coach
         return r.Next(0, 100) + 1 < (int)superStarInvolvment;
 
     }
+}
+public enum OffensivePhilosophy
+{
+    Seven_Second_Offense
+}
+public enum DefensivePhilosophy
+{
+    Man
 }

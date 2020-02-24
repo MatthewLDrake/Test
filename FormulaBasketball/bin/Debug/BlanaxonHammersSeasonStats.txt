@@ -1,41 +1,41 @@
 Blanaxon Hammers Stats
-Player Record of Points: Nobira Nariaki: 24 points on game 7 against the TND Tanks
-Player Record of Assists: Nobira Nariaki: 16 assists on game 9 against the Ethanthova Ponies
-Player Record of Rebounds: Nobira Nariaki: 10 rebounds on game 9 against the Ethanthova Ponies
+Player Record of Points: Nobira Nariaki: 30 points on game 32 against the TND Tanks
+Player Record of Assists: Nobira Nariaki: 19 assists on game 32 against the TND Tanks
+Player Record of Rebounds: Reinhard Waldstein: 12 rebounds on game 16 against the Serkr Atolls
 Team Record in Most Points Scored: Blanaxon Hammers: 117 points on game 3 against the Red Rainbow Sickles
-Team Record in Least Points Scored: Blanaxon Hammers: 81 points on game 1 against the Dotruga Falno
-Team Record in Least Points Allowed: Blanaxon Hammers: 77 points on game 2 against the Aiyota Pumps
+Team Record in Least Points Scored: Blanaxon Hammers: 77 points on game 26 against the Height Sagua Cats
+Team Record in Least Points Allowed: Blanaxon Hammers: 73 points on game 21 against the Aahrus Moosi
 Team Record in Most Points Allowed: Blanaxon Hammers: 112 points on game 12 against the Manwx Saguans
 Records vs. Each Team this season:
-Aahrus Moosi: 0-0
+Aahrus Moosi: 2-0
 Auspikitan Golden Falcons: 0-0
-Calto Cows: 0-0
-Height Sagua Cats: 0-0
-Key to Don Yees: 1-1
+Calto Cows: 0-1
+Height Sagua Cats: 1-0
+Key to Don Yees: 2-1
 Manwx Saguans: 1-1
 Sagua Ocelots: 0-0
-Solea Geysers: 0-0
-Autolik Autonomy: 0-0
+Solea Geysers: 0-1
+Autolik Autonomy: 0-1
 Barsein Bats: 0-0
 Blanaxon Hammers: 0-0
-Kaeshar Kaisers: 0-0
+Kaeshar Kaisers: 1-1
 Naxda Nomads: 0-0
-Red Rainbow Sickles: 1-0
-Serkr Atolls: 1-0
-Shmupland Dictators: 0-0
+Red Rainbow Sickles: 2-0
+Serkr Atolls: 1-1
+Shmupland Dictators: 0-2
 Aiyota Pumps: 1-0
 Avura Aviators: 0-1
 Boltway Bad Dragons: 0-0
-Dotruga Falno: 0-1
-Ethanthova Ponies: 0-1
-Faehrenfall Feathercats: 0-0
-Stedro Boulders: 0-0
-TND Tanks: 1-0
+Dotruga Falno: 0-2
+Ethanthova Ponies: 1-1
+Faehrenfall Feathercats: 0-1
+Stedro Boulders: 1-0
+TND Tanks: 2-0
 Bongatar Banging Bongos: 0-0
 Czalliso Pythons: 0-0
 Dvimne Spirits: 0-0
-Holy Yektonisa Bishops: 0-0
+Holy Yektonisa Bishops: 1-0
 Holykol Bears: 0-0
 Lyintaria Lynx: 0-0
 Pyxanovia Pixies: 1-0
-Transhimalia Disasters: 0-0
+Transhimalia Disasters: 1-0

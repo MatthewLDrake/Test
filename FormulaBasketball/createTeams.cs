@@ -131,7 +131,7 @@ public class createTeams
             t.FixStats();
         }
         
-        */
+        
 
         freeAgents.Fix();
 
@@ -151,8 +151,8 @@ public class createTeams
         {
             t.FixDuplicatePlayers();
             t.GetAffiliate().FixDuplicatePlayers();
-        }
-
+        }*/
+        
 
     }
     public void Clean()

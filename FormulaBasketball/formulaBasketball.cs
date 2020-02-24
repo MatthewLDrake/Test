@@ -1104,6 +1104,12 @@ public class formulaBasketball
         homeTeam.addModifier(new HomeTeam());
         awayTeam.addModifier(awayTeam.getCoachModifier());
         homeTeam.addModifier(homeTeam.getCoachModifier());
+
+        if (i == 19 && dLeague)
+            awayTeam.addModifier(new TeamImplosion());
+        else if (j == 19 && dLeague)
+            homeTeam.addModifier(new TeamImplosion());
+
         game newGame = new game(gameWriter, awayTeam, homeTeam, r);
 
 

@@ -9,81 +9,81 @@ namespace FormulaBasketball
     [Serializable]
     public class StatsHolders
     {
-        private int[] stats;
+        private byte[] smallStats;
         private string team, opponent;
-        public StatsHolders(team team, int[] stats, team opponent)
+        public StatsHolders(team team, byte[] stats, team opponent)
         {
             this.team = team.ToString();
-            this.stats = stats;
+            this.smallStats = stats;
             this.opponent = opponent.ToString();
         }
         public int getPoints()
         {
-            return stats[0];
+            return smallStats[0];
         }
         public int getShotsTaken()
         {
-            return stats[1];
+            return smallStats[1];
         }
         public int getShotsMade()
         {
-            return stats[2];
+            return smallStats[2];
         }
         public int getAssists()
         {
-            return stats[3];
+            return smallStats[3];
         }
         public int getTurnovers()
         {
-            return stats[4];
+            return smallStats[4];
         }
         public int getSteals()
         {
-            return stats[5];
+            return smallStats[5];
         }
         public int getMinutes()
         {
-            return (int)Math.Round(stats[6] / 60.0);
+            return smallStats[6];
         }
         public int getRebounds()
         {
-            return stats[7];
+            return smallStats[7];
         }
         public int getOffensiveRebounds()
         {
-            return stats[8];
+            return smallStats[8];
         }
         public int getDefensiveRebounds()
         {
-            return stats[9];
+            return smallStats[9];
         }
         public int getFouls()
         {
-            return stats[10];
+            return smallStats[10];
         }
         public int getThreesTaken()
         {
-            return stats[11];
+            return smallStats[11];
         }
         public int getFreeThrowsTaken()
         {
-            return stats[12];
+            return smallStats[12];
         }
         public int getFreeThrowsMade()
         {
-            return stats[13];
+            return smallStats[13];
         }
         public int getThreePointersMade()
         {
-            return stats[14];
+            return smallStats[14];
         }
         public int getShotsAttemptedAgainst()
         {
-            return stats[15];
+            return smallStats[15];
         }
         public int getShotsMadeAgainst()
         {
-            return stats[16];
+            return smallStats[16];
         }
         public string GetTeamFor()
         {
@@ -93,5 +93,6 @@ namespace FormulaBasketball
         {
             return opponent;
         }
+        
     }
 }

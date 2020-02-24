@@ -143,6 +143,12 @@
       <DependentUpon>MockDraftView.cs</DependentUpon>
     </Compile>
     <Compile Include="NameGenerator.cs" />
+    <Compile Include="NamingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NamingForm.Designer.cs">
+      <DependentUpon>NamingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Negotiation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -479,6 +485,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MockDraftView.resx">
       <DependentUpon>MockDraftView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NamingForm.resx">
+      <DependentUpon>NamingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Negotiation.resx">
       <DependentUpon>Negotiation.cs</DependentUpon>

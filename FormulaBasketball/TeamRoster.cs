@@ -45,7 +45,7 @@ namespace FormulaBasketball
         }
         private void AddPlayerToGrid(player p)
         {
-            playerGrid.Rows.Add(p.GetCountry(), p.getName(), p.age, p.getLayupRating(false), p.getDunkRating(false), p.getJumpShotRating(false), p.getThreeShotRating(false), p.getPassing(false), p.getShotContestRating(false), p.getDefenseIQRating(false), p.getJumpingRating(false), p.getSeperation(false), p.getDurabilityRating(false), p.getStaminaRating(false), p.getDevelopment(), p.getOverall());          
+            playerGrid.Rows.Add(p.GetCountry(), p.getName(), p.getPosition(), p.age, p.getLayupRating(false), p.getDunkRating(false), p.getJumpShotRating(false), p.getThreeShotRating(false), p.getPassing(false), p.getShotContestRating(false), p.getDefenseIQRating(false), p.getJumpingRating(false), p.getSeperation(false), p.getDurabilityRating(false), p.getStaminaRating(false), p.getDevelopment(), p.getOverall());          
         }
         private void UpdateRatings()
         {

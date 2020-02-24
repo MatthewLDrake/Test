@@ -34,6 +34,9 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.newCoachesButton = new System.Windows.Forms.Button();
+            this.scrimmageButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.teamRosterButton = new System.Windows.Forms.Button();
             this.statsButton = new System.Windows.Forms.Button();
             this.viewRosterButton = new System.Windows.Forms.Button();
@@ -46,9 +49,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.scrimmageButton = new System.Windows.Forms.Button();
-            this.newCoachesButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -153,6 +153,39 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(374, 297);
             this.tableLayoutPanel1.TabIndex = 18;
             this.tableLayoutPanel1.Visible = false;
+            // 
+            // newCoachesButton
+            // 
+            this.newCoachesButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.newCoachesButton.Location = new System.Drawing.Point(3, 239);
+            this.newCoachesButton.Name = "newCoachesButton";
+            this.newCoachesButton.Size = new System.Drawing.Size(181, 55);
+            this.newCoachesButton.TabIndex = 14;
+            this.newCoachesButton.Text = "Name Players";
+            this.newCoachesButton.UseVisualStyleBackColor = true;
+            this.newCoachesButton.Click += new System.EventHandler(this.newCoachesButton_Click);
+            // 
+            // scrimmageButton
+            // 
+            this.scrimmageButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scrimmageButton.Location = new System.Drawing.Point(190, 239);
+            this.scrimmageButton.Name = "scrimmageButton";
+            this.scrimmageButton.Size = new System.Drawing.Size(181, 55);
+            this.scrimmageButton.TabIndex = 13;
+            this.scrimmageButton.Text = "Scrimmage";
+            this.scrimmageButton.UseVisualStyleBackColor = true;
+            this.scrimmageButton.Click += new System.EventHandler(this.scrimmageButton_Click);
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.Enabled = false;
+            this.button1.Location = new System.Drawing.Point(3, 121);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(181, 53);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Multi Team Trade (coming soon)";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // teamRosterButton
             // 
@@ -284,39 +317,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(380, 405);
             this.tableLayoutPanel2.TabIndex = 22;
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(3, 121);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(181, 53);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Multi Team Trade (coming soon)";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // scrimmageButton
-            // 
-            this.scrimmageButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scrimmageButton.Location = new System.Drawing.Point(190, 239);
-            this.scrimmageButton.Name = "scrimmageButton";
-            this.scrimmageButton.Size = new System.Drawing.Size(181, 55);
-            this.scrimmageButton.TabIndex = 13;
-            this.scrimmageButton.Text = "Scrimmage";
-            this.scrimmageButton.UseVisualStyleBackColor = true;
-            this.scrimmageButton.Click += new System.EventHandler(this.scrimmageButton_Click);
-            // 
-            // newCoachesButton
-            // 
-            this.newCoachesButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.newCoachesButton.Enabled = false;
-            this.newCoachesButton.Location = new System.Drawing.Point(3, 239);
-            this.newCoachesButton.Name = "newCoachesButton";
-            this.newCoachesButton.Size = new System.Drawing.Size(181, 55);
-            this.newCoachesButton.TabIndex = 14;
-            this.newCoachesButton.Text = "Test New Coaches";
-            this.newCoachesButton.UseVisualStyleBackColor = true;
             // 
             // InSeasonViewer
             // 

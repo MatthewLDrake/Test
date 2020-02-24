@@ -301,40 +301,12 @@ namespace FormulaBasketball
                 try
                 {
                     Trade t = TradeForm.DeSerializeObject(theDialog.FileName);
+
                     team teamOne = create.getTeam(t.teamOneID);
                     team teamTwo = create.getTeam(t.teamTwoID);
 
-                    foreach (Object item in t.GetTeamOneTradeItems())
-                    {
-                        if (item is player)
-                        {
-                            player p = item as player;
-                            teamOne.OffSeasonRemovePlayer(p);
-                            teamTwo.OffSeasonAddPlayer(p);
-                        }
-                        else if (item is DraftPick)
-                        {
-                            DraftPick p = item as DraftPick;
-                            teamOne.RemoveDraftPick(p, p.GetSeason() == 6);
-                            teamTwo.AddDraftPick(p, p.GetSeason() == 6);
-                        }
-                    }
-                    foreach (Object item in t.GetTeamTwoTradeItems())
-                    {
-                        if (item is player)
-                        {
-                            player p = item as player;
-                            teamTwo.OffSeasonRemovePlayer(p);
-                            teamOne.OffSeasonAddPlayer(p);
-                        }
-                        else if (item is DraftPick)
-                        {
-                            DraftPick p = item as DraftPick;
-                            teamTwo.RemoveDraftPick(p, p.GetSeason() == 6);
-                            teamOne.AddDraftPick(p, p.GetSeason() == 6);
-                        }
-                    }
-                    FormulaBasketball.Menu.menu.UpdatePicks();
+                    teamOne.TradeOccurred(t.GetTeamOneTradeItems(), t.GetTeamTwoTradeItems(), create.getFreeAgents(), false);
+                    teamTwo.TradeOccurred(t.GetTeamTwoTradeItems(), t.GetTeamOneTradeItems(), create.getFreeAgents(), false);
                 }
                 catch (Exception)
                 {

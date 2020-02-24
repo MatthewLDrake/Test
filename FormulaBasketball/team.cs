@@ -388,12 +388,7 @@ public class team : IComparable<team>,  IEnumerable<player>
         }
         return retVal;
     }
-    public void CleanPlayers()
-    {
-        players = null;
-        offseasonPlayers = null;
-        mockPlayerList = null;
-    }
+   
     public List<player> ClearPlayers()
     {
         List<player> retVal = new List<player>();

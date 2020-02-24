@@ -1,11 +1,11 @@
 Stedro Boulders Stats
-Player Record of Points: Vince Fowler: 24 points on game 11 against the Manwx Saguans
+Player Record of Points: Vince Fowler: 30 points on game 15 against the TND Tanks
 Player Record of Assists: Vince Fowler: 20 assists on game 4 against the Bongatar Banging Bongos
 Player Record of Rebounds: Mabebosei Alotro: 12 rebounds on game 11 against the Manwx Saguans
-Team Record in Most Points Scored: Stedro Boulders: 114 points on game 3 against the Auspikitan Golden Falcons
+Team Record in Most Points Scored: Stedro Boulders: 117 points on game 15 against the TND Tanks
 Team Record in Least Points Scored: Stedro Boulders: 74 points on game 2 against the Key to Don Yees
 Team Record in Least Points Allowed: Stedro Boulders: 78 points on game 11 against the Manwx Saguans
-Team Record in Most Points Allowed: Stedro Boulders: 106 points on game 3 against the Auspikitan Golden Falcons
+Team Record in Most Points Allowed: Stedro Boulders: 116 points on game 29 against the Solea Geysers
 Records vs. Each Team this season:
 Aahrus Moosi: 0-0
 Auspikitan Golden Falcons: 1-0
@@ -14,28 +14,28 @@ Height Sagua Cats: 0-0
 Key to Don Yees: 0-1
 Manwx Saguans: 1-0
 Sagua Ocelots: 0-0
-Solea Geysers: 0-1
-Autolik Autonomy: 0-1
-Barsein Bats: 0-0
-Blanaxon Hammers: 0-0
-Kaeshar Kaisers: 0-1
+Solea Geysers: 0-2
+Autolik Autonomy: 0-2
+Barsein Bats: 1-0
+Blanaxon Hammers: 0-1
+Kaeshar Kaisers: 0-2
 Naxda Nomads: 0-0
 Red Rainbow Sickles: 0-0
 Serkr Atolls: 0-0
-Shmupland Dictators: 0-0
-Aiyota Pumps: 0-0
-Avura Aviators: 0-0
+Shmupland Dictators: 1-0
+Aiyota Pumps: 1-0
+Avura Aviators: 1-0
 Boltway Bad Dragons: 0-1
-Dotruga Falno: 0-0
-Ethanthova Ponies: 0-0
-Faehrenfall Feathercats: 0-0
+Dotruga Falno: 1-2
+Ethanthova Ponies: 0-1
+Faehrenfall Feathercats: 0-1
 Stedro Boulders: 0-0
-TND Tanks: 0-1
+TND Tanks: 3-1
 Bongatar Banging Bongos: 1-1
 Czalliso Pythons: 0-0
 Dvimne Spirits: 0-1
-Holy Yektonisa Bishops: 0-0
+Holy Yektonisa Bishops: 1-1
 Holykol Bears: 0-0
-Lyintaria Lynx: 0-0
-Pyxanovia Pixies: 0-0
+Lyintaria Lynx: 1-0
+Pyxanovia Pixies: 0-1
 Transhimalia Disasters: 0-0

@@ -1,15 +1,15 @@
 Boltway Bad Dragons Stats
-Player Record of Points: Litsaw Wap't'ebw: 24 points on game 8 against the Pyxanovia Pixies
-Player Record of Assists: Litsaw Wap't'ebw: 13 assists on game 9 against the Naxda Nomads
-Player Record of Rebounds: Boḿa Blamhákpwano: 8 rebounds on game 7 against the Shmupland Dictators
-Team Record in Most Points Scored: Boltway Bad Dragons: 118 points on game 3 against the Manwx Saguans
+Player Record of Points: Litsaw Wap't'ebw: 28 points on game 26 against the Aiyota Pumps
+Player Record of Assists: Litsaw Wap't'ebw: 14 assists on game 18 against the Dotruga Falno
+Player Record of Rebounds: Kosiro Omundi: 11 rebounds on game 18 against the Dotruga Falno
+Team Record in Most Points Scored: Boltway Bad Dragons: 121 points on game 17 against the TND Tanks
 Team Record in Least Points Scored: Boltway Bad Dragons: 84 points on game 6 against the Stedro Boulders
-Team Record in Least Points Allowed: Boltway Bad Dragons: 81 points on game 6 against the Stedro Boulders
+Team Record in Least Points Allowed: Boltway Bad Dragons: 75 points on game 14 against the Dotruga Falno
 Team Record in Most Points Allowed: Boltway Bad Dragons: 118 points on game 1 against the Kaeshar Kaisers
 Records vs. Each Team this season:
 Aahrus Moosi: 0-0
 Auspikitan Golden Falcons: 0-0
-Calto Cows: 0-0
+Calto Cows: 0-1
 Height Sagua Cats: 0-0
 Key to Don Yees: 0-0
 Manwx Saguans: 1-0
@@ -18,24 +18,24 @@ Solea Geysers: 0-0
 Autolik Autonomy: 1-0
 Barsein Bats: 1-0
 Blanaxon Hammers: 0-0
-Kaeshar Kaisers: 0-1
-Naxda Nomads: 0-1
-Red Rainbow Sickles: 0-0
-Serkr Atolls: 0-0
-Shmupland Dictators: 1-0
-Aiyota Pumps: 0-0
+Kaeshar Kaisers: 0-2
+Naxda Nomads: 1-1
+Red Rainbow Sickles: 1-0
+Serkr Atolls: 1-0
+Shmupland Dictators: 1-1
+Aiyota Pumps: 2-0
 Avura Aviators: 0-0
 Boltway Bad Dragons: 0-0
-Dotruga Falno: 0-0
-Ethanthova Ponies: 0-0
-Faehrenfall Feathercats: 0-0
+Dotruga Falno: 2-1
+Ethanthova Ponies: 0-1
+Faehrenfall Feathercats: 0-1
 Stedro Boulders: 1-0
-TND Tanks: 0-0
-Bongatar Banging Bongos: 0-0
-Czalliso Pythons: 0-0
+TND Tanks: 2-0
+Bongatar Banging Bongos: 1-0
+Czalliso Pythons: 1-0
 Dvimne Spirits: 0-0
-Holy Yektonisa Bishops: 1-0
+Holy Yektonisa Bishops: 2-1
 Holykol Bears: 1-1
 Lyintaria Lynx: 0-0
 Pyxanovia Pixies: 1-0
-Transhimalia Disasters: 0-0
+Transhimalia Disasters: 0-1

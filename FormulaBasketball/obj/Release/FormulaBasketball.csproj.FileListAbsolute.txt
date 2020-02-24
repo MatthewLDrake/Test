@@ -131,3 +131,10 @@ C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release\FormulaBasketball.RosterControl.resources
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release\FormulaBasketball.StatsForm.resources
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release\FormulaBasketball.TeamSelector.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.GameViewer.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.InSeasonViewer.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.NamingForm.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.ScrimmageForm.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.StatsForm.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.TeamRoster.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.TradeFormAI.resources

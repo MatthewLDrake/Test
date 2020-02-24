@@ -24,12 +24,6 @@ namespace FormulaBasketball
         {
             InitializeComponent();
             this.create = create;
-            foreach (team team in create.getTeams())
-            {
-                team.CleanPlayers();
-                team.GetAffiliate().CleanPlayers();
-            }
-            create.Clean();
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -149,6 +143,11 @@ namespace FormulaBasketball
             StatsForm statsForm = new StatsForm(create, teamNum);
             statsForm.ShowDialog();
         }
+        private void LaunchNamingForm()
+        {
+            NamingForm namingForm = new NamingForm(create);
+            namingForm.ShowDialog();
+        }
         private void LaunchTeamRoster()
         {
             TeamRoster rosterForm = new TeamRoster(create, teamNum);
@@ -249,6 +248,11 @@ namespace FormulaBasketball
             System.Threading.Thread thread = new System.Threading.Thread(LaunchScrimamgeForm);
             thread.Start();
         }
-        
+
+        private void newCoachesButton_Click(object sender, EventArgs e)
+        {
+            System.Threading.Thread thread = new System.Threading.Thread(LaunchNamingForm);
+            thread.Start();
+        }
     }
 }

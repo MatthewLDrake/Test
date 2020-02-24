@@ -1,29 +1,29 @@
 Aahrus Moosi Stats
-Player Record of Points: Fihana Jo: 34 points on game 10 against the Solea Geysers
-Player Record of Assists: Fihana Jo: 7 assists on game 10 against the Solea Geysers
+Player Record of Points: Fihana Jo: 40 points on game 32 against the Auspikitan Golden Falcons
+Player Record of Assists: Akamu Phomsouvanh: 9 assists on game 18 against the Height Sagua Cats
 Player Record of Rebounds: Tibiziŋag Poi: 12 rebounds on game 9 against the Shmupland Dictators
 Team Record in Most Points Scored: Aahrus Moosi: 109 points on game 1 against the Pyxanovia Pixies
 Team Record in Least Points Scored: Aahrus Moosi: 67 points on game 9 against the Shmupland Dictators
 Team Record in Least Points Allowed: Aahrus Moosi: 81 points on game 9 against the Shmupland Dictators
-Team Record in Most Points Allowed: Aahrus Moosi: 111 points on game 3 against the Holy Yektonisa Bishops
+Team Record in Most Points Allowed: Aahrus Moosi: 117 points on game 32 against the Auspikitan Golden Falcons
 Records vs. Each Team this season:
 Aahrus Moosi: 0-0
-Auspikitan Golden Falcons: 1-0
+Auspikitan Golden Falcons: 2-2
 Calto Cows: 0-0
-Height Sagua Cats: 0-0
+Height Sagua Cats: 2-0
 Key to Don Yees: 0-0
-Manwx Saguans: 0-0
-Sagua Ocelots: 0-0
-Solea Geysers: 1-1
+Manwx Saguans: 1-1
+Sagua Ocelots: 2-0
+Solea Geysers: 2-2
 Autolik Autonomy: 0-0
-Barsein Bats: 0-0
-Blanaxon Hammers: 0-0
+Barsein Bats: 0-1
+Blanaxon Hammers: 0-2
 Kaeshar Kaisers: 0-0
-Naxda Nomads: 0-1
+Naxda Nomads: 0-2
 Red Rainbow Sickles: 1-0
-Serkr Atolls: 0-0
-Shmupland Dictators: 0-1
-Aiyota Pumps: 0-0
+Serkr Atolls: 0-1
+Shmupland Dictators: 1-1
+Aiyota Pumps: 0-1
 Avura Aviators: 0-0
 Boltway Bad Dragons: 0-0
 Dotruga Falno: 0-0
@@ -37,5 +37,5 @@ Dvimne Spirits: 0-0
 Holy Yektonisa Bishops: 0-1
 Holykol Bears: 0-0
 Lyintaria Lynx: 1-0
-Pyxanovia Pixies: 1-0
-Transhimalia Disasters: 0-0
+Pyxanovia Pixies: 1-1
+Transhimalia Disasters: 0-1

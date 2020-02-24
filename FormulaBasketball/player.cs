@@ -1588,10 +1588,17 @@ public class player : IComparable<player>
     {
         setPosition(newPosition);
     }
-    
+    public void SetCountry(Country country)
+    {
+        this.country = country;
+    }
     public void addStart()
     {
         starts++;
+    }
+    public int GetStarts()
+    {
+        return starts;
     }
     public double getStamina()
     {
@@ -2090,11 +2097,22 @@ public class player : IComparable<player>
     {
         seasonStats = stats;
     }
+    
     public void resetGameStats(team team, team opponent)
     {
         if (seasonStats == null)
             seasonStats = new List<StatsHolders>();
-        StatsHolders hold = new StatsHolders(team, gameStats, opponent);
+
+        byte[] arr = new byte[gameStats.Length];
+        for(int i = 0; i < gameStats.Length; i++)
+        {
+            if (i == 6)
+                arr[i] = (byte)Math.Round(gameStats[6] / 60.0);
+            else
+                arr[i] = (byte)gameStats[i];
+        }
+
+        StatsHolders hold = new StatsHolders(team, arr, opponent);
         seasonStats.Add(hold);
         if (hold.getMinutes() > 0)
             gamesPlayed++;

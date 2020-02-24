@@ -3,15 +3,15 @@ Player Record of Points: Paparto Bexosek: 40 points on game 8 against the Avura 
 Player Record of Assists: Small Forward #114: 10 assists on game 6 against the Bongatar Banging Bongos
 Player Record of Rebounds: Danotra Beselapo: 16 rebounds on game 10 against the Lyintaria Lynx
 Team Record in Most Points Scored: Aiyota Pumps: 111 points on game 8 against the Avura Aviators
-Team Record in Least Points Scored: Aiyota Pumps: 75 points on game 3 against the Solea Geysers
-Team Record in Least Points Allowed: Aiyota Pumps: 87 points on game 12 against the Pyxanovia Pixies
-Team Record in Most Points Allowed: Aiyota Pumps: 103 points on game 10 against the Lyintaria Lynx
+Team Record in Least Points Scored: Aiyota Pumps: 73 points on game 32 against the Avura Aviators
+Team Record in Least Points Allowed: Aiyota Pumps: 76 points on game 13 against the TND Tanks
+Team Record in Most Points Allowed: Aiyota Pumps: 108 points on game 26 against the Boltway Bad Dragons
 Records vs. Each Team this season:
-Aahrus Moosi: 0-0
+Aahrus Moosi: 1-0
 Auspikitan Golden Falcons: 0-0
-Calto Cows: 0-0
+Calto Cows: 0-1
 Height Sagua Cats: 0-0
-Key to Don Yees: 0-0
+Key to Don Yees: 1-0
 Manwx Saguans: 0-0
 Sagua Ocelots: 0-0
 Solea Geysers: 0-1
@@ -20,22 +20,22 @@ Barsein Bats: 0-0
 Blanaxon Hammers: 0-1
 Kaeshar Kaisers: 0-1
 Naxda Nomads: 0-0
-Red Rainbow Sickles: 1-0
-Serkr Atolls: 1-0
-Shmupland Dictators: 0-0
+Red Rainbow Sickles: 1-1
+Serkr Atolls: 1-1
+Shmupland Dictators: 0-1
 Aiyota Pumps: 0-0
-Avura Aviators: 2-0
-Boltway Bad Dragons: 0-0
+Avura Aviators: 2-1
+Boltway Bad Dragons: 0-2
 Dotruga Falno: 0-0
 Ethanthova Ponies: 0-0
-Faehrenfall Feathercats: 0-0
-Stedro Boulders: 0-0
-TND Tanks: 0-0
+Faehrenfall Feathercats: 2-1
+Stedro Boulders: 0-1
+TND Tanks: 1-0
 Bongatar Banging Bongos: 0-1
-Czalliso Pythons: 0-0
-Dvimne Spirits: 0-0
-Holy Yektonisa Bishops: 0-0
+Czalliso Pythons: 1-1
+Dvimne Spirits: 1-0
+Holy Yektonisa Bishops: 0-1
 Holykol Bears: 0-0
-Lyintaria Lynx: 1-0
+Lyintaria Lynx: 3-0
 Pyxanovia Pixies: 1-1
 Transhimalia Disasters: 0-0

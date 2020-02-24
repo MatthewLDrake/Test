@@ -1,31 +1,31 @@
 Calto Cows Stats
 Player Record of Points: Michael Barnett: 25 points on game 11 against the Czalliso Pythons
-Player Record of Assists: Its'a Lełqutyi: 13 assists on game 2 against the Bongatar Banging Bongos
-Player Record of Rebounds: Trevor Oosterhout: 14 rebounds on game 10 against the Naxda Nomads
+Player Record of Assists: Its'a Lełqutyi: 15 assists on game 14 against the Autolik Autonomy
+Player Record of Rebounds: Trevor Oosterhout: 15 rebounds on game 32 against the Transhimalia Disasters
 Team Record in Most Points Scored: Calto Cows: 119 points on game 11 against the Czalliso Pythons
-Team Record in Least Points Scored: Calto Cows: 91 points on game 12 against the Red Rainbow Sickles
+Team Record in Least Points Scored: Calto Cows: 83 points on game 28 against the Lyintaria Lynx
 Team Record in Least Points Allowed: Calto Cows: 76 points on game 10 against the Naxda Nomads
-Team Record in Most Points Allowed: Calto Cows: 108 points on game 11 against the Czalliso Pythons
+Team Record in Most Points Allowed: Calto Cows: 122 points on game 26 against the Kaeshar Kaisers
 Records vs. Each Team this season:
 Aahrus Moosi: 0-0
 Auspikitan Golden Falcons: 0-0
 Calto Cows: 0-0
-Height Sagua Cats: 0-0
-Key to Don Yees: 0-0
-Manwx Saguans: 0-0
+Height Sagua Cats: 1-1
+Key to Don Yees: 2-0
+Manwx Saguans: 0-1
 Sagua Ocelots: 0-0
-Solea Geysers: 0-1
-Autolik Autonomy: 0-0
+Solea Geysers: 0-3
+Autolik Autonomy: 1-1
 Barsein Bats: 0-0
-Blanaxon Hammers: 0-0
-Kaeshar Kaisers: 0-0
-Naxda Nomads: 2-0
+Blanaxon Hammers: 1-0
+Kaeshar Kaisers: 0-1
+Naxda Nomads: 3-0
 Red Rainbow Sickles: 2-0
 Serkr Atolls: 0-0
-Shmupland Dictators: 0-0
-Aiyota Pumps: 0-0
+Shmupland Dictators: 0-1
+Aiyota Pumps: 1-0
 Avura Aviators: 0-0
-Boltway Bad Dragons: 0-0
+Boltway Bad Dragons: 1-0
 Dotruga Falno: 0-0
 Ethanthova Ponies: 0-0
 Faehrenfall Feathercats: 0-1
@@ -34,8 +34,8 @@ TND Tanks: 0-0
 Bongatar Banging Bongos: 1-0
 Czalliso Pythons: 1-0
 Dvimne Spirits: 0-0
-Holy Yektonisa Bishops: 1-0
-Holykol Bears: 0-1
-Lyintaria Lynx: 0-0
-Pyxanovia Pixies: 0-0
-Transhimalia Disasters: 1-0
+Holy Yektonisa Bishops: 2-0
+Holykol Bears: 0-2
+Lyintaria Lynx: 0-1
+Pyxanovia Pixies: 1-0
+Transhimalia Disasters: 2-0
