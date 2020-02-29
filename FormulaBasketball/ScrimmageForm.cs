@@ -57,7 +57,7 @@ namespace FormulaBasketball
             new GameViewer(teamOne, teamTwo, r).ShowDialog();
         }
 
-        private MemoryStream SerializeTeam(team team)
+        public static MemoryStream SerializeTeam(team team)
         {
             MemoryStream stream = new MemoryStream();
             BinaryFormatter outFormatter = new BinaryFormatter();
@@ -66,7 +66,7 @@ namespace FormulaBasketball
 
             return stream;
         }
-        private team DeSerializeTeam(Stream stream)
+        public static team DeSerializeTeam(Stream stream)
         {
             BinaryFormatter inFormatter = new BinaryFormatter();
             stream.Position = 0;

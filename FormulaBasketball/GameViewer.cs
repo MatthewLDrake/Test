@@ -13,7 +13,7 @@ namespace FormulaBasketball
     public partial class GameViewer : Form
     {
         private game game;
-        public GameViewer(team teamOne, team teamTwo, Random r)
+        public GameViewer(team teamOne, team teamTwo, Random r, bool useDefault = true)
         {
             InitializeComponent();
 
@@ -27,44 +27,88 @@ namespace FormulaBasketball
             }
 
             
-
-            game = new game(null, teamOne, teamTwo, r);
-
-            teamOneLabel.Text = teamOne.ToString();
-            teamTwoLabel.Text = teamTwo.ToString();
-
-            int[] scores = game.getQuarterOneScore();
-            teamOneQ1Label.Text = "" + scores[0];
-            teamTwoQ1Label.Text = "" + scores[1];
-
-            scores = game.getQuarterTwoScore();
-            teamOneQ2Label.Text = "" + scores[0];
-            teamTwoQ2Label.Text = "" + scores[1];
-
-            scores = game.getQuarterThreeScore();
-            teamOneQ3Label.Text = "" + scores[0];
-            teamTwoQ3Label.Text = "" + scores[1];
-
-            scores = game.getQuarterFourScore();
-            teamOneQ4Label.Text = "" + scores[0];
-            teamTwoQ4Label.Text = "" + scores[1];
-
-            scores = game.getQuarterOTScore();
-            teamOneOTLabel.Text = "" + scores[0];
-            teamTwoOTLabel.Text = "" + scores[1];
-
-            teamOneTotalLabel.Text = "" + game.getAwayTeamScore();
-            teamTwoTotalLabel.Text = "" + game.getHomeTeamScore();
-
-            foreach (player p in teamOne)
+            if(useDefault)
             {
-                p.resetGameStats(teamOne, teamTwo);
-                AddPlayerToGrid(p);
+                game = new game(null, teamOne, teamTwo, r);
+                teamOneLabel.Text = teamOne.ToString();
+                teamTwoLabel.Text = teamTwo.ToString();
+
+                int[] scores = game.getQuarterOneScore();
+                teamOneQ1Label.Text = "" + scores[0];
+                teamTwoQ1Label.Text = "" + scores[1];
+
+                scores = game.getQuarterTwoScore();
+                teamOneQ2Label.Text = "" + scores[0];
+                teamTwoQ2Label.Text = "" + scores[1];
+
+                scores = game.getQuarterThreeScore();
+                teamOneQ3Label.Text = "" + scores[0];
+                teamTwoQ3Label.Text = "" + scores[1];
+
+                scores = game.getQuarterFourScore();
+                teamOneQ4Label.Text = "" + scores[0];
+                teamTwoQ4Label.Text = "" + scores[1];
+
+                scores = game.getQuarterOTScore();
+                teamOneOTLabel.Text = "" + scores[0];
+                teamTwoOTLabel.Text = "" + scores[1];
+
+                teamOneTotalLabel.Text = "" + game.getAwayTeamScore();
+                teamTwoTotalLabel.Text = "" + game.getHomeTeamScore();
+
+                foreach (player p in teamOne)
+                {
+                    p.resetGameStats(teamOne, teamTwo);
+                    AddPlayerToGrid(p);
+                }
+                foreach (player p in teamTwo)
+                {
+                    p.resetGameStats(teamTwo, teamOne);
+                    AddPlayerToGrid(p);
+                }
             }
-            foreach (player p in teamTwo)
+            else
             {
-                p.resetGameStats(teamTwo, teamOne);
-                AddPlayerToGrid(p);
+                NewGame game = new NewGame(teamOne, teamTwo, r);
+
+                teamOneLabel.Text = teamOne.ToString();
+                teamTwoLabel.Text = teamTwo.ToString();
+
+                /*int[] scores = game.getQuarterOneScore();
+                teamOneQ1Label.Text = "" + scores[0];
+                teamTwoQ1Label.Text = "" + scores[1];
+
+                scores = game.getQuarterTwoScore();
+                teamOneQ2Label.Text = "" + scores[0];
+                teamTwoQ2Label.Text = "" + scores[1];
+
+                scores = game.getQuarterThreeScore();
+                teamOneQ3Label.Text = "" + scores[0];
+                teamTwoQ3Label.Text = "" + scores[1];
+
+                scores = game.getQuarterFourScore();
+                teamOneQ4Label.Text = "" + scores[0];
+                teamTwoQ4Label.Text = "" + scores[1];
+
+                scores = game.getQuarterOTScore();
+                teamOneOTLabel.Text = "" + scores[0];
+                teamTwoOTLabel.Text = "" + scores[1];
+
+                teamOneTotalLabel.Text = "" + game.getAwayTeamScore();
+                teamTwoTotalLabel.Text = "" + game.getHomeTeamScore();*/
+
+                foreach (player p in teamOne)
+                {
+                    p.resetGameStats(teamOne, teamTwo);
+                    AddPlayerToGrid(p);
+                }
+                foreach (player p in teamTwo)
+                {
+                    p.resetGameStats(teamTwo, teamOne);
+                    AddPlayerToGrid(p);
+                }
+
+
             }
 
 

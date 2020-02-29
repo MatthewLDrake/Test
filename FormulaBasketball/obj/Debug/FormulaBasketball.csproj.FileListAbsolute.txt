@@ -169,3 +169,5 @@ B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.ScrimmageForm.re
 B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.TeamRoster.resources
 B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.TradeFormAI.resources
 B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.NamingForm.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\FormulaBasketball.NamingForm.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\FormulaBasketball.TestScrimmageForm.resources

@@ -130,6 +130,7 @@
     <Compile Include="LeagueRoster.Designer.cs">
       <DependentUpon>LeagueRoster.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManPlayExecutor.cs" />
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -401,6 +402,12 @@
     <Compile Include="TempoHolder.cs" />
     <Compile Include="TestLeague.cs" />
     <Compile Include="TestSchedule.cs" />
+    <Compile Include="TestScrimmageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestScrimmageForm.Designer.cs">
+      <DependentUpon>TestScrimmageForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TradeFormAI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -576,6 +583,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TeamSelector.resx">
       <DependentUpon>TeamSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestScrimmageForm.resx">
+      <DependentUpon>TestScrimmageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TradeFormAI.resx">
       <DependentUpon>TradeFormAI.cs</DependentUpon>

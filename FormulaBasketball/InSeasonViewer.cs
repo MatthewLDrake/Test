@@ -153,6 +153,11 @@ namespace FormulaBasketball
             TeamRoster rosterForm = new TeamRoster(create, teamNum);
             rosterForm.ShowDialog();
         }
+        private void LaunchNewScrimmageForm()
+        {
+            TestScrimmageForm form = new TestScrimmageForm(create, teamNum);
+            form.ShowDialog();
+        }
         private void LaunchScrimamgeForm()
         {
             ScrimmageForm form = new ScrimmageForm(create, teamNum);
@@ -251,8 +256,12 @@ namespace FormulaBasketball
 
         private void newCoachesButton_Click(object sender, EventArgs e)
         {
-            System.Threading.Thread thread = new System.Threading.Thread(LaunchNamingForm);
+            System.Threading.Thread thread = new System.Threading.Thread(LaunchNewScrimmageForm);
             thread.Start();
+
+            // Naming Form
+            //System.Threading.Thread thread = new System.Threading.Thread(LaunchNamingForm);
+            //thread.Start();
         }
     }
 }

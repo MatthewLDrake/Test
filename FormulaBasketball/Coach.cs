@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 [Serializable]
 public class Coach
 {
@@ -49,11 +50,12 @@ public class Coach
     private OffensivePhilosophy offensivePhilosophy;
     private DefensivePhilosophy defensivePhilosophy;
     // New style of coach
-    public Coach(string name, OffensivePhilosophy offense, DefensivePhilosophy defense)
+    public Coach(string name, OffensivePhilosophy offense, DefensivePhilosophy defense, FormulaBasketball.Random r)
     {
         this.name = name;
         offensivePhilosophy = offense;
         defensivePhilosophy = defense;
+        this.r = r;
     }
 
 
@@ -156,17 +158,117 @@ public class Coach
         }
     }
     public bool useSuperStar()
-    {
-        
+    {        
         return r.Next(0, 100) + 1 < (int)superStarInvolvment;
+    }
+    public OffensivePlay GetOffensivePlay(int scoreDiff, int quarterNum, int timeLeft)
+    {
+        return offensivePhilosophy.PickPlay(scoreDiff, quarterNum, timeLeft);
+    }
+    public DefensivePlay GetDefensivePlay(int scoreDiff, int quarterNum, int timeLeft)
+    {
+        return defensivePhilosophy.PickPlay(scoreDiff, quarterNum, timeLeft);
+    }
+}
+[Serializable]
+public abstract class OffensivePhilosophy
+{
+    
+    public OffensivePhilosophy()
+    {
+    }
+    public static List<OffensivePhilosophy> GetPhilosophies()
+    {
+        return PhilosophyHolder.GetOffensivePhilosophies();
+    }
+    public abstract OffensivePlay PickPlay(int scoreDiff, int quarterNum, int timeLeft);
+}
+[Serializable]
+public class SevenSecond : OffensivePhilosophy
+{
+    public SevenSecond()
+    {
+
+    }
+    public override string ToString()
+    {
+ 	    return "Seven Second";
+    }
+}
+private class PhilosophyHolder
+{
+    private static List<DefensivePhilosophy> defensivePhilosophies;
+    private static List<OffensivePhilosophy> offensivePhilosophies;
+
+    static PhilosophyHolder()
+    {
+        defensivePhilosophies = new List<DefensivePhilosophy>();
+        defensivePhilosophies.Add(new ManNoSwitch());
+        defensivePhilosophies.Add(new ManSwitch());
+
+        offensivePhilosophies = new List<OffensivePhilosophy>();
+        offensivePhilosophies.Add(new SevenSecond());
+    }
+    public static List<DefensivePhilosophy> GetDefensivePhilosophies()
+    {
+        return defensivePhilosophies;
+    }
+    public static List<OffensivePhilosophy> GetOffensivePhilosophies()
+    {
+        return offensivePhilosophies;
+    }
+}
+[Serializable]
+public class DefensivePhilosophy
+{
+   
+    public DefensivePhilosophy()
+    {
+    }
+    public static List<DefensivePhilosophy> GetPhilosophies()
+    {
+        return PhilosophyHolder.GetDefensivePhilosophies();
+    }
+    public abstract DefensivePlay PickPlay(int scoreDiff, int quarterNum, int timeLeft);
+}
+[Serializable]
+public class ManSwitch : DefensivePhilosophy
+{
+    public ManSwitch()
+    {
+
+    }
+    public override string ToString()
+    {
+ 	    return "Man Switch";
+    }
+    public override DefensivePlay PickPlay(int scoreDiff, int quarterNum, int timeLeft)
+    {
+        return DefensivePlay.MAN_SWITCH;
+    }
+}
+[Serializable]
+public class ManNoSwitch : DefensivePhilosophy
+{
+    public ManNoSwitch()
+    {
+
+    }
+    public override string ToString()
+    {
+ 	    return "Man No Switch";
+    }
+}
+[Serializable]
+public class OffensivePlay
+{
+    public OffensivePlay()
+    {
 
     }
 }
-public enum OffensivePhilosophy
+[Serializable]
+public enum DefensivePlay
 {
-    Seven_Second_Offense
-}
-public enum DefensivePhilosophy
-{
-    Man
+    MAN_SWITCH, MAN_NO_SWITCH, MAN_DOUBLE_BALL
 }
