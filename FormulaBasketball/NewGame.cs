@@ -144,8 +144,11 @@ namespace FormulaBasketball
             this.timeElapsed = timeElapsed;
         }
     }
-    public abstract class PlayExecutor
+    public class PlayExecutor
     {
-        public PlayResult RunPlay();
+        public virtual PlayResult RunPlay(OffensivePlay offensivePlay, NewCurrentTeam offense, NewCurrentTeam defense)
+        {
+            return null;
+        }
     }
 }

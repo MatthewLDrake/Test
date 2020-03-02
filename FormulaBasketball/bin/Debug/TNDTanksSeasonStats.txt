@@ -1,6 +1,6 @@
 TND Tanks Stats
-Player Record of Points: Pakomha Nhoñsła: 32 points on game 3 against the Transhimalia Disasters
-Player Record of Assists: Carsten Meyer: 14 assists on game 6 against the Avura Aviators
+Player Record of Points: Pakomha Nhoñsła: 33 points on game 40 against the Transhimalia Disasters
+Player Record of Assists: Carsten Meyer: 15 assists on game 58 against the Height Sagua Cats
 Player Record of Rebounds: Maere Eirikursson: 15 rebounds on game 25 against the Ethanthova Ponies
 Team Record in Most Points Scored: TND Tanks: 112 points on game 14 against the Lyintaria Lynx
 Team Record in Least Points Scored: TND Tanks: 76 points on game 13 against the Aiyota Pumps
@@ -8,34 +8,34 @@ Team Record in Least Points Allowed: TND Tanks: 75 points on game 16 against the
 Team Record in Most Points Allowed: TND Tanks: 121 points on game 17 against the Boltway Bad Dragons
 Records vs. Each Team this season:
 Aahrus Moosi: 2-0
-Auspikitan Golden Falcons: 1-0
-Calto Cows: 0-0
-Height Sagua Cats: 0-1
+Auspikitan Golden Falcons: 1-1
+Calto Cows: 1-0
+Height Sagua Cats: 1-1
 Key to Don Yees: 0-1
 Manwx Saguans: 0-0
 Sagua Ocelots: 2-0
 Solea Geysers: 0-2
 Autolik Autonomy: 0-1
-Barsein Bats: 1-0
+Barsein Bats: 2-0
 Blanaxon Hammers: 0-2
-Kaeshar Kaisers: 0-0
+Kaeshar Kaisers: 1-1
 Naxda Nomads: 0-0
-Red Rainbow Sickles: 0-0
-Serkr Atolls: 0-1
-Shmupland Dictators: 0-0
-Aiyota Pumps: 0-1
-Avura Aviators: 1-1
+Red Rainbow Sickles: 1-0
+Serkr Atolls: 0-2
+Shmupland Dictators: 0-1
+Aiyota Pumps: 0-2
+Avura Aviators: 3-1
 Boltway Bad Dragons: 0-2
-Dotruga Falno: 0-1
-Ethanthova Ponies: 0-1
-Faehrenfall Feathercats: 0-0
+Dotruga Falno: 1-1
+Ethanthova Ponies: 1-3
+Faehrenfall Feathercats: 4-0
 Stedro Boulders: 1-3
 TND Tanks: 0-0
-Bongatar Banging Bongos: 0-0
-Czalliso Pythons: 1-0
+Bongatar Banging Bongos: 2-0
+Czalliso Pythons: 1-1
 Dvimne Spirits: 0-2
-Holy Yektonisa Bishops: 0-0
-Holykol Bears: 0-1
+Holy Yektonisa Bishops: 1-1
+Holykol Bears: 0-2
 Lyintaria Lynx: 1-0
-Pyxanovia Pixies: 1-0
-Transhimalia Disasters: 0-1
+Pyxanovia Pixies: 2-0
+Transhimalia Disasters: 0-2

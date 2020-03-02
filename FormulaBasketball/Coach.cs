@@ -47,7 +47,7 @@ public class Coach
         preferredShotType = coachShotType.BALANCED;
         superStarInvolvment = ssInvolvment.MEDIUM;
     }
-    private OffensivePhilosophy offensivePhilosophy;
+    /*private OffensivePhilosophy offensivePhilosophy;
     private DefensivePhilosophy defensivePhilosophy;
     // New style of coach
     public Coach(string name, OffensivePhilosophy offense, DefensivePhilosophy defense, FormulaBasketball.Random r)
@@ -56,7 +56,7 @@ public class Coach
         offensivePhilosophy = offense;
         defensivePhilosophy = defense;
         this.r = r;
-    }
+    }*/
 
 
     public string SaveTeam()
@@ -163,15 +163,17 @@ public class Coach
     }
     public OffensivePlay GetOffensivePlay(int scoreDiff, int quarterNum, int timeLeft)
     {
-        return offensivePhilosophy.PickPlay(scoreDiff, quarterNum, timeLeft);
+        return null;
+        //return offensivePhilosophy.PickPlay(scoreDiff, quarterNum, timeLeft);
     }
     public DefensivePlay GetDefensivePlay(int scoreDiff, int quarterNum, int timeLeft)
     {
-        return defensivePhilosophy.PickPlay(scoreDiff, quarterNum, timeLeft);
+        return DefensivePlay.MAN_NO_SWITCH;
+        //return defensivePhilosophy.PickPlay(scoreDiff, quarterNum, timeLeft);
     }
 }
 [Serializable]
-public abstract class OffensivePhilosophy
+public class OffensivePhilosophy
 {
     
     public OffensivePhilosophy()
@@ -181,7 +183,10 @@ public abstract class OffensivePhilosophy
     {
         return PhilosophyHolder.GetOffensivePhilosophies();
     }
-    public abstract OffensivePlay PickPlay(int scoreDiff, int quarterNum, int timeLeft);
+    public virtual OffensivePlay PickPlay(int scoreDiff, int quarterNum, int timeLeft)
+    {
+        return null;
+    }
 }
 [Serializable]
 public class SevenSecond : OffensivePhilosophy
@@ -194,8 +199,12 @@ public class SevenSecond : OffensivePhilosophy
     {
  	    return "Seven Second";
     }
+    public override OffensivePlay PickPlay(int scoreDiff, int quarterNum, int timeLeft)
+    {
+        return null;
+    }
 }
-private class PhilosophyHolder
+public class PhilosophyHolder
 {
     private static List<DefensivePhilosophy> defensivePhilosophies;
     private static List<OffensivePhilosophy> offensivePhilosophies;
@@ -229,7 +238,10 @@ public class DefensivePhilosophy
     {
         return PhilosophyHolder.GetDefensivePhilosophies();
     }
-    public abstract DefensivePlay PickPlay(int scoreDiff, int quarterNum, int timeLeft);
+    public virtual DefensivePlay PickPlay(int scoreDiff, int quarterNum, int timeLeft)
+    {
+        return DefensivePlay.MAN_NO_SWITCH;
+    }
 }
 [Serializable]
 public class ManSwitch : DefensivePhilosophy
@@ -257,6 +269,10 @@ public class ManNoSwitch : DefensivePhilosophy
     public override string ToString()
     {
  	    return "Man No Switch";
+    }
+    public override DefensivePlay PickPlay(int scoreDiff, int quarterNum, int timeLeft)
+    {
+        return DefensivePlay.MAN_NO_SWITCH;
     }
 }
 [Serializable]

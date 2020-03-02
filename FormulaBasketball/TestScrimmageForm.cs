@@ -53,7 +53,7 @@ namespace FormulaBasketball
 
         private void button1_Click(object sender, EventArgs e)
         {
-            team copyTeam;
+           /* team copyTeam;
             if (teamOneList.SelectedIndex < 32)
                 copyTeam = create.getTeam(teamOneList.SelectedIndex);
             else
@@ -73,7 +73,7 @@ namespace FormulaBasketball
 
             teamTwo.SetCoach(new Coach("Coach", (OffensivePhilosophy)homeTeamOffense.Items[homeTeamOffense.SelectedIndex], (DefensivePhilosophy)homeTeamDefense.Items[homeTeamDefense.SelectedIndex], r));
 
-            new GameViewer(teamOne, teamTwo, r, false).ShowDialog();
+            new GameViewer(teamOne, teamTwo, r, false).ShowDialog();*/
         }
     }
 }
