@@ -1720,6 +1720,11 @@ public class team : IComparable<team>,  IEnumerable<player>
         }
         
     }
+    public void Stamina()
+    {
+        foreach (player p in activePlayers)
+            p.setStamina(100);
+    }
     public void OffSeasonAddPlayer(player p)
     {
         p.setTeam(this);

@@ -33,6 +33,8 @@ namespace FormulaBasketball
             }
             teamOneList.SelectedIndex = teamNum;
             teamTwoList.SelectedIndex = teamNum == 0 ? 1 : 0;
+
+            comboBox1.SelectedIndex = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -52,9 +54,24 @@ namespace FormulaBasketball
             stream = SerializeTeam(copyTeam);
             team teamTwo = DeSerializeTeam(stream);
 
-            
+            int seriesType = 1;
+            switch(comboBox1.SelectedIndex)
+            {
+                case 0:
+                    seriesType = 1;
+                    break;
+                case 1:
+                    seriesType = 3;
+                    break;
+                case 2:
+                    seriesType = 5;
+                    break;
+                case 3:
+                    seriesType = 7;
+                    break;
+            }
 
-            new GameViewer(teamOne, teamTwo, r).ShowDialog();
+            new GameViewer(teamOne, teamTwo, r, true, seriesType, (int)numericUpDown2.Value).ShowDialog();
         }
 
         public static MemoryStream SerializeTeam(team team)
