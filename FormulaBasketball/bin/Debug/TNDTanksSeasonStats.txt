@@ -1,15 +1,15 @@
 TND Tanks Stats
-Player Record of Points: Pakomha Nhoñsła: 33 points on game 40 against the Transhimalia Disasters
+Player Record of Points: Pakomha Nhoñsła: 40 points on game 79 against the Transhimalia Disasters
 Player Record of Assists: Carsten Meyer: 15 assists on game 58 against the Height Sagua Cats
 Player Record of Rebounds: Maere Eirikursson: 15 rebounds on game 25 against the Ethanthova Ponies
-Team Record in Most Points Scored: TND Tanks: 119 points on game 76 against the Dvimne Spirits
+Team Record in Most Points Scored: TND Tanks: 123 points on game 79 against the Transhimalia Disasters
 Team Record in Least Points Scored: TND Tanks: 76 points on game 13 against the Aiyota Pumps
 Team Record in Least Points Allowed: TND Tanks: 75 points on game 16 against the Pyxanovia Pixies
 Team Record in Most Points Allowed: TND Tanks: 121 points on game 17 against the Boltway Bad Dragons
 Records vs. Each Team this season:
 Aahrus Moosi: 2-0
 Auspikitan Golden Falcons: 1-1
-Calto Cows: 1-0
+Calto Cows: 2-0
 Height Sagua Cats: 1-1
 Key to Don Yees: 1-1
 Manwx Saguans: 1-1
@@ -18,24 +18,24 @@ Solea Geysers: 0-2
 Autolik Autonomy: 1-1
 Barsein Bats: 2-0
 Blanaxon Hammers: 0-2
-Kaeshar Kaisers: 1-1
+Kaeshar Kaisers: 4-5
 Naxda Nomads: 2-0
-Red Rainbow Sickles: 1-0
+Red Rainbow Sickles: 2-0
 Serkr Atolls: 0-2
-Shmupland Dictators: 0-1
+Shmupland Dictators: 1-1
 Aiyota Pumps: 2-2
 Avura Aviators: 3-1
-Boltway Bad Dragons: 1-2
+Boltway Bad Dragons: 2-2
 Dotruga Falno: 3-1
 Ethanthova Ponies: 1-3
 Faehrenfall Feathercats: 4-0
 Stedro Boulders: 1-3
 TND Tanks: 0-0
 Bongatar Banging Bongos: 3-0
-Czalliso Pythons: 1-1
-Dvimne Spirits: 1-2
+Czalliso Pythons: 1-2
+Dvimne Spirits: 3-6
 Holy Yektonisa Bishops: 2-1
-Holykol Bears: 1-2
-Lyintaria Lynx: 1-0
-Pyxanovia Pixies: 3-0
-Transhimalia Disasters: 0-2
+Holykol Bears: 5-3
+Lyintaria Lynx: 2-1
+Pyxanovia Pixies: 7-3
+Transhimalia Disasters: 1-2

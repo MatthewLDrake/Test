@@ -132,12 +132,13 @@ namespace FormulaBasketball
 
             bracket.setBrackets(formulaBasketball.ConferenceA, formulaBasketball.ConferenceB);
 
-            while (gamesPlayed < 7)
+            while (gamesPlayed <= 7)
             {
-                
+                ImagePrinter.Reset(gamesPlayed);
+                if (gamesPlayed == 7)
+                    break;
                 formulaBasketball.startingGame = gamesPlayed + 2;
                 formulaBasketball.gameResultsContents += "Game " + (formulaBasketball.startingGame - 1) + ",Home,Score,Away,Score\n";
-
                 if (conferenceAWinCounter[0] != 4 && conferenceAWinCounter[7] != 4)
                 {
                     bool flag = false;
@@ -760,9 +761,11 @@ namespace FormulaBasketball
             gamesPlayed = 0;
             conferenceAWinCounter = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
             conferenceBWinCounter = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-            while (gamesPlayed < 7)
+            while (gamesPlayed <= 7)
             {
-
+                ImagePrinter.Reset(gamesPlayed);
+                if (gamesPlayed == 7)
+                    break;
                 formulaBasketball.startingGame = gamesPlayed + 2;
                 formulaBasketball.gameResultsContents += ("Game " + (formulaBasketball.startingGame - 1) + ",Home,Score,Away,Score\n");
                 if (conferenceAWinCounter[0] != 4 && conferenceAWinCounter[7] != 4)
@@ -1401,8 +1404,11 @@ namespace FormulaBasketball
             gamesPlayed = 0;
             conferenceAWinCounter = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
             conferenceBWinCounter = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-            while (gamesPlayed < 7)
+            while (gamesPlayed <= 7)
             {
+                ImagePrinter.Reset(gamesPlayed);
+                if (gamesPlayed == 7)
+                    break;
                 formulaBasketball.startingGame = gamesPlayed + 2;
                 formulaBasketball.gameResultsContents += "Game " + (formulaBasketball.startingGame - 1) + ",Home,Score,Away,Score\n";
                 if (conferenceAWinCounter[0] != 4 && conferenceAWinCounter[7] != 4)
@@ -2045,8 +2051,11 @@ namespace FormulaBasketball
             gamesPlayed = 0;
             conferenceAWinCounter = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
             conferenceBWinCounter = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-            while (gamesPlayed < 7)
+            while (gamesPlayed <= 7)
             {
+                ImagePrinter.Reset(gamesPlayed);
+                if (gamesPlayed == 7)
+                    break;
                 formulaBasketball.startingGame = gamesPlayed + 2;
                 formulaBasketball.gameResultsContents += ("Game " + (formulaBasketball.startingGame - 1) + ",Home,Score,Away,Score\n");
                 if (conferenceAWinCounter[0] != 4 && conferenceAWinCounter[7] != 4)

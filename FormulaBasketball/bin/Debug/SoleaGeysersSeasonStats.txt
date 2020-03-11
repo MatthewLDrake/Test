@@ -4,28 +4,28 @@ Player Record of Assists: Kersok Milan: 17 assists on game 2 against the Dotruga
 Player Record of Rebounds: Alomundi Bituna: 15 rebounds on game 30 against the TND Tanks
 Team Record in Most Points Scored: Solea Geysers: 122 points on game 21 against the Red Rainbow Sickles
 Team Record in Least Points Scored: Solea Geysers: 79 points on game 9 against the TND Tanks
-Team Record in Least Points Allowed: Solea Geysers: 74 points on game 42 against the Manwx Saguans
+Team Record in Least Points Allowed: Solea Geysers: 71 points on game 82 against the Height Sagua Cats
 Team Record in Most Points Allowed: Solea Geysers: 118 points on game 34 against the Calto Cows
 Records vs. Each Team this season:
 Aahrus Moosi: 2-2
 Auspikitan Golden Falcons: 2-2
-Calto Cows: 3-1
-Height Sagua Cats: 1-2
+Calto Cows: 7-1
+Height Sagua Cats: 2-2
 Key to Don Yees: 2-2
-Manwx Saguans: 3-1
+Manwx Saguans: 7-3
 Sagua Ocelots: 2-2
 Solea Geysers: 0-0
 Autolik Autonomy: 3-0
-Barsein Bats: 0-2
-Blanaxon Hammers: 1-1
+Barsein Bats: 0-3
+Blanaxon Hammers: 2-1
 Kaeshar Kaisers: 1-2
 Naxda Nomads: 3-0
 Red Rainbow Sickles: 2-1
-Serkr Atolls: 1-0
-Shmupland Dictators: 3-0
+Serkr Atolls: 2-1
+Shmupland Dictators: 7-2
 Aiyota Pumps: 1-1
 Avura Aviators: 2-0
-Boltway Bad Dragons: 1-0
+Boltway Bad Dragons: 2-0
 Dotruga Falno: 0-2
 Ethanthova Ponies: 2-0
 Faehrenfall Feathercats: 1-1
@@ -33,9 +33,9 @@ Stedro Boulders: 2-0
 TND Tanks: 2-0
 Bongatar Banging Bongos: 1-1
 Czalliso Pythons: 2-0
-Dvimne Spirits: 2-0
+Dvimne Spirits: 6-2
 Holy Yektonisa Bishops: 2-0
 Holykol Bears: 1-1
-Lyintaria Lynx: 1-0
+Lyintaria Lynx: 2-0
 Pyxanovia Pixies: 2-0
-Transhimalia Disasters: 1-0
+Transhimalia Disasters: 1-1

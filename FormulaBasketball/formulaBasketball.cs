@@ -1086,29 +1086,23 @@ public class formulaBasketball
                 homeTeam.setModifier(new None());
             }
         }
-        if (i == 26 || i == 18 || i == 1 || i == 11)
+        if (i == 26 || i == 1 || i == 11)
         {
             awayTeam.addModifier(new gettingHot());
         }
 
-        else if (j == 26 || j == 18 || j == 1 || j == 11)
+        else if (j == 26 || j == 1 || j == 11)
         {
             homeTeam.addModifier(new gettingHot());
         }
-        if (i == 4)
-        {
-            awayTeam.addModifier(new LetDownGame());
-        }
-        else if (j == 4)
-            homeTeam.addModifier(new LetDownGame());
         homeTeam.addModifier(new HomeTeam());
         awayTeam.addModifier(awayTeam.getCoachModifier());
         homeTeam.addModifier(homeTeam.getCoachModifier());
 
 
-        if (!dLeague && (i == 4 || i == 5 || i == 7 || i == 20 || i == 23))
+        if (!dLeague && (i == 4 || i == 5 || i == 7 || i == 18 || i == 20 || i == 23))
             awayTeam.addModifier(new HotStreak());
-        else if (!dLeague && (j == 4 || j == 5 || i == 7 || j == 20 || j == 23))
+        else if (!dLeague && (j == 4 || j == 5 || i == 7 || j == 18 || j == 20 || j == 23))
             homeTeam.addModifier(new HotStreak());
 
         game newGame = new game(gameWriter, awayTeam, homeTeam, r);

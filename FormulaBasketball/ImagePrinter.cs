@@ -3,18 +3,18 @@ using System.Drawing.Imaging;
 using System.Windows.Forms;
 public class ImagePrinter
 {
-    private int i;
-    private PrintInfo[] info;
-    private Font font;
-    private int imageHeight, imageWidth;
-    private int gameNum;
-    private Size gameSize;
-    private int stringHeight, stringWidth;
+    private static int i;
+    private static PrintInfo[] info;
+    private static Font font;
+    private static int imageHeight, imageWidth;
+    private static int gameNum;
+    private static Size gameSize;
+    private static int stringHeight, stringWidth;
     public static int Width;
     public ImagePrinter(int startingNum)
     {
         info = new PrintInfo[16];
-        gameSize = TextRenderer.MeasureText("Game 99", new Font("Consoloas", 16, FontStyle.Bold));
+        gameSize = TextRenderer.MeasureText("Game 999", new Font("Consoloas", 16, FontStyle.Bold));
         gameNum = startingNum;
         i = 0;
         font = new Font("Consolas", 12,FontStyle.Bold);
@@ -41,6 +41,18 @@ public class ImagePrinter
         stringWidth = maxWidth * 2 + TextRenderer.MeasureText("-", font).Width + (2 * TextRenderer.MeasureText(" 100 ", font).Width);
 
     }
+    public static void Reset(int gamesToPlay)
+    {
+        i = 0;
+        string temp = "" + gameNum;
+        if (gameNum < 10) temp = "0" + gameNum;
+        if (gamesToPlay > 4)
+        {
+            PrintImages(temp);
+            gameNum++;
+        }
+        info = new PrintInfo[16];
+    }
     public void AddResult(team awayTeam, team homeTeam, int awayScore, int homeScore, bool dLeague)
     {
         // TODO: Maybe something with this
@@ -61,7 +73,7 @@ public class ImagePrinter
         }
     }
     // 10px MaxWidth Score vs Score MaxWidth 10px
-    private void PrintImages(string gameNum)
+    private static void PrintImages(string gameNum)
     {
         using (Bitmap b = new Bitmap(imageWidth,imageHeight))
         {
@@ -77,6 +89,8 @@ public class ImagePrinter
 
                 for(int i = 0; i < info.Length; i++)
                 {
+                    if (info[i] == null)
+                        continue;
                     currentHeight += 2;
                     location = new RectangleF(10, currentHeight, stringWidth, stringHeight);
                     g.DrawString(info[i].ToString(), font, brush, location);

@@ -1,5 +1,5 @@
 Manwx Saguans Stats
-Player Record of Points: Sol Jae-Wook: 32 points on game 17 against the Auspikitan Golden Falcons
+Player Record of Points: Sol Jae-Wook: 34 points on game 91 against the Auspikitan Golden Falcons
 Player Record of Assists: Blalikki Kiixrit: 11 assists on game 41 against the Holy Yektonisa Bishops
 Player Record of Rebounds: Kiromi Kersidomobek: 13 rebounds on game 7 against the Holykol Bears
 Team Record in Most Points Scored: Manwx Saguans: 123 points on game 52 against the Ethanthova Ponies
@@ -7,27 +7,27 @@ Team Record in Least Points Scored: Manwx Saguans: 69 points on game 43 against 
 Team Record in Least Points Allowed: Manwx Saguans: 65 points on game 60 against the Serkr Atolls
 Team Record in Most Points Allowed: Manwx Saguans: 118 points on game 3 against the Boltway Bad Dragons
 Records vs. Each Team this season:
-Aahrus Moosi: 1-2
-Auspikitan Golden Falcons: 1-3
-Calto Cows: 2-1
+Aahrus Moosi: 2-2
+Auspikitan Golden Falcons: 5-3
+Calto Cows: 3-1
 Height Sagua Cats: 1-3
-Key to Don Yees: 1-3
+Key to Don Yees: 3-7
 Manwx Saguans: 0-0
 Sagua Ocelots: 3-1
-Solea Geysers: 1-3
+Solea Geysers: 3-7
 Autolik Autonomy: 0-3
 Barsein Bats: 2-1
 Blanaxon Hammers: 2-1
-Kaeshar Kaisers: 1-1
-Naxda Nomads: 1-1
+Kaeshar Kaisers: 2-1
+Naxda Nomads: 2-1
 Red Rainbow Sickles: 2-1
 Serkr Atolls: 3-0
 Shmupland Dictators: 1-2
-Aiyota Pumps: 0-0
+Aiyota Pumps: 1-1
 Avura Aviators: 1-1
 Boltway Bad Dragons: 1-1
 Dotruga Falno: 1-1
-Ethanthova Ponies: 1-0
+Ethanthova Ponies: 2-0
 Faehrenfall Feathercats: 1-1
 Stedro Boulders: 1-1
 TND Tanks: 1-1
@@ -35,7 +35,7 @@ Bongatar Banging Bongos: 1-1
 Czalliso Pythons: 0-2
 Dvimne Spirits: 1-1
 Holy Yektonisa Bishops: 1-1
-Holykol Bears: 1-1
+Holykol Bears: 5-1
 Lyintaria Lynx: 1-1
 Pyxanovia Pixies: 1-1
-Transhimalia Disasters: 1-0
+Transhimalia Disasters: 2-0
