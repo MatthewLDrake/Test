@@ -2,23 +2,23 @@ Shmupland Dictators Stats
 Player Record of Points: Eun Cho: 41 points on game 19 against the Red Rainbow Sickles
 Player Record of Assists: Eun Cho: 12 assists on game 34 against the Czalliso Pythons
 Player Record of Rebounds: Kapono Phommajack: 12 rebounds on game 58 against the Kaeshar Kaisers
-Team Record in Most Points Scored: Shmupland Dictators: 119 points on game 85 against the Auspikitan Golden Falcons
+Team Record in Most Points Scored: Shmupland Dictators: 118 points on game 12 against the Transhimalia Disasters
 Team Record in Least Points Scored: Shmupland Dictators: 71 points on game 81 against the Sagua Ocelots
 Team Record in Least Points Allowed: Shmupland Dictators: 67 points on game 9 against the Aahrus Moosi
-Team Record in Most Points Allowed: Shmupland Dictators: 120 points on game 106 against the Pyxanovia Pixies
+Team Record in Most Points Allowed: Shmupland Dictators: 114 points on game 60 against the Key to Don Yees
 Records vs. Each Team this season:
 Aahrus Moosi: 2-1
-Auspikitan Golden Falcons: 5-3
+Auspikitan Golden Falcons: 1-2
 Calto Cows: 2-1
 Height Sagua Cats: 1-2
 Key to Don Yees: 1-2
 Manwx Saguans: 2-1
 Sagua Ocelots: 1-2
-Solea Geysers: 2-7
+Solea Geysers: 0-3
 Autolik Autonomy: 4-0
 Barsein Bats: 2-2
 Blanaxon Hammers: 4-0
-Kaeshar Kaisers: 5-6
+Kaeshar Kaisers: 2-2
 Naxda Nomads: 2-2
 Red Rainbow Sickles: 4-0
 Serkr Atolls: 2-2
@@ -37,5 +37,5 @@ Dvimne Spirits: 1-1
 Holy Yektonisa Bishops: 1-1
 Holykol Bears: 0-2
 Lyintaria Lynx: 1-1
-Pyxanovia Pixies: 5-3
+Pyxanovia Pixies: 1-1
 Transhimalia Disasters: 2-0

@@ -31,7 +31,7 @@ namespace FormulaBasketball
 
             for (int i = 0; i < create.size(); i++)
             {
-                freeAgents.Add(create.getDLeagueTeam(i).getAllPlayer());
+                freeAgents.Add(create.getTeam(i).GetAffiliate().getAllPlayer());
             }
             for (int i = 1; i < 6; i++ )
                 foreach (player p in freeAgents.GetPlayersByPos(i))

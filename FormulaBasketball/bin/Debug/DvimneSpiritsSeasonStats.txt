@@ -5,7 +5,7 @@ Player Record of Rebounds: Seong-Su Gang: 14 rebounds on game 77 against the Ste
 Team Record in Most Points Scored: Dvimne Spirits: 120 points on game 6 against the Serkr Atolls
 Team Record in Least Points Scored: Dvimne Spirits: 80 points on game 33 against the Lyintaria Lynx
 Team Record in Least Points Allowed: Dvimne Spirits: 76 points on game 55 against the Faehrenfall Feathercats
-Team Record in Most Points Allowed: Dvimne Spirits: 123 points on game 85 against the Bongatar Banging Bongos
+Team Record in Most Points Allowed: Dvimne Spirits: 120 points on game 23 against the Dotruga Falno
 Records vs. Each Team this season:
 Aahrus Moosi: 1-1
 Auspikitan Golden Falcons: 1-1
@@ -14,7 +14,7 @@ Height Sagua Cats: 1-1
 Key to Don Yees: 1-1
 Manwx Saguans: 1-1
 Sagua Ocelots: 1-1
-Solea Geysers: 2-6
+Solea Geysers: 0-2
 Autolik Autonomy: 2-0
 Barsein Bats: 1-1
 Blanaxon Hammers: 2-0
@@ -26,12 +26,12 @@ Shmupland Dictators: 1-1
 Aiyota Pumps: 1-2
 Avura Aviators: 3-0
 Boltway Bad Dragons: 3-0
-Dotruga Falno: 6-4
+Dotruga Falno: 2-1
 Ethanthova Ponies: 3-0
 Faehrenfall Feathercats: 3-0
 Stedro Boulders: 3-0
-TND Tanks: 6-3
-Bongatar Banging Bongos: 7-3
+TND Tanks: 2-1
+Bongatar Banging Bongos: 3-1
 Czalliso Pythons: 3-1
 Dvimne Spirits: 0-0
 Holy Yektonisa Bishops: 3-1

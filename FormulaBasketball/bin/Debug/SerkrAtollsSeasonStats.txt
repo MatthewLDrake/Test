@@ -13,13 +13,13 @@ Calto Cows: 1-2
 Height Sagua Cats: 0-3
 Key to Don Yees: 2-1
 Manwx Saguans: 0-3
-Sagua Ocelots: 3-7
+Sagua Ocelots: 0-3
 Solea Geysers: 1-2
 Autolik Autonomy: 1-3
 Barsein Bats: 3-1
-Blanaxon Hammers: 7-2
+Blanaxon Hammers: 3-1
 Kaeshar Kaisers: 1-3
-Naxda Nomads: 7-3
+Naxda Nomads: 3-1
 Red Rainbow Sickles: 3-1
 Serkr Atolls: 0-0
 Shmupland Dictators: 2-2
@@ -36,6 +36,6 @@ Czalliso Pythons: 2-0
 Dvimne Spirits: 0-2
 Holy Yektonisa Bishops: 1-1
 Holykol Bears: 1-1
-Lyintaria Lynx: 6-1
+Lyintaria Lynx: 2-0
 Pyxanovia Pixies: 0-2
 Transhimalia Disasters: 1-1

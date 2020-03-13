@@ -3,8 +3,8 @@ Player Record of Points: Naxto Lizaxium: 40 points on game 38 against the Bongat
 Player Record of Assists: war: 16 assists on game 82 against the Holy Yektonisa Bishops
 Player Record of Rebounds: Naxto Lizaxium: 13 rebounds on game 35 against the Stedro Boulders
 Team Record in Most Points Scored: Czalliso Pythons: 121 points on game 77 against the TND Tanks
-Team Record in Least Points Scored: Czalliso Pythons: 75 points on game 106 against the Blanaxon Hammers
-Team Record in Least Points Allowed: Czalliso Pythons: 76 points on game 88 against the Holy Yektonisa Bishops
+Team Record in Least Points Scored: Czalliso Pythons: 77 points on game 19 against the Transhimalia Disasters
+Team Record in Least Points Allowed: Czalliso Pythons: 79 points on game 72 against the Sagua Ocelots
 Team Record in Most Points Allowed: Czalliso Pythons: 134 points on game 51 against the Serkr Atolls
 Records vs. Each Team this season:
 Aahrus Moosi: 1-1
@@ -17,7 +17,7 @@ Sagua Ocelots: 1-1
 Solea Geysers: 0-2
 Autolik Autonomy: 1-1
 Barsein Bats: 0-2
-Blanaxon Hammers: 4-4
+Blanaxon Hammers: 2-0
 Kaeshar Kaisers: 0-2
 Naxda Nomads: 1-1
 Red Rainbow Sickles: 1-1
@@ -34,8 +34,8 @@ TND Tanks: 2-1
 Bongatar Banging Bongos: 2-2
 Czalliso Pythons: 0-0
 Dvimne Spirits: 1-3
-Holy Yektonisa Bishops: 5-5
+Holy Yektonisa Bishops: 3-1
 Holykol Bears: 2-2
-Lyintaria Lynx: 2-7
+Lyintaria Lynx: 1-3
 Pyxanovia Pixies: 1-3
-Transhimalia Disasters: 6-3
+Transhimalia Disasters: 2-2

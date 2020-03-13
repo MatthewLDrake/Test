@@ -43,7 +43,7 @@ namespace FormulaBasketball
             if (game)
                 new formulaBasketball(sender.Equals(yesButton), listView1.SelectedCells[0].OwningRow.Cells[0].EditedFormattedValue.ToString(), null, null);
             else
-                new InSeasonViewer(formulaBasketball.DeSerializeObject(listView1.SelectedCells[0].OwningRow.Cells[0].EditedFormattedValue.ToString())).ShowDialog();
+                new Menu(formulaBasketball.DeSerializeObject(listView1.SelectedCells[0].OwningRow.Cells[0].EditedFormattedValue.ToString()), new Random(123456789)).ShowDialog();
             Close();
         }
 

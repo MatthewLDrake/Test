@@ -49,138 +49,6 @@ public class team : IComparable<team>,  IEnumerable<player>
     private int leagueChampionships, conferenceChampionships, divisionChampionships;
     private Scout scout;
     public int elo;
-    public string SaveTeam(bool affiliate = false)
-    {
-        string content = "<team>" + teamName + "," + allTime.GetWins() + "," + allTime.GetLosses() + "," + allTimePlayoffs.GetWins() + "," + allTimePlayoffs.GetLosses() +"\n";
-        content += allTimeVsTeam[0].GetWins() + "," + allTimeVsTeam[0].GetLosses();
-        for(int i = 1; i < allTimeVsTeam.Length; i++)
-        {
-            content += "," + allTimeVsTeam[i].GetWins() + "," + allTimeVsTeam[i].GetLosses(); 
-        }
-        content += "\n" + penalty + "," + draftPlace + "," + playoffAppearances + "," + leagueChampionships + "," + conferenceChampionships + "," + divisionChampionships + "," + colorOne + "," +  colorTwo + "," +  colorThree + "," +  location + "," +  city + "," +  stadiumName + "," +  colorOneName + "," +  colorTwoName + "," +  colorThreeName + "\n";
-        content += coach.SaveTeam();
-        content += trainer.SaveTeam();
-        foreach (player p in activePlayers)
-            if(p != null)
-                content += p.SavePlayer();
-        if (affiliate) return content;
-        else return content + this.affiliate.SaveTeam(true);
-    }
-    /*public void Save()
-    {
-        Directory.CreateDirectory(teamName);
-        
-        foreach(player p in activePlayers)
-        {
-            p.setTeam(null);
-            p.setPreviousTeam(null);
-            formulaBasketball.SerializeObject(p, teamName + "/" + p.getName() + ".fbplayer");
-        }
-        foreach(player p in affiliate.activePlayers)
-        {
-            p.setTeam(null);
-            p.setPreviousTeam(null);
-            formulaBasketball.SerializeObject(p, teamName + "/" + p.getName() + ".fbplayer");
-        }
-        formulaBasketball.SerializeObject(this, teamName + "/teamObj.fbteam");
-    }*/
-
-   
-    public team(String teamInfo, String affiliate, FormulaBasketball.Random r, bool isAffiliate)
-    {
-        playersPerPos = new int[5];
-
-        this.r = r;
-        elo = 1200;
-
-        String[] lines = teamInfo.Split('\n');
-        String[] arr = lines[0].Split(',');
-        teamName = arr[0];
-        allTime = new Record(arr[1], arr[2]);
-        allTimePlayoffs = new Record(arr[3], arr[4]);
-
-        this.players = new List<player>();
-
-        arr = lines[1].Split(',');
-        allTimeVsTeam = new Record[32];
-        for (int i = 0; i < allTimeVsTeam.Length; i += 2 )
-        {
-            allTimeVsTeam[i / 2] = new Record(arr[i], arr[i + 1]);
-        }
-        arr = lines[2].Split(',');
-        fianance = int.Parse(arr[0]) + 100000000;
-        penalty = Double.Parse(arr[1]);
-        draftPlace = int.Parse(arr[2]);
-        playoffAppearances = int.Parse(arr[3]);
-        leagueChampionships = int.Parse(arr[4]);
-        conferenceChampionships = int.Parse(arr[5]);
-        divisionChampionships = int.Parse(arr[6]);
-        colorOne = arr[7];
-        colorTwo = arr[8];
-        colorThree = arr[9];
-        location = arr[10];
-        city = arr[11];
-        stadiumName = arr[12];
-        colorOneName = arr[13];
-        colorTwoName = arr[14];
-        colorThreeName = arr[15];
-
-        coach = new Coach(lines[3], r, this);
-        trainer = new Trainer(lines[4], r);
-
-        string[] players = lines[5].Split(new string[] { "<player>" }, StringSplitOptions.None);
-        for (int i = 1; i < players.Length; i++ )
-        {
-            player p = new player(players[i]);
-            SimpleAddPlayer(p);
-            this.players.Add(p);
-        }
-        if (!isAffiliate)
-        {
-            moreImportantTeam = true;
-            this.affiliate = new team(affiliate, "", r, true);
-            this.affiliate.SetAffiliate(this, false);
-        }
-        
-    }
-    /*public team(String teamName, FormulaBasketball.Random r)
-    {
-        picks = new List<DraftPick>();
-        nextSeasonPicks = new List<DraftPick>();
-        this.r = r;
-        merchandise = new Merchandise(r);
-        // ticket sales, concession sales, shared revenue, sponsor money
-        totalIncome = new double[] { 0, 0, 0, 0 };
-        coach = null;
-        this.teamName = teamName;
-        players = new List<player>();
-        playersPerPos = new int[5];
-        currentSeason = new Record();
-        currentPlayoffs = new Record();
-        divisionRecord = new Record();
-        allTime = new Record();
-        allTimePlayoffs = new Record();
-        conferenceRecord = new Record();
-        currentSeasonVsTeam = new Record[32];
-        allTimeVsTeam = new Record[32];
-        activePlayers = new player[15];
-        for (int i = 0; i < currentSeasonVsTeam.Length; i++ )
-        {
-            currentSeasonVsTeam[i] = new Record();
-            allTimeVsTeam[i] = new Record();
-        }
-        pointsScored = 0;
-        pointsAgainst = 0;
-        lastGames = new Queue<Int32>();
-        threeLetterAbbreviation = teamName.Substring(0, 3);
-        fianance = 50000000;
-        lastTen = new List<int>();
-        streak = 0;
-    }
-
-    
-
-    */
     public team(String teamName, String threeLetter, FormulaBasketball.Random r)
     {
         nextSeasonPicks = new List<DraftPick>();
@@ -2236,9 +2104,9 @@ public class team : IComparable<team>,  IEnumerable<player>
     private List<player> mockPlayerList;
     public List<player> GetMockRoster()
     {
-        if (mockPlayerList == null) mockPlayerList = new List<player>(players);
+        if (mockPlayerList == null) mockPlayerList = new List<player>(activePlayers);
         List<player> bigList = new List<player>(mockPlayerList);
-        bigList.AddRange(affiliate.players);
+        bigList.AddRange(affiliate.activePlayers);
         return bigList;
     }
     public void AddMockedPlayer(player player)
@@ -2391,6 +2259,10 @@ public class DraftPick
     public team GetOwner()
     {
         return owner;
+    }
+    public void SetOwner(team t)
+    {
+        owner = t;
     }
     public bool DifferentOwner()
     {

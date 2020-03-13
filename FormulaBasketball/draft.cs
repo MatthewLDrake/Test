@@ -59,6 +59,7 @@ namespace FormulaBasketball
 
                 while(currentPick < 64)
                 {
+                   
                     List<player> roster = picks[currentPick].GetOwner().GetMockRoster();
                     player selectedPlayer = PickPlayer(roster, picks[currentPick].GetOwner().DraftStrategy);
                     players.Remove(selectedPlayer.GetPlayerID());
@@ -115,7 +116,7 @@ namespace FormulaBasketball
             }
             for (int i = 0; i < players.Length; i++)
                 players[i] = Sort(players[i]);
-            double[] topScores = new double[7];
+            double[] topScores = new double[] { double.MinValue, double.MinValue, double.MinValue, double.MinValue, double.MinValue, double.MinValue, double.MinValue };
             player[] topPlayers = new player[7];
 
             foreach (KeyValuePair<int, player> entry in this.players)

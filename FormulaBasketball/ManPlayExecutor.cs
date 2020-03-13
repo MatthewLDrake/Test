@@ -17,6 +17,15 @@ namespace FormulaBasketball
 
         public override PlayResult RunPlay(OffensivePlay offensivePlay, NewCurrentTeam offense, NewCurrentTeam defense)
         {
+            OffensivePlayerOnCourt[] currOffense = offensivePlay.GetPlayers(offense);
+            DefensivePlayerOnCourt[] currDefense = new DefensivePlayerOnCourt[5];
+            for (int i = 0; i < defense.GetCurrentPlayers().Length; i++ )
+            {
+                currDefense[i] = new DefensivePlayerOnCourt(defense.GetCurrentPlayers()[i], i + 1, currOffense[i].GetLocation(), 1);
+            }
+            //offensivePlay.RunPlay(currOffense, currDefense);
+
+
             return null;
         }
     }

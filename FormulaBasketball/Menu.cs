@@ -26,7 +26,7 @@ namespace FormulaBasketball
         private ResignPlayers resignForm;
         private FreeAgencyForm freeAgentForm;
         private bool master = true;
-        private List<player> rookies;
+        private MyList<player> rookies;
         private DraftPick[] picks;
         private Scouting scoutingForm; 
         private AwardVoting voting;
@@ -41,13 +41,316 @@ namespace FormulaBasketball
 
             this.r = r;
 
-            System.Threading.Thread thread = new System.Threading.Thread(LaunchFreeAgency);
+            int temp = 1;
+
+            foreach (team t in create.getTeams())
+            {
+                foreach (player p in t)
+                {
+                    p.StartOffseason();
+                }
+                foreach (player p in t.GetAffiliate())
+                {
+                    p.StartOffseason();
+                }
+            }
+
+            List<player> retiringPlayers = new List<player>();
+            foreach(team t in create.getTeams())
+            {
+                foreach(player p in t)
+                {
+                    p.addPlayerID(temp);
+                    temp++;
+                    if (p.GetPeakEnd() < p.age && r.Next(0,5) < 4)
+                        retiringPlayers.Add(p);
+                }
+                foreach(player p in t.GetAffiliate())
+                {
+                    p.addPlayerID(temp);
+                    temp++;
+                    if (p.GetPeakStart() < p.age)
+                        retiringPlayers.Add(p);
+                }
+            }
+            foreach (player p in create.getFreeAgents().GetAllPlayers())
+            {
+                p.addPlayerID(temp);
+                temp++;
+                if (p.GetPeakStart() < p.age)
+                    retiringPlayers.Add(p);
+            }
+            createTeams.nextID = temp;
+
+            rookies = new MyList<player>();
+            CollegePlayerGen playerGen = new CollegePlayerGen(r);
+            rookies.Add(playerGen.GeneratePlayer(5, 46, Country.Wyverncliff, 3, 30, 32, false, 1, 0));
+            rookies.Add(playerGen.GeneratePlayer(5, 58, Country.Wyverncliff, 4, 29, 32, false, 1, 0));
+            rookies.Add(playerGen.GeneratePlayer(5, 60, Country.Shmupland, 2, 29, 32, false, 4, 0));
+            rookies.Add(playerGen.GeneratePlayer(5, 56, Country.Oesa, 3, 31, 35, false, 4, 0));
+            rookies.Add(playerGen.GeneratePlayer(5, 68, Country.Ethanthova, 6, 31, 35, false, 1, 0));
+            rookies.Add(playerGen.GeneratePlayer(5, 50, Country.Darvincia, 4, 31, 32, false, 3, 0));
+            rookies.Add(playerGen.GeneratePlayer(5, 46, Country.Czalliso, 3, 27, 28, false, 1, 0));
+            rookies.Add(playerGen.GeneratePlayer(5, 45, Country.Lyintaria, 7, 29, 32, false, 1, 0));
+            rookies.Add(playerGen.GeneratePlayer(5, 54, Country.Tri_National_Dominion, 5, 31, 35, false, 5, 0));
+            rookies.Add(playerGen.GeneratePlayer(5, 64, Country.Dotruga, 7, 28, 31, false, 2, 0));
+            rookies.Add(playerGen.GeneratePlayer(5, 79, Country.Bongatar, 6, 27, 28, false, 5, 0));
+            rookies.Add(playerGen.GeneratePlayer(5, 65, Country.Sagua, 7, 27, 30, false, 2, 0));
+            rookies.Add(playerGen.GeneratePlayer(5, 56, Country.Auspikitan, 7, 30, 31, false, 4, 0));
+            rookies.Add(playerGen.GeneratePlayer(5, 45, Country.Bongatar, 6, 30, 31, false, 1, 0));
+            rookies.Add(playerGen.GeneratePlayer(5, 52, Country.Aeridani, 6, 27, 28, false, 2, 0));
+            rookies.Add(playerGen.GeneratePlayer(5, 44, Country.Czalliso, 6, 28, 30, false, 2, 0));
+            rookies.Add(playerGen.GeneratePlayer(5, 50, Country.Dotruga, 5, 30, 32, false, 2, 0));
+            rookies.Add(playerGen.GeneratePlayer(5, 64, Country.Dotruga, 4, 30, 32, false, 4, 0));
+            rookies.Add(playerGen.GeneratePlayer(5, 49, Country.Blaist_Blaland, 5, 28, 30, false, 4, 0));
+            rookies.Add(playerGen.GeneratePlayer(5, 66, Country.Ethanthova, 3, 29, 32, false, 1, 0));
+            rookies.Add(playerGen.GeneratePlayer(5, 52, Country.Ethanthova, 3, 27, 29, false, 4, 0));
+            rookies.Add(playerGen.GeneratePlayer(5, 65, Country.Dotruga, 7, 27, 29, false, 3, 0));
+            rookies.Add(playerGen.GeneratePlayer(5, 63, Country.Aeridani, 4, 29, 32, false, 4, 0));
+            rookies.Add(playerGen.GeneratePlayer(4, 56, Country.Aeridani, 6, 31, 32, false, 4, 0));
+            rookies.Add(playerGen.GeneratePlayer(4, 53, Country.Shmupland, 4, 27, 31, false, 5, 0));
+            rookies.Add(playerGen.GeneratePlayer(4, 70, Country.Oesa, 8, 27, 31, false, 2, 0));
+            rookies.Add(playerGen.GeneratePlayer(4, 61, Country.Bielosia, 7, 29, 30, false, 4, 0));
+            rookies.Add(playerGen.GeneratePlayer(4, 77, Country.Dotruga, 4, 30, 34, false, 2, 0));
+            rookies.Add(playerGen.GeneratePlayer(4, 57, Country.Aeridani, 6, 29, 33, false, 5, 0));
+            rookies.Add(playerGen.GeneratePlayer(4, 76, Country.Transhimalia, 7, 27, 30, false, 5, 0));
+            rookies.Add(playerGen.GeneratePlayer(4, 47, Country.Auspikitan, 5, 28, 32, false, 2, 0));
+            rookies.Add(playerGen.GeneratePlayer(4, 52, Country.Oesa, 4, 31, 32, false, 2, 0));
+            rookies.Add(playerGen.GeneratePlayer(4, 65, Country.Sagua, 6, 30, 31, false, 3, 0));
+            rookies.Add(playerGen.GeneratePlayer(4, 59, Country.Wyverncliff, 6, 30, 34, false, 1, 0));
+            rookies.Add(playerGen.GeneratePlayer(4, 53, Country.Pyxanovia, 2, 27, 29, false, 2, 0));
+            rookies.Add(playerGen.GeneratePlayer(4, 51, Country.Tjedigar, 2, 30, 33, false, 5, 0));
+            rookies.Add(playerGen.GeneratePlayer(4, 57, Country.Bongatar, 9, 33, 35, false, 1, 0));
+            rookies.Add(playerGen.GeneratePlayer(4, 63, Country.Dotruga, 6, 28, 29, false, 4, 0));
+            rookies.Add(playerGen.GeneratePlayer(4, 54, Country.Blaist_Blaland, 5, 29, 32, false, 1, 0));
+            rookies.Add(playerGen.GeneratePlayer(4, 54, Country.Helvaena, 2, 28, 32, false, 1, 0));
+            rookies.Add(playerGen.GeneratePlayer(4, 66, Country.Lyintaria, 6, 30, 33, false, 3, 0));
+            rookies.Add(playerGen.GeneratePlayer(4, 65, Country.Solea, 4, 28, 32, false, 4, 0));
+            rookies.Add(playerGen.GeneratePlayer(4, 48, Country.Solea, 5, 30, 31, false, 2, 0));
+            rookies.Add(playerGen.GeneratePlayer(4, 60, Country.Bielosia, 7, 27, 30, false, 2, 0));
+            rookies.Add(playerGen.GeneratePlayer(4, 59, Country.Dotruga, 3, 27, 29, false, 3, 0));
+            rookies.Add(playerGen.GeneratePlayer(4, 32, Country.Wyverncliff, 5, 28, 29, false, 2, 0));
+            rookies.Add(playerGen.GeneratePlayer(4, 63, Country.Height_Sagua, 6, 29, 33, false, 3, 0));
+            rookies.Add(playerGen.GeneratePlayer(4, 57, Country.Ethanthova, 7, 31, 33, false, 2, 0));
+            rookies.Add(playerGen.GeneratePlayer(4, 31, Country.Dotruga, 7, 29, 33, false, 1, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 51, Country.Wyverncliff, 7, 28, 32, false, 2, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 68, Country.Auspikitan, 5, 29, 32, false, 1, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 49, Country.Auspikitan, 5, 29, 30, false, 5, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 55, Country.Darvincia, 5, 30, 33, false, 1, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 44, Country.Pyxanovia, 4, 31, 35, false, 5, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 38, Country.Tjedigar, 5, 28, 29, false, 2, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 62, Country.Helvaena, 3, 31, 33, false, 5, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 57, Country.Transhimalia, 4, 27, 31, false, 2, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 58, Country.Solea, 5, 31, 32, false, 5, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 65, Country.Darvincia, 3, 30, 32, false, 3, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 57, Country.Transhimalia, 6, 27, 31, false, 1, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 50, Country.Solea, 6, 31, 32, false, 5, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 61, Country.Pyxanovia, 3, 29, 30, false, 4, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 60, Country.Auspikitan, 6, 27, 30, false, 3, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 55, Country.Shmupland, 6, 29, 33, false, 1, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 53, Country.Aeridani, 6, 27, 31, false, 2, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 56, Country.Aeridani, 6, 29, 33, false, 3, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 65, Country.Norkute, 4, 28, 30, false, 4, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 61, Country.Bielosia, 3, 27, 29, false, 3, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 48, Country.Tri_National_Dominion, 5, 28, 30, false, 2, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 64, Country.Height_Sagua, 7, 29, 30, false, 3, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 54, Country.Auspikitan, 7, 28, 31, false, 4, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 52, Country.Blaist_Blaland, 6, 27, 28, false, 4, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 58, Country.Bongatar, 4, 31, 32, false, 4, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 47, Country.Ethanthova, 5, 30, 34, false, 1, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 47, Country.Tri_National_Dominion, 4, 27, 31, false, 5, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 47, Country.Holykol, 8, 31, 34, false, 3, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 44, Country.Bielosia, 6, 29, 32, false, 1, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 70, Country.Holy_Yektonisa, 4, 28, 29, false, 1, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 43, Country.Auspikitan, 5, 28, 32, false, 5, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 62, Country.Wyverncliff, 6, 27, 28, false, 4, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 64, Country.Sagua, 7, 30, 33, false, 4, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 46, Country.Czalliso, 6, 27, 28, false, 5, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 66, Country.Auspikitan, 5, 27, 29, false, 4, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 75, Country.Solea, 4, 27, 29, false, 3, 0));
+            rookies.Add(playerGen.GeneratePlayer(3, 66, Country.Aiyota, 4, 31, 33, false, 4, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 62, Country.Bielosia, 4, 28, 29, false, 3, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 63, Country.Barsein, 3, 27, 28, false, 1, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 62, Country.Wyverncliff, 9, 27, 29, false, 1, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 61, Country.Tri_National_Dominion, 4, 28, 30, false, 1, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 40, Country.Auspikitan, 3, 31, 32, false, 3, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 65, Country.Pyxanovia, 4, 27, 28, false, 1, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 62, Country.Blaist_Blaland, 5, 31, 32, false, 5, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 44, Country.Kaeshar, 5, 30, 31, false, 3, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 71, Country.Holykol, 6, 27, 29, false, 5, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 54, Country.Dotruga, 5, 31, 32, false, 1, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 59, Country.Bielosia, 5, 31, 34, false, 1, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 54, Country.Wyverncliff, 5, 30, 31, false, 3, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 51, Country.Ethanthova, 4, 31, 35, false, 5, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 58, Country.Bongatar, 5, 28, 30, false, 2, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 59, Country.Pyxanovia, 5, 30, 34, false, 5, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 52, Country.Auspikitan, 6, 29, 33, false, 4, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 65, Country.Ethanthova, 6, 30, 32, false, 2, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 52, Country.Ethanthova, 6, 29, 31, false, 5, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 68, Country.Transhimalia, 5, 29, 32, false, 5, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 53, Country.Helvaena, 5, 28, 30, false, 3, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 79, Country.Wyverncliff, 4, 29, 30, false, 3, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 65, Country.Ethanthova, 8, 28, 30, false, 5, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 57, Country.Transhimalia, 5, 27, 29, false, 4, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 63, Country.Aeridani, 4, 29, 30, false, 1, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 54, Country.Holykol, 7, 31, 34, false, 2, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 72, Country.Bongatar, 3, 31, 32, false, 5, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 44, Country.Aeridani, 6, 29, 33, false, 3, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 75, Country.Dotruga, 6, 27, 30, false, 1, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 60, Country.Timbalta, 7, 29, 30, false, 1, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 48, Country.Bielosia, 3, 31, 35, false, 5, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 52, Country.Solea, 3, 27, 28, false, 3, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 48, Country.Tri_National_Dominion, 7, 29, 33, false, 3, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 78, Country.Dotruga, 5, 27, 28, false, 1, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 55, Country.Holy_Yektonisa, 5, 27, 31, false, 1, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 49, Country.Bongatar, 3, 28, 32, false, 3, 0));
+            rookies.Add(playerGen.GeneratePlayer(2, 43, Country.Kaeshar, 6, 28, 29, false, 4, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 66, Country.Ethanthova, 3, 27, 30, false, 3, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 54, Country.Sagua, 5, 30, 34, false, 5, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 44, Country.Pyxanovia, 4, 27, 31, false, 2, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 61, Country.Czalliso, 5, 27, 31, false, 3, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 64, Country.Aeridani, 7, 27, 28, false, 2, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 64, Country.Bielosia, 6, 27, 31, false, 4, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 57, Country.Bongatar, 5, 31, 35, false, 3, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 63, Country.Solea, 3, 31, 34, false, 5, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 52, Country.Darvincia, 8, 29, 33, false, 2, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 48, Country.Dtersauuw_Sagua, 5, 30, 31, false, 2, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 52, Country.Kaeshar, 7, 28, 32, false, 4, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 82, Country.Ethanthova, 10, 30, 32, false, 2, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 55, Country.Solea, 9, 29, 32, false, 4, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 57, Country.Shmupland, 5, 29, 32, false, 2, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 54, Country.Auspikitan, 7, 27, 28, false, 5, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 56, Country.Oesa, 5, 27, 30, false, 3, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 48, Country.Kaeshar, 6, 31, 33, false, 5, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 66, Country.Tri_National_Dominion, 5, 29, 30, false, 3, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 58, Country.Wyverncliff, 6, 28, 29, false, 1, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 57, Country.Shmupland, 4, 30, 31, false, 3, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 71, Country.Solea, 5, 30, 32, false, 4, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 76, Country.Transhimalia, 6, 28, 31, false, 1, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 72, Country.Oesa, 4, 27, 28, false, 5, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 75, Country.Czalliso, 4, 29, 30, false, 3, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 54, Country.Dtersauuw_Sagua, 1, 30, 31, false, 5, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 62, Country.Holykol, 3, 30, 34, false, 4, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 76, Country.Bongatar, 4, 31, 32, false, 2, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 78, Country.Tri_National_Dominion, 6, 29, 33, false, 5, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 60, Country.Holy_Yektonisa, 4, 27, 28, false, 5, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 67, Country.Wyverncliff, 8, 30, 31, false, 2, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 77, Country.Aeridani, 4, 29, 30, false, 4, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 74, Country.Auspikitan, 6, 28, 31, false, 4, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 66, Country.Transhimalia, 5, 31, 35, false, 1, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 57, Country.Transhimalia, 5, 28, 29, false, 1, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 46, Country.Bielosia, 2, 29, 33, false, 3, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 73, Country.Kaeshar, 5, 30, 34, false, 4, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 59, Country.Tri_National_Dominion, 5, 28, 31, false, 3, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 47, Country.Bongatar, 5, 30, 33, false, 2, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 68, Country.Wyverncliff, 3, 31, 34, false, 5, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 56, Country.Aeridani, 4, 30, 32, false, 5, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 40, Country.Czalliso, 4, 28, 30, false, 4, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 56, Country.Blaist_Blaland, 3, 31, 32, false, 4, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 65, Country.Bongatar, 6, 31, 34, false, 1, 0));
+            rookies.Add(playerGen.GeneratePlayer(1, 76, Country.Pyxanovia, 6, 29, 30, false, 1, 0));
+
+            
+            foreach(player p in rookies)
+            {
+                p.addPlayerID(temp);
+                temp++;
+                p.IsRookie();
+            }
+
+
+            /*System.Threading.Thread thread = new System.Threading.Thread(LaunchFreeAgency);
             thread.Start();
             thread = new System.Threading.Thread(LaunchRoster);
             thread.Start();
-            
-            
+            FreeAgentInfo info;
+            FileStream fs = new FileStream("Solea_GeysersStage1.fbteam", FileMode.Open);
+            try
+            {
+                BinaryFormatter formatter = new BinaryFormatter();
 
+                // Deserialize the hashtable from the file and 
+                // assign the reference to the local variable.
+                info = (FreeAgentInfo)formatter.Deserialize(fs);
+            }
+            catch (SerializationException exc)
+            {
+                Console.WriteLine("Failed to deserialize. Reason: " + exc.Message);
+                throw;
+            }
+            finally
+            {
+                fs.Close();
+            }
+            team tempTeam = info.players[0].getTeam();
+            foreach(player p in create.getTeam(7))
+            {
+                if(p.GetYearsLeft() <= 0)
+                {
+                    foreach(player player in tempTeam)
+                    {
+                        if(p.getName().Equals(player.getName()))
+                        {
+                            p.SetNewContract(new Contract(player.GetYearsLeft(), player.GetMoneyPerYear(), 0, player.GetBonus(), player.GetPromises()));
+                        }
+                    }
+                }
+            }
+            fs = new FileStream("Dotruga_FalnoStage1.fbteam", FileMode.Open);
+            try
+            {
+                BinaryFormatter formatter = new BinaryFormatter();
+
+                // Deserialize the hashtable from the file and 
+                // assign the reference to the local variable.
+                info = (FreeAgentInfo)formatter.Deserialize(fs);
+            }
+            catch (SerializationException exc)
+            {
+                Console.WriteLine("Failed to deserialize. Reason: " + exc.Message);
+                throw;
+            }
+            finally
+            {
+                fs.Close();
+            }
+            tempTeam = info.players[0].getTeam();
+            foreach (player p in create.getTeam(19))
+            {
+                if (p.GetYearsLeft() <= 0)
+                {
+                    foreach (player player in tempTeam)
+                    {
+                        if (p.getName().Equals(player.getName()))
+                        {
+                            p.SetNewContract(new Contract(player.GetYearsLeft(), player.GetMoneyPerYear(), 0, player.GetBonus(), player.GetPromises()));
+                        }
+                    }
+                }
+            }
+            FileStream createFS = new FileStream("NextSeason.fbdata", FileMode.Create);
+
+            // Construct a BinaryFormatter and use it to serialize the data to the stream.
+            BinaryFormatter outFormatter = new BinaryFormatter();
+            try
+            {
+                outFormatter.Serialize(createFS, create);
+            }
+            catch (SerializationException ex)
+            {
+                Console.WriteLine("Failed to serialize. Reason: " + ex.Message);
+                throw;
+            }
+            finally
+            {
+                createFS.Close();
+            }*/
+
+            
+            foreach(player p in retiringPlayers)
+            {
+                Console.WriteLine(p.getName() + " is retiring");
+            }
         }
         private void LaunchRoster()
         {
@@ -65,16 +368,7 @@ namespace FormulaBasketball
             cotyVotes = new Dictionary<int, int>();
 
             events = new List<Event>();
-            events.Add(new Event("Players from new countries enter the draft!", "Players from the nations of Tjedigar have joined the draft for the first time in UBA history. The only question remaining is whether or not they will ever see the court."));
-            events.Add(new Event("Players from new countries enter the draft!", "Players from the nations of Aovensiiv have joined the draft for the first time in UBA history. The only question remaining is whether or not they will ever see the court."));
-            events.Add(new Event("Players from new countries enter the draft!", "Players from the nations of Eqkirium have joined the draft for the first time in UBA history. The only question remaining is whether or not they will ever see the court."));
-            events.Add(new Event("Players from new countries enter the draft!", "Players from the nations of Teralm have joined the draft for the first time in UBA history. The only question remaining is whether or not they will ever see the court."));
-            events.Add(new Event("Players from new countries enter the draft!", "Players from the nations of Timbalta have joined the draft for the first time in UBA history. The only question remaining is whether or not they will ever see the court."));
-            events.Add(new Event("Players from new countries enter the draft!", "Players from the nations of Helvaena have joined the draft for the first time in UBA history. The only question remaining is whether or not they will ever see the court."));
-            events.Add(new Event("Players from new countries enter the draft!", "Players from the nations of Ipal have joined the draft for the first time in UBA history. The only question remaining is whether or not they will ever see the court."));
-            events.Add(new Event("Players from new countries enter the draft!", "Players from the nations of Eksola have joined the draft for the first time in UBA history. The only question remaining is whether or not they will ever see the court."));
-            events.Add(new Event("Players from new countries enter the draft!", "Players from the nations of Kolauk have joined the draft for the first time in UBA history. The only question remaining is whether or not they will ever see the court."));
-            events.Add(new Event("Players from new countries enter the draft!", "Players from the nations of Elvine have joined the draft for the first time in UBA history. The only question remaining is whether or not they will ever see the court."));
+           
             eventViewer = new EventViewer(events);
             UpdatedEvents();
 
@@ -90,11 +384,25 @@ namespace FormulaBasketball
             {
                 foreach (DraftPick pick in t.GetPicks())
                 {
-                    pick.SetSeason(6);
+                    pick.SetOwner(t);
                 }
                 foreach (DraftPick pick in t.GetNextSeasonPicks())
                 {
-                    pick.SetSeason(7);
+                    pick.SetOwner(t);
+                }
+                if(t.ToString().Equals("Serkr Atolls"))
+                {
+                    DraftPick correct = null;
+                    foreach(DraftPick pick in t.GetNextSeasonPicks())
+                    {
+                        if (pick.GetOwner().Equals(t) && pick.GetRound() == 2)
+                        {
+                            correct = pick;
+                            break;
+                        }
+                    }
+                    t.GetNextSeasonPicks().Remove(correct);
+                    t.GetPicks().Add(correct);
                 }
                 if (t.GetDraftPlace() < 10) t.DraftStrategy = DraftStrategy.REBUILD;
                 else if (t.GetDraftPlace() < 20) t.DraftStrategy = DraftStrategy.WIN_SOON;
@@ -102,9 +410,11 @@ namespace FormulaBasketball
 
                 t.StartOffSeason();
 
+                
+
             }
             //create.getFreeAgents().AdvanceSeason();
-            rookies = create.GetRookies();
+            //rookies = create.GetRookies();
 
             voting = new AwardVoting(create);
             scoutingForm = new Scouting(rookies, team.GetScout(), r);
@@ -283,9 +593,11 @@ namespace FormulaBasketball
                             }
                         }
                         VoteMVP();
+                        VoteROTY();
+                        
 
                         MessageBox.Show(mvp.getName() + " of " + mvp.getTeam() + " wins the MVP!\n");
-                        
+                        MessageBox.Show(roty.getName() + " of " + roty.getTeam() + " wins the MVP!\n");
 
                         create.getFreeAgents().Add(players);
                         team.OffSeasonRemovePlayers(players);
@@ -708,7 +1020,14 @@ namespace FormulaBasketball
                 }
             }
             mvp = FindBest(playerList, mvpVotes);
-            
+            playerList.Remove(mvp);
+            player runnerUp = FindBest(playerList, mvpVotes);
+            playerList.Remove(runnerUp);
+            player thirdPlace = FindBest(playerList, mvpVotes);
+
+            events.Add(new Event("MVP Voting Complete", "The MVP was decided, with " + mvp.getName() + " of the " + mvp.getTeam() + " winning the MVP! " + runnerUp.getName() + " of the " + runnerUp.getTeam() + " was the runner up and " + thirdPlace.getName() + " of the " + thirdPlace.getTeam() + " came in third."));
+            eventViewer.AddEvent(events[events.Count - 1]);
+            UpdatedEvents();
         }
         private void VoteROTY()
         {
@@ -725,6 +1044,14 @@ namespace FormulaBasketball
                 }
             }
             roty = FindBest(playerList, rotyVotes);
+            playerList.Remove(roty);
+            player runnerUp = FindBest(playerList, rotyVotes);
+            playerList.Remove(runnerUp);
+            player thirdPlace = FindBest(playerList, rotyVotes);
+
+            events.Add(new Event("ROTY Voting Complete", "The ROTY was decided, with " + roty.getName() + " of the " + roty.getTeam() + " winning the MVP! " + runnerUp.getName() + " of the " + runnerUp.getTeam() + " was the runner up and " + thirdPlace.getName() + " of the " + thirdPlace.getTeam() + " came in third."));
+            eventViewer.AddEvent(events[events.Count - 1]);
+            UpdatedEvents();
         }
         
         private player FindBest(List<player> list, Dictionary<int, int> dict)

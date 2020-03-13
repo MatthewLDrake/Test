@@ -17,7 +17,7 @@ namespace FormulaBasketball
             InitializeComponent();
 
             for (int i = 0; i < mockDraft.Count; i++)
-                dataGridView1.Rows.Add(new object[] { i + 1, picks[i].GetOwner().ToString(), mockDraft[i].getPosition(), mockDraft[i].getName() });
+                dataGridView1.Rows.Add(new object[] { i + 1, picks[i].GetOwner().ToString(), mockDraft[i].getPosition(), mockDraft[i].getName() + " " + mockDraft[i].getOverall() + " " + mockDraft[i].getDevelopment() });
 
         }
     }

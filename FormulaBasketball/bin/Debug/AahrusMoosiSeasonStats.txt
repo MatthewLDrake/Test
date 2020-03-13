@@ -4,7 +4,7 @@ Player Record of Assists: Lae Thammavong: 11 assists on game 43 against the Heig
 Player Record of Rebounds: Tibiziŋag Poi: 12 rebounds on game 9 against the Shmupland Dictators
 Team Record in Most Points Scored: Aahrus Moosi: 120 points on game 39 against the Barsein Bats
 Team Record in Least Points Scored: Aahrus Moosi: 67 points on game 9 against the Shmupland Dictators
-Team Record in Least Points Allowed: Aahrus Moosi: 74 points on game 100 against the Autolik Autonomy
+Team Record in Least Points Allowed: Aahrus Moosi: 76 points on game 36 against the Stedro Boulders
 Team Record in Most Points Allowed: Aahrus Moosi: 120 points on game 48 against the Avura Aviators
 Records vs. Each Team this season:
 Aahrus Moosi: 0-0
@@ -13,13 +13,13 @@ Calto Cows: 3-1
 Height Sagua Cats: 4-0
 Key to Don Yees: 0-4
 Manwx Saguans: 2-2
-Sagua Ocelots: 5-5
+Sagua Ocelots: 3-1
 Solea Geysers: 2-2
-Autolik Autonomy: 6-4
+Autolik Autonomy: 2-1
 Barsein Bats: 2-1
 Blanaxon Hammers: 0-3
 Kaeshar Kaisers: 1-2
-Naxda Nomads: 5-3
+Naxda Nomads: 1-2
 Red Rainbow Sickles: 3-0
 Serkr Atolls: 0-3
 Shmupland Dictators: 1-2
@@ -28,7 +28,7 @@ Avura Aviators: 1-1
 Boltway Bad Dragons: 1-1
 Dotruga Falno: 0-2
 Ethanthova Ponies: 2-0
-Faehrenfall Feathercats: 4-5
+Faehrenfall Feathercats: 1-1
 Stedro Boulders: 1-1
 TND Tanks: 0-2
 Bongatar Banging Bongos: 1-1

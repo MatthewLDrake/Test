@@ -292,9 +292,9 @@ namespace FormulaBasketball
             rotyTop10StatsGrid.Rows.Clear();
             foreach (DataGridViewRow row in top10ROTYGrid.SelectedRows)
             {
-                if (row.Cells[2].Value != null)
+                if (row.Cells[4].Value != null)
                 {
-                    player p = row.Cells[2].Value as player;
+                    player p = row.Cells[4].Value as player;
                     double shootingPercentage = 0.0, opponentPercentage = 0.0;
                     if (p.getShotsTaken() != 0)
                     {

@@ -25,7 +25,7 @@ public class player : IComparable<player>
     protected Contract contract;
     protected PlayerRecords playerRecords;
     protected List<StatsHolders> seasonStats;
-    protected List<List<StatsHolders>> newCareerStats;
+    protected List<SeasonStatsHolder> playerCareerStats;
     /*
      * 0: Inside
      * 1: Jump
@@ -47,7 +47,6 @@ public class player : IComparable<player>
         this.ratings = new double[11];
         stats = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
         gameStats = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-        careerStats = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
         stamina = 100;
 
         this.name = name;
@@ -79,72 +78,12 @@ public class player : IComparable<player>
         this.ratings[10] = ratings[9] * 10 + r.Next(-5, 5);
 
     }
-    public string SavePlayer()
-    {
-        if (contract == null) contract = new Contract(0, 0);
-        String content = "<player>" + name + "," + playerAge + "," + country.ToString() + "," + contract.ToString() + "," + position + "," + peakStart + "," + peakEnd + "," + development + "," + gamesPreviousPlayed + "," + prevPointDiff + "," + (isRookie ? 1 : 0);
-        for (int i = 0; i < ratings.Length; i++)
-        {
-            content += "," + ratings[i];
-        }
-        for (int i = 0; i < careerStats.Length; i++)
-        {
-            content += "," + careerStats[i];
-        }
-        if (previousSeasonStats == null) previousSeasonStats = new int[careerStats.Length];
-        for (int i = 0; i < previousSeasonStats.Length; i++)
-        {
-            content += "," + previousSeasonStats[i];
-        }
-        return content;
-
-    }
-    public player(String info)
-    {
-        String[] arr = info.Split(',');
-        name = arr[0].Replace("<player>", "");
-        playerAge = int.Parse(arr[1]);
-       
-        country = StringUtils.GetCountryFromString(arr[2]);
-        playerID = createTeams.nextID;
-        createTeams.nextID++;
-       
-        contract = new Contract(arr[3]);
-        position = int.Parse(arr[4]);
-        peakStart = int.Parse(arr[5]);
-        peakEnd = int.Parse(arr[6]);
-        development = int.Parse(arr[7]);
-        gamesPlayed = int.Parse(arr[8]);
-        pointDiff = int.Parse(arr[9]);
-        isRookie = int.Parse(arr[10]) == 1;
-        ratings = new double[11];
-        stats = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-        gameStats = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-        careerStats = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-        stamina = 100;
-        int location = 11;
-        for (int i = 0; i < ratings.Length; i++)
-        {
-            ratings[i] += double.Parse(arr[location]);
-            location++;
-        }
-        for (int i = 0; i < careerStats.Length; i++)
-        {
-           careerStats[i] += int.Parse(arr[location]);
-           location++;
-        }
-        for (int i = 0; i < careerStats.Length; i++)
-        {
-            stats[i] += int.Parse(arr[location]);
-            location++;
-        }
-    }
+    
     public player(CollegePlayer player, int id)
     {
         ratings = new double[11];
         stats = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
         gameStats = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-        careerStats = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
         country = player.GetCountry();
         contract = null;
 
@@ -181,7 +120,6 @@ public class player : IComparable<player>
         ratings = new double[11];
         stats = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
         gameStats = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-        careerStats = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
         country = player.GetCountry();
         contract = null;
 
@@ -630,6 +568,8 @@ public class player : IComparable<player>
     }
     public int GetOffers()
     {
+        if (contractOffers == null)
+            contractOffers = new Dictionary<int, Contract>();
         return contractOffers.Count + offerCount;
     }
     public Dictionary<int, Contract> GetFreeAgentOffers()
@@ -943,7 +883,6 @@ public class player : IComparable<player>
 
 
     }
-    private int[] careerStats, previousSeasonStats;
     private int gamesPreviousPlayed;
     private int prevPointDiff;
     public void endSeason()
@@ -958,15 +897,9 @@ public class player : IComparable<player>
     }
     public void ResetStats()
     {
-        if (careerStats == null)
-        {
-            careerStats = new int[stats.Length];
-        }
-        for (int i = 0; i < careerStats.Length; i++)
-        {
-            careerStats[i] += stats[i];
-            stats[i] = 0;
-        }
+        gamesPreviousPlayed = gamesPlayed;
+        prevPointDiff = pointDiff;
+
         gamesPlayed = 0;
         pointDiff = 0;
         starts = 0;
@@ -975,10 +908,15 @@ public class player : IComparable<player>
         stamina = 100;
         if (seasonStats == null)
         {
-            newCareerStats = new List<List<StatsHolders>>();
+            playerCareerStats = new List<SeasonStatsHolder>();
         }
         else
-            newCareerStats.Add(seasonStats);
+        {
+            if (playerCareerStats == null)
+                playerCareerStats = new List<SeasonStatsHolder>();
+            playerCareerStats.Add(new SeasonStatsHolder(seasonStats));
+        }
+            
         seasonStats = new List<StatsHolders>();
 
     }
@@ -1041,6 +979,10 @@ public class player : IComparable<player>
     public int GetYearsLeft()
     {
         return contract.GetYearsLeft();
+    }
+    public List<Promises> GetPromises()
+    {
+        return contract.GetPromises();
     }
     public Contract GetCounterOffer(Contract previousOffer, FormulaBasketball.Random r, Contract previousPlayer = null)
     {
@@ -1124,6 +1066,15 @@ public class player : IComparable<player>
         }
 
         return new Contract(years,money, 0 , bonus, promises);
+    }
+    public void StartOffseason()
+    {        
+        contract.AdvanceYear();
+        playerAge++;
+    }
+    public void FreeAgencyBegan()
+    {
+        ResetStats();
     }
     private int playerHappiness = 0;//, personality = 0;
     public ContractResult ContractNegotiate(Contract newContract, FormulaBasketball.Random r)
@@ -1445,7 +1396,7 @@ public class player : IComparable<player>
         int normalizedPS = (peakStart - 27) * 2;
         int normalizedPE = (peakEnd - 30) * 2;
 
-        int average =  Math.Max(1, Math.Min(10, ((normalizedPE + normalizedPS + development * 3) / 5)));
+        int average =  Math.Max(1, Math.Min(10, (int)Math.Round((normalizedPE + normalizedPS + development * 3.5f) / 5.0f)));
 
         switch (average)
         {

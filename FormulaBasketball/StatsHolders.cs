@@ -9,7 +9,7 @@ namespace FormulaBasketball
     [Serializable]
     public class StatsHolders
     {
-        private byte[] smallStats;
+        public byte[] smallStats;
         private string team, opponent;
         public StatsHolders(team team, byte[] stats, team opponent)
         {
@@ -94,5 +94,28 @@ namespace FormulaBasketball
             return opponent;
         }
         
+    }
+    [Serializable]
+    public class SeasonStatsHolder
+    {
+        private List<String> teamsPlayedFor;
+        private int[] stats;
+        public SeasonStatsHolder(List<StatsHolders> stats)
+        {
+            teamsPlayedFor = new List<string>();
+            this.stats = new int[17];
+            foreach(StatsHolders stat in stats)
+            {
+                if (!teamsPlayedFor.Contains(stat.GetTeamFor()))
+                    teamsPlayedFor.Add(stat.GetTeamFor());
+
+                for (int i = 0; i < stat.smallStats.Length; i++)
+                    this.stats[i] += stat.smallStats[i];
+            }
+        }
+        public int[] GetStats()
+        {
+            return stats;
+        }
     }
 }

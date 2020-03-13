@@ -53,6 +53,22 @@ public class CollegePlayerGen
                 break;
         }
     }
+    public CollegePlayer GeneratePlayer(int position, int overallGoal, Country country, int development, int peakStart, int peakEnd, bool isRedshirt, int year, int personality)
+    {
+        switch(position)
+        {
+            case 1:
+                return GenerateCenter(overallGoal, country, development, peakStart, peakEnd, isRedshirt, year, personality);
+            case 2:
+                return GeneratePowerForward(overallGoal, country, development, peakStart, peakEnd, isRedshirt, year, personality);
+            case 3:
+                return GenerateSmallForward(overallGoal, country, development, peakStart, peakEnd, isRedshirt, year, personality);
+            case 4:
+                return GenerateShootingGuard(overallGoal, country, development, peakStart, peakEnd, isRedshirt, year, personality);
+            default:
+                return GeneratePointGuard(overallGoal, country, development, peakStart, peakEnd, isRedshirt, year, personality);
+        }
+    }
     public CollegePlayer GenerateCenter(int overallGoal, Country country, int development, int peakStart, int peakEnd, bool isRedshirt, int year, int personality)
     {
         NameGenerator gen = NameGenerator.Instance();

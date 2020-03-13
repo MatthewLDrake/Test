@@ -46,13 +46,16 @@ public class NameGenerator
         countryConvert.Add(Country.Solea, new ActualCountry(new String[] { "Solea" }, new int[] { 1 }, r));
         countryConvert.Add(Country.Ethanthova, new ActualCountry(new String[] { "Ethanthova" }, new int[] { 1 }, r));
         countryConvert.Add(Country.Dotruga, new ActualCountry(new String[] { "Dotruga" }, new int[] { 1 }, r));
+        countryConvert.Add(Country.Timbalta, new ActualCountry(new String[] { "Dotruga" }, new int[] { 1 }, r));
+        countryConvert.Add(Country.Tjedigar, new ActualCountry(new String[] { "Dotruga" }, new int[] { 1 }, r));
         countryConvert.Add(Country.Aiyota, new ActualCountry(new String[] { "Aiyota" }, new int[] { 1 }, r));
         countryConvert.Add(Country.Tri_National_Dominion, new ActualCountry(new String[] { "TND" }, new int[] { 1 }, r));
         countryConvert.Add(Country.Antarion, new ActualCountry(new String[] { "Issamore" }, new int[] { 1 }, r));
         countryConvert.Add(Country.Nja, new ActualCountry(new String[] { "Issamore" }, new int[] { 1 }, r));
         countryConvert.Add(Country.Pentadominion, new ActualCountry(new String[] { "Issamore" }, new int[] { 1 }, r));
         countryConvert.Add(Country.Kaeshar, new ActualCountry(new String[] { "Auspikitan" }, new int[] { 1 }, r));
-        countryConvert.Add(Country.Transhimalia, new ActualCountry(new String[] { "Himalia", "Aeridani", "Degeq'so" }, new int[] { 25, 370, 25 }, r));
+        countryConvert.Add(Country.Transhimalia, new ActualCountry(new String[] { "Transhimalia" }, new int[] { 1 }, r));
+        countryConvert.Add(Country.Helvaena, new ActualCountry(new String[] { "Wyverncliff" }, new int[] { 1 }, r));
         countryConvert.Add(Country.Other, new ActualCountry(new String[] { "Wyverncliff" }, new int[] { 1 }, r));
 
 

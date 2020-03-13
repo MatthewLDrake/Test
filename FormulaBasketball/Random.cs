@@ -68,4 +68,12 @@ namespace FormulaBasketball
             return (int)Math.Round(v1 * polar * sigma + mu);
         }
     }
+    [Serializable]
+    public class MyList<T> : System.Collections.Generic.List<T>
+    {
+        public override string ToString()
+        {
+            return "" + typeof(T).ToString() + ": " + Count;
+        }
+    }
 }

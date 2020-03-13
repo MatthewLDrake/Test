@@ -139,3 +139,9 @@ B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.StatsForm.reso
 B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.TeamRoster.resources
 B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.TradeFormAI.resources
 B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.TestScrimmageForm.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release\FormulaBasketball.GameViewer.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release\FormulaBasketball.NamingForm.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release\FormulaBasketball.ScrimmageForm.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release\FormulaBasketball.TeamRoster.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release\FormulaBasketball.TestScrimmageForm.resources
+C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release\FormulaBasketball.TradeFormAI.resources

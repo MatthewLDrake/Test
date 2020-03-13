@@ -282,6 +282,62 @@ public class OffensivePlay
     {
 
     }
+    public virtual OffensivePlayerOnCourt[] GetPlayers(FormulaBasketball.NewCurrentTeam team)
+    {
+        return null;
+    }
+}
+[Serializable]
+public class OffensivePlayerOnCourt
+{
+    private player p;
+    private bool hasBall;
+    private Location location;
+    public OffensivePlayerOnCourt(player p, Boolean hasBall, Location location)
+    {
+        this.p = p;
+        this.hasBall = hasBall;
+        this.location = location;
+    }
+    public player GetPlayer()
+    {
+        return p;
+    }
+    public void SetHasBall(bool hasBall)
+    {
+        this.hasBall = hasBall;
+    }
+    public bool GetHasBall()
+    {
+        return hasBall;
+    }
+    public void SetLocation(Location newLocation)
+    {
+        location = newLocation;
+    }
+    public Location GetLocation()
+    {
+        return location;
+    }
+}
+public class DefensivePlayerOnCourt
+{
+    private player p;
+    private int assignment, proximity;
+    private Location location;
+    public DefensivePlayerOnCourt(player p, int assignment, Location location, int proximity)
+    {
+        this.p = p;
+        this.assignment = assignment;
+        this.location = location;
+        this.proximity = proximity;
+    }
+
+}
+[Serializable]
+public enum Location
+{
+    LEFT_OUTER_CORNER, RIGHT_OUTER_CORNER, FREE_THROW_CIRCLE, TOP_OF_KEY, RIGHT_OF_KEY, LEFT_OF_KEY, PAINT, LEFT_BASKET, RIGHT_BASKET, 
 }
 [Serializable]
 public enum DefensivePlay
