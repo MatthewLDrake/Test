@@ -38,7 +38,7 @@ namespace FormulaBasketball
                 else if(item is DraftPick)
                 {
                     DraftPick p = item as DraftPick;
-                    teamOneGrid.Rows.Add("Season " + p.GetSeason() +" Round " + p.GetRound() + " pick from " + p.GetTeamOfOrigin(), "???", "B", 0, p);
+                    teamOneGrid.Rows.Add("Season " + p.GetSeason() +" Round " + p.GetRound() + " pick from " + p.GetTeamOfOrigin(create), "???", "B", 0, p);
                 }
             }
             foreach (object item in trade.GetTeamTwoTradeItems())
@@ -51,7 +51,7 @@ namespace FormulaBasketball
                 else if (item is DraftPick)
                 {
                     DraftPick p = item as DraftPick;
-                    teamTwoGrid.Rows.Add("Season " + p.GetSeason() + " Round " + p.GetRound() + " pick from " + p.GetTeamOfOrigin(), "???", "B", 0, p);
+                    teamTwoGrid.Rows.Add("Season " + p.GetSeason() + " Round " + p.GetRound() + " pick from " + p.GetTeamOfOrigin(create), "???", "B", 0, p);
                 }
             }
         }

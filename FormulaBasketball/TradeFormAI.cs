@@ -16,8 +16,9 @@ namespace FormulaBasketball
     public partial class TradeFormAI : Form
     {
         private createTeams create;
+        private bool offseason;
         public static bool master;
-        public TradeFormAI(createTeams create, int teamNum, bool master)
+        public TradeFormAI(createTeams create, int teamNum, bool master, bool offseason)
         {
             InitializeComponent();
             this.create = create;
@@ -27,17 +28,17 @@ namespace FormulaBasketball
                 teamList.Items.Add(create.getTeam(i).ToString());
                 aiTeamList.Items.Add(create.getTeam(i).ToString());
             }
-
+            this.offseason = offseason;
             teamList.SelectedIndex = 0;
             aiTeamList.SelectedIndex = teamNum;
             
         }
-        public TradeFormAI(createTeams create, Trade prevTrade, bool master)
+        public TradeFormAI(createTeams create, Trade prevTrade, bool master, bool offseason)
         {
             InitializeComponent();
             this.create = create;
             TradeFormAI.master = master;
-
+            this.offseason = offseason;
             for (int i = 0; i < create.size(); i++)
             {
                 teamList.Items.Add(create.getTeam(i).ToString());
@@ -107,26 +108,36 @@ namespace FormulaBasketball
         {
             otherTeamTradeInfo.Rows.Clear();
             int index = teamList.SelectedIndex;
-            FillGridWithTeam(otherTeamGrid, create.getTeam(index));
+            FillGridWithTeam(otherTeamGrid, create.getTeam(index), offseason);
         }
 
 
-        private void FillGridWithTeam(DataGridView grid, team team)
+        private void FillGridWithTeam(DataGridView grid, team team, bool offseason)
         {
             grid.Rows.Clear();
-            foreach(player p in team.getActivePlayers())
+            if (offseason)
             {
-                grid.Rows.Add(false, p.getName(), p.getPosition(), p.getOverall(), p.getDevelopment(), p.GetMoneyPerYear(), p);
+                foreach (player p in team.GetOffSeasonPlayers())
+                {
+                    grid.Rows.Add(false, p.getName(), p.getPosition(), p.getOverall(), p.getDevelopment(), p.GetMoneyPerYear(), p);
+                }
+            }
+            else
+            {
+                foreach (player p in team.GetOffSeasonPlayers())
+                {
+                    grid.Rows.Add(false, p.getName(), p.getPosition(), p.getOverall(), p.getDevelopment(), p.GetMoneyPerYear(), p);
+                }
             }
             List<DraftPick> picks = team.GetPicks();
             foreach(DraftPick p in picks)
             {
-                grid.Rows.Add(false, "Season " + createTeams.currentSeason  + " Round " + p.GetRound() + " pick from " + p.GetTeamOfOrigin(),"?", "???", "B", 0, p);
+                grid.Rows.Add(false, "Season " + createTeams.currentSeason  + " Round " + p.GetRound() + " pick from " + p.GetTeamOfOrigin(create),"?", "???", "B", 0, p);
             }
             picks = team.GetNextSeasonPicks();
             foreach (DraftPick p in picks)
             {
-                grid.Rows.Add(false, "Season " + (createTeams.currentSeason + 1) + " Round " + p.GetRound() + " pick from " + p.GetTeamOfOrigin(), "?", "???", "B", 0, p);
+                grid.Rows.Add(false, "Season " + (createTeams.currentSeason + 1) + " Round " + p.GetRound() + " pick from " + p.GetTeamOfOrigin(create), "?", "???", "B", 0, p);
             }
         }
 
@@ -319,7 +330,7 @@ namespace FormulaBasketball
         {
             mainTeamTradeInfo.Rows.Clear();
             int index = aiTeamList.SelectedIndex;
-            FillGridWithTeam(mainTeamGrid, create.getTeam(index));
+            FillGridWithTeam(mainTeamGrid, create.getTeam(index), offseason);
         }
     }    
 }

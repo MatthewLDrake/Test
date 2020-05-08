@@ -102,15 +102,21 @@ namespace FormulaBasketball
         private int[] stats;
         public SeasonStatsHolder(List<StatsHolders> stats)
         {
-            teamsPlayedFor = new List<string>();
-            this.stats = new int[17];
-            foreach(StatsHolders stat in stats)
+            if (teamsPlayedFor == null)
             {
-                if (!teamsPlayedFor.Contains(stat.GetTeamFor()))
-                    teamsPlayedFor.Add(stat.GetTeamFor());
+                teamsPlayedFor = new List<string>();
+                this.stats = new int[17];
+            }
+            if (stats != null)
+            {
+                foreach (StatsHolders stat in stats)
+                {
+                    if (!teamsPlayedFor.Contains(stat.GetTeamFor()))
+                        teamsPlayedFor.Add(stat.GetTeamFor());
 
-                for (int i = 0; i < stat.smallStats.Length; i++)
-                    this.stats[i] += stat.smallStats[i];
+                    for (int i = 0; i < stat.smallStats.Length; i++)
+                        this.stats[i] += stat.smallStats[i];
+                }
             }
         }
         public int[] GetStats()

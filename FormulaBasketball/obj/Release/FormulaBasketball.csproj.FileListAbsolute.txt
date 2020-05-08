@@ -37,8 +37,6 @@ B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.Form1.resource
 B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.Form2.resources
 B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.Form3.resources
 B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.newLeague.resources
-B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.newPlayer.resources
-B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.newTeam.resources
 B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.PlayoffBracket.resources
 B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.playScrimmage.resources
 B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.Properties.Resources.resources
@@ -145,3 +143,8 @@ C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release\FormulaBasketball.TeamRoster.resources
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release\FormulaBasketball.TestScrimmageForm.resources
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Release\FormulaBasketball.TradeFormAI.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.AddPlayer.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.EditRatings.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.EditTeam.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.CreatePlayer.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.CreateTeam.resources

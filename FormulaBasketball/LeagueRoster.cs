@@ -16,13 +16,17 @@ namespace FormulaBasketball
         private createTeams create;
         private List<int> humans;
         private int lastPos;
-        private bool includeDLeague;
-        public LeagueRoster(List<int> humans, createTeams create)
+        private bool includeDLeague, offseason;
+        public LeagueRoster(List<int> humans, createTeams create, bool offseason = false)
         {
             InitializeComponent();
             controls = new RosterControl[32];
             this.humans = humans;
             this.create = create;
+            this.offseason = offseason;
+
+            if (offseason)
+                checkBox1.Enabled = false;
 
             controls[0] = rosterControl1;
             controls[1] = rosterControl2;
@@ -86,25 +90,52 @@ namespace FormulaBasketball
 
                 double highestOverall = 0;
                 if (humans.Contains(i)) highestOverall = 100 + i;
-                foreach (player p in team.getActivePlayers())
+                if (offseason)
                 {
-                    if (p.getPosition() == pos && p.getOverall() > highestOverall)
+                    foreach (player p in team.GetOffSeasonPlayers())
                     {
-                        highestOverall = p.getOverall();
+                        if (p == null)
+                            continue;
+                        if (p.getPosition() == pos && p.getOverall() > highestOverall)
+                        {
+                            highestOverall = p.getOverall();
+                        }
+
                     }
+                    list.Add(highestOverall, team);
                 }
-                list.Add(highestOverall, team);
+                else
+                {
+                    foreach (player p in team.getActivePlayers())
+                    {
+                        if (p == null)
+                            continue;
+                        if (p.getPosition() == pos && p.getOverall() > highestOverall)
+                        {
+                            highestOverall = p.getOverall();
+                        }
+                    }
+                    list.Add(highestOverall, team);
+                }
             }
             for (int i = 0; i < list.Count; i++)
             {
-                List<player> players = new List<player>(list.ElementAt(i).Value.getActivePlayers());
-                if(includeDLeague)
-                    players.AddRange(list.ElementAt(i).Value.GetAffiliate().getActivePlayers());
+                List<player> players;
+                if (offseason)
+                {
+                    players = new List<player>(list.ElementAt(i).Value.GetOffSeasonPlayers());
+                }
+                else
+                {
+                    players = new List<player>(list.ElementAt(i).Value.getActivePlayers());
+                    if (includeDLeague)
+                        players.AddRange(list.ElementAt(i).Value.GetAffiliate().getActivePlayers());
+                }
                 controls[i].SetControl(players, pos, list.ElementAt(i).Value.ToString());
             }
         }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        
+            private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             includeDLeague = checkBox1.Checked;
             UpdateRosterControls(lastPos);

@@ -26,7 +26,7 @@ namespace FormulaBasketball
             teams.Sort();
             for(int i = 0; i < teams.Count; i++)
             {
-                dataGridView1.Rows.Add((i + 1), teams[i].getThreeLetters().ToUpper(), teams[i].getWins(), teams[i].getLosses(), teams[i].getPoints(), teams[i].getPointsAgainst(), teams[i].getStreak());
+                dataGridView1.Rows.Add((i + 1), teams[i].getThreeLetters().ToUpper(), teams[i].getWins(), teams[i].getLosses(), teams[i].getPoints() - teams[i].getPointsAgainst(), teams[i].getStreak(), teams[i].GetLastTen());
                
             }
             dataGridView1.Refresh();

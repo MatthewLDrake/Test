@@ -43,7 +43,7 @@ namespace FormulaBasketball
             
             for(int i = 0; i < numTeams; i ++)
             {
-                newTeam newTeam = new newTeam(r);
+                CreateTeam newTeam = new CreateTeam(r);
                 newTeam.ShowDialog();
                 teams.Add(newTeam.getNewTeam());
             }

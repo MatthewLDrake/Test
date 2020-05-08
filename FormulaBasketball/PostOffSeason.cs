@@ -94,7 +94,7 @@ namespace FormulaBasketball
             {
                 foreach (DraftPick pick in t.GetPicks())
                 {
-                    picks[pick.GetPickNumber() - 1] = pick;
+                    picks[pick.GetPickNumber(create) - 1] = pick;
                 }
             }
 
@@ -111,7 +111,7 @@ namespace FormulaBasketball
         private void scoutButton_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            draft draft = new draft(rookies, picks, humans, new FormulaBasketball.Random(69420));
+            draft draft = new draft(rookies, picks, humans, new FormulaBasketball.Random(69420), create);
             draft.ShowDialog();
             this.Visible = true;
             create.getFreeAgents().Add(draft.GetUndraftedPlayers());
@@ -310,7 +310,7 @@ namespace FormulaBasketball
             {
                 foreach (DraftPick pick in t.GetPicks())
                 {
-                    picks[pick.GetPickNumber() - 1] = pick;
+                    picks[pick.GetPickNumber(create) - 1] = pick;
                 }
             }
         }

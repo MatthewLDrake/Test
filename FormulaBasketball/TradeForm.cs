@@ -20,11 +20,13 @@ namespace FormulaBasketball
         private team team;
         private int teamNum;
         public static bool master;
-        public TradeForm(createTeams create, team mainTeam, int teamNum, bool master)
+        private bool offseason;
+        public TradeForm(createTeams create, team mainTeam, int teamNum, bool master, bool offseason = false)
         {
             InitializeComponent();
             team = mainTeam;
             this.create = create;
+            this.offseason = offseason;
             this.teamNum = teamNum;
             TradeForm.master = master;
             for(int i = 0; i < create.size(); i++)
@@ -36,10 +38,11 @@ namespace FormulaBasketball
             teamList.SelectedIndex = 0;
             FillGridWithTeam(mainTeamGrid, mainTeam);
         }
-        public TradeForm(createTeams create, Trade prevTrade, bool master)
+        public TradeForm(createTeams create, Trade prevTrade, bool master, bool offseason = false)
         {
             InitializeComponent();
             this.create = create;
+            this.offseason = offseason;
             this.team = create.getTeam(prevTrade.teamTwoID);
             TradeForm.master = master;
             teamNum = prevTrade.teamTwoID;
@@ -124,19 +127,31 @@ namespace FormulaBasketball
         private void FillGridWithTeam(DataGridView grid, team team)
         {
             grid.Rows.Clear();
-            foreach(player p in team.getActivePlayers())
+            if(offseason)
             {
-                grid.Rows.Add(false, p.getName(), p.getPosition(), p.getOverall(), p.getDevelopment(), p.GetMoneyPerYear(), p);
+
+                foreach (player p in team.GetOffSeasonPlayers())
+                {                    
+                    grid.Rows.Add(false, p.getName(), p.getPosition(), p.getOverall(), p.getDevelopment(), p.GetMoneyPerYear(), p);
+                }
             }
+            else
+            {
+                foreach (player p in team.getActivePlayers())
+                {
+                    grid.Rows.Add(false, p.getName(), p.getPosition(), p.getOverall(), p.getDevelopment(), p.GetMoneyPerYear(), p);
+                }
+            }
+            
             List<DraftPick> picks = team.GetPicks();
             foreach(DraftPick p in picks)
             {
-                grid.Rows.Add(false, "Season " + createTeams.currentSeason  + " Round " + p.GetRound() + " pick from " + p.GetTeamOfOrigin(),"?", "???", "B", 0, p);
+                grid.Rows.Add(false, "Season " + createTeams.currentSeason  + " Round " + p.GetRound() + " pick from " + p.GetTeamOfOrigin(create),"?", "???", "B", 0, p);
             }
             picks = team.GetNextSeasonPicks();
             foreach (DraftPick p in picks)
             {
-                grid.Rows.Add(false, "Season " + (createTeams.currentSeason + 1) + " Round " + p.GetRound() + " pick from " + p.GetTeamOfOrigin(), "?", "???", "B", 0, p);
+                grid.Rows.Add(false, "Season " + (createTeams.currentSeason + 1) + " Round " + p.GetRound() + " pick from " + p.GetTeamOfOrigin(create), "?", "???", "B", 0, p);
             }
         }
 

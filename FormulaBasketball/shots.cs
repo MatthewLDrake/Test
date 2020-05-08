@@ -17,6 +17,7 @@ public class shots
         wasFouledBool = false;
         pointsScored = 0;
 
+       
         switch (typeOfShot)
         {
             case ShotType.FREE:
@@ -30,7 +31,7 @@ public class shots
                 else if (variation == 3) takeSmotheredShot(20);
                 break;
             case ShotType.JUMP:
-                if (variation == 1) takeOpenShot(55);
+                if (variation == 1) takeOpenShot(50);
                 else if (variation == 2) takeMildlyContestedShot(35);
                 else if (variation == 3) takeSmotheredShot(20);
                 break;

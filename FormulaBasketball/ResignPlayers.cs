@@ -19,7 +19,7 @@ namespace FormulaBasketball
         private team team;
         private FormulaBasketball.Random r;
         private List<Promises> promises;
-        private int playersUnderContract;
+        private int playersUnderContract, dLeagueUnderContract;
         private double capSpace;
         private double bonusCash;
         private List<player> rejectedPlayers;
@@ -39,7 +39,7 @@ namespace FormulaBasketball
             {
                 if (player.ContractExpired())
                 {
-                    dataGridView1.Rows.Add(player.getName(), player.getPosition(), player.getOverall(), player.getDevelopment(), player.GetMoneyPerYear(), player.GetPlayerID());
+                    dataGridView1.Rows.Add(player.getName(), player.getPosition(), player.getOverall(), player.getDevelopment(), player.GetMoneyPerYear(), player.GetPlayerID(), false);
                     rejectedPlayers.Add(player);
                 }
                 else
@@ -49,7 +49,17 @@ namespace FormulaBasketball
                     dataGridView2.Rows.Add(player.getName(), player.getPosition(), player.getOverall(), player.getDevelopment(), player.GetMoneyPerYear(), player.GetPlayerID(), player.GetYearsLeft());
                 }
             }
-            rosterSize.Text = "Players on team " + playersUnderContract + "/15\nPlayers on affiliate " + team.GetAffiliate().Count().ToString() + "/15";
+            foreach (player player in team.GetAffiliate())
+            {
+                if (player.ContractExpired())
+                {
+                    dataGridView1.Rows.Add(player.getName(), player.getPosition(), player.getOverall(), player.getDevelopment(), player.GetMoneyPerYear(), player.GetPlayerID(), true);
+                    rejectedPlayers.Add(player);
+                }
+                else
+                    dLeagueUnderContract++;
+            }
+            rosterSize.Text = "Players on team " + playersUnderContract + "/15\nPlayers on affiliate " + dLeagueUnderContract + "/15";
             MoneyLabel.Text = "Penalty Free Cap Space " + String.Format("{0:0.00}", capSpace) + "M\nAvailable Bonus Money " + String.Format("{0:0.00}", bonusCash) + "M";
         }
        
@@ -64,46 +74,60 @@ namespace FormulaBasketball
                 }
                 else
                 {
+                    bool dLeague = (bool)dataGridView1.CurrentRow.Cells[6].Value;
                     int playerID = (int)dataGridView1.CurrentRow.Cells[5].Value;
-                    player p = team.GetPlayerByID(playerID);
-                    Contract currentContract = new Contract(Convert.ToInt32(yearsNumber.Value), Convert.ToDouble(amountNumber.Value), 0, Convert.ToDouble(bonusAmount.Value), promises);
-                    ContractResult result = p.ContractNegotiate(currentContract, r);
-                    if (result.Equals(ContractResult.Accept))
+                    
+                    if (dLeague)
                     {
-                        MessageBox.Show("Player accepted your offer");
-                        p.SetNewContract(currentContract);
+                        player p = team.GetAffiliate().GetPlayerByID(playerID);
+                        p.SetNewContract(new Contract(2, 1));
                         dataGridView1.Rows.Remove(dataGridView1.CurrentRow);
-                        dataGridView2.Rows.Add(p.getName(), p.getPosition(), p.getOverall(), p.getDevelopment(), p.GetMoneyPerYear(), p.GetPlayerID(), p.GetYearsLeft());
-                        dataGridView2.Rows[dataGridView2.Rows.Count - 1].DefaultCellStyle.BackColor = Color.Gray;
-                        playersUnderContract++;
-                        capSpace -= p.GetMoneyPerYear();
-                        bonusCash -= p.GetBonus();
+                        dLeagueUnderContract++;
                         rejectedPlayers.Remove(p);
-                        rosterSize.Text = "Players on team " + playersUnderContract + "/15\nPlayers on affiliate " + team.GetAffiliate().Count().ToString() + "/15";
-                        MoneyLabel.Text = "Penalty Free Cap Space " + String.Format("{0:0.00}", capSpace) + "M\nAvailable Bonus Money " + String.Format("{0:0.00}", bonusCash) + "M";
-                    }
-                    else if (result.Equals(ContractResult.Reject))
-                    {
-                        MessageBox.Show("Player rejected your offer");
-                        dataGridView1.Rows.Remove(dataGridView1.CurrentRow);
+                        rosterSize.Text = "Players on team " + playersUnderContract + "/15\nPlayers on affiliate " + dLeagueUnderContract + "/15";
                     }
                     else
                     {
-                        Negotiation negotiation = new Negotiation(p, currentContract, r);
-                        negotiation.ShowDialog();
-                        if (negotiation.Success())
+                        player p = team.GetPlayerByID(playerID);
+                        Contract currentContract = new Contract(Convert.ToInt32(yearsNumber.Value), Convert.ToDouble(amountNumber.Value), 0, Convert.ToDouble(bonusAmount.Value), promises);
+                        ContractResult result = p.ContractNegotiate(currentContract, r);
+                        if (result.Equals(ContractResult.Accept))
                         {
-                            p.SetNewContract(negotiation.GetContract());
+                            MessageBox.Show("Player accepted your offer");
+                            p.SetNewContract(currentContract);
+                            dataGridView1.Rows.Remove(dataGridView1.CurrentRow);
                             dataGridView2.Rows.Add(p.getName(), p.getPosition(), p.getOverall(), p.getDevelopment(), p.GetMoneyPerYear(), p.GetPlayerID(), p.GetYearsLeft());
                             dataGridView2.Rows[dataGridView2.Rows.Count - 1].DefaultCellStyle.BackColor = Color.Gray;
                             playersUnderContract++;
                             capSpace -= p.GetMoneyPerYear();
                             bonusCash -= p.GetBonus();
                             rejectedPlayers.Remove(p);
-                            rosterSize.Text = "Players on team " + playersUnderContract + "/15\nPlayers on affiliate " + team.GetAffiliate().Count().ToString() + "/15";
+                            rosterSize.Text = "Players on team " + playersUnderContract + "/15\nPlayers on affiliate " + dLeagueUnderContract + "/15";
                             MoneyLabel.Text = "Penalty Free Cap Space " + String.Format("{0:0.00}", capSpace) + "M\nAvailable Bonus Money " + String.Format("{0:0.00}", bonusCash) + "M";
                         }
-                        dataGridView1.Rows.Remove(dataGridView1.CurrentRow);
+                        else if (result.Equals(ContractResult.Reject))
+                        {
+                            MessageBox.Show("Player rejected your offer");
+                            dataGridView1.Rows.Remove(dataGridView1.CurrentRow);
+                        }
+                        else
+                        {
+                            Negotiation negotiation = new Negotiation(p, currentContract, r);
+                            negotiation.ShowDialog();
+                            if (negotiation.Success())
+                            {
+                                p.SetNewContract(negotiation.GetContract());
+                                dataGridView2.Rows.Add(p.getName(), p.getPosition(), p.getOverall(), p.getDevelopment(), p.GetMoneyPerYear(), p.GetPlayerID(), p.GetYearsLeft());
+                                dataGridView2.Rows[dataGridView2.Rows.Count - 1].DefaultCellStyle.BackColor = Color.Gray;
+                                playersUnderContract++;
+                                capSpace -= p.GetMoneyPerYear();
+                                bonusCash -= p.GetBonus();
+                                rejectedPlayers.Remove(p);
+                                rosterSize.Text = "Players on team " + playersUnderContract + "/15\nPlayers on affiliate " + dLeagueUnderContract + "/15";
+                                MoneyLabel.Text = "Penalty Free Cap Space " + String.Format("{0:0.00}", capSpace) + "M\nAvailable Bonus Money " + String.Format("{0:0.00}", bonusCash) + "M";
+                            }
+                            dataGridView1.Rows.Remove(dataGridView1.CurrentRow);
+                        }
                     }
                 }
             }
@@ -130,7 +154,7 @@ namespace FormulaBasketball
                         capSpace += oldContract;
                         capSpace -= p.GetMoneyPerYear();
                         bonusCash -= p.GetBonus();
-                        rosterSize.Text = "Players on team " + playersUnderContract + "/15\nPlayers on affiliate " + team.GetAffiliate().Count().ToString() + "/15";
+                        rosterSize.Text = "Players on team " + playersUnderContract + "/15\nPlayers on affiliate " + dLeagueUnderContract + "/15";
                         MoneyLabel.Text = "Penalty Free Cap Space " + String.Format("{0:0.00}", capSpace) + "M\nAvailable Bonus Money " + String.Format("{0:0.00}", bonusCash) + "M";
 
                     }
@@ -152,7 +176,7 @@ namespace FormulaBasketball
                             capSpace += oldContract;
                             capSpace -= p.GetMoneyPerYear();
                             bonusCash -= p.GetBonus();
-                            rosterSize.Text = "Players on team " + playersUnderContract + "/15\nPlayers on affiliate " + team.GetAffiliate().Count().ToString() + "/15";
+                            rosterSize.Text = "Players on team " + playersUnderContract + "/15\nPlayers on affiliate " + dLeagueUnderContract + "/15";
                             MoneyLabel.Text = "Penalty Free Cap Space " + String.Format("{0:0.00}", capSpace) + "M\nAvailable Bonus Money " + String.Format("{0:0.00}", bonusCash) + "M";
                         }
                         dataGridView2.Rows[dataGridView2.CurrentRow.Index].DefaultCellStyle.BackColor = Color.Gray;
@@ -183,7 +207,7 @@ namespace FormulaBasketball
 
                     playersUnderContract--;
 
-                    rosterSize.Text = "Players on team " + playersUnderContract + "/15\nPlayers on affiliate " + team.GetAffiliate().Count().ToString() + "/15";
+                    rosterSize.Text = "Players on team " + playersUnderContract + "/15\nPlayers on affiliate " + dLeagueUnderContract + "/15";
                     MoneyLabel.Text = "Penalty Free Cap Space " + String.Format("{0:0.00}", capSpace) + "M\nAvailable Bonus Money " + String.Format("{0:0.00}", bonusCash) + "M";
                     dataGridView2.Rows.Remove(dataGridView2.CurrentRow);
                 }
@@ -204,7 +228,7 @@ namespace FormulaBasketball
                     if(!rejectedPlayer && r.NextBool())
                     {
                         rejectedPlayer = true;
-                        FormulaBasketball.Menu.menu.AddEvent(new Event("Fan Favorite " + p.getName() + " not given an offer", "This week the " + team.ToString() + " announced that " + p.getName() + " would not be joining the team next season. Fans are bitterly disappointed"));
+                        FormulaBasketball.Menu.menu.AddEvent(new Event("Fan Favorite " + p.getName() + " not given an offer", "This week the " + team.ToString() + " announced that " + p.getName() + " would not be joining the team next season. Fans are bitterly disappointed", team.getTeamNum()));
                     }
                 }
                 else if (d == DialogResult.No)
@@ -219,10 +243,12 @@ namespace FormulaBasketball
             if(tabControl1.SelectedIndex == 1)
             {
                 button2.Text = "Cut Player";
+                button1.Text = "Offer";
             }
             else
             {
                 button2.Text = "Not Interested";
+                button1.Text = buttonOneText;
             }
         }
 
@@ -231,6 +257,18 @@ namespace FormulaBasketball
             if(dataGridView2.Rows[dataGridView2.CurrentRow.Index].DefaultCellStyle.BackColor.Equals(Color.Gray))
                 dataGridView2.ClearSelection();
             
+        }
+        private string buttonOneText = "Offer";
+        private void dataGridView1_CurrentCellChanged(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow != null)
+            {
+                bool dLeague = (bool)dataGridView1.CurrentRow.Cells[6].Value;
+
+                buttonOneText = dLeague ? "Resign to D League Contract" : "Offer";
+
+                button1.Text = buttonOneText;
+            }
         }
 
         private void yearsNumber_Validating(object sender, CancelEventArgs e)

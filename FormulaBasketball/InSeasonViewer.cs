@@ -24,6 +24,7 @@ namespace FormulaBasketball
         {
             InitializeComponent();
             this.create = create;
+            
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -185,7 +186,7 @@ namespace FormulaBasketball
         {
             if (master && e.Button.Equals(MouseButtons.Right))
             {
-                TradeFormAI tradeForm = new TradeFormAI(create, teamNum, master);
+                TradeFormAI tradeForm = new TradeFormAI(create, teamNum, master, false);
                 tradeForm.ShowDialog();
             }
             else
@@ -262,6 +263,11 @@ namespace FormulaBasketball
             // Naming Form
             //System.Threading.Thread thread = new System.Threading.Thread(LaunchNamingForm);
             //thread.Start();
+        }
+
+        private void tradeButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

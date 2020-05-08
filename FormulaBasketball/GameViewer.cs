@@ -204,7 +204,7 @@ namespace FormulaBasketball
             }
             else
             {
-                NewGame game = new NewGame(teamOne, teamTwo, r);
+                NewGame game = new NewGame(new NewTeam(teamOne), new NewTeam(teamTwo), r);
 
                 teamOneLabel.Text = teamOne.ToString();
                 teamTwoLabel.Text = teamTwo.ToString();
@@ -262,7 +262,7 @@ namespace FormulaBasketball
             }
             if (p.getShotsAttemptedAgainst() != 0)
                 opponentPercentage = ((double)p.getShotsMadeAgainst() / (double)p.getShotsAttemptedAgainst()) * 100;
-            dataGridView1.Rows.Add(p.getTeam().ToString(), p.getName(), p.getPosition(), p.getMinutes() , p.getAssists() , p.getPoints() , p.getShotsTaken() , p.getShotsMade() , shootingPercentage, p.getThreesTaken() , p.getThreePointersMade() ,
+            dataGridView1.Rows.Add(p.getTeam().ToString(), p.getName(), p.getPosition(), p.getMinutes() , p.getAssists() , p.getPoints() , p.getShotsTaken() , p.getShotsMade() , shootingPercentage, p.getThreesTaken() , p.getThreePointersMade() , p.getFreeThrowsTaken(), p.getFreeThrowsMade(),
             p.getTurnovers() , p.getSteals() , p.getRebounds() , p.getOffensiveRebounds() , p.getDefensiveRebounds() , p.getFouls() , p.getShotsAttemptedAgainst() , p.getShotsMadeAgainst() , opponentPercentage, plus_minus);
         }
     }

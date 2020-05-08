@@ -29,9 +29,11 @@ namespace FormulaBasketball
             this.create = create;
             userTeam = team;
 
+            
+
             for (int i = 0; i < create.size(); i++)
             {
-                freeAgents.Add(create.getTeam(i).GetAffiliate().getAllPlayer());
+                freeAgents.Add(create.getTeam(i).GetAffiliate().getActivePlayers());
             }
             for (int i = 1; i < 6; i++ )
                 foreach (player p in freeAgents.GetPlayersByPos(i))
@@ -56,7 +58,7 @@ namespace FormulaBasketball
 
             for (int i = 0; i < create.size(); i++)
             {
-                freeAgents.Add(create.getDLeagueTeam(i).getAllPlayer());
+                freeAgents.Add(create.getTeam(i).GetAffiliate().getActivePlayers());
             }
             for (int i = 1; i < 6; i++)
                 foreach (player p in freeAgents.GetPlayersByPos(i))
@@ -122,7 +124,16 @@ namespace FormulaBasketball
         }
         public void UpdateFreeAgents(createTeams create)
         {
-            rosterSize.Text = "Players on team " + userTeam.GetOffSeasonPlayers(false).Count.ToString() + "/15\nPlayers on affiliate " + userTeam.GetAffiliate().Count().ToString() + "/15";
+            int playerCount = userTeam.GetOffSeasonPlayers().Count, dLeagueCount = 0;
+            foreach(player p in userTeam.GetOffSeasonPlayers())
+            {
+                if(!p.getTeam().Equals(userTeam))
+                {
+                    dLeagueCount++;
+                    playerCount--;
+                }
+            }
+            rosterSize.Text = "Players on team " + playerCount + "/15\nPlayers on affiliate " + dLeagueCount + "/15";
             MoneyLabel.Text = "Penalty Free Cap Space " + String.Format("{0:0.00}", (100 - userTeam.GetPayroll(true))) + "M\nAvailable Bonus Money " + String.Format("{0:0.00}", (userTeam.getFianances() / 1000000.0)) + "M";
             DataGridView[] grids = new DataGridView[5];
             grids[0] = centersGrid;

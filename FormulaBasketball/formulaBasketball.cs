@@ -27,7 +27,7 @@ public class formulaBasketball
     public static bool injuries = false;
     private static ImagePrinter printer;
     public static bool createImages = true;
-    public static Dictionary<Promises,String> promisesList = new Dictionary<Promises, String>()
+    public static Dictionary<Promises, String> promisesList = new Dictionary<Promises, String>()
     {
         { Promises.Year_One_Starter, "Year One Starter" }, {Promises.Win_Division, "Win Division" }, {Promises.Win_Conference, "Win Conference" }, {Promises.Win_Championship, "Win Championship" }, {Promises.Make_Playoffs, "Make Playoffs"},{ Promises.No_Trade ,"No trade clause" }
     };
@@ -38,7 +38,7 @@ public class formulaBasketball
         r = new FormulaBasketball.Random();
         writeGames = false;
         StringUtils = new StringUtils();
-        
+
         Startup(loadSave, fileName, teams, freeAgency, !flag);
         standingsForm = new Standings(true);
         dLeagueStandingsForm = new Standings(true);
@@ -50,7 +50,144 @@ public class formulaBasketball
         statsFile = "stats.csv";
         standingsFile = "standings.csv";
         championshipsContents = championshipsContents += "Southern Conference Winner\tSouthern Conference Games Won\t\tNorthern Conference Games Won\tNorthern Conference winner\tMVP Winner\tMVP Team\tROTY winner\tROTY Team\n";
+
+        team nova = create.getTeam(12), tuto = create.getTeam(19), solea = create.getTeam(7);
+
+        foreach (team t in create.getTeams())
+        {
+            double capPenalty = -100;
+            foreach (player p in t)
+            {
+                capPenalty += p.GetMoneyPerYear();
+            }
+            Console.WriteLine(t + ": " + capPenalty);
+        }
+
+        Console.WriteLine(tuto + ": " + tuto.getFianances());
+        Console.WriteLine(nova + ": " + nova.getFianances());
+        Console.WriteLine(solea + ": " + solea.getFianances());
+
+        /*double[] topRating = new double[11];
+        double[] bottomRating = new double[] { double.MaxValue, double.MaxValue, double.MaxValue, double.MaxValue, double.MaxValue, double.MaxValue, double.MaxValue, double.MaxValue, double.MaxValue, double.MaxValue, double.MaxValue };
+        int threesAttempted = 0, threesMade = 0;
+        foreach (team t in create.getTeams())
+            foreach (player p in t)
+            {
+                for (int i = 0; i < bottomRating.Length; i++)
+                {
+                    if (p.ratings[i] > topRating[i])
+                        topRating[i] = p.ratings[i];
+                    if (p.ratings[i] < bottomRating[i])
+                        bottomRating[i] = p.ratings[i];
+                }
+                threesAttempted += p.getThreesTaken();
+                threesMade += p.getThreePointersMade();
+            }
+        double[] slopes = new double[11];
+        double[] yIntercepts = new double[11];
+        for (int i = 0; i < bottomRating.Length; i++)
+        {
+            double[] temp = Util.GetLineGivenPoints(bottomRating[i], 25, topRating[i], 99);
+            slopes[i] = temp[0];
+            yIntercepts[i] = temp[1];
+        }
+        string content = "";
+        foreach (team t in create.getTeams())
+        {
+            content += t.ToString() + ",Name,Position,Layup,Dunk,Jumpshot,3PT,Pass,Shot Contest,Defense IQ,Jumping,Seperation,Durability,Stamina,Potential,Age,Overall,Player ID\n"; 
+            foreach(player p in t)
+            {
+                int[] ratings = new int[11];
+                for(int i = 0; i < ratings.Length; i++)
+                {
+                    ratings[i] = (int)Math.Round(p.ratings[i] * slopes[i] + yIntercepts[i]);
+                }
+                string retVal = p.GetCountry() + "," + p.getName() + "," + p.getPosition() + ",";
+
+                retVal += ratings[0] + "," + ratings[1] + "," + ratings[2] + "," + ratings[9] + "," + ratings[7] + "," + ratings[3] + "," + ratings[4] + "," + ratings[5] + "," + ratings[6] + "," + ratings[10] + "," + ratings[8] + ",";
                 
+                retVal += p.getDevelopment() + "," + p.age + "," + String.Format("{0:0.00}", p.getOverall()) + "," + p.GetPlayerID() + "\n";
+                content += retVal;
+            }
+        }
+        File.WriteAllText("nba2krosters.csv", content);
+        */
+        /*
+        team nova = create.getTeam(12), tuto = create.getTeam(19), solea = create.getTeam(7);
+
+        nova.setLastThreeLetters("NOV");
+        create.CreateNewSchedule();
+        create.getTeam(2).TradeOccurred(new List<object>(), new List<object>(), null, false);
+        nova.SetActiveRoster(new int[] { 132, 362, 363, 364, 365, 426, 372, 368, 369, 370, 146, 367, 698, 64, 375, 641, 996, 228, 384, 3, 791, 96, 913, 41, 16, 231, 382, 84, 809, 385 }, new int[] { });
+        tuto.SetActiveRoster(new int[] { 571, 572, 573, 574, 785, 576, 577, 453, 579, 580, 989, 582, 583, 589, 590, 916, 976, 1004, 584, 585, 596, 597, 967, 1011, 961, 591, 592, 1104, 1069, 600 }, new int[] { });
+        create.getFreeAgents().Add(solea.SetActiveRoster(new int[] { 211, 212, 213, 214, 215, 216, 222, 223, 219, 225, 221, 102, 133, 239, 220, 881, 252, 523, 194, 22, 226, 217, 228, 988, 235, 236, 227, 233, 1049, 973 }, new int[] {240 }));
+        Console.WriteLine(tuto + ": " + tuto.getFianances());
+        Console.WriteLine(nova + ": " + nova.getFianances());
+        Console.WriteLine(solea + ": " + solea.getFianances());
+        int playerID = 0;
+        foreach(team t in create.getTeams())
+        {
+            foreach(player p in t)
+            {
+                p.addPlayerID(playerID);
+                playerID++;
+                p.setTeam(t);
+            }
+            foreach (player p in t.GetAffiliate())
+            {
+                p.addPlayerID(playerID);
+                playerID++;
+                p.setTeam(t.GetAffiliate());
+            }
+        }
+        create.setFianancials();
+        foreach (team t in create.getTeams())
+        {
+            foreach (player p in t)
+            {
+                if(!p.getTeam().Equals(t))
+                {
+                    Console.WriteLine(p.getName() + " plays for multiple teams.");
+                }
+            }
+            for(int i = 0; i < t.GetAffiliate().getActivePlayers().Length; i++)
+            {
+                player p = t.GetAffiliate().getActivePlayers()[i];
+                if (!p.getTeam().Equals(t.GetAffiliate()))
+                {
+                    
+                    Console.WriteLine(p.getName() + " plays for multiple teams.");
+                    if(t.getTeamNum() == 7)
+                    {
+                        p.getTeam().ReplacePlayer(p, PlayerGenerator.GeneratePlayer(p.getPosition(), p.GetCountry(), (int)p.getOverall(), p.age, p.GetDevelopmentRating(), p.GetPeakStart(), p.GetPeakEnd(), r));
+                    }
+                    else
+                        t.GetAffiliate().getActivePlayers()[i] = PlayerGenerator.GeneratePlayer(p.getPosition(), p.GetCountry(), (int)p.getOverall(), p.age, p.GetDevelopmentRating(), p.GetPeakStart(), p.GetPeakEnd(), r);
+                }
+            }
+        }
+        playerID = 0;
+        foreach (team t in create.getTeams())
+        {
+            t.endSeason();
+            t.GetAffiliate().endSeason();
+            foreach (player p in t)
+            {
+                p.addPlayerID(playerID);
+                playerID++;
+                p.setTeam(t);
+            }
+            foreach (player p in t.GetAffiliate())
+            {
+                p.addPlayerID(playerID);
+                playerID++;
+                p.setTeam(t.GetAffiliate());
+            }
+        }
+        createTeams.nextID = playerID;
+        createTeams.currentSeason = 8;
+        */
+
         //create.FixTeams();
         //create.CreateNewSchedule();
 
@@ -61,7 +198,7 @@ public class formulaBasketball
          create.PlayCollegeSeason(); 
          SerializeObject(create, fileName);*/
         //create.SetDraftPicks();
-        
+
         /*for (int i = 0; i < 100; i++ )
         {
             
@@ -92,18 +229,19 @@ public class formulaBasketball
             create.getTeam(i).setTeamNum(i);
         }
         printer = new ImagePrinter(startingGame);
-        standingsForm.updateStandings(create, true);
-        standingsForm.Visible = true;
 
         //create.FixTeams();
 
         dLeagueStandingsForm.updateStandings(create, false);
         dLeagueStandingsForm.Visible = true;
 
+        standingsForm.updateStandings(create, true);
+        standingsForm.Visible = true;
+
         while (!flag)
         {
             Form2 resultFinder = new Form2();
-           // YearSim resultFinder = new YearSim();
+            // YearSim resultFinder = new YearSim();
             resultFinder.ShowDialog();
             String result = resultFinder.GetResult();
             standingsForm.Show();
@@ -145,18 +283,18 @@ public class formulaBasketball
                 }
                 for (int i = 0; i < resultFinder.GetSeasons(); i++)
                 {
-                    
+
                     standingsForm.Visible = true;
                     Thread thread = new Thread(create.PlayCollegeSeason);
                     thread.Start();
                     playGames(1, 84);
                     standingsForm.Visible = false;
-                    foreach(team team in create.getTeams())
+                    foreach (team team in create.getTeams())
                     {
                         team.EndOfSeason(create.getFreeAgents());
                     }
                     mockPlayoffs(true);
-                    
+
                     VoteMVP();
                     VoteROTY();
                     bracket.Visible = false;
@@ -185,12 +323,12 @@ public class formulaBasketball
             else if (result.Equals("exitButton"))
                 break;
             else if (result.Equals("Save"))
-            {                
+            {
                 SerializeObject(create, fileName);
                 standingsForm.SaveForm("images/standings.png");
                 dLeagueStandingsForm.SaveForm("images/dLeagueStandings.png");
             }
-            for(int i = 0; i < create.size(); i++)
+            for (int i = 0; i < create.size(); i++)
             {
                 create.getTeam(i).PrintSeasonRecords();
             }
@@ -198,17 +336,17 @@ public class formulaBasketball
         PrintBestPlayers();
         calculateStandings(!flag);
         stats();
-        File.WriteAllText("championships.csv" ,championshipsContents);
+        File.WriteAllText("championships.csv", championshipsContents);
         File.WriteAllText(writerFile, writerContents);
-        if(!gameResultsContents.Equals(""))File.WriteAllText(gameResultsFile, gameResultsContents);
+        if (!gameResultsContents.Equals("")) File.WriteAllText(gameResultsFile, gameResultsContents);
         File.WriteAllText(statsFile, statsContents);
         File.WriteAllText(standingsFile, standingsContents);
 
     }
     private void PrintBestPlayers()
     {
-        
-        if(playersPoints != null)
+
+        if (playersPoints != null)
         {
             String fileName = "InterestingFacts.txt";
             String contents = "";
@@ -220,17 +358,17 @@ public class formulaBasketball
 
             File.WriteAllText(fileName, contents);
         }
-        
+
     }
 
     private void VoteMVP()
     {
         List<player> playerList = new List<player>();
-        foreach(team team in create.getTeams())
+        foreach (team team in create.getTeams())
         {
-            foreach(player p in team)
+            foreach (player p in team)
             {
-                if(p.getMinutes() > 2000)
+                if (p.getMinutes() > 2000)
                 {
                     playerList.Add(p);
                 }
@@ -262,28 +400,28 @@ public class formulaBasketball
     {
         if (list.Count == 0) return null;
         int[] totalPoints = new int[list.Count];
-        
-        foreach(team team in create.getTeams())
+
+        foreach (team team in create.getTeams())
         {
             int[] points = GetPoints(team, list);
-            for(int i = 0; i < totalPoints.Length; i++)
+            for (int i = 0; i < totalPoints.Length; i++)
             {
                 totalPoints[i] += points[i];
             }
         }
         int index = 0;
         int highest = 0;
-        for(int p = 0; p < totalPoints.Length; p++)
+        for (int p = 0; p < totalPoints.Length; p++)
         {
-            if(highest < totalPoints[p])
+            if (highest < totalPoints[p])
             {
                 highest = totalPoints[p];
                 index = p;
             }
         }
-        
+
         return list[index];
-        
+
     }
     private int[] GetPoints(team team, List<player> list)
     {
@@ -303,7 +441,7 @@ public class formulaBasketball
         else if (value <= 90)
             focus = 5;
 
-        for(int i = 0; i <list.Count; i++)
+        for (int i = 0; i < list.Count; i++)
         {
             scores[i] = GetScore(list[i], focus, team);
             tempList[i] = scores[i];
@@ -312,11 +450,11 @@ public class formulaBasketball
         Sort(scores);
 
         int endRange = Math.Min(10, list.Count);
-        for(int i = 0; i < endRange; i++)
+        for (int i = 0; i < endRange; i++)
         {
-            for(int j = 0; j < tempList.Length; j++)
+            for (int j = 0; j < tempList.Length; j++)
             {
-                if(scores[i] == tempList[j])
+                if (scores[i] == tempList[j])
                 {
                     retVal[j] = 10 - i;
                     break;
@@ -358,7 +496,7 @@ public class formulaBasketball
         else
             retVal += APM + PPM + Percent - Turnovers + Steals;
 
-    return retVal;
+        return retVal;
     }
     private double[] Sort(double[] list)
     {
@@ -480,7 +618,7 @@ public class formulaBasketball
         if (fileName.EndsWith(".fbusave"))
         {
             String info = File.ReadAllText(fileName);
-            
+
             temp = new createTeams(info, new FormulaBasketball.Random());
         }
         else
@@ -623,7 +761,7 @@ public class formulaBasketball
                 System.Threading.Thread.Sleep(5);
             }
         }
-        
+
         return playoffs.GetChampion();
     }
     public static void removePlayer()
@@ -972,7 +1110,7 @@ public class formulaBasketball
 
     public static void standings(team team)
     {
-        standingsContents += "" + team.ToString() + "," + team.getWins() + "," + team.getLosses() + "," + team.getPoints() + "," + team.getPointsAgainst() + "," + team.getDivisionRank() + "," + team.getConferenceRank() + "," + team.getLeagueRank() + "," + team.getDivisionWins() + "," + team.getDivisionLosses() + "," + team.getConferenceWins() + "," + team.getConferenceLosses() + "," + team.getStreak() + "," + team.getTopTen() + "\n";
+        standingsContents += "" + team.ToString() + "," + team.getWins() + "," + team.getLosses() + "," + team.getPoints() + "," + team.getPointsAgainst() + "," + team.getDivisionRank() + "," + team.getConferenceRank() + "," + team.getLeagueRank() + "," + team.getDivisionWins() + "," + team.getDivisionLosses() + "," + team.getConferenceWins() + "," + team.getConferenceLosses() + "," + team.getStreak() + "," + team.GetLastTen() + "\n";
 
     }
 
@@ -1086,24 +1224,20 @@ public class formulaBasketball
                 homeTeam.setModifier(new None());
             }
         }
-        if (i == 26 || i == 1 || i == 11)
-        {
-            awayTeam.addModifier(new gettingHot());
-        }
-
-        else if (j == 26 || j == 1 || j == 11)
-        {
-            homeTeam.addModifier(new gettingHot());
-        }
         homeTeam.addModifier(new HomeTeam());
         awayTeam.addModifier(awayTeam.getCoachModifier());
         homeTeam.addModifier(homeTeam.getCoachModifier());
 
 
-        if (!dLeague && (i == 4 || i == 5 || i == 7 || i == 18 || i == 20 || i == 23))
+        if (!dLeague && (i == 26 || i == 2 || i == 19 || i == 22 || i == 23))
             awayTeam.addModifier(new HotStreak());
-        else if (!dLeague && (j == 4 || j == 5 || i == 7 || j == 18 || j == 20 || j == 23))
+        else if (!dLeague && (j == 26 || j == 2 || j == 19 || j == 22 || j == 23))
             homeTeam.addModifier(new HotStreak());
+
+        if (!dLeague && (i == 7))
+            awayTeam.addModifier(new gettingHot());
+        else if (!dLeague && (j == 7))
+            homeTeam.addModifier(new gettingHot());
 
         game newGame = new game(gameWriter, awayTeam, homeTeam, r);
 

@@ -10,7 +10,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+// TODO: Fix the fooking award confirm button
 namespace FormulaBasketball
 {
     public partial class AwardVoting : Form
@@ -52,9 +52,9 @@ namespace FormulaBasketball
             topTenPlayerStatsGrid.Rows.Clear();
             foreach(DataGridViewRow row in top10MVPGrid.SelectedRows)
             {
-                if (row.Cells[2].Value != null)
+                if (row.Cells[3].Value != null)
                 {
-                    player p = row.Cells[2].Value as player;
+                    player p = row.Cells[3].Value as player;
                     double shootingPercentage = 0.0, opponentPercentage = 0.0;
                     if (p.getShotsTaken() != 0)
                     {
@@ -137,7 +137,7 @@ namespace FormulaBasketball
 
 
             for (; place < 11; place++)
-                grid.Rows.Add(place, "Empty", null, -1);
+                grid.Rows.Add(place, "Empty", null, null, -1);
         }
         private void UpdateGrid(DataGridView grid, List<Coach> coaches)
         {
@@ -151,113 +151,217 @@ namespace FormulaBasketball
 
 
             for (; place < 11; place++)
-                grid.Rows.Add(place, "Empty", null, -1);
+                grid.Rows.Add(place, "Empty", null, -1, "");
         }
 
         private void downButton_Click(object sender, EventArgs e)
         {
-            if (top10MVPGrid.SelectedRows.Count != 1) return;
-            DataGridViewRow rowOne = top10MVPGrid.SelectedRows[0];
-            if (top10MVPGrid.SelectedRows[0].Cells[2].Value == null) return;
-            player first = rowOne.Cells[2].Value as player;
-            int firstIndex = (int)rowOne.Cells[3].Value;
-            if (firstIndex - 1 < 0) return;
-            player second = mvpPlayers[firstIndex - 1];
-            mvpPlayers[firstIndex - 1] = first;
-            mvpPlayers[firstIndex] = second;
-            int rowOneIndex = rowOne.Index;
+            if (top10MVPGrid.SelectedRows.Count > 1)
+            {
+                MessageBox.Show("You may only use the down button if there is only one row selected.");
+                return;
+            }
+            if (top10MVPGrid.Rows[top10MVPGrid.SelectedRows[0].Index].Cells[3].Value == null)
+            {
+                MessageBox.Show("You may not move an empty spot.");
+                return;
+            }
+            if (top10MVPGrid.Rows.Count == top10MVPGrid.SelectedRows[0].Index + 1)
+            {
+                MessageBox.Show("This is already on the bottom.");
+                return;
+            }
+            if(top10MVPGrid.Rows[top10MVPGrid.SelectedRows[0].Index + 1].Cells[3].Value == null)
+            {
+                MessageBox.Show("This is already on the bottom.");
+                return;
+            }
+
+            int selectedRow = top10MVPGrid.SelectedRows[0].Index;
+
+            player topPlayer = top10MVPGrid.Rows[selectedRow].Cells[3].Value as player;
+            player bottomPlayer = top10MVPGrid.Rows[selectedRow + 1].Cells[3].Value as player;
+
+            int firstIndex = (int)top10MVPGrid.Rows[selectedRow].Cells[4].Value;
+            int secondIndex = (int)top10MVPGrid.Rows[selectedRow + 1].Cells[4].Value;
+
+            mvpPlayers[firstIndex] = bottomPlayer;
+            mvpPlayers[secondIndex] = topPlayer;
+
             UpdateGrid(top10MVPGrid, mvpPlayers);
+
             top10MVPGrid.Rows[0].Selected = false;
-            top10MVPGrid.Rows[rowOneIndex + 1].Selected = true;
+            top10MVPGrid.Rows[selectedRow + 1].Selected = true;
         }
 
         private void upButton_Click(object sender, EventArgs e)
         {
-            if (top10MVPGrid.SelectedRows.Count != 1) return;
-            DataGridViewRow rowOne = top10MVPGrid.SelectedRows[0];
-            if (top10MVPGrid.SelectedRows[0].Cells[2].Value == null) return;
-            player first = rowOne.Cells[2].Value as player;            
-            int firstIndex = (int)rowOne.Cells[3].Value;
-            if (firstIndex + 1 >= mvpPlayers.Count) return;
-            player second = mvpPlayers[firstIndex + 1];
-            mvpPlayers[firstIndex + 1] = first;
-            mvpPlayers[firstIndex] = second;
-            int rowOneIndex = rowOne.Index;
+            if (top10MVPGrid.SelectedRows.Count > 1)
+            {
+                MessageBox.Show("You may only use the up button if there is only one row selected.");
+                return;
+            }
+            if (top10MVPGrid.Rows[top10MVPGrid.SelectedRows[0].Index].Cells[3].Value == null)
+            {
+                MessageBox.Show("You may not move an empty spot.");
+                return;
+            }
+            if (top10MVPGrid.SelectedRows[0].Index == 0)
+            {
+                MessageBox.Show("This is already on top.");
+                return;
+            }
+            int selectedRow = top10MVPGrid.SelectedRows[0].Index;
+
+            player topPlayer = top10MVPGrid.Rows[selectedRow].Cells[3].Value as player;
+            player bottomPlayer = top10MVPGrid.Rows[selectedRow - 1].Cells[3].Value as player;
+
+            int firstIndex = (int)top10MVPGrid.Rows[selectedRow].Cells[4].Value;
+            int secondIndex = (int)top10MVPGrid.Rows[selectedRow - 1].Cells[4].Value;
+
+            mvpPlayers[firstIndex] = bottomPlayer;
+            mvpPlayers[secondIndex] = topPlayer;
+
             UpdateGrid(top10MVPGrid, mvpPlayers);
+
             top10MVPGrid.Rows[0].Selected = false;
-            top10MVPGrid.Rows[rowOneIndex-1].Selected = true;
+            top10MVPGrid.Rows[selectedRow - 1].Selected = true;
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (top10MVPGrid.SelectedRows.Count != 2) return;
-            DataGridViewRow rowOne = top10MVPGrid.SelectedRows[0], rowTwo = top10MVPGrid.SelectedRows[1];
+            if (top10MVPGrid.SelectedRows.Count != 2)
+            {
+                MessageBox.Show("You may only use the swap button if there are exactly two rows selected.");
+                return;
+            }
+            if (top10MVPGrid.Rows[top10MVPGrid.SelectedRows[0].Index].Cells[3].Value == null || top10MVPGrid.Rows[top10MVPGrid.SelectedRows[1].Index].Cells[3].Value == null)
+            {
+                MessageBox.Show("You may not swap an empty spot.");
+                return;
+            }
+            int originalIndex = top10MVPGrid.SelectedRows[0].Index, secondaryIndex = top10MVPGrid.SelectedRows[1].Index;
 
-            if (top10MVPGrid.SelectedRows[0].Cells[2].Value == null || top10MVPGrid.SelectedRows[1].Cells[2].Value == null) return;
-            player first = rowOne.Cells[2].Value as player;
-            player second = rowTwo.Cells[2].Value as player;
-            int firstIndex = (int)rowOne.Cells[3].Value;
-            int secondIndex = (int)rowTwo.Cells[3].Value;
-            mvpPlayers[firstIndex] = second;
-            mvpPlayers[secondIndex] = first;
-            int rowOneIndex = rowOne.Index, rowTwoIndex = rowTwo.Index;
+            player topPlayer = top10MVPGrid.Rows[originalIndex].Cells[3].Value as player;
+            player bottomPlayer = top10MVPGrid.Rows[secondaryIndex].Cells[3].Value as player;
+
+            int firstIndex = (int)top10MVPGrid.Rows[originalIndex].Cells[4].Value;
+            int secondIndex = (int)top10MVPGrid.Rows[secondaryIndex].Cells[4].Value;
+
+            mvpPlayers[firstIndex] = bottomPlayer;
+            mvpPlayers[secondIndex] = topPlayer;
+
             UpdateGrid(top10MVPGrid, mvpPlayers);
+
             top10MVPGrid.Rows[0].Selected = false;
-            top10MVPGrid.Rows[rowOneIndex].Selected = true;
-            top10MVPGrid.Rows[rowTwoIndex].Selected = true;
+            top10MVPGrid.Rows[secondaryIndex].Selected = true;
+            top10MVPGrid.Rows[originalIndex].Selected = true;
         }
 
         private void rotySwapButton_Click(object sender, EventArgs e)
         {
-            if (top10ROTYGrid.SelectedRows.Count != 2) return;
-            DataGridViewRow rowOne = top10ROTYGrid.SelectedRows[0], rowTwo = top10ROTYGrid.SelectedRows[1];
+            if (top10ROTYGrid.SelectedRows.Count != 2)
+            {
+                MessageBox.Show("You may only use the swap button if there are exactly two rows selected.");
+                return;
+            }
+            if (top10ROTYGrid.Rows[top10ROTYGrid.SelectedRows[0].Index].Cells[3].Value == null || top10ROTYGrid.Rows[top10ROTYGrid.SelectedRows[1].Index].Cells[3].Value == null)
+            {
+                MessageBox.Show("You may not swap an empty spot.");
+                return;
+            }
+            int originalIndex = top10ROTYGrid.SelectedRows[0].Index, secondaryIndex = top10ROTYGrid.SelectedRows[1].Index;
 
-            if (top10ROTYGrid.SelectedRows[0].Cells[2].Value == null || top10ROTYGrid.SelectedRows[1].Cells[2].Value == null) return;
-            player first = rowOne.Cells[2].Value as player;
-            player second = rowTwo.Cells[2].Value as player;
-            int firstIndex = (int)rowOne.Cells[3].Value;
-            int secondIndex = (int)rowTwo.Cells[3].Value;
-            rotyPlayers[firstIndex] = second;
-            rotyPlayers[secondIndex] = first;
-            int rowOneIndex = rowOne.Index, rowTwoIndex = rowTwo.Index;
+            player topPlayer = top10ROTYGrid.Rows[originalIndex].Cells[3].Value as player;
+            player bottomPlayer = top10ROTYGrid.Rows[secondaryIndex].Cells[3].Value as player;
+
+            int firstIndex = (int)top10ROTYGrid.Rows[originalIndex].Cells[4].Value;
+            int secondIndex = (int)top10ROTYGrid.Rows[secondaryIndex].Cells[4].Value;
+
+            rotyPlayers[firstIndex] = bottomPlayer;
+            rotyPlayers[secondIndex] = topPlayer;
+
             UpdateGrid(top10ROTYGrid, rotyPlayers);
+
             top10ROTYGrid.Rows[0].Selected = false;
-            top10ROTYGrid.Rows[rowOneIndex].Selected = true;
-            top10ROTYGrid.Rows[rowTwoIndex].Selected = true;
+            top10ROTYGrid.Rows[secondaryIndex].Selected = true;
+            top10ROTYGrid.Rows[originalIndex].Selected = true;
         }
 
         private void rotyUpButton_Click(object sender, EventArgs e)
         {
-            if (top10ROTYGrid.SelectedRows.Count != 1) return;
-            DataGridViewRow rowOne = top10ROTYGrid.SelectedRows[0];
-            if (top10ROTYGrid.SelectedRows[0].Cells[2].Value == null) return;
-            player first = rowOne.Cells[2].Value as player;
-            int firstIndex = (int)rowOne.Cells[3].Value;
-            if (firstIndex + 1 >= rotyPlayers.Count) return;
-            player second = rotyPlayers[firstIndex + 1];
-            rotyPlayers[firstIndex + 1] = first;
-            rotyPlayers[firstIndex] = second;
-            int rowOneIndex = rowOne.Index;
+            if (top10ROTYGrid.SelectedRows.Count > 1)
+            {
+                MessageBox.Show("You may only use the up button if there is only one row selected.");
+                return;
+            }
+            if (top10ROTYGrid.Rows[top10ROTYGrid.SelectedRows[0].Index].Cells[3].Value == null)
+            {
+                MessageBox.Show("You may not move an empty spot.");
+                return;
+            }
+            if (top10ROTYGrid.SelectedRows[0].Index == 0)
+            {
+                MessageBox.Show("This is already on top.");
+                return;
+            }
+            int selectedRow = top10ROTYGrid.SelectedRows[0].Index;
+
+            player topPlayer = top10ROTYGrid.Rows[selectedRow].Cells[3].Value as player;
+            player bottomPlayer = top10ROTYGrid.Rows[selectedRow - 1].Cells[3].Value as player;
+
+            int firstIndex = (int)top10ROTYGrid.Rows[selectedRow].Cells[4].Value;
+            int secondIndex = (int)top10ROTYGrid.Rows[selectedRow - 1].Cells[4].Value;
+
+            rotyPlayers[firstIndex] = bottomPlayer;
+            rotyPlayers[secondIndex] = topPlayer;
+
             UpdateGrid(top10ROTYGrid, rotyPlayers);
+
             top10ROTYGrid.Rows[0].Selected = false;
-            top10ROTYGrid.Rows[rowOneIndex - 1].Selected = true;
+            top10ROTYGrid.Rows[selectedRow - 1].Selected = true;
         }
 
         private void rotyDownButton_Click(object sender, EventArgs e)
         {
-            if (top10ROTYGrid.SelectedRows.Count != 1) return;
-            DataGridViewRow rowOne = top10ROTYGrid.SelectedRows[0];
-            if (top10ROTYGrid.SelectedRows[0].Cells[2].Value == null) return;
-            player first = rowOne.Cells[2].Value as player;
-            int firstIndex = (int)rowOne.Cells[3].Value;
-            if (firstIndex - 1 < 0) return;
-            player second = rotyPlayers[firstIndex - 1];
-            rotyPlayers[firstIndex - 1] = first;
-            rotyPlayers[firstIndex] = second;
-            int rowOneIndex = rowOne.Index;
+            if (top10ROTYGrid.SelectedRows.Count > 1)
+            {
+                MessageBox.Show("You may only use the down button if there is only one row selected.");
+                return;
+            }
+            if (top10ROTYGrid.Rows[top10ROTYGrid.SelectedRows[0].Index].Cells[3].Value == null)
+            {
+                MessageBox.Show("You may not move an empty spot.");
+                return;
+            }
+            if (top10ROTYGrid.Rows.Count == top10ROTYGrid.SelectedRows[0].Index + 1)
+            {
+                MessageBox.Show("This is already on the bottom.");
+                return;
+            }
+            if (top10ROTYGrid.Rows[top10ROTYGrid.SelectedRows[0].Index + 1].Cells[3].Value == null)
+            {
+                MessageBox.Show("This is already on the bottom.");
+                return;
+            }
+
+            int selectedRow = top10ROTYGrid.SelectedRows[0].Index;
+
+            player topPlayer = top10ROTYGrid.Rows[selectedRow].Cells[3].Value as player;
+            player bottomPlayer = top10ROTYGrid.Rows[selectedRow + 1].Cells[3].Value as player;
+
+            int firstIndex = (int)top10ROTYGrid.Rows[selectedRow].Cells[4].Value;
+            int secondIndex = (int)top10ROTYGrid.Rows[selectedRow + 1].Cells[4].Value;
+
+            rotyPlayers[firstIndex] = bottomPlayer;
+            rotyPlayers[secondIndex] = topPlayer;
+
             UpdateGrid(top10ROTYGrid, rotyPlayers);
+
             top10ROTYGrid.Rows[0].Selected = false;
-            top10ROTYGrid.Rows[rowOneIndex + 1].Selected = true;
+            top10ROTYGrid.Rows[selectedRow + 1].Selected = true;
         }
 
         private void rotyCandidateGrid_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -292,9 +396,9 @@ namespace FormulaBasketball
             rotyTop10StatsGrid.Rows.Clear();
             foreach (DataGridViewRow row in top10ROTYGrid.SelectedRows)
             {
-                if (row.Cells[4].Value != null)
+                if (row.Cells[3].Value != null)
                 {
-                    player p = row.Cells[4].Value as player;
+                    player p = row.Cells[3].Value as player;
                     double shootingPercentage = 0.0, opponentPercentage = 0.0;
                     if (p.getShotsTaken() != 0)
                     {

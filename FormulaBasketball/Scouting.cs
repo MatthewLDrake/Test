@@ -17,8 +17,15 @@ namespace FormulaBasketball
         public Scouting(List<player> collegePlayers, Scout scout, FormulaBasketball.Random r)
         {
             InitializeComponent();
-            //holder = DeSerializeObject();
-            holder = new Holder(collegePlayers, scout, r);
+            try
+            {
+                holder = DeSerializeObject();
+            }
+            catch(Exception)
+            {
+                holder = new Holder(collegePlayers, scout, r);
+            }
+           
             SerializeObject();
             label1.Text = "Players Able to be Scouted: " + holder.GetNumLeft();
 
@@ -43,11 +50,11 @@ namespace FormulaBasketball
             {
                 if (!players[j].scout)
                 {
-                    lists[i - 1].Rows.Add(players[j].getName(), "?", "?", "?", "?", "?", "?", "?", "?", "?", "?", "?", "?");
+                    lists[i - 1].Rows.Add(players[j].getName(), "?", "?", "?", "?", "?", "?", "?", "?", "?", "?", "?", "?", "?");
                 }
                 else
                 {
-                    lists[i - 1].Rows.Add(players[j].getName(), players[j].layupStr, players[j].dunkStr, players[j].jumpshotStr, players[j].threepointStr, players[j].passStr, players[j].shotcontestStr, players[j].defenseiqStr, players[j].jumpingStr, players[j].seperationStr, players[j].durabilityStr, players[j].staminaStr, players[j].potential);
+                    lists[i - 1].Rows.Add(players[j].getName(), players[j].layupStr, players[j].dunkStr, players[j].jumpshotStr, players[j].threepointStr, players[j].passStr, players[j].shotcontestStr, players[j].defenseiqStr, players[j].jumpingStr, players[j].seperationStr, players[j].durabilityStr, players[j].staminaStr, players[j].potential, players[j].overallStr);
                 }
             }
         }
@@ -71,7 +78,7 @@ namespace FormulaBasketball
             currentPlayer.scout = true;
             SerializeObject();
 
-            lists[currList].Rows[i].SetValues(currentPlayer.getName(), currentPlayer.layupStr, currentPlayer.dunkStr, currentPlayer.jumpshotStr, currentPlayer.threepointStr, currentPlayer.passStr, currentPlayer.shotcontestStr, currentPlayer.defenseiqStr, currentPlayer.jumpingStr, currentPlayer.seperationStr, currentPlayer.durabilityStr, currentPlayer.staminaStr, currentPlayer.potential);
+            lists[currList].Rows[i].SetValues(currentPlayer.getName(), currentPlayer.layupStr, currentPlayer.dunkStr, currentPlayer.jumpshotStr, currentPlayer.threepointStr, currentPlayer.passStr, currentPlayer.shotcontestStr, currentPlayer.defenseiqStr, currentPlayer.jumpingStr, currentPlayer.seperationStr, currentPlayer.durabilityStr, currentPlayer.staminaStr, currentPlayer.potential, currentPlayer.overallStr);
         }
 
         private void lists_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -156,11 +163,11 @@ namespace FormulaBasketball
                 {
                     if (!players[j].scout)
                     {
-                        str += players[j].getName() + "," + players[j].getPosition() + ",?,?,?,?,?,?,?,?,?,?,?,?," + players[j].age + "\n";
+                        str += players[j].getName() + "," + players[j].getPosition() + ",?,?,?,?,?,?,?,?,?,?,?,?,?," + players[j].age + "\n";
                     }
                     else
                     {
-                        str += players[j].getName() + "," + players[j].getPosition() + "," + players[j].layupStr + "," + players[j].dunkStr + "," + players[j].jumpshotStr + "," + players[j].threepointStr + "," + players[j].passStr + "," + players[j].shotcontestStr + "," + players[j].defenseiqStr + "," + players[j].jumpingStr + "," + players[j].seperationStr + "," + players[j].durabilityStr + "," + players[j].staminaStr + "," + players[j].potential + "," + players[j].age + "\n";
+                        str += players[j].getName() + "," + players[j].getPosition() + "," + players[j].layupStr + "," + players[j].dunkStr + "," + players[j].jumpshotStr + "," + players[j].threepointStr + "," + players[j].passStr + "," + players[j].shotcontestStr + "," + players[j].defenseiqStr + "," + players[j].jumpingStr + "," + players[j].seperationStr + "," + players[j].durabilityStr + "," + players[j].staminaStr + "," + players[j].potential + "," + players[j].overallStr + "," + players[j].age + "\n";
                     }
                 }
             }
@@ -179,11 +186,11 @@ namespace FormulaBasketball
                 {
                     if (!players[j].scout)
                     {
-                        str += players[j].ToString() + "," + players[j].getPosition() + ",?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?," + players[j].age + "\n";
+                        str += players[j].ToString() + "," + players[j].getPosition() + ",?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?," + players[j].age + "\n";
                     }
                     else
                     {
-                        str += players[j].ToString() + "," + players[j].getPosition() + "," + players[j].layupStr.Replace(" -> ", ",") + "," + players[j].dunkStr.Replace(" -> ", ",") + "," + players[j].jumpshotStr.Replace(" -> ", ",") + "," + players[j].threepointStr.Replace(" -> ", ",") + "," + players[j].passStr.Replace(" -> ", ",") + "," + players[j].shotcontestStr.Replace(" -> ", ",") + "," + players[j].defenseiqStr.Replace(" -> ", ",") + "," + players[j].jumpingStr.Replace(" -> ", ",") + "," + players[j].seperationStr.Replace(" -> ", ",") + "," + players[j].durabilityStr.Replace(" -> ", ",") + "," + players[j].staminaStr.Replace(" -> ", ",") + "," + players[j].potential + "," + players[j].age + "\n";
+                        str += players[j].ToString() + "," + players[j].getPosition() + "," + players[j].layupStr.Replace(" -> ", ",") + "," + players[j].dunkStr.Replace(" -> ", ",") + "," + players[j].jumpshotStr.Replace(" -> ", ",") + "," + players[j].threepointStr.Replace(" -> ", ",") + "," + players[j].passStr.Replace(" -> ", ",") + "," + players[j].shotcontestStr.Replace(" -> ", ",") + "," + players[j].defenseiqStr.Replace(" -> ", ",") + "," + players[j].jumpingStr.Replace(" -> ", ",") + "," + players[j].seperationStr.Replace(" -> ", ",") + "," + players[j].durabilityStr.Replace(" -> ", ",") + "," + players[j].staminaStr.Replace(" -> ", ",") + "," + players[j].potential + "," + players[j].overallStr.Replace(" -> ", ",") + players[j].age + "\n";
                     }
                 }
             }

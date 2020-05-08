@@ -24,6 +24,9 @@ namespace FormulaBasketball
             this.r = r;
             player = p;
             teamOfferedContract = contract;
+            yearsNumber.Value = contract.GetYearsLeft();
+            amountNumber.Value = (decimal)contract.GetMoney();
+            bonusAmount.Value = (decimal)contract.GetBonus();
             promises = contract.GetPromises();
             grid.Rows.Add("Team", contract.GetYearsLeft(), contract.GetMoney(), contract.GetTotalMoney(), contract.GetBonus(), "Promises", contract);
             PlayerCounter(false);
@@ -81,7 +84,7 @@ namespace FormulaBasketball
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Contract currentContract = new Contract(Convert.ToInt32(yearsNumber.Value), Convert.ToDouble(amountNumber.Value));
+            Contract currentContract = new Contract(Convert.ToInt32(yearsNumber.Value), Convert.ToDouble(amountNumber.Value), 0, Convert.ToDouble(bonusAmount.Value), promises);
             if (currentContract.GetYearsLeft() == playerOfferedContract.GetYearsLeft() && currentContract.GetMoney() > playerOfferedContract.GetMoney())
             {                
                 MessageBox.Show("Player accepted your offer");

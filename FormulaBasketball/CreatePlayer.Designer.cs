@@ -1,6 +1,6 @@
 ﻿namespace FormulaBasketball
 {
-    partial class newPlayer
+    partial class CreatePlayer
     {
         /// <summary>
         /// Required designer variable.

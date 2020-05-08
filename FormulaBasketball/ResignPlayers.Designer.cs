@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.playerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Position = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Overall = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Potential = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PreviousContractMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PlayerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -55,12 +61,7 @@
             this.amountNumber = new System.Windows.Forms.NumericUpDown();
             this.bonusAmount = new System.Windows.Forms.NumericUpDown();
             this.promisesButtons = new System.Windows.Forms.Button();
-            this.playerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Position = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Overall = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Potential = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PreviousContractMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PlayerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DLeaguer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -86,7 +87,8 @@
             this.Overall,
             this.Potential,
             this.PreviousContractMoney,
-            this.PlayerID});
+            this.PlayerID,
+            this.DLeaguer});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.MultiSelect = false;
@@ -95,6 +97,53 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(623, 344);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CurrentCellChanged += new System.EventHandler(this.dataGridView1_CurrentCellChanged);
+            // 
+            // playerName
+            // 
+            this.playerName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.playerName.HeaderText = "Name";
+            this.playerName.Name = "playerName";
+            this.playerName.ReadOnly = true;
+            // 
+            // Position
+            // 
+            this.Position.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Position.HeaderText = "Position";
+            this.Position.Name = "Position";
+            this.Position.ReadOnly = true;
+            this.Position.Width = 69;
+            // 
+            // Overall
+            // 
+            this.Overall.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Overall.HeaderText = "Overall";
+            this.Overall.Name = "Overall";
+            this.Overall.ReadOnly = true;
+            this.Overall.Width = 65;
+            // 
+            // Potential
+            // 
+            this.Potential.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Potential.HeaderText = "Potential";
+            this.Potential.Name = "Potential";
+            this.Potential.ReadOnly = true;
+            this.Potential.Width = 73;
+            // 
+            // PreviousContractMoney
+            // 
+            this.PreviousContractMoney.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.PreviousContractMoney.HeaderText = "Previous Money";
+            this.PreviousContractMoney.Name = "PreviousContractMoney";
+            this.PreviousContractMoney.ReadOnly = true;
+            this.PreviousContractMoney.Width = 99;
+            // 
+            // PlayerID
+            // 
+            this.PlayerID.HeaderText = "Column1";
+            this.PlayerID.Name = "PlayerID";
+            this.PlayerID.ReadOnly = true;
+            this.PlayerID.Visible = false;
             // 
             // button1
             // 
@@ -443,51 +492,12 @@
             this.promisesButtons.UseVisualStyleBackColor = true;
             this.promisesButtons.Click += new System.EventHandler(this.promisesButtons_Click);
             // 
-            // playerName
+            // DLeaguer
             // 
-            this.playerName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.playerName.HeaderText = "Name";
-            this.playerName.Name = "playerName";
-            this.playerName.ReadOnly = true;
-            // 
-            // Position
-            // 
-            this.Position.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Position.HeaderText = "Position";
-            this.Position.Name = "Position";
-            this.Position.ReadOnly = true;
-            this.Position.Width = 69;
-            // 
-            // Overall
-            // 
-            this.Overall.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Overall.HeaderText = "Overall";
-            this.Overall.Name = "Overall";
-            this.Overall.ReadOnly = true;
-            this.Overall.Width = 65;
-            // 
-            // Potential
-            // 
-            this.Potential.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Potential.HeaderText = "Potential";
-            this.Potential.Name = "Potential";
-            this.Potential.ReadOnly = true;
-            this.Potential.Width = 73;
-            // 
-            // PreviousContractMoney
-            // 
-            this.PreviousContractMoney.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.PreviousContractMoney.HeaderText = "Previous Money";
-            this.PreviousContractMoney.Name = "PreviousContractMoney";
-            this.PreviousContractMoney.ReadOnly = true;
-            this.PreviousContractMoney.Width = 99;
-            // 
-            // PlayerID
-            // 
-            this.PlayerID.HeaderText = "Column1";
-            this.PlayerID.Name = "PlayerID";
-            this.PlayerID.ReadOnly = true;
-            this.PlayerID.Visible = false;
+            this.DLeaguer.HeaderText = "DLeaguer";
+            this.DLeaguer.Name = "DLeaguer";
+            this.DLeaguer.ReadOnly = true;
+            this.DLeaguer.Visible = false;
             // 
             // ResignPlayers
             // 
@@ -551,6 +561,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Potential;
         private System.Windows.Forms.DataGridViewTextBoxColumn PreviousContractMoney;
         private System.Windows.Forms.DataGridViewTextBoxColumn PlayerID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DLeaguer;
     }
 }
 

@@ -67,7 +67,7 @@ namespace FormulaBasketball
 
         private void newPlayerButton_Click(object sender, EventArgs e)
         {
-            newPlayer player = new newPlayer(teams);
+            CreatePlayer player = new CreatePlayer(teams);
             player.ShowDialog();
             int team = player.getTeam();
             player newPlayer = player.getNewPlayer();
@@ -223,7 +223,7 @@ namespace FormulaBasketball
         private void listOfTeams_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             int row = e.RowIndex;
-            newTeam team = new newTeam(teams[row]);
+            CreateTeam team = new CreateTeam(teams[row]);
             team.ShowDialog();
             DataGridView view = (DataGridView)sender;
             view[0, row].Value = teams[row].ToString();
@@ -239,7 +239,7 @@ namespace FormulaBasketball
             {
                 teamName = players[row].getTeam().getTeamNum();
             }
-            newPlayer player = new newPlayer(teams, players[row], teamName);
+            CreatePlayer player = new CreatePlayer(teams, players[row], teamName);
             player.ShowDialog();
             player temp = player.getNewPlayer();
             if (teamName != -1) teams[teamName].removePlayer(players[row]);

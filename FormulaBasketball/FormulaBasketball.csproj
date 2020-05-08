@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPlayer.Designer.cs">
+      <DependentUpon>AddPlayer.cs</DependentUpon>
+    </Compile>
     <Compile Include="attendance.cs" />
     <Compile Include="AwardVoting.cs">
       <SubType>Form</SubType>
@@ -88,6 +94,18 @@
     </Compile>
     <Compile Include="DisplayPlayer.designer.cs">
       <DependentUpon>DisplayPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditRatings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditRatings.Designer.cs">
+      <DependentUpon>EditRatings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditTeam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditTeam.Designer.cs">
+      <DependentUpon>EditTeam.cs</DependentUpon>
     </Compile>
     <Compile Include="Event.cs" />
     <Compile Include="EventViewer.cs">
@@ -157,6 +175,8 @@
       <DependentUpon>Negotiation.cs</DependentUpon>
     </Compile>
     <Compile Include="NewGame.cs" />
+    <Compile Include="NewPlayer.cs" />
+    <Compile Include="NewTeam.cs" />
     <Compile Include="OfferedTrade.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -304,17 +324,17 @@
     <Compile Include="newLeague.Designer.cs">
       <DependentUpon>newLeague.cs</DependentUpon>
     </Compile>
-    <Compile Include="newPlayer.cs">
+    <Compile Include="CreatePlayer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="newPlayer.Designer.cs">
-      <DependentUpon>newPlayer.cs</DependentUpon>
+    <Compile Include="CreatePlayer.Designer.cs">
+      <DependentUpon>CreatePlayer.cs</DependentUpon>
     </Compile>
-    <Compile Include="newTeam.cs">
+    <Compile Include="CreateTeam.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="newTeam.Designer.cs">
-      <DependentUpon>newTeam.cs</DependentUpon>
+    <Compile Include="CreateTeam.Designer.cs">
+      <DependentUpon>CreateTeam.cs</DependentUpon>
     </Compile>
     <Compile Include="PlayoffBracket.cs">
       <SubType>Form</SubType>
@@ -421,6 +441,7 @@
       <DependentUpon>TradeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Trainer.cs" />
+    <Compile Include="Util.cs" />
     <Compile Include="ViewRoster.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -433,6 +454,9 @@
     <Compile Include="YearSim.Designer.cs">
       <DependentUpon>YearSim.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddPlayer.resx">
+      <DependentUpon>AddPlayer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AwardVoting.resx">
       <DependentUpon>AwardVoting.cs</DependentUpon>
     </EmbeddedResource>
@@ -456,6 +480,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="draft.resx">
       <DependentUpon>draft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditRatings.resx">
+      <DependentUpon>EditRatings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditTeam.resx">
+      <DependentUpon>EditTeam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EventViewer.resx">
       <DependentUpon>EventViewer.cs</DependentUpon>
@@ -502,11 +532,11 @@
     <EmbeddedResource Include="newLeague.resx">
       <DependentUpon>newLeague.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="newPlayer.resx">
-      <DependentUpon>newPlayer.cs</DependentUpon>
+    <EmbeddedResource Include="CreatePlayer.resx">
+      <DependentUpon>CreatePlayer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="newTeam.resx">
-      <DependentUpon>newTeam.cs</DependentUpon>
+    <EmbeddedResource Include="CreateTeam.resx">
+      <DependentUpon>CreateTeam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OfferedTrade.resx">
       <DependentUpon>OfferedTrade.cs</DependentUpon>

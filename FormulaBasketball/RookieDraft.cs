@@ -13,7 +13,8 @@ namespace FormulaBasketball
         private List<int> humans;
         private Random r;
         private DraftPick[] draftPicks;
-        public RookieDraft(List<CollegePlayer> rookies, List<team> teams, List<int> humans, Random r)
+        private createTeams create;
+        public RookieDraft(List<CollegePlayer> rookies, List<team> teams, List<int> humans, Random r, createTeams create)
         {
             // TODO: Complete member initialization
             this.rookiesByPos = new List<player>[5];
@@ -24,6 +25,8 @@ namespace FormulaBasketball
             this.teams = teams;
             this.humans = humans;
             this.r = r;
+
+            this.create = create;
 
             foreach(player p in rookies)
             {
@@ -46,7 +49,7 @@ namespace FormulaBasketball
                 List<DraftPick> picks = team.GetPicks();
                 foreach(DraftPick pick in picks)
                 {
-                    draftPicks[pick.GetPickNumber() - 1] = pick;
+                    draftPicks[pick.GetPickNumber(create) - 1] = pick;
                 }
             }
 
@@ -102,8 +105,8 @@ namespace FormulaBasketball
         public void ExecutePick(DraftPick pick)
         {
             int position = 0;
-            position = pick.GetOwner().GetPositionToDraft(BestPlayers());
-            pick.SelectPlayer(rookiesByPos[position][0]);
+            position = pick.GetOwner(create).GetPositionToDraft(BestPlayers());
+            pick.SelectPlayer(rookiesByPos[position][0], create);
             rookiesByPos[position].RemoveAt(0);
         }
 
@@ -113,10 +116,10 @@ namespace FormulaBasketball
             foreach(DraftPick pick in draftPicks)
             {
 
-                data += pick.GetPickNumber() + ". " + pick.GetOwner() + " ";
+                data += pick.GetPickNumber(create) + ". " + pick.GetOwner(create) + " ";
                 if(pick.DifferentOwner())
                 {
-                    data += "(from " + pick.GetTeamOfOrigin() + ") ";
+                    data += "(from " + pick.GetTeamOfOrigin(create) + ") ";
                 }
                 data += pick.GetPlayerSelected().GetPositionAsString() + " " + pick.GetPlayerSelected().getName() + "\n";
             }

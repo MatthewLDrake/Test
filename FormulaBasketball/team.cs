@@ -39,7 +39,7 @@ public class team : IComparable<team>,  IEnumerable<player>
     protected player[] activePlayers;
     private double penalty;
     private team affiliate;
-    private bool moreImportantTeam;
+    public bool moreImportantTeam;
     private bool firstFree = true;
     private int draftPlace;
     private int Division;
@@ -139,10 +139,11 @@ public class team : IComparable<team>,  IEnumerable<player>
         allTime.AddWins(currentSeason.GetWins());
         allTimePlayoffs.AddWins(currentPlayoffs.GetWins());
         allTimePlayoffs.AddLosses(currentPlayoffs.GetLosses());
-
         
         for (int i = 0; i < currentSeasonVsTeam.Length; i++)
         {
+            if (allTimeVsTeam[i] == null)
+                allTimeVsTeam[i] = new Record();
             allTimeVsTeam[i].AddWins(currentSeasonVsTeam[i].GetWins());
             allTimeVsTeam[i].AddLosses(currentSeasonVsTeam[i].GetLosses());
             currentSeasonVsTeam[i] = new Record();
@@ -492,7 +493,7 @@ public class team : IComparable<team>,  IEnumerable<player>
             if (p.getOverall() < 55) onRoster = false;
             if (p.ContractExpired() && onRoster)
             {
-                if(i >= 5 && p.getOverall() < 80)
+                if(i >= 5 && p.getOverall() < 80 && !(this.strat.Equals(DraftStrategy.REBUILD) && p.GetDevelopmentRating() > 5 && p.age < p.GetPeakStart()) && !(p.GetDevelopmentRating() > 8 && p.age < p.GetPeakStart()))
                 {
                     onRoster = false;
                 }
@@ -526,6 +527,24 @@ public class team : IComparable<team>,  IEnumerable<player>
                 CapPenalty += p.GetMoneyPerYear() / 2;
             }
             if (!onRoster) players.Add(p);
+        }
+        foreach(player p in affiliate.getActivePlayers())
+        {
+            if(p != null && p.ContractExpired())
+            {
+                if(p.age > 25 && p.GetDevelopmentRating() < 7)
+                {
+                    players.Add(p);
+                }
+                else if (p.GetDevelopmentRating() < 5)
+                {
+                    players.Add(p);
+                }
+                else
+                {
+                    p.SetNewContract(new Contract(2, 1));
+                }
+            }
         }
         return players;
     }
@@ -737,9 +756,77 @@ public class team : IComparable<team>,  IEnumerable<player>
         retiredList.Add(player);
     }
     
-    public void SetFree()
+    public void SetFree(bool human = false)
     {
         firstFree = true;
+        if (!human)
+        {
+            offseasonPlayers.RemoveAll(item => item == null);
+
+            offseasonPlayers.Sort();
+            offseasonPlayers.Reverse();
+
+            if (offseasonPlayers.Count > 10)
+            {
+
+                for (int i = 0; i < 10; i++)
+                {
+                    activePlayers[i] = offseasonPlayers[i];
+                    activePlayers[i].setTeam(this);
+                }
+                offseasonPlayers.RemoveRange(0, 10);
+
+                foreach (player p in offseasonPlayers)
+                {
+                    p.OverallRating(true);
+                }
+                offseasonPlayers.Sort();
+                offseasonPlayers.Reverse();
+                foreach (player p in offseasonPlayers)
+                {
+                    p.OverallRating(false);
+                }
+                for (int i = 10; i < 15; i++)
+                {
+                    if (i - 10 < offseasonPlayers.Count)
+                    {
+                        activePlayers[i] = offseasonPlayers[i - 10];
+                        activePlayers[i].setTeam(this);
+                    }
+                    else
+                    {
+                        activePlayers[i] = null;
+                    }
+
+                }
+                offseasonPlayers.RemoveRange(0, Math.Min(5, offseasonPlayers.Count));
+            }
+            else
+            {
+                activePlayers = new player[15];
+                for (int i = 0; i < offseasonPlayers.Count; i++)
+                {
+                    activePlayers[i] = offseasonPlayers[i];
+                    activePlayers[i].setTeam(this);
+                }
+                offseasonPlayers = new List<player>();
+            }
+
+            affiliate.activePlayers = new player[15];
+
+            for (int i = 0; i < offseasonPlayers.Count; i++)
+            {
+                affiliate.activePlayers[i] = offseasonPlayers[i];
+                affiliate.activePlayers[i].setTeam(affiliate);
+            }
+            offseasonPlayers = new List<player>(activePlayers);
+            offseasonPlayers.AddRange(affiliate.activePlayers);
+
+            
+
+        }
+
+        offseasonPlayers.RemoveAll(item => item == null);
     }
     
     private List<player> Sort(List<player> list)
@@ -808,7 +895,7 @@ public class team : IComparable<team>,  IEnumerable<player>
         Console.WriteLine(name + " not found");
         return null;
     }
-    public String getTopTen()
+    public String GetLastTen()
     {
         int wins = 0, losses = 0;
         for(int i = 0; i < lastTen.Count; i++)
@@ -861,9 +948,7 @@ public class team : IComparable<team>,  IEnumerable<player>
         
     }
     public String getThreeLetters()
-    {
-        if(threeLetterAbbreviation == null)
-            threeLetterAbbreviation = teamName.Substring(0, 3);
+    {        
         return threeLetterAbbreviation;
     }
     public void setRandom(FormulaBasketball.Random r)
@@ -889,6 +974,7 @@ public class team : IComparable<team>,  IEnumerable<player>
     }
     public void setExpenses(double[] arr)
     {
+        arr[0] = GetPayroll();
         expenses = new Expenses(arr);
     }
     public int getFianances()
@@ -948,6 +1034,10 @@ public class team : IComparable<team>,  IEnumerable<player>
 
         newPlayer.setTeam(this);
         addPos(pos);
+    }
+    public void AddPlayerAtSpot(player p, int spot)
+    {
+        activePlayers[spot] = p;
     }
     public void addPlayer(player newPlayer)
     {
@@ -1266,6 +1356,25 @@ public class team : IComparable<team>,  IEnumerable<player>
         newPlayer.SetNewContract(new Contract(1, 1));
         newPlayer.SetSeasonStats(new List<StatsHolders>());
     }
+
+    public void ReplacePlayer(player oldPlayer, player newPlayer)
+    {
+        int activePlayerLoc = 0;
+        for(int i = 0; i < activePlayers.Length; i++)
+        {
+            if(activePlayers[i].GetPlayerID() == oldPlayer.GetPlayerID())
+            {
+                activePlayerLoc = i;
+                break;
+            }
+        }
+        activePlayers[activePlayerLoc] = newPlayer;
+        newPlayer.setTeam(this);
+        newPlayer.setInjured(false);
+        newPlayer.setStamina(100);
+        newPlayer.SetNewContract(new Contract(1, 1));
+        newPlayer.SetSeasonStats(new List<StatsHolders>());
+    }
     public void UpdateDraftPicks()
     {
         foreach(DraftPick pick in picks)
@@ -1393,11 +1502,48 @@ public class team : IComparable<team>,  IEnumerable<player>
             }
         }
     }
+    private static player GetPlayerFromList(List<player> players, int playerID)
+    {
+        foreach(player p in players)
+        {
+            if (p.GetPlayerID() == playerID)
+                return p;
+        }
+        return null; 
+    }
+    // Returns released players
+    public List<player> SetActiveRoster(int[] playerNumbers, int[] cutPlayerID)
+    {
+        for(int i = 0; i < activePlayers.Length; i++)
+        {
+            activePlayers[i] = GetPlayerFromList(offseasonPlayers, playerNumbers[i]);
+        }
+        for (int i = 0; i < activePlayers.Length; i++)
+        {
+            affiliate.activePlayers[i] = GetPlayerFromList(offseasonPlayers, playerNumbers[i+15]);
+        }
+        List<player> releasedPlayers = new List<player>();
+        foreach(int cutPlayer in cutPlayerID)
+        {
+            player p = GetPlayerFromList(offseasonPlayers, cutPlayer);
+            releasedPlayers.Add(p);
+            p.setTeam(null);
+            CapPenalty += p.GetMoneyPerYear() / 2.0f;
+        }
+        return releasedPlayers;
+    }
     public void TradeOccurred(List<object> tradedItems, List<object> receivedItems, FreeAgents freeAgents, bool human)
     {
-        List<player> players = new List<player>(activePlayers);
-        players.AddRange(affiliate.activePlayers);
-
+        List<player> players;
+        if (freeAgents == null)
+        {
+            players = new List<player>(offseasonPlayers);
+        }
+        else
+        {
+            players = new List<player>(activePlayers);
+            players.AddRange(affiliate.activePlayers);
+        }
         foreach(object obj in tradedItems)
         {
             if(obj is player)
@@ -1428,6 +1574,12 @@ public class team : IComparable<team>,  IEnumerable<player>
                     nextSeasonPicks.Add(pick);
                 
             }
+        }
+
+        if (freeAgents == null)
+        {
+            offseasonPlayers = players;
+            return;
         }
 
         if (human)
@@ -1598,6 +1750,10 @@ public class team : IComparable<team>,  IEnumerable<player>
         p.setTeam(this);
         offseasonPlayers.Add(p);
         p.SetStatus(2);
+    }
+    public void ClearOffers()
+    {
+        offers = new Dictionary<int, Contract>();
     }
     public List<player> GetOffSeasonPlayers(bool includeDLeague = true)
     {
@@ -1821,6 +1977,37 @@ public class team : IComparable<team>,  IEnumerable<player>
             totalIncome = new double[] { 0, 0, 0, 0 };
             merchandise = new Merchandise(r);
         }
+
+        double capPenalty = -100;
+        foreach(player p in activePlayers)
+        {
+            capPenalty += p.GetMoneyPerYear();
+        }
+        
+        // 100% tax on over 25
+        if(capPenalty > 25)
+        {
+            fianance -= 714285;
+            capPenalty -= 25;
+            fianance -= (int)Math.Round(capPenalty * 47619.047619);
+        }
+        // 50% Tax on 10-25
+        else if(capPenalty > 10)
+        {
+            fianance -= 119047;
+            capPenalty -= 10;
+            fianance -= (int)Math.Round(capPenalty * 23809.5238095);
+        }
+        else if(capPenalty > 0)
+        {
+            fianance -= (int)Math.Round(capPenalty * 11904.7619048);
+        }
+        capPenalty = -30;
+        foreach(player p in affiliate.activePlayers)
+        {
+            capPenalty += p.GetMoneyPerYear();
+        }
+        fianance -= (int)Math.Round(capPenalty * 47619.047619);
         totalIncome[3] += currentSponsers + expenses.getWeeklySponser();
         fianance = expenses.chargeExpenses(fianance, currentSponsers);
         fianance += merchandise.getWeeklyRevenue() - weeklyTravel;
@@ -1915,9 +2102,11 @@ public class team : IComparable<team>,  IEnumerable<player>
         double payroll = CapPenalty;
         if (offseason)
         {
-            List<player> players = GetOffSeasonPlayers(false);
+            List<player> players = GetOffSeasonPlayers();
             foreach (player player in players)
             {
+                if (player == null)
+                    continue;
                 payroll += player.GetMoney();
             }
         }
@@ -2160,6 +2349,9 @@ public class team : IComparable<team>,  IEnumerable<player>
         sf = freeAgents.GetPlayersByPos(3);
         sg = freeAgents.GetPlayersByPos(4);
         pg = freeAgents.GetPlayersByPos(5);
+
+       
+
     }
 }
 
@@ -2245,32 +2437,61 @@ public class DraftPick
 {
     private int round, season;
     private team from, owner;
+    private int fromTeam, ownerTeam;
     private player selectedPlayer;
     public DraftPick(int round, team pickFrom, team owner)
     {
         this.round = round;
-        this.from = pickFrom;
-        this.owner = owner;
+        this.fromTeam = pickFrom.getTeamNum();
+        this.ownerTeam = owner.getTeamNum();
     }
-    public int GetPickNumber()
+    public int GetPickNumber(createTeams create)
     {
-        return from.GetDraftPlace() + ((round-1) * 32);
+        if(from != null)
+        {
+            fromTeam = from.getTeamNum();
+            ownerTeam = owner.getTeamNum();
+            from = null;
+            owner = null;
+        }
+        return create.getTeam(fromTeam).GetDraftPlace() + ((round-1) * 32);
     }
-    public team GetOwner()
+    public team GetOwner(createTeams create)
     {
-        return owner;
+        if (from != null)
+        {
+            fromTeam = from.getTeamNum();
+            ownerTeam = owner.getTeamNum();
+            from = null;
+            owner = null;
+        }
+        return create.getTeam(ownerTeam);
     }
     public void SetOwner(team t)
     {
-        owner = t;
+        if (from != null)
+        {
+            fromTeam = from.getTeamNum();
+            ownerTeam = owner.getTeamNum();
+            from = null;
+            owner = null;
+        }
+        ownerTeam = t.getTeamNum();
     }
     public bool DifferentOwner()
     {
-        return !from.Equals(owner);
+        return !fromTeam.Equals(ownerTeam);
     }
-    public team GetTeamOfOrigin()
+    public team GetTeamOfOrigin(createTeams create)
     {
-        return from;
+        if (from != null)
+        {
+            fromTeam = from.getTeamNum();
+            ownerTeam = owner.getTeamNum();
+            from = null;
+            owner = null;
+        }
+        return create.getTeam(fromTeam);
     }
     public int GetRound()
     {
@@ -2288,18 +2509,32 @@ public class DraftPick
     {
         return season;
     }
-    public void SelectPlayer(player selectedPlayer)
+    public void SelectPlayer(player selectedPlayer, createTeams create)
     {
+        if (from != null)
+        {
+            fromTeam = from.getTeamNum();
+            ownerTeam = owner.getTeamNum();
+            from = null;
+            owner = null;
+        }
         this.selectedPlayer = selectedPlayer;
         player newPlayer = new player(selectedPlayer.getPosition(), selectedPlayer.ratings, selectedPlayer.age, selectedPlayer.getName(), selectedPlayer.peakStart, selectedPlayer.peakEnd, selectedPlayer.development, selectedPlayer.GetCountry(), formulaBasketball.nextPlayerID++);
-        owner.addPlayer(newPlayer);
+        create.getTeam(ownerTeam).addPlayer(newPlayer);
     }
     public override bool Equals(object obj)
     {
-        if(!(obj is DraftPick))
+        if (from != null)
+        {
+            fromTeam = from.getTeamNum();
+            ownerTeam = owner.getTeamNum();
+            from = null;
+            owner = null;
+        }
+        if (!(obj is DraftPick))
             return false;
         DraftPick otherPick = obj as DraftPick;
-        return otherPick.round == round && otherPick.from.ToString().Equals(from.ToString());
+        return otherPick.round == round && otherPick.fromTeam == fromTeam && otherPick.season == season;
     }
 }
 [Serializable]

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FormulaBasketball;
+using System;
 using System.Collections.Generic;
 [Serializable]
 public class Coach
@@ -322,10 +323,10 @@ public class OffensivePlayerOnCourt
 }
 public class DefensivePlayerOnCourt
 {
-    private player p;
+    private NewPlayer p;
     private int assignment, proximity;
     private Location location;
-    public DefensivePlayerOnCourt(player p, int assignment, Location location, int proximity)
+    public DefensivePlayerOnCourt(NewPlayer p, int assignment, Location location, int proximity)
     {
         this.p = p;
         this.assignment = assignment;

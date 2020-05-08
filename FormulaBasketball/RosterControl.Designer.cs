@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.mainTeamGrid = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
@@ -111,6 +112,9 @@
             // capHit
             // 
             this.capHit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle1.Format = "0.#";
+            dataGridViewCellStyle1.NullValue = null;
+            this.capHit.DefaultCellStyle = dataGridViewCellStyle1;
             this.capHit.HeaderText = "Cap Hit";
             this.capHit.Name = "capHit";
             this.capHit.ReadOnly = true;

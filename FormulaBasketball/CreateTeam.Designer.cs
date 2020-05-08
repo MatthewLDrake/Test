@@ -1,6 +1,6 @@
 ﻿namespace FormulaBasketball
 {
-    partial class newTeam
+    partial class CreateTeam
     {
         /// <summary>
         /// Required designer variable.

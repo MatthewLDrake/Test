@@ -17,7 +17,7 @@ public class FreeAgents
         }
         allPlayers = new List<player>();
     }
-    public void Add(List<player> newPlayers)
+    public void Add(IEnumerable<player> newPlayers)
     {
         foreach (player player in newPlayers)
         {
@@ -52,6 +52,8 @@ public class FreeAgents
     }
     public void Add(player player)
     {
+        if (player == null)
+            return;
         if (allPlayers.Contains(player)) return;
         AddToList(player, allPlayers);
         AddToList(player, playersByPos[player.getPosition() - 1]);

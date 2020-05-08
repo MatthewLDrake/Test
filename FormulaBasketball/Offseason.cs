@@ -101,7 +101,7 @@ public class Offseason
     }
     private void ExecuteDrafts()
     {
-        RookieDraft draft = new RookieDraft(rookies, teams, new List<int>(), r);
+        RookieDraft draft = new RookieDraft(rookies, teams, new List<int>(), r, create);
         freeAgency.Add(draft.GetUndraftedPlayers());
         foreach(team team in teams)
         {

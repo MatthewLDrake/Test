@@ -63,7 +63,12 @@ namespace FormulaBasketball
             if (p.getShotsAttemptedAgainst() != 0)
                 opponentPercentage = ((double)p.getShotsMadeAgainst() / (double)p.getShotsAttemptedAgainst()) * 100;
             double gameDivider = ((perGameStats && p.getGamesPlayed() > 0) ? p.getGamesPlayed() : 1.0);
-            dataGridView1.Rows.Add(p.getTeam().ToString(), p.getName(), p.getPosition(),p.getMinutes() / gameDivider, p.getAssists() / gameDivider, p.getPoints() / gameDivider, p.getShotsTaken() / gameDivider, p.getShotsMade() / gameDivider, shootingPercentage, p.getThreesTaken() / gameDivider, p.getThreePointersMade() / gameDivider,
+
+            string teamName = "Free Agent";
+            if (p.getTeam() != null)
+                teamName = p.getTeam().ToString();
+
+            dataGridView1.Rows.Add(teamName, p.getName(), p.getPosition(),p.getMinutes() / gameDivider, p.getAssists() / gameDivider, p.getPoints() / gameDivider, p.getShotsTaken() / gameDivider, p.getShotsMade() / gameDivider, shootingPercentage, p.getThreesTaken() / gameDivider, p.getThreePointersMade() / gameDivider,
             p.getTurnovers() / gameDivider, p.getSteals() / gameDivider, p.getRebounds() / gameDivider, p.getOffensiveRebounds() / gameDivider, p.getDefensiveRebounds() / gameDivider, p.getFouls() / gameDivider, p.getShotsAttemptedAgainst() / gameDivider, p.getShotsMadeAgainst() / gameDivider, opponentPercentage, plus_minus);
         }
         private void UpdateStats()

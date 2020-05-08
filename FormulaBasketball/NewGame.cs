@@ -14,7 +14,7 @@ namespace FormulaBasketball
         private byte[] currentQuarterScore;
         private int timeLeft;
         private bool awayTipOff;
-        public NewGame(team awayTeam, team homeTeam, Random r)
+        public NewGame(NewTeam awayTeam, NewTeam homeTeam, Random r)
         {
             this.awayTeam = new NewCurrentTeam(awayTeam);
             this.homeTeam = new NewCurrentTeam(homeTeam);
@@ -86,7 +86,7 @@ namespace FormulaBasketball
         }
         private bool TipOff()
         {
-            double temp = awayTeam.GetCurrentPlayers()[0].getJumpingRating() - homeTeam.GetCurrentPlayers()[0].getJumpingRating();
+            double temp = 0;// awayTeam.GetCurrentPlayers()[0].getJumpingRating() - homeTeam.GetCurrentPlayers()[0].getJumpingRating();
 
             double temp2 = r.Next(0, 10) + temp;
 
@@ -95,17 +95,17 @@ namespace FormulaBasketball
     }
     public class NewCurrentTeam
     {
-        private player[] currentPlayers;
+        private NewPlayer[] currentPlayers;
         private Coach coach;
-        private team team;
-        public NewCurrentTeam(team team)
+        private NewTeam team;
+        public NewCurrentTeam(NewTeam team)
         {
             this.team = team;
-            coach = team.getCoach();
-            currentPlayers = team.getActivePlayers().Take(5).ToArray();
+            coach = team.GetCoach();
+            currentPlayers = team.GetPlayers().Take(5).ToArray();
 
         }
-        public player[] GetCurrentPlayers()
+        public NewPlayer[] GetCurrentPlayers()
         {
             return currentPlayers;
         }

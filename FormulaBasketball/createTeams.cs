@@ -6,15 +6,18 @@ using System.IO;
 public class createTeams
 {
     private FormulaBasketball.Random r;
+    public FormulaBasketball.Random draftRandom;
     private List<team> teams, dLeagueTeams;
     private List<player> freeAgency;
+    private List<Event> events;
     private FreeAgents freeAgents;
     private College college;
     private double[,] averagePositionSalaries, minPositionSalaries, maxPositionsSalaries;
     private double[,] averageOverall, minOverall, maxOverall, allOveralls;
     private List<int> gameNums;
     public static int nextID = 0;
-    public static int currentSeason = 7;
+    public static int currentSeason = 8;
+    private MyList<player> Rookies;
     public createTeams(List<team> teams, FreeAgents freeAgency, FormulaBasketball.Random r)
     {
         this.teams = teams;
@@ -69,6 +72,22 @@ public class createTeams
             teams[i].setTeamNum(i);
         }
     }
+    public FormulaBasketball.Random GetRandom()
+    {
+        return draftRandom;
+    }
+    public void SetEvents()
+    {
+        events = new List<Event>();
+    }
+    public void SetRookies(MyList<player> rookies)
+    {
+        this.Rookies = rookies;
+    }
+    public MyList<player> GetRookies()
+    {
+        return Rookies;
+    }
     /*public void SaveCreate()
     {
         String fileName = "testSaveFile.csv";
@@ -98,6 +117,26 @@ public class createTeams
         }
         
     }
+    public List<Event> GetEventsForTeam(int teamNum)
+    {
+        List<Event> events = new List<Event>();
+
+        foreach(Event e in this.events)
+        {
+            if (e.GetTeamAffected() == -1 || e.GetTeamAffected() == teamNum)
+                events.Add(e);
+        }
+
+        return events;
+    }
+    public void ResetEvents()
+    {
+        events = new List<Event>();
+    }
+    public void AddEvent(Event e)
+    {
+        events.Add(e);
+    }
     public void CreateNewSchedule()
     {
         gameNums = new List<int>();
@@ -105,6 +144,7 @@ public class createTeams
         {
             gameNums.Add(i);
         }
+        gameNums.Shuffle(r);
     }
     public void FixTeams()
     {
@@ -157,7 +197,7 @@ public class createTeams
     }
     public void Clean()
     {
-        rookies = null;
+        Rookies = null;
         dLeagueTeams = null;
         foreach(team team in teams)
         {
@@ -221,8 +261,7 @@ public class createTeams
         List<Tuple<int, team, int>> teamNeeds = new List<Tuple<int, team, int>>();
         foreach(team team in teams)
         {
-            if (humans.Contains(team.getTeamNum()))
-                continue;
+            
             List<player> players = team.GetOffSeasonPlayers();
             List<player> pgs = new List<player>(), sgs = new List<player>(), pfs = new List<player>(), sfs = new List<player>(), cs = new List<player>();
             foreach(player p in players)
@@ -250,7 +289,26 @@ public class createTeams
             {
                 teamNeeds.Add(new Tuple<int, team, int>(5, team, 6 - pgs.Count));
             }
-            else if(pgs.Count > 6)
+            if (sgs.Count < 6)
+            {
+                teamNeeds.Add(new Tuple<int, team, int>(4, team, 6 - sgs.Count));
+            }
+            if (sfs.Count < 6)
+            {
+                teamNeeds.Add(new Tuple<int, team, int>(3, team, 6 - sfs.Count));
+            }
+            if (pfs.Count < 6)
+            {
+                teamNeeds.Add(new Tuple<int, team, int>(2, team, 6 - pfs.Count));
+            }
+            if (cs.Count < 6)
+            {
+                teamNeeds.Add(new Tuple<int, team, int>(1, team, 6 - cs.Count));
+            }
+            if (humans.Contains(team.getTeamNum()))
+                continue;
+
+            if(pgs.Count > 6)
             {
                 player[] playersToCut = new player[pgs.Count - 6];
                 foreach(player p in pgs)
@@ -277,11 +335,8 @@ public class createTeams
                     freeAgents.Add(p);
                 }
             }
-            if (sgs.Count < 6)
-            {
-                teamNeeds.Add(new Tuple<int, team, int>(4, team, 6 - sgs.Count));
-            }
-            else if (sgs.Count > 6)
+           
+            if (sgs.Count > 6)
             {
                 player[] playersToCut = new player[sgs.Count - 6];
                 foreach (player p in sgs)
@@ -308,11 +363,8 @@ public class createTeams
                     freeAgents.Add(p);
                 }
             }
-            if (sfs.Count < 6)
-            {
-                teamNeeds.Add(new Tuple<int, team, int>(3, team, 6 - sfs.Count));
-            }
-            else if (sfs.Count > 6)
+           
+            if (sfs.Count > 6)
             {
                 player[] playersToCut = new player[sfs.Count - 6];
                 foreach (player p in sfs)
@@ -339,11 +391,8 @@ public class createTeams
                     freeAgents.Add(p);
                 }
             }
-            if (pfs.Count < 6)
-            {
-                teamNeeds.Add(new Tuple<int, team, int>(2, team, 6 - pfs.Count));
-            }
-            else if (pfs.Count > 6)
+           
+            if (pfs.Count > 6)
             {
                 player[] playersToCut = new player[pfs.Count - 6];
                 foreach (player p in pfs)
@@ -370,11 +419,8 @@ public class createTeams
                     freeAgents.Add(p);
                 }
             }
-            if (cs.Count < 6)
-            {
-                teamNeeds.Add(new Tuple<int, team, int>(1, team, 6 - cs.Count));
-            }
-            else if (cs.Count > 6)
+            
+            if (cs.Count > 6)
             {
                 player[] playersToCut = new player[cs.Count - 6];
                 foreach (player p in cs)
@@ -777,7 +823,14 @@ public class createTeams
         getTeam(26).AddFutureDraftPick(new DraftPick(2, getTeam(26), getTeam(26)));
         getTeam(19).AddFutureDraftPick(new DraftPick(2, getTeam(19), getTeam(19)));
     }
-    private void setFianancials()
+    private List<player> drafted, undrafted;
+    internal void AddFinishedDraft(List<player> list1, List<player> list2)
+    {
+        drafted = list1;
+        undrafted = list2;
+    }
+
+    public void setFianancials()
     {
         teams[0].setExpenses(new double[] { 88.7, 17.7, 11 });
         teams[16].setExpenses(new double[] { 74.6, 15.5, 11 });
@@ -1070,36 +1123,7 @@ public class createTeams
         Console.WriteLine(5);*/
         return college;
     }
-
-    private List<player> rookies;
-    public List<player> GetRookies()
-    {
-        AddRookies();
-        Dictionary<string, int> players = new Dictionary<string, int>();
-        foreach (player p in rookies)
-        {
-            p.addPlayerID(nextID);
-            nextID++;
-            p.IsRookie();
-            if (p.getName().Contains("Player"))
-            {
-                if(players.ContainsKey(p.getName()))
-                {
-                    players[p.getName()]++; 
-                }
-                else
-                    players.Add(p.getName(), 1);
-            }
-        }
-        foreach(KeyValuePair<string, int> pair in players)
-        {
-            Console.WriteLine(pair.Key + ": " + pair.Value);
-        }
-        
-
-
-        return rookies;
-    }
+    
     public void Progress(List<int> humans)
     {
         foreach(team t in teams)
@@ -1120,7 +1144,6 @@ public class createTeams
     }
     public void AddRookies()
     {
-        rookies = new List<player>();
 
         /* string[] players = File.ReadAllText("college.fibusave").Split(new string[] { "<player>" }, StringSplitOptions.None);
          for (int i = 1; i <players.Length; i++)

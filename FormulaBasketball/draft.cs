@@ -20,7 +20,8 @@ namespace FormulaBasketball
         private FormulaBasketball.Random r;
         private DataGridView[] grids;
         private List<player> mockDraft, drafted, undrafted;
-        public draft(List<player> collegePlayers, DraftPick[] picks, List<int> humanPlayers, FormulaBasketball.Random r)
+        private createTeams create;
+        public draft(List<player> collegePlayers, DraftPick[] picks, List<int> humanPlayers, FormulaBasketball.Random r, createTeams create)
         {
             InitializeComponent();
             grids = new DataGridView[5];
@@ -29,6 +30,9 @@ namespace FormulaBasketball
             grids[2] = smallForwardGrid;
             grids[3] = shootingGuardList;
             grids[4] = pointGuardList;
+
+            this.create = create;
+            this.r = r;
 
             this.humanPlayers = humanPlayers;
 
@@ -48,7 +52,7 @@ namespace FormulaBasketball
             }
             
             this.picks = picks;
-            this.r = new Random(80085);
+            this.r = create.GetRandom();
 
             currentPick = 0;
 
@@ -57,18 +61,36 @@ namespace FormulaBasketball
             {
                 mockDraft = new List<player>();
 
+                foreach(team t in create.getTeams())
+                {
+                    t.DraftStrategy = DraftStrategy.WIN_NOW;
+                }
+
                 while(currentPick < 64)
                 {
                    
-                    List<player> roster = picks[currentPick].GetOwner().GetMockRoster();
-                    player selectedPlayer = PickPlayer(roster, picks[currentPick].GetOwner().DraftStrategy);
+                    List<player> roster = picks[currentPick].GetOwner(create).GetMockRoster();
+                    player selectedPlayer = PickPlayer(roster, picks[currentPick].GetOwner(create).DraftStrategy);
                     players.Remove(selectedPlayer.GetPlayerID());
 
-                    picks[currentPick].GetOwner().AddMockedPlayer(selectedPlayer);
+                    picks[currentPick].GetOwner(create).AddMockedPlayer(selectedPlayer);
                     mockDraft.Add(selectedPlayer);
 
 
                     currentPick++;
+                }
+                foreach(team t in create.getTeams())
+                {
+                    if (t.ToString().Equals("Serkr Atolls"))
+                    {
+                        t.DraftStrategy = DraftStrategy.WIN_NOW;
+                    }
+                    else
+                    {
+                        if (t.GetDraftPlace() < 10) t.DraftStrategy = DraftStrategy.REBUILD;
+                        else if (t.GetDraftPlace() < 20) t.DraftStrategy = DraftStrategy.WIN_SOON;
+                        else t.DraftStrategy = DraftStrategy.WIN_NOW;
+                    }
                 }
 
                 
@@ -84,12 +106,12 @@ namespace FormulaBasketball
         private void AiPick()
         {
             // TODO: Implement new draft logic for AI
-            List<player> roster = picks[currentPick].GetOwner().GetOffSeasonPlayers();
-            player selectedPlayer = PickPlayer(roster, picks[currentPick].GetOwner().DraftStrategy);
+            List<player> roster = picks[currentPick].GetOwner(create).GetOffSeasonPlayers();
+            player selectedPlayer = PickPlayer(roster, picks[currentPick].GetOwner(create).DraftStrategy);
             players.Remove(selectedPlayer.GetPlayerID());
             drafted.Add(selectedPlayer);
-            picks[currentPick].GetOwner().OffSeasonAddPlayer(selectedPlayer);
-            label3.Text = "Previous pick: " + selectedPlayer.GetPositionAsString() + " " + selectedPlayer.getName() + " by the " + picks[currentPick].GetOwner();
+            picks[currentPick].GetOwner(create).OffSeasonAddPlayer(selectedPlayer);
+            label3.Text = "Previous pick: " + selectedPlayer.GetPositionAsString() + " " + selectedPlayer.getName() + " by the " + picks[currentPick].GetOwner(create);
             bool flag = false;
             for(int i = 0; i < grids.Length; i++)
             {
@@ -112,6 +134,8 @@ namespace FormulaBasketball
                 players[i] = new List<player>();
             foreach (player p in roster)
             {
+                if (p == null)
+                    continue;
                 players[p.getPosition() - 1].Add(p);
             }
             for (int i = 0; i < players.Length; i++)
@@ -241,7 +265,7 @@ namespace FormulaBasketball
             int ageBest, timeToPeakStart, timeToPeakEnd;
 
             double overall = player.getOverall();
-            if(roster[0] != null)
+            if(roster.Count > 0 && roster[0] != null)
             {
                 overallBest = overall - roster[0].getOverall();
                 ageBest = roster[0].age - player.age;
@@ -251,7 +275,7 @@ namespace FormulaBasketball
                 overallBest = overall;
                 ageBest = 10;
             }
-            if (roster[1] != null)
+            if (roster.Count > 1 && roster[1] != null)
             {
                 overallMid = overall - roster[1].getOverall();
             }
@@ -259,7 +283,7 @@ namespace FormulaBasketball
             {
                 overallMid = overall;
             }
-            if (roster[2] != null)
+            if (roster.Count > 2 && roster[2] != null)
             {
                 overallLow = overall - roster[2].getOverall();
             }
@@ -328,7 +352,7 @@ namespace FormulaBasketball
             AiPick();
             currentPick++;
             if (currentPick == 64) FinishDraft();
-            else label1.Text = "Round " + (currentPick / 32 + 1) + " - Pick " + (currentPick % 32 + 1) + "/32\n" + picks[currentPick].GetOwner() + " is on the clock";
+            else label1.Text = "Round " + (currentPick / 32 + 1) + " - Pick " + (currentPick % 32 + 1) + "/32\n" + picks[currentPick].GetOwner(create) + " is on the clock";
 
             if(currentPick >= picks.Length)
             {
@@ -336,7 +360,7 @@ namespace FormulaBasketball
                 nextPickButton.Enabled = false;
                 nextUserButton.Enabled = false;
             }
-            if (humanPlayers.Contains(picks[currentPick].GetOwner().getTeamNum()))
+            if (humanPlayers.Contains(picks[currentPick].GetOwner(create).getTeamNum()))
             {
                 draftButton.Enabled = true;
                 nextPickButton.Enabled = false;
@@ -373,6 +397,10 @@ namespace FormulaBasketball
         {
             return undrafted;
         }
+        public List<player> GetDraftedPlayers()
+        {
+            return drafted;
+        }
         private void humanDraft(object sender, EventArgs e)
         {
             int playerID = (int)grids[tabControl.SelectedIndex].SelectedRows[0].Cells[14].Value;
@@ -380,11 +408,11 @@ namespace FormulaBasketball
             players.Remove(playerID);
             drafted.Add(selectedPlayer);
             UpdateGrid(grids[tabControl.SelectedIndex].SelectedRows[0], selectedPlayer);
-            picks[currentPick].GetOwner().OffSeasonAddPlayer(selectedPlayer);
-            label3.Text = "Previous pick: " + selectedPlayer.GetPositionAsString() + " " + selectedPlayer.getName() + " by the " + picks[currentPick].GetOwner();
+            picks[currentPick].GetOwner(create).OffSeasonAddPlayer(selectedPlayer);
+            label3.Text = "Previous pick: " + selectedPlayer.GetPositionAsString() + " " + selectedPlayer.getName() + " by the " + picks[currentPick].GetOwner(create);
             currentPick++;
             if (currentPick == 64) FinishDraft();
-            else label1.Text = "Round " + (currentPick / 32 + 1) + " - Pick " + (currentPick % 32 + 1) + "/32\n" + picks[currentPick].GetOwner() + " is on the clock";
+            else label1.Text = "Round " + (currentPick / 32 + 1) + " - Pick " + (currentPick % 32 + 1) + "/32\n" + picks[currentPick].GetOwner(create) + " is on the clock";
             
             if(currentPick >= picks.Length)
             {
@@ -392,7 +420,7 @@ namespace FormulaBasketball
                 nextPickButton.Enabled = false;
                 nextUserButton.Enabled = false;
             }
-            else if (humanPlayers.Contains(picks[currentPick].GetOwner().getTeamNum()))
+            else if (humanPlayers.Contains(picks[currentPick].GetOwner(create).getTeamNum()))
             {
                 draftButton.Enabled = true;
                 nextPickButton.Enabled = false;
@@ -421,17 +449,17 @@ namespace FormulaBasketball
             row.Cells[10].Value = selectedPlayer.getDurabilityRating(false);
             row.Cells[11].Value = selectedPlayer.getLayupRating(false);
             row.Cells[12].Value = selectedPlayer.getDevelopment();
-            row.Cells[13].Value = picks[currentPick].GetOwner().ToString();
+            row.Cells[13].Value = picks[currentPick].GetOwner(create).ToString();
         }
        private void advanceToHuman(object sender, EventArgs e)
         {
 
-           while(currentPick <= 63 && !humanPlayers.Contains(picks[currentPick].GetOwner().getTeamNum()))
+           while(currentPick <= 63 && !humanPlayers.Contains(picks[currentPick].GetOwner(create).getTeamNum()))
            {
                AiPick();
                currentPick++;
                if (currentPick == 64) FinishDraft();
-               else label1.Text = "Round " + (currentPick / 32 + 1) + " - Pick " + (currentPick % 32 + 1) + "/32\n" + picks[currentPick].GetOwner() + " is on the clock";
+               else label1.Text = "Round " + (currentPick / 32 + 1) + " - Pick " + (currentPick % 32 + 1) + "/32\n" + picks[currentPick].GetOwner(create) + " is on the clock";
            }
            if (currentPick >= picks.Length)
            {
@@ -449,9 +477,9 @@ namespace FormulaBasketball
 
         private void startbutton_Click(object sender, EventArgs e)
         {
-            label1.Text = "Round 1 - Pick 1/32\n" + picks[currentPick].GetOwner() + " is on the clock";
+            label1.Text = "Round 1 - Pick 1/32\n" + picks[currentPick].GetOwner(create) + " is on the clock";
 
-            if (humanPlayers.Contains(picks[currentPick].GetOwner().getTeamNum()))
+            if (humanPlayers.Contains(picks[currentPick].GetOwner(create).getTeamNum()))
             {
                 draftButton.Enabled = true;
                 nextPickButton.Enabled = false;

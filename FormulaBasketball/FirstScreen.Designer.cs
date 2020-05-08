@@ -53,6 +53,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(90, 59);
             this.button1.TabIndex = 1;
+            this.button1.TabStop = false;
             this.button1.Text = "Single Player";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -111,7 +112,7 @@
             this.Offseason.Name = "Offseason";
             this.Offseason.Size = new System.Drawing.Size(90, 59);
             this.Offseason.TabIndex = 7;
-            this.Offseason.Text = "Season Viewer";
+            this.Offseason.Text = "In Season Viewer";
             this.Offseason.UseVisualStyleBackColor = true;
             this.Offseason.Click += new System.EventHandler(this.Offseason_Click);
             // 

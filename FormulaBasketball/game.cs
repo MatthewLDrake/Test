@@ -491,17 +491,29 @@ public class game
                 //r = new Random();
                 int shotType = r.Next(0,20);
                 double shotSkill = 0.0;
-                if (Players[Players.Length - 1].getJumpShotRating() > Math.Max(Players[Players.Length - 1].getLayupRating(), Players[Players.Length - 1].getDunkRating()))
-                {
+
+                double diff = Players[Players.Length - 1].getJumpShotRating(false) - Math.Max(Players[Players.Length - 1].getLayupRating(false), Players[Players.Length - 1].getDunkRating(false));
+
+                if (diff > 50)
+                    shotType -= 10;
+                else if (diff > 25)
                     shotType -= 5;
-                }
-                else if (Players[Players.Length - 1].getJumpShotRating() < Math.Max(Players[Players.Length - 1].getLayupRating(), Players[Players.Length - 1].getDunkRating()))
-                {
+                else if (diff < -25)
                     shotType += 5;
-                }
+                else if(diff < -50)
+                    shotType += 10;
+                
+                int threeThreshold = 3;
+                double diffBetween = Players[Players.Length - 1].getJumpShotRating(false) - Players[Players.Length - 1].getThreeShotRating(false);
+                if (diffBetween > 0 || Players[Players.Length - 1].getThreeShotRating(false) > 80)
+                    threeThreshold = 8;
+                else if (diffBetween > -10)
+                    threeThreshold = 6;
+                else if (diffBetween > -20)
+                    threeThreshold = 5;
+
                 if (shotType > 10)
                 {
-
                     if (lastPass > 5 || Players[Players.Length - 1].getDunkRating() > Players[Players.Length - 1].getLayupRating())
                     {
                         shotSkill = Players[Players.Length - 1].getDunkRating();
@@ -512,12 +524,9 @@ public class game
                         shotSkill = Players[Players.Length - 1].getLayupRating();
                         shot = ShotType.LAYUP;
                     }
-
-
                 }
-                else if (shotType >= 3)
+                else if (shotType >= threeThreshold)
                 {
-
                     shotSkill = Players[Players.Length - 1].getJumpShotRating();
                     shot = ShotType.JUMP;
                 }
@@ -530,10 +539,6 @@ public class game
                 switch (shot)
                 {
                     case ShotType.THREE:
-                        if (lastPass < -4) lastPass = 3;
-                        else if (lastPass < 0) lastPass = 2;
-                        else lastPass = 1;
-                        break;
                     case ShotType.JUMP:
                         if (lastPass < -2.5) lastPass = 3;
                         else if (lastPass < 2) lastPass = 2;
@@ -585,7 +590,7 @@ public class game
                 else tempDef = playingAwayTeam.get(Players[Players.Length - 1].getPosition() - 1);
                 shots takeShot = new shots(lastPass, shotSkill, tempDef.getShotContestRating(), shot, r);
                 Players[Players.Length - 1].addShotTaken(1);
-                Players[Players.Length - 1].changeStamina(-.5);
+                Players[Players.Length - 1].changeStamina(-.25);
                 if (b) playingHomeTeam.get(Players[Players.Length - 1].getPosition() - 1).addShotsAttemptedAgainst(1);
                 else playingAwayTeam.get(Players[Players.Length - 1].getPosition() - 1).addShotsAttemptedAgainst(1);
                 if (b && takeShot.madeShot())
@@ -666,7 +671,8 @@ public class game
                         Players[Players.Length - 2].addAssists(1);
                     }
                     playIsOver = true;
-                    if (takeShot.wasFouled() && shotType < 3)
+                    // and one
+                    if (takeShot.wasFouled())
                     {
                         shots takeFreeThrows = new shots(6, Players[Players.Length - 1].getJumpShotRating(), 0, ShotType.FREE, r);
                         Players[Players.Length - 1].addPoints(takeFreeThrows.getPointsScored());
@@ -694,7 +700,7 @@ public class game
                 }
                 else
                 {
-                    if (takeShot.wasFouled() && shotType < 3)
+                    if (takeShot.wasFouled() && shotType < threeThreshold)
                     {
                         shots takeFreeThrows = new shots(5, Players[Players.Length - 1].getJumpShotRating(), 0, ShotType.FREE, r);
                         Players[Players.Length - 1].addPoints(takeFreeThrows.getPointsScored());
@@ -739,11 +745,7 @@ public class game
                     if (reboundResult) return 1;
                     else return 0;
                 }
-
-
             }
-
-
         }
         return 1;
 

@@ -45,6 +45,8 @@ namespace FormulaBasketball
             {
                 foreach (player p in ((team)dataGridView1.SelectedRows[0].Cells[2].Value).GetOffSeasonPlayers())
                 {
+                    if (p == null)
+                        continue;
                     if (p.getPosition() == pos)
                     {
                         p.setDefensiveModifier(0);
@@ -67,7 +69,11 @@ namespace FormulaBasketball
                 }*/
             }
         }
-
+        private Contract c;
+        public Contract GetContract()
+        {
+            return c;
+        }
         private void teamSelect_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count == 0)            
@@ -76,6 +82,9 @@ namespace FormulaBasketball
                 p.SetNewContract(new Contract((int)yearsUpDown.Value, (double)moneyUpDown.Value));
             else
                 p.SetNewContract(((team)dataGridView1.SelectedRows[0].Cells[2].Value).GetContract(p));
+
+            c = p.GetContract();
+            
 
             ((team)dataGridView1.SelectedRows[0].Cells[2].Value).OffSeasonAddPlayer(p);
 
