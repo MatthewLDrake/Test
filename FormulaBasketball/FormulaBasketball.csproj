@@ -142,6 +142,7 @@
     <Compile Include="InSeasonViewer.Designer.cs">
       <DependentUpon>InSeasonViewer.cs</DependentUpon>
     </Compile>
+    <Compile Include="League.cs" />
     <Compile Include="LeagueRoster.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,8 +175,10 @@
     <Compile Include="Negotiation.Designer.cs">
       <DependentUpon>Negotiation.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewFormulaBasketball.cs" />
     <Compile Include="NewGame.cs" />
     <Compile Include="NewPlayer.cs" />
+    <Compile Include="NewShots.cs" />
     <Compile Include="NewTeam.cs" />
     <Compile Include="OfferedTrade.cs">
       <SubType>Form</SubType>

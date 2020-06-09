@@ -23,8 +23,11 @@ namespace FormulaBasketball
             {
                 currDefense[i] = new DefensivePlayerOnCourt(defense.GetCurrentPlayers()[i], i + 1, currOffense[i].GetLocation(), 1);
             }
-            //offensivePlay.RunPlay(currOffense, currDefense);
-
+            bool playIsOver = false;
+            while (!playIsOver)
+            {
+                offensivePlay.RunPlay(currOffense, currDefense);
+            }
 
             return null;
         }

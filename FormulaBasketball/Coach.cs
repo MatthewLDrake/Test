@@ -261,6 +261,26 @@ public class ManSwitch : DefensivePhilosophy
     }
 }
 [Serializable]
+public class SevenSecondPlay : OffensivePlay
+{
+    private int stage = 0;
+    public override PlayResult RunPlay(OffensivePlayerOnCourt[] offense, DefensivePlayerOnCourt[] defense, FormulaBasketball.Random r)
+    {
+        if(stage == 0)
+        {
+            offense[0].SetHasBall(true);
+            bool goingUpLeft = r.NextBool();
+            offense[0].SetLocation(goingUpLeft ? Location.LEFT_OF_KEY : Location.RIGHT_OF_KEY);
+            offense[1].SetLocation(Location.RIGHT_OUTER_CORNER);
+            offense[2].SetLocation(Location.LEFT_OUTER_CORNER);
+            offense[3].SetLocation(goingUpLeft ? Location.RIGHT_OF_KEY : Location.LEFT_OF_KEY);
+            offense[4].SetLocation(Location.TOP_OF_KEY);
+        }
+        return base.RunPlay(offense, defense);
+    }
+}
+
+[Serializable]
 public class ManNoSwitch : DefensivePhilosophy
 {
     public ManNoSwitch()
@@ -284,6 +304,10 @@ public class OffensivePlay
 
     }
     public virtual OffensivePlayerOnCourt[] GetPlayers(FormulaBasketball.NewCurrentTeam team)
+    {
+        return null;
+    }
+    public virtual PlayResult RunPlay(OffensivePlayerOnCourt[] offense, DefensivePlayerOnCourt[] defense)
     {
         return null;
     }
