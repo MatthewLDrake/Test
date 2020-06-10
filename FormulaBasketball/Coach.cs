@@ -276,7 +276,7 @@ public class SevenSecondPlay : OffensivePlay
             offense[3].SetLocation(goingUpLeft ? Location.RIGHT_OF_KEY : Location.LEFT_OF_KEY);
             offense[4].SetLocation(Location.TOP_OF_KEY);
         }
-        return base.RunPlay(offense, defense);
+        return base.RunPlay(offense, defense, r);
     }
 }
 
@@ -307,7 +307,7 @@ public class OffensivePlay
     {
         return null;
     }
-    public virtual PlayResult RunPlay(OffensivePlayerOnCourt[] offense, DefensivePlayerOnCourt[] defense)
+    public virtual PlayResult RunPlay(OffensivePlayerOnCourt[] offense, DefensivePlayerOnCourt[] defense, FormulaBasketball.Random r)
     {
         return null;
     }

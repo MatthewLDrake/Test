@@ -1,41 +1,41 @@
 Sagua Ocelots Stats
-Player Record of Points: Fihana Jo: 40 points on game 17 against the Manwx Saguans
-Player Record of Assists: Nomi Yoriyuki: 18 assists on game 64 against the Height Sagua Cats
+Player Record of Points: Fihana Jo: 42 points on game 4 against the Barsein Bats
+Player Record of Assists: Nomi Yoriyuki: 22 assists on game 4 against the Barsein Bats
 Player Record of Rebounds: Alukeili Asolomundi: 23 rebounds on game 82 against the Aahrus Moosi
-Team Record in Most Points Scored: Sagua Ocelots: 127 points on game 17 against the Manwx Saguans
+Team Record in Most Points Scored: Sagua Ocelots: 132 points on game 4 against the Barsein Bats
 Team Record in Least Points Scored: Sagua Ocelots: 74 points on game 40 against the Blanaxon Hammers
 Team Record in Least Points Allowed: Sagua Ocelots: 67 points on game 28 against the Key to Don Yees
 Team Record in Most Points Allowed: Sagua Ocelots: 136 points on game 1 against the Red Rainbow Sickles
 Records vs. Each Team this season:
-Aahrus Moosi: 2-2
-Auspikitan Golden Falcons: 2-2
-Calto Cows: 1-3
-Height Sagua Cats: 3-6
-Key to Don Yees: 2-2
-Manwx Saguans: 2-2
+Aahrus Moosi: 0-0
+Auspikitan Golden Falcons: 0-0
+Calto Cows: 0-0
+Height Sagua Cats: 0-0
+Key to Don Yees: 0-0
+Manwx Saguans: 0-0
 Sagua Ocelots: 0-0
-Solea Geysers: 1-3
-Autolik Autonomy: 6-1
-Barsein Bats: 1-2
-Blanaxon Hammers: 1-2
-Kaeshar Kaisers: 3-0
-Nova Chrysalia Crystaliers: 6-1
-Red Rainbow Sickles: 2-1
-Serkr Atolls: 0-3
-Shmupland Dictators: 2-1
-Aiyota Pumps: 2-0
-Avura Aviators: 1-1
-Boltway Bad Dragons: 0-2
-Dotruga Falno: 1-1
-Ethanthova Ponies: 2-0
-Faehrenfall Feathercats: 1-1
-Stedro Boulders: 2-0
-TND Tanks: 1-1
-Bongatar Banging Bongos: 4-2
-Czalliso Pythons: 2-0
-Dvimne Spirits: 0-2
-Holy Yektonisa Bishops: 1-1
-Holykol Bears: 2-0
-Lyintaria Lynx: 2-0
-Pyxanovia Pixies: 0-2
-Transhimalia Disasters: 1-1
+Solea Geysers: 0-0
+Autolik Autonomy: 0-0
+Barsein Bats: 0-1
+Blanaxon Hammers: 0-0
+Kaeshar Kaisers: 0-0
+Nova Chrysalia Crystaliers: 0-0
+Red Rainbow Sickles: 1-0
+Serkr Atolls: 0-0
+Shmupland Dictators: 0-0
+Aiyota Pumps: 0-0
+Avura Aviators: 0-0
+Boltway Bad Dragons: 0-0
+Dotruga Falno: 0-0
+Ethanthova Ponies: 1-0
+Faehrenfall Feathercats: 0-0
+Stedro Boulders: 0-0
+TND Tanks: 0-0
+Bongatar Banging Bongos: 0-0
+Czalliso Pythons: 0-0
+Dvimne Spirits: 0-0
+Holy Yektonisa Bishops: 0-0
+Holykol Bears: 0-0
+Lyintaria Lynx: 0-0
+Pyxanovia Pixies: 0-0
+Transhimalia Disasters: 0-1

@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
             this.teamOneLabel = new System.Windows.Forms.Label();
             this.teamTwoLabel = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -150,10 +150,11 @@
             this.OFGP,
             this.PlusMinus});
             this.tableLayoutPanel1.SetColumnSpan(this.dataGridView1, 8);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 123);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(1160, 409);
+            this.dataGridView1.Size = new System.Drawing.Size(1478, 835);
             this.dataGridView1.TabIndex = 4;
             // 
             // tableLayoutPanel1
@@ -196,14 +197,14 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1166, 535);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1484, 961);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
             // teamTwoOTLabel
             // 
             this.teamTwoOTLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.teamTwoOTLabel.AutoSize = true;
-            this.teamTwoOTLabel.Location = new System.Drawing.Point(484, 93);
+            this.teamTwoOTLabel.Location = new System.Drawing.Point(619, 93);
             this.teamTwoOTLabel.Name = "teamTwoOTLabel";
             this.teamTwoOTLabel.Size = new System.Drawing.Size(19, 13);
             this.teamTwoOTLabel.TabIndex = 22;
@@ -213,7 +214,7 @@
             // 
             this.teamTwoQ3Label.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.teamTwoQ3Label.AutoSize = true;
-            this.teamTwoQ3Label.Location = new System.Drawing.Point(368, 93);
+            this.teamTwoQ3Label.Location = new System.Drawing.Point(471, 93);
             this.teamTwoQ3Label.Name = "teamTwoQ3Label";
             this.teamTwoQ3Label.Size = new System.Drawing.Size(19, 13);
             this.teamTwoQ3Label.TabIndex = 21;
@@ -223,7 +224,7 @@
             // 
             this.teamTwoQ4Label.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.teamTwoQ4Label.AutoSize = true;
-            this.teamTwoQ4Label.Location = new System.Drawing.Point(426, 93);
+            this.teamTwoQ4Label.Location = new System.Drawing.Point(545, 93);
             this.teamTwoQ4Label.Name = "teamTwoQ4Label";
             this.teamTwoQ4Label.Size = new System.Drawing.Size(19, 13);
             this.teamTwoQ4Label.TabIndex = 20;
@@ -233,7 +234,7 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(425, 13);
+            this.label5.Location = new System.Drawing.Point(544, 13);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(21, 13);
             this.label5.TabIndex = 9;
@@ -243,7 +244,7 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(367, 13);
+            this.label4.Location = new System.Drawing.Point(470, 13);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(21, 13);
             this.label4.TabIndex = 8;
@@ -253,7 +254,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(309, 13);
+            this.label3.Location = new System.Drawing.Point(396, 13);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(21, 13);
             this.label3.TabIndex = 7;
@@ -263,7 +264,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(251, 13);
+            this.label1.Location = new System.Drawing.Point(322, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(21, 13);
             this.label1.TabIndex = 5;
@@ -273,7 +274,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(483, 13);
+            this.label2.Location = new System.Drawing.Point(618, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(22, 13);
             this.label2.TabIndex = 6;
@@ -283,7 +284,7 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(536, 13);
+            this.label6.Location = new System.Drawing.Point(687, 13);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(31, 13);
             this.label6.TabIndex = 10;
@@ -293,7 +294,7 @@
             // 
             this.teamOneQ1Label.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.teamOneQ1Label.AutoSize = true;
-            this.teamOneQ1Label.Location = new System.Drawing.Point(252, 53);
+            this.teamOneQ1Label.Location = new System.Drawing.Point(323, 53);
             this.teamOneQ1Label.Name = "teamOneQ1Label";
             this.teamOneQ1Label.Size = new System.Drawing.Size(19, 13);
             this.teamOneQ1Label.TabIndex = 11;
@@ -303,7 +304,7 @@
             // 
             this.teamOneQ2Label.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.teamOneQ2Label.AutoSize = true;
-            this.teamOneQ2Label.Location = new System.Drawing.Point(310, 53);
+            this.teamOneQ2Label.Location = new System.Drawing.Point(397, 53);
             this.teamOneQ2Label.Name = "teamOneQ2Label";
             this.teamOneQ2Label.Size = new System.Drawing.Size(19, 13);
             this.teamOneQ2Label.TabIndex = 12;
@@ -313,7 +314,7 @@
             // 
             this.teamOneQ3Label.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.teamOneQ3Label.AutoSize = true;
-            this.teamOneQ3Label.Location = new System.Drawing.Point(368, 53);
+            this.teamOneQ3Label.Location = new System.Drawing.Point(471, 53);
             this.teamOneQ3Label.Name = "teamOneQ3Label";
             this.teamOneQ3Label.Size = new System.Drawing.Size(19, 13);
             this.teamOneQ3Label.TabIndex = 13;
@@ -323,7 +324,7 @@
             // 
             this.teamOneQ4Label.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.teamOneQ4Label.AutoSize = true;
-            this.teamOneQ4Label.Location = new System.Drawing.Point(426, 53);
+            this.teamOneQ4Label.Location = new System.Drawing.Point(545, 53);
             this.teamOneQ4Label.Name = "teamOneQ4Label";
             this.teamOneQ4Label.Size = new System.Drawing.Size(19, 13);
             this.teamOneQ4Label.TabIndex = 14;
@@ -333,7 +334,7 @@
             // 
             this.teamOneOTLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.teamOneOTLabel.AutoSize = true;
-            this.teamOneOTLabel.Location = new System.Drawing.Point(484, 53);
+            this.teamOneOTLabel.Location = new System.Drawing.Point(619, 53);
             this.teamOneOTLabel.Name = "teamOneOTLabel";
             this.teamOneOTLabel.Size = new System.Drawing.Size(19, 13);
             this.teamOneOTLabel.TabIndex = 15;
@@ -343,7 +344,7 @@
             // 
             this.teamOneTotalLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.teamOneTotalLabel.AutoSize = true;
-            this.teamOneTotalLabel.Location = new System.Drawing.Point(539, 53);
+            this.teamOneTotalLabel.Location = new System.Drawing.Point(690, 53);
             this.teamOneTotalLabel.Name = "teamOneTotalLabel";
             this.teamOneTotalLabel.Size = new System.Drawing.Size(25, 13);
             this.teamOneTotalLabel.TabIndex = 16;
@@ -353,7 +354,7 @@
             // 
             this.teamTwoQ1Label.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.teamTwoQ1Label.AutoSize = true;
-            this.teamTwoQ1Label.Location = new System.Drawing.Point(252, 93);
+            this.teamTwoQ1Label.Location = new System.Drawing.Point(323, 93);
             this.teamTwoQ1Label.Name = "teamTwoQ1Label";
             this.teamTwoQ1Label.Size = new System.Drawing.Size(19, 13);
             this.teamTwoQ1Label.TabIndex = 17;
@@ -363,7 +364,7 @@
             // 
             this.teamTwoTotalLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.teamTwoTotalLabel.AutoSize = true;
-            this.teamTwoTotalLabel.Location = new System.Drawing.Point(539, 93);
+            this.teamTwoTotalLabel.Location = new System.Drawing.Point(690, 93);
             this.teamTwoTotalLabel.Name = "teamTwoTotalLabel";
             this.teamTwoTotalLabel.Size = new System.Drawing.Size(25, 13);
             this.teamTwoTotalLabel.TabIndex = 18;
@@ -373,7 +374,7 @@
             // 
             this.teamTwoQ2Label.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.teamTwoQ2Label.AutoSize = true;
-            this.teamTwoQ2Label.Location = new System.Drawing.Point(310, 93);
+            this.teamTwoQ2Label.Location = new System.Drawing.Point(397, 93);
             this.teamTwoQ2Label.Name = "teamTwoQ2Label";
             this.teamTwoQ2Label.Size = new System.Drawing.Size(19, 13);
             this.teamTwoQ2Label.TabIndex = 19;
@@ -389,11 +390,10 @@
             // 
             // name
             // 
-            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.name.HeaderText = "Name";
             this.name.Name = "name";
             this.name.ReadOnly = true;
-            this.name.Width = 60;
             // 
             // Position
             // 
@@ -405,9 +405,9 @@
             // Minutes
             // 
             this.Minutes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle1.Format = "0.##";
-            dataGridViewCellStyle1.NullValue = "0";
-            this.Minutes.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle19.Format = "0.##";
+            dataGridViewCellStyle19.NullValue = "0";
+            this.Minutes.DefaultCellStyle = dataGridViewCellStyle19;
             this.Minutes.HeaderText = "Minutes";
             this.Minutes.Name = "Minutes";
             this.Minutes.ReadOnly = true;
@@ -416,9 +416,9 @@
             // Assists
             // 
             this.Assists.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle2.Format = "0.##";
-            dataGridViewCellStyle2.NullValue = "0";
-            this.Assists.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle20.Format = "0.##";
+            dataGridViewCellStyle20.NullValue = "0";
+            this.Assists.DefaultCellStyle = dataGridViewCellStyle20;
             this.Assists.HeaderText = "Assists";
             this.Assists.Name = "Assists";
             this.Assists.ReadOnly = true;
@@ -427,9 +427,9 @@
             // Points
             // 
             this.Points.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle3.Format = "0.##";
-            dataGridViewCellStyle3.NullValue = "0";
-            this.Points.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle21.Format = "0.##";
+            dataGridViewCellStyle21.NullValue = "0";
+            this.Points.DefaultCellStyle = dataGridViewCellStyle21;
             this.Points.HeaderText = "Points";
             this.Points.Name = "Points";
             this.Points.ReadOnly = true;
@@ -437,32 +437,34 @@
             // 
             // ShotsTaken
             // 
-            this.ShotsTaken.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle4.Format = "0.##";
-            dataGridViewCellStyle4.NullValue = "0";
-            this.ShotsTaken.DefaultCellStyle = dataGridViewCellStyle4;
+            this.ShotsTaken.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
+            dataGridViewCellStyle22.Format = "0.##";
+            dataGridViewCellStyle22.NullValue = "0";
+            this.ShotsTaken.DefaultCellStyle = dataGridViewCellStyle22;
             this.ShotsTaken.HeaderText = "Shots Taken";
+            this.ShotsTaken.MinimumWidth = 50;
             this.ShotsTaken.Name = "ShotsTaken";
             this.ShotsTaken.ReadOnly = true;
-            this.ShotsTaken.Width = 93;
+            this.ShotsTaken.Width = 50;
             // 
             // shotsMade
             // 
-            this.shotsMade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle5.Format = "0.##";
-            dataGridViewCellStyle5.NullValue = "0";
-            this.shotsMade.DefaultCellStyle = dataGridViewCellStyle5;
+            this.shotsMade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
+            dataGridViewCellStyle23.Format = "0.##";
+            dataGridViewCellStyle23.NullValue = "0";
+            this.shotsMade.DefaultCellStyle = dataGridViewCellStyle23;
             this.shotsMade.HeaderText = "Shots Made";
+            this.shotsMade.MinimumWidth = 50;
             this.shotsMade.Name = "shotsMade";
             this.shotsMade.ReadOnly = true;
-            this.shotsMade.Width = 89;
+            this.shotsMade.Width = 50;
             // 
             // fgPercent
             // 
             this.fgPercent.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle6.Format = "0.00\\%";
-            dataGridViewCellStyle6.NullValue = "0";
-            this.fgPercent.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle24.Format = "0.00\\%";
+            dataGridViewCellStyle24.NullValue = "0";
+            this.fgPercent.DefaultCellStyle = dataGridViewCellStyle24;
             this.fgPercent.HeaderText = "FG%";
             this.fgPercent.Name = "fgPercent";
             this.fgPercent.ReadOnly = true;
@@ -470,42 +472,50 @@
             // 
             // ThreesTaken
             // 
-            this.ThreesTaken.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle7.Format = "0.##";
-            dataGridViewCellStyle7.NullValue = "0";
-            this.ThreesTaken.DefaultCellStyle = dataGridViewCellStyle7;
+            this.ThreesTaken.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
+            dataGridViewCellStyle25.Format = "0.##";
+            dataGridViewCellStyle25.NullValue = "0";
+            this.ThreesTaken.DefaultCellStyle = dataGridViewCellStyle25;
             this.ThreesTaken.HeaderText = "Threes Taken";
+            this.ThreesTaken.MinimumWidth = 50;
             this.ThreesTaken.Name = "ThreesTaken";
             this.ThreesTaken.ReadOnly = true;
-            this.ThreesTaken.Width = 99;
+            this.ThreesTaken.Width = 50;
             // 
             // ThreesMade
             // 
-            this.ThreesMade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle8.Format = "0.##";
-            dataGridViewCellStyle8.NullValue = "0";
-            this.ThreesMade.DefaultCellStyle = dataGridViewCellStyle8;
+            this.ThreesMade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
+            dataGridViewCellStyle26.Format = "0.##";
+            dataGridViewCellStyle26.NullValue = "0";
+            this.ThreesMade.DefaultCellStyle = dataGridViewCellStyle26;
             this.ThreesMade.HeaderText = "Threes Made";
+            this.ThreesMade.MinimumWidth = 50;
             this.ThreesMade.Name = "ThreesMade";
             this.ThreesMade.ReadOnly = true;
-            this.ThreesMade.Width = 95;
+            this.ThreesMade.Width = 50;
             // 
             // FTT
             // 
+            this.FTT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
             this.FTT.HeaderText = "Free Throws Taken";
+            this.FTT.MinimumWidth = 50;
             this.FTT.Name = "FTT";
+            this.FTT.Width = 50;
             // 
             // FTM
             // 
+            this.FTM.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
             this.FTM.HeaderText = "Free Throws Made";
+            this.FTM.MinimumWidth = 50;
             this.FTM.Name = "FTM";
+            this.FTM.Width = 50;
             // 
             // Turnovers
             // 
             this.Turnovers.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle9.Format = "0.##";
-            dataGridViewCellStyle9.NullValue = "0";
-            this.Turnovers.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle27.Format = "0.##";
+            dataGridViewCellStyle27.NullValue = "0";
+            this.Turnovers.DefaultCellStyle = dataGridViewCellStyle27;
             this.Turnovers.HeaderText = "Turnovers";
             this.Turnovers.Name = "Turnovers";
             this.Turnovers.ReadOnly = true;
@@ -514,9 +524,9 @@
             // Steals
             // 
             this.Steals.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle10.Format = "0.##";
-            dataGridViewCellStyle10.NullValue = "0";
-            this.Steals.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle28.Format = "0.##";
+            dataGridViewCellStyle28.NullValue = "0";
+            this.Steals.DefaultCellStyle = dataGridViewCellStyle28;
             this.Steals.HeaderText = "Steals";
             this.Steals.Name = "Steals";
             this.Steals.ReadOnly = true;
@@ -525,9 +535,9 @@
             // Rebounds
             // 
             this.Rebounds.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle11.Format = "0.##";
-            dataGridViewCellStyle11.NullValue = "0";
-            this.Rebounds.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle29.Format = "0.##";
+            dataGridViewCellStyle29.NullValue = "0";
+            this.Rebounds.DefaultCellStyle = dataGridViewCellStyle29;
             this.Rebounds.HeaderText = "Rebounds";
             this.Rebounds.Name = "Rebounds";
             this.Rebounds.ReadOnly = true;
@@ -535,32 +545,34 @@
             // 
             // DefensiveRebounds
             // 
-            this.DefensiveRebounds.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle12.Format = "0.##";
-            dataGridViewCellStyle12.NullValue = "0";
-            this.DefensiveRebounds.DefaultCellStyle = dataGridViewCellStyle12;
+            this.DefensiveRebounds.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
+            dataGridViewCellStyle30.Format = "0.##";
+            dataGridViewCellStyle30.NullValue = "0";
+            this.DefensiveRebounds.DefaultCellStyle = dataGridViewCellStyle30;
             this.DefensiveRebounds.HeaderText = "Def Rebounds";
+            this.DefensiveRebounds.MinimumWidth = 50;
             this.DefensiveRebounds.Name = "DefensiveRebounds";
             this.DefensiveRebounds.ReadOnly = true;
-            this.DefensiveRebounds.Width = 93;
+            this.DefensiveRebounds.Width = 50;
             // 
             // OffensiveRebounds
             // 
-            this.OffensiveRebounds.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle13.Format = "0.##";
-            dataGridViewCellStyle13.NullValue = "0";
-            this.OffensiveRebounds.DefaultCellStyle = dataGridViewCellStyle13;
+            this.OffensiveRebounds.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
+            dataGridViewCellStyle31.Format = "0.##";
+            dataGridViewCellStyle31.NullValue = "0";
+            this.OffensiveRebounds.DefaultCellStyle = dataGridViewCellStyle31;
             this.OffensiveRebounds.HeaderText = "Off Rebounds";
+            this.OffensiveRebounds.MinimumWidth = 50;
             this.OffensiveRebounds.Name = "OffensiveRebounds";
             this.OffensiveRebounds.ReadOnly = true;
-            this.OffensiveRebounds.Width = 90;
+            this.OffensiveRebounds.Width = 50;
             // 
             // Fouls
             // 
             this.Fouls.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle14.Format = "0.##";
-            dataGridViewCellStyle14.NullValue = "0";
-            this.Fouls.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle32.Format = "0.##";
+            dataGridViewCellStyle32.NullValue = "0";
+            this.Fouls.DefaultCellStyle = dataGridViewCellStyle32;
             this.Fouls.HeaderText = "Fouls";
             this.Fouls.Name = "Fouls";
             this.Fouls.ReadOnly = true;
@@ -568,32 +580,34 @@
             // 
             // OpponentShotsTaken
             // 
-            this.OpponentShotsTaken.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle15.Format = "0.##";
-            dataGridViewCellStyle15.NullValue = "0";
-            this.OpponentShotsTaken.DefaultCellStyle = dataGridViewCellStyle15;
+            this.OpponentShotsTaken.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
+            dataGridViewCellStyle33.Format = "0.##";
+            dataGridViewCellStyle33.NullValue = "0";
+            this.OpponentShotsTaken.DefaultCellStyle = dataGridViewCellStyle33;
             this.OpponentShotsTaken.HeaderText = "Shots Taken Against";
+            this.OpponentShotsTaken.MinimumWidth = 50;
             this.OpponentShotsTaken.Name = "OpponentShotsTaken";
             this.OpponentShotsTaken.ReadOnly = true;
-            this.OpponentShotsTaken.Width = 120;
+            this.OpponentShotsTaken.Width = 50;
             // 
             // shotsMadeAgainst
             // 
-            this.shotsMadeAgainst.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle16.Format = "0.##";
-            dataGridViewCellStyle16.NullValue = "0";
-            this.shotsMadeAgainst.DefaultCellStyle = dataGridViewCellStyle16;
+            this.shotsMadeAgainst.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
+            dataGridViewCellStyle34.Format = "0.##";
+            dataGridViewCellStyle34.NullValue = "0";
+            this.shotsMadeAgainst.DefaultCellStyle = dataGridViewCellStyle34;
             this.shotsMadeAgainst.HeaderText = "Shots Made Against";
+            this.shotsMadeAgainst.MinimumWidth = 50;
             this.shotsMadeAgainst.Name = "shotsMadeAgainst";
             this.shotsMadeAgainst.ReadOnly = true;
-            this.shotsMadeAgainst.Width = 116;
+            this.shotsMadeAgainst.Width = 50;
             // 
             // OFGP
             // 
             this.OFGP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle17.Format = "0.00\\%";
-            dataGridViewCellStyle17.NullValue = "0";
-            this.OFGP.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle35.Format = "0.00\\%";
+            dataGridViewCellStyle35.NullValue = "0";
+            this.OFGP.DefaultCellStyle = dataGridViewCellStyle35;
             this.OFGP.HeaderText = "OFG%";
             this.OFGP.Name = "OFGP";
             this.OFGP.ReadOnly = true;
@@ -602,9 +616,9 @@
             // PlusMinus
             // 
             this.PlusMinus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle18.Format = "0.###";
-            dataGridViewCellStyle18.NullValue = "0";
-            this.PlusMinus.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle36.Format = "0.###";
+            dataGridViewCellStyle36.NullValue = "0";
+            this.PlusMinus.DefaultCellStyle = dataGridViewCellStyle36;
             this.PlusMinus.HeaderText = "+/-";
             this.PlusMinus.Name = "PlusMinus";
             this.PlusMinus.ReadOnly = true;
@@ -614,7 +628,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1166, 535);
+            this.ClientSize = new System.Drawing.Size(1484, 961);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "GameViewer";
             this.Text = "GameViewer";

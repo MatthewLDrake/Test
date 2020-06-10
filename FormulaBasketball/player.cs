@@ -1473,7 +1473,18 @@ public class player : IComparable<player>
         set { playerAge = value; }
 
     }
+    private int gameTeamPoints;
     public int teamPoints
+    {
+        get { return pointDiff; }
+
+        set
+        {
+            teamGamePoints += (value - pointDiff);
+            pointDiff = value;
+        }
+    }
+    public int teamGamePoints
     {
         get { return pointDiff; }
         set { pointDiff = value; }
@@ -2092,6 +2103,7 @@ public class player : IComparable<player>
         if (hold.getMinutes() > 0)
             gamesPlayed++;
         gameStats = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        teamGamePoints = 0;
     }
     public void setName(String newName)
     {

@@ -7,35 +7,35 @@ Team Record in Least Points Scored: Calto Cows: 76 points on game 50 against the
 Team Record in Least Points Allowed: Calto Cows: 76 points on game 10 against the Naxda Nomads
 Team Record in Most Points Allowed: Calto Cows: 141 points on game 40 against the Serkr Atolls
 Records vs. Each Team this season:
-Aahrus Moosi: 6-5
-Auspikitan Golden Falcons: 4-0
+Aahrus Moosi: 0-0
+Auspikitan Golden Falcons: 0-0
 Calto Cows: 0-0
-Height Sagua Cats: 3-1
-Key to Don Yees: 2-2
-Manwx Saguans: 4-0
-Sagua Ocelots: 3-1
-Solea Geysers: 3-1
-Autolik Autonomy: 3-0
-Barsein Bats: 2-1
-Blanaxon Hammers: 4-4
-Kaeshar Kaisers: 2-1
-Nova Chrysalia Crystaliers: 2-1
-Red Rainbow Sickles: 2-1
-Serkr Atolls: 3-0
-Shmupland Dictators: 5-5
-Aiyota Pumps: 2-0
-Avura Aviators: 0-2
-Boltway Bad Dragons: 2-0
-Dotruga Falno: 1-1
-Ethanthova Ponies: 0-2
-Faehrenfall Feathercats: 1-1
-Stedro Boulders: 1-1
-TND Tanks: 6-1
-Bongatar Banging Bongos: 2-0
-Czalliso Pythons: 2-0
-Dvimne Spirits: 0-2
-Holy Yektonisa Bishops: 2-0
-Holykol Bears: 2-0
-Lyintaria Lynx: 2-0
-Pyxanovia Pixies: 1-1
-Transhimalia Disasters: 2-0
+Height Sagua Cats: 0-0
+Key to Don Yees: 1-0
+Manwx Saguans: 0-0
+Sagua Ocelots: 0-0
+Solea Geysers: 0-0
+Autolik Autonomy: 0-0
+Barsein Bats: 0-0
+Blanaxon Hammers: 0-0
+Kaeshar Kaisers: 0-0
+Nova Chrysalia Crystaliers: 0-0
+Red Rainbow Sickles: 1-0
+Serkr Atolls: 0-0
+Shmupland Dictators: 0-0
+Aiyota Pumps: 0-0
+Avura Aviators: 1-0
+Boltway Bad Dragons: 0-0
+Dotruga Falno: 0-0
+Ethanthova Ponies: 0-0
+Faehrenfall Feathercats: 0-0
+Stedro Boulders: 0-0
+TND Tanks: 0-0
+Bongatar Banging Bongos: 1-0
+Czalliso Pythons: 0-0
+Dvimne Spirits: 0-0
+Holy Yektonisa Bishops: 0-0
+Holykol Bears: 0-0
+Lyintaria Lynx: 0-0
+Pyxanovia Pixies: 0-0
+Transhimalia Disasters: 0-0

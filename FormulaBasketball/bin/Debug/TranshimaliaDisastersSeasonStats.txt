@@ -3,39 +3,39 @@ Player Record of Points: Steve Masuhiro: 40 points on game 61 against the Boltwa
 Player Record of Assists: Steve Masuhiro: 23 assists on game 40 against the TND Tanks
 Player Record of Rebounds: Jesse Erickson: 21 rebounds on game 66 against the Dotruga Falno
 Team Record in Most Points Scored: Transhimalia Disasters: 126 points on game 35 against the Aiyota Pumps
-Team Record in Least Points Scored: Transhimalia Disasters: 73 points on game 97 against the Aiyota Pumps
+Team Record in Least Points Scored: Transhimalia Disasters: 66 points on game 1 against the Dotruga Falno
 Team Record in Least Points Allowed: Transhimalia Disasters: 70 points on game 108 against the Naxda Nomads
-Team Record in Most Points Allowed: Transhimalia Disasters: 125 points on game 73 against the Autolik Autonomy
+Team Record in Most Points Allowed: Transhimalia Disasters: 127 points on game 1 against the Dotruga Falno
 Records vs. Each Team this season:
-Aahrus Moosi: 2-4
-Auspikitan Golden Falcons: 1-1
-Calto Cows: 0-2
-Height Sagua Cats: 2-0
-Key to Don Yees: 2-0
-Manwx Saguans: 1-1
-Sagua Ocelots: 1-1
-Solea Geysers: 1-1
-Autolik Autonomy: 1-1
-Barsein Bats: 1-1
-Blanaxon Hammers: 0-2
-Kaeshar Kaisers: 0-2
-Nova Chrysalia Crystaliers: 2-0
-Red Rainbow Sickles: 0-2
-Serkr Atolls: 0-2
-Shmupland Dictators: 1-1
-Aiyota Pumps: 3-0
-Avura Aviators: 1-2
-Boltway Bad Dragons: 2-1
-Dotruga Falno: 1-2
-Ethanthova Ponies: 0-3
-Faehrenfall Feathercats: 1-2
-Stedro Boulders: 3-0
-TND Tanks: 0-3
-Bongatar Banging Bongos: 2-2
-Czalliso Pythons: 2-2
-Dvimne Spirits: 2-6
-Holy Yektonisa Bishops: 0-4
-Holykol Bears: 3-7
-Lyintaria Lynx: 2-2
-Pyxanovia Pixies: 5-5
+Aahrus Moosi: 0-0
+Auspikitan Golden Falcons: 0-0
+Calto Cows: 0-0
+Height Sagua Cats: 0-0
+Key to Don Yees: 0-0
+Manwx Saguans: 0-0
+Sagua Ocelots: 1-0
+Solea Geysers: 0-0
+Autolik Autonomy: 0-0
+Barsein Bats: 0-0
+Blanaxon Hammers: 0-0
+Kaeshar Kaisers: 0-0
+Nova Chrysalia Crystaliers: 0-0
+Red Rainbow Sickles: 0-0
+Serkr Atolls: 0-0
+Shmupland Dictators: 0-0
+Aiyota Pumps: 0-1
+Avura Aviators: 0-0
+Boltway Bad Dragons: 0-0
+Dotruga Falno: 0-1
+Ethanthova Ponies: 0-0
+Faehrenfall Feathercats: 0-0
+Stedro Boulders: 0-0
+TND Tanks: 0-0
+Bongatar Banging Bongos: 0-0
+Czalliso Pythons: 0-0
+Dvimne Spirits: 1-0
+Holy Yektonisa Bishops: 0-0
+Holykol Bears: 0-0
+Lyintaria Lynx: 0-0
+Pyxanovia Pixies: 0-0
 Transhimalia Disasters: 0-0

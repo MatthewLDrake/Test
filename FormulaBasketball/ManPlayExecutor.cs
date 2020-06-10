@@ -26,7 +26,7 @@ namespace FormulaBasketball
             bool playIsOver = false;
             while (!playIsOver)
             {
-                offensivePlay.RunPlay(currOffense, currDefense);
+                offensivePlay.RunPlay(currOffense, currDefense, null);
             }
 
             return null;

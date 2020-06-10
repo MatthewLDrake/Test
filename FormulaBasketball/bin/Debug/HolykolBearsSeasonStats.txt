@@ -7,35 +7,35 @@ Team Record in Least Points Scored: Holykol Bears: 71 points on game 62 against 
 Team Record in Least Points Allowed: Holykol Bears: 70 points on game 58 against the Lyintaria Lynx
 Team Record in Most Points Allowed: Holykol Bears: 141 points on game 73 against the Kaeshar Kaisers
 Records vs. Each Team this season:
-Aahrus Moosi: 1-1
-Auspikitan Golden Falcons: 1-1
-Calto Cows: 0-2
-Height Sagua Cats: 2-0
-Key to Don Yees: 1-1
-Manwx Saguans: 1-1
-Sagua Ocelots: 0-2
-Solea Geysers: 1-1
-Autolik Autonomy: 0-2
-Barsein Bats: 1-1
-Blanaxon Hammers: 1-1
-Kaeshar Kaisers: 0-2
-Nova Chrysalia Crystaliers: 1-1
-Red Rainbow Sickles: 0-6
-Serkr Atolls: 0-2
-Shmupland Dictators: 1-1
-Aiyota Pumps: 2-1
-Avura Aviators: 2-1
-Boltway Bad Dragons: 0-3
-Dotruga Falno: 1-7
-Ethanthova Ponies: 4-5
-Faehrenfall Feathercats: 2-1
-Stedro Boulders: 2-1
-TND Tanks: 1-2
-Bongatar Banging Bongos: 1-3
-Czalliso Pythons: 3-1
-Dvimne Spirits: 2-2
-Holy Yektonisa Bishops: 3-1
+Aahrus Moosi: 0-0
+Auspikitan Golden Falcons: 0-0
+Calto Cows: 0-0
+Height Sagua Cats: 0-0
+Key to Don Yees: 0-0
+Manwx Saguans: 0-0
+Sagua Ocelots: 0-0
+Solea Geysers: 0-0
+Autolik Autonomy: 0-0
+Barsein Bats: 1-0
+Blanaxon Hammers: 0-0
+Kaeshar Kaisers: 0-0
+Nova Chrysalia Crystaliers: 0-0
+Red Rainbow Sickles: 0-0
+Serkr Atolls: 0-0
+Shmupland Dictators: 0-0
+Aiyota Pumps: 0-0
+Avura Aviators: 0-0
+Boltway Bad Dragons: 0-0
+Dotruga Falno: 0-1
+Ethanthova Ponies: 0-0
+Faehrenfall Feathercats: 0-0
+Stedro Boulders: 1-0
+TND Tanks: 0-0
+Bongatar Banging Bongos: 0-0
+Czalliso Pythons: 0-0
+Dvimne Spirits: 0-0
+Holy Yektonisa Bishops: 0-0
 Holykol Bears: 0-0
-Lyintaria Lynx: 2-2
-Pyxanovia Pixies: 3-1
-Transhimalia Disasters: 7-3
+Lyintaria Lynx: 0-1
+Pyxanovia Pixies: 0-0
+Transhimalia Disasters: 0-0

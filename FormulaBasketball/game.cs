@@ -89,6 +89,14 @@ public class game
         if (!quarterly)
             startGame();
     }
+    public team GetAwayTeam()
+    {
+        return awayTeam;
+    }
+    public team GetHomeTeam()
+    {
+        return homeTeam;
+    }
     public player GetHighestScorer()
     {
         int mostPoints = 0;

@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using FormulaBasketball;
+using System.Drawing;
 using System.Drawing.Imaging;
 using System.Windows.Forms;
 public class ImagePrinter
@@ -101,6 +102,11 @@ public class ImagePrinter
             }
             b.Save("images/Game " + gameNum +".png", ImageFormat.Png);
         }
+    }
+    public static void PrintBoxScoreAndStats(game game, string loc)
+    {
+        GameViewer viewer = new GameViewer(game);
+        viewer.SaveForm("images/" + loc + "/Box " + (game.GetAwayTeam().getWins() + game.GetAwayTeam().getLosses()) + ".png");        
     }
 }
 class PrintInfo

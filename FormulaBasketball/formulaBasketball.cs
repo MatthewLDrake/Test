@@ -61,6 +61,9 @@ public class formulaBasketball
                 capPenalty += p.GetMoneyPerYear();
             }
             Console.WriteLine(t + ": " + capPenalty);
+            t.ResetStats();
+            t.Reset();
+            startingGame = 1;
         }
 
         Console.WriteLine(tuto + ": " + tuto.getFianances());
@@ -1125,7 +1128,15 @@ public class formulaBasketball
         int home = homeTeam.lastThreeGames(-1);
 
 
-
+        bool calto, solea, dotruga, nova;
+        calto = (i == 2 || j == 2);
+       
+        solea = (i == 7 || j == 7) ;
+        
+        nova = (i == 12 || j == 12) ;
+        
+        dotruga = (i == 19 || j == 19) ;
+        
         int randomValue = r.Next(0, 100);
         if (away == 0 && home == 0)
         {
@@ -1368,7 +1379,26 @@ public class formulaBasketball
             playersAssists = assists;
             mostAssists = assists.getGameAssists();
         }
+        if (!dLeague)
+        {
+            if (calto)
+            {
+                ImagePrinter.PrintBoxScoreAndStats(newGame, "calto");
+            }
+            if (solea)
+            {
+                ImagePrinter.PrintBoxScoreAndStats(newGame, "solea");
+            }
+            if (nova)
+            {
+                ImagePrinter.PrintBoxScoreAndStats(newGame, "nova");
+            }
+            if (dotruga)
+            {
+                ImagePrinter.PrintBoxScoreAndStats(newGame, "dotruga");
+            }
 
+        }
         for (int k = 0; k < awayTeam.getSize(); k++)
         {
             awayTeam.getPlayer(k).resetGameStats(awayTeam, homeTeam);

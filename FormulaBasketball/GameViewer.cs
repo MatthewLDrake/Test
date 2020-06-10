@@ -248,22 +248,70 @@ namespace FormulaBasketball
 
 
         }
+        public GameViewer(game g)
+        {
+            InitializeComponent();
+            this.game = g;
+                teamOneLabel.Text = game.GetAwayTeam().ToString();
+                teamTwoLabel.Text = game.GetHomeTeam().ToString();
+
+                int[] scores = game.getQuarterOneScore();
+                teamOneQ1Label.Text = "" + scores[0];
+                teamTwoQ1Label.Text = "" + scores[1];
+
+                scores = game.getQuarterTwoScore();
+                teamOneQ2Label.Text = "" + scores[0];
+                teamTwoQ2Label.Text = "" + scores[1];
+
+                scores = game.getQuarterThreeScore();
+                teamOneQ3Label.Text = "" + scores[0];
+                teamTwoQ3Label.Text = "" + scores[1];
+
+                scores = game.getQuarterFourScore();
+                teamOneQ4Label.Text = "" + scores[0];
+                teamTwoQ4Label.Text = "" + scores[1];
+
+                scores = game.getQuarterOTScore();
+                teamOneOTLabel.Text = "" + scores[0];
+                teamTwoOTLabel.Text = "" + scores[1];
+
+                teamOneTotalLabel.Text = "" + game.getAwayTeamScore();
+                teamTwoTotalLabel.Text = "" + game.getHomeTeamScore();
+
+                foreach (player p in game.GetAwayTeam())
+                {
+                    AddPlayerToGrid(p);
+                }
+                foreach (player p in game.GetHomeTeam())
+                {
+                    AddPlayerToGrid(p);
+                }
+            Show();
+            }
+        public void SaveForm(string location)
+        {
+            using (var bmp = new Bitmap(this.Width, this.Height))
+            {
+                this.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height));
+                bmp.Save(location);
+            }
+            Hide();
+            
+        }
+        
         private void AddPlayerToGrid(player p)
         {
             double shootingPercentage = 0.0, opponentPercentage = 0.0;
-            if (p.getShotsTaken() != 0)
+            if (p.getGameShotsTaken() != 0)
             {
-                shootingPercentage = ((double)p.getShotsMade() / (double)p.getShotsTaken()) * 100;
+                shootingPercentage = ((double)p.getGameShotsMade() / (double)p.getGameShotsTaken()) * 100;
             }
-            double plus_minus = 0.0;
-            if (p.getGamesPlayed() != 0)
-            {
-                plus_minus = ((double)p.teamPoints / (double)p.getGamesPlayed());
-            }
-            if (p.getShotsAttemptedAgainst() != 0)
-                opponentPercentage = ((double)p.getShotsMadeAgainst() / (double)p.getShotsAttemptedAgainst()) * 100;
-            dataGridView1.Rows.Add(p.getTeam().ToString(), p.getName(), p.getPosition(), p.getMinutes() , p.getAssists() , p.getPoints() , p.getShotsTaken() , p.getShotsMade() , shootingPercentage, p.getThreesTaken() , p.getThreePointersMade() , p.getFreeThrowsTaken(), p.getFreeThrowsMade(),
-            p.getTurnovers() , p.getSteals() , p.getRebounds() , p.getOffensiveRebounds() , p.getDefensiveRebounds() , p.getFouls() , p.getShotsAttemptedAgainst() , p.getShotsMadeAgainst() , opponentPercentage, plus_minus);
+            double plus_minus = p.teamGamePoints;
+            
+            if (p.getGameShotsAttemptedAgainst() != 0)
+                opponentPercentage = ((double)p.getGameShotsMadeAgainst() / (double)p.getGameShotsAttemptedAgainst()) * 100;
+            dataGridView1.Rows.Add(p.getTeam().ToString(), p.getName(), p.getPosition(), p.getGameMinutes() , p.getGameAssists() , p.getGamePoints() , p.getGameShotsTaken() , p.getGameShotsMade() , shootingPercentage, p.getGameThreesTaken() , p.getGameThreePointersMade() , p.getGameFreeThrowsTaken(), p.getGameFreeThrowsMade(),
+            p.getGameTurnovers() , p.getGameSteals() , p.getGameRebounds() , p.getGameOffensiveRebounds() , p.getGameDefensiveRebounds() , p.getGameFouls() , p.getGameShotsAttemptedAgainst() , p.getGameShotsMadeAgainst() , opponentPercentage, plus_minus);
         }
     }
 }
