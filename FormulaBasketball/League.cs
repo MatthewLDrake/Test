@@ -11,8 +11,10 @@ namespace FormulaBasketball
     public class League : IEnumerable<NewTeam>
     {
         private List<NewTeam> teams;
-        public League()
+        public static Random r;
+        public League(Random r)
         {
+            League.r = r;
             teams = new List<NewTeam>();
         }
         public void AddTeam(NewTeam mainTeam, NewTeam affiliate)

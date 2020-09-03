@@ -9,11 +9,9 @@ namespace FormulaBasketball
     public class NewFormulaBasketball
     {
         public static League league;
-        private static Random r;
         public NewFormulaBasketball(createTeams create)
         {
-            league = new League();
-            r = new Random();
+            league = new League(new Random());
 
             foreach(team t in create.getTeams())
             {
@@ -26,7 +24,7 @@ namespace FormulaBasketball
                     Dictionary<ResultType, int> dict = new Dictionary<ResultType,int>();
                     for (int i = 0; i < 1000; i++)
                     {
-                        ShotResult result = NewShots.TakeShot(ShotType.THREE, false, r, p, p, r.Next(100));
+                        ShotResult result = NewShots.TakeShot(ShotType.THREE, false, League.r, p, p, League.r.Next(100));
                         if(dict.ContainsKey(result.Type))
                         {
                             dict[result.Type] += 1;

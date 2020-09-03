@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 public class Event
 {
     private string title, text;
-    private int teamAffected;
-    public Event(String title, String text, int teamAffected)
+    private List<int> teamsAffected;
+    public Event(String title, String text, params int[] teamsAffected)
     {
         this.title = title;
         this.text = text;
-        this.teamAffected = teamAffected;
+        this.teamsAffected = new List<int>(teamsAffected);
     }
-    public int GetTeamAffected()
+    public List<int> GetTeamsAffected()
     {
-        return teamAffected;
+        return teamsAffected;
     }
     public string GetTitle()
     {

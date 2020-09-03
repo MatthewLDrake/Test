@@ -178,6 +178,7 @@
     <Compile Include="NewFormulaBasketball.cs" />
     <Compile Include="NewGame.cs" />
     <Compile Include="NewPlayer.cs" />
+    <Compile Include="NewPlayerGenerator.cs" />
     <Compile Include="NewShots.cs" />
     <Compile Include="NewTeam.cs" />
     <Compile Include="OfferedTrade.cs">

@@ -123,7 +123,7 @@ public class createTeams
 
         foreach(Event e in this.events)
         {
-            if (e.GetTeamAffected() == -1 || e.GetTeamAffected() == teamNum)
+            if (e.GetTeamsAffected().Contains(-1) || e.GetTeamsAffected().Contains(teamNum))
                 events.Add(e);
         }
 
