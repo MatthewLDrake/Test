@@ -19,9 +19,9 @@ namespace FormulaBasketball
         {
             InitializeComponent();
 
-            string ipAddress = GetLocalIPAddress();
+            //string ipAddress = GetLocalIPAddress();
 
-            label1.Text = ipAddress;
+            //label1.Text = ipAddress;
 
         }
         private string GetLocalIPAddress()

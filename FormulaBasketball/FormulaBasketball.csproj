@@ -70,6 +70,7 @@
       <DependentUpon>bracket.cs</DependentUpon>
     </Compile>
     <Compile Include="changeAbleModifier.cs" />
+    <Compile Include="CoachingPersonalities.cs" />
     <Compile Include="College.cs" />
     <Compile Include="CollegePlayer.cs" />
     <Compile Include="CollegePlayerGen.cs" />
@@ -77,6 +78,12 @@
     <Compile Include="CollegeTeamType.cs" />
     <Compile Include="Contract.cs" />
     <Compile Include="ContractResult.cs" />
+    <Compile Include="ControlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlForm.Designer.cs">
+      <DependentUpon>ControlForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CutPlayers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +135,13 @@
       <DependentUpon>FreeAgencyForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FreeAgents.cs" />
+    <Compile Include="GameResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameResult.Designer.cs">
+      <DependentUpon>GameResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameStats.cs" />
     <Compile Include="GameViewer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,10 +189,13 @@
     <Compile Include="Negotiation.Designer.cs">
       <DependentUpon>Negotiation.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewCoach.cs" />
     <Compile Include="NewFormulaBasketball.cs" />
+    <Compile Include="NewFreeAgents.cs" />
     <Compile Include="NewGame.cs" />
     <Compile Include="NewPlayer.cs" />
     <Compile Include="NewPlayerGenerator.cs" />
+    <Compile Include="NewPlayoffs.cs" />
     <Compile Include="NewShots.cs" />
     <Compile Include="NewTeam.cs" />
     <Compile Include="OfferedTrade.cs">
@@ -275,6 +292,7 @@
       <DependentUpon>ScrimmageForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SeasonRecords.cs" />
+    <Compile Include="SeasonStats.cs" />
     <Compile Include="SetupNewSeason.cs" />
     <Compile Include="Standings_Division.cs">
       <SubType>UserControl</SubType>
@@ -467,6 +485,9 @@
     <EmbeddedResource Include="bracket.resx">
       <DependentUpon>bracket.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ControlForm.resx">
+      <DependentUpon>ControlForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CutPlayers.resx">
       <DependentUpon>CutPlayers.cs</DependentUpon>
     </EmbeddedResource>
@@ -511,6 +532,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FreeAgencyForm.resx">
       <DependentUpon>FreeAgencyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameResult.resx">
+      <DependentUpon>GameResult.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GameViewer.resx">
       <DependentUpon>GameViewer.cs</DependentUpon>

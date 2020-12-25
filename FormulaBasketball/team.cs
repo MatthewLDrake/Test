@@ -2445,6 +2445,14 @@ public class DraftPick
         this.fromTeam = pickFrom.getTeamNum();
         this.ownerTeam = owner.getTeamNum();
     }
+    public int GetOwnerNum()
+    {
+        return ownerTeam;
+    }
+    public int FromTeam()
+    {
+        return fromTeam;
+    }
     public int GetPickNumber(createTeams create)
     {
         if(from != null)

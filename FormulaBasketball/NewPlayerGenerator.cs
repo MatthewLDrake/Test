@@ -10,7 +10,7 @@ namespace FormulaBasketball
     {
         public static NewPlayer Generate(int pos, Country country, int overall, int cappedOverall, int age, int development)
         {
-
+            return null;
         }
     }
 }

@@ -10,5 +10,5 @@
     Antarion,
     Nja,
     Kaeshar,
-    Other,
+    Other, Nova_Chrysalia
 }

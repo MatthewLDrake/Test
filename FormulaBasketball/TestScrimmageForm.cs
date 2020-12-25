@@ -53,27 +53,30 @@ namespace FormulaBasketball
 
         private void button1_Click(object sender, EventArgs e)
         {
-           /* team copyTeam;
+            League league = new League(new Random());
+
+            foreach (team t in create.getTeams())
+            {
+                league.AddTeam(new NewTeam(t), new NewTeam(t.GetAffiliate()));
+            }
+
+            team copyTeam;
             if (teamOneList.SelectedIndex < 32)
                 copyTeam = create.getTeam(teamOneList.SelectedIndex);
             else
                 copyTeam = create.getTeam(teamOneList.SelectedIndex - 32).GetAffiliate();
             MemoryStream stream = ScrimmageForm.SerializeTeam(copyTeam);
 
-            team teamOne = ScrimmageForm.DeSerializeTeam(stream);
-
-            teamOne.SetCoach(new Coach("Coach", (OffensivePhilosophy)awayTeamOffense.Items[awayTeamOffense.SelectedIndex] , (DefensivePhilosophy)awayTeamDefense.Items[awayTeamDefense.SelectedIndex], r));
+            NewTeam teamOne = new NewTeam(ScrimmageForm.DeSerializeTeam(stream));               
 
             if (teamTwoList.SelectedIndex < 32)
                 copyTeam = create.getTeam(teamTwoList.SelectedIndex);
             else
                 copyTeam = create.getTeam(teamTwoList.SelectedIndex - 32).GetAffiliate();
             stream = ScrimmageForm.SerializeTeam(copyTeam);
-            team teamTwo = ScrimmageForm.DeSerializeTeam(stream);
+            NewTeam teamTwo = new NewTeam(ScrimmageForm.DeSerializeTeam(stream));
 
-            teamTwo.SetCoach(new Coach("Coach", (OffensivePhilosophy)homeTeamOffense.Items[homeTeamOffense.SelectedIndex], (DefensivePhilosophy)homeTeamDefense.Items[homeTeamDefense.SelectedIndex], r));
-
-            new GameViewer(teamOne, teamTwo, r, false).ShowDialog();*/
+            new GameViewer(teamOne, teamTwo, league).ShowDialog();
         }
     }
 }

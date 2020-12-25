@@ -204,7 +204,7 @@ namespace FormulaBasketball
             }
             else
             {
-                NewGame game = new NewGame(new NewTeam(teamOne), new NewTeam(teamTwo), r);
+                NewGame game = new NewGame(new NewTeam(teamOne), new NewTeam(teamTwo), false);
 
                 teamOneLabel.Text = teamOne.ToString();
                 teamTwoLabel.Text = teamTwo.ToString();
@@ -248,6 +248,47 @@ namespace FormulaBasketball
 
 
         }
+
+        public GameViewer(NewTeam teamOne, NewTeam teamTwo, League league)
+        {
+            InitializeComponent();
+            NewGame game = new NewGame(teamOne, teamTwo, false);
+            teamOneLabel.Text = game.GetAwayTeam().ToString();
+            teamTwoLabel.Text = game.GetHomeTeam().ToString();
+
+            byte[] scores = game.GetQuarterScore(0);
+            teamOneQ1Label.Text = "" + scores[0];
+            teamTwoQ1Label.Text = "" + scores[1];
+
+            scores = game.GetQuarterScore(1);
+            teamOneQ2Label.Text = "" + scores[0];
+            teamTwoQ2Label.Text = "" + scores[1];
+
+            scores = game.GetQuarterScore(2);
+            teamOneQ3Label.Text = "" + scores[0];
+            teamTwoQ3Label.Text = "" + scores[1];
+
+            scores = game.GetQuarterScore(3);
+            teamOneQ4Label.Text = "" + scores[0];
+            teamTwoQ4Label.Text = "" + scores[1];
+
+            scores = game.GetQuarterScore(4);
+            teamOneOTLabel.Text = "" + scores[0];
+            teamTwoOTLabel.Text = "" + scores[1];
+
+            teamOneTotalLabel.Text = "" + game.GetAwayTeamScore();
+            teamTwoTotalLabel.Text = "" + game.GetHomeTeamScore();
+
+            foreach (NewPlayer p in game.GetAwayTeam())
+            {
+                AddPlayerToGrid(p);
+            }
+            foreach (NewPlayer p in game.GetHomeTeam())
+            {
+                AddPlayerToGrid(p);
+            }
+        }
+
         public GameViewer(game g)
         {
             InitializeComponent();
@@ -298,7 +339,22 @@ namespace FormulaBasketball
             Hide();
             
         }
-        
+        private void AddPlayerToGrid(NewPlayer p)
+        {
+            GameStats stats = p.GetStats();
+            double shootingPercentage = 0.0, opponentPercentage = 0.0;
+            if (stats.GetFieldGoalsAttempted() != 0)
+            {
+                shootingPercentage = ((double)stats.GetFieldGoalsMade() / (double)stats.GetFieldGoalsAttempted()) * 100;
+            }
+            // TODO:
+            double plus_minus = 0;
+
+            if (stats.GetShotsAgainst() != 0)
+                opponentPercentage = ((double)stats.GetShotsMadeAgainst() / (double)stats.GetShotsAgainst()) * 100;
+            dataGridView1.Rows.Add(League.league.GetTeam(p.GetTeam()).ToString(), p.ToString(), p.GetPositionAsString(), stats.GetMinutes(), stats.GetAssists(), stats.GetPoints(), stats.GetFieldGoalsAttempted(), stats.GetFieldGoalsMade(), shootingPercentage, stats.GetThreePointsAttempted(), stats.GetThreePointsMade(), stats.GetFreeThrowsAttempted(), stats.GetFreeThrowsMade(),
+            stats.GetTurnovers(), stats.GetSteals(), stats.GetRebounds(), stats.GetOffensiveRebounds(), stats.GetDefensiveRebounds(), stats.GetFouls(), stats.GetShotsAgainst(), stats.GetShotsMadeAgainst(), opponentPercentage, plus_minus);
+        }
         private void AddPlayerToGrid(player p)
         {
             double shootingPercentage = 0.0, opponentPercentage = 0.0;

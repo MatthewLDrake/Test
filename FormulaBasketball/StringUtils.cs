@@ -124,6 +124,8 @@ public class StringUtils
                 return Country.Nja;
             case "Kaeshar":
                 return Country.Kaeshar;
+            case "Nova_Chrysalia":
+                return Country.Nova_Chrysalia;
             default:
                 return Country.Other;
         }

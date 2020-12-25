@@ -272,7 +272,7 @@ public class College
         newTeam = new CollegeTeam("University of Kholka", "UKH", r, Country.Other, new PoorCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
         newTeam = new CollegeTeam("University of Aavana", "UAA", r, Country.Other, new BadCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
         newTeam = new CollegeTeam("University of Floria", "UFL", r, Country.Other, new BadCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
-        newTeam = new CollegeTeam("University of Eirnvse", "UEI", r, Country.Other, new PoorCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
+        newTeam = new CollegeTeam("University of Eirnvse", "UEI", r, Country.Nova_Chrysalia, new GoodCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
         newTeam = new CollegeTeam("University of Venasul", "UVE", r, Country.Other, new BadCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
         newTeam = new CollegeTeam("University of Ncov Ntiajeb", "UNC", r, Country.Other, new PoorCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);
         newTeam = new CollegeTeam("University of Zhiwasen", "UZH", r, Country.Other, new BadCollegeTeam(),season); teams.Add(newTeam); newTeam.setTeamNum(i++);

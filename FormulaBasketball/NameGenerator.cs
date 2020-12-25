@@ -57,7 +57,7 @@ public class NameGenerator
         countryConvert.Add(Country.Transhimalia, new ActualCountry(new String[] { "Transhimalia" }, new int[] { 1 }, r));
         countryConvert.Add(Country.Helvaena, new ActualCountry(new String[] { "Wyverncliff" }, new int[] { 1 }, r));
         countryConvert.Add(Country.Other, new ActualCountry(new String[] { "Wyverncliff" }, new int[] { 1 }, r));
-
+        countryConvert.Add(Country.Nova_Chrysalia, new ActualCountry(new String[] {"Nova Chrysalia" }, new int[] { 1 }, r));
 
 
 
@@ -82,7 +82,107 @@ public class NameGenerator
         }
         return gen;
     }
+    private static List<Tuple<Country, int>> list;
+    private static int totalSum;
+    public Tuple<Country, string> GenerateName()
+    {
+        Country country = Country.Other;
 
+        if (list == null)
+        {
+            list = new List<Tuple<Country, int>>();
+            foreach (Country c in Enum.GetValues(typeof(Country)))
+            {
+                list.Add(new Tuple<Country, int>(c, 5));
+            }
+            for (int i = 0; i < list.Count; i++)
+            {
+                Tuple<Country, int> pair = list[i];
+                switch (pair.Item1)
+                {
+                    case Country.Aeridani:
+                        list[i] = new Tuple<Country, int>(pair.Item1, 10);
+                        break;
+                    case Country.Dotruga:
+                        list[i] = new Tuple<Country, int>(pair.Item1, 30);
+                        break;
+                    case Country.Wyverncliff:
+                        list[i] = new Tuple<Country, int>(pair.Item1, 20);
+                        break;
+                    case Country.Solea:
+                        list[i] = new Tuple<Country, int>(pair.Item1, 15);
+                        break;
+                    case Country.Nova_Chrysalia:
+                        list[i] = new Tuple<Country, int>(pair.Item1, 20);
+                        break;
+                    case Country.Bongatar:
+                        list[i] = new Tuple<Country, int>(pair.Item1, 10);
+                        break;
+                    case Country.Bielosia:
+                        list[i] = new Tuple<Country, int>(pair.Item1, 18);
+                        break;
+                    case Country.Czalliso:
+                        list[i] = new Tuple<Country, int>(pair.Item1, 26);
+                        break;
+                    case Country.Auspikitan:
+                        list[i] = new Tuple<Country, int>(pair.Item1, 25);
+                        break;
+                    case Country.Blaist_Blaland:
+                        list[i] = new Tuple<Country, int>(pair.Item1, 15);
+                        break;
+                    case Country.Ethanthova:
+                        list[i] = new Tuple<Country, int>(pair.Item1, 18);
+                        break;
+                    case Country.Tri_National_Dominion:
+                        list[i] = new Tuple<Country, int>(pair.Item1, 15);
+                        break;
+                    case Country.Tjedigar:
+                        list[i] = new Tuple<Country, int>(pair.Item1, 20);
+                        break;
+                    case Country.Timbalta:
+                        list[i] = new Tuple<Country, int>(pair.Item1, 12);
+                        break;
+                    case Country.Sagua:
+                        list[i] = new Tuple<Country, int>(pair.Item1, 12);
+                        break;
+                    case Country.Darvincia:
+                        list[i] = new Tuple<Country, int>(pair.Item1, 13);
+                        break;
+                    case Country.Aahrus:
+                        list[i] = new Tuple<Country, int>(pair.Item1, 8);
+                        break;
+                    default:
+                        continue;
+                }
+            }
+            totalSum = 0;
+            foreach (Tuple<Country, int> pair in list)
+            {
+                totalSum += pair.Item2;
+            }
+        }
+
+
+        int rand = FormulaBasketball.League.r.Next(totalSum), sum = 0;
+
+        foreach (Tuple<Country, int> pair in list)
+        {
+            if (sum + pair.Item2 > rand)
+            {
+                country = pair.Item1;
+                break;
+            }
+            sum += pair.Item2;
+        }
+
+        return new Tuple<Country, string>(country, GenerateName(country));
+    }
+
+
+    public string GenerateNameOnly()
+    {
+        return GenerateName().Item2;
+    }
     public string GenerateName(Country country)
     {
         if (countryConvert.ContainsKey(country))

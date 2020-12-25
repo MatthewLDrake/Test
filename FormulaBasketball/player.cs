@@ -1508,7 +1508,6 @@ public class player : IComparable<player>
     }
     public retirements retire(FormulaBasketball.Random r, bool print = false)
     {
-        if (playerAge == 34) return retirements.Age;
         if (careerEnd) return retirements.Injury;
 
         if (getOverall() < 40 && (playerAge > 30 || gamesPlayed == 0)) return retirements.Skill;
@@ -2582,7 +2581,7 @@ public class player : IComparable<player>
 
             retVal += Math.Max(1, Math.Min(10, ((normalizedPE + normalizedPS + development * 3) / 5))) * 5;
         }
-        retVal = Math.Min(99.99, ((retVal / 10) / 100) * 100);
+        retVal = Math.Min(99.99, ((retVal / 10.5) / 100) * 100);
         if (player.Equals(this)) previousOverall = retVal;
 
         return retVal;

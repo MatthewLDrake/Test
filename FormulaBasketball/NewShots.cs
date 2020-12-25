@@ -8,7 +8,7 @@ namespace FormulaBasketball
 {
     public class NewShots
     {
-        public static ShotResult TakeFreeThrow(int amount,  bool clutchSituation, Random r, NewPlayer shooter)
+        public static ShotResult TakeFreeThrow(int amount,  bool clutchSituation, NewPlayer shooter)
         {
             int made = 0;
             for (int i = 0; i < amount; i++)
@@ -23,7 +23,7 @@ namespace FormulaBasketball
                 {
                     boundary = (-(7 * rating * rating) / 4000.0) + ((27.0 * rating) / 40.0) + (186.0 / 5.0);
                 }
-                made += r.Next(100) + 1 < boundary ? 1 : 0;
+                made +=League.r.Next(100) + 1 < boundary ? 1 : 0;
                 
                 
             }
@@ -46,28 +46,28 @@ namespace FormulaBasketball
             }
             return new ShotResult(resultType, shooter);
         }
-        public static ShotResult TakeShot(ShotType type, bool clutchSituation, Random r, NewPlayer shooter, NewPlayer mainDefender, double percentCovered, NewPlayer helpDefender = null)
+        public static ShotResult TakeShot(ShotType type, bool clutchSituation, NewPlayer shooter, NewPlayer mainDefender, double percentCovered, NewPlayer helpDefender = null)
         {
             switch(type)
             {
                 case ShotType.LAYUP:
-                    return HandleLayup(clutchSituation, r, shooter, mainDefender, percentCovered, helpDefender);                
+                    return HandleLayup(clutchSituation, shooter, mainDefender, percentCovered, helpDefender);                
                 case ShotType.DUNK:
-                    return HandleDunk(clutchSituation, r, shooter, mainDefender, percentCovered, helpDefender);
+                    return HandleDunk(clutchSituation, shooter, mainDefender, percentCovered, helpDefender);
                 case ShotType.CORNER_THREE:
                 case ShotType.TOP_THREE:
                 case ShotType.JUMP:
-                    return HandleJumpShot(clutchSituation, r, shooter, mainDefender, percentCovered, helpDefender, type != ShotType.JUMP);
+                    return HandleJumpShot(clutchSituation, shooter, mainDefender, percentCovered, helpDefender, type != ShotType.JUMP);
                 case ShotType.THREE:
-                    return HandleThree(clutchSituation, r, shooter, mainDefender, percentCovered, helpDefender);
+                    return HandleThree(clutchSituation, shooter, mainDefender, percentCovered, helpDefender);
                     
             }
             return null;
         }
-        private static ShotResult HandleLayup(bool clutchSituation, Random r, NewPlayer shooter, NewPlayer mainDefender, double percentCovered, NewPlayer helpDefender)
+        private static ShotResult HandleLayup(bool clutchSituation, NewPlayer shooter, NewPlayer mainDefender, double percentCovered, NewPlayer helpDefender)
         {
             double number = (-9.0 * percentCovered)/5.0 + 200;
-            double baseLine = shooter.GetLayupRating(true, clutchSituation) / 6.0 + number / 3.0;
+            double baseLine = shooter.GetInsideRating(true, clutchSituation) / 6.0 + number / 3.0;
             
 
             double shotContestRating = 0;
@@ -80,9 +80,9 @@ namespace FormulaBasketball
             }
             shotContestRating = shotContestRating * 2 * (percentCovered / 100);
 
-            double boundary = -(shotContestRating * shotContestRating) / 800 - (17 * shotContestRating) / 80 + 20 + baseLine + r.Next(10);
+            double boundary = -(shotContestRating * shotContestRating) / 800 - (17 * shotContestRating) / 80 + 20 + baseLine +League.r.Next(10);
 
-            int randNumber = r.Next(100) + 1;
+            int randNumber =League.r.Next(100) + 1;
 
             double result = boundary - randNumber;
 
@@ -101,7 +101,7 @@ namespace FormulaBasketball
 
             return new ShotResult(type, type == ResultType.BLOCK ? mainDefender : shooter);
         }
-        private static ShotResult HandleDunk(bool clutchSituation, Random r, NewPlayer dunker, NewPlayer mainDefender, double percentCovered, NewPlayer helpDefender)
+        private static ShotResult HandleDunk(bool clutchSituation, NewPlayer dunker, NewPlayer mainDefender, double percentCovered, NewPlayer helpDefender)
         {
             
 
@@ -118,7 +118,7 @@ namespace FormulaBasketball
             ResultType type = ResultType.MAKE;
             return new ShotResult(type, type == ResultType.BLOCK ? mainDefender : dunker);
         }
-        private static ShotResult HandleJumpShot(bool clutchSituation, Random r, NewPlayer shooter, NewPlayer mainDefender, double percentCovered, NewPlayer helpDefender, bool three)
+        private static ShotResult HandleJumpShot(bool clutchSituation, NewPlayer shooter, NewPlayer mainDefender, double percentCovered, NewPlayer helpDefender, bool three)
         {
             double number = -(13 * percentCovered)/ 5 + 330;
             double baseLine = (3 * (three ? shooter.GetThreePointRating(true, clutchSituation) : shooter.GetJumpShotRating(true, clutchSituation))) / 13 + number / 13;
@@ -133,9 +133,9 @@ namespace FormulaBasketball
             }
             shotContestRating = shotContestRating * 2 * (percentCovered / 100);
 
-            double boundary = -(shotContestRating * shotContestRating) / 800 - (17 * shotContestRating) / 80 + 20 + baseLine + r.Next(10);
+            double boundary = -(shotContestRating * shotContestRating) / 800 - (17 * shotContestRating) / 80 + 20 + baseLine +League.r.Next(10);
 
-            int randNumber = r.Next(100) + 1;
+            int randNumber =League.r.Next(100) + 1;
 
             double result = boundary - randNumber;
 
@@ -156,7 +156,7 @@ namespace FormulaBasketball
 
             return new ShotResult(type, type == ResultType.BLOCK ? mainDefender : shooter);
         }
-        private static ShotResult HandleThree(bool clutchSituation, Random r, NewPlayer shooter, NewPlayer mainDefender, double percentCovered, NewPlayer helpDefender)
+        private static ShotResult HandleThree(bool clutchSituation,  NewPlayer shooter, NewPlayer mainDefender, double percentCovered, NewPlayer helpDefender)
         {
             double number = -(13 * percentCovered) / 5 + 330;
             double baseLine = (3 * shooter.GetThreePointRating(true, clutchSituation)) / 13 + number / 13;
@@ -176,9 +176,9 @@ namespace FormulaBasketball
             else
                 shotContestRating = shotContestRating * 2 * (percentCovered / 100);
 
-            double boundary = -(shotContestRating * shotContestRating) / 800 - (17 * shotContestRating) / 80 + 20 + baseLine + r.Next(10);
+            double boundary = -(shotContestRating * shotContestRating) / 800 - (17 * shotContestRating) / 80 + 20 + baseLine +League.r.Next(10);
 
-            int randNumber = r.Next(100) + 1;
+            int randNumber =League.r.Next(100) + 1;
 
             double result = boundary - randNumber;
 

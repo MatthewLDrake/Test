@@ -17,9 +17,17 @@ namespace FormulaBasketball
             this.smallStats = stats;
             this.opponent = opponent.ToString();
         }
+        public StatsHolders(int teamNum, int opponentNum)
+        {
+            smallStats = new byte[18];
+        }
         public int getPoints()
         {
             return smallStats[0];
+        }
+        public void AddPoints(int points)
+        {
+            smallStats[0] += (byte)points;
         }
         public int getShotsTaken()
         {

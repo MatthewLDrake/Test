@@ -8,51 +8,90 @@ namespace FormulaBasketball
 {
     public class NewPlayer
     {
-        /*
-     * Ratings: 
-     * 
-     * ratings[0] = layup
-     * ratings[1] = dunk
-     * ratings[2] = jumpshot
-     * ratings[3] = shot contest
-     * ratings[4] = defense iq
-     * ratings[5] = jumping
-     * ratings[6] = seperation
-     * ratings[7] = passing
-     * ratings[8] = stamina
-     * ratings[9] = threepoint
-     * ratings[10] = durability
-     */
+        
         private byte[] ratings;
         private byte seasonStarts;
-        private byte team;
-        private List<StatsHolders> seasonStats;
-        private List<SeasonStatsHolder> playerCareerStats;
+        private sbyte team;
+        private GameStats currentGame;
+        private List<GameStats> seasonStats;
+        private List<SeasonStats> playerCareerStats;
         private String name;
+        private uint playerID;
+        private bool injured;
+        private byte position, age, peakStart, peakEnd, development;
+        private float stamina;
+        private Contract contract;
         public NewPlayer(player oldPlayer)
         {
             ratings = new byte[oldPlayer.ratings.Length];
-            for(int i = 0; i < ratings.Length;i++)
-            {
-                ratings[i] = (byte)oldPlayer.ratings[i];
-            }
-            name = oldPlayer.getName();
+            // Inside Scoring
+            ratings[0] = (byte)Math.Max(oldPlayer.ratings[0], oldPlayer.ratings[1]);
+            // Jumpshot
+            ratings[1] = (byte)oldPlayer.ratings[2];
+            // Three Point
+            ratings[2] = (byte)oldPlayer.ratings[9];
+            // Offense IQ
+            ratings[3] = (byte) ((oldPlayer.ratings[4] + oldPlayer.ratings[7] + oldPlayer.ratings[6])/3);
+            // Defense IQ
+            ratings[4] = (byte)oldPlayer.ratings[4];
+            // Shot Contest
+            ratings[5] = (byte)oldPlayer.ratings[2];
+            // Jumping
+            ratings[6] = (byte)oldPlayer.ratings[5];
+            // Seperation
+            ratings[7] = (byte)oldPlayer.ratings[6];
+            // Passing
+            ratings[8] = (byte)oldPlayer.ratings[7];
+            // Stamina
+            ratings[9] = (byte)oldPlayer.ratings[8];
+            // Durability
+            ratings[10] = (byte)oldPlayer.ratings[10];
+            
+            name = oldPlayer.getName().Trim();
             seasonStarts = 0;
-            playerCareerStats = oldPlayer.GetCareerStats();
-            if (playerCareerStats == null)
-                playerCareerStats = new List<SeasonStatsHolder>();
-            seasonStats = new List<StatsHolders>();
+            stamina = 100;
+
+            contract = oldPlayer.GetContract();
+
+            age = (byte)oldPlayer.age;
+            peakStart = (byte)oldPlayer.peakStart;
+            peakEnd = (byte)oldPlayer.peakEnd;
+            development = (byte)oldPlayer.development;
+
+            List<SeasonStatsHolder> oldCareerStats = oldPlayer.GetCareerStats();
+
+            playerCareerStats = new List<SeasonStats>();
+            if (oldCareerStats != null)
+            {
+                foreach (SeasonStatsHolder oldStat in oldCareerStats)
+                    playerCareerStats.Add(new SeasonStats(oldStat));                
+            }
+                
+            seasonStats = new List<GameStats>();
+
+            playerID = League.NextID;
+            League.NextID++;
+
+            team = -1;
+
+            injured = false;
+
+            position = (byte)oldPlayer.getPosition();
         }
         // To be called when the offseason is over.
         public void FinishOffseason()
         {
             seasonStarts = 0;
-            playerCareerStats.Add(new SeasonStatsHolder(seasonStats));
-            seasonStats = new List<StatsHolders>();
+            playerCareerStats.Add(new SeasonStats(seasonStats));
+            seasonStats = new List<GameStats>();
+        }
+        public Contract GetContract()
+        {
+            return contract;
         }
         public void SetTeam(team team)
         {
-            this.team = (byte)team.getTeamNum();
+            this.team = (sbyte)team.getTeamNum();
         }
         public void SetTeam(NewTeam team)
         {
@@ -60,32 +99,605 @@ namespace FormulaBasketball
         }
         public void SetTeam(int teamNum)
         {
-            team = (byte)teamNum;
+            team = (sbyte)teamNum;
         }
-        public team GetTeam(createTeams create)
+        public int GetTeam()
         {
-            return create.getTeam(team);
+            return team;
         }
+        public int GetSecondsUntilSubstituion()
+        {
+            return 0;
+        }
+        public uint GetPlayerID()
+        {
+            return playerID;
+        }
+        public bool IsInjured()
+        {
+            return injured;
+        }
+        public byte GetPosition()
+        {
+            return position;
+        }
+        public string GetPositionAsString()
+        {
+            switch(position)
+            {
+                case 1:
+                    return "C";
+                case 2:
+                    return "PF";
+                case 3:
+                    return "SF";
+                case 4:
+                    return "SG";
+                case 5:
+                    return "PG";
+            }
+            return "ERROR";
+        }
+        public void TimePassed(ref float stamina, int seconds, bool didPlay)
+        {
+            float value;
+
+            if(didPlay)            
+                value = -.085f + (0.0003f * (float)GetStaminaRating(true, false) + -0.03f);            
+            else            
+                value = .035f + (float)GetStaminaRating(true, false) * .001f;
+            
+
+            stamina += value * seconds;
+
+            if (stamina > 100)
+                stamina = 100;
+           
+        }
+        public int GetMaxMinutes()
+        {
+            float startingStamina = stamina;
+
+            TimePassed(ref startingStamina, 12 * 60, true);
+
+            int retVal = 0;
+
+            return retVal;
+        }
+        public bool CanPlay()
+        {
+            return currentGame == null || (currentGame.GetFouls() != 6 && !injured);
+        }
+        public string GetDevelopmentAsString()
+        {
+            string potential = "";
+            int normalizedPS = (peakStart - 27) * 2;
+            int normalizedPE = (peakEnd - 30) * 2;
+
+            int average = Math.Max(1, Math.Min(10, (int)Math.Round((normalizedPE + normalizedPS + development * 3.5f) / 5.0f)));
+
+            switch (average)
+            {
+                case 1:
+                    potential = "F";
+                    break;
+                case 2:
+                    potential = "F+";
+                    break;
+                case 3:
+                    potential = "D";
+                    break;
+                case 4:
+                    potential = "D+";
+                    break;
+                case 5:
+                    potential = "C";
+                    break;
+                case 6:
+                    potential = "C+";
+                    break;
+                case 7:
+                    potential = "B";
+                    break;
+                case 8:
+                    potential = "B+";
+                    break;
+                case 9:
+                    potential = "A";
+                    break;
+                case 10:
+                    potential = "A+";
+                    break;
+            }
+            return potential;
+        }
+        public string GetText()
+        {
+            return playerID + "," + GetPositionAsString() + "," + name + "," + ratings[0] + "," + ratings[1] + "," + ratings[2] + "," + ratings[3] + "," + ratings[4] + "," + ratings[5] + "," + ratings[6] + "," + ratings[7] + "," + ratings[8] + "," + ratings[9] + "," + ratings[10]  + "," + string.Format("{0:N2}", GetBestOverall()) + "," + age  + "," + GetDevelopmentAsString() + "," + ((contract != null) ? contract.GetYearsLeft() + "," + string.Format("{0:N2}", contract.GetMoney()) : ",") + (injured ? ",Injured\n" : ",Healthy\n");
+        } 
         public override string ToString()
         {
-            return name;
+            return GetPositionAsString() + " " + name;
         }
         #region Ratings
-        public double GetLayupRating(bool game, bool clutchSituation)
+        /*
+        * Ratings: 
+        * 
+        * ratings[0] = inside
+        * ratings[1] = jumpshot
+        * ratings[2] = three point
+        * ratings[3] = offense iq
+        * ratings[4] = defense iq
+        * ratings[5] = shot contest
+        * ratings[6] = jumping
+        * ratings[7] = seperation
+        * ratings[8] = passing
+        * ratings[9] = stamina
+        * ratings[10] = durability
+        */
+        public double GetInsideRating(bool game, bool clutchSituation)
         {
+            if (game)
+                return ratings[0] * 0.2171 * Math.Log(stamina);
             return ratings[0];
         }
         public double GetJumpShotRating(bool game, bool clutchSituation)
         {
-            return ratings[2];
-        }
-        public double GetShotContestRating(bool game, bool clutchSituation)
-        {
-            return ratings[3];
+            if (game)
+                return ratings[1] * 0.2171 * Math.Log(stamina);
+            return ratings[1];
         }
         public double GetThreePointRating(bool game, bool clutchSituation)
         {
+            if (game)
+                return ratings[2] * 0.2171 * Math.Log(stamina);
+            return ratings[2];
+        }
+        public double GetOffenseIQRating(bool game, bool clutchSituation)
+        {
+            if (game)
+                return ratings[3] * 0.2171 * Math.Log(stamina);
+            return ratings[3];
+        }
+        public double GetDefenseIQRating(bool game, bool clutchSituation)
+        {
+            if (game)
+                return ratings[4] * 0.2171 * Math.Log(stamina);
+            return ratings[4];
+        }
+        public double GetShotContestRating(bool game, bool clutchSituation)
+        {
+            if (game)
+                return ratings[5] * 0.2171 * Math.Log(stamina);
+            return ratings[5];
+        }
+        public double GetJumpingRating(bool game, bool clutchSituation)
+        {
+            if (game)
+                return ratings[6] * 0.2171 * Math.Log(stamina);
+            return ratings[6];
+        }
+        public double GetSeperationRating(bool game, bool clutchSituation)
+        {
+            if (game)
+                return ratings[7] * 0.2171 * Math.Log(stamina);
+            return ratings[7];
+        }
+        public double GetPassingRating(bool game, bool clutchSituation)
+        {
+            if (game)
+                return ratings[8] * 0.2171 * Math.Log(stamina);
+            return ratings[8];
+        }
+        public double GetStaminaRating(bool game, bool clutchSituation)
+        {
             return ratings[9];
+        }
+        public double GetDurabilityRating(bool game, bool clutchSituation)
+        {
+            if (game)
+                return ratings[10] * 0.2171 * Math.Log(stamina);
+            return ratings[10];
+        }
+        public void ChangeRating(int index, byte newRating)
+        {
+            ratings[index] = newRating;
+        }
+        #endregion
+
+        #region Stats
+        public byte GetStarts()
+        {
+            return seasonStarts;
+        }
+        public void StartGame(bool starter, int opponent)
+        {
+            // Ignores this if already a starter
+            if(currentGame == null)
+            {
+                currentGame = new GameStats(team, opponent);
+                if (starter)
+                    seasonStarts++;
+            }
+        }
+        public void EndGame()
+        {
+            seasonStats.Add(currentGame);
+            currentGame = null;
+            stamina += 20;
+        }
+        public void AddSteal()
+        {
+            currentGame.AddSteal();
+        }
+        public void AddTurnover()
+        {
+            currentGame.AddTurnover();
+        }
+        public void AddFreeThrows(int attempted, int made)
+        {
+            currentGame.AddFreeThrows(attempted, made);
+        }
+        public int AddFouls(int fouls, int quarter)
+        {
+            int currFouls = currentGame.GetFouls();
+            int maxFouls = quarter <= 3 ? 5 : 6;
+
+            if(currFouls + fouls <= maxFouls)
+            {
+                currentGame.AddFouls((byte)fouls);
+                return fouls;
+            }
+            else
+            {
+                currentGame.AddFouls((byte)(maxFouls - currFouls));
+                return maxFouls - currFouls;
+            }
+
+        }
+        public byte AddThreePointer(bool made)
+        {            
+            if(made)
+            {
+                currentGame.AddThreeMade();
+                return 3;
+            }
+            currentGame.AddThreeAttempted();
+            return 0;
+        }
+        public byte AddTwoPointer(bool made)
+        {
+            if (made)
+            {
+                currentGame.AddFieldGoalMade();
+                return 2;
+            }
+            currentGame.AddFieldGoalAttempted();
+            return 0;
+        }
+        public void AddThreePointerAgainst(bool made)
+        {
+            if (made)            
+                currentGame.AddThreeMadeAgainst();
+            else
+                currentGame.AddThreePointerAgainst();
+
+        }
+        public void AddTwoPointerAgainst(bool made)
+        {
+            if (made)            
+                currentGame.AddFieldGoalMadeAgainst();
+            else
+                currentGame.AddFieldGoalAttemptedAgainst();
+        }
+        public void AddAssist()
+        {
+            currentGame.AddAssist();
+        }
+        public GameStats GetStats()
+        {
+            return seasonStats[seasonStats.Count - 1];
+        }
+        #endregion
+
+        #region Overalls
+        public double GetRatingAsCenter(bool staminaAffected)
+        {
+            if (staminaAffected)
+                return GetRatingAsCenterStamina();
+            else
+                return GetRatingAsCenter();
+        }
+        public double GetRatingAsPowerForward(bool staminaAffected)
+        {
+            if (staminaAffected)
+                return GetRatingAsPowerForwardStamina();
+            else
+                return GetRatingAsPowerForward();
+        }
+
+        public double GetRatingAsSmallForward(bool staminaAffected)
+        {
+            if (staminaAffected)
+                return GetRatingAsSmallForwardStamina();
+            else
+                return GetRatingAsSmallForward();
+        }
+        public double GetRatingAsShootingGuard(bool staminaAffected)
+        {
+            if (staminaAffected)
+                return GetRatingAsShootingGuardStamina();
+            else
+                return GetRatingAsShootingGuard();
+        }
+        public double GetRatingAsPointGuard(bool staminaAffected)
+        {
+            if (staminaAffected)
+                return GetRatingAsPointGuardStamina();
+            else
+                return GetRatingAsPointGuard();
+        }
+        private double GetRatingAsCenter()
+        {
+            double retVal = ratings[0] * 1.5;
+            retVal += ratings[1] * 0.7;
+            retVal += ratings[2] * 0.5;
+            retVal += ratings[3] * 1.3;
+            retVal += ratings[4] * 1.3;
+            retVal += ratings[5] * 1.3;
+            retVal += ratings[6] * 1.5;
+            retVal += ratings[7] * 1;
+            retVal += ratings[8] * 0.4;
+            retVal += ratings[9] * 0.5;
+
+            if (position == 2)
+                retVal *= .9;
+            else if (position == 3)
+                retVal *= .85;
+            else if (position > 3)
+                retVal *= .75;
+                
+            retVal = Math.Min(99.99, ((retVal / 10.5) / 100) * 100);
+ 
+            return retVal;
+        }       
+        private double GetRatingAsCenterStamina()
+        {
+            double retVal = GetInsideRating(true, false) * 1.5;
+            retVal += GetJumpShotRating(true, false) * 0.7;
+            retVal += GetThreePointRating(true, false) * 0.5;
+            retVal += GetOffenseIQRating(true, false) * 1.3;
+            retVal += GetDefenseIQRating(true, false) * 1.3;
+            retVal += GetShotContestRating(true, false) * 1.3;
+            retVal += GetJumpingRating(true, false) * 1.5;
+            retVal += GetSeperationRating(true, false) * 1;
+            retVal += GetPassingRating(true, false) * 0.4;
+            retVal += GetStaminaRating(true, false) * 0.5;
+
+            if (position == 2)
+                retVal *= .9;
+            else if (position == 3)
+                retVal *= .85;
+            else if (position > 3)
+                retVal *= .75;
+
+            retVal = Math.Min(99.99, ((retVal / 10.5) / 100) * 100);
+
+            return retVal;
+        }
+        private double GetRatingAsPowerForward()
+        {
+            double retVal = ratings[0] * 1.3;
+            retVal += ratings[1] * 0.8;
+            retVal += ratings[2] * 0.6;
+            retVal += ratings[3] * 1.3;
+            retVal += ratings[4] * 1.3;
+            retVal += ratings[5] * 1.3;
+            retVal += ratings[6] * 1.2;
+            retVal += ratings[7] * 1;
+            retVal += ratings[8] * 0.7;
+            retVal += ratings[9] * 0.5;
+
+            if (position == 1 || position == 3)
+                retVal *= .9;
+            else if (position == 4)
+                retVal *= .85;
+            else if (position == 5)
+                retVal *= .75;
+
+            retVal = Math.Min(99.99, ((retVal / 10.5) / 100) * 100);
+
+            return retVal;
+        }
+        private double GetRatingAsPowerForwardStamina()
+        {
+            double retVal = GetInsideRating(true, false) * 1.3;
+            retVal += GetJumpShotRating(true, false) * 0.8;
+            retVal += GetThreePointRating(true, false) * 0.6;
+            retVal += GetOffenseIQRating(true, false) * 1.3;
+            retVal += GetDefenseIQRating(true, false) * 1.3;
+            retVal += GetShotContestRating(true, false) * 1.3;
+            retVal += GetJumpingRating(true, false) * 1.2;
+            retVal += GetSeperationRating(true, false) * 1;
+            retVal += GetPassingRating(true, false) * 0.7;
+            retVal += GetStaminaRating(true, false) * 0.5;
+
+            if (position == 1 || position == 3)
+                retVal *= .9;
+            else if (position == 4)
+                retVal *= .85;
+            else if (position == 5)
+                retVal *= .75;
+
+            retVal = Math.Min(99.99, ((retVal / 10.5) / 100) * 100);
+
+            return retVal;
+        }
+        private double GetRatingAsSmallForward()
+        {
+            double retVal = ratings[0] * 1.2;
+            retVal += ratings[1] * 1.2;
+            retVal += ratings[2] * 0.8;
+            retVal += ratings[3] * 1.3;
+            retVal += ratings[4] * 1.3;
+            retVal += ratings[5] * 1.3;
+            retVal += ratings[6] * 0.6;
+            retVal += ratings[7] * 1;
+            retVal += ratings[8] * 0.8;
+            retVal += ratings[9] * 0.5;
+
+            if (position == 2 || position == 4)
+                retVal *= .9;
+            else if (position == 1 || position == 5)
+                retVal *= .85;
+
+            retVal = Math.Min(99.99, ((retVal / 10.5) / 100) * 100);
+
+            return retVal;
+        }
+        private double GetRatingAsSmallForwardStamina()
+        {
+            double retVal = GetInsideRating(true, false) * 1.2;
+            retVal += GetJumpShotRating(true, false) * 1.2;
+            retVal += GetThreePointRating(true, false) * 0.8;
+            retVal += GetOffenseIQRating(true, false) * 1.3;
+            retVal += GetDefenseIQRating(true, false) * 1.3;
+            retVal += GetShotContestRating(true, false) * 1.3;
+            retVal += GetJumpingRating(true, false) * .6;
+            retVal += GetSeperationRating(true, false) * 1;
+            retVal += GetPassingRating(true, false) * 0.8;
+            retVal += GetStaminaRating(true, false) * 0.5;
+
+            if (position == 2 || position == 4)
+                retVal *= .9;
+            else if (position == 1 || position == 5)
+                retVal *= .85;
+
+            retVal = Math.Min(99.99, ((retVal / 10.5) / 100) * 100);
+
+            return retVal;
+        }
+        private double GetRatingAsShootingGuard()
+        {
+            double retVal = ratings[0] * 0.8;
+            retVal += ratings[1] * 1.2;
+            retVal += ratings[2] * 1.1;
+            retVal += ratings[3] * 1.3;
+            retVal += ratings[4] * 1.3;
+            retVal += ratings[5] * 1.3;
+            retVal += ratings[6] * 0.5;
+            retVal += ratings[7] * 1;
+            retVal += ratings[8] * 1;
+            retVal += ratings[9] * 0.5;
+
+            if (position == 3 || position == 5)
+                retVal *= .9;
+            else if (position == 2)
+                retVal *= .85;
+            else if (position == 1)
+                retVal *= .75;
+
+            retVal = Math.Min(99.99, ((retVal / 10.5) / 100) * 100);
+
+            return retVal;
+        }
+        private double GetRatingAsShootingGuardStamina()
+        {
+            double retVal = GetInsideRating(true, false) * 0.8;
+            retVal += GetJumpShotRating(true, false) * 1.2;
+            retVal += GetThreePointRating(true, false) * 1.1;
+            retVal += GetOffenseIQRating(true, false) * 1.3;
+            retVal += GetDefenseIQRating(true, false) * 1.3;
+            retVal += GetShotContestRating(true, false) * 1.3;
+            retVal += GetJumpingRating(true, false) * .5;
+            retVal += GetSeperationRating(true, false) * 1;
+            retVal += GetPassingRating(true, false) * 1;
+            retVal += GetStaminaRating(true, false) * 0.5;
+
+            if (position == 3 || position == 5)
+                retVal *= .9;
+            else if (position == 2)
+                retVal *= .85;
+            else if (position == 1)
+                retVal *= .75;
+
+            retVal = Math.Min(99.99, ((retVal / 10.5) / 100) * 100);
+
+            return retVal;
+        }
+        private double GetRatingAsPointGuard()
+        {
+            double retVal = ratings[0] * 0.7;
+            retVal += ratings[1] * 1.1;
+            retVal += ratings[2] * 1.1;
+            retVal += ratings[3] * 1.3;
+            retVal += ratings[4] * 1.3;
+            retVal += ratings[5] * 1.3;
+            retVal += ratings[6] * 0.3;
+            retVal += ratings[7] * 1;
+            retVal += ratings[8] * 1.4;
+            retVal += ratings[9] * 0.5;
+
+            if (position == 4)
+                retVal *= .9;
+            else if (position == 3)
+                retVal *= .85;
+            else if (position < 3)
+                retVal *= .75;
+
+            retVal = Math.Min(99.99, ((retVal / 10) / 100) * 100);
+
+            return retVal;
+        }
+        private double GetRatingAsPointGuardStamina()
+        {
+            double retVal = GetInsideRating(true, false) * .7;
+            retVal += GetJumpShotRating(true, false) * 1.1;
+            retVal += GetThreePointRating(true, false) * 1.1;
+            retVal += GetOffenseIQRating(true, false) * 1.3;
+            retVal += GetDefenseIQRating(true, false) * 1.3;
+            retVal += GetShotContestRating(true, false) * 1.3;
+            retVal += GetJumpingRating(true, false) * .3;
+            retVal += GetSeperationRating(true, false) * 1;
+            retVal += GetPassingRating(true, false) * 1.4;
+            retVal += GetStaminaRating(true, false) * 0.5;
+
+            if (position == 4)
+                retVal *= .9;
+            else if (position == 3)
+                retVal *= .85;
+            else if (position < 3)
+                retVal *= .75;
+
+            retVal = Math.Min(99.99, ((retVal / 10.5) / 100) * 100);
+
+            return retVal;
+        }
+        public double GetBestOverall()
+        {
+            double overall = GetRatingAsCenter();
+
+            double temp = GetRatingAsPowerForward();
+
+            if (overall < temp)
+                overall = temp;
+
+            temp = GetRatingAsSmallForward();
+
+            if (overall < temp)
+                overall = temp;
+
+            temp = GetRatingAsShootingGuard();
+
+            if (overall < temp)
+                overall = temp;
+
+            temp = GetRatingAsPointGuard();
+
+            if (overall < temp)
+                overall = temp;
+
+            return overall;
         }
         #endregion
     }

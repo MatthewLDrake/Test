@@ -41,8 +41,8 @@ namespace FormulaBasketball
         {            
             Visible = false;
             if (game)
-                new formulaBasketball(true, listView1.SelectedCells[0].OwningRow.Cells[0].EditedFormattedValue.ToString(), null, null);
-            //new NewFormulaBasketball(formulaBasketball.DeSerializeObject(listView1.SelectedCells[0].OwningRow.Cells[0].EditedFormattedValue.ToString()));
+                //new formulaBasketball(true, listView1.SelectedCells[0].OwningRow.Cells[0].EditedFormattedValue.ToString(), null, null);
+                new NewFormulaBasketball(formulaBasketball.DeSerializeObject(listView1.SelectedCells[0].OwningRow.Cells[0].EditedFormattedValue.ToString()));
             else
                 new InSeasonViewer(formulaBasketball.DeSerializeObject(listView1.SelectedCells[0].OwningRow.Cells[0].EditedFormattedValue.ToString())).ShowDialog();
                 //new Menu(formulaBasketball.DeSerializeObject(listView1.SelectedCells[0].OwningRow.Cells[0].EditedFormattedValue.ToString()), new Random(5515)).ShowDialog();

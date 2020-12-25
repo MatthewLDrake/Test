@@ -123,3 +123,5 @@ C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\F
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\FormulaBasketball.ViewRoster.resources
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\FormulaBasketball.YearSim.resources
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\FormulaBasketball.csproj.GenerateResource.Cache
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.ControlForm.resources
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.GameResult.resources
