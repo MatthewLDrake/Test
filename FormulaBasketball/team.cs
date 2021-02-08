@@ -2544,6 +2544,7 @@ public class DraftPick
         DraftPick otherPick = obj as DraftPick;
         return otherPick.round == round && otherPick.fromTeam == fromTeam && otherPick.season == season;
     }
+    
 }
 [Serializable]
 public class DisabledLists

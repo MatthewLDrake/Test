@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace FormulaBasketball
 {
+    [Serializable]
     public class GameStats
     {
         private int team, opponent;

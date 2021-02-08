@@ -26,7 +26,7 @@ namespace FormulaBasketball
             
 
             r = new Random();
-            files = Directory.GetFiles(Directory.GetCurrentDirectory(), "*.fbdata");
+            files = Directory.GetFiles(Directory.GetCurrentDirectory(), "*.fbleague");
             foreach(string str in files)
             {
                 DateTime dateTime = File.GetLastWriteTime(str);
@@ -42,7 +42,7 @@ namespace FormulaBasketball
             Visible = false;
             if (game)
                 //new formulaBasketball(true, listView1.SelectedCells[0].OwningRow.Cells[0].EditedFormattedValue.ToString(), null, null);
-                new NewFormulaBasketball(formulaBasketball.DeSerializeObject(listView1.SelectedCells[0].OwningRow.Cells[0].EditedFormattedValue.ToString()));
+                new NewFormulaBasketball(League.DeSerializeObject(listView1.SelectedCells[0].OwningRow.Cells[0].EditedFormattedValue.ToString()));
             else
                 new InSeasonViewer(formulaBasketball.DeSerializeObject(listView1.SelectedCells[0].OwningRow.Cells[0].EditedFormattedValue.ToString())).ShowDialog();
                 //new Menu(formulaBasketball.DeSerializeObject(listView1.SelectedCells[0].OwningRow.Cells[0].EditedFormattedValue.ToString()), new Random(5515)).ShowDialog();

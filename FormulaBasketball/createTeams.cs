@@ -16,7 +16,7 @@ public class createTeams
     private double[,] averageOverall, minOverall, maxOverall, allOveralls;
     private List<int> gameNums;
     public static int nextID = 0;
-    public static int currentSeason = 8;
+    public static int currentSeason = 9;
     private MyList<player> Rookies;
     public createTeams(List<team> teams, FreeAgents freeAgency, FormulaBasketball.Random r)
     {

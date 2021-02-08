@@ -13,6 +13,7 @@ namespace FormulaBasketball
     public partial class Standings : Form
     {
         private createTeams create;
+        private League league;
         public Standings(bool normalViewer)
         {
             InitializeComponent();
@@ -37,6 +38,44 @@ namespace FormulaBasketball
             }
             List<team> conferenceA = new List<team>();
             List<team> conferenceB = new List<team>();
+
+            conferenceA.AddRange(divisionA);
+            conferenceA.AddRange(divisionB);
+            conferenceB.AddRange(divisionC);
+            conferenceB.AddRange(divisionD);
+
+            this.divisionA.setTeams(divisionA);
+            this.divisionA.setLabel("Division A");
+            this.divisionB.setTeams(divisionB);
+            this.divisionB.setLabel("Division B");
+            this.divisionC.setTeams(divisionC);
+            this.divisionC.setLabel("Division C");
+            this.divisionD.setTeams(divisionD);
+            this.divisionD.setLabel("Division D");
+
+            conferenceOne.setTeams(conferenceA);
+            conferenceTwo.setTeams(conferenceB);
+
+            conferenceOne.setLabel("Southern Conference");
+            conferenceTwo.setLabel("Northern Conference");
+
+        }
+        public void updateStandings(League league, bool main)
+        {
+            this.league = league;
+            List<NewTeam> divisionA = new List<NewTeam>();
+            List<NewTeam> divisionB = new List<NewTeam>();
+            List<NewTeam> divisionC = new List<NewTeam>();
+            List<NewTeam> divisionD = new List<NewTeam>();
+            for (int i = 0; i < 8; i++)
+            {
+                divisionA.Add(main ? league.GetTeam(i) : league.GetDLeagueTeam(i));
+                divisionB.Add(main ? league.GetTeam(i + 8) : league.GetDLeagueTeam(i + 8));
+                divisionC.Add(main ? league.GetTeam(i + 16) : league.GetDLeagueTeam(i + 16));
+                divisionD.Add(main ? league.GetTeam(i + 24) : league.GetDLeagueTeam(i + 24));
+            }
+            List<NewTeam> conferenceA = new List<NewTeam>();
+            List<NewTeam> conferenceB = new List<NewTeam>();
 
             conferenceA.AddRange(divisionA);
             conferenceA.AddRange(divisionB);

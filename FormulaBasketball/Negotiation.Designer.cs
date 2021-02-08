@@ -52,9 +52,9 @@
             this.totalMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Bonus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Promises = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.ContractObject = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.promisesButton = new System.Windows.Forms.Button();
-            this.ContractObject = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -74,8 +74,8 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel5, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 341);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -385,6 +385,12 @@
             this.Promises.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             this.Promises.Width = 74;
             // 
+            // ContractObject
+            // 
+            this.ContractObject.HeaderText = "Column1";
+            this.ContractObject.Name = "ContractObject";
+            this.ContractObject.Visible = false;
+            // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Black;
@@ -410,12 +416,6 @@
             this.promisesButton.UseVisualStyleBackColor = true;
             this.promisesButton.Visible = false;
             this.promisesButton.Click += new System.EventHandler(this.promisesButton_Click);
-            // 
-            // ContractObject
-            // 
-            this.ContractObject.HeaderText = "Column1";
-            this.ContractObject.Name = "ContractObject";
-            this.ContractObject.Visible = false;
             // 
             // Negotiation
             // 

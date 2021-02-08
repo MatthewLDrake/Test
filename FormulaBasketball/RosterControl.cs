@@ -31,5 +31,20 @@ namespace FormulaBasketball
             }
             label1.Text = team;
         }
+        public void SetControl(List<NewPlayer> players, int pos, string team)
+        {
+            mainTeamGrid.Rows.Clear();
+            foreach (NewPlayer p in players)
+            {
+                if (p != null)
+                {
+                    if (p.GetPosition() == pos)
+                    {
+                        mainTeamGrid.Rows.Add(new object[] { p.ToString(), String.Format("{0:0.00}", p.GetBestOverall()), p.GetDevelopmentAsString(), p.GetContract().GetMoney() });
+                    }
+                }
+            }
+            label1.Text = team;
+        }
     }
 }

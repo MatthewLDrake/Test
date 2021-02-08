@@ -12,19 +12,18 @@ public class ImagePrinter
     private static Size gameSize;
     private static int stringHeight, stringWidth;
     public static int Width;
-    public ImagePrinter(int startingNum)
+    public ImagePrinter(int startingNum, League league = null)
     {
         info = new PrintInfo[16];
         gameSize = TextRenderer.MeasureText("Game 999", new Font("Consoloas", 16, FontStyle.Bold));
         gameNum = startingNum;
         i = 0;
-        font = new Font("Consolas", 12,FontStyle.Bold);
-        createTeams temp = formulaBasketball.create;
+        font = new Font("Consolas", 12,FontStyle.Bold);        
         int maxHeight = 0;
         int maxWidth = 0;
-        foreach (team t in temp.getTeams()) 
+        foreach (NewTeam t in league) 
         {
-            string text = t.ToString() + " (" + t.getWins() + "-" + t.getLosses() + ") ";
+            string text = t.ToString() + " (" + t.GetWins() + "-" + t.GetLosses() + ") ";
             Size theSize = TextRenderer.MeasureText(text , font);
             if (theSize.Height > maxHeight)
                 maxHeight = theSize.Height;
@@ -65,6 +64,25 @@ public class ImagePrinter
         {
             i = 0;
             if(formulaBasketball.createImages)
+            {
+                string temp = "" + gameNum;
+                if (gameNum < 10) temp = "0" + gameNum;
+                PrintImages(temp);
+                gameNum++;
+            }
+        }
+    }
+    public void AddResult(NewTeam awayTeam, NewTeam homeTeam, int awayScore, int homeScore, bool dLeague)
+    {
+        // TODO: Maybe something with this
+        if (dLeague)
+            return;
+        info[i] = new PrintInfo(awayTeam.ToString() + " (" + awayTeam.GetWins() + "-" + awayTeam.GetLosses() + ") ", awayScore, homeTeam.ToString() + " (" + homeTeam.GetWins() + "-" + homeTeam.GetLosses() + ") ", homeScore);
+        i++;
+        if (i == 16)
+        {
+            i = 0;
+            if (formulaBasketball.createImages)
             {
                 string temp = "" + gameNum;
                 if (gameNum < 10) temp = "0" + gameNum;

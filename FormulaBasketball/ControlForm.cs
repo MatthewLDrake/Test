@@ -16,6 +16,7 @@ namespace FormulaBasketball
         public ControlForm()
         {
             InitializeComponent();
+            result = -1;
         }
         private void ButtonClick(object sender, EventArgs e)
         {

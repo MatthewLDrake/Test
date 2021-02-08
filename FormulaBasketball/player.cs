@@ -41,7 +41,27 @@ public class player : IComparable<player>
     {
         return name + " " + getOverall().ToString("0.##");
     }
-   
+    private bool hasBeenEdited;
+    public double[] maxRatings;
+    public bool GetHasBeenEdited()
+    {
+        return hasBeenEdited;
+    }
+    private bool retired = false;
+    public void Retire()
+    {
+        retired = true;
+    }
+    public bool GetRetired()
+    {
+        return retired;
+    }
+    public void EditRatings(double[] newRatings, double[] newMaxRatings)
+    {
+        ratings = newRatings;
+        hasBeenEdited = true;
+        maxRatings = newMaxRatings;
+    }
     public player(int pos, int[] ratings, int age, string name, Country country, int development, int peakStart, int peakEnd,  FormulaBasketball.Random r)
     {
         this.ratings = new double[11];

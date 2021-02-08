@@ -348,7 +348,7 @@ namespace FormulaBasketball
         public NewCurrentTeam(NewTeam team, bool awayTeam, int opponent)
         {
             this.team = team;
-            coach = team.GetCoach();
+            //coach = team.GetCoach();
 
             coach.GetPlayerPhilosophy().StartGame(team);
 

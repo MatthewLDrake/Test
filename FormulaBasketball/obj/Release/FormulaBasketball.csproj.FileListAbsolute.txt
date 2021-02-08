@@ -24,8 +24,6 @@ C:\Users\Matthew\source\repos\FormulaBasketball\FormulaBasketball\obj\Release\Fo
 C:\Users\Matthew\source\repos\FormulaBasketball\FormulaBasketball\obj\Release\FormulaBasketball.csproj.CoreCompileInputs.cache
 C:\Users\Matthew\source\repos\FormulaBasketball\FormulaBasketball\obj\Release\FormulaBasketball.exe
 C:\Users\Matthew\source\repos\FormulaBasketball\FormulaBasketball\obj\Release\FormulaBasketball.pdb
-B:\Documents\Test\FormulaBasketball\bin\Release\FormulaBasketball.exe.config
-B:\Documents\Test\FormulaBasketball\bin\Release\FormulaBasketball.exe
 B:\Documents\Test\FormulaBasketball\bin\Release\FormulaBasketball.pdb
 B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.csprojResolveAssemblyReference.cache
 B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.bracket.resources
@@ -47,7 +45,6 @@ B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.teamNumPrompt.
 B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.teamPicker.resources
 B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.csproj.GenerateResource.Cache
 B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.csproj.CoreCompileInputs.cache
-B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.exe
 B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.pdb
 B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.YearSim.resources
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\bin\Release\FormulaBasketball.exe.config
@@ -148,3 +145,18 @@ B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.EditRatings.re
 B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.EditTeam.resources
 B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.CreatePlayer.resources
 B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.CreateTeam.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.ControlForm.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.ExtraInfo.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.GameResult.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.NewContract.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.NewPlayerEditor.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.PlayerEditor.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.PlayerRetirement.resources
+B:\Documents\Test\FormulaBasketball\bin\Release\FormulaBasketball.exe.config
+B:\Documents\Test\FormulaBasketball\bin\Release\FormulaBasketball.exe
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.ManageTeam.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.exe
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.AddStatsForm.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.ScoreCheater.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.SubstitutionForm.resources
+B:\Documents\Test\FormulaBasketball\obj\Release\FormulaBasketball.AddInjuryForm.resources

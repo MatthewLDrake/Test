@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace FormulaBasketball
 {
+    [Serializable]
     public class BalancedOffense : NewOffensivePhilosophy
     {
         public override int GetNumberOfPlays(int seconds)
@@ -355,6 +356,7 @@ namespace FormulaBasketball
             return made;
         }
     }
+    [Serializable]
     public class BalancedDefense : NewDefensivePhilosophy
     {
         public override Tuple<double[],int[]> GetDefensiveUsageRate(NewCurrentTeam team, Tuple<int, double>[] offenseUsageRate)
@@ -445,6 +447,7 @@ namespace FormulaBasketball
             return positionalMatchup;
         }
     }
+    [Serializable]
     public class OverallPersonnel : PlayerPhilosophy
     {
         private bool InFoulTrouble(NewPlayer player, int quarter)
@@ -546,6 +549,7 @@ namespace FormulaBasketball
             }
         }
     }
+    [Serializable]
     public class BalancedPersonnel : PlayerPhilosophy
     {
 
@@ -1251,7 +1255,7 @@ namespace FormulaBasketball
             return players[0];
         }
     }*/
-
+    [Serializable]
     public abstract class NewOffensivePhilosophy
     {
         public abstract int GetNumberOfPlays(int seconds);
@@ -1273,6 +1277,7 @@ namespace FormulaBasketball
 
         public abstract byte DistributeShots(PlayStats stats, NewCurrentTeam offense, NewCurrentTeam defense, bool clutch);
     }
+    [Serializable]
     public abstract class NewDefensivePhilosophy
     {
         public abstract Tuple<double[], int[]> GetDefensiveUsageRate(NewCurrentTeam team, Tuple<int, double>[] offenseUsageRate);
@@ -1290,6 +1295,7 @@ namespace FormulaBasketball
             return teamRating;
         }
     }
+    [Serializable]
     public abstract class PlayerPhilosophy
     {
         protected NewPlayer[] startingFive;
@@ -1354,6 +1360,7 @@ namespace FormulaBasketball
             return retVal;
         }
     }
+    [Serializable]
     public class PlayStats
     {
         public readonly int threesAttempted, twosAttempted, steals, nonStealTurnovers, freeThrowsAttempted, fouls, potentialAssists;

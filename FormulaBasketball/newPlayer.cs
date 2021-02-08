@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace FormulaBasketball
 {
-    public class NewPlayer
+    [Serializable]
+    public class NewPlayer : IComparable<NewPlayer> , IComparable
     {
-        
-        private byte[] ratings;
+
+        public byte[] ratings;
+        public byte[] maxRatings;
         private byte seasonStarts;
         private sbyte team;
         private GameStats currentGame;
@@ -17,10 +19,11 @@ namespace FormulaBasketball
         private List<SeasonStats> playerCareerStats;
         private String name;
         private uint playerID;
-        private bool injured;
+        private bool injured, retired;
         private byte position, age, peakStart, peakEnd, development;
         private float stamina;
         private Contract contract;
+        private Country country;
         public NewPlayer(player oldPlayer)
         {
             ratings = new byte[oldPlayer.ratings.Length];
@@ -31,11 +34,11 @@ namespace FormulaBasketball
             // Three Point
             ratings[2] = (byte)oldPlayer.ratings[9];
             // Offense IQ
-            ratings[3] = (byte) ((oldPlayer.ratings[4] + oldPlayer.ratings[7] + oldPlayer.ratings[6])/3);
+            ratings[3] = (byte)((oldPlayer.ratings[4] + (oldPlayer.ratings[5] + oldPlayer.ratings[7]) / 2 + oldPlayer.ratings[6]) / 3);
             // Defense IQ
             ratings[4] = (byte)oldPlayer.ratings[4];
             // Shot Contest
-            ratings[5] = (byte)oldPlayer.ratings[2];
+            ratings[5] = (byte)oldPlayer.ratings[3];
             // Jumping
             ratings[6] = (byte)oldPlayer.ratings[5];
             // Seperation
@@ -46,7 +49,21 @@ namespace FormulaBasketball
             ratings[9] = (byte)oldPlayer.ratings[8];
             // Durability
             ratings[10] = (byte)oldPlayer.ratings[10];
-            
+
+            country = oldPlayer.GetCountry();
+
+            maxRatings = new byte[ratings.Length];
+
+            if (oldPlayer.maxRatings == null)
+            {
+                for (int i = 0; i < maxRatings.Length; i++)
+                    maxRatings[i] = ratings[i];
+            }
+            else
+            {
+                for (int i = 0; i < maxRatings.Length; i++)
+                    maxRatings[i] = i > oldPlayer.maxRatings.Length ? (byte)oldPlayer.maxRatings[i] : ratings[i];
+            }
             name = oldPlayer.getName().Trim();
             seasonStarts = 0;
             stamina = 100;
@@ -57,6 +74,7 @@ namespace FormulaBasketball
             peakStart = (byte)oldPlayer.peakStart;
             peakEnd = (byte)oldPlayer.peakEnd;
             development = (byte)oldPlayer.development;
+            retired = oldPlayer.GetRetired();
 
             List<SeasonStatsHolder> oldCareerStats = oldPlayer.GetCareerStats();
 
@@ -64,9 +82,9 @@ namespace FormulaBasketball
             if (oldCareerStats != null)
             {
                 foreach (SeasonStatsHolder oldStat in oldCareerStats)
-                    playerCareerStats.Add(new SeasonStats(oldStat));                
+                    playerCareerStats.Add(new SeasonStats(oldStat));
             }
-                
+
             seasonStats = new List<GameStats>();
 
             playerID = League.NextID;
@@ -74,9 +92,51 @@ namespace FormulaBasketball
 
             team = -1;
 
+            if (playerID == 571)
+                position = 1;
+            else if (playerID == 210)
+                position = 2;
+            else
+                position = (byte)oldPlayer.getPosition();
             injured = false;
 
-            position = (byte)oldPlayer.getPosition();
+            
+        }
+        public void ChangePosition(byte newPosition)
+        {
+            position = newPosition;
+        }
+        public NewPlayer(uint playerID, byte position, string name, byte[] ratings, byte[] maxRatings, Country country, byte age, byte peakStart, byte peakEnd, byte development)
+        {
+            this.ratings = ratings;
+
+            this.country = country;
+
+            this.maxRatings = maxRatings;
+            
+            this.name = name;
+            seasonStarts = 0;
+            stamina = 100;
+
+            this.age = age;
+            this.peakStart = peakStart;
+            this.peakEnd = peakEnd;
+            this.development = development;
+            retired = false;
+
+            List<SeasonStatsHolder> oldCareerStats = new List<SeasonStatsHolder>();
+
+            playerCareerStats = new List<SeasonStats>();
+            
+            seasonStats = new List<GameStats>();
+
+            this.playerID = playerID;
+
+            team = -1;
+
+            injured = false;
+
+            this.position = position;
         }
         // To be called when the offseason is over.
         public void FinishOffseason()
@@ -88,6 +148,10 @@ namespace FormulaBasketball
         public Contract GetContract()
         {
             return contract;
+        }
+        public void SetContract(Contract contract)
+        {
+            this.contract = contract;
         }
         public void SetTeam(team team)
         {
@@ -121,9 +185,26 @@ namespace FormulaBasketball
         {
             return position;
         }
+        public bool IsRetired()
+        {
+            return retired;
+        }
+        public int GetPeakStart()
+        {
+            return peakStart;
+        }
+        public int GetPeakEnd()
+        {
+            return peakEnd;
+        }
+        public int GetDevelopment()
+        {
+            return development;
+        }
+        
         public string GetPositionAsString()
         {
-            switch(position)
+            switch (position)
             {
                 case 1:
                     return "C";
@@ -142,17 +223,17 @@ namespace FormulaBasketball
         {
             float value;
 
-            if(didPlay)            
-                value = -.085f + (0.0003f * (float)GetStaminaRating(true, false) + -0.03f);            
-            else            
+            if (didPlay)
+                value = -.085f + (0.0003f * (float)GetStaminaRating(true, false) + -0.03f);
+            else
                 value = .035f + (float)GetStaminaRating(true, false) * .001f;
-            
+
 
             stamina += value * seconds;
 
             if (stamina > 100)
                 stamina = 100;
-           
+
         }
         public int GetMaxMinutes()
         {
@@ -167,6 +248,27 @@ namespace FormulaBasketball
         public bool CanPlay()
         {
             return currentGame == null || (currentGame.GetFouls() != 6 && !injured);
+        }
+        public byte GetAge()
+        {
+            return age;
+        }
+        private int offers, status;
+        public int GetOffers()
+        {
+            return offers;
+        }
+        public void SetOffers(int offers)
+        {
+            this.offers = offers;
+        }            
+        public int GetStatus()
+        {
+            return status;
+        }
+        public void SetStatus(int status)
+        {
+            this.status = status;
         }
         public string GetDevelopmentAsString()
         {
@@ -214,7 +316,11 @@ namespace FormulaBasketball
         public string GetText()
         {
             return playerID + "," + GetPositionAsString() + "," + name + "," + ratings[0] + "," + ratings[1] + "," + ratings[2] + "," + ratings[3] + "," + ratings[4] + "," + ratings[5] + "," + ratings[6] + "," + ratings[7] + "," + ratings[8] + "," + ratings[9] + "," + ratings[10]  + "," + string.Format("{0:N2}", GetBestOverall()) + "," + age  + "," + GetDevelopmentAsString() + "," + ((contract != null) ? contract.GetYearsLeft() + "," + string.Format("{0:N2}", contract.GetMoney()) : ",") + (injured ? ",Injured\n" : ",Healthy\n");
-        } 
+        }
+        public string GetName()
+        {
+            return name;
+        }
         public override string ToString()
         {
             return GetPositionAsString() + " " + name;
@@ -313,7 +419,7 @@ namespace FormulaBasketball
         public void StartGame(bool starter, int opponent)
         {
             // Ignores this if already a starter
-            if(currentGame == null)
+            if(currentGame == null || starter)
             {
                 currentGame = new GameStats(team, opponent);
                 if (starter)
@@ -325,6 +431,10 @@ namespace FormulaBasketball
             seasonStats.Add(currentGame);
             currentGame = null;
             stamina += 20;
+
+            if (stamina > 100)
+                stamina = 100;
+
         }
         public void AddSteal()
         {
@@ -353,7 +463,17 @@ namespace FormulaBasketball
                 currentGame.AddFouls((byte)(maxFouls - currFouls));
                 return maxFouls - currFouls;
             }
-
+        }
+        public void AddBlock()
+        {
+            currentGame.AddBlock();
+        }
+        public void AddRebounds(bool offensive)
+        {
+            if (offensive)
+                currentGame.AddOffensiveRebound();
+            else
+                currentGame.AddDefensiveRebound();
         }
         public byte AddThreePointer(bool made)
         {            
@@ -393,6 +513,10 @@ namespace FormulaBasketball
         public void AddAssist()
         {
             currentGame.AddAssist();
+        }
+        public GameStats GetGameStats()
+        {
+            return currentGame;
         }
         public GameStats GetStats()
         {
@@ -698,6 +822,41 @@ namespace FormulaBasketball
                 overall = temp;
 
             return overall;
+        }
+        public double GetMainOverall()
+        {
+            switch(position)
+            {
+                case 1:
+                    return GetRatingAsCenter();
+                case 2:
+                    return GetRatingAsPowerForward();
+                case 3:
+                    return GetRatingAsSmallForward();
+                case 4:
+                    double rating = 0;
+                    if (playerID == 213) rating = -10;
+                    else if (playerID == 223) rating = 10;
+                    return rating + GetRatingAsShootingGuard();
+                case 5:
+                    return GetRatingAsPointGuard();
+            }
+            return 0;
+        }
+        public int CompareTo(Object other)
+        {
+            if (other is NewPlayer)
+                return CompareTo(other as NewPlayer);
+            else return 0;
+        }
+        public int CompareTo(NewPlayer other)
+        {
+            double result = GetBestOverall() - other.GetBestOverall();
+            if (result > 0)
+                return -1;
+            else if (result < 0)
+                return 1;
+            else return 0;
         }
         #endregion
     }

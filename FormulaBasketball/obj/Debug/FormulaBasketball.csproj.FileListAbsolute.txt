@@ -57,10 +57,7 @@ B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.ViewRoster.resou
 B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.YearSim.resources
 B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.csproj.GenerateResource.Cache
 B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.csproj.CoreCompileInputs.cache
-B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.exe
 B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.pdb
-B:\Documents\Test\FormulaBasketball\bin\Debug\FormulaBasketball.exe.config
-B:\Documents\Test\FormulaBasketball\bin\Debug\FormulaBasketball.exe
 B:\Documents\Test\FormulaBasketball\bin\Debug\FormulaBasketball.pdb
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\bin\Debug\FormulaBasketball.exe.config
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\FormulaBasketball.exe
@@ -125,3 +122,16 @@ C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\F
 C:\Users\Matt\Downloads\FormulaBasketballCode\Test\FormulaBasketball\obj\Debug\FormulaBasketball.csproj.GenerateResource.Cache
 B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.ControlForm.resources
 B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.GameResult.resources
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.PlayerEditor.resources
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.ExtraInfo.resources
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.NewPlayerEditor.resources
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.PlayerRetirement.resources
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.NewContract.resources
+B:\Documents\Test\FormulaBasketball\bin\Debug\FormulaBasketball.exe.config
+B:\Documents\Test\FormulaBasketball\bin\Debug\FormulaBasketball.exe
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.exe
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.ManageTeam.resources
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.SubstitutionForm.resources
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.AddStatsForm.resources
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.ScoreCheater.resources
+B:\Documents\Test\FormulaBasketball\obj\Debug\FormulaBasketball.AddInjuryForm.resources
