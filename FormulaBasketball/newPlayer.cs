@@ -87,9 +87,6 @@ namespace FormulaBasketball
 
             seasonStats = new List<GameStats>();
 
-            playerID = League.NextID;
-            League.NextID++;
-
             team = -1;
 
             if (playerID == 571)
@@ -145,6 +142,19 @@ namespace FormulaBasketball
             playerCareerStats.Add(new SeasonStats(seasonStats));
             seasonStats = new List<GameStats>();
         }
+        public void AddSeasonStats(int seasonNum, string stats)
+        {
+            playerCareerStats.Add(new SeasonStats(stats, seasonNum));
+        }
+        public SeasonStats GetSeasonStats(int seasonNum)
+        {
+            foreach (SeasonStats stats in playerCareerStats)
+            {
+                if (stats.season == seasonNum)
+                    return stats;
+            }
+            return null;
+        }
         public Contract GetContract()
         {
             return contract;
@@ -156,6 +166,11 @@ namespace FormulaBasketball
         public void SetTeam(team team)
         {
             this.team = (sbyte)team.getTeamNum();
+        }
+        public void Retire()
+        {
+            retired = true;
+            League.league.RetirePlayer(this);
         }
         public void SetTeam(NewTeam team)
         {
@@ -201,7 +216,12 @@ namespace FormulaBasketball
         {
             return development;
         }
-        
+        public void AdvanceYear()
+        {
+            age++;
+            if (contract != null)
+                contract.AdvanceYear();
+        }
         public string GetPositionAsString()
         {
             switch (position)
@@ -270,6 +290,47 @@ namespace FormulaBasketball
         {
             this.status = status;
         }
+        public string GetCeilingAsString()
+        {
+            string potential = "";
+
+            int average = Math.Max(1, Math.Min(10, (int)Math.Floor(.2 * NewPlayerEditor.GetMainOverall(position, maxRatings) - 9)));
+            switch (average)
+            {
+                case 1:
+                    potential = "F";
+                    break;
+                case 2:
+                    potential = "F+";
+                    break;
+                case 3:
+                    potential = "D";
+                    break;
+                case 4:
+                    potential = "D+";
+                    break;
+                case 5:
+                    potential = "C";
+                    break;
+                case 6:
+                    potential = "C+";
+                    break;
+                case 7:
+                    potential = "B";
+                    break;
+                case 8:
+                    potential = "B+";
+                    break;
+                case 9:
+                    potential = "A";
+                    break;
+                case 10:
+                    potential = "A+";
+                    break;
+            }
+            return potential;
+        }
+
         public string GetDevelopmentAsString()
         {
             string potential = "";
@@ -399,6 +460,67 @@ namespace FormulaBasketball
         {
             return ratings[9];
         }
+
+        public void SetStats(int playerIndex, NewPlayer[] opposingPlayer, NewTeam opposingTeam, int points)
+        {            
+            while(points != 0)
+            {
+                int type = 0;
+
+                if(points > 1)
+                {
+                    int[] chance = new int[3] { 25, 61 ,0};
+
+                    if (points > 2)
+                    {
+                        if (ratings[2] < 35)
+                            chance[2] = 2;
+                        else if (ratings[2] < 48)
+                            chance[2] = 4;
+                        else if (ratings[2] < 60)
+                            chance[2] = 7;
+                        else if (ratings[2] < 72)
+                            chance[2] = 10;
+                        else if (ratings[2] < 84)
+                            chance[2] = 15;
+                        else
+                            chance[2] = 20;
+                    }
+                    int sum = 0;
+                    foreach (int i in chance)
+                        sum += i;
+
+                    int rNum = League.r.Next(sum), currSum = 0;
+                    for (int i = 0; i < chance.Length; i++)
+                    {
+                        if(rNum < currSum + chance[i])
+                        {
+                            type = i;
+                            break;
+                        }
+                        currSum += chance[i];
+                    }
+
+                }
+
+                switch(type)
+                {
+                    default:
+                        currentGame.AddFreeThrows(1, 1);
+                        points--;
+                        break;
+                    case 1:
+                        currentGame.AddFieldGoalMade();
+                        points -= 2;
+                        break;
+                    case 2:
+                        currentGame.AddThreeMade();
+                        points -= 3;
+                        break;
+                }
+            }                
+        }
+
         public double GetDurabilityRating(bool game, bool clutchSituation)
         {
             if (game)
@@ -435,6 +557,10 @@ namespace FormulaBasketball
             if (stamina > 100)
                 stamina = 100;
 
+        }
+        public int GetPoints()
+        {
+            return currentGame.GetPoints();
         }
         public void AddSteal()
         {
@@ -513,6 +639,10 @@ namespace FormulaBasketball
         public void AddAssist()
         {
             currentGame.AddAssist();
+        }
+        public void AddMinutes(int minutes)
+        {
+            currentGame.AddMinutes(minutes);
         }
         public GameStats GetGameStats()
         {
@@ -701,6 +831,41 @@ namespace FormulaBasketball
 
             return retVal;
         }
+
+        public void FixMaxRatings()
+        {
+            if (age >= peakStart)
+                return;
+
+            double overall = GetMainOverall();
+
+            if (League.r.Next(15) == 3)
+            {
+                overall += League.r.Next(2, 5);
+            }
+            else if(League.r.Next(7) == 3)
+            {
+                overall += League.r.Next(25, 35);
+            }
+            else
+            {
+                int ageDiff = Math.Min(10, peakStart - age) - 1;
+                double ageModifier = ageDiff * .1 + .5;
+
+                double overallModifier = -0.02 * overall + 2.7;
+
+                double developmentModifier = development / 6 + (1 / 3);
+
+                int randNum = League.r.Next(-5, 6);
+
+                int increaseMin = (int)Math.Round(randNum - 2 * ageModifier * overallModifier * developmentModifier);
+                int increaseMax = (int)Math.Round(randNum + 2 * ageModifier * overallModifier * developmentModifier);
+
+                overall += League.r.Next(increaseMin, increaseMax);
+            }   
+
+            maxRatings = NewPlayerEditor.UpdateUntil(overall, maxRatings, position);
+        }
         private double GetRatingAsShootingGuard()
         {
             double retVal = ratings[0] * 0.8;
@@ -769,7 +934,7 @@ namespace FormulaBasketball
             else if (position < 3)
                 retVal *= .75;
 
-            retVal = Math.Min(99.99, ((retVal / 10) / 100) * 100);
+            retVal = Math.Min(99.99, ((retVal / 10.5) / 100) * 100);
 
             return retVal;
         }
@@ -834,12 +999,26 @@ namespace FormulaBasketball
                 case 3:
                     return GetRatingAsSmallForward();
                 case 4:
-                    double rating = 0;
-                    if (playerID == 213) rating = -10;
-                    else if (playerID == 223) rating = 10;
-                    return rating + GetRatingAsShootingGuard();
+                    return GetRatingAsShootingGuard();
                 case 5:
                     return GetRatingAsPointGuard();
+            }
+            return 0;
+        }
+        public double GetMaxOverall()
+        {
+            switch (position)
+            {
+                case 1:
+                    return NewPlayerEditor.GetRatingAsCenter(maxRatings);
+                case 2:
+                    return NewPlayerEditor.GetRatingAsPowerForward(maxRatings);
+                case 3:
+                    return NewPlayerEditor.GetRatingAsSmallForward(maxRatings);
+                case 4:
+                    return NewPlayerEditor.GetRatingAsShootingGuard(maxRatings);
+                case 5:
+                    return NewPlayerEditor.GetRatingAsPointGuard(maxRatings);
             }
             return 0;
         }

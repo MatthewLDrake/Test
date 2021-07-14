@@ -22,6 +22,12 @@ namespace FormulaBasketball
             this.awayTeam = awayTeam;
             this.homeTeam = homeTeam;
 
+            int averageAwayScore = 28;
+            int averageHomeScore = 28;
+            double awayVolitility = 4;
+            double homeVolitility = 4;
+
+
             dataGridView1.Rows.Add(new object[] { awayTeam.ToString(), 0,0,0,0,"",0 });
             dataGridView1.Rows.Add(new object[] { homeTeam.ToString(), 0, 0, 0, 0, "", 0 });
         }

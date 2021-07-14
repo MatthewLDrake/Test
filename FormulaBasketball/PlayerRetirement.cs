@@ -174,9 +174,6 @@ namespace FormulaBasketball
             {
                 foreach (NewPlayer p in t)
                 {
-                    if (p.GetPlayerID() < 1283)
-                        continue;
-
                     double[] ratings = new double[p.ratings.Length];
                     for(int i= 0; i < ratings.Length; i++)
                     {
@@ -220,7 +217,7 @@ namespace FormulaBasketball
                     dataGridView1.Rows.Add(new object[] { p.ToString(), t.ToString(), p.GetAge(), p.GetPeakStart(), p.GetPeakStart(), overall, maxOverall, "Retire", p, p.GetContract() != null ? p.GetContract().GetYearsLeft() : 0, p.GetContract() != null ? p.GetContract().GetMoney() : 0, "New Contract" });
 
                 }
-                /*foreach (NewPlayer p in create.GetDLeagueTeam(t.GetTeamNum()))
+                foreach (NewPlayer p in create.GetDLeagueTeam(t.GetTeamNum()))
                 {
                     double[] ratings = new double[p.ratings.Length];
                     for (int i = 0; i < ratings.Length; i++)
@@ -261,9 +258,9 @@ namespace FormulaBasketball
                     }
 
                     dataGridView1.Rows.Add(new object[] { p.ToString(), create.GetDLeagueTeam(t.GetTeamNum()).ToString(), p.GetAge(), p.GetPeakStart(), p.GetPeakStart(), overall, maxOverall, "Retire", p, p.GetContract() != null ? p.GetContract().GetYearsLeft() : 0, p.GetContract() != null ? p.GetContract().GetMoney() : 0, "New Contract" });
-                }*/
+                }
             }
-            /*foreach (NewPlayer p in create.GetFreeAgents().GetAllPlayers())
+            foreach (NewPlayer p in create.GetFreeAgents().GetAllPlayers())
             {
                 double[] ratings = new double[p.ratings.Length];
                 for (int i = 0; i < ratings.Length; i++)
@@ -304,7 +301,7 @@ namespace FormulaBasketball
                 }
 
                 dataGridView1.Rows.Add(new object[] { p.ToString(), "", p.GetAge(), p.GetPeakStart(), p.GetPeakStart(), overall, maxOverall, "Retire", p, p.GetContract() != null ? p.GetContract().GetYearsLeft() : 0, p.GetContract() != null ? p.GetContract().GetMoney() : 0, "New Contract" });
-            }*/
+            }
         }
         private double GetRatingAsCenter(double[] ratings)
         {
@@ -400,45 +397,46 @@ namespace FormulaBasketball
         {
             if(old)
             {
-                player p = dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex].Cells[8].Value as player;
-                if (dataGridView1.SelectedCells[0].ColumnIndex == 7)
+                player p = dataGridView1.Rows[e.RowIndex].Cells[8].Value as player;
+                if (e.ColumnIndex == 7)
                 {
                     p.Retire();
-                    dataGridView1.Rows.RemoveAt(dataGridView1.SelectedCells[0].RowIndex);
+                    dataGridView1.Rows.RemoveAt(e.RowIndex);
                 }
-                if (dataGridView1.SelectedCells[0].ColumnIndex == 11)
+                if (e.ColumnIndex == 11)
                 {
                     NewContract contract = new NewContract();
                     contract.ShowDialog();
                     p.SetNewContract(contract.GetContract());
 
 
-                    dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex].Cells[9].Value = p.GetContract().GetYearsLeft();
-                    dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex].Cells[10].Value = p.GetContract().GetMoney();
+                    dataGridView1.Rows[e.RowIndex].Cells[9].Value = p.GetContract().GetYearsLeft();
+                    dataGridView1.Rows[e.RowIndex].Cells[10].Value = p.GetContract().GetMoney();
 
                 }
             }
             else
             {
-                NewPlayer p = dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex].Cells[8].Value as NewPlayer;
-                if (dataGridView1.SelectedCells[0].ColumnIndex == 7)
+                NewPlayer p = dataGridView1.Rows[e.RowIndex].Cells[8].Value as NewPlayer;
+                if (e.ColumnIndex == 7)
                 {
-                    dataGridView1.Rows.RemoveAt(dataGridView1.SelectedCells[0].RowIndex);
+                    dataGridView1.Rows.RemoveAt(e.RowIndex);
+                    p.Retire();
                 }
-                if (dataGridView1.SelectedCells[0].ColumnIndex == 11)
+                if (e.ColumnIndex == 11)
                 {
                     NewContract contract = new NewContract();
                     contract.ShowDialog();
                     p.SetContract(contract.GetContract());
                     if (contract.GetContract() != null)
                     {
-                        dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex].Cells[9].Value = p.GetContract().GetYearsLeft();
-                        dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex].Cells[10].Value = p.GetContract().GetMoney();
+                        dataGridView1.Rows[e.RowIndex].Cells[9].Value = p.GetContract().GetYearsLeft();
+                        dataGridView1.Rows[e.RowIndex].Cells[10].Value = p.GetContract().GetMoney();
                     }
                     else
                     {
-                        dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex].Cells[9].Value = 0;
-                        dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex].Cells[10].Value = 0;
+                        dataGridView1.Rows[e.RowIndex].Cells[9].Value = 0;
+                        dataGridView1.Rows[e.RowIndex].Cells[10].Value = 0;
                     }
 
                 }

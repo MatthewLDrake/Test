@@ -39,10 +39,10 @@ namespace FormulaBasketball
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            File.AppendAllText("C:\\Users\\Matthew\\source\\repos\\FormulaBasketballBot\\FormulaBasketballBot\\Modules\\singings.csv", signList);
-            File.AppendAllText("C:\\Users\\Matthew\\source\\repos\\FormulaBasketballBot\\FormulaBasketballBot\\Modules\\demotions.csv", demotionList);
-            File.AppendAllText("C:\\Users\\Matthew\\source\\repos\\FormulaBasketballBot\\FormulaBasketballBot\\Modules\\promotions.csv", promotionList);
-            File.AppendAllText("C:\\Users\\Matthew\\source\\repos\\FormulaBasketballBot\\FormulaBasketballBot\\Modules\\releasings.csv", releaseList);
+            File.WriteAllText("C:\\Users\\dmatt\\Documents\\GitHub\\FormulaBasketballBot\\FormulaBasketballBot\\Modules\\singings.csv", signList);
+            File.WriteAllText("C:\\Users\\dmatt\\Documents\\GitHub\\FormulaBasketballBot\\FormulaBasketballBot\\Modules\\demotions.csv", demotionList);
+            File.WriteAllText("C:\\Users\\dmatt\\Documents\\GitHub\\FormulaBasketballBot\\FormulaBasketballBot\\Modules\\promotions.csv", promotionList);
+            File.WriteAllText("C:\\Users\\dmatt\\Documents\\GitHub\\FormulaBasketballBot\\FormulaBasketballBot\\Modules\\releasings.csv", releaseList);
 
             League.SerializeObject(league, "league.fbleague");
 
@@ -120,6 +120,7 @@ namespace FormulaBasketball
 
                 league.GetTeam(teamList.SelectedIndex).AddPlayer(player);
                 player.SetContract(contract.GetContract());
+                league.GetTeam(teamList.SelectedIndex).ChangeMoney((long) Math.Round(contract.GetContract().GetBonus() * -1000000));
 
                 league.GetFreeAgents().RemovePlayer(player);
 

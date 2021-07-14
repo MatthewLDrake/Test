@@ -27,9 +27,9 @@ public class formulaBasketball
     public static bool injuries = false;
     private static ImagePrinter printer;
     public static bool createImages = true;
-    public static Dictionary<Promises, String> promisesList = new Dictionary<Promises, String>()
+    public static List<Tuple<Promises, string>> promisesList = new List<Tuple<Promises, string>>()
     {
-        { Promises.Year_One_Starter, "Year One Starter" }, {Promises.Win_Division, "Win Division" }, {Promises.Win_Conference, "Win Conference" }, {Promises.Win_Championship, "Win Championship" }, {Promises.Make_Playoffs, "Make Playoffs"},{ Promises.No_Trade ,"No trade clause" }
+        new Tuple<Promises, string> (Promises.Year_One_Starter, "Starter") , new Tuple<Promises, string> (Promises.Win_Division, "Win Division" ), new Tuple<Promises, string> (Promises.Win_Conference, "Win Conference" ), new Tuple<Promises, string> (Promises.Win_Championship, "Win Championship" ), new Tuple<Promises, string> (Promises.Make_Playoffs, "Make Playoffs"),new Tuple<Promises, string> ( Promises.No_Trade ,"No Trade" ), new Tuple<Promises, string> (Promises.Over_Five_Hundred, "Have a winning record"), new Tuple<Promises, string> (Promises.Win_Over_Fifty, "Win over fifty games")
     };
     public formulaBasketball(bool loadSave, String fileName, List<team> teams, List<player> freeAgency, Boolean flag = false)
     {

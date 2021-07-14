@@ -15,12 +15,29 @@ namespace FormulaBasketball
         private NewPlayer p;
         private byte[] ratings, maxRatings;
         private static ExtraInfo extraScreen;
+        public NewPlayerEditor(NewPlayer p, double overall, bool goDown, byte[] maxRatingsBoost)
+        {
+            this.p = p;
+            maxRatings = p.maxRatings;
+
+            if(!goDown)
+            {
+                p.ratings = UpdateUntil(overall, p.ratings, p.GetPosition(), true, maxRatings, maxRatingsBoost);
+            }
+            else
+            {
+                p.ratings = DowndateUntil(overall, p.ratings);
+            }
+            InitializeComponent();
+            //Setup();
+            
+        }
         public NewPlayerEditor(NewPlayer p, double overall = -1, double maxOverall = -1)
         {
             this.p = p;
 
             if (overall != -1)
-                p.ratings = UpdateUntil(overall, p.ratings);
+                p.ratings = UpdateUntil(overall, p.ratings, p.GetPosition());
             if (maxOverall != -1)
             {
                 for(int i =0; i < p.ratings.Length; i++)
@@ -30,10 +47,15 @@ namespace FormulaBasketball
                         p.maxRatings[i] = (byte)(p.ratings[i] + League.r.Next(3,10));
                     }
                 }
-                p.maxRatings = UpdateUntil(maxOverall, p.maxRatings);
+                p.maxRatings = UpdateUntil(maxOverall, p.maxRatings, p.GetPosition());
             }
 
-            if(extraScreen == null)
+            InitializeComponent();
+            Setup();
+        }
+        private void Setup()
+        {
+            if (extraScreen == null)
             {
                 extraScreen = new ExtraInfo();
                 extraScreen.Show();
@@ -50,12 +72,8 @@ namespace FormulaBasketball
             ratings[10] = p.ratings[10];
             maxRatings[10] = maxRatings[10];
 
-            InitializeComponent();
-            
-
-
             insideScoringTrack.Value = p.ratings[0];
-            maxInsideScoringTrack.Value = p.maxRatings[0];           
+            maxInsideScoringTrack.Value = p.maxRatings[0];
 
             jumpShotTrack.Value = p.ratings[1];
             maxJumpShotTrack.Value = p.maxRatings[1];
@@ -82,13 +100,15 @@ namespace FormulaBasketball
             maxPassingTrack.Value = p.maxRatings[8];
 
 
-            UpdateOveralls();            
+            UpdateOveralls();
         }
-        private byte[] UpdateUntil(double overall, byte[] ratings)
+        public static byte[] UpdateUntil(double overall, byte[] ratings, int position, bool capAtMaxRating = false, byte[] maxRatings = null, byte[] maxRatingsBoost = null)
         {
+            
+
             double theRating = 0;
             int[] liklihood = new int[10];
-            switch (p.GetPosition())
+            switch (position)
             {
                 case 1:
                     theRating = GetRatingAsCenter(ratings);
@@ -112,24 +132,37 @@ namespace FormulaBasketball
                     break;
             }
 
-             
 
-            while (overall > theRating)
+
+            bool flag = true;
+            while (overall > theRating && flag)
             {
                 int randNum = League.r.Next(100);
-
                 int sum = 0;
                 for(int i = 0; i < liklihood.Length; i++)
                 {
                     if(liklihood[i] + sum > randNum)
                     {
-                        ratings[i]++;
+                        if(!capAtMaxRating || ratings[i] < maxRatings[i] + maxRatingsBoost[i])
+                            ratings[i]++;
+                        else
+                        {
+                            flag = false;
+                            for(int j = 0; j < ratings.Length; j++)
+                            {
+                                if (ratings[j] < maxRatings[j] + maxRatingsBoost[j])
+                                {
+                                    flag = true;
+                                    break;
+                                }
+                            }
+                        }
                         break;
                     }
                     sum += liklihood[i];
                 }
 
-                switch (p.GetPosition())
+                switch (position)
                 {
                     case 1:                        
                         theRating = GetRatingAsCenter(ratings, false);
@@ -152,7 +185,109 @@ namespace FormulaBasketball
             return ratings;
         }
 
+        private byte[] DowndateUntil(double overall, byte[] ratings)
+        {
+            double theRating = 0;
+            int[] liklihood = new int[10];
+            switch (p.GetPosition())
+            {
+                case 1:
+                    theRating = GetRatingAsCenter(ratings);
+                    liklihood = new int[] { 10, 10, 10, 5, 5, 15, 25, 5, 5, 5 };
+                    break;
+                case 2:
+                    theRating = GetRatingAsPowerForward(ratings);
+                    liklihood = new int[] { 15, 10, 10, 5, 5, 15, 20, 5, 5, 5 };
+                    break;
+                case 3:
+                    theRating = GetRatingAsSmallForward(ratings);
+                    liklihood = new int[] { 12, 13, 15, 5, 5, 15, 10, 10, 5, 5 };
+                    break;
+                case 4:
+                    theRating = GetRatingAsShootingGuard(ratings);
+                    liklihood = new int[] { 12, 15, 15, 5, 5, 15, 8, 10, 5, 5 };
+                    break;
+                case 5:
+                    theRating = GetRatingAsPointGuard(ratings);
+                    liklihood = new int[] { 15, 15, 15, 5, 5, 10, 5, 10, 10, 5 };
+                    break;
+            }
 
+
+            bool flag = true;
+            while (overall < theRating && flag)
+            {
+                int randNum = League.r.Next(100);
+
+                int sum = 0;
+                for (int i = 0; i < liklihood.Length; i++)
+                {
+                    if (liklihood[i] + sum > randNum)
+                    {
+                        if(ratings[i] > 1)
+                            ratings[i]--;
+                        else
+                        {
+                            flag = false;
+                            for (int j = 0; j < ratings.Length; j++)
+                            {
+                                if (ratings[i] > 1)
+                                {
+                                    flag = true;
+                                    break;
+                                }
+                            }
+                        }
+                        break;
+                    }
+                    sum += liklihood[i];
+                }
+
+                switch (p.GetPosition())
+                {
+                    case 1:
+                        theRating = GetRatingAsCenter(ratings, false);
+                        break;
+                    case 2:
+                        theRating = GetRatingAsPowerForward(ratings, false);
+                        break;
+                    case 3:
+                        theRating = GetRatingAsSmallForward(ratings, false);
+                        break;
+                    case 4:
+                        theRating = GetRatingAsShootingGuard(ratings, false);
+                        break;
+                    case 5:
+                        theRating = GetRatingAsPointGuard(ratings, false);
+                        break;
+                }
+            }
+
+            return ratings;
+        }
+        public static double GetMainOverall(int position, byte[] ratings)
+        {
+            double theRating = 0;
+            switch (position)
+            {
+                case 1:
+                    theRating = GetRatingAsCenter(ratings, false);
+                    break;
+                case 2:
+                    theRating = GetRatingAsPowerForward(ratings, false);
+                    break;
+                case 3:
+                    theRating = GetRatingAsSmallForward(ratings, false);
+                    break;
+                case 4:
+                    theRating = GetRatingAsShootingGuard(ratings, false);
+                    break;
+                case 5:
+                    theRating = GetRatingAsPointGuard(ratings, false);
+                    break;
+            }
+            return theRating;
+        }
         private void UpdateOveralls()
         {
             switch(p.GetPosition())
@@ -212,7 +347,7 @@ namespace FormulaBasketball
             Close();
         }
 
-        private double GetRatingAsCenter(byte[] ratings, bool cap = true)
+        public static double GetRatingAsCenter(byte[] ratings, bool cap = true)
         {
             double retVal = ratings[0] * 1.5;
             retVal += ratings[1] * 0.7;
@@ -232,8 +367,8 @@ namespace FormulaBasketball
 
             return retVal;
         }
-       
-        private double GetRatingAsPowerForward(byte[] ratings, bool cap = true)
+
+        public static double GetRatingAsPowerForward(byte[] ratings, bool cap = true)
         {
             double retVal = ratings[0] * 1.3;
             retVal += ratings[1] * 0.8;
@@ -254,8 +389,8 @@ namespace FormulaBasketball
 
             return retVal;
         }
-        
-        private double GetRatingAsSmallForward(byte[] ratings, bool cap = true)
+
+        public static double GetRatingAsSmallForward(byte[] ratings, bool cap = true)
         {
             double retVal = ratings[0] * 1.2;
             retVal += ratings[1] * 1.2;
@@ -275,8 +410,8 @@ namespace FormulaBasketball
 
             return retVal;
         }
-        
-        private double GetRatingAsShootingGuard(byte[] ratings, bool cap = true)
+
+        public static double GetRatingAsShootingGuard(byte[] ratings, bool cap = true)
         {
             double retVal = ratings[0] * 0.8;
             retVal += ratings[1] * 1.2;
@@ -296,7 +431,7 @@ namespace FormulaBasketball
 
             return retVal;
         }
-        private double GetRatingAsPointGuard(byte[] ratings, bool cap = true)
+        public static double GetRatingAsPointGuard(byte[] ratings, bool cap = true)
         {
             double retVal = ratings[0] * 0.7;
             retVal += ratings[1] * 1.1;

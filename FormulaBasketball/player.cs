@@ -2660,6 +2660,6 @@ public class player : IComparable<player>
 [Serializable]
 public enum Promises
 {    
-   Year_One_Starter, Win_Division, Win_Conference, Win_Championship, Make_Playoffs, No_Trade
-    
+   Year_One_Starter, Win_Division, Win_Conference, Win_Championship, Make_Playoffs, No_Trade, Win_Over_Fifty, Over_Five_Hundred
+
 }

@@ -21,11 +21,12 @@ namespace FormulaBasketball
         private List<GameList> schedule;
         private int gamesPlayed;
         public static League league;
-        public static uint NextID;
+        public uint NextID;
         private List<Event> events;
-        public static uint seasonNum = 9;
+        public static uint seasonNum = 10;
         private List<NewPlayer> playersOnWaivers, retiredPlayers;
-        public uint tradeID = 0;
+        public uint tradeID = 0 , coachID;
+        private int saveNum = 0;
         private Dictionary<int, List<Tuple<Tuple<int, int>, List<Tuple<int, int>>>>> newScores;
         private Dictionary<Tuple<int, int>, List<Tuple<Tuple<int, int>, List<Tuple<int, int>>>>> playoffScores;
         public League(Random r)
@@ -39,6 +40,10 @@ namespace FormulaBasketball
             retiredPlayers = new List<NewPlayer>();
             events = new List<Event>();
             gamesPlayed = 0;
+        }
+        public List<NewRealCoach> GetCoaches()
+        {
+            return newCoaches;
         }
         public List<List<Tuple<Tuple<int, int>, List<Tuple<int, int>>>>> GetPlayoffScores(int round, int gameNum)
         {
@@ -55,7 +60,73 @@ namespace FormulaBasketball
             return retVal;
         }
         public void Update()
-        {    
+        {
+            // Keep this
+
+            r = new Random();
+            league = this;
+
+            // Stuff to remove
+            
+
+            /*foreach(NewTeam team in teams)
+            {
+                team.AdvanceYear(false);
+            }
+            foreach (NewTeam team in dLeague)
+            {
+                team.AdvanceYear(true);
+            }
+            foreach(NewPlayer player in freeAgents.GetAllPlayers())
+            {
+                player.AdvanceYear();
+            }
+            foreach(NewRealCoach coach in GetCoaches())
+            {
+                if(coach.GetTeam() != -1)
+                    coach.AdvanceYear(null);
+            }
+            retiredPlayers = new List<NewPlayer>();
+            retirementList = "";
+            new PlayerRetirement(league).ShowDialog();
+
+            File.WriteAllText("retirements.txt", retirementList);
+
+            teams[3].RemoveCoach(teams[10].GetCoach());
+            teams[10].RemoveCoach(teams[10].GetCoach());
+            teams[14].RemoveCoach(teams[14].GetCoach());
+            */
+            
+        }
+        private string retirementList;
+        public void AddRetiree(NewPlayer p)
+        {
+            retirementList += p.ToString() + " " + p.GetPlayerID() + "\n";
+        }
+        public void AddCoach(NewRealCoach coach)
+        {
+            newCoaches.Add(coach);
+        }
+        private void EndOfSeasonDevelopment()
+        {
+            foreach (NewTeam t in league)
+            {
+                foreach (NewPlayer p in t)
+                {
+                    Develop.DevelopPlayer(p, t.GetCoach());
+                }
+            }
+            for (int i = 0; i < 32; i++)
+            {
+                foreach (NewPlayer p in league.GetDLeagueTeam(i))
+                {
+                    Develop.DevelopPlayer(p, league.GetDLeagueTeam(i).GetCoach());
+                }
+            }
+            foreach (NewPlayer p in league.GetFreeAgents().GetAllPlayers())
+            {
+                Develop.DevelopPlayer(p);
+            }
         }
         public static void AddPlayoffScore(ScoreCheater cheater, int awayTeam, int homeTeam, Tuple<int, int> gameNum)
         {
@@ -451,6 +522,15 @@ namespace FormulaBasketball
                 fs.Close();
             }
             r = new Random();
+            league = temp;
+            temp.saveNum++;
+            if (temp.saveNum >= 5)
+            {
+                temp.saveNum = 0;
+                string backupFileName = fileName.Replace(".fbleague", "COPY.fbleague");
+                
+                SerializeObject(temp, backupFileName);
+            }
             return temp;
         }
         public void AddEvent(Event e)
@@ -483,6 +563,16 @@ namespace FormulaBasketball
         public NewTeam GetDLeagueTeam(int index)
         {
             return dLeague[index];
+        }
+        public List<GameList> GetCustomSchedule()
+        {
+            List<GameList> schedule = new List<GameList>();
+
+            schedule.AddRange(AddDivisionWideRoundRobin());
+            schedule.AddRange(AddConferenceWideRoundRobin());
+            schedule.AddRange(AddLeagueWideRoundRobin());
+
+            return schedule;
         }
         public void CreateSchedule()
         {
@@ -546,6 +636,31 @@ namespace FormulaBasketball
 
             return gameList;
         }
+        public NewPlayer FindPlayerByID(int id)
+        {
+            foreach(NewTeam t in teams)
+            {
+                foreach(NewPlayer p in t)
+                {
+                    if (p.GetPlayerID() == id)
+                        return p;
+                }
+            }
+            foreach (NewTeam t in dLeague)
+            {
+                foreach (NewPlayer p in t)
+                {
+                    if (p.GetPlayerID() == id)
+                        return p;
+                }
+            }
+            foreach(NewPlayer p in freeAgents.GetAllPlayers())
+            {
+                if (p.GetPlayerID() == id)
+                    return p;
+            }
+            return null;
+        }
         public void PlayGames(int numberOfGames)
         {
             for(int i = 0; i < numberOfGames; i++)
@@ -557,73 +672,6 @@ namespace FormulaBasketball
                 }
             }
             gamesPlayed += numberOfGames;
-        }
-        public void SaveDiscordInformation()
-        {
-            string text = "", teamText = "", pickText = "", retiredText = "";
-            for (int i = 0; i < 32; i++)
-            {
-                NewTeam team = GetTeam(i);
-                teamText += i + "," + team.ToString() + "\n";
-                teamText += (i + 32) + "," + GetDLeagueTeam(i).ToString() + "\n";
-                foreach (NewPlayer player in team)
-                {
-                    if (player.IsRetired())
-                    {
-                        retiredText += i + ",";
-                        retiredText += player.GetText();
-                    }
-                    else
-                    {
-                        text += i + ",";
-                        text += player.GetText();
-                    }
-                }
-                foreach (NewPlayer player in GetDLeagueTeam(i))
-                {
-                    if (player.IsRetired())
-                    {
-                        retiredText += (i + 32) + ",";
-                        retiredText += player.GetText();
-                    }
-                    else
-                    {
-                        text += (i + 32) + ",";
-                        text += player.GetText();
-                    }
-                }
-                foreach (NewDraftPick pick in team.GetCurrentPicks())
-                {
-                    pickText += pick.GetOwner() + "," + pick.GetSeason() + "," + pick.GetRound() + "," + pick.GetTeam() + "\n";
-                }
-                foreach (NewDraftPick pick in team.GetNextPicks())
-                {
-                    pickText += pick.GetOwner() + "," + pick.GetSeason() + "," + pick.GetRound() + "," + pick.GetTeam() + "\n";
-                }
-            }
-
-            foreach (NewPlayer p in GetFreeAgents().GetAllPlayers())
-            {
-                if (p.IsRetired())
-                {
-                    retiredText += "-1,";
-                    retiredText += p.GetText();
-                }
-                else
-                {
-                    text += "-1,";
-                    text += p.GetText();
-                    p.SetContract(null);
-                }
-            }
-
-            File.WriteAllText("C:\\Users\\Matthew\\source\\repos\\FormulaBasketballBot\\FormulaBasketballBot\\Modules\\players.csv", text);
-
-            File.WriteAllText("C:\\Users\\Matthew\\source\\repos\\FormulaBasketballBot\\FormulaBasketballBot\\Modules\\teams.csv", teamText);
-
-            File.WriteAllText("C:\\Users\\Matthew\\source\\repos\\FormulaBasketballBot\\FormulaBasketballBot\\Modules\\picks.csv", pickText);
-
-            File.WriteAllText("C:\\Users\\Matthew\\source\\repos\\FormulaBasketballBot\\FormulaBasketballBot\\Modules\\retiredPlayers.csv", retiredText);
         }
         public List<Tuple<int, int>> GetPreviewForTeam(int team)
         {

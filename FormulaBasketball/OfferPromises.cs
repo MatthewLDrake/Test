@@ -18,14 +18,14 @@ namespace FormulaBasketball
             InitializeComponent();
             this.promises = promises;
             promiseGrid.Columns[1].ReadOnly = readOnly;
-            foreach(KeyValuePair<Promises,String> promise in formulaBasketball.promisesList)
+            /*foreach(KeyValuePair<Promises,String> promise in formulaBasketball.promisesList)
             {
                 promiseGrid.Rows.Add();
                 DataGridViewCheckBoxCell cell = (DataGridViewCheckBoxCell)promiseGrid[0,promiseGrid.Rows.Count - 1];
                 cell.Value = promises.Contains(promise.Key);
                 promiseGrid[1,promiseGrid.Rows.Count - 1].Value = promise.Value;
                 promiseGrid[2, promiseGrid.Rows.Count - 1].Value = promise.Key;
-            }
+            }*/
         }
         public List<Promises> GetPromises()
         {

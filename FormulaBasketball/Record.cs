@@ -6,10 +6,12 @@ using System.Text;
 public class Record
 {
     private int wins, losses;
-    public Record(int wins = 0, int losses = 0)
+    private bool dLeague;
+    public Record(int wins = 0, int losses = 0, bool dLeague = false)
     {
         this.wins = wins;
         this.losses = losses;
+        this.dLeague = dLeague;
     }
 
     public Record(string p1, string p2)
@@ -36,6 +38,10 @@ public class Record
     public int GetTotalGames()
     {
         return wins + losses;
+    }
+    public bool GetDLeague()
+    {
+        return dLeague;
     }
 }
 

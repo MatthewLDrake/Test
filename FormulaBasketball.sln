@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormulaBasketball", "FormulaBasketball\FormulaBasketball.csproj", "{49BA1F43-1485-4E29-9CE7-5F0C35EA9810}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormulaBasketballBot", "..\FormulaBasketballBot\FormulaBasketballBot\FormulaBasketballBot.csproj", "{0687BB0B-38F1-4E0B-8028-A955AA99DA0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{49BA1F43-1485-4E29-9CE7-5F0C35EA9810}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49BA1F43-1485-4E29-9CE7-5F0C35EA9810}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49BA1F43-1485-4E29-9CE7-5F0C35EA9810}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0687BB0B-38F1-4E0B-8028-A955AA99DA0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0687BB0B-38F1-4E0B-8028-A955AA99DA0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0687BB0B-38F1-4E0B-8028-A955AA99DA0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0687BB0B-38F1-4E0B-8028-A955AA99DA0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -76,7 +76,7 @@ namespace FormulaBasketball
             stream = ScrimmageForm.SerializeTeam(copyTeam);
             NewTeam teamTwo = new NewTeam(ScrimmageForm.DeSerializeTeam(stream));
 
-            new GameViewer(teamOne, teamTwo, league).ShowDialog();
+            new GameViewer(teamOne, teamTwo, null).ShowDialog();
         }
     }
 }

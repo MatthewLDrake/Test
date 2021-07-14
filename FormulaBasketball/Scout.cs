@@ -1,27 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-[Serializable]
-public class Scout
+namespace FormulaBasketball
 {
-    private int skill, num;
-    private String name;
-    public Scout(String name, int skill, int num)
+    [Serializable]
+    public class Scout
     {
-        this.skill = skill;
-        this.num = num;
-        this.name = name;
-    }
-    public int GetNumPlayers()
-    {
-        return num;
-    }
-    public int GetScoutSkill()
-    {
-        return skill;
-    }
-}
+        private int skill, num;
+        private string name;
+        public Scout(string name, int skill, int num)
+        {
+            this.skill = skill;
+            this.num = num;
+            this.name = name;
+        }
+        
 
+        public int GetNumPlayers()
+        {
+            return num;
+        }
+        public int GetScoutSkill()
+        {
+            return skill;
+        }
+        public override string ToString()
+        {
+            return name;
+        }
+    }
+
+}

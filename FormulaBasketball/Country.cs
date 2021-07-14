@@ -10,5 +10,5 @@
     Antarion,
     Nja,
     Kaeshar,
-    Other, Nova_Chrysalia
+    Other, Nova_Chrysalia, Jorster_Island, Omnipotencia
 }

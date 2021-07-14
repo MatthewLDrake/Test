@@ -289,33 +289,6 @@ namespace FormulaBasketball
                         standings.SaveForm("images/standings.png");
                         break;
                     case 1:
-                        string[] players = File.ReadAllLines("C:\\Users\\Matthew\\source\\repos\\FormulaBasketballBot\\FormulaBasketballBot\\Modules\\demotions.csv");
-                        List<NewPlayer> playersToRemove = new List<NewPlayer>();
-                        List<NewPlayer> waivers = league.GetWaivers();
-                        foreach (NewPlayer player in league.GetWaivers())
-                        {
-                            foreach(string p in players)
-                            {
-                                string[] stats = p.Split(',');
-
-                                if(int.Parse(stats[0]) == player.GetPlayerID())
-                                {
-                                    league.GetDLeagueTeam(int.Parse(stats[1])).AddPlayer(player);
-                                    player.SetContract(new Contract(1, 1));
-                                    playersToRemove.Add(player);
-                                }                                
-                            }                            
-                        }
-                        foreach(NewPlayer p in playersToRemove)
-                        {
-                            waivers.Remove(p);
-                        }
-                        foreach(NewPlayer p in waivers)
-                        {
-                            league.GetFreeAgents().Add(p);
-                            p.SetContract(null);
-                        }
-
                         new ManageTeam(league).ShowDialog();
                         break;
                     case 2:
@@ -324,6 +297,42 @@ namespace FormulaBasketball
                         break;
                     case 3:
                         league.DoPlayoffRound();
+                        break;
+                    case 4:
+                        new CoachForm(league).ShowDialog();
+                        break;
+                    case 5:
+                        new PlayerRetirement(league).ShowDialog();
+                        foreach (NewTeam t in league)
+                        {
+                            if (t.GetTeamNum() == 7 || t.GetTeamNum() == 19 || t.GetTeamNum() == 12)
+                                continue;
+
+                            List<NewPlayer> players = new List<NewPlayer>();
+
+                            foreach (NewPlayer p in t)
+                            {
+                                if (p.GetContract() == null || p.GetContract().GetYearsLeft() <= 0)
+                                    players.Add(p);
+                            }
+                            foreach (NewPlayer p in players)
+                            {
+                                league.GetFreeAgents().Add(p);
+                                t.RemovePlayer(p);
+                            }
+                            players = new List<NewPlayer>();
+                            foreach (NewPlayer p in league.GetDLeagueTeam(t.GetTeamNum()))
+                            {
+                                if (p.GetAge() >= 27)
+                                    players.Add(p);
+                            }
+                            foreach (NewPlayer p in players)
+                            {
+                                league.GetFreeAgents().Add(p);
+                                league.GetDLeagueTeam(t.GetTeamNum()).RemovePlayer(p);
+                            }
+                        }
+                        League.SerializeObject(league, "league.fbleague");
                         break;
                     default:
                         flag = true;

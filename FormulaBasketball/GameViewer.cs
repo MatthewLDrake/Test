@@ -249,44 +249,52 @@ namespace FormulaBasketball
 
         }
 
-        public GameViewer(NewTeam teamOne, NewTeam teamTwo, League league)
+        public GameViewer(NewTeam homeTeam, NewTeam awayTeam, NewSimGame newSimGame)
         {
             InitializeComponent();
-            NewGame game = new NewGame(teamOne, teamTwo, false);
-            teamOneLabel.Text = game.GetAwayTeam().ToString();
-            teamTwoLabel.Text = game.GetHomeTeam().ToString();
 
-            byte[] scores = game.GetQuarterScore(0);
-            teamOneQ1Label.Text = "" + scores[0];
-            teamTwoQ1Label.Text = "" + scores[1];
+            teamOneLabel.Text = homeTeam.ToString();
+            teamTwoLabel.Text = awayTeam.ToString();
 
-            scores = game.GetQuarterScore(1);
-            teamOneQ2Label.Text = "" + scores[0];
-            teamTwoQ2Label.Text = "" + scores[1];
+            List<int> homeQuarters = newSimGame.GetHomeQuarterScores(), awayQuarters = newSimGame.GetAwayQuarterScores();
 
-            scores = game.GetQuarterScore(2);
-            teamOneQ3Label.Text = "" + scores[0];
-            teamTwoQ3Label.Text = "" + scores[1];
+            int homeScore = 0, awayScore = 0;
 
-            scores = game.GetQuarterScore(3);
-            teamOneQ4Label.Text = "" + scores[0];
-            teamTwoQ4Label.Text = "" + scores[1];
+            for (int i = 0; i < homeQuarters.Count; i++)
+            {
+                homeScore += homeQuarters[i];
+                awayScore += awayQuarters[i];
+            }
 
-            scores = game.GetQuarterScore(4);
-            teamOneOTLabel.Text = "" + scores[0];
-            teamTwoOTLabel.Text = "" + scores[1];
+            teamOneQ1Label.Text = "" + homeQuarters[0];
+            teamTwoQ1Label.Text = "" + awayQuarters[0];
 
-            teamOneTotalLabel.Text = "" + game.GetAwayTeamScore();
-            teamTwoTotalLabel.Text = "" + game.GetHomeTeamScore();
+            teamOneQ2Label.Text = "" + homeQuarters[1];
+            teamTwoQ2Label.Text = "" + awayQuarters[1];
 
-            foreach (NewPlayer p in game.GetAwayTeam())
+            teamOneQ3Label.Text = "" + homeQuarters[2];
+            teamTwoQ3Label.Text = "" + awayQuarters[2];
+
+            teamOneQ4Label.Text = "" + homeQuarters[3];
+            teamTwoQ4Label.Text = "" + awayQuarters[3];
+
+            teamOneOTLabel.Text = homeQuarters.Count > 4 ? "" + homeQuarters[4] : "";
+            teamTwoOTLabel.Text = awayQuarters.Count > 4 ? "" + awayQuarters[4] : "";
+
+            teamOneTotalLabel.Text = "" + homeScore;
+            teamTwoTotalLabel.Text = "" + awayScore;
+
+            foreach (NewPlayer p in awayTeam)
             {
                 AddPlayerToGrid(p);
             }
-            foreach (NewPlayer p in game.GetHomeTeam())
+            foreach (NewPlayer p in homeTeam)
             {
                 AddPlayerToGrid(p);
             }
+
+
+
         }
 
         public GameViewer(game g)
@@ -342,6 +350,8 @@ namespace FormulaBasketball
         private void AddPlayerToGrid(NewPlayer p)
         {
             GameStats stats = p.GetStats();
+            if (stats == null)
+                return;
             double shootingPercentage = 0.0, opponentPercentage = 0.0;
             if (stats.GetFieldGoalsAttempted() != 0)
             {

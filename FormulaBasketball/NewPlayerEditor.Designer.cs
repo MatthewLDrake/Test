@@ -149,7 +149,7 @@
             this.tableLayoutPanel1.SetColumnSpan(this.insideScoringTrack, 2);
             this.insideScoringTrack.Dock = System.Windows.Forms.DockStyle.Fill;
             this.insideScoringTrack.Location = new System.Drawing.Point(3, 22);
-            this.insideScoringTrack.Maximum = 150;
+            this.insideScoringTrack.Maximum = 200;
             this.insideScoringTrack.Name = "insideScoringTrack";
             this.insideScoringTrack.Size = new System.Drawing.Size(845, 52);
             this.insideScoringTrack.TabIndex = 0;
@@ -227,7 +227,7 @@
             this.tableLayoutPanel2.SetColumnSpan(this.jumpShotTrack, 2);
             this.jumpShotTrack.Dock = System.Windows.Forms.DockStyle.Fill;
             this.jumpShotTrack.Location = new System.Drawing.Point(3, 22);
-            this.jumpShotTrack.Maximum = 150;
+            this.jumpShotTrack.Maximum = 200;
             this.jumpShotTrack.Name = "jumpShotTrack";
             this.jumpShotTrack.Size = new System.Drawing.Size(845, 52);
             this.jumpShotTrack.TabIndex = 0;
@@ -344,7 +344,7 @@
             this.tableLayoutPanel19.SetColumnSpan(this.maxPassingTrack, 2);
             this.maxPassingTrack.Dock = System.Windows.Forms.DockStyle.Fill;
             this.maxPassingTrack.Location = new System.Drawing.Point(3, 22);
-            this.maxPassingTrack.Maximum = 150;
+            this.maxPassingTrack.Maximum = 200;
             this.maxPassingTrack.Name = "maxPassingTrack";
             this.maxPassingTrack.Size = new System.Drawing.Size(846, 52);
             this.maxPassingTrack.TabIndex = 0;
@@ -394,7 +394,7 @@
             this.tableLayoutPanel18.SetColumnSpan(this.passingTrack, 2);
             this.passingTrack.Dock = System.Windows.Forms.DockStyle.Fill;
             this.passingTrack.Location = new System.Drawing.Point(3, 22);
-            this.passingTrack.Maximum = 150;
+            this.passingTrack.Maximum = 200;
             this.passingTrack.Name = "passingTrack";
             this.passingTrack.Size = new System.Drawing.Size(845, 52);
             this.passingTrack.TabIndex = 0;
@@ -444,7 +444,7 @@
             this.tableLayoutPanel17.SetColumnSpan(this.maxSeperationTrack, 2);
             this.maxSeperationTrack.Dock = System.Windows.Forms.DockStyle.Fill;
             this.maxSeperationTrack.Location = new System.Drawing.Point(3, 22);
-            this.maxSeperationTrack.Maximum = 150;
+            this.maxSeperationTrack.Maximum = 200;
             this.maxSeperationTrack.Name = "maxSeperationTrack";
             this.maxSeperationTrack.Size = new System.Drawing.Size(846, 52);
             this.maxSeperationTrack.TabIndex = 0;
@@ -494,7 +494,7 @@
             this.tableLayoutPanel16.SetColumnSpan(this.seperationTrack, 2);
             this.seperationTrack.Dock = System.Windows.Forms.DockStyle.Fill;
             this.seperationTrack.Location = new System.Drawing.Point(3, 22);
-            this.seperationTrack.Maximum = 150;
+            this.seperationTrack.Maximum = 200;
             this.seperationTrack.Name = "seperationTrack";
             this.seperationTrack.Size = new System.Drawing.Size(845, 52);
             this.seperationTrack.TabIndex = 0;
@@ -544,7 +544,7 @@
             this.tableLayoutPanel15.SetColumnSpan(this.maxJumpingTrack, 2);
             this.maxJumpingTrack.Dock = System.Windows.Forms.DockStyle.Fill;
             this.maxJumpingTrack.Location = new System.Drawing.Point(3, 22);
-            this.maxJumpingTrack.Maximum = 150;
+            this.maxJumpingTrack.Maximum = 200;
             this.maxJumpingTrack.Name = "maxJumpingTrack";
             this.maxJumpingTrack.Size = new System.Drawing.Size(846, 52);
             this.maxJumpingTrack.TabIndex = 0;
@@ -594,7 +594,7 @@
             this.tableLayoutPanel14.SetColumnSpan(this.jumpingTrack, 2);
             this.jumpingTrack.Dock = System.Windows.Forms.DockStyle.Fill;
             this.jumpingTrack.Location = new System.Drawing.Point(3, 22);
-            this.jumpingTrack.Maximum = 150;
+            this.jumpingTrack.Maximum = 200;
             this.jumpingTrack.Name = "jumpingTrack";
             this.jumpingTrack.Size = new System.Drawing.Size(845, 52);
             this.jumpingTrack.TabIndex = 0;
@@ -644,7 +644,7 @@
             this.tableLayoutPanel13.SetColumnSpan(this.maxShotContestTrack, 2);
             this.maxShotContestTrack.Dock = System.Windows.Forms.DockStyle.Fill;
             this.maxShotContestTrack.Location = new System.Drawing.Point(3, 22);
-            this.maxShotContestTrack.Maximum = 150;
+            this.maxShotContestTrack.Maximum = 200;
             this.maxShotContestTrack.Name = "maxShotContestTrack";
             this.maxShotContestTrack.Size = new System.Drawing.Size(846, 52);
             this.maxShotContestTrack.TabIndex = 0;
@@ -694,7 +694,7 @@
             this.tableLayoutPanel12.SetColumnSpan(this.shotContestTrack, 2);
             this.shotContestTrack.Dock = System.Windows.Forms.DockStyle.Fill;
             this.shotContestTrack.Location = new System.Drawing.Point(3, 22);
-            this.shotContestTrack.Maximum = 150;
+            this.shotContestTrack.Maximum = 200;
             this.shotContestTrack.Name = "shotContestTrack";
             this.shotContestTrack.Size = new System.Drawing.Size(845, 52);
             this.shotContestTrack.TabIndex = 0;
@@ -744,7 +744,7 @@
             this.tableLayoutPanel11.SetColumnSpan(this.maxDefenseIQTrack, 2);
             this.maxDefenseIQTrack.Dock = System.Windows.Forms.DockStyle.Fill;
             this.maxDefenseIQTrack.Location = new System.Drawing.Point(3, 22);
-            this.maxDefenseIQTrack.Maximum = 150;
+            this.maxDefenseIQTrack.Maximum = 200;
             this.maxDefenseIQTrack.Name = "maxDefenseIQTrack";
             this.maxDefenseIQTrack.Size = new System.Drawing.Size(846, 52);
             this.maxDefenseIQTrack.TabIndex = 0;
@@ -794,7 +794,7 @@
             this.tableLayoutPanel10.SetColumnSpan(this.defenseIQTrack, 2);
             this.defenseIQTrack.Dock = System.Windows.Forms.DockStyle.Fill;
             this.defenseIQTrack.Location = new System.Drawing.Point(3, 22);
-            this.defenseIQTrack.Maximum = 150;
+            this.defenseIQTrack.Maximum = 200;
             this.defenseIQTrack.Name = "defenseIQTrack";
             this.defenseIQTrack.Size = new System.Drawing.Size(845, 52);
             this.defenseIQTrack.TabIndex = 0;
@@ -844,7 +844,7 @@
             this.tableLayoutPanel9.SetColumnSpan(this.maxOffenseIQTrack, 2);
             this.maxOffenseIQTrack.Dock = System.Windows.Forms.DockStyle.Fill;
             this.maxOffenseIQTrack.Location = new System.Drawing.Point(3, 22);
-            this.maxOffenseIQTrack.Maximum = 150;
+            this.maxOffenseIQTrack.Maximum = 200;
             this.maxOffenseIQTrack.Name = "maxOffenseIQTrack";
             this.maxOffenseIQTrack.Size = new System.Drawing.Size(846, 52);
             this.maxOffenseIQTrack.TabIndex = 0;
@@ -894,7 +894,7 @@
             this.tableLayoutPanel8.SetColumnSpan(this.offenseIQTrack, 2);
             this.offenseIQTrack.Dock = System.Windows.Forms.DockStyle.Fill;
             this.offenseIQTrack.Location = new System.Drawing.Point(3, 22);
-            this.offenseIQTrack.Maximum = 150;
+            this.offenseIQTrack.Maximum = 200;
             this.offenseIQTrack.Name = "offenseIQTrack";
             this.offenseIQTrack.Size = new System.Drawing.Size(845, 52);
             this.offenseIQTrack.TabIndex = 0;
@@ -944,7 +944,7 @@
             this.tableLayoutPanel7.SetColumnSpan(this.maxThreePointTrack, 2);
             this.maxThreePointTrack.Dock = System.Windows.Forms.DockStyle.Fill;
             this.maxThreePointTrack.Location = new System.Drawing.Point(3, 22);
-            this.maxThreePointTrack.Maximum = 150;
+            this.maxThreePointTrack.Maximum = 200;
             this.maxThreePointTrack.Name = "maxThreePointTrack";
             this.maxThreePointTrack.Size = new System.Drawing.Size(846, 52);
             this.maxThreePointTrack.TabIndex = 0;
@@ -994,7 +994,7 @@
             this.tableLayoutPanel6.SetColumnSpan(this.threePointTrack, 2);
             this.threePointTrack.Dock = System.Windows.Forms.DockStyle.Fill;
             this.threePointTrack.Location = new System.Drawing.Point(3, 22);
-            this.threePointTrack.Maximum = 150;
+            this.threePointTrack.Maximum = 200;
             this.threePointTrack.Name = "threePointTrack";
             this.threePointTrack.Size = new System.Drawing.Size(845, 52);
             this.threePointTrack.TabIndex = 0;
@@ -1044,7 +1044,7 @@
             this.tableLayoutPanel5.SetColumnSpan(this.maxJumpShotTrack, 2);
             this.maxJumpShotTrack.Dock = System.Windows.Forms.DockStyle.Fill;
             this.maxJumpShotTrack.Location = new System.Drawing.Point(3, 22);
-            this.maxJumpShotTrack.Maximum = 150;
+            this.maxJumpShotTrack.Maximum = 200;
             this.maxJumpShotTrack.Name = "maxJumpShotTrack";
             this.maxJumpShotTrack.Size = new System.Drawing.Size(846, 52);
             this.maxJumpShotTrack.TabIndex = 0;
@@ -1094,7 +1094,7 @@
             this.tableLayoutPanel4.SetColumnSpan(this.maxInsideScoringTrack, 2);
             this.maxInsideScoringTrack.Dock = System.Windows.Forms.DockStyle.Fill;
             this.maxInsideScoringTrack.Location = new System.Drawing.Point(3, 22);
-            this.maxInsideScoringTrack.Maximum = 150;
+            this.maxInsideScoringTrack.Maximum = 200;
             this.maxInsideScoringTrack.Name = "maxInsideScoringTrack";
             this.maxInsideScoringTrack.Size = new System.Drawing.Size(846, 52);
             this.maxInsideScoringTrack.TabIndex = 0;
